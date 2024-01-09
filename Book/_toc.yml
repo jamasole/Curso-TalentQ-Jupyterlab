@@ -1,0 +1,35 @@
+format: jb-book
+root: docs/index
+# options:  
+#  numbered: True  # Number sections 
+parts:
+- caption: Las reglas del juego
+  numbered: True
+  chapters:
+  - file: docs/00_Formalismo/01_formalismo_matematico.md
+    sections:
+    - file: docs/00_Formalismo/01_Numeros_Complejos.ipynb
+    - file: docs/00_Formalismo/01_Vectores.ipynb
+    - file: docs/00_Formalismo/01_Operadores.ipynb
+    - file: docs/00_Formalismo/01_Tensores.ipynb
+    - file: docs/00_Formalismo/01_Probabilidades.ipynb    
+  
+  - file: docs/00_Formalismo/02_Fundamentos_MC.md
+    sections:
+    - file: docs/00_Formalismo/02_Fundamentos_MC.ipynb
+
+- caption: Circuitos
+  numbered: True
+  chapters:
+  - file: docs/
+    sections:
+    - file: docs/01_Circuitos/111_Cubits.ipynb 
+    - file: docs/01_Circuitos/112_Puertas_Simples.ipynb
+
+#- caption: Part 1
+#  numbered: True
+#  maxdepth: 3     # The displayed Table of Contents will only have two levels
+#  chapters:
+#  - file: docs/about_py
+#    sections:
+#      - file: docs/getting_started
