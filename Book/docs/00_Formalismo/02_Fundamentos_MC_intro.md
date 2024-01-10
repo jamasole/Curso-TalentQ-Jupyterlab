@@ -14,6 +14,7 @@ kernelspec:
 > {sub-ref}`today` | {sub-ref}`wordcount-words` words | {sub-ref}`wordcount-minutes` min read
 
 (sec_Fundamentos_MC)=
+
 # Fundamentos de Mecánica Cuántica
 
 Aquí vamos a explicar las reglas básicas de la MC.
