@@ -104,7 +104,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/00_Formalismo/01_Vectores';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.3. Operadores y Matrices" href="01_Operadores.html" />
+    <link rel="next" title="1.3. Operadores I" href="01_Operadores_01.html" />
     <link rel="prev" title="1.1. Números Complejos" href="01_Numeros_Complejos.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -203,15 +203,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_formalismo_matematico.html">1. Formalismo Matemático</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.2. Vectores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.3. Operadores y Matrices</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.10. Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.11. 1.5 Probabilidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores_01.html">1.3. Operadores I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores_02.html">1.4. Operadores II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.5. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.6. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -676,8 +671,8 @@ $<span class="math notranslate nohighlight">\(
 <br></p></li>
 <li><p>La existencia de un <strong>elemento opuesto</strong> y de un elemento neutro son dos propiedades importantes en un espacio vectorial</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-6bd2fc19-0ccc-4586-82d1-476c54a0e20b">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-6bd2fc19-0ccc-4586-82d1-476c54a0e20b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-1246031d-652b-4c52-ac6f-ba576a180a7d">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-1246031d-652b-4c52-ac6f-ba576a180a7d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{v} + 0 &amp;=&amp; \ket{v} \nonumber\\
 \ket{v} + \ket{\hbox{-}v} &amp;=&amp; \ket{v}-\ket{v} = 0 \nonumber\\
 \end{eqnarray}\]</div>
@@ -817,8 +812,8 @@ $<span class="math notranslate nohighlight">\(~~\ket{v}  = \sum_{i} \color{blue}
 C_{ij} = \begin{pmatrix} 1 &amp; 1 \\ i &amp; -i \end{pmatrix} =  \begin{pmatrix} C_{11} &amp; C_{12} \\ C_{21} &amp; C_{22} \end{pmatrix}\, ,
 \end{split}\]</div>
 <p>Entonces la expresión <span class="math notranslate nohighlight">\(\ket{\tilde e_j} = \sum_{i=1}^N C_{ i j} \ket{e_i}\)</span> en este caso relaciona las dos bases en la forma siguiente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c3ee69c2-eed1-4ef1-bebc-f87a4cb5f7bf">
-<span class="eqno">(1.5)<a class="headerlink" href="#equation-c3ee69c2-eed1-4ef1-bebc-f87a4cb5f7bf" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-44f87dbb-2552-41a7-bd29-c9c084d5bf5e">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-44f87dbb-2552-41a7-bd29-c9c084d5bf5e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\tilde e_1} &amp;=&amp; C_{11}\ket{e_1}  + C_{21}\ket{e_2}  =  \ket{e_1} + i\ket{e_2}\nonumber\\ \rule{0mm}{8mm}
 \ket{\tilde e_2} &amp;=&amp; C_{12}\ket{e_1}  + C_{22}\ket{e_2}=\ket{e_1} - i\ket{e_2} \nonumber
 \end{eqnarray}\]</div>
@@ -844,8 +839,8 @@ C_{ij} = \begin{pmatrix} 1 &amp; 1 \\ i &amp; -i \end{pmatrix} =  \begin{pmatrix
 \end{split}\]</div>
 </div>
 <p>Ahora podemos obtener el <em>diccionario</em> entre componentes <span class="math notranslate nohighlight">\(v_i\)</span> y <span class="math notranslate nohighlight">\(\tilde v_i\)</span>, a partir de la  matriz de cambio de base</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6f1d6a0b-bdf3-4260-99a4-6775a539698b">
-<span class="eqno">(1.6)<a class="headerlink" href="#equation-6f1d6a0b-bdf3-4260-99a4-6775a539698b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-796f27a9-7cbd-490b-a04f-d0c33fd414be">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-796f27a9-7cbd-490b-a04f-d0c33fd414be" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{v}  ~= ~ \sum_{i} v_i \ket{e_i} &amp;~=~ \sum_j \tilde v_j \ket{\tilde e_j} \nonumber\\
 &amp;~=~  \sum_j \tilde v_j \left( \sum_{i} C_{ij} \ket{e_i}\right) \nonumber \\
 &amp;~=~  \sum_{j}\sum_{i} \tilde v_j   C_{ij} \ket{e_i} \nonumber \\
@@ -1121,8 +1116,8 @@ Solución<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-20c23168-e6a8-4131-8d80-3946f906422b">
-<span class="eqno">(1.7)<a class="headerlink" href="#equation-20c23168-e6a8-4131-8d80-3946f906422b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-c6cdc152-20da-4087-9ca3-01d1c95a90bd">
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-c6cdc152-20da-4087-9ca3-01d1c95a90bd" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \braket{e_k}{v} &amp;=&amp;  \bra{e_k}\left(\sum_{j=1}^N v_j\ket{e_j}\right) \nonumber\\
                 &amp;=&amp;  \sum_{j=1}^N  v_j\braket{e_k}{e_j}  \nonumber\\
                 &amp;=&amp;  \sum_{j=1}^N  v_j\delta_{kj} = v_k
@@ -1131,8 +1126,8 @@ Solución<div class="sd-summary-down docutils">
 </details></div>
 <p>En una base
 ortonormal, calcular el valor de un <em>producto escalar</em> <span class="math notranslate nohighlight">\(a=\braket{u}{v}\)</span> es muy simple</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5f0424bb-64dd-46ce-953f-f6cc311577d2">
-<span class="eqno">(1.8)<a class="headerlink" href="#equation-5f0424bb-64dd-46ce-953f-f6cc311577d2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-371726bc-2df2-44a9-b9a2-afab5037a7a7">
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-371726bc-2df2-44a9-b9a2-afab5037a7a7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 a = 
 \braket{u}{v}&amp;=&amp; \left(\sum_{i}u_i^*\bra{e_i}\right)\left(\sum_{j}v_j\ket{e_j} \right) = 
 \sum_{ij} u_i^* v_j  \braket{e_i}{e_j}
@@ -1209,11 +1204,11 @@ Verifica que <span class="math notranslate nohighlight">\(\| \ket{u}\| = \sqrt{\
       </div>
     </a>
     <a class="right-next"
-       href="01_Operadores.html"
+       href="01_Operadores_01.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.3. </span>Operadores y Matrices</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Operadores I</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
