@@ -184,8 +184,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-light" alt="Curso de Introducción a la Computación Cuántica - Home"/>
+    <script>document.write(`<img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-dark" alt="Curso de Introducción a la Computación Cuántica - Home"/>`);</script>
   
-    <p class="title logo__title">Curso de Introducción a la Computación Cuántica</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -194,14 +200,20 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../00_Formalismo/01_formalismo_matematico.html">1. Formalismo Matemático</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Vectores.html">1.2. 1.2 Los Vectores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Operadores.html">1.3. 1.3 Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Tensores.html">1.4. 1.4 Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Probabilidades.html">1.5. 1.5 Probabilidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Vectores.html">1.2. Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Operadores.html">1.3. Operadores y Matrices</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Tensores.html">1.10. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Probabilidades.html">1.11. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC.html">2.1. 1.6 Fundamentos de Mecánica Cuántica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC.html">2.1. Elementos de Mecánica Cuántica</a></li>
 </ul>
 </li>
 </ul>
@@ -595,8 +607,8 @@ $<span class="math notranslate nohighlight">\(
 </div><p>Haciendo la suma explícitamente podemos escribir la matriz unitaria
 <br>
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-ae4fb810-32ac-4b47-8a04-d1ffc7c04297">
-<span class="eqno">()<a class="headerlink" href="#equation-ae4fb810-32ac-4b47-8a04-d1ffc7c04297" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ecb84550-a750-4795-869d-8633423a8349">
+<span class="eqno">()<a class="headerlink" href="#equation-ecb84550-a750-4795-869d-8633423a8349" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_{\hat{\bf n}}(\alpha)~  ~=~ 
  \begin{bmatrix} \cos \displaystyle\frac{\alpha}{2} - i n_z\sin\frac{\alpha}{2} &amp;\displaystyle (-in_x- n_y)\sin\frac{\alpha}{2} \\ \displaystyle
 (-in_x + ny) \sin\frac{\alpha}{2} &amp; \displaystyle \cos \frac{\alpha}{2} + i n_z\sin\frac{\alpha}{2} \end{bmatrix}
@@ -668,8 +680,8 @@ Aplicada a un estado de cúbit genérico
 \)</span>$
 P(\alpha) \ket{u} =  \begin{bmatrix} 1 &amp; 0 \ 0 &amp; e^{i\alpha} \end{bmatrix}</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-8bdb7f20-52e1-4100-9e11-c46c481d44ad">
-<span class="eqno">()<a class="headerlink" href="#equation-8bdb7f20-52e1-4100-9e11-c46c481d44ad" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} \cos\theta \\ \sin\theta e^{i\phi} \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-75039215-d66f-41ff-93c0-41c91f85891e">
+<span class="eqno">()<a class="headerlink" href="#equation-75039215-d66f-41ff-93c0-41c91f85891e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} \cos\theta \\ \sin\theta e^{i\phi} \end{bmatrix}\]</div>
 <p>\end{bmatrix}= \ket{v}
 $$
 <br></p>
@@ -678,10 +690,10 @@ $$
 <br>
 $$
 P(\alpha) = \begin{bmatrix} 1 &amp; 0 \ 0 &amp; e^{i\alpha} \end{bmatrix} =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-28ddcad6-af96-4dac-860f-05dd9a49ef5f">
-<span class="eqno">()<a class="headerlink" href="#equation-28ddcad6-af96-4dac-860f-05dd9a49ef5f" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{i\alpha/2} &amp; 0 \\ 0 &amp; e^{i\alpha/2} \end{bmatrix}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-31274715-1f84-4d22-88bd-e684b3669c3e">
-<span class="eqno">()<a class="headerlink" href="#equation-31274715-1f84-4d22-88bd-e684b3669c3e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-i\alpha/2} &amp; 0 \\ 0 &amp; e^{i\alpha/2} \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-04131bad-fc41-4f6c-8ea7-db7d37c19571">
+<span class="eqno">()<a class="headerlink" href="#equation-04131bad-fc41-4f6c-8ea7-db7d37c19571" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{i\alpha/2} &amp; 0 \\ 0 &amp; e^{i\alpha/2} \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b63727b4-bf74-4439-a331-94fd10f55717">
+<span class="eqno">()<a class="headerlink" href="#equation-b63727b4-bf74-4439-a331-94fd10f55717" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-i\alpha/2} &amp; 0 \\ 0 &amp; e^{i\alpha/2} \end{bmatrix}\]</div>
 <p>$<span class="math notranslate nohighlight">\(
 &lt;br&gt;
 &lt;br&gt;
@@ -709,8 +721,8 @@ La computación clásica se basa en la descomposición de algoritmos complejos e
 <br>
 $$</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-3db42906-a29a-475d-b523-d29faff8016f">
-<span class="eqno">()<a class="headerlink" href="#equation-3db42906-a29a-475d-b523-d29faff8016f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-8dacf970-be38-49d9-8819-264260e11c35">
+<span class="eqno">()<a class="headerlink" href="#equation-8dacf970-be38-49d9-8819-264260e11c35" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 X &amp;=&amp;   \begin{bmatrix}0&amp;1\\1&amp;0\end{bmatrix} = \sigma_x = \ketbra{1}{0} + \ketbra{0}{1}~~~, ~~~ \\
 Y &amp;=&amp;  \begin{bmatrix}0&amp;-i\\i&amp;0\end{bmatrix}= \sigma_y  =  i \ketbra{1}{0} - i \ketbra{0}{1}~~~, ~~~ \\
 Z &amp;=&amp;   \begin{bmatrix}1&amp;0\\0&amp;-1\end{bmatrix}= \sigma_z = \ketbra{0}{0} - \ketbra{1}{1}  ~~~~, ~~~
@@ -743,8 +755,8 @@ H \ket{0} = \frac{1}{\sqrt{2}}\left(\rule{0mm}{4mm}\ket{0} + \ket{1}\right) =\ke
 H \ket{1} = \frac{1}{\sqrt{2}}\left(\rule{0mm}{4mm}\ket{0} - \ket{1}\right) =\ket{-} 
 \]</div>
 <p>Podemos escribir este operador en la base canónica <span class="math notranslate nohighlight">\(H = H_{ij}\ketbra{i}{j}\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-92767a11-fba8-4f4e-9dec-16969759143a">
-<span class="eqno">()<a class="headerlink" href="#equation-92767a11-fba8-4f4e-9dec-16969759143a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-c8d98935-419a-4a28-ad1e-61bc4084a1b3">
+<span class="eqno">()<a class="headerlink" href="#equation-c8d98935-419a-4a28-ad1e-61bc4084a1b3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 H &amp;=&amp;  \ket{+}\bra{0} +  \ket{-}\bra{1} \\
 &amp;=&amp; \frac{1}{\sqrt{2}}(\ketbra{0}{0} + \ketbra{1}{0} + \ketbra{0}{1} - \ketbra{1}{1})
 \end{eqnarray}\]</div>

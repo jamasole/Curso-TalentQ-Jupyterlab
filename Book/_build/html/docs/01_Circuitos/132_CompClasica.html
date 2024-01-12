@@ -185,8 +185,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-light" alt="Curso de Introducción a la Computación Cuántica - Home"/>
+    <script>document.write(`<img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-dark" alt="Curso de Introducción a la Computación Cuántica - Home"/>`);</script>
   
-    <p class="title logo__title">Curso de Introducción a la Computación Cuántica</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -195,14 +201,20 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../00_Formalismo/01_formalismo_matematico.html">1. Formalismo Matemático</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Vectores.html">1.2. 1.2 Los Vectores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Operadores.html">1.3. 1.3 Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Tensores.html">1.4. 1.4 Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Probabilidades.html">1.5. 1.5 Probabilidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Vectores.html">1.2. Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Operadores.html">1.3. Operadores y Matrices</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Tensores.html">1.10. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Probabilidades.html">1.11. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC.html">2.1. 1.6 Fundamentos de Mecánica Cuántica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC.html">2.1. Elementos de Mecánica Cuántica</a></li>
 </ul>
 </li>
 </ul>
@@ -696,13 +708,13 @@ R_y(\theta) = \begin{bmatrix} \cos\frac{\theta}{2} &amp; -\sin\frac{\theta}{2} \
 D(\gamma_i,\gamma_j ) = \begin{bmatrix} e^{i\gamma_i} &amp; 0 \\ 0 &amp; e^{i\gamma_j} \end{bmatrix} = K(\gamma_i) P(\gamma_j-\gamma_i)
 \)</span>$</p>
 <p>El estado en la barrera, será</p>
-<div class="amsmath math notranslate nohighlight" id="equation-23ce0b83-a43b-4920-a785-c1ec52f50b69">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-23ce0b83-a43b-4920-a785-c1ec52f50b69" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-09117435-f620-401e-9155-a7b85e3fed36">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-09117435-f620-401e-9155-a7b85e3fed36" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\psi_0}~~ &amp;=&amp;~~ \cos\theta_1 \ket{0}\otimes \big( \cos\theta_2 \ket{0} + \sin\theta_2\ket{1}\big) + \sin\theta_1\ket{1}\otimes \big(\cos\theta_3\ket{0} + \sin\theta_3\ket{1}\big) \nonumber\\&amp;=&amp; \cos\theta_1 \cos\theta_2 \ket{00} + \cos\theta_1\sin\theta_2\ket{01} + \sin\theta_1\cos\theta_3\ket{10} + \sin\theta_1\sin\theta_3\ket{11} \rule{0mm}{20mm}
 \end{eqnarray}\]</div>
 <p>de donde obtenemos cuatro ecuaciones para cuatro incógnitas</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0e5f29a7-8aac-4339-9245-df90f75b895a">
-<span class="eqno">(4.8)<a class="headerlink" href="#equation-0e5f29a7-8aac-4339-9245-df90f75b895a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-8ef1632e-7664-40b8-8d5d-6622a2a4a2ee">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-8ef1632e-7664-40b8-8d5d-6622a2a4a2ee" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 a_1 &amp;=&amp; \cos\theta_1 \cos\theta_2 \nonumber\\
 a_2 &amp;=&amp;  \cos\theta_1\sin\theta_2\nonumber\\
 a_3 &amp;=&amp;  \sin\theta_1\cos\theta_3\nonumber\\
@@ -783,8 +795,8 @@ f_i : \{0,1\}^n ~~\to ~~\{0,1\}
 <li><p>1 cúbit que guardará el resultado, <span class="math notranslate nohighlight">\(\ket{y} \in \mathbb{C}\)</span>.</p></li>
 </ul>
 <p>Sea <span class="math notranslate nohighlight">\(U_f\)</span> el siguiente operador</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f527feb9-22a0-47cb-9ec6-d300d3b7ecf0">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-f527feb9-22a0-47cb-9ec6-d300d3b7ecf0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-564928fe-f963-4d33-b430-dc224005a81a">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-564928fe-f963-4d33-b430-dc224005a81a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 U_f : \ket{x}\ket{y} \longrightarrow \ket{x} \ket{ y \oplus f(x) }
 \end{equation}\]</div>
 <p>Donde <span class="math notranslate nohighlight">\(\oplus\)</span> indica suma módulo 2.</p>
@@ -1010,8 +1022,8 @@ Ver por ejemplo la solución del qiskit textbook:https://qiskit.org/textbook/ch-
 <h2><span class="section-number">4.7.1. </span>Funcion binaria lineal:<a class="headerlink" href="#funcion-binaria-lineal" title="Permalink to this heading">#</a></h2>
 <p>Dados dos n-tuplas binarias <span class="math notranslate nohighlight">\(x=(x_{n-1},\ldots,x_0)\)</span> y <span class="math notranslate nohighlight">\(a=(a_{n-1},\ldots,a_0)\)</span> definimos la <strong>función lineal</strong>
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-35f5eeb7-5b0b-4509-b8bb-3bc09c57297b">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-35f5eeb7-5b0b-4509-b8bb-3bc09c57297b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7360464a-93ab-4e92-8789-e0e27975d756">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-7360464a-93ab-4e92-8789-e0e27975d756" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f(x;a) = a \cdot x = a_{n-1} x_{n-1} \oplus a_{n-2} x_{n-2} \oplus \cdots \oplus a_{0} x_{0}\; ,
 \end{equation}\]</div>
 <br>
@@ -1147,8 +1159,8 @@ U_f \ket{x}\otimes\ket{0} = \ket{x}\ket{f(x)}
 <p><em>Prueba:</em></p>
 <p>Por un lado sabemos que los <em>autovalores</em> deben ser <span class="math notranslate nohighlight">\(\pm 1\)</span> dado que <span class="math notranslate nohighlight">\(U_f^2 = I\)</span>.
 Veamos cada caso</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5fd06190-721e-4e0d-bd29-9740a0d0590a">
-<span class="eqno">(4.11)<a class="headerlink" href="#equation-5fd06190-721e-4e0d-bd29-9740a0d0590a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-59a86f3c-eaac-4aae-8326-9f7b2e4582c6">
+<span class="eqno">(4.11)<a class="headerlink" href="#equation-59a86f3c-eaac-4aae-8326-9f7b2e4582c6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U_f\ket{x}\otimes \ket{+} &amp;=&amp; \ket{x}\otimes \frac{1}{\sqrt{2}}\left( \rule{0mm}{6mm}\ket{0\oplus f(x)}+\ket{1\oplus f(x)} \right) = \ket{x}\otimes \ket{+} \nonumber\\
 U_f\ket{x}\otimes \ket{-} &amp;=&amp; \ket{x}\otimes \frac{1}{\sqrt{2}}\left( \rule{0mm}{6mm} \ket{0\oplus f(x)}-\ket{1\oplus f(x)}\right) = (-1)^{f(x)} \ket{x}\otimes \ket{-}
 \end{eqnarray}\]</div>
