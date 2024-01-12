@@ -11,7 +11,8 @@ parts:
     sections:
     - file: docs/00_Formalismo/01_Numeros_Complejos.ipynb
     - file: docs/00_Formalismo/01_Vectores.ipynb
-    - file: docs/00_Formalismo/01_Operadores.ipynb
+    - file: docs/00_Formalismo/01_Operadores_01.ipynb
+    - file: docs/00_Formalismo/01_Operadores_02.ipynb
     - file: docs/00_Formalismo/01_Tensores.ipynb
     - file: docs/00_Formalismo/01_Probabilidades.ipynb
 
