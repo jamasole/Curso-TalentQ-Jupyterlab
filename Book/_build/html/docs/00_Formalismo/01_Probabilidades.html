@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1.5. 1.5 Probabilidades &#8212; Curso de Introducción a la Computación Cuántica</title>
+    <title>1.6. 1.5 Probabilidades &#8212; Curso de Introducción a la Computación Cuántica</title>
   
   
   
@@ -105,7 +105,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="2. Fundamentos de Mecánica Cuántica" href="02_Fundamentos_MC_intro.html" />
-    <link rel="prev" title="1.4. 1.4 Tensores" href="01_Tensores.html" />
+    <link rel="prev" title="1.5. Tensores" href="01_Tensores.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,8 +186,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-light" alt="Curso de Introducción a la Computación Cuántica - Home"/>
+    <script>document.write(`<img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-dark" alt="Curso de Introducción a la Computación Cuántica - Home"/>`);</script>
   
-    <p class="title logo__title">Curso de Introducción a la Computación Cuántica</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -196,14 +202,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_formalismo_matematico.html">1. Formalismo Matemático</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. 1.2 Los Vectores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.3. 1.3 Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.4. 1.4 Tensores</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.5. 1.5 Probabilidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. license: CC-BY-4.0
+github: https://github.com/executablebooks/mystmd
+subject: Curso
+venue: Quantum Spain
+math:<br/>
+‘\i’: ‘{\color{blue}{i}}’
+‘\bes’: ‘\begin{equation*}’
+‘\ees’: ‘\end{equation*}’
+‘\O’: ‘{\mathcal O}’
+‘\Lin’: ‘\hbox{Lin}’
+‘\Hil’: ‘{\mathcal H}’
+‘\bra[1]’: ‘{\langle #1|}’
+‘\ket[1]’: ‘{|#1\rangle}’
+‘\braket[2]’: ‘{\langle #1|#2\rangle}’
+‘\R’: ‘{\mathbb R}’
+‘\C’: ‘{\mathbb C}’
+‘\V’: ‘{V}’
+abbreviations:
+MyST: Markedly Structured Text
+TLA: Three Letter Acronym</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.4. Operadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.5. Tensores</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.6. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_Fundamentos_MC.html">2.1. 1.6 Fundamentos de Mecánica Cuántica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_Fundamentos_MC.html">2.1. Elementos de Mecánica Cuántica</a></li>
 </ul>
 </li>
 </ul>
@@ -484,25 +510,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-aleatorias">1.5.1. 1.5.1 Variables aleatorias</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-de-probabilidad">1.5.1.1. Distribución de probabilidad</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frecuencias-e-histogramas">1.5.1.2. Frecuencias e Histogramas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ley-de-los-grandes-numeros">1.5.1.3. Ley de los grandes números</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-aleatorias">1.6.1. Variables aleatorias</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-de-probabilidad">1.6.1.1. Distribución de probabilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frecuencias-e-histogramas">1.6.1.2. Frecuencias e Histogramas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ley-de-los-grandes-numeros">1.6.1.3. Ley de los grandes números</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuciones-importantes">1.5.2. 1.5.3 Distribuciones importantes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribucion-de-bernouilli">1.5.2.1. La distribución de Bernouilli</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-binomial">1.5.2.2. Distribución binomial</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribucion-normal">1.5.2.3. La distribución normal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alguna-distribuciones-importantes">1.6.2. Alguna distribuciones importantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribucion-de-bernouilli">1.6.2.1. La distribución de Bernouilli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-binomial">1.6.2.2. Distribución binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribucion-normal">1.6.2.3. La distribución normal</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-combinadas">1.5.3. 1.5.4 Probabilidades combinadas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-combinada">1.5.3.1. Probabilidad Combinada</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-marginal">1.5.3.1.1. Distribución Marginal</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-independientes">1.5.3.1.2. Variables independientes</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-condicionada">1.5.3.2. Probabilidad condicionada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-combinadas">1.6.3. Probabilidades combinadas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-combinada">1.6.3.1. Probabilidad Combinada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-condicionada">1.6.3.2. Probabilidad condicionada</a></li>
 </ul>
 </li>
 </ul>
@@ -517,7 +539,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="probabilidades">
-<h1><span class="section-number">1.5. </span>1.5 Probabilidades<a class="headerlink" href="#probabilidades" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.6. </span>1.5 Probabilidades<a class="headerlink" href="#probabilidades" title="Permalink to this heading">#</a></h1>
 <p><span class="math notranslate nohighlight">\( \newcommand{\bra}[1]{\langle #1|} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\ket}[1]{|#1\rangle} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\braket}[2]{\langle #1|#2\rangle} \)</span>
@@ -543,23 +565,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sys</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">macro_tQ</span> <span class="k">as</span> <span class="nn">tQ</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">scipy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;macro_tQ&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <section id="variables-aleatorias">
-<h2><span class="section-number">1.5.1. </span>1.5.1 Variables aleatorias<a class="headerlink" href="#variables-aleatorias" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.1. </span>Variables aleatorias<a class="headerlink" href="#variables-aleatorias" title="Permalink to this heading">#</a></h2>
 <p>Denotaremos con <span class="math notranslate nohighlight">\((X,p(X))\)</span> una  <em>variable aleatoria</em> donde</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(X\)</span> es el espacio muestral de valores <span class="math notranslate nohighlight">\(\{x_1, x_2,....,x_n\}\)</span> que pueden aparecer en una <em>consulta</em> la variable aleatoria
@@ -567,7 +575,7 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(p(X)\)</span> es la <em>distribución de probabilidad</em></p></li>
 </ul>
 <section id="distribucion-de-probabilidad">
-<h3><span class="section-number">1.5.1.1. </span>Distribución de probabilidad<a class="headerlink" href="#distribucion-de-probabilidad" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.6.1.1. </span>Distribución de probabilidad<a class="headerlink" href="#distribucion-de-probabilidad" title="Permalink to this heading">#</a></h3>
 <p>Una distribución de probabilidad es una función real <span class="math notranslate nohighlight">\(x\to p(x)\)</span> que debe  verificar las dos condiciones siguientes</p>
 <div class="math notranslate nohighlight">
 \[
@@ -594,7 +602,7 @@ La cantidad \)</span>\sigma_X<span class="math notranslate nohighlight">\( se de
 \sigma_X = \sqrt{\overline{X^2} - \overline{X}^2}
 \)</span>$</p></li>
 </ul>
-<p>## 1.5.2 La conexión estadística</p>
+<p>##  La conexión estadística</p>
 <p>Nuestro conocimiento del mundo se basa en la realización de experimentos, el resultado de los cuales es (empíricamente) aleatorio.</p>
 <p>Podemos pensar en el hecho de medir un sistema como la consulta de una variable aleatoria <span class="math notranslate nohighlight">\((X,p(X))\)</span> donde la distribución de probabilidad incorpora</p>
 <ul class="simple">
@@ -603,7 +611,7 @@ La cantidad \)</span>\sigma_X<span class="math notranslate nohighlight">\( se de
 </ul>
 </section>
 <section id="frecuencias-e-histogramas">
-<h3><span class="section-number">1.5.1.2. </span>Frecuencias e Histogramas<a class="headerlink" href="#frecuencias-e-histogramas" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.6.1.2. </span>Frecuencias e Histogramas<a class="headerlink" href="#frecuencias-e-histogramas" title="Permalink to this heading">#</a></h3>
 <p>Cualquier consulta o medida da lugar a una <em>muestra</em> finita de valores <span class="math notranslate nohighlight">\(A_N = (a_1,a_2,...,a_N)\)</span> donde <span class="math notranslate nohighlight">\(a_i\in \{x_1,...,x_n\}\)</span> pueden repetirse en la muestra, con números de aparición <span class="math notranslate nohighlight">\(n(x_i)\)</span> tales que  <span class="math notranslate nohighlight">\(n(x_1) +  \ldots + n(x_p) = N\)</span>.</p>
 <p>Estos datos se pueden agrupar en intervalos o <em>bins</em> que eliminen cierta precisión numérica.</p>
 <p>Por ejemplo, si truncamos nuestra precisión a las décimas de unidad,  <span class="math notranslate nohighlight">\(13.10\)</span> y <span class="math notranslate nohighlight">\(13.19\)</span> pertenecerán al mismo <em>bin</em>.</p>
@@ -633,21 +641,12 @@ La cantidad \)</span>\sigma_X<span class="math notranslate nohighlight">\( se de
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">datos1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">12.2</span><span class="p">,</span> <span class="mf">15.3</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mf">12.8</span><span class="p">,</span> <span class="mf">18.1</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mf">19.5</span><span class="p">,</span> <span class="mf">20.2</span><span class="p">,</span> <span class="mf">12.1</span><span class="p">,</span> <span class="mf">12.4</span><span class="p">,</span> <span class="mf">13.2</span><span class="p">,</span> <span class="mf">17.9</span><span class="p">,</span> <span class="mf">14.1</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">13.4</span><span class="p">,</span> <span class="mf">11.1</span><span class="p">,</span> <span class="mf">14.6</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mf">17.4</span><span class="p">,</span> <span class="mf">19.2</span><span class="p">]</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
-</pre></div>
-</div>
+<img alt="../../_images/01e2bb13e5414f14fea0dcec1f0002ab07fc396d75bbca68c5235da8b33e8c2b.png" src="../../_images/01e2bb13e5414f14fea0dcec1f0002ab07fc396d75bbca68c5235da8b33e8c2b.png" />
 </div>
 </div>
 </section>
 <section id="ley-de-los-grandes-numeros">
-<h3><span class="section-number">1.5.1.3. </span>Ley de los grandes números<a class="headerlink" href="#ley-de-los-grandes-numeros" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.6.1.3. </span>Ley de los grandes números<a class="headerlink" href="#ley-de-los-grandes-numeros" title="Permalink to this heading">#</a></h3>
 <p>Las fracciones relativas tienden en el límite <span class="math notranslate nohighlight">\(N\to \infty\)</span> a la probabilidad relativa de aparición de  <span class="math notranslate nohighlight">\(x_i\)</span> en una sola tirada</p>
 <div class="math notranslate nohighlight">
 \[
@@ -655,31 +654,31 @@ f_N(x_i) = \frac{n(x_i)}{N}~~~\stackrel{N\to\infty}{\longrightarrow}~~~{p(x_i)}
 \]</div>
 <p>Experimentalmente sólo tenemos acceso a las frecuencias relativas <span class="math notranslate nohighlight">\(f_N(x_i)\)</span> para un <span class="math notranslate nohighlight">\(N\)</span> grande aunque finito.</p>
 <p>Igualmente, nuestro conocimiento de la  media <span class="math notranslate nohighlight">\(\overline X\)</span>  y la varianza <span class="math notranslate nohighlight">\(\sigma_X^2\)</span> siempre es aproximado, y se realiza a través de las medias y varianzas muestrales</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0c29afa7-7cc4-41e1-9a90-3ce11b4930ad">
-<span class="eqno">(1.25)<a class="headerlink" href="#equation-0c29afa7-7cc4-41e1-9a90-3ce11b4930ad" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-57fd2f02-5059-4d50-91a5-7b085aabc336">
+<span class="eqno">(1.30)<a class="headerlink" href="#equation-57fd2f02-5059-4d50-91a5-7b085aabc336" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{A}_N = \sum_i x_i f_N(x_i)~~~&amp;\stackrel{N\to\infty}{\longrightarrow}&amp;~~~ \overline{X}\\
 \sigma_{A_N}^2 = \sum_{i} (x_i - \overline{A}_N)^2 f_N(x_i) ~~~&amp;\stackrel{N\to\infty}{\longrightarrow}&amp;~~~ \sigma_X^2
 \end{eqnarray}\]</div>
 </section>
 </section>
-<section id="distribuciones-importantes">
-<h2><span class="section-number">1.5.2. </span>1.5.3 Distribuciones importantes<a class="headerlink" href="#distribuciones-importantes" title="Permalink to this heading">#</a></h2>
+<section id="alguna-distribuciones-importantes">
+<h2><span class="section-number">1.6.2. </span>Alguna distribuciones importantes<a class="headerlink" href="#alguna-distribuciones-importantes" title="Permalink to this heading">#</a></h2>
 <section id="la-distribucion-de-bernouilli">
-<h3><span class="section-number">1.5.2.1. </span>La distribución de Bernouilli<a class="headerlink" href="#la-distribucion-de-bernouilli" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.6.2.1. </span>La distribución de Bernouilli<a class="headerlink" href="#la-distribucion-de-bernouilli" title="Permalink to this heading">#</a></h3>
 <p>Una variable aleatoria de Bernouilli <span class="math notranslate nohighlight">\(X=(x,p(x))\)</span> tiene dos posibles resultados</p>
 <ul class="simple">
 <li><p><em>éxito</em> <span class="math notranslate nohighlight">\(\to x=1\)</span> con probabilidad <span class="math notranslate nohighlight">\(p(1) = p\)</span></p></li>
 <li><p><em>fracaso</em> <span class="math notranslate nohighlight">\(\to x=0\)</span> con probabilidad <span class="math notranslate nohighlight">\(p(0) = 1-p\)</span></p></li>
 </ul>
 <p>Podemos calcular fácilmente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-74749483-8636-4d2e-88c0-baf571e3856d">
-<span class="eqno">(1.26)<a class="headerlink" href="#equation-74749483-8636-4d2e-88c0-baf571e3856d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-e2737830-9e55-493e-aff4-950ab2e9f6f8">
+<span class="eqno">(1.31)<a class="headerlink" href="#equation-e2737830-9e55-493e-aff4-950ab2e9f6f8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp; \sum_i x_i p_i =1 \cdot p + 0\cdot (1-p) = p\\
 \sigma^2 &amp;=&amp; \sum_i (x-\overline X )^2p_i = (1-p)^2 p +(0-p)^2(1-p) = p(1-p)
 \end{eqnarray}\]</div>
 </section>
 <section id="distribucion-binomial">
-<h3><span class="section-number">1.5.2.2. </span>Distribución binomial<a class="headerlink" href="#distribucion-binomial" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.6.2.2. </span>Distribución binomial<a class="headerlink" href="#distribucion-binomial" title="Permalink to this heading">#</a></h3>
 <p>La variable aleatoria binomial <span class="math notranslate nohighlight">\(X = (x,p(x))\)</span> se define como</p>
 <div class="math notranslate nohighlight">
 \[
@@ -693,14 +692,14 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 \end{split}\]</div>
 <p>donde el primer factor tiene en cuenta las posibles ordenaciones en que aparecen <span class="math notranslate nohighlight">\(x\)</span> éxitos en <span class="math notranslate nohighlight">\(n\)</span> intentos.</p>
 <p>Un cálculo un poco más largo permite ver que, ahora</p>
-<div class="amsmath math notranslate nohighlight" id="equation-785f00d5-5b61-4bf9-b593-77eb6f0066cc">
-<span class="eqno">(1.27)<a class="headerlink" href="#equation-785f00d5-5b61-4bf9-b593-77eb6f0066cc" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ba66c9e2-3724-4812-88ab-045cc0218dd2">
+<span class="eqno">(1.32)<a class="headerlink" href="#equation-ba66c9e2-3724-4812-88ab-045cc0218dd2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp;  np\\ \rule{0mm}{7mm}
 \sigma^2 &amp;=&amp; n p(1-p)
 \end{eqnarray}\]</div>
 </section>
 <section id="la-distribucion-normal">
-<h3><span class="section-number">1.5.2.3. </span>La distribución normal<a class="headerlink" href="#la-distribucion-normal" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.6.2.3. </span>La distribución normal<a class="headerlink" href="#la-distribucion-normal" title="Permalink to this heading">#</a></h3>
 <p>Vamos a estudiar la distribución normal centrada en <span class="math notranslate nohighlight">\(\mu\)</span> y con anchura <span class="math notranslate nohighlight">\(\sigma\)</span>
 <br>
 <br>
@@ -708,8 +707,8 @@ $<span class="math notranslate nohighlight">\(
 p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\right)
 \)</span>$</p>
 <p>Nos encontramos ante una variable aleatoria con un espacio muestral continuo <span class="math notranslate nohighlight">\(x\in (-\infty,+\infty)\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-67965549-761f-4965-aaab-bda269b7e285">
-<span class="eqno">(1.28)<a class="headerlink" href="#equation-67965549-761f-4965-aaab-bda269b7e285" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-7d834c62-652c-4a71-9ec3-3990b0a7b908">
+<span class="eqno">(1.33)<a class="headerlink" href="#equation-7d834c62-652c-4a71-9ec3-3990b0a7b908" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{X} &amp;=&amp; \int_{-\infty}^{+\infty} xp(x) dx = \mu \\
 \overline{(x-\overline X)^2} &amp;=&amp; \int_{-\infty}^{+\infty} (x-\mu)^2 p(x)dx =\sigma^2
 \end{eqnarray}\]</div>
@@ -719,18 +718,6 @@ p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\rig
 <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span> 
 <span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span>
 <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -757,74 +744,65 @@ p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\rig
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="s1">&#39;generamos una instancia de histograma con un número de bins&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">num_bins</span><span class="o">=</span><span class="mi">100</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
-</pre></div>
-</div>
+<img alt="../../_images/815784a56c7d9784c239bc4858a211119135dd9a02de1f040fe60df05c35755a.png" src="../../_images/815784a56c7d9784c239bc4858a211119135dd9a02de1f040fe60df05c35755a.png" />
 </div>
 </div>
 <p>En el límite de número de eventos <span class="math notranslate nohighlight">\(N\to \infty\)</span>, el histograma y la curva matemática confluyen.</p>
 </section>
 </section>
 <section id="probabilidades-combinadas">
-<h2><span class="section-number">1.5.3. </span>1.5.4 Probabilidades combinadas<a class="headerlink" href="#probabilidades-combinadas" title="Permalink to this heading">#</a></h2>
-<p>Las probabilidades combinadas son <em>la base de las correlaciones</em>. Es aquí donde la Mecánica Cuántica produce resultados inesperados clásicamente.</p>
-<p>Ahora vamos a examinar variables aleatorias formadas por dos espacios muestrales <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span>. Dependiendo de la forma en que combinemos la observación de cada una tendremos distintas distribuciones de probabilidad</p>
+<h2><span class="section-number">1.6.3. </span>Probabilidades combinadas<a class="headerlink" href="#probabilidades-combinadas" title="Permalink to this heading">#</a></h2>
+<p>Las probabilidades combinadas son la base del estudio de <em>las correlaciones</em>. Es aquí donde la Mecánica Cuántica produce resultados inesperados clásicamente, como son la <em>violación de las desigualdades de Bell</em>.</p>
+<p>Ahora vamos a examinar variables aleatorias formadas por dos espacios muestrales <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span>. Dependiendo de la forma en que efectuemos la observación de cada una tendremos distintas distribuciones de probabilidad.</p>
 <section id="probabilidad-combinada">
-<h3><span class="section-number">1.5.3.1. </span>Probabilidad Combinada<a class="headerlink" href="#probabilidad-combinada" title="Permalink to this heading">#</a></h3>
-<p>La  <strong>probabilidad combinada</strong> <span class="math notranslate nohighlight">\(p(X,Y)\)</span> asocia un número <span class="math notranslate nohighlight">\(p(x,y)\)</span> a la probabilidad de observación conjunta de <span class="math notranslate nohighlight">\(x\)</span> <strong>e</strong> <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<h3><span class="section-number">1.6.3.1. </span>Probabilidad Combinada<a class="headerlink" href="#probabilidad-combinada" title="Permalink to this heading">#</a></h3>
+<p>La  <strong>probabilidad combinada</strong> <span class="math notranslate nohighlight">\(p(X,Y)\)</span> asocia un número <span class="math notranslate nohighlight">\(p(x,y)\)</span> a la probabilidad de <strong>observación conjunta</strong> de <span class="math notranslate nohighlight">\(x\)</span> <strong>e</strong> <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p>Hay que tratar las parejas de eventos  como un solo evento  <span class="math notranslate nohighlight">\(a = (x,y)\)</span>. Por eso, la condición de normalización ahora es</p>
 <div class="math notranslate nohighlight">
 \[
 \sum_a p(a) = \sum_{xy} p(x,y) = 1\, .
 \]</div>
-<section id="distribucion-marginal">
-<h4><span class="section-number">1.5.3.1.1. </span>Distribución Marginal<a class="headerlink" href="#distribucion-marginal" title="Permalink to this heading">#</a></h4>
-<p>La suma parcial sobre una de las dos variables conduce a sendas <strong>distribuciones marginales</strong></p>
+<p><strong>Distribución Marginal</strong></p>
+<p>La probabilidad combinada contiene la máxima información. Si sólo efectuamos medidas en una de las dos variables muestrales, <span class="math notranslate nohighlight">\(X\)</span> o <span class="math notranslate nohighlight">\(Y\)</span>, la probabilidad debe ser recuperable. En efecto, la suma parcial sobre una de las dos variables conduce a sendas <strong>distribuciones marginales</strong>.</p>
 <div class="math notranslate nohighlight">
 \[
 q(x) = \sum_{y} p(x,y) ~~~~~~~~~ \tilde q(y) = \sum_{x} p(x,y)
 \]</div>
-</section>
-<section id="variables-independientes">
-<h4><span class="section-number">1.5.3.1.2. </span>Variables independientes<a class="headerlink" href="#variables-independientes" title="Permalink to this heading">#</a></h4>
-<p>Si la probabilidad combinada es el producto de las probabilidades de los miembros del par, decimos que <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> son variables aleatorias independientes.</p>
+<p><strong>Variables independientes</strong></p>
+<p>Si la probabilidad combinada es el producto de las probabilidades de los miembros del par, decimos que <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> son <em>variables aleatorias independientes</em>.</p>
 <div class="math notranslate nohighlight">
 \[
 p(x,y) = p(x) p(y)
 \]</div>
-<p>La distribución de cada variable coincide con la que se deduce de marginalizar la otra</p>
+<p>Consistentemente, la distribución marginal recupera cada uno de los factores</p>
 <div class="math notranslate nohighlight">
 \[
 \sum_y p(x,y) = p(x)~~~~,~~~~\sum_x p(x,y) = p(y)
 \]</div>
 </section>
-</section>
 <section id="probabilidad-condicionada">
-<h3><span class="section-number">1.5.3.2. </span>Probabilidad condicionada<a class="headerlink" href="#probabilidad-condicionada" title="Permalink to this heading">#</a></h3>
-<p>La distribución de <strong>probabilidad condicionada</strong> <span class="math notranslate nohighlight">\(p(X|Y)\)</span> asigna un número <span class="math notranslate nohighlight">\(p(x|y)\)</span> a la probabilidad  de encontrar un suceso <span class="math notranslate nohighlight">\(X=x\)</span> una vez <em>sabemos</em> que <span class="math notranslate nohighlight">\(Y=y\)</span> ha sido el resultado de consultar <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+<h3><span class="section-number">1.6.3.2. </span>Probabilidad condicionada<a class="headerlink" href="#probabilidad-condicionada" title="Permalink to this heading">#</a></h3>
+<p>La distribución de <strong>probabilidad condicionada</strong> <span class="math notranslate nohighlight">\(p(X|Y)\)</span> asigna un número <span class="math notranslate nohighlight">\(p(x|y)\)</span> a la probabilidad  de encontrar un suceso <span class="math notranslate nohighlight">\(X=x\)</span> una vez <em>sabemos</em> que <span class="math notranslate nohighlight">\(Y=y\)</span> <u>ha sido el resultado de consultar <span class="math notranslate nohighlight">\(Y\)</span></u></p>
 <p>La manera de acceder experimentalmente a estas distribuciones, es efectuar un muestreo <span class="math notranslate nohighlight">\((a_i,b_i), i=1,...,N\)</span> de valores de <span class="math notranslate nohighlight">\((X,Y)\)</span> y <em>seleccionar</em> sólo aquellos sucesos donde <span class="math notranslate nohighlight">\(b_i = y\)</span> un valor concreto de <span class="math notranslate nohighlight">\(Y\)</span>.</p>
 <p>####  Teorema de Bayes</p>
 <p>Las probabilidades <em>condicionales</em> y <em>combinadas</em> no son independientes. Se relacionan de la forma siguiente</p>
 <div class="math notranslate nohighlight">
 \[
-p(x,y)   = p(x|y)p(y) = p(y|x) p(x)= p(y,x)
+p(x,y)   = p(x|y)p(y) 
 \]</div>
-<p>La segunda igualdad conduce al <em>teorema de Bayes</em></p>
-<div class="alert alert-block alert-info",text-align:center>
- <p style="text-align: left ;color: navy;">  
-     <b>Teorema:</b> <i>(de Bayes)</i>
-$$
+<p>La elección de la variable <span class="math notranslate nohighlight">\(X\)</span> o <span class="math notranslate nohighlight">\(Y\)</span> es simétrica. Por lo tanto, el mismo resultado debe darse para</p>
+<div class="math notranslate nohighlight">
+\[
+p(x,y)   =  p(y|x) p(x) 
+\]</div>
+<p>Despejando de los segundos miembrosobtenemos el Teorema de Bayes</p>
+<blockquote>
+<div><p><b>Teorema:</b> <i>(Teorema de Bayes)</i>
+$<span class="math notranslate nohighlight">\(
 p(x|y) = p(y|x) \frac{p(x)}{p(y)}
-$$
-<br>
-</div></section>
+\)</span>$</p>
+</div></blockquote>
+</section>
 </section>
 </section>
 
@@ -864,7 +842,7 @@ $$
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.4. </span>1.4 Tensores</p>
+        <p class="prev-next-title"><span class="section-number">1.5. </span>Tensores</p>
       </div>
     </a>
     <a class="right-next"
@@ -891,25 +869,21 @@ $$
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-aleatorias">1.5.1. 1.5.1 Variables aleatorias</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-de-probabilidad">1.5.1.1. Distribución de probabilidad</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frecuencias-e-histogramas">1.5.1.2. Frecuencias e Histogramas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ley-de-los-grandes-numeros">1.5.1.3. Ley de los grandes números</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-aleatorias">1.6.1. Variables aleatorias</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-de-probabilidad">1.6.1.1. Distribución de probabilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frecuencias-e-histogramas">1.6.1.2. Frecuencias e Histogramas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ley-de-los-grandes-numeros">1.6.1.3. Ley de los grandes números</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuciones-importantes">1.5.2. 1.5.3 Distribuciones importantes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribucion-de-bernouilli">1.5.2.1. La distribución de Bernouilli</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-binomial">1.5.2.2. Distribución binomial</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribucion-normal">1.5.2.3. La distribución normal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alguna-distribuciones-importantes">1.6.2. Alguna distribuciones importantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribucion-de-bernouilli">1.6.2.1. La distribución de Bernouilli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-binomial">1.6.2.2. Distribución binomial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-distribucion-normal">1.6.2.3. La distribución normal</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-combinadas">1.5.3. 1.5.4 Probabilidades combinadas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-combinada">1.5.3.1. Probabilidad Combinada</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distribucion-marginal">1.5.3.1.1. Distribución Marginal</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-independientes">1.5.3.1.2. Variables independientes</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-condicionada">1.5.3.2. Probabilidad condicionada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-combinadas">1.6.3. Probabilidades combinadas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-combinada">1.6.3.1. Probabilidad Combinada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-condicionada">1.6.3.2. Probabilidad condicionada</a></li>
 </ul>
 </li>
 </ul>

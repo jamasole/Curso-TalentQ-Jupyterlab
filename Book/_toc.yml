@@ -9,8 +9,8 @@ parts:
 
   - file: docs/00_Formalismo/01_formalismo_matematico.md
     sections:
-    - file: docs/00_Formalismo/01_Numeros_Complejos.ipynb
-    - file: docs/00_Formalismo/01_Vectores.ipynb
+    - file: docs/00_Formalismo/01_Numeros_Complejos.md
+    - file: docs/00_Formalismo/01_Vectores.md
     - file: docs/00_Formalismo/01_Operadores.ipynb
     - file: docs/00_Formalismo/01_Tensores.ipynb
     - file: docs/00_Formalismo/01_Probabilidades.ipynb

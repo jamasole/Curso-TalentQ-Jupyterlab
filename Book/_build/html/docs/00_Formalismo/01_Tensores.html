@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1.4. 1.4 Tensores &#8212; Curso de Introducción a la Computación Cuántica</title>
+    <title>1.5. Tensores &#8212; Curso de Introducción a la Computación Cuántica</title>
   
   
   
@@ -104,8 +104,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/00_Formalismo/01_Tensores';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.5. 1.5 Probabilidades" href="01_Probabilidades.html" />
-    <link rel="prev" title="1.3. 1.3 Operadores" href="01_Operadores.html" />
+    <link rel="next" title="1.6. 1.5 Probabilidades" href="01_Probabilidades.html" />
+    <link rel="prev" title="1.4. Operadores" href="01_Operadores.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,8 +186,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-light" alt="Curso de Introducción a la Computación Cuántica - Home"/>
+    <script>document.write(`<img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-dark" alt="Curso de Introducción a la Computación Cuántica - Home"/>`);</script>
   
-    <p class="title logo__title">Curso de Introducción a la Computación Cuántica</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -196,14 +202,34 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_formalismo_matematico.html">1. Formalismo Matemático</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. 1.2 Los Vectores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.3. 1.3 Operadores</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4. 1.4 Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.5. 1.5 Probabilidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. license: CC-BY-4.0
+github: https://github.com/executablebooks/mystmd
+subject: Curso
+venue: Quantum Spain
+math:<br/>
+‘\i’: ‘{\color{blue}{i}}’
+‘\bes’: ‘\begin{equation*}’
+‘\ees’: ‘\end{equation*}’
+‘\O’: ‘{\mathcal O}’
+‘\Lin’: ‘\hbox{Lin}’
+‘\Hil’: ‘{\mathcal H}’
+‘\bra[1]’: ‘{\langle #1|}’
+‘\ket[1]’: ‘{|#1\rangle}’
+‘\braket[2]’: ‘{\langle #1|#2\rangle}’
+‘\R’: ‘{\mathbb R}’
+‘\C’: ‘{\mathbb C}’
+‘\V’: ‘{V}’
+abbreviations:
+MyST: Markedly Structured Text
+TLA: Three Letter Acronym</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.4. Operadores</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.5. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.6. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_Fundamentos_MC.html">2.1. 1.6 Fundamentos de Mecánica Cuántica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_Fundamentos_MC.html">2.1. Elementos de Mecánica Cuántica</a></li>
 </ul>
 </li>
 </ul>
@@ -474,7 +500,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1.4 Tensores</h1>
+    <h1>Tensores</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -484,27 +510,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-y-dimension">1.4.1. Base y Dimensión</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexacion-equivalente">1.4.2. Indexación equivalente</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-kronecker">1.4.3. Producto de Kronecker</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factorizacion-y-entrelazamiento">1.4.4. Factorización y Entrelazamiento</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-de-factorizabilidad">1.4.4.1. Criterio de factorizabilidad</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descomposicion-de-schmidt">1.4.4.2. Descomposición de Schmidt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-y-dimension">1.5.1. Base y Dimensión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexacion-equivalente">1.5.2. Indexación equivalente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-kronecker">1.5.3. Producto de Kronecker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factorizacion-y-entrelazamiento">1.5.4. Factorización y Entrelazamiento</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-de-factorizabilidad">1.5.4.1. Criterio de factorizabilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descomposicion-de-schmidt">1.5.4.2. Descomposición de Schmidt</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-tensorial-multiple">1.4.5. Producto Tensorial Múltiple</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-de-hil-otimes-n">1.4.5.1. Base de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estado-entrelazado-general">1.4.5.2. Estado entrelazado general</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estado-factorizable">1.4.5.3. Estado factorizable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estados-producto-de-matrices-mps">1.4.5.4. Estados producto de matrices <em>(MPS)</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#redes-de-tensores">1.4.5.5. Redes de tensores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-tensorial-multiple">1.5.5. Producto Tensorial Múltiple</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-de-hil-otimes-n">1.5.5.1. Base de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estado-entrelazado-general">1.5.5.2. Estado entrelazado general</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estado-factorizable">1.5.5.3. Estado factorizable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estados-producto-de-matrices-mps">1.5.5.4. Estados producto de matrices <em>(MPS)</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#redes-de-tensores">1.5.5.5. Redes de tensores</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-sobre-hil-otimes-n">1.4.6. Operadores sobre  <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">1.4.6.1. Matrices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-tensorial-de-operadores">1.4.6.2. Producto tensorial de operadores</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-kronecker-de-matrices">1.4.6.3. Producto de Kronecker de matrices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generacion-de-entrelazamiento">1.4.6.4. Generación de entrelazamiento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-sobre-hil-otimes-n">1.5.6. Operadores sobre  <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">1.5.6.1. Matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-tensorial-de-operadores">1.5.6.2. Producto tensorial de operadores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-kronecker-de-matrices">1.5.6.3. Producto de Kronecker de matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generacion-de-entrelazamiento">1.5.6.4. Generación de entrelazamiento</a></li>
 </ul>
 </li>
 </ul>
@@ -519,7 +545,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tensores">
-<h1><span class="section-number">1.4. </span>1.4 Tensores<a class="headerlink" href="#tensores" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.5. </span>Tensores<a class="headerlink" href="#tensores" title="Permalink to this heading">#</a></h1>
 <p><span class="math notranslate nohighlight">\( \newcommand{\bra}[1]{\langle #1|} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\ket}[1]{|#1\rangle} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\braket}[2]{\langle #1|#2\rangle} \)</span>
@@ -576,53 +602,51 @@ document.write(`
 </div>
 </div>
 </div>
-<p>## 1.4.1 Producto Tensorial</p>
+<p>## Producto Tensorial</p>
 <p>En física clásica a cada <em>grado de libertad</em> se le asocia una variable real o compleja. En Mecánica Cuántica, se le asocia un vector en un espacio de Hilbert.</p>
 <p>Los sistemas físicos, en general, tienen más de un grado de libertad. En física clásica les asociamos funciones multi-variable. En Mecánica Cuántica la estructura matemática adecuada es el <strong>producto tensorial</strong> de espacios vectoriales.</p>
-<div class="alert alert-block alert-info",text-align:center>
-<p style="text-align: left ;color: navy;">  
-<b> Definición</b> :  $~$ sean $\Hil_1$ y $\Hil_2$ dos espacios de Hilbert.  Dados dos vectores $\ket{u}_1\in \Hil_1$ y  $\ket{v}_2\in \Hil_2$, denominamos <i>producto tensorial</i> al par ordenado
+<blockquote>
+<div><p><b> Definición</b> :  <span class="math notranslate nohighlight">\(~\)</span> sean <span class="math notranslate nohighlight">\(\Hil_1\)</span> y <span class="math notranslate nohighlight">\(\Hil_2\)</span> dos espacios de Hilbert.  Dados dos vectores <span class="math notranslate nohighlight">\(\ket{u}_1\in \Hil_1\)</span> y  <span class="math notranslate nohighlight">\(\ket{v}_2\in \Hil_2\)</span>, denominamos <i>producto tensorial</i> al par ordenado
 <br>
 <br>
-$$
+$<span class="math notranslate nohighlight">\(
 \ket{uv} ~\equiv \ket{u}_1\otimes \ket{v}_2
-$$
-</div><p>Como el producto ordinario, el producto tensorial satisface la <strong>propiedad distributiva</strong>
+\)</span>$</p>
+</div></blockquote>
+</div><p>Como si se tratara de un producto ordinario, el producto tensorial satisface la <strong>propiedad distributiva</strong>
 <br>
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-6df8f89f-9d2a-4e75-884d-c7c4f71959d4">
-<span class="eqno">(1.19)<a class="headerlink" href="#equation-6df8f89f-9d2a-4e75-884d-c7c4f71959d4" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-\big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;\equiv &amp;~~
+<div class="amsmath math notranslate nohighlight" id="equation-47cfce96-dab8-48fa-9ed7-5de5a37a54a6">
+<span class="eqno">(1.24)<a class="headerlink" href="#equation-47cfce96-dab8-48fa-9ed7-5de5a37a54a6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+\big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;= &amp;~~
 \ket{u}\otimes\ket{y} ~+~ \ket{u}\otimes\ket{z} ~+~ \ket{v}\otimes\ket{y} ~+~~
  \ket{v}\otimes\ket{z} \\
  \rule{0mm}{8mm}
  &amp;=&amp; \ket{uy} + \ket{uz} + \ket{vy} + \ket{vz}
 \end{eqnarray}\]</div>
-<br><div class="alert alert-block alert-info",text-align:center>
-<p style="text-align: left ;color: navy;">  
-<b> Definición:</b>  
-$~$  el  <i>espacio producto tensorial</i>  $\Hil = \Hil_1 \otimes \Hil_2$ está formado por  <u>todas las combinaciones lineales</u> posibles de   <u>pares ordenados</u> 
+<p>Este cálculo tan inocente esconde un hecho crucial: los elementos <span class="math notranslate nohighlight">\(\big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big)\)</span> y <span class="math notranslate nohighlight">\(\big(\ket{u}\otimes\ket{y}+ \ket{u}\otimes\ket{z}\big)\)</span> son <u>diferentes</u>.</p>
+<p>Es por esto que, para dotar de estructura de espacio vectorial al conjunto de productos tensoriales <u>de forma consistente con la distributividad</u>,  debamos incluir todas las posibles combinaciones como elementos independientes</p>
+<blockquote>
+<div><p><b> Definición:</b>  <span class="math notranslate nohighlight">\(~\)</span> Sean <span class="math notranslate nohighlight">\(V_1\)</span> y <span class="math notranslate nohighlight">\(V_2\)</span> dos espacios vectorieles. El  <b>espacio producto tensorial</b>  <span class="math notranslate nohighlight">\(V = V_1 \otimes V_2\)</span> está formado por  <u>todas las combinaciones lineales</u> posibles de   <u>pares ordenados</u>
 <br>
 <br>
-<br>   
-$$
+$<span class="math notranslate nohighlight">\(
 \ket{s}= a\ket{u}_1\otimes\ket{u}_2 ~+~ b \ket{v}_1\otimes\ket{v}_2 ~+ ~...
-$$
-<br>   
-<br>    
-donde  $\ket{u}_1,\ket{v}_1,...\in \Hil_1\, ~$ y $~\, \ket{u}_2,\ket{v}_2,...\in \Hil_2~$,
-    y $~a,b,... \in {\mathbb C}$ son coeficientes complejos.
-<br> 
-</div><br>
-<div class="alert alert-block alert-danger">
-<b> Notar: </b>
+\)</span><span class="math notranslate nohighlight">\(
+&lt;br&gt;    
+donde  \)</span>\ket{u}_1,\ket{v}_1,…\in V_1, ~<span class="math notranslate nohighlight">\( y \)</span>~, \ket{u}_2,\ket{v}_2,…\in V_2~<span class="math notranslate nohighlight">\(,
+    y \)</span>~a,b,… \in {\mathbb C}$ son coeficientes complejos.</p>
+</div></blockquote>
+<p><b> Notar: </b></p>
 <ul class="simple">
 <li><p>Prescindiremos del subíndice <span class="math notranslate nohighlight">\(\ket{u}_1\otimes \ket{y}_2=\ket{u}\otimes \ket{y} \equiv \ket{uy}\)</span> que estará implícito en el orden.
 <br></p></li>
-<li><p>Para computación cuántica con <i>cúbits (cúdits)</i>, el valor relevante es <span class="math notranslate nohighlight">\(d=2\,(d\geq 3)\)</span>.</p></li>
+<li><p>Para computación cuántica con <i>cúbits (cúdits)</i>, el valor relevante es <span class="math notranslate nohighlight">\(d=2\,(d\geq 3)\)</span>.
+<br></p></li>
+<li><p>En adelante supondremos que los espacios vectoriales <span class="math notranslate nohighlight">\(V_{1,2} = \Hil_{1,2}\)</span> son espacios de Hilbert</p></li>
 </ul>
-<div><section id="base-y-dimension">
-<h2><span class="section-number">1.4.1. </span>Base y Dimensión<a class="headerlink" href="#base-y-dimension" title="Permalink to this heading">#</a></h2>
+<section id="base-y-dimension">
+<h2><span class="section-number">1.5.1. </span>Base y Dimensión<a class="headerlink" href="#base-y-dimension" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Sea <span class="math notranslate nohighlight">\(\ket{i_1}\)</span> una base de <span class="math notranslate nohighlight">\(\Hil_1\)</span> y <span class="math notranslate nohighlight">\(\ket{i_2}\)</span> una base de <span class="math notranslate nohighlight">\(\Hil_2\)</span>. Entonces, una base de <span class="math notranslate nohighlight">\(\Hil_1\otimes \Hil_2\)</span> se obtiene
 a partir de <em>todos</em> los emparejamientos
@@ -648,8 +672,8 @@ $</p></li>
 <br>
 <br></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-4b50181b-7da2-4993-9954-88ff5c1eefd1">
-<span class="eqno">(1.20)<a class="headerlink" href="#equation-4b50181b-7da2-4993-9954-88ff5c1eefd1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-3e6f22c7-7d08-4ad9-a98d-d1682ade3b73">
+<span class="eqno">(1.25)<a class="headerlink" href="#equation-3e6f22c7-7d08-4ad9-a98d-d1682ade3b73" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\omega} &amp; ~= ~&amp; 
 w_{00}\ket{00} + w_{01}\ket{01} + ... + w_{10}\ket{10} + ...\ldots + w_{d_1 d_2}\ket{d_1 d_2} \nonumber\\
 \rule{0mm}{10mm}
@@ -657,7 +681,7 @@ w_{00}\ket{00} + w_{01}\ket{01} + ... + w_{10}\ket{10} + ...\ldots + w_{d_1 d_2}
 \end{eqnarray}\]</div>
 </section>
 <section id="indexacion-equivalente">
-<h2><span class="section-number">1.4.2. </span>Indexación equivalente<a class="headerlink" href="#indexacion-equivalente" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.5.2. </span>Indexación equivalente<a class="headerlink" href="#indexacion-equivalente" title="Permalink to this heading">#</a></h2>
 <p>Podemos etiquetar las componentes (o los elementos de la base) con índices, en lugar de bi-índices</p>
 <p>Para ello basta con definir un mapa  entre dos bi-índices <span class="math notranslate nohighlight">\(i_1,i_2\)</span> y un índice <span class="math notranslate nohighlight">\(a\)</span></p>
 <div class="math notranslate nohighlight">
@@ -676,7 +700,7 @@ i_1 i_2 ~~\to ~~ a = d_2*i_1 + i_2
 Claramente $a = 0,...,d_1d_2-1$
 </section>
 <section id="producto-de-kronecker">
-<h2><span class="section-number">1.4.3. </span>Producto de Kronecker<a class="headerlink" href="#producto-de-kronecker" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.5.3. </span>Producto de Kronecker<a class="headerlink" href="#producto-de-kronecker" title="Permalink to this heading">#</a></h2>
 <p>Como sabemos, cualquier vector admite, en una base, una representación como un vector columna con sus coeficientes como entradas.</p>
 <br>
 <br>
@@ -707,7 +731,7 @@ Con dos vectores $\ket{u} = \sum_i u_i \ket{e_i}$ y $\ket{v} = \sum_i v_i \ket{e
     escribe una función  <i>kronecker(u,v)</i> que tome dos kets (como vectores columna)  y devuelva su producto de Kronecker. Verifica el resultado con la funcion $kron$ de numpy.  
 </div></section>
 <section id="factorizacion-y-entrelazamiento">
-<h2><span class="section-number">1.4.4. </span>Factorización y Entrelazamiento<a class="headerlink" href="#factorizacion-y-entrelazamiento" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.5.4. </span>Factorización y Entrelazamiento<a class="headerlink" href="#factorizacion-y-entrelazamiento" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-block alert-info",text-align:center>
 <p style="text-align: left ;color: navy;">  
 <b>Definición</b>: <i>(Vector entrelazado)</i>
@@ -727,7 +751,7 @@ Cuando esto no sea posible, decimos que  $\ket{w}$ es un vector <b>entrelazado</
 <p>Podría ocurrir que en otra base <span class="math notranslate nohighlight">\(\ket{w} = \tilde w_{11} \ket{f_1}\otimes\ket{f_1}\)</span> sólo tuviese un término y fuese factorizable.</p>
 <p>Discernir si un vector es factorizable o entrelazado no es algo que se pueda hacer a primera vista.</p>
 <section id="criterio-de-factorizabilidad">
-<h3><span class="section-number">1.4.4.1. </span>Criterio de factorizabilidad<a class="headerlink" href="#criterio-de-factorizabilidad" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.4.1. </span>Criterio de factorizabilidad<a class="headerlink" href="#criterio-de-factorizabilidad" title="Permalink to this heading">#</a></h3>
 <div class="alert alert-block alert-info",text-align:center>
 <p style="text-align: left ;color: navy">  
 El estado es $\ket{w}$ es factorizable si y sólo si las componentes $w_{ij}$ son factorizables en la forma $w_{ij} = u_i v_j~$ con $i=1,...,d_1$ y $j = 1,...,d_2$. 
@@ -763,7 +787,7 @@ la anulación del  determinante de la matriz <span class="math notranslate nohig
 </ul>
 </section>
 <section id="descomposicion-de-schmidt">
-<h3><span class="section-number">1.4.4.2. </span>Descomposición de Schmidt<a class="headerlink" href="#descomposicion-de-schmidt" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.4.2. </span>Descomposición de Schmidt<a class="headerlink" href="#descomposicion-de-schmidt" title="Permalink to this heading">#</a></h3>
 <p>Supongamos que, en sendas bases arbitrarias <span class="math notranslate nohighlight">\(\{\ket{e_{1,i}},~ i=1,...,d_1\}\)</span>  de <span class="math notranslate nohighlight">\(\Hil_1\)</span> y  <span class="math notranslate nohighlight">\(\{\ket{e_{2,a}},~a=1,...,d_2\}\)</span>  de <span class="math notranslate nohighlight">\(\Hil_2\)</span> nuestro vector se escribe</p>
 <div class="math notranslate nohighlight">
 \[
@@ -826,8 +850,8 @@ s_1 &amp;\cdots  &amp;    &amp;  &amp; &amp; &amp;  0  \\  \vdots &amp; \ddots &
 <li><p>Los números <span class="math notranslate nohighlight">\(s_1,...,s_r &gt;0\)</span> son los autovalores de la matriz <span class="math notranslate nohighlight">\(w^\dagger w\)</span>  y se denominan <i>valores principales </i>  de la matriz <span class="math notranslate nohighlight">\(w_{ij}\)</span></p></li>
 </ul>
 <p>Esto quiere decir que podemos escribir</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21c6fe44-d134-4c27-ab10-4cc39c8067d4">
-<span class="eqno">(1.21)<a class="headerlink" href="#equation-21c6fe44-d134-4c27-ab10-4cc39c8067d4" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-09de1461-2e2b-4ca0-b4ac-00744a67fcf1">
+<span class="eqno">(1.26)<a class="headerlink" href="#equation-09de1461-2e2b-4ca0-b4ac-00744a67fcf1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{w} &amp;=&amp; \sum_{i=1}^{d_1}\sum_{a=1}^{d_2}\left( \sum_{j=1}^{d_1}\sum_{b=1}^{d_2} U_{ij}\Sigma_{jb}V_{ab}^* \right)\ket{e_{1,i}}\otimes \ket{e_{2,a}}
 \\  \rule{0mm}{10mm}
 &amp;=&amp; \sum_{j=1}^{d_1}\sum_{b=1}^{d_2}\Sigma_{jb}\left( \sum_{i=1}^{d_1} U_{ij}\ket{e_{1,i}} \right)\otimes  \left( \sum_{a=1}^{d_2} V_{ab}^* \ket{e_{2,a}}\right)
@@ -914,7 +938,7 @@ s_1 &amp;\cdots  &amp;    &amp;  &amp; &amp; &amp;  0  \\  \vdots &amp; \ddots &
 </section>
 </section>
 <section id="producto-tensorial-multiple">
-<h2><span class="section-number">1.4.5. </span>Producto Tensorial Múltiple<a class="headerlink" href="#producto-tensorial-multiple" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.5.5. </span>Producto Tensorial Múltiple<a class="headerlink" href="#producto-tensorial-multiple" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>El producto tensorial se puede generalizar a más de un factor.</p></li>
 </ul>
@@ -936,7 +960,7 @@ donde \)</span>\ket{u_i}\in
 <b>Ejercicio:</b> 
 Escribe una función  <i>kronecker($u_1,u_2,...,u_n$)</i> que tome n kets (como vectores columna)  y devuelva su producto de Kronecker múltiple.  
 </div><section id="base-de-hil-otimes-n">
-<h3><span class="section-number">1.4.5.1. </span>Base de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span><a class="headerlink" href="#base-de-hil-otimes-n" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.5.1. </span>Base de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span><a class="headerlink" href="#base-de-hil-otimes-n" title="Permalink to this heading">#</a></h3>
 <p>Una base de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span> se obtiene a partir de cadenas
 <br>
 <br>
@@ -976,7 +1000,7 @@ Claramente $a ~\in ~(0,d^n-1)$.<ul class="simple">
 \]</div>
 </section>
 <section id="estado-entrelazado-general">
-<h3><span class="section-number">1.4.5.2. </span>Estado entrelazado general<a class="headerlink" href="#estado-entrelazado-general" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.5.2. </span>Estado entrelazado general<a class="headerlink" href="#estado-entrelazado-general" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Un <em>vector general</em> admitirá una expansión en esta base mediante <span class="math notranslate nohighlight">\(d^n\)</span> <em>componentes complejas</em>
 <span class="math notranslate nohighlight">\(u_{i_1 i_2...i_n}\)</span> en la forma
@@ -999,7 +1023,7 @@ Un estado genérico depende de un conjunto de <span class="math notranslate nohi
 <p>Ya hemos visto los casos de rango <span class="math notranslate nohighlight">\(n=1\)</span> <i>(vector)</i> y <span class="math notranslate nohighlight">\(n=2\)</span> <i>(operador)</i></p>
 </section>
 <section id="estado-factorizable">
-<h3><span class="section-number">1.4.5.3. </span>Estado factorizable<a class="headerlink" href="#estado-factorizable" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.5.3. </span>Estado factorizable<a class="headerlink" href="#estado-factorizable" title="Permalink to this heading">#</a></h3>
 <p>Al igual que antes, <em>sólo en casos muy particulares</em>, un vector de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span> se podrá escribir en forma factorizada
 <br>
 <br>
@@ -1020,7 +1044,7 @@ está parametrizado por \)</span>d +d + …d = nd<span class="math notranslate n
 </ul>
 </section>
 <section id="estados-producto-de-matrices-mps">
-<h3><span class="section-number">1.4.5.4. </span>Estados producto de matrices <em>(MPS)</em><a class="headerlink" href="#estados-producto-de-matrices-mps" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.5.4. </span>Estados producto de matrices <em>(MPS)</em><a class="headerlink" href="#estados-producto-de-matrices-mps" title="Permalink to this heading">#</a></h3>
 <p>En medio de los dos casos extremos anteriores encontramos la posibilidad de que las componentes del tensor se puedan escribir como productos de matrices.</p>
 <div class="alert alert-block alert-info">
 <p style="text-align:left;color:navy"> <b>Definición</b>:
@@ -1052,7 +1076,7 @@ v_{i_1i_2i_3i_4} =  \sum_{\alpha\beta\gamma\mu = 1}^DA_{i_1}^{\mu \alpha}A_{i_2}
 <br>
 </section>
 <section id="redes-de-tensores">
-<h3><span class="section-number">1.4.5.5. </span>Redes de tensores<a class="headerlink" href="#redes-de-tensores" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.5.5. </span>Redes de tensores<a class="headerlink" href="#redes-de-tensores" title="Permalink to this heading">#</a></h3>
 <p>Si queremos aumentar el entrelazamiento del estado podemos, además de aumentar <span class="math notranslate nohighlight">\(D\)</span>, recurrir a contracciones de índices de tensores de mayor rango
 <br>
 <br>
@@ -1088,7 +1112,7 @@ v_{i_1i_2i_3i_4} = \sum_{\alpha\beta\gamma\mu\delta = 1}^D A_{i_1}^{\mu \alpha\d
 </div></section>
 </section>
 <section id="operadores-sobre-hil-otimes-n">
-<h2><span class="section-number">1.4.6. </span>Operadores sobre  <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span><a class="headerlink" href="#operadores-sobre-hil-otimes-n" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.5.6. </span>Operadores sobre  <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span><a class="headerlink" href="#operadores-sobre-hil-otimes-n" title="Permalink to this heading">#</a></h2>
 <p>El espacio <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span> admite, como cualquier espacio vectorial, la acción de <em>operadores lineales</em> <span class="math notranslate nohighlight">\(A: \Hil^{\otimes n} \to \Hil^{\otimes n}\)</span> donde</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1096,7 +1120,7 @@ A:\ket{u} \to \ket{v} \equiv A\ket{u}
 \]</div>
 <p>El conjunto de todos los operadores lineales forman el espacio vectorial <span class="math notranslate nohighlight">\(\Lin(\Hil^{\otimes n})\)</span>.</p>
 <section id="matrices">
-<h3><span class="section-number">1.4.6.1. </span>Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.6.1. </span>Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>A cada operador, <span class="math notranslate nohighlight">\(A\)</span>, le podemos asociadar una <em>matriz</em>, una vez elijamos nuestra base  <span class="math notranslate nohighlight">\(\{ \ket{i_1 i_2... i_n}\}\)</span> donde, <span class="math notranslate nohighlight">\(i_k = 1,...,d\)</span>.
 <br>
@@ -1113,8 +1137,8 @@ A_{i_1...i_n, \, j_1...j_n} = \bra{i_1...i_n}A\ket{j_1...j_n}  ~~~~~\leftrightar
 <li><p>Con la matriz, el operador se reconstruye en la base canónica de productos externos
 <br></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-de4eba6b-7e32-4a40-9f26-2f941088a70d">
-<span class="eqno">(1.22)<a class="headerlink" href="#equation-de4eba6b-7e32-4a40-9f26-2f941088a70d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-fbcb3d5a-b6f3-4f86-a902-85306a689ecb">
+<span class="eqno">(1.27)<a class="headerlink" href="#equation-fbcb3d5a-b6f3-4f86-a902-85306a689ecb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
  A &amp;~~=~&amp; 
  \sum_{i_1,...,i_n,\, j_1,...,j_n=0}^{d-1} A_{i_1...i_n, \, j_1...j_n} \ket{i_1...i_n}\bra{j_1...j_n}
  ~~~~=~~~~
@@ -1126,7 +1150,7 @@ A_{i_1...i_n, \, j_1...j_n} = \bra{i_1...i_n}A\ket{j_1...j_n}  ~~~~~\leftrightar
 </ul>
 </section>
 <section id="producto-tensorial-de-operadores">
-<h3><span class="section-number">1.4.6.2. </span>Producto tensorial de operadores<a class="headerlink" href="#producto-tensorial-de-operadores" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.6.2. </span>Producto tensorial de operadores<a class="headerlink" href="#producto-tensorial-de-operadores" title="Permalink to this heading">#</a></h3>
 <p>En <span class="math notranslate nohighlight">\(\Lin(\Hil^{\otimes n})\)</span> hay un análogo de los vectores factorizables de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span>: los <em>operadores factorizables</em>.</p>
 <p>Supongamos que existen <span class="math notranslate nohighlight">\(n\)</span> operadores lineales <span class="math notranslate nohighlight">\(A^{(a)}\, ,\, a=1,...,n\)</span> definidos sobre cada espacio factor <span class="math notranslate nohighlight">\(\Hil\)</span>.</p>
 <div class="alert alert-block alert-info">
@@ -1165,11 +1189,11 @@ A^\dagger = A^{(1)\dagger} \otimes ... \otimes A^{(n)\dagger}
 \[ A^{(a)\dagger} = A^{(a)\, -1} \,  ~~\Longrightarrow ~~A^{\dagger} = A^{-1} \]</div>
 </section>
 <section id="producto-de-kronecker-de-matrices">
-<h3><span class="section-number">1.4.6.3. </span>Producto de Kronecker de matrices<a class="headerlink" href="#producto-de-kronecker-de-matrices" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.6.3. </span>Producto de Kronecker de matrices<a class="headerlink" href="#producto-de-kronecker-de-matrices" title="Permalink to this heading">#</a></h3>
 <p>¿Cómo será la matriz <span class="math notranslate nohighlight">\(A_{i_1...i_n, \, j_1...j_n}\)</span> de un operador factorizable, <span class="math notranslate nohighlight">\( A = A^{(1)}\otimes A^{(2)} \otimes ...A^{(n)}\)</span>, en términos de las matrices  <span class="math notranslate nohighlight">\( A^{(a)}_{ij}\)</span> de sus factores?</p>
 <p>Vamos a tomar  <span class="math notranslate nohighlight">\(n=2\)</span> por simplicidad</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e8fa4459-6fff-42f3-b1ee-f4b302e83f20">
-<span class="eqno">(1.23)<a class="headerlink" href="#equation-e8fa4459-6fff-42f3-b1ee-f4b302e83f20" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-955f1e1e-205c-4a56-a1bd-48fcd2a758cd">
+<span class="eqno">(1.28)<a class="headerlink" href="#equation-955f1e1e-205c-4a56-a1bd-48fcd2a758cd" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 A = A^{(1)}\otimes  A^{(2)} &amp;=&amp;\left( \sum_{i_1i_2}A^{(1)}_{i_1 j_1} \ket{i_1}\bra{j_1}\right)\left( \sum_{i_2j_2}A^{(2)}_{i_2 j_2} \ket{i_2}\bra{j_2}\right)\\
 &amp;=&amp; \sum_{i_1 i_2 , j_1 j_2} A^{(1)}_{i_1 j_1}A^{(2)}_{i_2 j_2}\ket{i_1 i_2}\bra{j_1j_2} \\
 &amp;=&amp; \sum_{i_1 i_2 , j_1 j_2} A_{i_1i_2,\, j_1j_2}\ket{i_1 i_2}\bra{j_1j_2}
@@ -1195,8 +1219,8 @@ A = A^{(1)}\otimes  A^{(2)} &amp;=&amp;\left( \sum_{i_1i_2}A^{(1)}_{i_1 j_1} \ke
 <br>
 <br></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-7a1d37ac-9123-4b67-910a-4e23ac9cc232">
-<span class="eqno">(1.24)<a class="headerlink" href="#equation-7a1d37ac-9123-4b67-910a-4e23ac9cc232" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-8561f127-e674-4aa3-8a5c-f76554270b87">
+<span class="eqno">(1.29)<a class="headerlink" href="#equation-8561f127-e674-4aa3-8a5c-f76554270b87" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 (A\otimes B)(C\otimes D) &amp;=&amp; (AC)\otimes (BD) \nonumber\\ \rule{0mm}{6mm}
 \tr(A\otimes B) &amp;=&amp; (\tr A)(\tr B) \nonumber\\ \rule{0mm}{6mm}
 A\otimes(B+D) &amp;=&amp; A\otimes B + A\otimes D \nonumber\\ \rule{0mm}{6mm}
@@ -1228,7 +1252,7 @@ en un producto de Kronecker <span class="math notranslate nohighlight">\(A^{(1)}
 <p>Por tanto, los <em>operadores factorizables</em> forman un subconjunto muy pequeño dentro del conjunto de los operadores generales.</p>
 </div></section>
 <section id="generacion-de-entrelazamiento">
-<h3><span class="section-number">1.4.6.4. </span>Generación de entrelazamiento<a class="headerlink" href="#generacion-de-entrelazamiento" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.6.4. </span>Generación de entrelazamiento<a class="headerlink" href="#generacion-de-entrelazamiento" title="Permalink to this heading">#</a></h3>
 <p>Supongamos que <span class="math notranslate nohighlight">\(\ket{u} = \ket{u_1}\otimes\ket{u_2}\)</span> es factorizable.</p>
 <ul class="simple">
 <li><p>Si <span class="math notranslate nohighlight">\(A=A_1\otimes A_2\)</span> es un operador factorizable entonces
@@ -1286,7 +1310,7 @@ $<span class="math notranslate nohighlight">\(
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.3. </span>1.3 Operadores</p>
+        <p class="prev-next-title"><span class="section-number">1.4. </span>Operadores</p>
       </div>
     </a>
     <a class="right-next"
@@ -1294,7 +1318,7 @@ $<span class="math notranslate nohighlight">\(
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.5. </span>1.5 Probabilidades</p>
+        <p class="prev-next-title"><span class="section-number">1.6. </span>1.5 Probabilidades</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1313,27 +1337,27 @@ $<span class="math notranslate nohighlight">\(
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-y-dimension">1.4.1. Base y Dimensión</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexacion-equivalente">1.4.2. Indexación equivalente</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-kronecker">1.4.3. Producto de Kronecker</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factorizacion-y-entrelazamiento">1.4.4. Factorización y Entrelazamiento</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-de-factorizabilidad">1.4.4.1. Criterio de factorizabilidad</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descomposicion-de-schmidt">1.4.4.2. Descomposición de Schmidt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-y-dimension">1.5.1. Base y Dimensión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexacion-equivalente">1.5.2. Indexación equivalente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-kronecker">1.5.3. Producto de Kronecker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factorizacion-y-entrelazamiento">1.5.4. Factorización y Entrelazamiento</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-de-factorizabilidad">1.5.4.1. Criterio de factorizabilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descomposicion-de-schmidt">1.5.4.2. Descomposición de Schmidt</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-tensorial-multiple">1.4.5. Producto Tensorial Múltiple</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-de-hil-otimes-n">1.4.5.1. Base de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estado-entrelazado-general">1.4.5.2. Estado entrelazado general</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estado-factorizable">1.4.5.3. Estado factorizable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estados-producto-de-matrices-mps">1.4.5.4. Estados producto de matrices <em>(MPS)</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#redes-de-tensores">1.4.5.5. Redes de tensores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-tensorial-multiple">1.5.5. Producto Tensorial Múltiple</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-de-hil-otimes-n">1.5.5.1. Base de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estado-entrelazado-general">1.5.5.2. Estado entrelazado general</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estado-factorizable">1.5.5.3. Estado factorizable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estados-producto-de-matrices-mps">1.5.5.4. Estados producto de matrices <em>(MPS)</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#redes-de-tensores">1.5.5.5. Redes de tensores</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-sobre-hil-otimes-n">1.4.6. Operadores sobre  <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">1.4.6.1. Matrices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-tensorial-de-operadores">1.4.6.2. Producto tensorial de operadores</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-kronecker-de-matrices">1.4.6.3. Producto de Kronecker de matrices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generacion-de-entrelazamiento">1.4.6.4. Generación de entrelazamiento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-sobre-hil-otimes-n">1.5.6. Operadores sobre  <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">1.5.6.1. Matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-tensorial-de-operadores">1.5.6.2. Producto tensorial de operadores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-de-kronecker-de-matrices">1.5.6.3. Producto de Kronecker de matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generacion-de-entrelazamiento">1.5.6.4. Generación de entrelazamiento</a></li>
 </ul>
 </li>
 </ul>
