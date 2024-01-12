@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.1. 1.6 Fundamentos de Mecánica Cuántica &#8212; Curso de Introducción a la Computación Cuántica</title>
+    <title>2.1. Elementos de Mecánica Cuántica &#8212; Curso de Introducción a la Computación Cuántica</title>
   
   
   
@@ -186,8 +186,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-light" alt="Curso de Introducción a la Computación Cuántica - Home"/>
+    <script>document.write(`<img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-dark" alt="Curso de Introducción a la Computación Cuántica - Home"/>`);</script>
   
-    <p class="title logo__title">Curso de Introducción a la Computación Cuántica</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -196,14 +202,15 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="01_formalismo_matematico.html">1. Formalismo Matemático</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. 1.2 Los Vectores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.3. 1.3 Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.4. 1.4 Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.5. 1.5 Probabilidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores_01.html">1.3. Operadores I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores_02.html">1.4. Operadores II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.5. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.6. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. 1.6 Fundamentos de Mecánica Cuántica</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Elementos de Mecánica Cuántica</a></li>
 </ul>
 </li>
 </ul>
@@ -474,7 +481,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1.6 Fundamentos de Mecánica Cuántica</h1>
+    <h1>Elementos de Mecánica Cuántica</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -484,25 +491,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas">2.1.1. Axiomas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-i-vector-de-estado">2.1.1.1. <span class="math notranslate nohighlight">\(\bullet\)</span>   Postulado I :  <em>Vector de estado</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-ii-evolucion-con-el-tiempo">2.1.1.2. <span class="math notranslate nohighlight">\(\bullet\)</span> Postulado  II :  <em>Evolución con el tiempo</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-iii-medidas-de-observables-a-id-postul-iii-medida-a">2.1.1.3. <span class="math notranslate nohighlight">\(\bullet\)</span>  Postulado III:  <em>Medidas de observables</em> <a id="postul_III_medida"></a></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-iv-colapso-de-la-funcion-de-onda">2.1.1.4. <span class="math notranslate nohighlight">\(\bullet\)</span> Postulado IV:   <em>Colapso de la función de  onda</em></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas-de-la-mecanica-cuantica">2.1.1. Axiomas de la Mecánica Cuántica</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-y-valores-esperados">2.1.2. Medidas y valores esperados</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">2.1.2.1. Valores esperados</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desviacion-estandar">2.1.2.1.1. Desviación estándar</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-schrodinger">2.1.2.1.2. Ecuación de Schrödinger</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-probabilidad">2.1.2.1.3. Conservación de la probabilidad.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-la-base-adaptada">2.1.2.1. Medidas en la base adaptada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">2.1.2.2. Valores esperados</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desviacion-estandar">2.1.2.3. Desviación estándar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-schrodinger">2.1.2.4. Ecuación de Schrödinger</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-probabilidad">2.1.2.5. Conservación de la probabilidad.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operador-de-evolucion">2.1.2.6. Operador de Evolución</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-h-independiente-del-tiempo">2.1.2.6.1. Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operador-de-evolucion">2.1.2.2. Operador de Evolución</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-h-independiente-del-tiempo">2.1.2.2.1. Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-base-autoestados-de-h">2.1.2.2.2. Evolución en la base autoestados de H</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-base-autoestados-de-h">2.1.2.7. Evolución en la base autoestados de H</a></li>
 </ul>
 </li>
 </ul>
@@ -516,8 +516,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="fundamentos-de-mecanica-cuantica">
-<h1><span class="section-number">2.1. </span>1.6 Fundamentos de Mecánica Cuántica<a class="headerlink" href="#fundamentos-de-mecanica-cuantica" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="elementos-de-mecanica-cuantica">
+<h1><span class="section-number">2.1. </span>Elementos de Mecánica Cuántica<a class="headerlink" href="#elementos-de-mecanica-cuantica" title="Permalink to this heading">#</a></h1>
 <p><span class="math notranslate nohighlight">\( \newcommand{\bra}[1]{\langle #1|} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\ket}[1]{|#1\rangle} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\braket}[2]{\langle #1|#2\rangle} \)</span>
@@ -525,6 +525,7 @@ document.write(`
 <span class="math notranslate nohighlight">\( \newcommand{\tr}{{\rm tr}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\i}{{\color{blue} i}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\Hil}{{\cal H}} \)</span>
+<span class="math notranslate nohighlight">\( \newcommand{\Lin}{\hbox{Lin}}\)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\V}{{\cal V}} \)</span></p>
 <ul class="simple">
 <li><p><span class="xref myst">Axiomas</span>
@@ -558,18 +559,19 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="axiomas">
-<h2><span class="section-number">2.1.1. </span>Axiomas<a class="headerlink" href="#axiomas" title="Permalink to this heading">#</a></h2>
+<section id="axiomas-de-la-mecanica-cuantica">
+<h2><span class="section-number">2.1.1. </span>Axiomas de la Mecánica Cuántica<a class="headerlink" href="#axiomas-de-la-mecanica-cuantica" title="Permalink to this heading">#</a></h2>
 <p>La Mecánica Cuántica es una teoría fundamentada en unos pilares axiomáticos cuya selección admite cierta flexibilidad. La más aceptada constituye lo que se denomina la <i>interpretación de Copenhagen</i>.</p>
-<section id="bullet-postulado-i-vector-de-estado">
-<h3><span class="section-number">2.1.1.1. </span><span class="math notranslate nohighlight">\(\bullet\)</span>   Postulado I :  <em>Vector de estado</em><a class="headerlink" href="#bullet-postulado-i-vector-de-estado" title="Permalink to this heading">#</a></h3>
-<p><a id='axiomas-I'></a></p>
-<div class="alert alert-block alert-info">
-<p style="text-align: left ;color: navy;"> 
-    En un instante, $t$, la máxima información accesible de un <i>sistema cuántico aislado</i> está asociada a un vector $\ket{\psi}$, de norma unidad, $\braket{\psi}{\psi}=1$,  
-perteneciente a un espacio de Hilbert $\Hil$<br>
-</p>
-<div><ul class="simple">
+<p><strong>Postulado I</strong> :  <em>Vector de estado</em>
+<a id='axiomas-I'></a></p>
+<blockquote>
+<div><p style="text-align: left ;color: navy;"> 
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>En un instante, $t$, la máxima información accesible de un &lt;i&gt;sistema cuántico aislado&lt;/i&gt; está asociada a un vector $\ket{\psi}$, de norma unidad, $\braket{\psi}{\psi}=1$,  
+</pre></div>
+</div>
+<p>perteneciente a un espacio de Hilbert <span class="math notranslate nohighlight">\(\Hil\)</span>, cuya dimensión compleja <span class="math notranslate nohighlight">\(N\)</span> equivale al número de grados de libertad del sistema.</p>
+</p><ul class="simple">
 <li><p>El vector de estado es el objecto matemático que contiene la máxima información accesible. La palabra <em>estado</em> es engañosa por cuanto parece indicar que el sistema <em>está</em> en alguna estado concreto.  El vector de estado recibe también el nombre de <em>función de onda</em>.
 <br></p></li>
 <li><p>La dimensión de <span class="math notranslate nohighlight">\(\Hil\)</span> está relacionada con el número de grados de libertad del sistema.
@@ -581,14 +583,15 @@ $<span class="math notranslate nohighlight">\(
 \)</span>$
 <br></p></li>
 </ul>
-</section>
-<section id="bullet-postulado-ii-evolucion-con-el-tiempo">
-<h3><span class="section-number">2.1.1.2. </span><span class="math notranslate nohighlight">\(\bullet\)</span> Postulado  II :  <em>Evolución con el tiempo</em><a class="headerlink" href="#bullet-postulado-ii-evolucion-con-el-tiempo" title="Permalink to this heading">#</a></h3>
-<p>Lo que caracteriza y distingue a un sistema cuántico de otro está contenido en un <em>operador hermítico</em> <span class="math notranslate nohighlight">\(H = H^\dagger\)</span> que se denomina <strong>operador Hamiltoniano</strong></p>
-<p>El operador Hamiltoniano  gobierna su evolución. Supongamos que el sistema se prepara a <span class="math notranslate nohighlight">\(t=0\)</span> en un cierto estado <span class="math notranslate nohighlight">\(\ket{\psi(0)}\)</span></p>
-<div class="alert alert-block alert-info",text-align:center>
-<p style="color: navy;">  
-    El cambio continuo en el tiempo de  $\ket{\psi(t)}$ de un sistema cuya dinámica está gobernada por un Hamiltoniano $H(t)$,  es <i>determinista</i> y es solución de la <i>Ecuación de Schrödinger</i>
+<p><strong>Postulado  II :</strong>  <em>Evolución con el tiempo</em></p>
+<p>Lo que caracteriza la evolución  dinámica de un sistema cuántico está contenido en un <em>operador hermítico</em> <span class="math notranslate nohighlight">\(H = H^\dagger\)</span> que se denomina <strong>operador Hamiltoniano</strong></p>
+<p>Supongamos que el sistema se prepara a <span class="math notranslate nohighlight">\(t=0\)</span> en un cierto estado <span class="math notranslate nohighlight">\(\ket{\psi(0)}\)</span></p>
+<blockquote>
+<div><p style="color: navy;">  
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>El cambio continuo en el tiempo de  $\ket{\psi(t)}$ de un sistema cuya dinámica está gobernada por un Hamiltoniano $H(t)$,  es &lt;i&gt;determinista&lt;/i&gt; y es solución de la &lt;i&gt;Ecuación de Schrödinger&lt;/i&gt;
+</pre></div>
+</div>
 <br> 
 <br>
 $$
@@ -596,20 +599,16 @@ $$
 $$
 <br>    
 </p>
-</div>
 <p>La ecuación de Schrödinger es una ecuación diferencial ordinaria (una sola variable) para un vector.</p>
-</section>
-<section id="bullet-postulado-iii-medidas-de-observables-a-id-postul-iii-medida-a">
-<h3><span class="section-number">2.1.1.3. </span><span class="math notranslate nohighlight">\(\bullet\)</span>  Postulado III:  <em>Medidas de observables</em>  <a id='postul_III_medida'></a><a class="headerlink" href="#bullet-postulado-iii-medidas-de-observables-a-id-postul-iii-medida-a" title="Permalink to this heading">#</a></h3>
-<div class="alert alert-block alert-info">
-<p style="text-align: left ;color: navy;"> 
+<p><strong>Postulado III:</strong> <span class="math notranslate nohighlight">\(~\)</span> <em>Medidas de Von Neumann</em>  <a id='postul_III_medida'></a></p>
+<blockquote>
+<div><p style="text-align: left ;color: navy;"> 
 - A una magnitud física medible le está asociado   un operador hermítico  $ A= A^\dagger$ que denominamos <b>observable</b>.
+</div></blockquote>
 <br>
-<br>
-- Los resultados de una medición no pueden dar como resultado nada más que uno de los valores propios de $A \Rightarrow \lambda_n$.
-<br>    
-<br>    
-- <b> Regla de Born</b>: La probabilidad de obtener  el autovalor $\lambda_k$ como resultado de una cierta medición, viene dada por
+>- Los resultados de una medición solo pueden dar uno de los autovalores de $A \Rightarrow \lambda_k$.
+<br>       
+>- <b> Regla de Born</b>: La probabilidad de obtener  el autovalor $\lambda_k$ como resultado de una cierta medición, viene dada por
 la expresión
 <br><br>
 $$
@@ -617,64 +616,61 @@ p(\lambda_k)~ = ~|\braket{\lambda_k}{\psi}|^2
 $$ 
 donde $\ket{\lambda_k}$ es el autovector asociado. 
 </p>
-</div>
 <p>Las magnitudes medibles son números reales, de ahí la exigencia de que <span class="math notranslate nohighlight">\(A\)</span> deba ser un operador hermítico</p>
-<div class="alert alert-block alert-danger">
-<p style="text-align: left ;"> 
 <ul class="simple">
 <li><p>La información contenida en <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> es <b>intrínsecamente probabilística</b>: <span class="math notranslate nohighlight">\(\psi\)</span> codifica una distribución de probabilidad, <span class="math notranslate nohighlight">\(p(\lambda_m)\)</span>, para cada posible resultado <span class="math notranslate nohighlight">\(\lambda_m\)</span>.<br />
 <br></p></li>
 <li><p><em>Muy importante</em>:  <span class="math notranslate nohighlight">\((\lambda_m,p(\lambda_m))\)</span> no es una <i>pseudo-probabilidad</i> sino, probablemente, la única verdadera variable aleatoria en el sentido puro de la palabra que existe en la naturaleza.</p></li>
 </ul>
-</div><p>La fórmula para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span>  es cierta cuando el autovalor en cuestion es <em>no degenerado</em>.</p>
-<p>Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span> debe generalizarse:
+<ul class="simple">
+<li><p>Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span>, la fórmula para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> debe generalizarse:
 <br>
-<br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-3bf9168d-3fd3-4ade-b46a-623e4ad6c23c">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-3bf9168d-3fd3-4ade-b46a-623e4ad6c23c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<br></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-b1faee36-d1d9-42d5-906d-c1144a030c5b">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-b1faee36-d1d9-42d5-906d-c1144a030c5b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \bra{\psi}\left(
  \sum_{a=1}^{d_k}\ketbra{\lambda^a_k}{\lambda^a_k}\right) \ket{\psi}\nonumber\\
 &amp;=&amp;  \bra{\psi}P_k\ket{\psi} \rule{0mm}{7mm}\\
 \end{eqnarray}\]</div>
 <p>La última expresión revela que <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> no es más que el <em>valor esperado del proyector</em> <span class="math notranslate nohighlight">\(P_k = P^2_k\)</span>.</p>
-<p>Esta es la razón por la que las medidas a las que se refiere este postulado se denominana <em>proyectivas</em></p>
-<p>Veremos en el <span class="xref myst">capítulo 5</span> que son un caso especial del tipo más general posible de medidas.</p>
-</section>
-<section id="bullet-postulado-iv-colapso-de-la-funcion-de-onda">
-<h3><span class="section-number">2.1.1.4. </span><span class="math notranslate nohighlight">\(\bullet\)</span> Postulado IV:   <em>Colapso de la función de  onda</em><a class="headerlink" href="#bullet-postulado-iv-colapso-de-la-funcion-de-onda" title="Permalink to this heading">#</a></h3>
-<div class="alert alert-block alert-info",text-align:center>
-<p style="color: navy;">   
- Si el resultado de una medida  ha sido  $\lambda_n$,
-el estado del sistema,inmediatamente después de la medida, 
+<p>Esta es la razón por la que las medidas a las que se refiere este postulado se denominana <em>proyectivas</em>, y son un caso especial del tipo más general posible de medidas.</p>
+<p><strong>Postulado IV:</strong>  <span class="math notranslate nohighlight">\(~\)</span> <em>Colapso de la función de  onda</em></p>
+<blockquote>
+<div><p style="color: navy;">   
+</div></blockquote>
+<p>Si el resultado de una medida  ha sido  <span class="math notranslate nohighlight">\(\lambda_n\)</span>,
+el estado del sistema,inmediatamente después de la medida,
 <br>
-viene dado por el vector propio  
-$\ket{\lambda_n} \in \Hil$, normalizado $|\braket{\lambda_n}{\lambda_n}|=1$
+viene dado por el vector propio<br />
+<span class="math notranslate nohighlight">\(\ket{\lambda_n} \in \Hil\)</span>, normalizado <span class="math notranslate nohighlight">\(|\braket{\lambda_n}{\lambda_n}|=1\)</span>
 <br><br>
-$$
+$<span class="math notranslate nohighlight">\(
 \ket{\psi}~\stackrel{\lambda_n}{\Longrightarrow}~ \ket{\lambda_n} 
-$$
+\)</span>$</p>
 </p>    
-</div>
-</section>
+<p>Matemáticamente podemos describir el colapso de la función de onda mediante la combinación de una proyección y una normalización</p>
+<div class="math notranslate nohighlight">
+\[
+ \ket{\psi} \Rightarrow \frac{P_n\ket{\psi}}{\|P_n\ket{\psi}\|} = \ket{\lambda_n}
+ \]</div>
+<p>La normalización en el denominador depende del estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> y, por tanto, no podemos describir el colapso como la acción de ningún operador <span class="math notranslate nohighlight">\(\in \Lin(\Hil)\)</span></p>
 </section>
 <section id="medidas-y-valores-esperados">
 <h2><span class="section-number">2.1.2. </span>Medidas y valores esperados<a class="headerlink" href="#medidas-y-valores-esperados" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>En Mecánica Cuántica especificamos un estado en las componentes de la expansión de un estado en <em>una base</em> ortonormal.
-Existen infinitas bases posibles para expresar un vector. ¿Qué base es la mejor? La respuesta es que depende del proceso que estudiemos.</p></li>
-</ul>
-<ul class="simple">
-<li><p>Por ejemplo, si el proceso es <em>la medida</em> de un cierto observable <span class="math notranslate nohighlight">\(A=A^\dagger\)</span>, el resultado de nuestra medición sólo puede ser uno de los <em>valores propios</em> <span class="math notranslate nohighlight">\(\lambda_i\)</span>
+<p>En Mecánica Cuántica especificamos un estado en las componentes de la expansión de un estado en <em>una base</em> ortonormal.
+Existen infinitas bases posibles para expresar un vector. ¿Qué base es la mejor? La respuesta es que depende del proceso que estudiemos.</p>
+<section id="medidas-en-la-base-adaptada">
+<h3><span class="section-number">2.1.2.1. </span>Medidas en la base adaptada<a class="headerlink" href="#medidas-en-la-base-adaptada" title="Permalink to this heading">#</a></h3>
+<p>Si el proceso es <em>la medida</em> de un cierto observable <span class="math notranslate nohighlight">\(A=A^\dagger\)</span>, el resultado de nuestra medición sólo puede ser uno de los <em>valores propios</em> <span class="math notranslate nohighlight">\(\lambda_i\)</span>
 <br>
 <br>
 $<span class="math notranslate nohighlight">\(
 A \ket{\lambda_k} = \lambda_k \ket{\lambda_k}\, 
 \)</span><span class="math notranslate nohighlight">\(
 &lt;br&gt;
-donde \)</span>\ket{\lambda_k}<span class="math notranslate nohighlight">\( son los autovectores \)</span>{k=1,2,…}$ que forman una base ortonormal.</p></li>
-</ul>
-<ul class="simple">
-<li><p>Ésta es la base natural adaptada a procesos de medida de <span class="math notranslate nohighlight">\(A\)</span>. En particular para conocer <em>con qué probabilidad</em> se producirá cada resultado, expandiremos el estado<br />
+donde \)</span>\ket{\lambda_k}<span class="math notranslate nohighlight">\( son los autovectores \)</span>{k=1,2,…}$ que forman una base ortonormal.</p>
+<p>Ésta es la base natural adaptada a procesos de medida de <span class="math notranslate nohighlight">\(A\)</span>. En particular para conocer <em>con qué probabilidad</em> se producirá cada resultado, lo más conveniente será expandir el estado en la misma
 <br>
 $<span class="math notranslate nohighlight">\(
 \ket{\psi} = \sum_{i=1}^N a_i \ket{\lambda_i}\, .
@@ -685,24 +681,16 @@ El axioma IV (regla de Born) afirma que &lt;i&gt;la probabilidad de aparición&l
 &lt;br&gt;
 \)</span><span class="math notranslate nohighlight">\(
 p(\lambda_i)=|\braket{\lambda_i}{\psi}|^2  = |a_i|^2 \, .
-\)</span>$</p></li>
-</ul>
-<ul class="simple">
-<li><p>La forma de tener acceso experimental a los números <span class="math notranslate nohighlight">\(p(\lambda_i)\)</span>  es mediante la <strong>repetición estadística</strong>. Si efectuamos la medida un número <span class="math notranslate nohighlight">\(n\)</span> de veces con <span class="math notranslate nohighlight">\(n\to \infty\)</span>, y contamos la frecuencia de aparición de los distintos <span class="math notranslate nohighlight">\(\lambda_i\)</span>, esto es
+\)</span>$</p>
+<p><strong>Tomografía:</strong></p>
+<p>La forma de tener <em>acceso experimental</em> a los números <span class="math notranslate nohighlight">\(p(\lambda_i)\)</span>  es mediante la <em>repetición estadística</em>. Si efectuamos la medida un número <span class="math notranslate nohighlight">\(n\)</span> de veces con <span class="math notranslate nohighlight">\(n\to \infty\)</span>, y contamos la frecuencia de aparición <span class="math notranslate nohighlight">\(n(\lambda_i)\)</span> de los distintos <span class="math notranslate nohighlight">\(\lambda_i\)</span>,
+en el límite <span class="math notranslate nohighlight">\(n\to \infty\)</span> la <em>frecuencia relativa</em> experimental convergerá a la probabilidad teórica
 <br>
 <br>
 $<span class="math notranslate nohighlight">\(
-\frac{n(\lambda_i)}{n}\, .
-\)</span><span class="math notranslate nohighlight">\(
-&lt;br&gt;
-en el límite \)</span>n\to \infty<span class="math notranslate nohighlight">\( dicha frecuencia experimental convergerá a la probabilidad teórica
-&lt;br&gt;
-&lt;br&gt;
-\)</span><span class="math notranslate nohighlight">\(
 \lim_{n\to\infty} \frac{n(\lambda_i)}{n} =  p(\lambda_i)  = |a_i|^2   \, .
 \)</span>$
-<br></p></li>
-</ul>
+<br></p>
 <p>Vemos que, mediante repetición estadística, solamente podemos recuperar el <em>módulo de las amplitudes</em>
 <br>
 <br></p>
@@ -710,25 +698,22 @@ en el límite \)</span>n\to \infty<span class="math notranslate nohighlight">\( 
 \[
 |a_i| = \lim_{n\to\infty} \sqrt{\frac{n(\lambda_i)}{n} }
 \]</div>
-<br>
-<div class="alert alert-block alert-danger">
-<p style="text-align:left">  
-<b>Notar:</b>
-<ul class="simple">
-<li><p>En Computación Cuántica, almacenamos la información en las amplitudes <span class="math notranslate nohighlight">\(a_i\)</span> en una base dada (la base computacional). Vemos que sólamente su módulo <span class="math notranslate nohighlight">\(|a_i|\)</span> es recuperable a través de medidas.</p></li>
-<li><p>Cada vez que seleccionamos un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, y un observable <span class="math notranslate nohighlight">\(A\)</span>, se genera una variable aleatoria <span class="math notranslate nohighlight">\((\lambda,p(\lambda))\, \to \)</span> en cada medida de <span class="math notranslate nohighlight">\(A\)</span> sobre <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> obtenemos un autovalor <span class="math notranslate nohighlight">\(\lambda_i\)</span> con una probabilidad <span class="math notranslate nohighlight">\(p(\lambda_i)\)</span>.
-La repetición del experimento permite reconstruir estimadores estadísticos.</p></li>
-</ul>
-</p>
-</div><div class="alert alert-block alert-success">
-<b>Ejercicio:</b>
-generaliza las expresiones anteriores al caso en que los autovalores $\lambda_k$ puedan ser  $d_k$ veces degenerados.
+</section>
 <section id="valores-esperados">
-<h3><span class="section-number">2.1.2.1. </span>Valores esperados<a class="headerlink" href="#valores-esperados" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.1.2.2. </span>Valores esperados<a class="headerlink" href="#valores-esperados" title="Permalink to this heading">#</a></h3>
 <p><a id='valores_esperados'></a></p>
-<p>Rescribamos la probabilidad de encontrar <span class="math notranslate nohighlight">\(\lambda_k\)</span> en el caso de que sea <span class="math notranslate nohighlight">\(d_k\)</span> veces degenerado</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9fa4bf06-05ae-459d-a4d2-fff04dc6ade7">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-9fa4bf06-05ae-459d-a4d2-fff04dc6ade7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<p>Vemos que la elección de un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> y un observable <span class="math notranslate nohighlight">\(A\)</span> conduce a una variable aleatoria <span class="math notranslate nohighlight">\(\{\lambda_k,p(\lambda_k)\}\)</span> de posibles resultados y sus probabilidades.</p>
+<blockquote>
+<div><p><strong>Definición</strong>: definimos <span class="math notranslate nohighlight">\(\langle A\rangle_\psi\)</span> el valor esperado del operador <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, como el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\{\lambda_k,p(\lambda_k)\}\)</span>
+<br>
+<br>
+$<span class="math notranslate nohighlight">\(
+\langle A\rangle_\psi =   \sum_k \lambda_k p(\lambda_k)
+\)</span>$</p>
+</div></blockquote>
+<p>Rescribamos <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> en el caso de que sea <span class="math notranslate nohighlight">\(\lambda_k\)</span> sea un autovalor <span class="math notranslate nohighlight">\(d_k\)</span> veces degenerado</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d8814ad8-cc62-4144-ab62-90fc18217a93">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-d8814ad8-cc62-4144-ab62-90fc18217a93" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k) &amp;=&amp; \sum_{a=1}^{d_k} |\braket{\lambda^a_k}{\psi}|^2  = 
 \sum_{a=1}^{d_k} \braket{\psi}{\lambda^a_k}\braket{\lambda^a_k}{\psi} \nonumber\\
 &amp;=&amp;\bra{\psi} \left( \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}  \right) = \bra{\psi}P_k \ket{\psi} 
@@ -737,83 +722,83 @@ p(\lambda_k) &amp;=&amp; \sum_{a=1}^{d_k} |\braket{\lambda^a_k}{\psi}|^2  =
 $<span class="math notranslate nohighlight">\(
 P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \)</span>$
-es el proyector sobre el subespacio propio</p>
-<p>Por el <em>valor esperado</em> <span class="math notranslate nohighlight">\(\langle A\rangle\)</span> del <em>observable</em> <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, entendemos el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\lambda_n\)</span> obtenida por el método descrito.
-<br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-d06ac43d-8649-48e7-bf3a-bbc3931ec72c">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-d06ac43d-8649-48e7-bf3a-bbc3931ec72c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-\langle A\rangle &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
+es el proyector sobre el subespacio propio.</p>
+<p>Ahora podemos introducir este resultado en la expresión para el valor esperado de <span class="math notranslate nohighlight">\(A\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-fff7d155-fb2a-4b15-9e8a-9521d31dd62a">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-fff7d155-fb2a-4b15-9e8a-9521d31dd62a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+\langle A\rangle_\psi &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 
 \end{eqnarray}\]</div>
-<p>Reconocemos entre paréntesis la descomposición espectral de <span class="math notranslate nohighlight">\(A\)</span>. Llegamos así a la siguiente expresión para el valor esperado de un observable <span class="math notranslate nohighlight">\(A\)</span> en un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>
-<br></p>
-<div class="alert alert-block alert-info",text-align:center>
-<p style="color: navy;">  
-<b>Teorema</b>:
-$$\langle A \rangle=\bra{\psi}A \ket{\psi} $$
-    <br>
-</div><p>En particular, las probabilidades mismas se pueden expresar como <em>valores esperados del proyector asociado</em></p>
+<p>Reconocemos entre paréntesis la descomposición espectral de <span class="math notranslate nohighlight">\(A\)</span>. Llegamos así a la siguiente expresión para el valor esperado de un observable <span class="math notranslate nohighlight">\(A\)</span> en un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span></p>
+<blockquote>
+<div><p style="color: navy;">  
+</div></blockquote>
+<p><b>Teorema</b>: el valor esperado de un observable <span class="math notranslate nohighlight">\(A\)</span> en un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> viene dado por la expresión siguiente:
+<br>
+<br>
+$<span class="math notranslate nohighlight">\(\langle A \rangle=\bra{\psi}A \ket{\psi} \)</span>$</p>
+</p><p>En particular, las probabilidades mismas se pueden entender como <em>valores esperados del proyector asociado</em></p>
 <div class="math notranslate nohighlight">
 \[
-p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle 
+p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle_\psi 
 \]</div>
-<p>El espectro de un observable está formado por números reales que podemos ordenar <span class="math notranslate nohighlight">\(\lambda_{min}&lt;...&lt;\lambda_{max}\)</span>.</p>
-<p>El valor esperado de un observable en uno de sus autoestados coincide con el autovalor asociado
+<hr>
+<blockquote>
+<div><blockquote>
+<div><p><b>Ejercicio</b>: podemos ordenar el espectro de un observable  <span class="math notranslate nohighlight">\(\lambda_{min}&lt;...&lt;\lambda_{max}\)</span>.
+Demuestra que</p>
+<ul class="simple">
+<li><p>el valor esperado de un observable <span class="math notranslate nohighlight">\(A\)</span> está acotado entre sus valores propios mínimo y máximo
 <br>
 <br>
 $<span class="math notranslate nohighlight">\(
-\bra{\lambda_i}A \ket{\lambda_i} = \bra{\lambda_i}\lambda_i \ket{\lambda_i}  = \lambda_i \braket{\lambda_i}{\lambda_i} = \lambda_i
-\)</span>$</p>
-<div class="alert alert-block alert-info",text-align:center>
-<p style="color: navy;">  
-<b>Teorema</b>:
-<br>
-el valor esperado de un observable $A$ está acotado entre sus valores propios mínimo y máximo
-<br>  
-<br>    
-$$
 \lambda_{min} \leq \bra{\psi}A\ket{\psi} \leq \lambda_{max}
-$$
-<br>
-y las desigualdades anteriores se saturan en los autoestados correspondientes
-</div>
+\)</span>$
+<br></p></li>
+<li><p>las desigualdades anteriores se saturan  cuando <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> son  los autoestados correspondientes</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<hr></section>
 <section id="desviacion-estandar">
-<h4><span class="section-number">2.1.2.1.1. </span>Desviación estándar<a class="headerlink" href="#desviacion-estandar" title="Permalink to this heading">#</a></h4>
+<h3><span class="section-number">2.1.2.3. </span>Desviación estándar<a class="headerlink" href="#desviacion-estandar" title="Permalink to this heading">#</a></h3>
 <p><a id='desviacion_estandar'></a></p>
 <p>La <em>varianza</em>  es la media de la desviación cuadrática de la variable aleatoria <span class="math notranslate nohighlight">\((\lambda,p(\lambda))\)</span> es decir
 <br>
-<br>
-$<span class="math notranslate nohighlight">\(
-~~\sigma ^2 = \overline{(\lambda_i-\bar\lambda_i)^2}= \overline{\lambda^2} - \overline{\lambda}^2
-\)</span>$
-de aquí se sigue, para la desviación estándar</p>
-<div class="alert alert-block alert-info",text-align:center>
-<p style="color: navy;">  
-<b>Teorema</b>:
-$$ \sigma = \sqrt{\bra{\psi}A^2\ket{\psi} - \bra{\psi} A\ket{\psi}^2}
-$$
-</div>
-<p>Evaluada en un estado propio <span class="math notranslate nohighlight">\(\ket{\lambda_i}\)</span>, la varianza de un operador es cero</p>
+<br></p>
+<div class="amsmath math notranslate nohighlight" id="equation-c77ee8a6-aebc-41c1-b93e-194ccf8305b3">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-c77ee8a6-aebc-41c1-b93e-194ccf8305b3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+~~\sigma ^2 &amp;=&amp; \overline{(\lambda_i-\bar\lambda_i)^2} = \overline{ \lambda^2 - 2\lambda\bar\lambda +\bar\lambda^2}
+\\
+&amp;=&amp;  \overline{\lambda^2} - \overline{\lambda}^2 \rule{0mm}{8mm}
+\end{eqnarray}\]</div>
+<p>de aquí se sigue que:</p>
+<blockquote>
+<div><p style="color: navy;"> 
+</div></blockquote>
+<p><b>Teorema</b>: las fluctuaciones cuánticas asociadas a la medidad de un observable <span class="math notranslate nohighlight">\(A\)</span> en un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>  vienen descritas por la desviación estándar
+$<span class="math notranslate nohighlight">\( \sigma(A,\psi) = \sqrt{\bra{\psi}A^2\ket{\psi} - \bra{\psi} A\ket{\psi}^2}
+\)</span>$</p>
+<p>La varianza es una medida de <em>cuan alejado</em> se encuentra el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> de ser un autoestado <span class="math notranslate nohighlight">\(\ket{\lambda_i}\)</span>.
+Efectivamente, evaluada en un estado propio <span class="math notranslate nohighlight">\(\ket{\lambda_i}\)</span>, la varianza se anula</p>
 <div class="math notranslate nohighlight">
 \[
-\sigma^2 = \bra{\lambda_i}A^2\ket{\lambda_i} - \bra{\lambda_i} A\ket{\lambda_i}^2 = \bra{\lambda_i}\lambda_i^2\ket{\lambda_i} - \bra{\lambda_i} \lambda_i\ket{\lambda_i}^2 = 0
+\sigma^2 = \bra{\lambda_i}A^2\ket{\lambda_i} - \bra{\lambda_i} A\ket{\lambda_i}^2 = \bra{\lambda_i}\lambda_i^2\ket{\lambda_i} - \bra{\lambda_i} \lambda_i\ket{\lambda_i}^2 = \lambda_i^2 - \lambda_i^2 = 0
 \]</div>
-<div class="cell docutils container">
+<hr>
+<p style="color: brown;">  
+    <b>Ejercicio</b> $~$ <i>(explícaselo a tu ordenador)</i>
+<br>
+    Escribe una función en python <b>vev_sig</b>($A$,$ket$) que devuelva el valor esperado y la varianza de un observable  $A$ en el estado $ket$.
+</p>
+<hr><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vev_sig</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ket</span><span class="p">):</span>
 
-    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ket</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">ket</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>  <span class="o">==</span> <span class="mf">1.</span> <span class="c1"># chequeamos que la norma es unidad</span>
-    <span class="n">bra</span> <span class="o">=</span> <span class="n">ket</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
-    
-    <span class="s1">&#39;el valor esperado&#39;</span>
-    <span class="n">vev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">bra</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">ket</span><span class="p">))[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span>
-   
-    <span class="s1">&#39;la varianza&#39;</span>
-    <span class="n">A2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">A</span><span class="p">)</span>
-    <span class="n">var</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">bra</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="n">ket</span><span class="p">))[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">vev</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
-    
+<span class="c1">####</span>
+<span class="c1"># aquí tu código</span>
+<span class="c1">###</span>
     <span class="k">return</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">vev</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -834,7 +819,7 @@ $$
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-5.7208, -0.4985,  2.8763])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-3.4968,  0.688 ,  4.3157])
 </pre></div>
 </div>
 </div>
@@ -861,7 +846,23 @@ $$
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt;=  -5.7208  sigma =  8.43e-08
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">norma</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ket</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">ket</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">real</span> 
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">uket</span> <span class="o">=</span> <span class="n">ket</span><span class="o">/</span><span class="n">norma</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">vev</span><span class="p">,</span> <span class="n">sig</span> <span class="o">=</span> <span class="n">vev_sig</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">uket</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;A&gt;= &#39;</span><span class="p">,</span><span class="n">vev</span><span class="p">,</span> <span class="s1">&#39; sigma = &#39;</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+
+<span class="nn">Cell In[2], line 6,</span> in <span class="ni">vev_sig</span><span class="nt">(A, ket)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">vev_sig</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ket</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">####</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># aquí tu código</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">###</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="k">return</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">vev</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;vev&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -869,7 +870,7 @@ $$
 <p>## Evolución temporal</p>
 </section>
 <section id="ecuacion-de-schrodinger">
-<h4><span class="section-number">2.1.2.1.2. </span>Ecuación de Schrödinger<a class="headerlink" href="#ecuacion-de-schrodinger" title="Permalink to this heading">#</a></h4>
+<h3><span class="section-number">2.1.2.4. </span>Ecuación de Schrödinger<a class="headerlink" href="#ecuacion-de-schrodinger" title="Permalink to this heading">#</a></h3>
 <p>El estado de un sistema <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span> posee la máxima información instantánea accesible de un sistema, es decir, a un tiempo dado <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <p>Dado <span class="math notranslate nohighlight">\(\ket{\psi(t_0)}\)</span> en un instante inicial <span class="math notranslate nohighlight">\(t_0\)</span>, la evolución posterior obedece a la  ecuación diferencial de Schrödinger
 <br>
@@ -879,29 +880,29 @@ $<span class="math notranslate nohighlight">\(
 \)</span>$
 <br></p>
 <p>Hemos enfatizado el hecho de que, en el caso más general, <span class="math notranslate nohighlight">\(H(t)\)</span> puede depender del tiempo.</p>
-<div class="alert alert-block alert-danger">
 <p style="text-align: left"> 
 <b>Notar:</b>
 <p>las cantidades que entran en la ecuación de Schrödinger <em>tienen unidades</em>:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(H\)</span> tiene unidades de <em>energía</em>. En el SI (Sistema Iternacional) <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(\hbox{Julios = J}\)</span>
+<li><p>el <em>Hamiltoniano</em>, <span class="math notranslate nohighlight">\(H\)</span>, tiene unidades de <em>energía</em>. En el SI (Sistema Iternacional) <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(\hbox{Julios = J}\)</span>
 <br></p></li>
 <li><p><span class="math notranslate nohighlight">\(t\)</span> tiene unidades de <em>tiempo</em>, en el SI <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(\hbox{segundos = s}\)</span>
 <br></p></li>
 <li><p><span class="math notranslate nohighlight">\(\hbar\)</span> es la constante de Planck, y  tiene unidades de <em>acción</em>= energía <span class="math notranslate nohighlight">\(\times\)</span>  tiempo. En el SI  <span class="math notranslate nohighlight">\(\to \)</span> <span class="math notranslate nohighlight">\(\hbox{Julios}\cdot\hbox{segundo} =  \hbox{J}\cdot\hbox{s}\)</span>. <span class="math notranslate nohighlight">\(~\)</span> Se trata de una <em>cantidad universal</em>
+<br>
 $<span class="math notranslate nohighlight">\(
 \fbox{\)</span>\hbar = 1.054\times 10^{-34}~~ \hbox{J}\cdot\hbox{s}<span class="math notranslate nohighlight">\(}
 \)</span>$</p></li>
 </ul>
-</p>
-</div>    </section>
+</section>
 <section id="conservacion-de-la-probabilidad">
-<h4><span class="section-number">2.1.2.1.3. </span>Conservación de la probabilidad.<a class="headerlink" href="#conservacion-de-la-probabilidad" title="Permalink to this heading">#</a></h4>
+<h3><span class="section-number">2.1.2.5. </span>Conservación de la probabilidad.<a class="headerlink" href="#conservacion-de-la-probabilidad" title="Permalink to this heading">#</a></h3>
 <p>La <em>hermiticidad</em> de <span class="math notranslate nohighlight">\(H\)</span> se relaciona directamente con la interpretación probabilística de <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>.</p>
-<div class="alert alert-block alert-info",text-align:center>
-<p style="color: navy;">  
-<b>Teorema</b>: en la evolución temporal se conserva la norma del vector de estado
-</div><details>
+<blockquote>
+<div><p style="color: navy;">  
+</div></blockquote>
+<p><b>Teorema</b>: en la evolución temporal se conserva la norma del vector de estado</p>
+<details>
 <summary><p style="text-align:left"> >><i>Prueba</i> </p></summary>
 \begin{eqnarray}
 \frac{d}{dt}\|\ket{\psi}\|^2 = \frac{d}{dt}\braket{\psi(t)}{\psi(t)} &=& \left(\rule{0mm}{3mm}\frac{d}{dt}\bra{\psi(t)}\right)\ket{\psi(t)} + 
@@ -914,9 +915,8 @@ Es decir: $\|\ket{\psi}\|$ no cambia con el tiempo, y
 esto implica que la norma de $\ket{\psi(t)}$ se conserva $\Rightarrow 1 = \|\ket{\psi(0)}\| =\|\ket{\psi(t)}\|$
 </details>   
 </section>
-</section>
 <section id="operador-de-evolucion">
-<h3><span class="section-number">2.1.2.2. </span>Operador de Evolución<a class="headerlink" href="#operador-de-evolucion" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.1.2.6. </span>Operador de Evolución<a class="headerlink" href="#operador-de-evolucion" title="Permalink to this heading">#</a></h3>
 <p><a id='operador_evolucion'></a></p>
 <p>La conservación de la norma implica que la evolución <span class="math notranslate nohighlight">\(\|\ket{\psi(0)\|} =\|\ket{\psi(t)}\|\)</span> es un <em>proceso unitario</em>.
 En otras palabras, debe existir un operador unitario</p>
@@ -929,34 +929,31 @@ U(t,t_0)^{-1}= U(t,t_0)^\dagger
 \[
  U(t,t_0): \ket{\psi(t_0)}~~ \to~~ \rule{0mm}{3.5mm} \ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}
 \]</div>
-<div class="alert alert-block alert-danger">
-<p style="text-align: left"> 
-<b>Notar:</b>
-<br>
 <p>El operador de evolución satisface las siguientes propiedades</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(U(t_0,t_0) = I\)</span> , .</p></li>
-<li><p>transitividad:  <span class="math notranslate nohighlight">\(U(t,t_1)U(t_1,t_0)= U(t,t_0)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(U(t_0,t_0) = I\)</span><br />
+<br></p></li>
+<li><p>transitividad:  <span class="math notranslate nohighlight">\(U(t,t_1)U(t_1,t_0)= U(t,t_0)\)</span>
+<br></p></li>
 <li><p>invertibilidad: <span class="math notranslate nohighlight">\(U(t,t_0)^{-1} = U(t_0,t)\)</span></p></li>
 </ul>
-</p>
-</div><p>Evidentemente, el operador de evolución debe estar relacionado con el Hamiltoniano, que es quien gobierna la dinámica. Veamos a ver que hay una ecuación de Schrödinger también para el operador de evolución</p>
-<div class="alert alert-block alert-info",text-align:center>
-<p style="color: navy;">  
-<b>Teorema</b>:
+<p>El operador de evolución es el objeto de interés, puesto que es quien nos va a dar el estado a todo tiempo a partir del inicial. Para obtener <span class="math notranslate nohighlight">\(U(t)\)</span> tendremos que resolver igualmente una ecuación diferencial</p>
+<blockquote>
+<div><p style="color: navy;">  
+</div></blockquote>
+<p><b>Teorema</b>: <span class="math notranslate nohighlight">\(~\)</span>
+el operador de evolución satisface la siguiente ecuación diferencial
 <br>
-el operador de evolución satisface la siguiente ecuación de evolución
 <br>
-<br>
-$$
+$<span class="math notranslate nohighlight">\(
  \frac{d}{dt}U(t,t_0) = -\frac{i}{\hbar} H(t)\, U(t,t_0)
-$$
+\)</span>$</p>
 </p>
 <details>
-<summary><p style="color:grey;text-align:right"> >> Demostración </p></summary>
+<summary><p style="color:grey;text-align:left"> >> Demostración </p></summary>
 Tomando la derivada temporal de la ecuación $\ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}$, que define $U(t,t_0)$, tenemos para cada miembro
-<div class="amsmath math notranslate nohighlight" id="equation-243ca41b-78dc-4d00-ae3d-a9563868611e">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-243ca41b-78dc-4d00-ae3d-a9563868611e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-393b69fb-67b0-4020-8feb-b170437f3d5c">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-393b69fb-67b0-4020-8feb-b170437f3d5c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}\ket{\psi(t)} &amp;~=~&amp; -\frac{i}{\hbar}  H(t)\ket{\psi(t)} = -\frac{i}{\hbar} H(t)U(t,t_0)\ket{\psi(t_0)}  \nonumber\\
 \frac{d}{dt}U(t,t_0)\ket{\psi(t_0)} &amp;~=~&amp; \left(\frac{d}{dt}U(t,t_0)\right)\ket{\psi(t_0)}
 \end{eqnarray}\]</div>
@@ -964,12 +961,11 @@ Tomando la derivada temporal de la ecuación $\ket{\psi(t)} = U(t,t_0)\ket{\psi(
 </details>
 </div>
 <section id="caso-de-h-independiente-del-tiempo">
-<h4><span class="section-number">2.1.2.2.1. </span>Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo<a class="headerlink" href="#caso-de-h-independiente-del-tiempo" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">2.1.2.6.1. </span>Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo<a class="headerlink" href="#caso-de-h-independiente-del-tiempo" title="Permalink to this heading">#</a></h4>
 <p>Cuando <span class="math notranslate nohighlight">\(H\)</span> no depende del tiempo podemos dar una expresión analítica para el operador de evolución</p>
-<div class="alert alert-block alert-info",text-align:center>
-<p style="color: navy"> <b>Teorema</b>:
-<br>    
-para un hamiltoniano $H$ independiente del tiempo, el operador de evolución $U(t,t_0)$ es
+<blockquote>
+<div><p style="color: navy"> <b>Teorema</b>: $~$para un hamiltoniano $H$ independiente del tiempo, el operador de evolución $U(t,t_0)$ es
+</div></blockquote>
 <br>
 <br>
 $$
@@ -977,10 +973,10 @@ U(t,t_0) = \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
 $$
 </p>
 <details>
-<summary><p style="color:grey;text-align:right"> >> Demostración </p></summary>
+<summary><p style="color:grey;text-align:left"> >> Demostración </p></summary>
 Basta con demostrar que se satisface la ecuación de evolución y la condición de contorno
-<div class="amsmath math notranslate nohighlight" id="equation-5edbe20d-5cc9-41f8-ba0c-64ffb27c8f4d">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-5edbe20d-5cc9-41f8-ba0c-64ffb27c8f4d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-01379d8d-b6c1-4440-956d-0aaef29248b8">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-01379d8d-b6c1-4440-956d-0aaef29248b8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}U(t,t_0) &amp;=&amp; \frac{d}{dt} \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
     \nonumber\\ \rule{0mm}{6mm}
    &amp;=&amp; \frac{d}{dt}\left( I +(t-t_0)\left(-\frac{i}{\hbar} H\right) + \frac{1}{2!} 
@@ -997,20 +993,16 @@ U(t_0,t_0) =  \exp\left({-\frac{i}{\hbar} (t_0-t_0)H}\right)=\exp(0) = I
 \)</span>$</p>
 </details>
 </div>
-<div class="alert alert-block alert-danger">
-<p style="text-align: left"> 
-<b>Notar:</b>
-<br>
-que la cantidad ${-\frac{i}{\hbar} (t-t_0) H }$ es adimensional
-$$
+<p><strong>Notar:</strong> la cantidad <span class="math notranslate nohighlight">\({-\frac{i}{\hbar} (t-t_0) H }\)</span> es adimensional
+$<span class="math notranslate nohighlight">\(
 \frac{1}{\hbox{J}\cdot \hbox{s}}\hbox{s}\cdot\hbox{J} = 1
-$$
-<br>    
-Es decir, es un número puro. Por eso podemos exponenciarla. El operador de evolución $U(t,t_0)$ es, por tanto, también, una magnitud adimensional.
-</div><div class="alert alert-block alert-success">
+\)</span><span class="math notranslate nohighlight">\(   
+Es decir, es un número puro. Por eso podemos exponenciarla. El operador de evolución \)</span>U(t,t_0)$ es, por tanto, también, una magnitud adimensional.</p>
+<hr>
+<p style="color: brown;">  
 <b>Ejercicio:</b>
- Escribe una función <i>psi(t,psi0,H)</i> que reciba como argumentos el array <i>psi0</i> de componentes de $\ket{\psi(0)}$, una matriz hermítica <i>H</i>, y un valor de <i>t</i>, y devuelva un vector columna correspondiente a $\ket{\psi(t)}$. Considera $\hbar=1$.
-</div><div class="cell docutils container">
+    Escribe una función <b>evol_psi</b><i>(t,psi0,H)</i> que reciba como argumentos el array <i>psi0</i> de componentes de $\ket{\psi(0)}$, una matriz hermítica <i>H</i>, y un valor de <i>t</i>, y devuelva un vector columna correspondiente a $\ket{\psi(t)}$. Considera $\hbar=1$.
+<hr><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">psi</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">psi0</span><span class="p">,</span><span class="n">H</span><span class="p">):</span>
     <span class="n">lpsi</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">psi0</span><span class="p">)</span>
@@ -1018,16 +1010,21 @@ Es decir, es un número puro. Por eso podemos exponenciarla. El operador de evol
     <span class="k">assert</span> <span class="n">lpsi</span> <span class="o">==</span> <span class="n">lH</span>
     
     <span class="n">psi0ket</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">psi0</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">lpsi</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">expm</span>
     <span class="n">psitket</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">expm</span><span class="p">(</span><span class="o">-</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">H</span><span class="p">),</span><span class="n">psi0ket</span><span class="p">)</span>
+    
     <span class="k">return</span> <span class="n">psitket</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="alert alert-block alert-success">
+<hr>
+<p style="color: brown;">  
 <b>Ejercicio:</b>
 crea un Hamiltoniano aleatorio $2\times 2$ y considera que la base en la que está escrito es $\{\ket{0},\ket{1}\}$. Partiendo de cualquiera de ellos, grafica las probabilidades de permanencia $p(\ket{0}\to \ket{0})$ y de transición $p(\ket{0}\to \ket{1})$ como funciones del tiempo (considera que $\hbar = 1$ por simplicidad). Grafica también el valor esperado de $H$ en ambos estados como función del tiempo. Observa el resultado e intenta explicar por qué es así.    
-</div><div class="cell docutils container">
+</p>
+<hr><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">expm</span>
@@ -1083,12 +1080,13 @@ crea un Hamiltoniano aleatorio $2\times 2$ y considera que la base en la que est
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8abb5b6459dbb21361b6c623471b8292587e133ef5c00e660b717652ff86cddc.png" src="../../_images/8abb5b6459dbb21361b6c623471b8292587e133ef5c00e660b717652ff86cddc.png" />
+<img alt="../../_images/fa88fcee377a5c19e1414368d0c97a8ec7d2ca62db0398b12ba06e7f0519f273.png" src="../../_images/fa88fcee377a5c19e1414368d0c97a8ec7d2ca62db0398b12ba06e7f0519f273.png" />
 </div>
 </div>
 </section>
+</section>
 <section id="evolucion-en-la-base-autoestados-de-h">
-<h4><span class="section-number">2.1.2.2.2. </span>Evolución en la base autoestados de H<a class="headerlink" href="#evolucion-en-la-base-autoestados-de-h" title="Permalink to this heading">#</a></h4>
+<h3><span class="section-number">2.1.2.7. </span>Evolución en la base autoestados de H<a class="headerlink" href="#evolucion-en-la-base-autoestados-de-h" title="Permalink to this heading">#</a></h3>
 <p>Sea <span class="math notranslate nohighlight">\(\{\ket{n}\}\)</span> una base de autoestados de <span class="math notranslate nohighlight">\(H \, \Rightarrow \,H \ket{n} = E_n \ket{n}~~~~n=1,..,N.\)</span></p>
 <p>En esta base <span class="math notranslate nohighlight">\(H\)</span> es una matriz <span class="math notranslate nohighlight">\(H_{mn}\)</span> diagonal</p>
 <div class="math notranslate nohighlight">
@@ -1098,8 +1096,8 @@ H_{mn} =  \begin{bmatrix} E_0 &amp;  &amp; &amp; \\  &amp; E_1 &amp;  &amp; \\ &
 <p>Entonces la matriz de evolución es también diagonal
 $$
 U_{mn} = \exp\left(-\frac{i}{\hbar}t H_{mn}\right) =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-01a94107-9063-468e-b468-8b1624496254">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-01a94107-9063-468e-b468-8b1624496254" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-\frac{i}{\hbar}t E_0} &amp;  &amp; &amp; \\  &amp; e^{-\frac{i}{\hbar} t E_1}  &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d0e2c5dd-aaa8-445b-9650-a00f76b1fe13">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-d0e2c5dd-aaa8-445b-9650-a00f76b1fe13" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-\frac{i}{\hbar}t E_0} &amp;  &amp; &amp; \\  &amp; e^{-\frac{i}{\hbar} t E_1}  &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix}\]</div>
 <p>$$</p>
 <p><strong>En conclusión</strong></p>
 <ul class="simple">
@@ -1125,7 +1123,6 @@ entonces, a tiempo \)</span>t$</p></li>
 \[
 \ket{\psi(t)} = \sum_n c_n e^{-\frac{i}{\hbar}E_n} \ket{n} \, .
 \]</div>
-</section>
 </section>
 </section>
 </section>
@@ -1193,25 +1190,18 @@ entonces, a tiempo \)</span>t$</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas">2.1.1. Axiomas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-i-vector-de-estado">2.1.1.1. <span class="math notranslate nohighlight">\(\bullet\)</span>   Postulado I :  <em>Vector de estado</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-ii-evolucion-con-el-tiempo">2.1.1.2. <span class="math notranslate nohighlight">\(\bullet\)</span> Postulado  II :  <em>Evolución con el tiempo</em></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-iii-medidas-de-observables-a-id-postul-iii-medida-a">2.1.1.3. <span class="math notranslate nohighlight">\(\bullet\)</span>  Postulado III:  <em>Medidas de observables</em> <a id="postul_III_medida"></a></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-iv-colapso-de-la-funcion-de-onda">2.1.1.4. <span class="math notranslate nohighlight">\(\bullet\)</span> Postulado IV:   <em>Colapso de la función de  onda</em></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas-de-la-mecanica-cuantica">2.1.1. Axiomas de la Mecánica Cuántica</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-y-valores-esperados">2.1.2. Medidas y valores esperados</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">2.1.2.1. Valores esperados</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desviacion-estandar">2.1.2.1.1. Desviación estándar</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-schrodinger">2.1.2.1.2. Ecuación de Schrödinger</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-probabilidad">2.1.2.1.3. Conservación de la probabilidad.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-la-base-adaptada">2.1.2.1. Medidas en la base adaptada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">2.1.2.2. Valores esperados</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desviacion-estandar">2.1.2.3. Desviación estándar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-schrodinger">2.1.2.4. Ecuación de Schrödinger</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-probabilidad">2.1.2.5. Conservación de la probabilidad.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operador-de-evolucion">2.1.2.6. Operador de Evolución</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-h-independiente-del-tiempo">2.1.2.6.1. Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operador-de-evolucion">2.1.2.2. Operador de Evolución</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-h-independiente-del-tiempo">2.1.2.2.1. Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-base-autoestados-de-h">2.1.2.2.2. Evolución en la base autoestados de H</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-base-autoestados-de-h">2.1.2.7. Evolución en la base autoestados de H</a></li>
 </ul>
 </li>
 </ul>

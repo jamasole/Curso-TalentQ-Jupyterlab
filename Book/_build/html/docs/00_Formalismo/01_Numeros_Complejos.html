@@ -104,7 +104,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/00_Formalismo/01_Numeros_Complejos';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.2. 1.2 Los Vectores" href="01_Vectores.html" />
+    <link rel="next" title="1.2. Vectores" href="01_Vectores.html" />
     <link rel="prev" title="1. Formalismo Matemático" href="01_formalismo_matematico.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -186,8 +186,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-light" alt="Curso de Introducción a la Computación Cuántica - Home"/>
+    <script>document.write(`<img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-dark" alt="Curso de Introducción a la Computación Cuántica - Home"/>`);</script>
   
-    <p class="title logo__title">Curso de Introducción a la Computación Cuántica</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -196,14 +202,15 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_formalismo_matematico.html">1. Formalismo Matemático</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. 1.2 Los Vectores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.3. 1.3 Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.4. 1.4 Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.5. 1.5 Probabilidades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores_01.html">1.3. Operadores I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores_02.html">1.4. Operadores II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.5. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.6. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_Fundamentos_MC.html">2.1. 1.6 Fundamentos de Mecánica Cuántica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_Fundamentos_MC.html">2.1. Elementos de Mecánica Cuántica</a></li>
 </ul>
 </li>
 </ul>
@@ -486,12 +493,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">1.1.1. Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-cartesiana-y-polar">1.1.2. Formas cartesiana y polar</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-cartesiana">1.1.2.1. Forma Cartesiana</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-complejos-en-python">1.1.2.1.1. Numeros complejos en python:</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-compleja">1.1.2.2. Conjugacion compleja</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-cartesiana">1.1.2.1. Forma Cartesiana</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-polar">1.1.2.2. Forma Polar</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-entre-formas-cartesiana-y-polar">1.1.2.3. Conversión entre formas cartesiana y polar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-compleja">1.1.2.4. Conjugacion compleja</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-basicas">1.1.3. Operaciones básicas</a><ul class="nav section-nav flex-column">
@@ -517,13 +522,80 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="numeros-complejos">
+  <hr class="docutils" />
+<p>license: CC-BY-4.0
+github: <a class="github reference external" href="https://github.com/jamasole/Curso-TalentQ-Jupyterlab">jamasole/Curso-TalentQ-Jupyterlab</a>
+subject: Curso
+venue: Quantum Spain
+authors:</p>
+<ul class="simple">
+<li><p>name: Javier Mas
+email: <a class="reference external" href="mailto:javier&#46;mas&#37;&#52;&#48;usc&#46;es">javier<span>&#46;</span>mas<span>&#64;</span>usc<span>&#46;</span>es</a>
+corresponding: true
+orcid: 0000-0001-7008-2126
+affiliations:</p>
+<ul>
+<li><p>IGFAE-USC</p></li>
+</ul>
+</li>
+<li><p>name: David Castaño
+email: <a class="reference external" href="mailto:javier&#46;mas&#37;&#52;&#48;usc&#46;es">javier<span>&#46;</span>mas<span>&#64;</span>usc<span>&#46;</span>es</a>
+corresponding: true
+orcid: 0000-0001-7008-2126
+affiliations:</p>
+<ul>
+<li><p>UMA
+math:<br />
+‘\i’: ‘{i}’
+‘\bes’: ‘\begin{equation*}’
+‘\ees’: ‘\end{equation*}’
+‘\O’: ‘{\mathcal O}’
+‘\Lin’: ‘\rm L’
+‘\Hil’: ‘{\mathcal H}’
+‘\bra’: ‘{\langle #1|}’
+‘\ket’: ‘{|#1\rangle}’
+‘\braket’: ‘{\langle #1|#2\rangle}’
+‘\ketbra’: ‘{| #1\rangle  \langle #2|}’
+‘\tr’: ‘{\rm tr}’
+‘\R’: ‘{\mathbb R}’
+‘\C’: ‘{\mathbb C}’
+‘\V’: ‘{V}’</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<figure class="align-center">
+<img alt="../../_images/myThumbnail.png" src="../../_images/myThumbnail.png" />
+</figure>
+<section class="tex2jax_ignore mathjax_ignore" id="numeros-complejos">
 <h1><span class="section-number">1.1. </span>Números Complejos<a class="headerlink" href="#numeros-complejos" title="Permalink to this heading">#</a></h1>
-<p><span class="math notranslate nohighlight">\( \newcommand{\bra}[1]{\langle #1|} \)</span>
-<span class="math notranslate nohighlight">\( \newcommand{\ket}[1]{|#1\rangle} \)</span>
-<span class="math notranslate nohighlight">\( \newcommand{\braket}[2]{\langle #1|#2\rangle} \)</span>
-<span class="math notranslate nohighlight">\( \newcommand{\i}{{ i}} \)</span>
-<span class="math notranslate nohighlight">\( \newcommand{\Hil}{{\mathbb H}} \)</span></p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduccion" id="id1">Introducción</a></p></li>
+<li><p><a class="reference internal" href="#formas-cartesiana-y-polar" id="id2">Formas cartesiana y polar</a></p>
+<ul>
+<li><p><a class="reference internal" href="#forma-cartesiana" id="id3">Forma Cartesiana</a></p></li>
+<li><p><a class="reference internal" href="#forma-polar" id="id4">Forma Polar</a></p></li>
+<li><p><a class="reference internal" href="#conversion-entre-formas-cartesiana-y-polar" id="id5">Conversión entre formas cartesiana y polar</a></p></li>
+<li><p><a class="reference internal" href="#conjugacion-compleja" id="id6">Conjugacion compleja</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#operaciones-basicas" id="id7">Operaciones básicas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#suma" id="id8">Suma</a></p></li>
+<li><p><a class="reference internal" href="#multiplicacion" id="id9">Multiplicación</a></p></li>
+<li><p><a class="reference internal" href="#valor-absoluto" id="id10">Valor absoluto</a></p></li>
+<li><p><a class="reference internal" href="#division" id="id11">División</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ejemplos-y-propiedades" id="id12">Ejemplos y propiedades</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sumas-nulas" id="id13">Sumas nulas</a></p></li>
+<li><p><a class="reference internal" href="#desigualdad-triangular" id="id14">Desigualdad triangular</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../macro_tQ.py
@@ -532,36 +604,39 @@ document.write(`
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">macro_tQ</span> <span class="k">as</span> <span class="nn">tQ</span>
-
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">scipy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span><span class="n">Markdown</span><span class="p">,</span><span class="n">Latex</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">array_to_latex</span>
-<span class="kn">import</span> <span class="nn">copy</span> 
 </pre></div>
 </div>
 </div>
 </div>
 <section id="introduccion">
-<h2><span class="section-number">1.1.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
-<p>La mecánica cuántica guarda una relación muy estrecha con los número complejos</p>
+<h2><a class="toc-backref" href="#id1"><span class="section-number">1.1.1. </span>Introducción</a><a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
+<p>La mecánica cuántica guarda una relación muy estrecha con los números complejos.</p>
 <p>Recuerda que el <em>cuadrado</em> de un número real, <span class="math notranslate nohighlight">\(a\in {\mathbb R}\)</span> <u>siempre  es positivo</u></p>
 <div class="math notranslate nohighlight">
-\[a^2 &gt;0\]</div>
+\[ a^2 &gt;0 \]</div>
 <p>por ejemplo <span class="math notranslate nohighlight">\(~~2^2 =  4~~\)</span> pero también <span class="math notranslate nohighlight">\(~~(-2)^2 = 4~~\)</span>.</p>
 <p>Por eso, la raíz cuadrada de un número real <u><em>sólo</em> existe si dicho número es positivo</u>.</p>
-<p>Por ejemplo <span class="math notranslate nohighlight">\(\sqrt{4}=\pm 2\)</span>, mientras que $<span class="math notranslate nohighlight">\(\sqrt{-4}= \, ?\)</span>$</p>
-<p><strong>Pregunta</strong>: <span class="math notranslate nohighlight">\(~~\)</span> ¿cómo podríamos definir la <u>raíz cuadrada de un número real negativo</u>?</p>
-<p><strong>Respuesta</strong>: para hacerlo, es necesario <u>ampliar el conjunto de los números reales</u>.</p>
-<div class="proof definition admonition" id="definition-0">
-<p class="admonition-title"><span class="caption-number">Definition 1.1 </span> (Número <span class="math notranslate nohighlight">\(i\)</span>)</p>
-<section class="definition-content" id="proof-content">
-<p>se postula la existencia de un <i>nuevo número</i>, <span class="math notranslate nohighlight">\(~i\)</span>, que es la solución única de la ecuación <span class="math notranslate nohighlight">\(~\)</span></p>
+<p>Por ejemplo <span class="math notranslate nohighlight">\(\sqrt{4}=\pm 2\)</span>, mientras que</p>
 <div class="math notranslate nohighlight">
-\[ i^2 = -1\]</div>
-</section>
-</div><p>Equivalentemente podíamos haber requerido que  <span class="math notranslate nohighlight">\(i = \sqrt{-1}\)</span>.</p>
+\[\sqrt{-4}= \, ?\]</div>
+<p><strong>Pregunta</strong>: <span class="math notranslate nohighlight">\(~~\)</span> ¿cómo podríamos definir la <u>raíz cuadrada de un número real negativo</u>?</p>
+<p><strong>Respuesta</strong>:  es necesario <u>ampliar el conjunto de los números reales</u>.</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Definición:</strong> <em>número</em> <span class="math notranslate nohighlight">\(i\)</span></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Se postula la existencia de un <i>nuevo número</i>, <span class="math notranslate nohighlight">\(~i\)</span>, que es la solución única de la ecuación</p>
+<div class="math notranslate nohighlight">
+\[
+i^2 = -1
+\]</div>
+</div>
+</div>
+<p>Equivalentemente podíamos haber requerido que  <span class="math notranslate nohighlight">\(i = \sqrt{-1}\)</span>.</p>
 <p>Con esto podemos ahora encontrar la raíz de cualquier número negativo. Por ejemplo, <span class="math notranslate nohighlight">\(-4\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -580,42 +655,36 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\frac{i}{i} = 1\]</div>
 <p>Observar que el <em>inverso multiplicativo</em>  <span class="math notranslate nohighlight">\(1/i\)</span> también es <span class="math notranslate nohighlight">\(-i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2c6e327-2c88-470d-b0a3-b7f05be58589">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-b2c6e327-2c88-470d-b0a3-b7f05be58589" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-70fec7fa-003c-48ef-a5f6-99c3bd406dd3">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-70fec7fa-003c-48ef-a5f6-99c3bd406dd3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{i}{i}  &amp;=&amp;   1 \nonumber\\
 i (-i) &amp;=&amp; - i^2  =  1
 \end{eqnarray}\]</div>
 <p>por tanto hay una identificación importante</p>
 <div class="math notranslate nohighlight">
 \[ i^{-1} = \frac{1}{i} = -i \]</div>
-<div class="warning admonition">
-<p class="admonition-title">En resumen</p>
-<p>La solución al problema planteado consiste en <i>extender</i> el cuerpo de los números reales <span class="math notranslate nohighlight">\({\mathbb R}\)</span> al de los complejos <span class="math notranslate nohighlight">\({\mathbb C}\)</span> que, ahora, incluyen el número <span class="math notranslate nohighlight">\(i\)</span></p>
-</div>
+<p><b>Resumen</b>: la solución al problema planteado consiste en <i>extender</i> el cuerpo de los números reales <span class="math notranslate nohighlight">\({\mathbb R}\)</span> al de los complejos <span class="math notranslate nohighlight">\({\mathbb C}\)</span> que, ahora, incluyen el número <span class="math notranslate nohighlight">\(i\)</span></p>
 </section>
 <section id="formas-cartesiana-y-polar">
-<h2><span class="section-number">1.1.2. </span>Formas cartesiana y polar<a class="headerlink" href="#formas-cartesiana-y-polar" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id2"><span class="section-number">1.1.2. </span>Formas cartesiana y polar</a><a class="headerlink" href="#formas-cartesiana-y-polar" title="Permalink to this heading">#</a></h2>
+<p>Podemos combinar <span class="math notranslate nohighlight">\(i\)</span> con un número real, <span class="math notranslate nohighlight">\(3\in {\mathbb R}\)</span>, para formar un <em>número complejo</em> <span class="math notranslate nohighlight">\(3 + \i \in {\mathbb C}\)</span>. Es decir, los números complejos, <span class="math notranslate nohighlight">\({\mathbb C}\)</span> son una <em>extensión</em> de los reales <span class="math notranslate nohighlight">\({\mathbb R}\)</span>. Hay, esencialmente dos maneras de presentar un número complejo: la forma cartesiana y la forma polar.</p>
 <section id="forma-cartesiana">
-<h3><span class="section-number">1.1.2.1. </span>Forma Cartesiana<a class="headerlink" href="#forma-cartesiana" title="Permalink to this heading">#</a></h3>
-<p>Un <em>número complejo</em>, <span class="math notranslate nohighlight">\(z \in {\mathbb C}\)</span>, se representa en <em>forma cartesiana mediante dos
-números reales <span class="math notranslate nohighlight">\(x,y \in {\mathbb R}\)</span></em>
+<h3><a class="toc-backref" href="#id3"><span class="section-number">1.1.2.1. </span>Forma Cartesiana</a><a class="headerlink" href="#forma-cartesiana" title="Permalink to this heading">#</a></h3>
+<p>Un <em>número complejo</em>, <span class="math notranslate nohighlight">\(z \in {\mathbb C}\)</span>, se representa en <em>forma cartesiana</em>  mediante <u>dos
+números reales</u> <span class="math notranslate nohighlight">\(x,y\in {\mathbb R}\)</span>
 <br></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 z = x + i y   ~~~~ \hbox{donde}~~~ 
-\left\{\begin{array}{cl} x &amp;\hbox{es la }   parte~ real\\
-y &amp; \hbox{es la } parte~imaginaria
+\left\{\begin{array}{cl} x &amp;\hbox{es la    parte real}\\
+y &amp; \hbox{es la  parte imaginaria}
 \end{array}
 \right.
 \end{split}\]</div>
-<p>Un número complejo se representa  en el <strong>plano complejo</strong>: la parte real  en el <em>eje horizontal</em>, y la parte imaginaria  en el <em>eje vertical</em></p>
-<section id="numeros-complejos-en-python">
-<h4><span class="section-number">1.1.2.1.1. </span>Numeros complejos en python:<a class="headerlink" href="#numeros-complejos-en-python" title="Permalink to this heading">#</a></h4>
-<p>En <em>python</em>, el número  imaginario <span class="math notranslate nohighlight">\(i\)</span> se representa con la letra <span class="math notranslate nohighlight">\(j\)</span>.</p>
-<p>Añadiendo +0j convertimos un <i>float</i> en un <i>complex</i></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="n">j</span><span class="p">,</span><span class="nb">complex</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;en python, el número  imaginario i se representa con la letra j.  Añadiendo +0j convertimos un float en un complex&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="n">j</span><span class="p">,</span><span class="nb">complex</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -625,6 +694,7 @@ y &amp; \hbox{es la } parte~imaginaria
 </div>
 </div>
 </div>
+<p>Un número complejo se representa  en el <strong>plano complejo</strong>: la parte real  en el <em>eje horizontal</em>, y la parte imaginaria  en el <em>eje vertical</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Forma cartesiana&#39;&#39;&#39;</span> 
@@ -650,139 +720,74 @@ y &amp; \hbox{es la } parte~imaginaria
 <img alt="../../_images/2224c1f56a5968733663fe82242cfd526037bbf94cd7c8d829c0d94b99e5c2ca.png" src="../../_images/2224c1f56a5968733663fe82242cfd526037bbf94cd7c8d829c0d94b99e5c2ca.png" />
 </div>
 </div>
-<div class="proof theorem admonition" id="theorem-1">
-<p class="admonition-title"><span class="caption-number">Theorem 1.1 </span> (Fórmula de Euler)</p>
-<section class="theorem-content" id="proof-content">
-<p>Dado un ángulo <span class="math notranslate nohighlight">\(\theta \in (0,2\pi)\)</span> las dos expresiones siguientes son equivalentes
-<br>
-<br>
-$<span class="math notranslate nohighlight">\(
+</section>
+<section id="forma-polar">
+<h3><a class="toc-backref" href="#id4"><span class="section-number">1.1.2.2. </span>Forma Polar</a><a class="headerlink" href="#forma-polar" title="Permalink to this heading">#</a></h3>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Teorema</strong> <span class="math notranslate nohighlight">\(~\)</span> <em>(fórmula de Euler)</em></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Dado un ángulo <span class="math notranslate nohighlight">\(\theta \in (0,2\pi)\)</span> las dos expresiones siguientes son equivalentes</p>
+<div class="math notranslate nohighlight">
+\[
 \cos\theta + i \sin \theta = e^{i\theta} 
-\)</span>$</p>
+\]</div>
+</div>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Desmostración<div class="sd-summary-down docutils">
+Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">La demostración de la Fórmula de Euler viene de expandir ambos miembros en serie de Taylor en torno a <span class="math notranslate nohighlight">\(\theta = 0\)</span> y comprobar que ambas series son iguales
-$<span class="math notranslate nohighlight">\(
-\begin{array}{rcl}
-e^{i\theta} &amp;=&amp; 1 + i\theta + \frac{1}{2}(i\theta)^2 + \frac{1}{3!}(i\theta)^3+\, ... \\
-    &amp;=&amp; 1 -\frac{1}{2}\theta^2 ~+~ ... ~+~ i \left(\theta - \frac{1}{3!} \theta^3+ \, ...\right) \\
+<p class="sd-card-text">La demostración de la Fórmula de Euler viene de expandir ambos miembros en serie de Taylor en torno a <span class="math notranslate nohighlight">\(\theta = 0\)</span> y comprobar que ambas series son iguales</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{rcl}
+e^{i\theta} &amp;=&amp; 1 + i\theta + \frac{1}{2}(i\theta)^2 + \frac{1}{3!}(i\theta)^3+\, ... \\ \rule{0mm}{6mm}
+    &amp;=&amp; 1 -\frac{1}{2}\theta^2 ~+~ ... ~+~ i \left(\theta - \frac{1}{3!} \theta^3+ \, ...\right) \\ \rule{0mm}{6mm}
     &amp;=&amp; \cos \theta  + i \sin \theta 
-\end{array}
-\)</span>$</p>
+\end{array}\end{split}\]</div>
 </div>
-</details></section>
-</div><p>El número <span class="math notranslate nohighlight">\(z=x + i y\)</span> se puede representar en <em>forma polar</em>
+</details><div class="math notranslate nohighlight" id="equation-label-align">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-label-align" title="Permalink to this equation">#</a></span>\[\begin{split}       \begin{align}
+        y    &amp; =  ax^2 + bx + c \\
+        f(x) &amp; =  x^2 + 2xy + y^2 
+        \end{align}\end{split}\]</div>
+<p>Un número complejo <span class="math notranslate nohighlight">\(z\)</span> se puede representar también  en <strong>forma polar</strong>
 <br></p>
 <div class="math notranslate nohighlight">
 \[
 z = \rho e^{i\theta} = \rho (\cos\theta + i \sin\theta)  
 \]</div>
-<p>de donde obtenemos las componentes cartesianas</p>
-<div class="math notranslate nohighlight">
-\[x=\rho\cos\theta ~~,~~y=\rho\sin\theta\]</div>
-<p>y por tanto <span class="math notranslate nohighlight">\(\rho^2 = x^2 + y^2\)</span></p>
-<p>Los números reales <span class="math notranslate nohighlight">\(\rho\)</span> y <span class="math notranslate nohighlight">\(\theta\)</span> se denominan <em>módulo</em> y <em>fase</em>.
-<br></p>
+<p>Los números reales <span class="math notranslate nohighlight">\(\rho\)</span> y <span class="math notranslate nohighlight">\(\theta\)</span> se denominan <em>módulo</em> y <em>fase</em>.</p>
 <p>Las fases <span class="math notranslate nohighlight">\(\theta\)</span> y <span class="math notranslate nohighlight">\(\theta+ 2\pi\)</span> representan el <em>mismo</em> número complejo
 <br></p>
 <div class="math notranslate nohighlight">
 \[
 z = \rho e^{i\theta} = \rho e^{i(\theta + 2\pi)} 
 \]</div>
-<p>Ello se debe a que las funciones <span class="math notranslate nohighlight">\(\cos \theta\)</span> y <span class="math notranslate nohighlight">\(\sin\theta\)</span> son periódicas</p>
+<p>y ello se debe a que las funciones <span class="math notranslate nohighlight">\(\cos \theta\)</span> y <span class="math notranslate nohighlight">\(\sin\theta\)</span> son periódicas</p>
 <div class="math notranslate nohighlight">
 \[
 \sin\theta  = \sin(\theta + 2\pi)~~~~~~~\cos\theta  = \cos(\theta +2\pi)
 \]</div>
+<div class="tip admonition">
+<p class="admonition-title">Ejemplo</p>
 <p>Usar la forma polar es útil en situaciones en las que aparecen productos y potencias del número <span class="math notranslate nohighlight">\(i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-d7f30957-7c8c-4a29-aff7-75fa604d9b76">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-d7f30957-7c8c-4a29-aff7-75fa604d9b76" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-i &amp;=&amp; e^{i\pi/2} \\
--1 &amp;=&amp; e^{i\pi} \\ \rule{0mm}{8mm}
+<div class="amsmath math notranslate nohighlight" id="equation-3c8b0ee1-654a-460c-ad4b-4fe333573ed2">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-3c8b0ee1-654a-460c-ad4b-4fe333573ed2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+i &amp;=&amp;  e^{i\pi/2} \\ \rule{0mm}{8mm}
+-1 &amp;=&amp; i^2 = e^{i\pi} \\ \rule{0mm}{8mm}
 i &amp;=&amp; e^{3i\pi/2} =e^{-i\pi/2} \\  \rule{0mm}{8mm}
 i^i &amp;=&amp; (e^{i\pi/2})^i = e^{i^2 \pi/2} = e^{-\pi/2}  \\  \rule{0mm}{8mm}
 i^{2+i} &amp;=&amp; (e^{i\pi/2})^{(2+i)}= e^{i\pi/2(2+i)} = e^{i\pi} e^{-\pi/2} = -e^{-\pi/2}  \rule{0mm}{8mm}
 \end{eqnarray}\]</div>
-<div class="exercise admonition" id="docs/00_Formalismo/01_Numeros_Complejos-exercise-2">
-
-<p class="admonition-title"><span class="caption-number">Exercise 1.1 </span></p>
-<section id="exercise-content">
-<p>Haz una lista de 10 números (fases) <span class="math notranslate nohighlight">\(\theta_i, ~i=0,...,9\)</span>, equi-espaciadas entre 0 y 2<span class="math notranslate nohighlight">\(\pi\)</span> y pinta los números complejos <span class="math notranslate nohighlight">\(z_i = r \exp(i \theta_i)\)</span> y sus complejos conjugados, <span class="math notranslate nohighlight">\(z^*_i\)</span>.</p>
-</section>
 </div>
-</section>
-</section>
-<section id="conjugacion-compleja">
-<h3><span class="section-number">1.1.2.2. </span>Conjugacion compleja<a class="headerlink" href="#conjugacion-compleja" title="Permalink to this heading">#</a></h3>
-<p>Todo número complejo, <span class="math notranslate nohighlight">\(z\)</span>, lleva <em>asociado</em> otro, <span class="math notranslate nohighlight">\(z^*\)</span>, denominado el <em>complejo conjugado</em> que se obtiene cambiando <span class="math notranslate nohighlight">\(i \to -i\)</span>
-<br></p>
-<div class="math notranslate nohighlight">
-\[
-z = x+i y ~~~~\leftrightarrow~~~~ z^* = x - i y \hspace{2cm}
-\]</div>
-<br>
-<p>Es evidente que <span class="math notranslate nohighlight">\((z^*)^* = z\)</span>, es una <em>involución</em>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Conjugacion compleja&#39;&#39;&#39;</span>
-<span class="n">zc</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;z*=(x+iy)*=&#39;</span><span class="p">,</span><span class="n">z</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">zc</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
-
-<span class="sd">&#39;&#39;&#39; Representación en el plano complejo &#39;&#39;&#39;</span>
-<span class="n">tQ</span><span class="o">.</span><span class="n">plot_2D_plane</span><span class="p">(</span><span class="n">left</span><span class="o">=-</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">up</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">down</span><span class="o">=-</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">zc</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">zc</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="n">vcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z*=(x+iy)*= (-3-1j)
-</pre></div>
-</div>
-<img alt="../../_images/edc6de2b543f8939ee782e28acd93e4058d0688bffebfab99d3c02db9112e70b.png" src="../../_images/edc6de2b543f8939ee782e28acd93e4058d0688bffebfab99d3c02db9112e70b.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Forma polar&#39;&#39;&#39;</span>
-<span class="n">r</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">th</span><span class="o">=</span><span class="mf">3.5</span>
-<span class="n">z</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">th</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-<span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="o">.</span><span class="n">real</span>
-<span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="o">.</span><span class="n">imag</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;z=r exp(i th)=&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span>
-
-
-<span class="sd">&#39;&#39;&#39; Dibujamos en el plano complejo &#39;&#39;&#39;</span>
-<span class="n">tQ</span><span class="o">.</span><span class="n">plot_2D_plane</span><span class="p">(</span><span class="n">left</span><span class="o">=-</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">up</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">down</span><span class="o">=-</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
-<span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">z</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="n">vcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-1.8729133745815927-0.7015664553792397j)
-z=r exp(i th)= (-1.873-0.702j)
-</pre></div>
-</div>
-<img alt="../../_images/39029f895a571fca6e34d31be2458d189819ddf930d33c4cab0eda9d29968132.png" src="../../_images/39029f895a571fca6e34d31be2458d189819ddf930d33c4cab0eda9d29968132.png" />
-</div>
-</div>
-<p>En forma polar la <em>conjugación compleja</em> se obtiene <em>cambiando el signo</em> de la fase
-<br></p>
-<div class="math notranslate nohighlight">
-\[
-z = \rho e^{i\theta} ~\rightarrow ~z^* = \rho e^{-i\theta} = \rho \cos\theta - i \rho \sin\theta \hspace{4cm}
-\]</div>
 </section>
 <section id="conversion-entre-formas-cartesiana-y-polar">
-<h3><span class="section-number">1.1.2.3. </span>Conversión entre formas cartesiana y polar<a class="headerlink" href="#conversion-entre-formas-cartesiana-y-polar" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id5"><span class="section-number">1.1.2.3. </span>Conversión entre formas cartesiana y polar</a><a class="headerlink" href="#conversion-entre-formas-cartesiana-y-polar" title="Permalink to this heading">#</a></h3>
 <p>La conversión de la representación <em>polar a cartesiana</em> es muy sencilla
 gracias a las fórmula de Euler</p>
 <br>
@@ -804,9 +809,9 @@ z = x + i y  = r e^{i\theta} ~~~ \hbox{ con } ~~~ \left\{\begin{array}{l} r=\sqr
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Conversión de Cartesianas a Polares&#39;</span>
 <span class="k">def</span> <span class="nf">cartes2polar</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
 
-    <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>    
     <span class="n">y</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">imag</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">real</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">r</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;el número 0+i0 no admite representación polar&#39;</span><span class="p">)</span>
@@ -824,41 +829,97 @@ z = x + i y  = r e^{i\theta} ~~~ \hbox{ con } ~~~ \left\{\begin{array}{l} r=\sqr
     <span class="k">elif</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
          <span class="n">th</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="o">-</span><span class="n">y</span><span class="o">/</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span>       
             
-    <span class="k">return</span> <span class="n">r</span><span class="p">,</span><span class="n">th</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">th</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="c1">#el signo correcto también se puede conseguir usando la funcion np.arctan2(x,y)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="docs/00_Formalismo/01_Numeros_Complejos-exercise-3">
-
-<p class="admonition-title"><span class="caption-number">Exercise 1.2 </span></p>
-<section id="exercise-content">
-<p>Calcula  la forma polar del número complejo <span class="math notranslate nohighlight">\(z = 4 + 3 i\)</span> a mano y verificalo con la función que acabamos de definir</p>
-</section>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;A la inversa no es necesario definir ninguna funcion, ya que numpy directamente escribe un numero complejo en forma cartesiana&#39;</span>
-<span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;obtengamos la representación polar de z = 3+i&#39;</span>
+<span class="n">r</span><span class="p">,</span><span class="n">th</span> <span class="o">=</span> <span class="n">cartes2polar</span><span class="p">(</span><span class="mf">3.</span><span class="o">+</span><span class="mf">1.</span><span class="n">j</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;r=&#39;</span><span class="p">,</span><span class="n">r</span><span class="p">,</span> <span class="s1">&#39; th=&#39;</span><span class="p">,</span> <span class="n">th</span><span class="p">)</span>
+
+<span class="s1">&#39;a la inversa no es necesario definir ninguna función, ya que numpy directamente escribe un numero complejo en forma cartesiana&#39;</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">th</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.63+1.44j)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>r= 3.162  th= 0.322
+(3+1j)
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+<section id="conjugacion-compleja">
+<h3><a class="toc-backref" href="#id6"><span class="section-number">1.1.2.4. </span>Conjugacion compleja</a><a class="headerlink" href="#conjugacion-compleja" title="Permalink to this heading">#</a></h3>
+<p>Todo número complejo, <span class="math notranslate nohighlight">\(z\)</span>, lleva <em>asociado</em> otro,  denominado el <em>complejo conjugado</em> <span class="math notranslate nohighlight">\(z^*\)</span>, que se obtiene cambiando <span class="math notranslate nohighlight">\(i \to -i\)</span>
+<br></p>
+<div class="math notranslate nohighlight">
+\[
+z = x+i y ~~~~\leftrightarrow~~~~ z^* = x - i y \hspace{2cm}
+\]</div>
+<p>La conjugación compleja es una <em>involución</em> <span class="math notranslate nohighlight">\(\Rightarrow (z^*)^* = z\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Conjugacion compleja&#39;&#39;&#39;</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;z =&#39;</span><span class="p">,</span><span class="n">z</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+<span class="n">zc</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">conjugate</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;z*=&#39;</span><span class="p">,</span><span class="n">zc</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">zc</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39; Representación en el plano complejo &#39;&#39;&#39;</span>
+<span class="n">tQ</span><span class="o">.</span><span class="n">plot_2D_plane</span><span class="p">(</span><span class="n">left</span><span class="o">=-</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">up</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">down</span><span class="o">=-</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">zc</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">zc</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="n">vcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z = (3+1j)
+z*= (3-1j)
+</pre></div>
+</div>
+<img alt="../../_images/6b0fdfe9c32d4b7ed94212bb1d08f8b45aa455d5116f9b3a8502b093837703b8.png" src="../../_images/6b0fdfe9c32d4b7ed94212bb1d08f8b45aa455d5116f9b3a8502b093837703b8.png" />
+</div>
+</div>
+<p>En forma polar la <em>conjugación compleja</em> se obtiene <u><em>cambiando el signo</em></u> de la fase
+<br></p>
+<div class="math notranslate nohighlight">
+\[
+z = \rho e^{i\theta} ~~\longrightarrow ~~z^* = \rho e^{-i\theta} = \rho \cos\theta - i \rho \sin\theta 
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Forma polar&#39;&#39;&#39;</span>
+<span class="n">r</span><span class="o">=</span><span class="mf">3.162</span>
+<span class="n">th</span><span class="o">=</span><span class="mf">0.322</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">th</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span>
+<span class="n">zc</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">th</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39; Dibujamos en el plano complejo &#39;&#39;&#39;</span>
+<span class="n">tQ</span><span class="o">.</span><span class="n">plot_2D_plane</span><span class="p">(</span><span class="n">left</span><span class="o">=-</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">up</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">down</span><span class="o">=-</span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+<span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">zc</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">zc</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="n">vcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/6b44083d950b2050687864c8f9f191a7d524e14b30193ad0ae1833f5966df82b.png" src="../../_images/6b44083d950b2050687864c8f9f191a7d524e14b30193ad0ae1833f5966df82b.png" />
+</div>
+</div>
+</section>
 </section>
 <section id="operaciones-basicas">
-<h2><span class="section-number">1.1.3. </span>Operaciones básicas<a class="headerlink" href="#operaciones-basicas" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id7"><span class="section-number">1.1.3. </span>Operaciones básicas</a><a class="headerlink" href="#operaciones-basicas" title="Permalink to this heading">#</a></h2>
 <p>Los numeros complejos <span class="math notranslate nohighlight">\({\mathbb C}\)</span> forman una estructura matemática denominada <em>cuerpo</em>. Esto  quiere decir que admiten dos operaciones <em>internas</em>: la <strong>suma</strong> y la <strong>multiplicación</strong>. Vamos a estudiarlas por separado</p>
 <section id="suma">
-<h3><span class="section-number">1.1.3.1. </span>Suma<a class="headerlink" href="#suma" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id8"><span class="section-number">1.1.3.1. </span>Suma</a><a class="headerlink" href="#suma" title="Permalink to this heading">#</a></h3>
 <p>En representación <em>cartesiana</em> se <em>suman las partes real e imaginaria por separado</em></p>
 <br>
 <div class="math notranslate nohighlight">
@@ -887,7 +948,9 @@ z = x + i y  = r e^{i\theta} ~~~ \hbox{ con } ~~~ \left\{\begin{array}{l} r=\sqr
 <span class="n">tQ</span><span class="o">.</span><span class="n">plot_2D_plane</span><span class="p">(</span><span class="n">left</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">up</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">down</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#cambiar las dimensiones para que encuadrar la figura</span>
 <span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">z1</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">z1</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
 <span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">z2</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">z2</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="s1">&#39; representamos la suma como un vector rojo&#39;</span>
 <span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">zs</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">zs</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="n">vcolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="s1">&#39; representamos la resta como un vector verde&#39;</span>
 <span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">zd</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">zd</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span><span class="n">vcolor</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -939,12 +1002,12 @@ z1-z2= (1.8679+2.0825j)
 </div>
 </section>
 <section id="multiplicacion">
-<h3><span class="section-number">1.1.3.2. </span>Multiplicación<a class="headerlink" href="#multiplicacion" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id9"><span class="section-number">1.1.3.2. </span>Multiplicación</a><a class="headerlink" href="#multiplicacion" title="Permalink to this heading">#</a></h3>
 <p>En <em>forma cartesiana</em> la multiplicación es complicada, debiendo multiplicarse todos los factores entre sí, y
 teniendo en cuenta que <span class="math notranslate nohighlight">\(i^2= -1\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-(a + i b) (c + i d) =ac +  ai d +i bc +i^2 bd = (ab - bd) + i(ac + bd)\hspace{6cm}
+(a + i b) (c + i d) =ac +  ai d +i bc +i^2 bd = (ab - bd) + i(ac + bd)
 \]</div>
 <p>Para hallar el producto de dos números complejos <span class="math notranslate nohighlight">\(z=r e^{i\theta}\)</span> y <span class="math notranslate nohighlight">\(w=s e^{i\phi}\)</span> escritos en forma polar, se multiplican los módulos y se suman las fases</p>
 <div class="math notranslate nohighlight">
@@ -972,43 +1035,42 @@ z1**3 =  (-722+103j)
 </div>
 </section>
 <section id="valor-absoluto">
-<h3><span class="section-number">1.1.3.3. </span>Valor absoluto<a class="headerlink" href="#valor-absoluto" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id10"><span class="section-number">1.1.3.3. </span>Valor absoluto</a><a class="headerlink" href="#valor-absoluto" title="Permalink to this heading">#</a></h3>
 <p>El cuadrado de un número real <span class="math notranslate nohighlight">\(a\in {\mathbb R}\)</span> es otro número real positivo <span class="math notranslate nohighlight">\(a^2 &gt;0\)</span>. Ello nos permite definir
 el valor absoluto <span class="math notranslate nohighlight">\(|a| = \sqrt{a^2}\)</span> que es el mismo para <span class="math notranslate nohighlight">\(a\)</span> y para <span class="math notranslate nohighlight">\(-a\)</span>.</p>
-<p>Esto no sucede con un número complejo <span class="math notranslate nohighlight">\(z\)</span>. <span class="math notranslate nohighlight">\(~\)</span> En efecto,</p>
+<p>Esto no sucede con un número complejo <span class="math notranslate nohighlight">\(z\)</span>. En efecto,</p>
 <div class="math notranslate nohighlight">
-\[z^2 = x^2 - y^2 +2i xy\]</div>
-<p>es complejo.<span class="math notranslate nohighlight">\(~\)</span> Sin embargo, el producto de un número por su conjugado es un número <em>real</em> y <em>positivo</em></p>
+\[
+z^2 = x^2 - y^2 +2i xy
+\]</div>
+<p>es complejo. Sin embargo, el producto de un número por su conjugado es un número <em>real</em> y <em>positivo</em></p>
 <div class="math notranslate nohighlight">
 \[
 z z^*  = (x + i y) (x-i y) = x^2 + y^2 &gt;0
 \]</div>
-<p>Ello nos permite definir el <em>valor absoluto</em> de un número complejo</p>
+<p>Ello nos permite definir el <strong>valor absoluto</strong> de un número complejo</p>
 <div class="math notranslate nohighlight">
 \[
 |z| = \sqrt{z z^*} = \sqrt{x^2 + y^2}
+\]</div>
+<p>El <em>valor absoluto</em> de un número complejo coincide con el <em>módulo</em>  de la forma polar</p>
+<div class="math notranslate nohighlight">
+\[
+|z| = \sqrt{zz^*} = \sqrt{\rho e^{i\theta} \rho e^{-i\theta}}=\sqrt{\rho^2} = \rho
 \]</div>
 <p>El <em>valor absoluto</em> de una fase es 1</p>
 <div class="math notranslate nohighlight">
 \[
 |e^{i\theta}| = \sqrt{ e^{i\theta}   e^{-i\theta}}=\sqrt{ e^{i(\theta-\theta)}}=\sqrt{e^0} = 1
 \]</div>
-<p>El <em>valor absoluto</em> de un número complejo con el <em>módulo</em>  escrito en forma polar</p>
-<div class="math notranslate nohighlight">
-\[
-|z| = \sqrt{zz^*} = \sqrt{\rho e^{i\theta} \rho e^{-i\theta}}=\sqrt{\rho^2} = \rho
-\]</div>
-<div class="exercise admonition" id="docs/00_Formalismo/01_Numeros_Complejos-exercise-4">
-
-<p class="admonition-title"><span class="caption-number">Exercise 1.3 </span></p>
-<section id="exercise-content">
+<div class="tip admonition">
+<p class="admonition-title">Ejercicio</p>
 <p>Verifica el valor absoluto de un producto de números complejos es el producto de sus valores absolutos</p>
-</section>
 </div>
 </section>
 <section id="division">
-<h3><span class="section-number">1.1.3.4. </span>División<a class="headerlink" href="#division" title="Permalink to this heading">#</a></h3>
-<p>Al igual que la multiplicación, en forma cartesiana, la división <strong>no es simple</strong>. Sea <span class="math notranslate nohighlight">\(z = a+ i b\)</span> y <span class="math notranslate nohighlight">\(w=c+i d\)</span>
+<h3><a class="toc-backref" href="#id11"><span class="section-number">1.1.3.4. </span>División</a><a class="headerlink" href="#division" title="Permalink to this heading">#</a></h3>
+<p>Al igual que la multiplicación, en forma cartesiana, la <strong>división</strong> no es simple. Sea <span class="math notranslate nohighlight">\(z = a+ i b\)</span> y <span class="math notranslate nohighlight">\(w=c+i d\)</span>
 <br>
 <br></p>
 <div class="math notranslate nohighlight">
@@ -1018,14 +1080,15 @@ z z^*  = (x + i y) (x-i y) = x^2 + y^2 &gt;0
 <p>En forma polar la división es tan sencilla como la multiplicación. Se toma el  cociente de los módulos y la resta de las fases</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{z}{w} = \frac{\rho e^{i\theta}}{\sigma e^{i\phi}} = \frac{\rho}{\sigma}
+\frac{z}{w} = \frac{|z| e^{i\theta}}{|w| e^{i\phi}} = \frac{|z|}{|w|}
 e^{i(\theta-\phi)}
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Valor absoluto&#39;&#39;&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|z1|=&#39;</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">z1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;comprobación |z1|=&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">z1</span><span class="o">*</span><span class="n">z1</span><span class="o">.</span><span class="n">conjugate</span><span class="p">())</span><span class="o">.</span><span class="n">real</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abs(z1)=&#39;</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">z1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|z1|=&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">z1</span><span class="o">*</span><span class="n">z1</span><span class="o">.</span><span class="n">conjugate</span><span class="p">())</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rho=&#39;</span><span class="p">,</span><span class="n">cartes2polar</span><span class="p">(</span><span class="n">z1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;************************************&#39;</span><span class="p">)</span>
 
 
@@ -1036,8 +1099,9 @@ e^{i(\theta-\phi)}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|z1|= 3.0
-comprobación |z1|= 3.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abs(z1)= 3.0
+|z1|= 3.0
+rho= 3.0
 ************************************
 z1/z2= (1.08707+2.79612j)
 comprobación z1/z2= (1.08707+2.79612j)
@@ -1048,20 +1112,18 @@ comprobación z1/z2= (1.08707+2.79612j)
 </section>
 </section>
 <section id="ejemplos-y-propiedades">
-<h2><span class="section-number">1.1.4. </span>Ejemplos y propiedades<a class="headerlink" href="#ejemplos-y-propiedades" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id12"><span class="section-number">1.1.4. </span>Ejemplos y propiedades</a><a class="headerlink" href="#ejemplos-y-propiedades" title="Permalink to this heading">#</a></h2>
 <section id="sumas-nulas">
-<h3><span class="section-number">1.1.4.1. </span>Sumas nulas<a class="headerlink" href="#sumas-nulas" title="Permalink to this heading">#</a></h3>
-<p>En muchas ocasiones nos encontraremos la siguiente representación del numero cero (complejo) <span class="math notranslate nohighlight">\(0 = 0 + i 0\)</span></p>
+<h3><a class="toc-backref" href="#id13"><span class="section-number">1.1.4.1. </span>Sumas nulas</a><a class="headerlink" href="#sumas-nulas" title="Permalink to this heading">#</a></h3>
+<p>En <u>muchas ocasiones</u> nos encontraremos la siguiente representación del numero cero (complejo) <span class="math notranslate nohighlight">\( 0 \equiv 0 + i 0\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \sum_{k=0}^{N-1} e^{2\pi i k/N} =   e^{2\pi i\, 0/N} +  e^{2\pi i\, 1/N}  +~...~ +   e^{2\pi i\, (N-2)/N}+   e^{2\pi i\, (N-1)/N} ~=~  ~0
- \]</div>
+\]</div>
 <p>Para convencerse de que esta identidad es cierta vamos a representar los números complejos y su suma. Puedes cambiar <span class="math notranslate nohighlight">\(N\)</span> y también multiplicar por un módulo constante</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../macro_tQ.py
-
-<span class="c1"># cambiar el número N</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cambiar el número N</span>
 <span class="n">N</span><span class="o">=</span><span class="mi">9</span>
 <span class="n">rho</span><span class="o">=</span><span class="mi">1</span>
 
@@ -1073,13 +1135,23 @@ comprobación z1/z2= (1.08707+2.79612j)
 <span class="sd">&#39;&#39;&#39; Dibujamos los números complejos &#39;&#39;&#39;</span>
 <span class="n">tQ</span><span class="o">.</span><span class="n">plot_2D_plane</span><span class="p">(</span><span class="n">fsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">vec</span> <span class="ow">in</span> <span class="n">rho</span><span class="o">*</span><span class="n">lista_de_fases</span><span class="p">:</span>
-    <span class="n">draw_vector</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">vec</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">vec</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+    <span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">vec</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">vec</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
 
 <span class="c1">#draw_unit_circle()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">),</span><span class="mf">1.</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> 
-
-
-<span class="sd">&#39;&#39;&#39; Calculamos la suma. &#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.patches.Circle at 0x7f78add1c4c0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/c3bd79650827b39d5f2f6c6a2d8bc972e06a14eee671670d8eab6f14480666aa.png" src="../../_images/c3bd79650827b39d5f2f6c6a2d8bc972e06a14eee671670d8eab6f14480666aa.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; Calculamos la suma. &#39;&#39;&#39;</span>
 <span class="c1">#print(lista_de_fases)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="n">lista_de_fases</span><span class="p">),</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
@@ -1089,41 +1161,112 @@ comprobación z1/z2= (1.08707+2.79612j)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-0+0j)
 </pre></div>
 </div>
+</div>
+</div>
+<p>Sea  <span class="math notranslate nohighlight">\(j\)</span> un número entero por el que <u>multiplicamos todas las fases</u></p>
+<ul class="simple">
+<li><p>Si  con <span class="math notranslate nohighlight">\(1\leq j \leq N-1\)</span> el resultado es el mismo</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\sum_{k=0}^{N-1} e^{2\pi i jk/N} =   e^{2\pi i\, j0/N} +  e^{2\pi i\, j/N}  +~...~ +   e^{2\pi i\, j(N-2)/N}+   e^{2\pi i\, j(N-1)/N} ~=~  ~0
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cambiar el número N</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">9</span>
+<span class="n">rho</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">j</span><span class="o">=</span><span class="mi">5</span>
+<span class="sd">&#39;&#39;&#39; Creamos las fases&#39;&#39;&#39;</span>
+<span class="n">lista_de_fases</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">))</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+<span class="c1">#print(&#39;lista de fases =&#39;, np.round(lista_de_fases,2))</span>
+
+
+<span class="sd">&#39;&#39;&#39; Dibujamos los números complejos &#39;&#39;&#39;</span>
+<span class="n">tQ</span><span class="o">.</span><span class="n">plot_2D_plane</span><span class="p">(</span><span class="n">fsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">vec</span> <span class="ow">in</span> <span class="n">rho</span><span class="o">*</span><span class="n">lista_de_fases</span><span class="p">:</span>
+    <span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">vec</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">vec</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+
+<span class="c1">#draw_unit_circle()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">),</span><span class="mf">1.</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> 
+
+<span class="sd">&#39;&#39;&#39; Calculamos la suma. &#39;&#39;&#39;</span>
+<span class="c1">#print(lista_de_fases)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="n">lista_de_fases</span><span class="p">),</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0j
+</pre></div>
+</div>
 <img alt="../../_images/c3bd79650827b39d5f2f6c6a2d8bc972e06a14eee671670d8eab6f14480666aa.png" src="../../_images/c3bd79650827b39d5f2f6c6a2d8bc972e06a14eee671670d8eab6f14480666aa.png" />
 </div>
 </div>
-<p>Sea  <span class="math notranslate nohighlight">\(1\leq j \leq N-1\)</span> un entero por el que multiplicamos todas las fases. El resultado es el mismo</p>
-<div class="math notranslate nohighlight">
-\[
-\sum_{k=0}^{N-1} e^{2\pi i j k/N} =   e^{2\pi i\, 0/N} +  e^{2\pi i\, j/N}  +~...~ +   e^{2\pi i\, j(N-2)/N}+   e^{2\pi i\, j(N-1)/N} ~=~  ~0
- \]</div>
-<p>Sin embargo si <span class="math notranslate nohighlight">\(j = 0, N, 2N,... = 0\,\hbox{mod} N\)</span>, entonces la suma no se anula y su valor es igual a <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<ul class="simple">
+<li><p>Sin embargo si <span class="math notranslate nohighlight">\(j = 0, N, 2N,... = 0\,\hbox{mod} N\)</span>, entonces la suma no se anula y su valor es igual a <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
+</ul>
 <p>Tomemos por ejemplo <span class="math notranslate nohighlight">\(j=N\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \sum_{k=0}^{N-1} e^{2\pi i (3N) k/N} = \sum_{k=0}^{N-1} e^{2\pi i  k}  =  \sum_{k=0}^{N-1} 1 =~  ~N
  \]</div>
-<div class="exercise admonition" id="docs/00_Formalismo/01_Numeros_Complejos-exercise-5">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cambiar el número N</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">9</span>
+<span class="n">rho</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">j</span><span class="o">=</span><span class="n">N</span>
+<span class="sd">&#39;&#39;&#39; Creamos las fases&#39;&#39;&#39;</span>
+<span class="n">lista_de_fases</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">))</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+<span class="c1">#print(&#39;lista de fases =&#39;, np.round(lista_de_fases,2))</span>
 
-<p class="admonition-title"><span class="caption-number">Exercise 1.4 </span></p>
-<section id="exercise-content">
-<p>Modifica la lista de fases para convencerte de que todos los resultados anteriores son correctos</p>
-</section>
+
+<span class="sd">&#39;&#39;&#39; Dibujamos los números complejos &#39;&#39;&#39;</span>
+<span class="n">tQ</span><span class="o">.</span><span class="n">plot_2D_plane</span><span class="p">(</span><span class="n">fsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">vec</span> <span class="ow">in</span> <span class="n">rho</span><span class="o">*</span><span class="n">lista_de_fases</span><span class="p">:</span>
+    <span class="n">tQ</span><span class="o">.</span><span class="n">draw_vector</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">vec</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">vec</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+
+<span class="c1">#draw_unit_circle()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">),</span><span class="mf">1.</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> 
+
+<span class="sd">&#39;&#39;&#39; Calculamos la suma. &#39;&#39;&#39;</span>
+<span class="c1">#print(lista_de_fases)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="n">lista_de_fases</span><span class="p">),</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
 </div>
-<p>Una manera de resumir todos los casos anteriores en una sola expresión involucra la función <span class="math notranslate nohighlight">\(\delta\)</span> de Kronecker</p>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(9-0j)
+</pre></div>
+</div>
+<img alt="../../_images/077980dc12ed8540b9be21cc27e58c204c506b5849cee1834b306aef3987b889.png" src="../../_images/077980dc12ed8540b9be21cc27e58c204c506b5849cee1834b306aef3987b889.png" />
+</div>
+</div>
+<p>Una manera de resumir todos los casos anteriores en una sola expresión involucra la función  <strong>Delta  de Kronecker</strong>: <span class="math notranslate nohighlight">\(\delta_{ij}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \delta_{ij} = \left\{ \begin{array}{rcl} 0 &amp; \hbox{si} &amp; i\neq 0 \\ 1 &amp; \hbox{si} &amp; i = j \end{array} \right.
 \end{split}\]</div>
 <p>Con ella podemos enunciar el siguiente resultado</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Teorema</strong></p>
+</div>
+<div class="sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[
-\boxed{\frac{1}{N}\sum_{k=0}^{N-1} e^{2\pi i \, j k/N} =  \delta_{j\, 0{\rm mod} N}}
+\frac{1}{N}\sum_{k=0}^{N-1} e^{2\pi i \, j k/N} =  \delta_{j\, 0{\rm mod} N}
 \]</div>
-<p>que usaremos con profusión al estudiar la transformada de Fourier cuántica.</p>
+</div>
+</div>
+<ul class="simple">
+<li><p>Es decir, la suma es sólo 1 si <span class="math notranslate nohighlight">\(j = 0\)</span>mod N.</p></li>
+<li><p>Esta expresión es de uso muy frecuente en algortimia pues refleja la interferencia destructiva de las superposiciones cuánticas.</p></li>
+</ul>
 </section>
 <section id="desigualdad-triangular">
-<h3><span class="section-number">1.1.4.2. </span>Desigualdad triangular<a class="headerlink" href="#desigualdad-triangular" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id14"><span class="section-number">1.1.4.2. </span>Desigualdad triangular</a><a class="headerlink" href="#desigualdad-triangular" title="Permalink to this heading">#</a></h3>
 <p>El módulo de la suma de dos números complejos verifica que</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1137,7 +1280,7 @@ comprobación z1/z2= (1.08707+2.79612j)
 <span class="sd">&#39;&#39;&#39;Suma en cartesianas&#39;&#39;&#39;</span>
 <span class="n">z1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
 
-<span class="n">ang</span> <span class="o">=</span> <span class="mf">0.</span> <span class="c1">#el ángulo entre z1 y z2</span>
+<span class="n">ang</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="c1">#el ángulo entre z1 y z2</span>
 <span class="n">z2</span> <span class="o">=</span> <span class="n">z1</span><span class="o">*</span><span class="p">(</span><span class="mf">1.2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">ang</span><span class="p">))</span>
 
 <span class="sd">&#39;&#39;&#39;Suma &#39;&#39;&#39;</span>
@@ -1155,11 +1298,11 @@ comprobación z1/z2= (1.08707+2.79612j)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|z1|+|z2|= 4.919349550499538
-|z1+z2|= 4.919349550499538
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|z1|+|z2|= 4.919349550499537
+|z1+z2|= 4.8645696489522345
 </pre></div>
 </div>
-<img alt="../../_images/23f2778ac6ea752a0414408f4c3741bf9fef2e6d27b53cbc5e1d2542a7c447bf.png" src="../../_images/23f2778ac6ea752a0414408f4c3741bf9fef2e6d27b53cbc5e1d2542a7c447bf.png" />
+<img alt="../../_images/facffe270ce94aa6d9d1e1c55194da5afd7e489e6a356c725571e0ebb61d3217.png" src="../../_images/facffe270ce94aa6d9d1e1c55194da5afd7e489e6a356c725571e0ebb61d3217.png" />
 </div>
 </div>
 </section>
@@ -1210,7 +1353,7 @@ comprobación z1/z2= (1.08707+2.79612j)
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.2. </span>1.2 Los Vectores</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>Vectores</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1231,12 +1374,10 @@ comprobación z1/z2= (1.08707+2.79612j)
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">1.1.1. Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-cartesiana-y-polar">1.1.2. Formas cartesiana y polar</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-cartesiana">1.1.2.1. Forma Cartesiana</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-complejos-en-python">1.1.2.1.1. Numeros complejos en python:</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-compleja">1.1.2.2. Conjugacion compleja</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-cartesiana">1.1.2.1. Forma Cartesiana</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-polar">1.1.2.2. Forma Polar</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-entre-formas-cartesiana-y-polar">1.1.2.3. Conversión entre formas cartesiana y polar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-compleja">1.1.2.4. Conjugacion compleja</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-basicas">1.1.3. Operaciones básicas</a><ul class="nav section-nav flex-column">
