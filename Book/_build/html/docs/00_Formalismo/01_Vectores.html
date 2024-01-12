@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1.2. license: CC-BY-4.0 github: https://github.com/executablebooks/mystmd subject: Curso venue: Quantum Spain math: ‘\i’: ‘{\color{blue}{i}}’ ‘\bes’: ‘\begin{equation*}’ ‘\ees’: ‘\end{equation*}’ ‘\O’: ‘{\mathcal O}’ ‘\Lin’: ‘\hbox{Lin}’ ‘\Hil’: ‘{\mathcal H}’ ‘\bra[1]’: ‘{\langle #1|}’ ‘\ket[1]’: ‘{|#1\rangle}’ ‘\braket[2]’: ‘{\langle #1|#2\rangle}’ ‘\R’: ‘{\mathbb R}’ ‘\C’: ‘{\mathbb C}’ ‘\V’: ‘{V}’ abbreviations: MyST: Markedly Structured Text TLA: Three Letter Acronym &#8212; Curso de Introducción a la Computación Cuántica</title>
+    <title>1.2. Vectores &#8212; Curso de Introducción a la Computación Cuántica</title>
   
   
   
@@ -104,7 +104,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/00_Formalismo/01_Vectores';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.4. Operadores" href="01_Operadores.html" />
+    <link rel="next" title="1.3. Operadores y Matrices" href="01_Operadores.html" />
     <link rel="prev" title="1.1. Números Complejos" href="01_Numeros_Complejos.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -202,30 +202,16 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_formalismo_matematico.html">1. Formalismo Matemático</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.2. license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
-subject: Curso
-venue: Quantum Spain
-math:<br/>
-‘\i’: ‘{\color{blue}{i}}’
-‘\bes’: ‘\begin{equation*}’
-‘\ees’: ‘\end{equation*}’
-‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
-‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
-‘\R’: ‘{\mathbb R}’
-‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.2. Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.3. Operadores y Matrices</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.4. Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.5. Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.6. 1.5 Probabilidades</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.10. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.11. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -371,7 +357,7 @@ TLA: Three Letter Acronym</a></li>
       
       
       
-      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/edit/master/Book/docs/00_Formalismo/01_Vectores.md" target="_blank"
+      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/edit/master/Book/docs/00_Formalismo/01_Vectores.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -419,23 +405,6 @@ TLA: Three Letter Acronym</a></li>
       
       
       <li><a href="../../_sources/docs/00_Formalismo/01_Vectores.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Download notebook file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="../../_sources/docs/00_Formalismo/01_Vectores.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -445,7 +414,7 @@ TLA: Three Letter Acronym</a></li>
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -517,27 +486,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
-subject: Curso
-venue: Quantum Spain
-math:<br />
-\\
-‘\i’: ‘{\color{blue}{i}}’
-‘\bes’: ‘\begin{equation*}’
-‘\ees’: ‘\end{equation*}’
-‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
-‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
-‘\R’: ‘{\mathbb R}’
-‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym</h1>
+    <h1>Vectores</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -547,45 +496,21 @@ TLA: Three Letter Acronym</h1>
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.2. license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
-subject: Curso
-venue: Quantum Spain
-math:<br/>
-‘\i’: ‘{\color{blue}{i}}’
-‘\bes’: ‘\begin{equation*}’
-‘\ees’: ‘\end{equation*}’
-‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
-‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
-‘\R’: ‘{\mathbb R}’
-‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores">1.3. Vectores</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacio-vectorial">1.3.1. Espacio Vectorial</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base">1.3.1.1. Base</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores-definicion-intrinseca">1.3.1.2. Vectores: definición intrínseca</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subespacios-vectoriales">1.3.1.3. Subespacios Vectoriales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacio-vectorial">1.2.1. Espacio Vectorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base">1.2.1.1. Base</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores-definicion-intrinseca">1.2.1.2. Vectores: definición intrínseca</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subespacios-vectoriales">1.2.1.3. Subespacios Vectoriales</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacios-de-hilbert">1.3.2. Espacios de Hilbert</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-adjunta">1.3.2.1. Conjugación adjunta</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-escalar">1.3.2.2. Producto Escalar</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#norma">1.3.2.3. Norma</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia">1.3.2.4. Distancia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacios-de-hilbert">1.2.2. Espacios de Hilbert</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-adjunta">1.2.2.1. Conjugación adjunta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-escalar">1.2.2.2. Producto Escalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#norma">1.2.2.3. Norma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia">1.2.2.4. Distancia</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases-ortonormales">1.3.3. Bases ortonormales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases-ortonormales">1.2.3. Bases ortonormales</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -597,33 +522,52 @@ TLA: Three Letter Acronym</a></li>
                 <article class="bd-article" role="main">
                   
   <hr class="docutils" />
-<section id="license-cc-by-4-0-github-https-github-com-executablebooks-mystmd-subject-curso-venue-quantum-spain-math-br-i-color-blue-i-bes-begin-equation-ees-end-equation-o-mathcal-o-lin-hbox-lin-hil-mathcal-h-bra-1-langle-1-ket-1-1-rangle-braket-2-langle-1-2-rangle-r-mathbb-r-c-mathbb-c-v-v-abbreviations-myst-markedly-structured-text-tla-three-letter-acronym">
-<h1><span class="section-number">1.2. </span>license: CC-BY-4.0
-github: <a class="github reference external" href="https://github.com/executablebooks/mystmd">executablebooks/mystmd</a>
+<p>license: CC-BY-4.0
+github: <a class="github reference external" href="https://github.com/jamasole/Curso-TalentQ-Jupyterlab">jamasole/Curso-TalentQ-Jupyterlab</a>
 subject: Curso
 venue: Quantum Spain
+authors:</p>
+<ul class="simple">
+<li><p>name: Javier Mas
+email: <a class="reference external" href="mailto:javier&#46;mas&#37;&#52;&#48;usc&#46;es">javier<span>&#46;</span>mas<span>&#64;</span>usc<span>&#46;</span>es</a>
+corresponding: true
+orcid: 0000-0001-7008-2126
+affiliations:</p>
+<ul>
+<li><p>IGFAE-USC</p></li>
+</ul>
+</li>
+<li><p>name: David Castaño
+email: <a class="reference external" href="mailto:javier&#46;mas&#37;&#52;&#48;usc&#46;es">javier<span>&#46;</span>mas<span>&#64;</span>usc<span>&#46;</span>es</a>
+corresponding: true
+orcid: 0000-0001-7008-2126
+affiliations:</p>
+<ul>
+<li><p>UMA
 math:<br />
-‘\i’: ‘{\color{blue}{i}}’
+‘\i’: ‘{i}’
 ‘\bes’: ‘\begin{equation*}’
 ‘\ees’: ‘\end{equation*}’
 ‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
+‘\Lin’: ‘\rm L’
 ‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
+‘\bra’: ‘{\langle #1|}’
+‘\ket’: ‘{|#1\rangle}’
+‘\braket’: ‘{\langle #1|#2\rangle}’
+‘\ketbra’: ‘{| #1\rangle  \langle #2|}’
+‘\tr’: ‘{\rm tr}’
 ‘\R’: ‘{\mathbb R}’
 ‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym<a class="headerlink" href="#license-cc-by-4-0-github-https-github-com-executablebooks-mystmd-subject-curso-venue-quantum-spain-math-br-i-color-blue-i-bes-begin-equation-ees-end-equation-o-mathcal-o-lin-hbox-lin-hil-mathcal-h-bra-1-langle-1-ket-1-1-rangle-braket-2-langle-1-2-rangle-r-mathbb-r-c-mathbb-c-v-v-abbreviations-myst-markedly-structured-text-tla-three-letter-acronym" title="Permalink to this heading">#</a></h1>
+‘\V’: ‘{V}’</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
 <figure class="align-center">
 <img alt="../../_images/myThumbnail.png" src="../../_images/myThumbnail.png" />
 </figure>
-</section>
 <section class="tex2jax_ignore mathjax_ignore" id="vectores">
-<h1><span class="section-number">1.3. </span>Vectores<a class="headerlink" href="#vectores" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.2. </span>Vectores<a class="headerlink" href="#vectores" title="Permalink to this heading">#</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#espacio-vectorial" id="id1">Espacio Vectorial</a></p>
@@ -661,25 +605,33 @@ TLA: Three Letter Acronym<a class="headerlink" href="#license-cc-by-4-0-github-h
 </div>
 </div>
 <section id="espacio-vectorial">
-<h2><a class="toc-backref" href="#id1"><span class="section-number">1.3.1. </span>Espacio Vectorial</a><a class="headerlink" href="#espacio-vectorial" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id1"><span class="section-number">1.2.1. </span>Espacio Vectorial</a><a class="headerlink" href="#espacio-vectorial" title="Permalink to this heading">#</a></h2>
 <p>Comenzaremos definiendo los vectores de una forma operativa, y después haremos hincapié en su carácter abstracto.</p>
-<div class="proof definition admonition" id="definition-0">
-<p class="admonition-title"><span class="caption-number">Definition 1.2 </span> (<em>Vector</em>)</p>
-<section class="definition-content" id="proof-content">
-<p>La forma operacional de definir  un <em>vector de dimensión</em> <span class="math notranslate nohighlight">\(N\)</span> consiste en lista (columna) de <span class="math notranslate nohighlight">\(N\)</span> números complejos
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Definición</strong>: <em>Vector</em></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">La forma operacional de definir  un <em>vector de dimensión</em> <span class="math notranslate nohighlight">\(N\)</span> consiste en lista (columna) de <span class="math notranslate nohighlight">\(N\)</span> números complejos
 <br>
 <br>
 $<span class="math notranslate nohighlight">\(
 |u\rangle = \begin{pmatrix} {u_1}\\ {u_2}\\ \vdots \\ {u_N} 
 \end{pmatrix}
 \)</span>$</p>
-</section>
-</div><ul class="simple">
+</div>
+</div>
+<ul class="simple">
 <li><p>El símbolo <span class="math notranslate nohighlight">\(\ket{u}\)</span>  <em>representa</em> al vector y se denomina <strong>ket</strong> en la <em>notación de Dirac</em>. Se trata simplemente de una notación alternativa a la usual, donde un vector se representa en la forma <span class="math notranslate nohighlight">\({\bf u}\)</span> o también <span class="math notranslate nohighlight">\(\vec u\)</span></p></li>
 <li><p>Los números complejos <span class="math notranslate nohighlight">\(u_i \in {\mathbb C}\)</span> con <span class="math notranslate nohighlight">\(\, i=1,...,N\)</span> se denominan <strong>componentes</strong> del vector <span class="math notranslate nohighlight">\(\ket{u}\)</span></p></li>
 </ul>
-<div class="highlight-{prf:definition}(*Espacio notranslate"><div class="highlight"><pre><span></span>    La colección de &lt;i&gt;todos los posibles vectores&lt;/i&gt; de $N$ componentes,  con las  propiedades de suma y multiplicación forman un &lt;b&gt;espacio vectorial&lt;/b&gt;, $\V$ de dimension compleja $N$
-</pre></div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Definición</strong>: <em>Espacio Vectorial</em></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">La colección de <i>todos los posibles vectores</i> de <span class="math notranslate nohighlight">\(N\)</span> componentes,  con las  propiedades de suma y multiplicación forman un <b>espacio vectorial</b>, <span class="math notranslate nohighlight">\(\V\)</span> de dimension compleja <span class="math notranslate nohighlight">\(N\)</span></p>
+</div>
 </div>
 <p>es decir,  en un espacio vectorial  tenemos dos operaciones posibles:</p>
 <ul class="simple">
@@ -724,13 +676,13 @@ $<span class="math notranslate nohighlight">\(
 <br></p></li>
 <li><p>La existencia de un <strong>elemento opuesto</strong> y de un elemento neutro son dos propiedades importantes en un espacio vectorial</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-b06d253a-8538-4bb7-b753-7d9f5f2c805c">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-b06d253a-8538-4bb7-b753-7d9f5f2c805c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-6bd2fc19-0ccc-4586-82d1-476c54a0e20b">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-6bd2fc19-0ccc-4586-82d1-476c54a0e20b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{v} + 0 &amp;=&amp; \ket{v} \nonumber\\
 \ket{v} + \ket{\hbox{-}v} &amp;=&amp; \ket{v}-\ket{v} = 0 \nonumber\\
 \end{eqnarray}\]</div>
 <div class="note admonition">
-<p class="admonition-title">Notar</p>
+<p class="admonition-title">Nota</p>
 <p>La <b>dimensión</b> es igual al número de cantidades (<i>grados de libertad</i>) que debemos fijar para especificar un vector.
 Pero <span class="math notranslate nohighlight">\(N\)</span> números complejos equivalen a <span class="math notranslate nohighlight">\(2N\)</span> números reales.</p>
 <p>Entonces, podemos decir que:  la <i>dimensión compleja</i> de un espacio vectorial complejo  <span class="math notranslate nohighlight">\(\V\)</span> es <span class="math notranslate nohighlight">\(N\)</span>, o que su <i>dimensión real</i> es <span class="math notranslate nohighlight">\(2N\)</span>
@@ -741,7 +693,7 @@ $<span class="math notranslate nohighlight">\(
 \)</span>$</p>
 </div>
 <section id="base">
-<h3><a class="toc-backref" href="#id2"><span class="section-number">1.3.1.1. </span>Base</a><a class="headerlink" href="#base" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id2"><span class="section-number">1.2.1.1. </span>Base</a><a class="headerlink" href="#base" title="Permalink to this heading">#</a></h3>
 <p>Es evidente que el vector <span class="math notranslate nohighlight">\(\ket{v}\)</span> definido anteriormente se puede expandir de la siguiente manera
 <br></p>
 <br>
@@ -755,7 +707,8 @@ $<span class="math notranslate nohighlight">\(
 \,{u_N}\,  \begin{pmatrix} 0 \\ 0 \\0\\ \vdots 
 \\ 0 \\ 1 \end{pmatrix}
 \end{split}\]</div>
-<br><p>Esta notación se vuelve inmanejable cuando <span class="math notranslate nohighlight">\(N\)</span> se hace muy grande. Sin embargo, la notación de Dirac equivalente es muy concisa. Definamos la siguiente colección  <span class="math notranslate nohighlight">\(\{ e_i\}\)</span> de vectores</p>
+<br>
+<p>Esta notación se vuelve inmanejable cuando <span class="math notranslate nohighlight">\(N\)</span> se hace muy grande. Sin embargo, la notación de Dirac equivalente es muy concisa. Definamos la siguiente colección  <span class="math notranslate nohighlight">\(\{ e_i\}\)</span> de vectores</p>
 <br>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -775,12 +728,15 @@ $<span class="math notranslate nohighlight">\(
 \ket{u} ~=~ {u_1} |1 \rangle + {u_2} | 2\rangle +... + {u_{ N}}|{ N}\rangle~=~ \sum_{i=1}^N {u_ i} |i\rangle 
 \]</div>
 <p>Lo único que hemos hecho es representar el vector <span class="math notranslate nohighlight">\(\ket{u}\)</span> en una base. Vamos a formalizar esto.</p>
-<div class="proof definition admonition" id="definition-1">
-<p class="admonition-title"><span class="caption-number">Definition 1.3 </span> (Base)</p>
-<section class="definition-content" id="proof-content">
-<p>En un espacio vectorial <span class="math notranslate nohighlight">\(V\)</span> de dimensión <span class="math notranslate nohighlight">\(N\)</span> una <b>base</b> es una colección <span class="math notranslate nohighlight">\(\{\ket{e_1},...,\ket{e_N}\}\)</span> de <span class="math notranslate nohighlight">\(N\)</span> vectores  <i>linealmente independientes</i></p>
-</section>
-</div><p>Cualquier vector <span class="math notranslate nohighlight">\(\ket{v}\in V\)</span> que no sea el elemento neutro <span class="math notranslate nohighlight">\(\ket{v}\neq 0\)</span>,  se puede expresar como una <i>combinación lineal</i> de  los vectores de una base</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Definición</strong>: <em>Base</em></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">En un espacio vectorial <span class="math notranslate nohighlight">\(V\)</span> de dimensión <span class="math notranslate nohighlight">\(N\)</span> una <b>base</b> es una colección <span class="math notranslate nohighlight">\(\{\ket{e_1},...,\ket{e_N}\}\)</span> de <span class="math notranslate nohighlight">\(N\)</span> vectores  <i>linealmente independientes</i></p>
+</div>
+</div>
+<p>Cualquier vector <span class="math notranslate nohighlight">\(\ket{v}\in V\)</span> que no sea el elemento neutro <span class="math notranslate nohighlight">\(\ket{v}\neq 0\)</span>,  se puede expresar como una <i>combinación lineal</i> de  los vectores de una base</p>
 <div class="math notranslate nohighlight">
 \[
 \ket{v} = \sum_{i=1}^N v_i \ket{e_i} ~=~ v_1\ket{e_1} \,+\, v_2\ket{e_2}\, +\, ...\, +\, v_N \ket{e_N}
@@ -821,7 +777,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </section>
 <section id="vectores-definicion-intrinseca">
-<h3><a class="toc-backref" href="#id3"><span class="section-number">1.3.1.2. </span>Vectores: definición intrínseca</a><a class="headerlink" href="#vectores-definicion-intrinseca" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id3"><span class="section-number">1.2.1.2. </span>Vectores: definición intrínseca</a><a class="headerlink" href="#vectores-definicion-intrinseca" title="Permalink to this heading">#</a></h3>
 <p>La definición de vector que hemos introducido antes está asociada a una base concreta, en la cuál, los números <span class="math notranslate nohighlight">\(v_i\)</span> representan <em>las componentes</em> de dicho vector en esa base.</p>
 <p>Sin embargo un vector es un objeto abstracto, que admite <u>una representación distinta en cada base</u>. Para ellos debemos comenzar por hablar de las distintas bases.</p>
 <p><strong>Cambio de base</strong></p>
@@ -853,14 +809,16 @@ $<span class="math notranslate nohighlight">\(~~\ket{v}  = \sum_{i} \color{blue}
 <li><p>el índice <span class="math notranslate nohighlight">\(i\)</span> está sumado con los elementos de la base</p></li>
 <li><p>el índice <span class="math notranslate nohighlight">\(j\)</span> es una etiqueta que recuerda que estamos expandiendo el vector <span class="math notranslate nohighlight">\(\ket{\tilde e_j}\)</span></p></li>
 </ul>
-<p><b>Ejemplo</b>: Sea la matriz de coeficientes es</p>
+<div class="tip admonition">
+<p class="admonition-title">Ejemplo</p>
+<p>Sea la matriz de coeficientes es</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 C_{ij} = \begin{pmatrix} 1 &amp; 1 \\ i &amp; -i \end{pmatrix} =  \begin{pmatrix} C_{11} &amp; C_{12} \\ C_{21} &amp; C_{22} \end{pmatrix}\, ,
 \end{split}\]</div>
 <p>Entonces la expresión <span class="math notranslate nohighlight">\(\ket{\tilde e_j} = \sum_{i=1}^N C_{ i j} \ket{e_i}\)</span> en este caso relaciona las dos bases en la forma siguiente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ecc6f635-5a6d-4efe-ad07-4e833453e845">
-<span class="eqno">(1.5)<a class="headerlink" href="#equation-ecc6f635-5a6d-4efe-ad07-4e833453e845" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-c3ee69c2-eed1-4ef1-bebc-f87a4cb5f7bf">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-c3ee69c2-eed1-4ef1-bebc-f87a4cb5f7bf" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\tilde e_1} &amp;=&amp; C_{11}\ket{e_1}  + C_{21}\ket{e_2}  =  \ket{e_1} + i\ket{e_2}\nonumber\\ \rule{0mm}{8mm}
 \ket{\tilde e_2} &amp;=&amp; C_{12}\ket{e_1}  + C_{22}\ket{e_2}=\ket{e_1} - i\ket{e_2} \nonumber
 \end{eqnarray}\]</div>
@@ -869,6 +827,7 @@ C_{ij} = \begin{pmatrix} 1 &amp; 1 \\ i &amp; -i \end{pmatrix} =  \begin{pmatrix
 \[\begin{split}
 \big(\ket{\tilde e_1},\ket{\tilde e_2}\big) = \big(\ket{e_1},\ket{e_2}\big) \, \begin{pmatrix} 1 &amp; 1 \\ i &amp; -i \end{pmatrix} = \big(\ket{e_1} + i\ket{e_2}, \ket{e_1}-i\ket{e_2} \big)
 \end{split}\]</div>
+</div>
 <div class="note admonition">
 <p class="admonition-title">Nota</p>
 <p>La forma en que están sumados los índices</p>
@@ -885,8 +844,8 @@ C_{ij} = \begin{pmatrix} 1 &amp; 1 \\ i &amp; -i \end{pmatrix} =  \begin{pmatrix
 \end{split}\]</div>
 </div>
 <p>Ahora podemos obtener el <em>diccionario</em> entre componentes <span class="math notranslate nohighlight">\(v_i\)</span> y <span class="math notranslate nohighlight">\(\tilde v_i\)</span>, a partir de la  matriz de cambio de base</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d1161265-e47c-4485-9117-04ca34ebecf9">
-<span class="eqno">(1.6)<a class="headerlink" href="#equation-d1161265-e47c-4485-9117-04ca34ebecf9" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-6f1d6a0b-bdf3-4260-99a4-6775a539698b">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-6f1d6a0b-bdf3-4260-99a4-6775a539698b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{v}  ~= ~ \sum_{i} v_i \ket{e_i} &amp;~=~ \sum_j \tilde v_j \ket{\tilde e_j} \nonumber\\
 &amp;~=~  \sum_j \tilde v_j \left( \sum_{i} C_{ij} \ket{e_i}\right) \nonumber \\
 &amp;~=~  \sum_{j}\sum_{i} \tilde v_j   C_{ij} \ket{e_i} \nonumber \\
@@ -899,7 +858,7 @@ v_i = \sum_{j} C_{i\color{black}{j}} \tilde v_{\color{black}{j}}
 \]</div>
 <p>Esta expresión devuelve las componentes  <span class="math notranslate nohighlight">\(v_i\)</span> de un vector <span class="math notranslate nohighlight">\(\ket{v}\)</span> en la base <span class="math notranslate nohighlight">\(\{ \ket{e_i}\}\)</span> suponiendo que son conocidas las <span class="math notranslate nohighlight">\(\tilde v_i\)</span> en la base <span class="math notranslate nohighlight">\(\{ \ket{\tilde e_i} \}\)</span></p>
 <div class="note admonition">
-<p class="admonition-title">Nota:</p>
+<p class="admonition-title">Nota</p>
 <ol class="arabic simple">
 <li><p>La forma en que están sumados los índices hace que, en notación matricial esta operación se represente como sigue</p></li>
 </ol>
@@ -915,9 +874,8 @@ v_i = \sum_{j} C_{i\color{black}{j}} \tilde v_{\color{black}{j}}
 </ol>
 </div>
 <p>Un vector es un objeto abstracto, un elemento de un espacio vectorial. La definición que dimos al principio es fácil de entender, pero conlleva la elección implícita de una base. En cada base un vector se representa con un conjunto de componentes diferentes</p>
-<div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 1.2 </span></p>
-<section class="example-content" id="proof-content">
+<div class="tip admonition">
+<p class="admonition-title">Ejemplo</p>
 <p>Vamos a hacer un test de consistencia con vectores que conocemos en ambas bases.
 Escojamos por ejemplo <span class="math notranslate nohighlight">\(\ket{v} = \ket{\tilde e_1}\)</span>. Las componentes <span class="math notranslate nohighlight">\(\tilde v_i\)</span> de este vector en la base <span class="math notranslate nohighlight">\(\{\ket{\tilde e_i}\}\)</span> son claramente <span class="math notranslate nohighlight">\(\tilde v_i = \begin{pmatrix}1\\0\end{pmatrix}\)</span>. Entonces podemos obtener las componentes <span class="math notranslate nohighlight">\(v_i\)</span> en la base <span class="math notranslate nohighlight">\(\{\ket{e_i}\}\)</span> siguiendo la regla encontrada</p>
 <div class="math notranslate nohighlight">
@@ -929,19 +887,19 @@ Escojamos por ejemplo <span class="math notranslate nohighlight">\(\ket{v} = \ke
 \[\begin{split}
 \ket{\tilde e_2} \sim  \begin{pmatrix} \tilde v_1\\ \tilde v_2\end{pmatrix} = \begin{pmatrix} 0\\ 1 \end{pmatrix} ~\hbox{en la base} \{\ket{\tilde e_i}\}~~~~\Longrightarrow ~~~~ \ket{\tilde e_2} \sim \begin{pmatrix} v_1\\v_2\end{pmatrix} = \begin{pmatrix} 1 &amp; 1 \\ i &amp; -i \end{pmatrix}\begin{pmatrix} 0\\ 1 \end{pmatrix} = \begin{pmatrix} 1\\ -i \end{pmatrix} ~\hbox{en la base} \{\ket{e_i}\}
 \end{split}\]</div>
-</section>
-</div><p>Si queremos obtener las componentes <span class="math notranslate nohighlight">\(\tilde v_i\)</span> a partir de las <span class="math notranslate nohighlight">\(v_i\)</span>, tenemos que invertir la matriz</p>
+</div>
+<p>Si queremos obtener las componentes <span class="math notranslate nohighlight">\(\tilde v_i\)</span> a partir de las <span class="math notranslate nohighlight">\(v_i\)</span>, tenemos que invertir la matriz</p>
 <div class="math notranslate nohighlight">
 \[
 \tilde v_i = \sum_{j} C^{-1}_{i\color{black}{j}} v_{\color{black}{j}}
 \]</div>
-<div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 1.3 </span> (continuación)</p>
-<section class="example-content" id="proof-content">
-<p>Continuando con el ejemplo anterior, invertir la matriz da
-$<span class="math notranslate nohighlight">\(
+<div class="tip admonition">
+<p class="admonition-title">Ejemplo (continuación)</p>
+<p>Continuando con el ejemplo anterior, invertir la matriz da</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 C^{-1}_{ij} = \frac{1}{2}\begin{pmatrix} 1 &amp;- i\\  1 &amp; i \end{pmatrix}
-\)</span>$</p>
+\end{split}\]</div>
 <p>lo cual nos permite encontrar las componentes de <span class="math notranslate nohighlight">\(\ket{e_1}\)</span> en la base <span class="math notranslate nohighlight">\(\ket{\tilde e_i}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -952,19 +910,16 @@ C^{-1}_{ij} = \frac{1}{2}\begin{pmatrix} 1 &amp;- i\\  1 &amp; i \end{pmatrix}
 \[\begin{split}
 \ket{e_2} = \ket{v} = \begin{pmatrix} \tilde v_1\\\tilde v_2\end{pmatrix} = \frac{1}{2}\begin{pmatrix} 1 &amp;- i\\  1 &amp; i \end{pmatrix}\begin{pmatrix} 0\\ 1 \end{pmatrix} = \frac{1}{2}\begin{pmatrix} -i\\ i \end{pmatrix}~~~~\hbox{en la base} \{\ket{\tilde e_i}\}
 \end{split}\]</div>
-</section>
-</div><div class="exercise admonition" id="docs/00_Formalismo/01_Vectores-exercise-4">
-
-<p class="admonition-title"><span class="caption-number">Exercise 1.2 </span></p>
-<section id="exercise-content">
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Ejercicio</p>
 <p>Considera las bases ortonormales <span class="math notranslate nohighlight">\(\{\ket{e_i}\} = \{\ket{0},\ket{1}\}\)</span> y <span class="math notranslate nohighlight">\(\{\ket{\tilde e_i}\} =\{\ket{+},\ket{-}\}\)</span> donde <span class="math notranslate nohighlight">\(\ket{\pm} = \frac{1}{\sqrt{2}}(\ket{0} \pm \ket{1})\)</span>.</p>
 <p>Las componentes del vector <span class="math notranslate nohighlight">\(\ket{u} \sim \begin{pmatrix}3\\1\end{pmatrix}\)</span> están escritas en la primera base.</p>
 <p>Halla las componentes de <span class="math notranslate nohighlight">\(\ket{u}\)</span> en la segunda.</p>
-</section>
 </div>
 </section>
 <section id="subespacios-vectoriales">
-<h3><a class="toc-backref" href="#id4"><span class="section-number">1.3.1.3. </span>Subespacios Vectoriales</a><a class="headerlink" href="#subespacios-vectoriales" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id4"><span class="section-number">1.2.1.3. </span>Subespacios Vectoriales</a><a class="headerlink" href="#subespacios-vectoriales" title="Permalink to this heading">#</a></h3>
 <p>Seal <span class="math notranslate nohighlight">\(B = \{\ket{e_i}\}_{i=1,...,N}\)</span> la base  de un espacio vectorial <span class="math notranslate nohighlight">\(V\)</span>. Cualquier subconjunto de elementos de dicha base, <span class="math notranslate nohighlight">\(\bar B\subset B\)</span>, genera un <em>subespacio vectorial</em> <span class="math notranslate nohighlight">\(\bar V \subset V\)</span></p>
 <p><strong>Suma Directa</strong></p>
 <p>Por ejemplo, podemos dividir <span class="math notranslate nohighlight">\(B\)</span> en dos subconjuntos complementarios</p>
@@ -981,9 +936,9 @@ V  = V_1  + V_2
 </section>
 </section>
 <section id="espacios-de-hilbert">
-<h2><a class="toc-backref" href="#id5"><span class="section-number">1.3.2. </span>Espacios de Hilbert</a><a class="headerlink" href="#espacios-de-hilbert" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id5"><span class="section-number">1.2.2. </span>Espacios de Hilbert</a><a class="headerlink" href="#espacios-de-hilbert" title="Permalink to this heading">#</a></h2>
 <section id="conjugacion-adjunta">
-<h3><a class="toc-backref" href="#id6"><span class="section-number">1.3.2.1. </span>Conjugación adjunta</a><a class="headerlink" href="#conjugacion-adjunta" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id6"><span class="section-number">1.2.2.1. </span>Conjugación adjunta</a><a class="headerlink" href="#conjugacion-adjunta" title="Permalink to this heading">#</a></h3>
 <p>La operación <em>conjugación adjunta</em>,  <span class="math notranslate nohighlight">\(\dagger\)</span>, es una <em>extensión</em> de la <em>conjugación compleja</em> de <span class="math notranslate nohighlight">\({\mathbb C}\)</span> a todos los elementos  de <span class="math notranslate nohighlight">\(\Hil\)</span></p>
 <p>Asociado a cada <em>ket</em> <span class="math notranslate nohighlight">\(\ket{u}\)</span>, definimos un vector <strong>adjunto</strong>, o <em>bra</em> <span class="math notranslate nohighlight">\(\bra{u}\equiv\left(\ket{u}\right)^\dagger\)</span>,  que representamos mediante un vector fila con las componentes conjugadas complejas.<br />
 <br>
@@ -1035,27 +990,33 @@ $<span class="math notranslate nohighlight">\(
 \end{split}\]</div>
 </div>
 </div>
-<div class="proof definition admonition" id="definition-5">
-<p class="admonition-title"><span class="caption-number">Definition 1.4 </span> (Espacio de Hilbert)</p>
-<section class="definition-content" id="proof-content">
-<p>Un <i> espacio de Hilbert</i>,  <span class="math notranslate nohighlight">\({\Hil}\)</span>, es un espacio vectorial
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Definición</strong>: <em>Espacio de Hilbert</em></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Un <i> espacio de Hilbert</i>,  <span class="math notranslate nohighlight">\({\Hil}\)</span>, es un espacio vectorial
 dotado de una operación interna   denominada <i>producto escalar</i>.</p>
+</div>
+</div>
 </section>
-</div></section>
 <section id="producto-escalar">
-<h3><a class="toc-backref" href="#id7"><span class="section-number">1.3.2.2. </span>Producto Escalar</a><a class="headerlink" href="#producto-escalar" title="Permalink to this heading">#</a></h3>
-<div class="proof definition admonition" id="definition-6">
-<p class="admonition-title"><span class="caption-number">Definition 1.5 </span> (Producto escalar)</p>
-<section class="definition-content" id="proof-content">
-<p>El producto escalar de dos vectores <span class="math notranslate nohighlight">\(\ket{u}\)</span> y <span class="math notranslate nohighlight">\(\ket{v}\)</span> es un <i>número complejo</i>
+<h3><a class="toc-backref" href="#id7"><span class="section-number">1.2.2.2. </span>Producto Escalar</a><a class="headerlink" href="#producto-escalar" title="Permalink to this heading">#</a></h3>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Definición</strong>: <em>Producto escalar</em></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">El producto escalar de dos vectores <span class="math notranslate nohighlight">\(\ket{u}\)</span> y <span class="math notranslate nohighlight">\(\ket{v}\)</span> es un <i>número complejo</i>
 <span class="math notranslate nohighlight">\(a\in{\mathbb C}\)</span> que denotamos <i>braket</i></p>
 <div class="math notranslate nohighlight">
 \[
 a \equiv \braket{u}{v} 
 \]</div>
-<p>si verifica las propiedades siguientes linealidad: <span class="math notranslate nohighlight">\(\to \bra{u}\big(\ket{v}+\ket{w}\big) = \braket{u}{v} + \braket{u}{w}\)</span> hermiticidad: <span class="math notranslate nohighlight">\(\to \braket{v}{u} = \braket{u}{v}^*\)</span> positividad: <span class="math notranslate nohighlight">\(\braket{u}{u} &gt;0\)</span> para todo ket <span class="math notranslate nohighlight">\(\ket{u}\neq 0\)</span> no-degeneración: <span class="math notranslate nohighlight">\(~\)</span> si  <span class="math notranslate nohighlight">\(\braket{u}{v} = 0\)</span> para todo <span class="math notranslate nohighlight">\(\bra{u}\)</span>, entonces necesariamente <span class="math notranslate nohighlight">\(\ket{v}=0\)</span></p>
-</section>
-</div><p>Combinando ambas propiedades, el producto escalar también es lineal en el primer argumento</p>
+<p class="sd-card-text">si verifica las propiedades siguientes linealidad: <span class="math notranslate nohighlight">\(\to \bra{u}\big(\ket{v}+\ket{w}\big) = \braket{u}{v} + \braket{u}{w}\)</span> hermiticidad: <span class="math notranslate nohighlight">\(\to \braket{v}{u} = \braket{u}{v}^*\)</span> positividad: <span class="math notranslate nohighlight">\(\braket{u}{u} &gt;0\)</span> para todo ket <span class="math notranslate nohighlight">\(\ket{u}\neq 0\)</span> no-degeneración: <span class="math notranslate nohighlight">\(~\)</span> si  <span class="math notranslate nohighlight">\(\braket{u}{v} = 0\)</span> para todo <span class="math notranslate nohighlight">\(\bra{u}\)</span>, entonces necesariamente <span class="math notranslate nohighlight">\(\ket{v}=0\)</span></p>
+</div>
+</div>
+<p>Combinando ambas propiedades, el producto escalar también es lineal en el primer argumento</p>
 <div class="math notranslate nohighlight">
 \[(\bra{u}+\bra{w})\ket{v} = \braket{u}{v} + \braket{w}{v}\]</div>
 <p>Notar que la propiedad de hermiticidad es precisamente la extensión de la conjugación compleja de la que hablábamos al definir la aplicación <em>adjunta</em></p>
@@ -1073,7 +1034,7 @@ a \equiv \braket{u}{v}
 <p>que no es ni siguiera un número complejo.</p>
 </section>
 <section id="norma">
-<h3><a class="toc-backref" href="#id8"><span class="section-number">1.3.2.3. </span>Norma</a><a class="headerlink" href="#norma" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id8"><span class="section-number">1.2.2.3. </span>Norma</a><a class="headerlink" href="#norma" title="Permalink to this heading">#</a></h3>
 <p>Una <strong>norma</strong> es un una función real <span class="math notranslate nohighlight">\(\|\cdot\| : \Lin(\Hil) \to {\mathbb R}\)</span> con las siguientes propiedades</p>
 <ul class="simple">
 <li><p>ser definida positiva <span class="math notranslate nohighlight">\(\|A\|\geq 0\)</span> con <span class="math notranslate nohighlight">\(\| A\| = 0 \Leftrightarrow A= 0\)</span>
@@ -1101,7 +1062,7 @@ La positividad  del producto escalar de un vector por sí mismo  permite definir
 </div>
 </section>
 <section id="distancia">
-<h3><a class="toc-backref" href="#id9"><span class="section-number">1.3.2.4. </span>Distancia</a><a class="headerlink" href="#distancia" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id9"><span class="section-number">1.2.2.4. </span>Distancia</a><a class="headerlink" href="#distancia" title="Permalink to this heading">#</a></h3>
 <p>Dados dos elementos <span class="math notranslate nohighlight">\(\ket{u}\)</span> y <span class="math notranslate nohighlight">\(\ket{v}\)</span> de <span class="math notranslate nohighlight">\(\Hil\)</span>, podemos definir la <em>distancia</em> entre ellos como la <em>norma de su diferencia</em>
 <br></p>
 <div class="math notranslate nohighlight">
@@ -1111,67 +1072,67 @@ d(\rule{0mm}{5mm}\ket{v},\ket{w}) = \| \ket{v}-\ket{w}\|
 <p>En particular</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(d(\ket{v}, \ket{w}) = d(\ket{w}, \ket{v})\)</span></p></li>
-</ul>
-<br>
-<ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(d(\ket{v}, \ket{v}) = 0\)</span></p></li>
 </ul>
 </section>
 </section>
 <section id="bases-ortonormales">
-<h2><a class="toc-backref" href="#id10"><span class="section-number">1.3.3. </span>Bases ortonormales</a><a class="headerlink" href="#bases-ortonormales" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id10"><span class="section-number">1.2.3. </span>Bases ortonormales</a><a class="headerlink" href="#bases-ortonormales" title="Permalink to this heading">#</a></h2>
 <p>Hasta ahora, a los vectores de una base <span class="math notranslate nohighlight">\(\{\ket{e_i}\}\)</span> sólo se les ha pedido que sean <span class="math notranslate nohighlight">\(N\)</span> vectores <em>linealmente independientes</em>, donde <span class="math notranslate nohighlight">\(N\)</span> es la dimensión del espacio vectorial <span class="math notranslate nohighlight">\(\V\)</span>:</p>
 <p>En un espacio de Hilbert <span class="math notranslate nohighlight">\(\Hil\)</span> tiene sentido calcular el producto escalar de dos elementos de una base.</p>
-<div class="proof definition admonition" id="definition-7">
-<p class="admonition-title"><span class="caption-number">Definition 1.6 </span> (Base ortonormal)</p>
-<section class="definition-content" id="proof-content">
-<p>Una base ortornormal se caracteriza por la siguiente lista de productos escalares</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Definición</strong>: <em>Base ortonormal</em></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Una base ortornormal se caracteriza por la siguiente lista de productos escalares</p>
 <div class="math notranslate nohighlight">
 \[
 \braket{e_i}{e_j} = \delta_{ij}
 \]</div>
-</section>
-</div><ul class="simple">
+</div>
+</div>
+<ul class="simple">
 <li><p>Por un lado, dos elementos distintos de la base son ortogonales <span class="math notranslate nohighlight">\(\braket{e_1}{e_2} = 0\)</span>.
 <br></p></li>
 <li><p>Por otro, todos están normalizados  <span class="math notranslate nohighlight">\( \| e_i \| = \sqrt{\braket{e_1}{e_1}} = \sqrt{1} = 1\)</span>.</p></li>
 </ul>
-<div class="proof theorem admonition" id="theorem-8">
-<p class="admonition-title"><span class="caption-number">Theorem 1.3 </span> (Teorema de Gram-Schmidt)</p>
-<section class="theorem-content" id="proof-content">
-<p>Dada una base general <span class="math notranslate nohighlight">\(\{\braket{f_i}{f_j}\neq \delta_{ij}\}\)</span> de vectores no ortonormales, existe una procedimiento iterativo (de <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram-Schmidt</a> ) para construir, a partir de ella, una nueva base ortonormal <span class="math notranslate nohighlight">\(\{\braket{e_i}{e_j}\}=\delta_{ij}\)</span></p>
-</section>
-</div><p>Dado un vector  <span class="math notranslate nohighlight">\(\ket{v} = \sum_{i=1}^N v_i \ket{e_i}\)</span> escrito en una base ortonormal, la <em>componente</em> <span class="math notranslate nohighlight">\(v_i\)</span> se extrae mediante la <em>proyección ortogonal</em>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Teorema</strong>: <em>de Gram-Schmidt</em></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Dada una base general <span class="math notranslate nohighlight">\(\{\braket{f_i}{f_j}\neq \delta_{ij}\}\)</span> de vectores no ortonormales, existe una procedimiento iterativo (de <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram-Schmidt</a> ) para construir, a partir de ella, una nueva base ortonormal <span class="math notranslate nohighlight">\(\{\braket{e_i}{e_j}\}=\delta_{ij}\)</span></p>
+</div>
+</div>
+<p>Dado un vector  <span class="math notranslate nohighlight">\(\ket{v} = \sum_{i=1}^N v_i \ket{e_i}\)</span> escrito en una base ortonormal, la <em>componente</em> <span class="math notranslate nohighlight">\(v_i\)</span> se extrae mediante la <em>proyección ortogonal</em>
 <br>
 <br>
 $<span class="math notranslate nohighlight">\(
 v_i =\braket{e_i}{v}
 \)</span>$</p>
-<div class="exercise admonition" id="docs/00_Formalismo/01_Vectores-exercise-9">
-
-<p class="admonition-title"><span class="caption-number">Exercise 1.3 </span></p>
-<section id="exercise-content">
+<div class="tip admonition">
+<p class="admonition-title">Ejercicio</p>
 <p>Verifica esta expresión</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Desmostración<div class="sd-summary-down docutils">
+Solución<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-3f4a611f-db24-4376-aa6a-82a1152dbe95">
-<span class="eqno">(1.7)<a class="headerlink" href="#equation-3f4a611f-db24-4376-aa6a-82a1152dbe95" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-20c23168-e6a8-4131-8d80-3946f906422b">
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-20c23168-e6a8-4131-8d80-3946f906422b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \braket{e_k}{v} &amp;=&amp;  \bra{e_k}\left(\sum_{j=1}^N v_j\ket{e_j}\right) \nonumber\\
                 &amp;=&amp;  \sum_{j=1}^N  v_j\braket{e_k}{e_j}  \nonumber\\
                 &amp;=&amp;  \sum_{j=1}^N  v_j\delta_{kj} = v_k
 \end{eqnarray}\]</div>
 </div>
-</details></section>
-</div>
+</details></div>
 <p>En una base
 ortonormal, calcular el valor de un <em>producto escalar</em> <span class="math notranslate nohighlight">\(a=\braket{u}{v}\)</span> es muy simple</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f85a8ca-3a3f-4d83-8ef1-a81d20c76f17">
-<span class="eqno">(1.8)<a class="headerlink" href="#equation-8f85a8ca-3a3f-4d83-8ef1-a81d20c76f17" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-5f0424bb-64dd-46ce-953f-f6cc311577d2">
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-5f0424bb-64dd-46ce-953f-f6cc311577d2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 a = 
 \braket{u}{v}&amp;=&amp; \left(\sum_{i}u_i^*\bra{e_i}\right)\left(\sum_{j}v_j\ket{e_j} \right) = 
 \sum_{ij} u_i^* v_j  \braket{e_i}{e_j}
@@ -1186,20 +1147,16 @@ a =
 \end{eqnarray}\]</div>
 <br><div class="note admonition">
 <p class="admonition-title">Nota</p>
-<br>
-la expresión de la izquierda  $a = \braket{u}{v}$ <b>no hace referencia a ninguna base</b>. Por tanto, el resultado $\sum_{i=1}^n{ u_i^* v_i} $ debe ser independiente de la base que utilizamos para representar estos vectores mediante sus componentes $u_i$ y $v_i$. 
+<p>La expresión de la izquierda  <span class="math notranslate nohighlight">\(a = \braket{u}{v}\)</span> <b>no hace referencia a ninguna base</b>. Por tanto, el resultado <span class="math notranslate nohighlight">\(\sum_{i=1}^n{ u_i^* v_i} \)</span> debe ser independiente de la base que utilizamos para representar estos vectores mediante sus componentes <span class="math notranslate nohighlight">\(u_i\)</span> y <span class="math notranslate nohighlight">\(v_i\)</span>.</p>
 <p>Subrayamos la importancia de esto: <span class="math notranslate nohighlight">\(\braket{u}{v}\)</span> puede ser calculado en la base más conveniente.</p>
 </div>
-<div class="exercise admonition" id="docs/00_Formalismo/01_Vectores-exercise-10">
-
-<p class="admonition-title"><span class="caption-number">Exercise 1.4 </span></p>
-<section id="exercise-content">
+<div class="tip admonition">
+<p class="admonition-title">Ejercicio</p>
 <ul class="simple">
 <li><p>Escribe una función <i>braket</i><span class="math notranslate nohighlight">\((u,v)\)</span> que calcule y devuelva la el producto escalar <span class="math notranslate nohighlight">\(\braket{u}{v}\)</span>, y, con ella, una función <span class="math notranslate nohighlight">\(norm(u)\)</span> que calcule la norma <span class="math notranslate nohighlight">\(\| \ket{u}\|\)</span>.
 Verifica que <span class="math notranslate nohighlight">\(\| \ket{u}\| = \sqrt{\braket{u}{u}}\)</span> coincide con el resultado que da la función <code class="docutils literal notranslate"><span class="pre">np.linalg.norm</span></code>.</p></li>
 <li><p>Escribe una función <i>random<span class="math notranslate nohighlight">\(\_\)</span>ket</i><span class="math notranslate nohighlight">\((d)\)</span> que genere un vector normalizado  <span class="math notranslate nohighlight">\(\ket{v}\in\Hil\)</span> de dimensión <span class="math notranslate nohighlight">\(d\)</span>.</p></li>
 </ul>
-</section>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1256,7 +1213,7 @@ Verifica que <span class="math notranslate nohighlight">\(\| \ket{u}\| = \sqrt{\
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.4. </span>Operadores</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Operadores y Matrices</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1275,45 +1232,21 @@ Verifica que <span class="math notranslate nohighlight">\(\| \ket{u}\| = \sqrt{\
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.2. license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
-subject: Curso
-venue: Quantum Spain
-math:<br/>
-‘\i’: ‘{\color{blue}{i}}’
-‘\bes’: ‘\begin{equation*}’
-‘\ees’: ‘\end{equation*}’
-‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
-‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
-‘\R’: ‘{\mathbb R}’
-‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores">1.3. Vectores</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacio-vectorial">1.3.1. Espacio Vectorial</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base">1.3.1.1. Base</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores-definicion-intrinseca">1.3.1.2. Vectores: definición intrínseca</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subespacios-vectoriales">1.3.1.3. Subespacios Vectoriales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacio-vectorial">1.2.1. Espacio Vectorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base">1.2.1.1. Base</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores-definicion-intrinseca">1.2.1.2. Vectores: definición intrínseca</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subespacios-vectoriales">1.2.1.3. Subespacios Vectoriales</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacios-de-hilbert">1.3.2. Espacios de Hilbert</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-adjunta">1.3.2.1. Conjugación adjunta</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-escalar">1.3.2.2. Producto Escalar</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#norma">1.3.2.3. Norma</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia">1.3.2.4. Distancia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espacios-de-hilbert">1.2.2. Espacios de Hilbert</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-adjunta">1.2.2.1. Conjugación adjunta</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#producto-escalar">1.2.2.2. Producto Escalar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#norma">1.2.2.3. Norma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distancia">1.2.2.4. Distancia</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases-ortonormales">1.3.3. Bases ortonormales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bases-ortonormales">1.2.3. Bases ortonormales</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>

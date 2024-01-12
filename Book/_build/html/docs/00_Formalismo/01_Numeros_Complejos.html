@@ -104,7 +104,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/00_Formalismo/01_Numeros_Complejos';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.2. license: CC-BY-4.0 github: https://github.com/executablebooks/mystmd subject: Curso venue: Quantum Spain math: ‘\i’: ‘{\color{blue}{i}}’ ‘\bes’: ‘\begin{equation*}’ ‘\ees’: ‘\end{equation*}’ ‘\O’: ‘{\mathcal O}’ ‘\Lin’: ‘\hbox{Lin}’ ‘\Hil’: ‘{\mathcal H}’ ‘\bra[1]’: ‘{\langle #1|}’ ‘\ket[1]’: ‘{|#1\rangle}’ ‘\braket[2]’: ‘{\langle #1|#2\rangle}’ ‘\R’: ‘{\mathbb R}’ ‘\C’: ‘{\mathbb C}’ ‘\V’: ‘{V}’ abbreviations: MyST: Markedly Structured Text TLA: Three Letter Acronym" href="01_Vectores.html" />
+    <link rel="next" title="1.2. Vectores" href="01_Vectores.html" />
     <link rel="prev" title="1. Formalismo Matemático" href="01_formalismo_matematico.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -202,30 +202,16 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_formalismo_matematico.html">1. Formalismo Matemático</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
-subject: Curso
-venue: Quantum Spain
-math:<br/>
-‘\i’: ‘{\color{blue}{i}}’
-‘\bes’: ‘\begin{equation*}’
-‘\ees’: ‘\end{equation*}’
-‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
-‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
-‘\R’: ‘{\mathbb R}’
-‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.3. Operadores y Matrices</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.4. Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.5. Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.6. 1.5 Probabilidades</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.10. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.11. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -371,7 +357,7 @@ TLA: Three Letter Acronym</a></li>
       
       
       
-      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/edit/master/Book/docs/00_Formalismo/01_Numeros_Complejos.md" target="_blank"
+      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/edit/master/Book/docs/00_Formalismo/01_Numeros_Complejos.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -419,23 +405,6 @@ TLA: Three Letter Acronym</a></li>
       
       
       <li><a href="../../_sources/docs/00_Formalismo/01_Numeros_Complejos.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Download notebook file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="../../_sources/docs/00_Formalismo/01_Numeros_Complejos.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -445,7 +414,7 @@ TLA: Three Letter Acronym</a></li>
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -558,7 +527,49 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <figure class="align-center">
+  <hr class="docutils" />
+<p>license: CC-BY-4.0
+github: <a class="github reference external" href="https://github.com/jamasole/Curso-TalentQ-Jupyterlab">jamasole/Curso-TalentQ-Jupyterlab</a>
+subject: Curso
+venue: Quantum Spain
+authors:</p>
+<ul class="simple">
+<li><p>name: Javier Mas
+email: <a class="reference external" href="mailto:javier&#46;mas&#37;&#52;&#48;usc&#46;es">javier<span>&#46;</span>mas<span>&#64;</span>usc<span>&#46;</span>es</a>
+corresponding: true
+orcid: 0000-0001-7008-2126
+affiliations:</p>
+<ul>
+<li><p>IGFAE-USC</p></li>
+</ul>
+</li>
+<li><p>name: David Castaño
+email: <a class="reference external" href="mailto:javier&#46;mas&#37;&#52;&#48;usc&#46;es">javier<span>&#46;</span>mas<span>&#64;</span>usc<span>&#46;</span>es</a>
+corresponding: true
+orcid: 0000-0001-7008-2126
+affiliations:</p>
+<ul>
+<li><p>UMA
+math:<br />
+‘\i’: ‘{i}’
+‘\bes’: ‘\begin{equation*}’
+‘\ees’: ‘\end{equation*}’
+‘\O’: ‘{\mathcal O}’
+‘\Lin’: ‘\rm L’
+‘\Hil’: ‘{\mathcal H}’
+‘\bra’: ‘{\langle #1|}’
+‘\ket’: ‘{|#1\rangle}’
+‘\braket’: ‘{\langle #1|#2\rangle}’
+‘\ketbra’: ‘{| #1\rangle  \langle #2|}’
+‘\tr’: ‘{\rm tr}’
+‘\R’: ‘{\mathbb R}’
+‘\C’: ‘{\mathbb C}’
+‘\V’: ‘{V}’</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<figure class="align-center">
 <img alt="../../_images/myThumbnail.png" src="../../_images/myThumbnail.png" />
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="numeros-complejos">
@@ -613,19 +624,24 @@ document.write(`
 \[ a^2 &gt;0 \]</div>
 <p>por ejemplo <span class="math notranslate nohighlight">\(~~2^2 =  4~~\)</span> pero también <span class="math notranslate nohighlight">\(~~(-2)^2 = 4~~\)</span>.</p>
 <p>Por eso, la raíz cuadrada de un número real <u><em>sólo</em> existe si dicho número es positivo</u>.</p>
-<p>Por ejemplo <span class="math notranslate nohighlight">\(\sqrt{4}=\pm 2\)</span>, mientras que $<span class="math notranslate nohighlight">\(\sqrt{-4}= \, ?\)</span>$</p>
+<p>Por ejemplo <span class="math notranslate nohighlight">\(\sqrt{4}=\pm 2\)</span>, mientras que</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{-4}= \, ?\]</div>
 <p><strong>Pregunta</strong>: <span class="math notranslate nohighlight">\(~~\)</span> ¿cómo podríamos definir la <u>raíz cuadrada de un número real negativo</u>?</p>
 <p><strong>Respuesta</strong>:  es necesario <u>ampliar el conjunto de los números reales</u>.</p>
-<div class="proof definition admonition" id="numero-i">
-<p class="admonition-title"><span class="caption-number">Definition 1.1 </span> (Número <span class="math notranslate nohighlight">\(i\)</span>)</p>
-<section class="definition-content" id="proof-content">
-<p>se postula la existencia de un <i>nuevo número</i>, <span class="math notranslate nohighlight">\(~i\)</span>, que es la solución única de la ecuación</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Definición:</strong> <em>número</em> <span class="math notranslate nohighlight">\(i\)</span></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Se postula la existencia de un <i>nuevo número</i>, <span class="math notranslate nohighlight">\(~i\)</span>, que es la solución única de la ecuación</p>
 <div class="math notranslate nohighlight">
 \[
 i^2 = -1
 \]</div>
-</section>
-</div><p>Equivalentemente podíamos haber requerido que  <span class="math notranslate nohighlight">\(i = \sqrt{-1}\)</span>.</p>
+</div>
+</div>
+<p>Equivalentemente podíamos haber requerido que  <span class="math notranslate nohighlight">\(i = \sqrt{-1}\)</span>.</p>
 <p>Con esto podemos ahora encontrar la raíz de cualquier número negativo. Por ejemplo, <span class="math notranslate nohighlight">\(-4\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -644,8 +660,8 @@ i^2 = -1
 <div class="math notranslate nohighlight">
 \[\frac{i}{i} = 1\]</div>
 <p>Observar que el <em>inverso multiplicativo</em>  <span class="math notranslate nohighlight">\(1/i\)</span> también es <span class="math notranslate nohighlight">\(-i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-73e0a458-8b54-45d3-9124-c658a29081a0">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-73e0a458-8b54-45d3-9124-c658a29081a0" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ddca1f00-3476-4324-be19-230a38afb000">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-ddca1f00-3476-4324-be19-230a38afb000" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{i}{i}  &amp;=&amp;   1 \nonumber\\
 i (-i) &amp;=&amp; - i^2  =  1
 \end{eqnarray}\]</div>
@@ -665,8 +681,8 @@ números reales</u> <span class="math notranslate nohighlight">\(x,y\in {\mathbb
 <div class="math notranslate nohighlight">
 \[\begin{split}
 z = x + i y   ~~~~ \hbox{donde}~~~ 
-\left\{\begin{array}{cl} x &amp;\hbox{es la }   parte~ real\\
-y &amp; \hbox{es la } parte~imaginaria
+\left\{\begin{array}{cl} x &amp;\hbox{es la    parte real}\\
+y &amp; \hbox{es la  parte imaginaria}
 \end{array}
 \right.
 \end{split}\]</div>
@@ -712,14 +728,18 @@ y &amp; \hbox{es la } parte~imaginaria
 </section>
 <section id="forma-polar">
 <h3><a class="toc-backref" href="#id4"><span class="section-number">1.1.2.2. </span>Forma Polar</a><a class="headerlink" href="#forma-polar" title="Permalink to this heading">#</a></h3>
-<div class="proof theorem admonition" id="theorem-1">
-<p class="admonition-title"><span class="caption-number">Theorem 1.1 </span> (Fórmula de Euler)</p>
-<section class="theorem-content" id="proof-content">
-<p>Dado un ángulo <span class="math notranslate nohighlight">\(\theta \in (0,2\pi)\)</span> las dos expresiones siguientes son equivalentes
-<br>
-$<span class="math notranslate nohighlight">\(
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Teorema</strong> <span class="math notranslate nohighlight">\(~\)</span> <em>(fórmula de Euler)</em></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Dado un ángulo <span class="math notranslate nohighlight">\(\theta \in (0,2\pi)\)</span> las dos expresiones siguientes son equivalentes</p>
+<div class="math notranslate nohighlight">
+\[
 \cos\theta + i \sin \theta = e^{i\theta} 
-\)</span>$</p>
+\]</div>
+</div>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Demostración<div class="sd-summary-down docutils">
@@ -735,8 +755,7 @@ e^{i\theta} &amp;=&amp; 1 + i\theta + \frac{1}{2}(i\theta)^2 + \frac{1}{3!}(i\th
     &amp;=&amp; \cos \theta  + i \sin \theta 
 \end{array}\end{split}\]</div>
 </div>
-</details></section>
-</div><div class="math notranslate nohighlight" id="equation-label-align">
+</details><div class="math notranslate nohighlight" id="equation-label-align">
 <span class="eqno">(1.2)<a class="headerlink" href="#equation-label-align" title="Permalink to this equation">#</a></span>\[\begin{split}       \begin{align}
         y    &amp; =  ax^2 + bx + c \\
         f(x) &amp; =  x^2 + 2xy + y^2 
@@ -759,20 +778,19 @@ z = \rho e^{i\theta} = \rho e^{i(\theta + 2\pi)}
 \[
 \sin\theta  = \sin(\theta + 2\pi)~~~~~~~\cos\theta  = \cos(\theta +2\pi)
 \]</div>
-<div class="proof example tip admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 1.1 </span></p>
-<section class="example-content" id="proof-content">
+<div class="tip admonition">
+<p class="admonition-title">Ejemplo</p>
 <p>Usar la forma polar es útil en situaciones en las que aparecen productos y potencias del número <span class="math notranslate nohighlight">\(i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-18edf7cf-d86b-4b03-afab-730ab45b39f6">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-18edf7cf-d86b-4b03-afab-730ab45b39f6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-5ffebdc1-7152-4f1b-9562-15c99791c342">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-5ffebdc1-7152-4f1b-9562-15c99791c342" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 i &amp;=&amp;  e^{i\pi/2} \\ \rule{0mm}{8mm}
 -1 &amp;=&amp; i^2 = e^{i\pi} \\ \rule{0mm}{8mm}
 i &amp;=&amp; e^{3i\pi/2} =e^{-i\pi/2} \\  \rule{0mm}{8mm}
 i^i &amp;=&amp; (e^{i\pi/2})^i = e^{i^2 \pi/2} = e^{-\pi/2}  \\  \rule{0mm}{8mm}
 i^{2+i} &amp;=&amp; (e^{i\pi/2})^{(2+i)}= e^{i\pi/2(2+i)} = e^{i\pi} e^{-\pi/2} = -e^{-\pi/2}  \rule{0mm}{8mm}
 \end{eqnarray}\]</div>
+</div>
 </section>
-</div></section>
 <section id="conversion-entre-formas-cartesiana-y-polar">
 <h3><a class="toc-backref" href="#id5"><span class="section-number">1.1.2.3. </span>Conversión entre formas cartesiana y polar</a><a class="headerlink" href="#conversion-entre-formas-cartesiana-y-polar" title="Permalink to this heading">#</a></h3>
 <p>La conversión de la representación <em>polar a cartesiana</em> es muy sencilla
@@ -851,7 +869,6 @@ z = x + i y  = r e^{i\theta} ~~~ \hbox{ con } ~~~ \left\{\begin{array}{l} r=\sqr
 \[
 z = x+i y ~~~~\leftrightarrow~~~~ z^* = x - i y \hspace{2cm}
 \]</div>
-<br>
 <p>La conjugación compleja es una <em>involución</em> <span class="math notranslate nohighlight">\(\Rightarrow (z^*)^* = z\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -880,7 +897,7 @@ z*= (3-1j)
 <br></p>
 <div class="math notranslate nohighlight">
 \[
-z = \rho e^{i\theta} ~~\longrightarrow ~~z^* = \rho e^{-i\theta} = \rho \cos\theta - i \rho \sin\theta \hspace{4cm}
+z = \rho e^{i\theta} ~~\longrightarrow ~~z^* = \rho e^{-i\theta} = \rho \cos\theta - i \rho \sin\theta 
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1051,14 +1068,9 @@ z z^*  = (x + i y) (x-i y) = x^2 + y^2 &gt;0
 \[
 |e^{i\theta}| = \sqrt{ e^{i\theta}   e^{-i\theta}}=\sqrt{ e^{i(\theta-\theta)}}=\sqrt{e^0} = 1
 \]</div>
-<div class="exercise admonition" id="docs/00_Formalismo/01_Numeros_Complejos-exercise-3">
-
-<p class="admonition-title"><span class="caption-number">Exercise 1.1 </span></p>
-<section id="exercise-content">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Verifica el valor absoluto de un producto de números complejos es el producto de sus valores absolutos
-</pre></div>
-</div>
-</section>
+<div class="tip admonition">
+<p class="admonition-title">Ejercicio</p>
+<p>Verifica el valor absoluto de un producto de números complejos es el producto de sus valores absolutos</p>
 </div>
 </section>
 <section id="division">
@@ -1112,7 +1124,7 @@ comprobación z1/z2= (1.08707+2.79612j)
 <div class="math notranslate nohighlight">
 \[
 \sum_{k=0}^{N-1} e^{2\pi i k/N} =   e^{2\pi i\, 0/N} +  e^{2\pi i\, 1/N}  +~...~ +   e^{2\pi i\, (N-2)/N}+   e^{2\pi i\, (N-1)/N} ~=~  ~0
- \]</div>
+\]</div>
 <p>Para convencerse de que esta identidad es cierta vamos a representar los números complejos y su suma. Puedes cambiar <span class="math notranslate nohighlight">\(N\)</span> y también multiplicar por un módulo constante</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1136,7 +1148,7 @@ comprobación z1/z2= (1.08707+2.79612j)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.patches.Circle at 0x7fab5456c7c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.patches.Circle at 0x7f78add1c4c0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/c3bd79650827b39d5f2f6c6a2d8bc972e06a14eee671670d8eab6f14480666aa.png" src="../../_images/c3bd79650827b39d5f2f6c6a2d8bc972e06a14eee671670d8eab6f14480666aa.png" />
@@ -1242,15 +1254,18 @@ comprobación z1/z2= (1.08707+2.79612j)
 \delta_{ij} = \left\{ \begin{array}{rcl} 0 &amp; \hbox{si} &amp; i\neq 0 \\ 1 &amp; \hbox{si} &amp; i = j \end{array} \right.
 \end{split}\]</div>
 <p>Con ella podemos enunciar el siguiente resultado</p>
-<div class="proof theorem admonition" id="theorem-4">
-<p class="admonition-title"><span class="caption-number">Theorem 1.2 </span></p>
-<section class="theorem-content" id="proof-content">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Teorema</strong></p>
+</div>
+<div class="sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[
 \frac{1}{N}\sum_{k=0}^{N-1} e^{2\pi i \, j k/N} =  \delta_{j\, 0{\rm mod} N}
 \]</div>
-</section>
-</div><ul class="simple">
+</div>
+</div>
+<ul class="simple">
 <li><p>Es decir, la suma es sólo 1 si <span class="math notranslate nohighlight">\(j = 0\)</span>mod N.</p></li>
 <li><p>Esta expresión es de uso muy frecuente en algortimia pues refleja la interferencia destructiva de las superposiciones cuánticas.</p></li>
 </ul>
@@ -1343,26 +1358,7 @@ comprobación z1/z2= (1.08707+2.79612j)
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.2. </span>license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
-subject: Curso
-venue: Quantum Spain
-math:<br />
-‘\i’: ‘{\color{blue}{i}}’
-‘\bes’: ‘\begin{equation*}’
-‘\ees’: ‘\end{equation*}’
-‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
-‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
-‘\R’: ‘{\mathbb R}’
-‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>Vectores</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

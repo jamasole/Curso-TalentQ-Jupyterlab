@@ -202,30 +202,16 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../00_Formalismo/01_formalismo_matematico.html">1. Formalismo Matemático</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Vectores.html">1.2. license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
-subject: Curso
-venue: Quantum Spain
-math:<br/>
-‘\i’: ‘{\color{blue}{i}}’
-‘\bes’: ‘\begin{equation*}’
-‘\ees’: ‘\end{equation*}’
-‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
-‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
-‘\R’: ‘{\mathbb R}’
-‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Vectores.html">1.2. Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Operadores.html">1.3. Operadores y Matrices</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Operadores.html">1.4. Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Tensores.html">1.5. Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Probabilidades.html">1.6. 1.5 Probabilidades</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Tensores.html">1.10. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Probabilidades.html">1.11. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -837,8 +823,8 @@ Amplitudes = {&#39;111&#39;: 0.24981993515330198, &#39;011&#39;: 0.2489377432210
 <p>El <em>problema</em> esencial para medir un valor esperado <span class="math notranslate nohighlight">\(\bra{\psi} A \ket{\psi}\)</span> es que, en general,  <span class="math notranslate nohighlight">\(A\)</span> <strong>no es un operador unitario</strong>. Por tanto no se puede incluir como parte de un circuito</p>
 <p>Si pudiésemos expresar  como una combinación de operadores unitarios, <span class="math notranslate nohighlight">\(A = \sum_i c_i U_i\)</span>, entonces sí podríamos calcular cadar valor esperado <span class="math notranslate nohighlight">\(\langle U_i\rangle\)</span> mediante un circuito y, finalmente, componer el resultado <span class="math notranslate nohighlight">\(\langle A\rangle = \sum_i c_i \langle U_i\rangle\)</span></p>
 <p>Una base  la constituyen las <em>cadenas de Pauli</em>,  <span class="math notranslate nohighlight">\(U = \sigma_{i_1}\otimes \ldots \otimes \sigma_{i_n}\)</span> que nos, a la vez, hermíticas y unitarias, y permiten expandir cualquier operador hermítico</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e7300e19-259c-4afa-a2fc-c991d441c47f">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-e7300e19-259c-4afa-a2fc-c991d441c47f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-622ddda9-c562-45fa-b71f-d9cac31d9278">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-622ddda9-c562-45fa-b71f-d9cac31d9278" title="Permalink to this equation">#</a></span>\[\begin{equation}
 A = \sum_{i_1,...,i_n=0}^3 a_{i_1\ldots i_n} \, \sigma_{i_1}\otimes \ldots \otimes \sigma_{i_n}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\sigma_i = (I,X,Y,Z)\)</span></p>
@@ -941,8 +927,8 @@ a_{i_1\ldots i_n} =\frac{1}{2^n} \tr (A \,  \sigma_{i_1}\otimes \ldots  \otimes\
 Z\otimes Z\otimes Z \ket{i_2 i_1 i_0} = Z\ket{i_2}\otimes Z\ket{i_1}\otimes Z\ket{i_0} = (-1)^{i_2+i_1+i_0}\ket{i_2 i_1 i_0}
 \]</div>
 <p>entonces el valor esperado  de este operador es</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f978606f-3018-4c5f-bd71-95875d5c905e">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-f978606f-3018-4c5f-bd71-95875d5c905e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-b48882de-6c04-4622-a760-f9a14a2dd987">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-b48882de-6c04-4622-a760-f9a14a2dd987" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle Z\otimes Z\otimes Z\rangle_\Psi &amp;=&amp;
 \bra{\Psi} Z\otimes Z\otimes Z \ket{\Psi} \\ 
 &amp;=&amp; \sum_{i_2,i_1,i_0=0,1}\bra{\Psi} Z\otimes Z\otimes Z \ket{i_2 i_1 i_0}\braket{i_2 i_1 i_0}{\Psi}  \rule{0mm}{10mm}  \\
@@ -1151,8 +1137,8 @@ $$
 \ket{0}\ket{\psi} ~\to ~ \ket{\Psi} = \frac{1}{2} \left[\rule{0mm}{3mm} |0\rangle \otimes (1 + U) |\psi\rangle +  |1\rangle \otimes (1 - U) |\psi\rangle \right] \label{hadam}
 \]</div>
 <p>Si medimos el cúbit ancilla, obtendremos como resultados <span class="math notranslate nohighlight">\(\{0,1\}\)</span> con probabilidades</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9d7f804c-9948-4dcf-96d3-22b2991106a5">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-9d7f804c-9948-4dcf-96d3-22b2991106a5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-88dec50a-2b3a-4428-b134-0087ef7a3812">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-88dec50a-2b3a-4428-b134-0087ef7a3812" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
  p_{0}  &amp;=&amp;  \left\vert \frac{1}{2}  (1 + U) \ket{\psi}  \right\vert^{2} = 
  \frac{1}{4}\bra{\psi}(1 + U^\dagger) (1 + U) \ket{\psi} =\frac{1}{2}(1+\operatorname{Re}\langle \psi|U|\psi\rangle) \nonumber\\
  p_{1}  &amp;=&amp;  \left\vert \frac{1}{2}  (1 - U) \ket{\psi}  \right\vert^{2}=

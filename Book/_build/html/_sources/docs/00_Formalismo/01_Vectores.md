@@ -9,11 +9,6 @@ kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
----
-
-+++ {"editable": true, "jp-MarkdownHeadingCollapsed": true, "slideshow": {"slide_type": "slide"}}
-
----
 license: CC-BY-4.0
 github: https://github.com/executablebooks/mystmd
 subject: Curso

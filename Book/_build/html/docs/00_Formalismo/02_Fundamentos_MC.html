@@ -202,30 +202,16 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="01_formalismo_matematico.html">1. Formalismo Matemático</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
-subject: Curso
-venue: Quantum Spain
-math:<br/>
-‘\i’: ‘{\color{blue}{i}}’
-‘\bes’: ‘\begin{equation*}’
-‘\ees’: ‘\end{equation*}’
-‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
-‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
-‘\R’: ‘{\mathbb R}’
-‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Vectores.html">1.2. Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.3. Operadores y Matrices</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="01_Operadores.html">1.4. Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.5. Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.6. 1.5 Probabilidades</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="01_Tensores.html">1.10. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_Probabilidades.html">1.11. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -646,8 +632,8 @@ donde $\ket{\lambda_k}$ es el autovector asociado.
 <br>
 <br></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-1d95144b-eb09-4e95-b03e-b56dee58ccaf">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-1d95144b-eb09-4e95-b03e-b56dee58ccaf" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-f90e8200-8ca0-4c11-8f89-36ddca4297de">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-f90e8200-8ca0-4c11-8f89-36ddca4297de" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \bra{\psi}\left(
  \sum_{a=1}^{d_k}\ketbra{\lambda^a_k}{\lambda^a_k}\right) \ket{\psi}\nonumber\\
 &amp;=&amp;  \bra{\psi}P_k\ket{\psi} \rule{0mm}{7mm}\\
@@ -731,8 +717,8 @@ $<span class="math notranslate nohighlight">\(
 \)</span>$</p>
 </div></blockquote>
 <p>Rescribamos <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> en el caso de que sea <span class="math notranslate nohighlight">\(\lambda_k\)</span> sea un autovalor <span class="math notranslate nohighlight">\(d_k\)</span> veces degenerado</p>
-<div class="amsmath math notranslate nohighlight" id="equation-227573a8-8239-43f9-ae76-fa529d7eacf9">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-227573a8-8239-43f9-ae76-fa529d7eacf9" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-54696cde-9678-4eac-ac15-ddf78a4e6e52">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-54696cde-9678-4eac-ac15-ddf78a4e6e52" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k) &amp;=&amp; \sum_{a=1}^{d_k} |\braket{\lambda^a_k}{\psi}|^2  = 
 \sum_{a=1}^{d_k} \braket{\psi}{\lambda^a_k}\braket{\lambda^a_k}{\psi} \nonumber\\
 &amp;=&amp;\bra{\psi} \left( \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}  \right) = \bra{\psi}P_k \ket{\psi} 
@@ -743,8 +729,8 @@ P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \)</span>$
 es el proyector sobre el subespacio propio.</p>
 <p>Ahora podemos introducir este resultado en la expresión para el valor esperado de <span class="math notranslate nohighlight">\(A\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-753e3015-1beb-4234-8957-dd6aeb4006fd">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-753e3015-1beb-4234-8957-dd6aeb4006fd" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-42b1f39b-c93d-41c4-89a1-6feed92b6929">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-42b1f39b-c93d-41c4-89a1-6feed92b6929" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle A\rangle_\psi &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 
@@ -786,8 +772,8 @@ $<span class="math notranslate nohighlight">\(
 <p>La <em>varianza</em>  es la media de la desviación cuadrática de la variable aleatoria <span class="math notranslate nohighlight">\((\lambda,p(\lambda))\)</span> es decir
 <br>
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b7c2e10a-4110-4458-bf31-8480c88f73e5">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-b7c2e10a-4110-4458-bf31-8480c88f73e5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-7b6ae26b-692d-47c0-bd86-555a4c284984">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-7b6ae26b-692d-47c0-bd86-555a4c284984" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 ~~\sigma ^2 &amp;=&amp; \overline{(\lambda_i-\bar\lambda_i)^2} = \overline{ \lambda^2 - 2\lambda\bar\lambda +\bar\lambda^2}
 \\
 &amp;=&amp;  \overline{\lambda^2} - \overline{\lambda}^2 \rule{0mm}{8mm}
@@ -971,8 +957,8 @@ $<span class="math notranslate nohighlight">\(
 <details>
 <summary><p style="color:grey;text-align:left"> >> Demostración </p></summary>
 Tomando la derivada temporal de la ecuación $\ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}$, que define $U(t,t_0)$, tenemos para cada miembro
-<div class="amsmath math notranslate nohighlight" id="equation-564068dd-5077-4236-b5fc-8a62e91c76bc">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-564068dd-5077-4236-b5fc-8a62e91c76bc" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-96518f03-6ae3-46ce-a702-66fce9584e57">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-96518f03-6ae3-46ce-a702-66fce9584e57" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}\ket{\psi(t)} &amp;~=~&amp; -\frac{i}{\hbar}  H(t)\ket{\psi(t)} = -\frac{i}{\hbar} H(t)U(t,t_0)\ket{\psi(t_0)}  \nonumber\\
 \frac{d}{dt}U(t,t_0)\ket{\psi(t_0)} &amp;~=~&amp; \left(\frac{d}{dt}U(t,t_0)\right)\ket{\psi(t_0)}
 \end{eqnarray}\]</div>
@@ -994,8 +980,8 @@ $$
 <details>
 <summary><p style="color:grey;text-align:left"> >> Demostración </p></summary>
 Basta con demostrar que se satisface la ecuación de evolución y la condición de contorno
-<div class="amsmath math notranslate nohighlight" id="equation-ce61e61c-9d81-4587-bcbb-3f8a4eb73982">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-ce61e61c-9d81-4587-bcbb-3f8a4eb73982" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-0c62c7e6-6a4d-4f07-b6d5-61292ecbb4e3">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-0c62c7e6-6a4d-4f07-b6d5-61292ecbb4e3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}U(t,t_0) &amp;=&amp; \frac{d}{dt} \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
     \nonumber\\ \rule{0mm}{6mm}
    &amp;=&amp; \frac{d}{dt}\left( I +(t-t_0)\left(-\frac{i}{\hbar} H\right) + \frac{1}{2!} 
@@ -1115,8 +1101,8 @@ H_{mn} =  \begin{bmatrix} E_0 &amp;  &amp; &amp; \\  &amp; E_1 &amp;  &amp; \\ &
 <p>Entonces la matriz de evolución es también diagonal
 $$
 U_{mn} = \exp\left(-\frac{i}{\hbar}t H_{mn}\right) =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ee7078ac-7dc5-423a-a7c8-85f0833a0ade">
-<span class="eqno">(2.7)<a class="headerlink" href="#equation-ee7078ac-7dc5-423a-a7c8-85f0833a0ade" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-\frac{i}{\hbar}t E_0} &amp;  &amp; &amp; \\  &amp; e^{-\frac{i}{\hbar} t E_1}  &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a36f9d03-67ea-486a-bdf2-0f28ce1ebcfd">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-a36f9d03-67ea-486a-bdf2-0f28ce1ebcfd" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-\frac{i}{\hbar}t E_0} &amp;  &amp; &amp; \\  &amp; e^{-\frac{i}{\hbar} t E_1}  &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix}\]</div>
 <p>$$</p>
 <p><strong>En conclusión</strong></p>
 <ul class="simple">

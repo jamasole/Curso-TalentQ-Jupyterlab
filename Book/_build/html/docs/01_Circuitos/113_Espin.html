@@ -200,30 +200,16 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../00_Formalismo/01_formalismo_matematico.html">1. Formalismo Matemático</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Numeros_Complejos.html">1.1. Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Vectores.html">1.2. license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
-subject: Curso
-venue: Quantum Spain
-math:<br/>
-‘\i’: ‘{\color{blue}{i}}’
-‘\bes’: ‘\begin{equation*}’
-‘\ees’: ‘\end{equation*}’
-‘\O’: ‘{\mathcal O}’
-‘\Lin’: ‘\hbox{Lin}’
-‘\Hil’: ‘{\mathcal H}’
-‘\bra[1]’: ‘{\langle #1|}’
-‘\ket[1]’: ‘{|#1\rangle}’
-‘\braket[2]’: ‘{\langle #1|#2\rangle}’
-‘\R’: ‘{\mathbb R}’
-‘\C’: ‘{\mathbb C}’
-‘\V’: ‘{V}’
-abbreviations:
-MyST: Markedly Structured Text
-TLA: Three Letter Acronym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Vectores.html">1.2. Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Operadores.html">1.3. Operadores y Matrices</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Operadores.html">1.4. Operadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Tensores.html">1.5. Tensores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Probabilidades.html">1.6. 1.5 Probabilidades</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Tensores.html">1.10. Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/01_Probabilidades.html">1.11. 1.5 Probabilidades</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC_intro.html">2. Fundamentos de Mecánica Cuántica</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -931,8 +917,8 @@ U_{\boldsymbol{\omega}}(t,0) = \exp\left( -\frac{i}{\hbar} t H\right) = \exp\lef
 <img src="images/precession_tilted2.png" width="300"/>
 </div>
 <p>El resultado general es el siguiente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26ae1bb7-ebb3-4d3a-b220-5418657d364a">
-<span class="eqno">()<a class="headerlink" href="#equation-26ae1bb7-ebb3-4d3a-b220-5418657d364a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-a6625d80-602b-4572-8e82-675629dfe74a">
+<span class="eqno">()<a class="headerlink" href="#equation-a6625d80-602b-4572-8e82-675629dfe74a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U_{\boldsymbol{\omega}}(t,0) ~&amp;=&amp;~ \cos\left(\frac{t\omega}{2}\right) I + i \sin\left(\frac{t\omega}{2}\right) \, \frac{\boldsymbol{\omega}}{\omega}\cdot \boldsymbol{\sigma} \\
 &amp;&amp;\\
 &amp;=&amp; 
@@ -953,8 +939,8 @@ será</p>
 \end{split}\]</div>
 <p>La probabilidad de medir el estado <span class="math notranslate nohighlight">\(\ket{0}\)</span> o el estado <span class="math notranslate nohighlight">\(\ket{1}\)</span> en ese instante será
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-67704747-c2d3-4646-b184-9194cf39bc4b">
-<span class="eqno">()<a class="headerlink" href="#equation-67704747-c2d3-4646-b184-9194cf39bc4b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-5d00da93-8a04-497e-9e9b-24fe2639d9ec">
+<span class="eqno">()<a class="headerlink" href="#equation-5d00da93-8a04-497e-9e9b-24fe2639d9ec" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p_0(t) &amp;=&amp; |\braket{0}{\psi(t)}|^2 =  \cos^2 \frac{t\omega}{2} + \frac{\omega_z^2}{\omega^2} \sin^2 \frac{t\omega}{2} \\ \rule{0mm}{8mm}
 p_1(t) &amp;=&amp;|\braket{1}{\psi(t)}|^2 =  \frac{\omega_x^2 + \omega_y^2}{\omega^2} \sin^2\frac{t\omega}{2}
 \end{eqnarray}\]</div>
@@ -1015,8 +1001,8 @@ U_z(t,0) = \begin{bmatrix} e^{it \omega/2} &amp; 0 \\ 0 &amp;e^{-it \omega/2}  \
 $$
 U_x(t,0) =</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-2d6e91ed-416e-444d-b0c0-0db98a953720">
-<span class="eqno">()<a class="headerlink" href="#equation-2d6e91ed-416e-444d-b0c0-0db98a953720" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-c9bc68ea-7928-4c91-abe1-f78ed3f1f5c3">
+<span class="eqno">()<a class="headerlink" href="#equation-c9bc68ea-7928-4c91-abe1-f78ed3f1f5c3" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
  \cos \displaystyle\frac{t\omega}{2}  &amp;  i \sin\displaystyle\frac{t\omega}{2}  \\
  \rule{0mm}{8mm}
  i \sin\displaystyle\frac{t\omega}{2}  &amp; \cos\displaystyle\frac{t\omega}{2} 
@@ -1027,8 +1013,8 @@ U_x(t,0) =</p></li>
 &lt;br&gt;
 \end{aligned}\end{align} \]</div>
 <p>U_y(t,0) =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5c653e0f-5af3-46eb-acab-c9451962d9e6">
-<span class="eqno">()<a class="headerlink" href="#equation-5c653e0f-5af3-46eb-acab-c9451962d9e6" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-38d47a5e-7803-49c7-bdcd-75381dc03c8b">
+<span class="eqno">()<a class="headerlink" href="#equation-38d47a5e-7803-49c7-bdcd-75381dc03c8b" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
  \cos \displaystyle\frac{t\omega}{2}  &amp;   \sin\displaystyle\frac{t\omega}{2}  \\
  \rule{0mm}{8mm}
   -\sin\displaystyle\frac{t\omega}{2}  &amp; \cos\displaystyle\frac{t\omega}{2} 
@@ -1045,8 +1031,8 @@ U_x(t,0) =</p></li>
 <p>Con él somos capaces de generar las puertas <span class="math notranslate nohighlight">\(X,Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span>, así como la puerta de Hadamard.
 <br>
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-be8f92e6-cc08-40d2-8d76-42a15c44a73d">
-<span class="eqno">()<a class="headerlink" href="#equation-be8f92e6-cc08-40d2-8d76-42a15c44a73d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-12202bb3-a3b0-4ecc-9ade-21560716a1a6">
+<span class="eqno">()<a class="headerlink" href="#equation-12202bb3-a3b0-4ecc-9ade-21560716a1a6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 i \,U_{\hat{\bf z}}( \Delta t ,0) &amp;=&amp;  \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1  \end{bmatrix} =  Z  
 \nonumber\\ 
 &amp;&amp; \\
