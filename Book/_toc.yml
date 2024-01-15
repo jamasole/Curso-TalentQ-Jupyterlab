@@ -9,16 +9,16 @@ parts:
 
   - file: docs/00_Formalismo/01_formalismo_matematico.md
     sections:
-    - file: docs/00_Formalismo/01_Numeros_Complejos.ipynb
-    - file: docs/00_Formalismo/01_Vectores.ipynb
-    - file: docs/00_Formalismo/01_Operadores_01.ipynb
-    - file: docs/00_Formalismo/01_Operadores_02.ipynb
-    - file: docs/00_Formalismo/01_Tensores.ipynb
-    - file: docs/00_Formalismo/01_Probabilidades.ipynb
+    - file: docs/00_Formalismo/01_Numeros_Complejos.md
+    - file: docs/00_Formalismo/01_Vectores.md
+    - file: docs/00_Formalismo/01_Operadores_01.md
+    - file: docs/00_Formalismo/01_Operadores_02.md
+    - file: docs/00_Formalismo/01_Tensores.md
+    - file: docs/00_Formalismo/01_Probabilidades.md
 
   - file: docs/00_Formalismo/02_Fundamentos_MC_intro.md
     sections:
-    - file: docs/00_Formalismo/02_Fundamentos_MC.ipynb
+    - file: docs/00_Formalismo/02_Fundamentos_MC.md
 
 - caption: Circuitos Cuánticos
 #  numbered: True
