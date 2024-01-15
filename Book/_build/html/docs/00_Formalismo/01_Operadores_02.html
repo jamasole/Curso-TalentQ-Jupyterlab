@@ -630,8 +630,8 @@ Demostración<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-0d70fb42-26a9-43a4-ab4a-77636c0245d2">
-<span class="eqno">(19)<a class="headerlink" href="#equation-0d70fb42-26a9-43a4-ab4a-77636c0245d2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-fe5198ae-3d2a-456e-a5e2-c1d5e6309aa6">
+<span class="eqno">(19)<a class="headerlink" href="#equation-fe5198ae-3d2a-456e-a5e2-c1d5e6309aa6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 (A_{diag})_{ij} &amp;\equiv&amp; \bra{\lambda_i}A\ket{\lambda_j} \\
 &amp;=&amp; \big(\sum_k\bra{e_k}U_{ki}^*\big)  A \sum_l\big( U_{lj}\ket{e_l}) \\
 &amp;=&amp; \sum_{k,l} U_{ki}^* \bra{e_k} A\ket{e_l}    U_{lj}\\
@@ -722,8 +722,8 @@ A\ket{\lambda^a} = \lambda \ket{\lambda^a}
 </div>
 </div>
 <p>Sea <span class="math notranslate nohighlight">\(\ket{u} = \sum_{a=1}^{d} c_a\ket{\lambda^a} \)</span> una combinación de dichos vectores propios, entonces</p>
-<div class="amsmath math notranslate nohighlight" id="equation-13ef516f-8a8b-4f34-81b5-2a1607c8af35">
-<span class="eqno">(20)<a class="headerlink" href="#equation-13ef516f-8a8b-4f34-81b5-2a1607c8af35" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-a1fcc487-6980-4dec-9270-d0b23d0fe26a">
+<span class="eqno">(20)<a class="headerlink" href="#equation-a1fcc487-6980-4dec-9270-d0b23d0fe26a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 A \ket{u} 
 =  \sum_{a=1}^{d} c_a A\ket{\lambda^a}  =  \sum_{a=1}^{d} c_a \lambda\ket{\lambda^a}  =   \lambda \sum_{a=1}^{d} c_a \ket{\lambda^a}  =\lambda\ket{u}
 \end{eqnarray}\]</div>
@@ -744,8 +744,8 @@ P = \sum_{a=1}^{d} \ketbra{\lambda^a}{\lambda^a}
 <p class="admonition-title">Ejemplo</p>
 <p>Llamemos <span class="math notranslate nohighlight">\(R_z(\theta)\)</span> el operador que efectúa una rotación  en el plano  <span class="math notranslate nohighlight">\((x,y)\)</span> de ángulo <span class="math notranslate nohighlight">\(\theta\)</span>. Cuando <span class="math notranslate nohighlight">\(\theta = \pi\)</span> encontramos las siguiente acción sobre los tres elementos <span class="math notranslate nohighlight">\(\{\hat{\bf x},\hat{\bf y},\hat{\bf z}\}\)</span>
 de la base cartesiana</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a93f4279-1bf2-4f40-ac4b-0faa81185ded">
-<span class="eqno">(21)<a class="headerlink" href="#equation-a93f4279-1bf2-4f40-ac4b-0faa81185ded" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-aeb05f5c-2221-4353-b428-f3148b91cc86">
+<span class="eqno">(21)<a class="headerlink" href="#equation-aeb05f5c-2221-4353-b428-f3148b91cc86" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_z(\pi)\hat{\bf x} &amp;=&amp;-\hat{\bf x}  \\ \rule{0mm}{6mm}
 R_z(\pi)\hat{\bf y} &amp;=&amp; -\hat{\bf y}  \\ \rule{0mm}{6mm}
 R_z(\pi)\hat{\bf z} &amp;=&amp; + \hat{\bf z}  
@@ -919,8 +919,8 @@ P_0 + P_1=
 \[\begin{split}
 A_{ij} = \bra{\lambda^a_i} A\ket{\lambda^b_j} =  \lambda_k \delta_{kj} \delta_{ab} =\begin{bmatrix} \lambda_1 &amp;  &amp;  &amp;  &amp;  \\ &amp; \ddots &amp; &amp; &amp; \\ &amp; &amp; \lambda_2 &amp; &amp;  \\&amp;  &amp; &amp; \ddots &amp; \\  &amp; &amp; &amp; &amp;  \lambda_N \end{bmatrix}
 \end{split}\]</div>
-<br>
-donde $\lambda_k$ aparecerá $d_k$ veces repetido.<div class="note admonition">
+<p>donde <span class="math notranslate nohighlight">\(\lambda_k\)</span> aparecerá <span class="math notranslate nohighlight">\(d_k\)</span> veces repetido.</p>
+<div class="note admonition">
 <p class="admonition-title">Nota</p>
 <p>El operador identidad tiene a cualquier vector por autovector <span class="math notranslate nohighlight">\( I\ket{v} = \ket{v}\)</span>, con autovalores <span class="math notranslate nohighlight">\(\lambda_ i = 1\)</span>. Por tanto, en <b>cualquier base</b>, la matriz asociada a <span class="math notranslate nohighlight">\(I\)</span> tiene la forma diagonal</p>
 <div class="math notranslate nohighlight">
@@ -937,7 +937,7 @@ I ~=~ \sum_{i=1}^N \ketbra{\lambda_i}{\lambda_i} ~=~ \sum_{i=1}^N \ketbra{e_i}{e
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio <em>(explícaselo a tu ordenador)</em></p>
-<p>Escribe una función en python, <span class="math notranslate nohighlight">\(spectral\_decomp\)</span>, que verifique si un operador <span class="math notranslate nohighlight">\(A\)</span> es normal y, en caso afirmativo, devuelva las dos listas <span class="math notranslate nohighlight">\(\lambda_i\)</span> y <span class="math notranslate nohighlight">\(P_i\)</span> asociadas a la decomposición espectral  <span class="math notranslate nohighlight">\(A = \sum_i \lambda_i P_i\)</span>.</p>
+<p>Escribe una función en python, <code class="docutils literal notranslate"><span class="pre">spectral_decomp</span></code>, que verifique si un operador <span class="math notranslate nohighlight">\(A\)</span> es normal y, en caso afirmativo, devuelva las dos listas <span class="math notranslate nohighlight">\(\lambda_i\)</span> y <span class="math notranslate nohighlight">\(P_i\)</span> asociadas a la decomposición espectral  <span class="math notranslate nohighlight">\(A = \sum_i \lambda_i P_i\)</span>.</p>
 </div>
 </section>
 <section id="espectro-de-operadores-hermiticos-unitarios-y-proyectores">
@@ -970,7 +970,7 @@ Demostración<div class="sd-summary-down docutils">
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Ejericio <em>(explícaselo a tu ordenador)</em></p>
-<p>Escribe una función en python, <span class="math notranslate nohighlight">\(random\_hermitian\)</span>, que reciba un número entero <span class="math notranslate nohighlight">\(d\)</span> y genere una matriz hermítica de esa dimensión. <br><br />
+<p>Escribe una función en python, <code class="docutils literal notranslate"><span class="pre">random_hermitian</span></code>, que reciba un número entero <span class="math notranslate nohighlight">\(d\)</span> y genere una matriz hermítica de esa dimensión. <br><br />
 Comprueba en distintos casos que el espectro es real.</p>
 </div>
 <ul class="simple">
@@ -1332,8 +1332,8 @@ Demostración<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-c55aad7a-820b-4a4c-b888-b7767ffa4949">
-<span class="eqno">(22)<a class="headerlink" href="#equation-c55aad7a-820b-4a4c-b888-b7767ffa4949" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} Sean $\{\ket{i}\}$ y $\{\ket{\tilde i}\}$ dos bases cualesquiera. Entonces
+<div class="amsmath math notranslate nohighlight" id="equation-63931818-8914-4b89-be7d-4b07057a6e5c">
+<span class="eqno">(22)<a class="headerlink" href="#equation-63931818-8914-4b89-be7d-4b07057a6e5c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} Sean $\{\ket{i}\}$ y $\{\ket{\tilde i}\}$ dos bases cualesquiera. Entonces
 {\rm tr} A  &amp;=&amp;\sum_i A_{ii} =\sum_{i} \bra{i}A\ket{i} =\sum_{i} \bra{i}A\left( \sum_j\ketbra{\tilde j}{\tilde j}\right)\ket{i}
 \nonumber\\
 &amp;=&amp; \sum_{ij}\bra{i}A\ket{\tilde j} \braket{\tilde j}{i} = \sum_{ij}\braket{\tilde j}{i}\bra{i}A\ket{\tilde j}  \nonumber\\
@@ -1379,8 +1379,8 @@ Prueba<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-e70ecc5c-9718-4736-bc19-e079f61c2a34">
-<span class="eqno">(23)<a class="headerlink" href="#equation-e70ecc5c-9718-4736-bc19-e079f61c2a34" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-1bc6ca29-ca6d-48dc-a3da-35d54fb2ce67">
+<span class="eqno">(23)<a class="headerlink" href="#equation-1bc6ca29-ca6d-48dc-a3da-35d54fb2ce67" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
     {\rm tr}(ABC)&amp;=&amp;\sum_i (ABC)_{ii} =  \sum_{ijk} A_{ij}B_{jk}C_{ki}\\
     &amp;=&amp; \sum_{ijk} B_{jk}C_{ki}A_{ij} = \sum_j (BCA)_{jj}\\
     &amp;=&amp;  {\rm tr}(BCA)
@@ -1480,7 +1480,7 @@ $<span class="math notranslate nohighlight">\(
 \]</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio (explícaselo a tu ordenador)</p>
-<p>Escribe una función en python, <span class="math notranslate nohighlight">\(trace\_norm(A_{ij})\)</span>, que calcule la norma de la traza de un operador <span class="math notranslate nohighlight">\(A\)</span> dado por una matriz <span class="math notranslate nohighlight">\(A_{ij}\)</span>.</p>
+<p>Escribe una función en python, <code class="docutils literal notranslate"><span class="pre">trace_norm(A_{ij})</span></code>, que calcule la norma de la traza de un operador <span class="math notranslate nohighlight">\(A\)</span> dado por una matriz <span class="math notranslate nohighlight">\(A_{ij}\)</span>.</p>
 </div>
 </section>
 <section id="distancia-de-traza">
@@ -1632,8 +1632,8 @@ Detalles<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-2719ec08-3b6f-4233-bea9-f91b47b4907c">
-<span class="eqno">(24)<a class="headerlink" href="#equation-2719ec08-3b6f-4233-bea9-f91b47b4907c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-6a7af77b-33f1-477f-bace-e5acc530a3a8">
+<span class="eqno">(24)<a class="headerlink" href="#equation-6a7af77b-33f1-477f-bace-e5acc530a3a8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U^\dagger &amp;=&amp; \left( e^{iH}\right)^\dagger = \left( 1+ iH + \frac{1}{2}(i H)^2 + ...\right)^\dagger \\
 &amp;=&amp; 1 - iH^\dagger  + \frac{1}{2}(-i)^2 (H^2)^\dagger + ... \\
 &amp;=&amp; 1 - iH +\frac{1}{2} H^2 - ... \\
@@ -1675,8 +1675,8 @@ f(A) = e^{1/A} = \sum_i e^{1/\lambda_i} \ket{\lambda_i}\bra{\lambda_i}
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Ejemplo</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f657232e-53c0-4289-bb51-8f5c91f68804">
-<span class="eqno">(25)<a class="headerlink" href="#equation-f657232e-53c0-4289-bb51-8f5c91f68804" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-dc00735d-4cb5-484b-976e-71475ddb8d38">
+<span class="eqno">(25)<a class="headerlink" href="#equation-dc00735d-4cb5-484b-976e-71475ddb8d38" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 f(A) = {\rm tr}(A \log A) &amp;=&amp; {\rm tr}\left[\left(\sum_j \lambda_j \ket{\lambda_j}\bra{\lambda_j}\right)\left(\sum_k\log \lambda_k \ket{\lambda_k}\bra{\lambda_k}\right)\right] ~=~  {\rm tr}\left[\sum_k \lambda_k \log\lambda_k \ket{\lambda_k}\bra{\lambda_k} \right] \\ \rule{0mm}{20mm}
 &amp;=&amp; {\rm tr} \begin{bmatrix} \lambda_1 \log \lambda_1&amp; &amp;  &amp; \\ &amp;\lambda_2 \log \lambda_2 &amp; &amp;  \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \log \lambda_n
 \end{bmatrix}
@@ -1719,8 +1719,8 @@ f(A) = {\rm tr}(A \log A) &amp;=&amp; {\rm tr}\left[\left(\sum_j \lambda_j \ket{
 <ul class="simple">
 <li><p>si multiplicamos dos matrices de Pauli <strong>diferentes</strong></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-da39b98f-a70c-4eed-9bb8-c30229c72410">
-<span class="eqno">(26)<a class="headerlink" href="#equation-da39b98f-a70c-4eed-9bb8-c30229c72410" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-cca6967f-712e-4ffd-838e-babb69f73660">
+<span class="eqno">(26)<a class="headerlink" href="#equation-cca6967f-712e-4ffd-838e-babb69f73660" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \sigma_1\sigma_2 &amp;=&amp;  - \sigma_2\sigma_1 = i \sigma_3   \\
 \sigma_2\sigma_3 &amp;=&amp;  -\sigma_3\sigma_2  = -i \sigma_1  \\
 \sigma_3\sigma_1 &amp;=&amp; -\sigma_2\sigma_3 = -i \sigma_2   \\
@@ -1787,8 +1787,8 @@ en el sentido del producto escalar definido sobre <span class="math notranslate 
 <p>Las matrices hermíticas de dimensión 2<span class="math notranslate nohighlight">\(\times\)</span>2 tienen cuatro grados de libertad reales.</p>
 <p>Si añadimos la matriz identidad <span class="math notranslate nohighlight">\(~I = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}~
 \)</span>  el conjunto <span class="math notranslate nohighlight">\(\{I,\sigma_x,\sigma_y,\sigma_z\}\)</span> forma una <em>base</em> para el espacio de <em>matrices hermíticas</em> <span class="math notranslate nohighlight">\(2\times 2\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1310830e-3838-448e-9f6c-2f7030da749b">
-<span class="eqno">(27)<a class="headerlink" href="#equation-1310830e-3838-448e-9f6c-2f7030da749b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-d7240d4e-8d98-430d-be10-82f5d9be037b">
+<span class="eqno">(27)<a class="headerlink" href="#equation-d7240d4e-8d98-430d-be10-82f5d9be037b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 A &amp;=&amp; a_0 I + {\bf a} \cdot \boldsymbol{\sigma} \\  \rule{0mm}{10mm} &amp;=&amp;  a_0 I + a_1 \sigma_1 + a_2 \sigma_2 + a_3 \sigma_3 \\ \rule{0mm}{10mm}&amp;=&amp; 
 \begin{bmatrix}
 a_0 + a_3 &amp; a_1 - i a_2 \\ a_1 + i a_2 &amp; a_0 - a_3

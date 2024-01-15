@@ -650,8 +650,8 @@ math:<br />
 <br></p></li>
 <li><p>La existencia de un <strong>elemento opuesto</strong> y de un elemento neutro son dos propiedades importantes en un espacio vectorial</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-b886c353-19b4-43e4-ba7e-6a51cfb01f13">
-<span class="eqno">(4)<a class="headerlink" href="#equation-b886c353-19b4-43e4-ba7e-6a51cfb01f13" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-527c4166-6683-4f09-b610-ff63d84d9f39">
+<span class="eqno">(4)<a class="headerlink" href="#equation-527c4166-6683-4f09-b610-ff63d84d9f39" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{v} + 0 &amp;=&amp; \ket{v} \nonumber\\
 \ket{v} + \ket{\hbox{-}v} &amp;=&amp; \ket{v}-\ket{v} = 0 \nonumber\\
 \end{eqnarray}\]</div>
@@ -791,8 +791,8 @@ $<span class="math notranslate nohighlight">\(~~\ket{v}  = \sum_{i} \color{blue}
 C_{ij} = \begin{pmatrix} 1 &amp; 1 \\ i &amp; -i \end{pmatrix} =  \begin{pmatrix} C_{11} &amp; C_{12} \\ C_{21} &amp; C_{22} \end{pmatrix}\, ,
 \end{split}\]</div>
 <p>Entonces la expresión <span class="math notranslate nohighlight">\(\ket{\tilde e_j} = \sum_{i=1}^N C_{ i j} \ket{e_i}\)</span> en este caso relaciona las dos bases en la forma siguiente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2fb11ac4-c57c-468d-8341-26a4a29e769e">
-<span class="eqno">(5)<a class="headerlink" href="#equation-2fb11ac4-c57c-468d-8341-26a4a29e769e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-7571698e-3408-47b3-8ebe-2f629b54246f">
+<span class="eqno">(5)<a class="headerlink" href="#equation-7571698e-3408-47b3-8ebe-2f629b54246f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\tilde e_1} &amp;=&amp; C_{11}\ket{e_1}  + C_{21}\ket{e_2}  =  \ket{e_1} + i\ket{e_2}\nonumber\\ \rule{0mm}{8mm}
 \ket{\tilde e_2} &amp;=&amp; C_{12}\ket{e_1}  + C_{22}\ket{e_2}=\ket{e_1} - i\ket{e_2} \nonumber
 \end{eqnarray}\]</div>
@@ -818,8 +818,8 @@ C_{ij} = \begin{pmatrix} 1 &amp; 1 \\ i &amp; -i \end{pmatrix} =  \begin{pmatrix
 \end{split}\]</div>
 </div>
 <p>Ahora podemos obtener el <em>diccionario</em> entre componentes <span class="math notranslate nohighlight">\(v_i\)</span> y <span class="math notranslate nohighlight">\(\tilde v_i\)</span>, a partir de la  matriz de cambio de base</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4cf99f5d-fbdd-43a2-b58e-f98088d37fb4">
-<span class="eqno">(6)<a class="headerlink" href="#equation-4cf99f5d-fbdd-43a2-b58e-f98088d37fb4" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-589532e6-18e2-425a-9879-a497013646f3">
+<span class="eqno">(6)<a class="headerlink" href="#equation-589532e6-18e2-425a-9879-a497013646f3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{v}  ~= ~ \sum_{i} v_i \ket{e_i} &amp;~=~ \sum_j \tilde v_j \ket{\tilde e_j} \nonumber\\
 &amp;~=~  \sum_j \tilde v_j \left( \sum_{i} C_{ij} \ket{e_i}\right) \nonumber \\
 &amp;~=~  \sum_{j}\sum_{i} \tilde v_j   C_{ij} \ket{e_i} \nonumber \\
@@ -1008,7 +1008,7 @@ a \equiv \braket{u}{v}
 <p>que no es ni siguiera un número complejo.</p>
 </section>
 <section id="norma">
-<h3>Norma<a class="headerlink" href="#norma" title="Permalink to this heading">#</a></h3>
+<span id="norm"></span><h3>Norma<a class="headerlink" href="#norma" title="Permalink to this heading">#</a></h3>
 <p>Una <strong>norma</strong> es un una función real <span class="math notranslate nohighlight">\(\|\cdot\| : \Lin(\Hil) \to {\mathbb R}\)</span> con las siguientes propiedades</p>
 <ul class="simple">
 <li><p>ser definida positiva <span class="math notranslate nohighlight">\(\|A\|\geq 0\)</span> con <span class="math notranslate nohighlight">\(\| A\| = 0 \Leftrightarrow A= 0\)</span>
@@ -1095,8 +1095,8 @@ Solución<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-7be75b29-c56f-4c55-bbef-3bdd9aa17d71">
-<span class="eqno">(7)<a class="headerlink" href="#equation-7be75b29-c56f-4c55-bbef-3bdd9aa17d71" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-b9921dac-a0a8-4e34-a757-c0bad0a76db1">
+<span class="eqno">(7)<a class="headerlink" href="#equation-b9921dac-a0a8-4e34-a757-c0bad0a76db1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \braket{e_k}{v} &amp;=&amp;  \bra{e_k}\left(\sum_{j=1}^N v_j\ket{e_j}\right) \nonumber\\
                 &amp;=&amp;  \sum_{j=1}^N  v_j\braket{e_k}{e_j}  \nonumber\\
                 &amp;=&amp;  \sum_{j=1}^N  v_j\delta_{kj} = v_k
@@ -1105,8 +1105,8 @@ Solución<div class="sd-summary-down docutils">
 </details></div>
 <p>En una base
 ortonormal, calcular el valor de un <em>producto escalar</em> <span class="math notranslate nohighlight">\(a=\braket{u}{v}\)</span> es muy simple</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f326f439-e075-46cc-8793-fb04c3307f0a">
-<span class="eqno">(8)<a class="headerlink" href="#equation-f326f439-e075-46cc-8793-fb04c3307f0a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-24de8380-9cd2-4b65-8a3e-929db00697ee">
+<span class="eqno">(8)<a class="headerlink" href="#equation-24de8380-9cd2-4b65-8a3e-929db00697ee" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 a = 
 \braket{u}{v}&amp;=&amp; \left(\sum_{i}u_i^*\bra{e_i}\right)\left(\sum_{j}v_j\ket{e_j} \right) = 
 \sum_{ij} u_i^* v_j  \braket{e_i}{e_j}
