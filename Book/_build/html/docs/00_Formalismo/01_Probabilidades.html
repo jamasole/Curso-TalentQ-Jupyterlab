@@ -689,8 +689,8 @@ f_N(x_i) = \frac{n(x_i)}{N}~~~\stackrel{N\to\infty}{\longrightarrow}~~~{p(x_i)}
 \]</div>
 <p>Experimentalmente sólo tenemos acceso a las frecuencias relativas <span class="math notranslate nohighlight">\(f_N(x_i)\)</span> para un <span class="math notranslate nohighlight">\(N\)</span> grande aunque finito.</p>
 <p>Igualmente, nuestro conocimiento de la  media <span class="math notranslate nohighlight">\(\overline X\)</span>  y la varianza <span class="math notranslate nohighlight">\(\sigma_X^2\)</span> siempre es aproximado, y se realiza a través de las medias y varianzas muestrales</p>
-<div class="amsmath math notranslate nohighlight" id="equation-55ea02ac-c3ce-47d5-ab02-d2dcf8ba970f">
-<span class="eqno">(34)<a class="headerlink" href="#equation-55ea02ac-c3ce-47d5-ab02-d2dcf8ba970f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-22374693-3662-4e41-9e59-643c6d2d256a">
+<span class="eqno">(34)<a class="headerlink" href="#equation-22374693-3662-4e41-9e59-643c6d2d256a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{A}_N = \sum_i x_i f_N(x_i)~~~&amp;\stackrel{N\to\infty}{\longrightarrow}&amp;~~~ \overline{X}\\
 \sigma_{A_N}^2 = \sum_{i} (x_i - \overline{A}_N)^2 f_N(x_i) ~~~&amp;\stackrel{N\to\infty}{\longrightarrow}&amp;~~~ \sigma_X^2
 \end{eqnarray}\]</div>
@@ -706,8 +706,8 @@ f_N(x_i) = \frac{n(x_i)}{N}~~~\stackrel{N\to\infty}{\longrightarrow}~~~{p(x_i)}
 <li><p><em>fracaso</em> <span class="math notranslate nohighlight">\(\to x=0\)</span> con probabilidad <span class="math notranslate nohighlight">\(p(0) = 1-p\)</span></p></li>
 </ul>
 <p>Podemos calcular fácilmente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-63902bb0-0ce4-4b08-bf5a-912927abedf5">
-<span class="eqno">(35)<a class="headerlink" href="#equation-63902bb0-0ce4-4b08-bf5a-912927abedf5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-5adc6754-df3e-4b84-b68f-c58ebd4d2a6b">
+<span class="eqno">(35)<a class="headerlink" href="#equation-5adc6754-df3e-4b84-b68f-c58ebd4d2a6b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp; \sum_i x_i p_i =1 \cdot p + 0\cdot (1-p) = p\\
 \sigma^2 &amp;=&amp; \sum_i (x-\overline X )^2p_i = (1-p)^2 p +(0-p)^2(1-p) = p(1-p)
 \end{eqnarray}\]</div>
@@ -727,8 +727,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 \end{split}\]</div>
 <p>donde el primer factor tiene en cuenta las posibles ordenaciones en que aparecen <span class="math notranslate nohighlight">\(x\)</span> éxitos en <span class="math notranslate nohighlight">\(n\)</span> intentos.</p>
 <p>Un cálculo un poco más largo permite ver que, ahora</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a1f09387-b4c8-4b33-bab5-6d9435e48af7">
-<span class="eqno">(36)<a class="headerlink" href="#equation-a1f09387-b4c8-4b33-bab5-6d9435e48af7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-a54308c7-d503-4ba6-a5d1-2accaad889e3">
+<span class="eqno">(36)<a class="headerlink" href="#equation-a54308c7-d503-4ba6-a5d1-2accaad889e3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp;  np\\ \rule{0mm}{7mm}
 \sigma^2 &amp;=&amp; n p(1-p)
 \end{eqnarray}\]</div>
@@ -742,8 +742,8 @@ $<span class="math notranslate nohighlight">\(
 p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\right)
 \)</span>$</p>
 <p>Nos encontramos ante una variable aleatoria con un espacio muestral continuo <span class="math notranslate nohighlight">\(x\in (-\infty,+\infty)\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-88d13fbf-d60f-474a-b3c0-9701b8e483d7">
-<span class="eqno">(37)<a class="headerlink" href="#equation-88d13fbf-d60f-474a-b3c0-9701b8e483d7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-c7849ab8-0c00-4df5-9187-e9c0f4e22664">
+<span class="eqno">(37)<a class="headerlink" href="#equation-c7849ab8-0c00-4df5-9187-e9c0f4e22664" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{X} &amp;=&amp; \int_{-\infty}^{+\infty} xp(x) dx = \mu \\
 \overline{(x-\overline X)^2} &amp;=&amp; \int_{-\infty}^{+\infty} (x-\mu)^2 p(x)dx =\sigma^2
 \end{eqnarray}\]</div>
