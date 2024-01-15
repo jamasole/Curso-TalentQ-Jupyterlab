@@ -545,7 +545,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <figure class="align-center">
+  <p><span class="math notranslate nohighlight">\(\newcommand{\V}{{\cal V}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\C}{{\mathbb C}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\R}{{\mathbb R}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\tr}{{\rm tr}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\ketbra}[2]{{|#1\rangle\langle #2|}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\braket}[2]{{\langle #1|#2\rangle}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\ket}[1]{{|#1\rangle}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\braa}[1]{{\langle #1|}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\Hil}{{\mathcal H}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\Lin}{\rm L}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\O}{{\mathcal O}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\ees}{\end{equation*}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\bes}{\begin{equation*}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\i}{{\color{blue} i}}\)</span></p>
+<figure class="align-center">
 <img alt="../../_images/myThumbnail.png" src="../../_images/myThumbnail.png" />
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="tensores">
@@ -586,8 +600,8 @@ document.write(`
 <p>Como si se tratara de un producto ordinario, el producto tensorial satisface la <strong>propiedad distributiva</strong>
 <br>
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-644d15d5-3e26-4468-bac9-142065d9d08c">
-<span class="eqno">(28)<a class="headerlink" href="#equation-644d15d5-3e26-4468-bac9-142065d9d08c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-56b33e0d-a89f-427e-8fe2-0e6be8ca7beb">
+<span class="eqno">(28)<a class="headerlink" href="#equation-56b33e0d-a89f-427e-8fe2-0e6be8ca7beb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;= ~~
 \ket{u}\otimes\ket{y} ~+~ \ket{u}\otimes\ket{z} ~+~ \ket{v}\otimes\ket{y} ~+~~
  \ket{v}\otimes\ket{z} \\
@@ -647,8 +661,8 @@ $</p></li>
 <br>
 <br></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-567f8216-ce01-4f10-af45-2caf87ee7f7f">
-<span class="eqno">(29)<a class="headerlink" href="#equation-567f8216-ce01-4f10-af45-2caf87ee7f7f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-5ef93eb6-10cf-4f89-a9b5-201c6b2ecef0">
+<span class="eqno">(29)<a class="headerlink" href="#equation-5ef93eb6-10cf-4f89-a9b5-201c6b2ecef0" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\omega} &amp; ~= ~&amp; 
 w_{00}\ket{00} + w_{01}\ket{01} + ... + w_{10}\ket{10} + ...\ldots + w_{d_1 d_2}\ket{d_1 d_2} \nonumber\\
 \rule{0mm}{10mm}
@@ -832,8 +846,8 @@ s_1 &amp;\cdots  &amp;    &amp;  &amp; &amp; &amp;  0  \\  \vdots &amp; \ddots &
 <li><p>Los números <span class="math notranslate nohighlight">\(s_1,...,s_r &gt;0\)</span> son los autovalores de la matriz <span class="math notranslate nohighlight">\(w^\dagger w\)</span>  y se denominan <i>valores principales </i>  de la matriz <span class="math notranslate nohighlight">\(w_{ij}\)</span></p></li>
 </ul>
 <p>Esto quiere decir que podemos escribir</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8cdfe902-5926-4c9a-9e1e-074703e5cf4a">
-<span class="eqno">(30)<a class="headerlink" href="#equation-8cdfe902-5926-4c9a-9e1e-074703e5cf4a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-5742ceec-86d7-4881-8a29-4de7f323c386">
+<span class="eqno">(30)<a class="headerlink" href="#equation-5742ceec-86d7-4881-8a29-4de7f323c386" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{w} &amp;=&amp; \sum_{i=1}^{d_1}\sum_{a=1}^{d_2}\left( \sum_{j=1}^{d_1}\sum_{b=1}^{d_2} U_{ij}\Sigma_{jb}V_{ab}^* \right)\ket{e_{1,i}}\otimes \ket{e_{2,a}}
 \\  \rule{0mm}{10mm}
 &amp;=&amp; \sum_{j=1}^{d_1}\sum_{b=1}^{d_2}\Sigma_{jb}\left( \sum_{i=1}^{d_1} U_{ij}\ket{e_{1,i}} \right)\otimes  \left( \sum_{a=1}^{d_2} V_{ab}^* \ket{e_{2,a}}\right)
@@ -1094,8 +1108,8 @@ A_{i_1...i_n, \, j_1...j_n} = \bra{i_1...i_n}A\ket{j_1...j_n}  ~~~~~\leftrightar
 <ul class="simple">
 <li><p>Con la matriz, el operador se reconstruye en la base canónica de productos externos</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-663be1c9-1e38-45d3-b75d-f841136e6df1">
-<span class="eqno">(31)<a class="headerlink" href="#equation-663be1c9-1e38-45d3-b75d-f841136e6df1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-09370a4c-431b-494d-9138-0926d5490ea8">
+<span class="eqno">(31)<a class="headerlink" href="#equation-09370a4c-431b-494d-9138-0926d5490ea8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
  A &amp;~~=~&amp; 
  \sum_{i_1,...,i_n,\, j_1,...,j_n=0}^{d-1} A_{i_1...i_n, \, j_1...j_n} \ket{i_1...i_n}\bra{j_1...j_n}
  ~~~~=~~~~
@@ -1149,8 +1163,8 @@ A^\dagger = A^{(1)\dagger} \otimes ... \otimes A^{(n)\dagger}
 <h3>Producto de Kronecker de matrices<a class="headerlink" href="#producto-de-kronecker-de-matrices" title="Permalink to this heading">#</a></h3>
 <p>¿Cómo será la matriz <span class="math notranslate nohighlight">\(A_{i_1...i_n, \, j_1...j_n}\)</span> de un operador factorizable, <span class="math notranslate nohighlight">\( A = A^{(1)}\otimes A^{(2)} \otimes ...A^{(n)}\)</span>, en términos de las matrices  <span class="math notranslate nohighlight">\( A^{(a)}_{ij}\)</span> de sus factores?</p>
 <p>Vamos a tomar  <span class="math notranslate nohighlight">\(n=2\)</span> por simplicidad</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f0a3ff8c-9297-4d4a-b02c-ac68048ce44e">
-<span class="eqno">(32)<a class="headerlink" href="#equation-f0a3ff8c-9297-4d4a-b02c-ac68048ce44e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-0115ab54-eb4e-4ad4-b805-2d144ba05d26">
+<span class="eqno">(32)<a class="headerlink" href="#equation-0115ab54-eb4e-4ad4-b805-2d144ba05d26" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 A = A^{(1)}\otimes  A^{(2)} &amp;=&amp;\left( \sum_{i_1i_2}A^{(1)}_{i_1 j_1} \ket{i_1}\bra{j_1}\right)\left( \sum_{i_2j_2}A^{(2)}_{i_2 j_2} \ket{i_2}\bra{j_2}\right)\\
 &amp;=&amp; \sum_{i_1 i_2 , j_1 j_2} A^{(1)}_{i_1 j_1}A^{(2)}_{i_2 j_2}\ket{i_1 i_2}\bra{j_1j_2} \\
 &amp;=&amp; \sum_{i_1 i_2 , j_1 j_2} A_{i_1i_2,\, j_1j_2}\ket{i_1 i_2}\bra{j_1j_2}
@@ -1176,8 +1190,8 @@ A = A^{(1)}\otimes  A^{(2)} &amp;=&amp;\left( \sum_{i_1i_2}A^{(1)}_{i_1 j_1} \ke
 <br>
 <br></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-d666d382-17da-4817-9409-30dc988c1d36">
-<span class="eqno">(33)<a class="headerlink" href="#equation-d666d382-17da-4817-9409-30dc988c1d36" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-b33c41e4-d4fd-4fe6-8633-3ec8b0ba72e6">
+<span class="eqno">(33)<a class="headerlink" href="#equation-b33c41e4-d4fd-4fe6-8633-3ec8b0ba72e6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 (A\otimes B)(C\otimes D) &amp;=&amp; (AC)\otimes (BD) \nonumber\\ \rule{0mm}{6mm}
 \tr(A\otimes B) &amp;=&amp; (\tr A)(\tr B) \nonumber\\ \rule{0mm}{6mm}
 A\otimes(B+D) &amp;=&amp; A\otimes B + A\otimes D \nonumber\\ \rule{0mm}{6mm}

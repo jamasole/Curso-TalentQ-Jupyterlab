@@ -42,6 +42,20 @@ math:
     '\C': '{\mathbb C}'
     '\V': '{V}'
 ---
+$\newcommand{\V}{{V}}$
+$\newcommand{\C}{{\mathbb C}}$
+$\newcommand{\R}{{\mathbb R}}$
+$\newcommand{\tr}{{\rm tr}}$
+$\newcommand{\ketbra}[2]{{| #1\rangle  \langle #2|}}$
+$\newcommand{\braket}[2]{{\langle #1|#2\rangle}}$
+$\newcommand{\ket}[1]{{|#1\rangle}}$
+$\newcommand{\bra}[1]{{\langle #1|}}$
+$\newcommand{\Hil}{{\mathcal H}}$
+$\newcommand{\Lin}{\rm L}$
+$\newcommand{\O}{{\mathcal O}}$
+$\newcommand{\ees}{\end{equation*}}$
+$\newcommand{\bes}{\begin{equation*}}$
+$\newcommand{\i}{{i}}$
 
 +++
 

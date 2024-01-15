@@ -544,7 +544,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <figure class="align-center">
+  <p><span class="math notranslate nohighlight">\(\newcommand{\V}{{V}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\C}{{\mathbb C}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\R}{{\mathbb R}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\tr}{{\rm tr}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\ketbra}[2]{{|#1\rangle\langle #2|}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\braket}[2]{{\langle #1|#2\rangle}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\ket}[1]{{|#1\rangle}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\braa}[1]{{\langle #1|}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\Hil}{{\mathcal H}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\Lin}{\rm L}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\O}{{\mathcal O}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\ees}{\end{equation*}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\bes}{\begin{equation*}}\)</span>
+<span class="math notranslate nohighlight">\(\newcommand{\i}{{i}}\)</span></p>
+<figure class="align-center">
 <img alt="../../_images/myThumbnail.png" src="../../_images/myThumbnail.png" />
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="operadores-ii">
@@ -619,8 +633,8 @@ Demostración<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-d89dd5e2-f253-4c9c-904f-6f9b9e5054c5">
-<span class="eqno">(19)<a class="headerlink" href="#equation-d89dd5e2-f253-4c9c-904f-6f9b9e5054c5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-dd9035c1-4fa1-4a21-8672-f97dcf03e37d">
+<span class="eqno">(19)<a class="headerlink" href="#equation-dd9035c1-4fa1-4a21-8672-f97dcf03e37d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 (A_{diag})_{ij} &amp;\equiv&amp; \bra{\lambda_i}A\ket{\lambda_j} \\
 &amp;=&amp; \big(\sum_k\bra{e_k}U_{ki}^*\big)  A \sum_l\big( U_{lj}\ket{e_l}) \\
 &amp;=&amp; \sum_{k,l} U_{ki}^* \bra{e_k} A\ket{e_l}    U_{lj}\\
@@ -716,8 +730,8 @@ A\ket{\lambda^a} = \lambda \ket{\lambda^a}
 </div>
 </div>
 <p>Sea <span class="math notranslate nohighlight">\(\ket{u} = \sum_{a=1}^{d} c_a\ket{\lambda^a} \)</span> una combinación de dichos vectores propios, entonces</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2bba18c5-a6d2-4186-bc97-6a6bb62ac87e">
-<span class="eqno">(20)<a class="headerlink" href="#equation-2bba18c5-a6d2-4186-bc97-6a6bb62ac87e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-1220869b-06f7-4019-8674-3ea160ceff7a">
+<span class="eqno">(20)<a class="headerlink" href="#equation-1220869b-06f7-4019-8674-3ea160ceff7a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 A \ket{u} 
 =  \sum_{a=1}^{d} c_a A\ket{\lambda^a}  =  \sum_{a=1}^{d} c_a \lambda\ket{\lambda^a}  =   \lambda \sum_{a=1}^{d} c_a \ket{\lambda^a}  =\lambda\ket{u}
 \end{eqnarray}\]</div>
@@ -738,8 +752,8 @@ P = \sum_{a=1}^{d} \ketbra{\lambda^a}{\lambda^a}
 <p class="admonition-title">Ejemplo</p>
 <p>Llamemos <span class="math notranslate nohighlight">\(R_z(\theta)\)</span> el operador que efectúa una rotación  en el plano  <span class="math notranslate nohighlight">\((x,y)\)</span> de ángulo <span class="math notranslate nohighlight">\(\theta\)</span>. Cuando <span class="math notranslate nohighlight">\(\theta = \pi\)</span> encontramos las siguiente acción sobre los tres elementos <span class="math notranslate nohighlight">\(\{\hat{\bf x},\hat{\bf y},\hat{\bf z}\}\)</span>
 de la base cartesiana</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48f34c8c-b61b-4ab0-87fa-e8cc9ea8022a">
-<span class="eqno">(21)<a class="headerlink" href="#equation-48f34c8c-b61b-4ab0-87fa-e8cc9ea8022a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-1069235a-78a5-4755-b526-d938b5b0ddf3">
+<span class="eqno">(21)<a class="headerlink" href="#equation-1069235a-78a5-4755-b526-d938b5b0ddf3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_z(\pi)\hat{\bf x} &amp;=&amp;-\hat{\bf x}  \\ \rule{0mm}{6mm}
 R_z(\pi)\hat{\bf y} &amp;=&amp; -\hat{\bf y}  \\ \rule{0mm}{6mm}
 R_z(\pi)\hat{\bf z} &amp;=&amp; + \hat{\bf z}  
@@ -1301,8 +1315,8 @@ Demostración<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-c366a22d-ad91-4d9d-8025-3abd836f2ef7">
-<span class="eqno">(22)<a class="headerlink" href="#equation-c366a22d-ad91-4d9d-8025-3abd836f2ef7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} Sean $\{\ket{i}\}$ y $\{\ket{\tilde i}\}$ dos bases cualesquiera. Entonces
+<div class="amsmath math notranslate nohighlight" id="equation-760440f4-2e37-47b3-8674-d28c63f874ba">
+<span class="eqno">(22)<a class="headerlink" href="#equation-760440f4-2e37-47b3-8674-d28c63f874ba" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} Sean $\{\ket{i}\}$ y $\{\ket{\tilde i}\}$ dos bases cualesquiera. Entonces
 {\rm tr} A  &amp;=&amp;\sum_i A_{ii} =\sum_{i} \bra{i}A\ket{i} =\sum_{i} \bra{i}A\left( \sum_j\ketbra{\tilde j}{\tilde j}\right)\ket{i}
 \nonumber\\
 &amp;=&amp; \sum_{ij}\bra{i}A\ket{\tilde j} \braket{\tilde j}{i} = \sum_{ij}\braket{\tilde j}{i}\bra{i}A\ket{\tilde j}  \nonumber\\
@@ -1348,8 +1362,8 @@ Prueba<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-2a82b4ef-9ed9-4d39-8a1d-76f103911ff3">
-<span class="eqno">(23)<a class="headerlink" href="#equation-2a82b4ef-9ed9-4d39-8a1d-76f103911ff3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-38a107bc-be2a-46c5-b755-1d260e396f07">
+<span class="eqno">(23)<a class="headerlink" href="#equation-38a107bc-be2a-46c5-b755-1d260e396f07" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
     {\rm tr}(ABC)&amp;=&amp;\sum_i (ABC)_{ii} =  \sum_{ijk} A_{ij}B_{jk}C_{ki}\\
     &amp;=&amp; \sum_{ijk} B_{jk}C_{ki}A_{ij} = \sum_j (BCA)_{jj}\\
     &amp;=&amp;  {\rm tr}(BCA)
@@ -1601,8 +1615,8 @@ Detalles<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-7153222c-c8bc-434d-940a-c8ad04bba2b9">
-<span class="eqno">(24)<a class="headerlink" href="#equation-7153222c-c8bc-434d-940a-c8ad04bba2b9" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-705250c2-5861-4738-bef0-0dbc275c0300">
+<span class="eqno">(24)<a class="headerlink" href="#equation-705250c2-5861-4738-bef0-0dbc275c0300" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U^\dagger &amp;=&amp; \left( e^{iH}\right)^\dagger = \left( 1+ iH + \frac{1}{2}(i H)^2 + ...\right)^\dagger \\
 &amp;=&amp; 1 - iH^\dagger  + \frac{1}{2}(-i)^2 (H^2)^\dagger + ... \\
 &amp;=&amp; 1 - iH +\frac{1}{2} H^2 - ... \\
@@ -1644,8 +1658,8 @@ f(A) = e^{1/A} = \sum_i e^{1/\lambda_i} \ket{\lambda_i}\bra{\lambda_i}
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Ejemplo</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dcc2d082-8513-4d74-8c78-23b9dcfdc166">
-<span class="eqno">(25)<a class="headerlink" href="#equation-dcc2d082-8513-4d74-8c78-23b9dcfdc166" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-12102d7f-2925-4248-936c-18512b9590aa">
+<span class="eqno">(25)<a class="headerlink" href="#equation-12102d7f-2925-4248-936c-18512b9590aa" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 f(A) = {\rm tr}(A \log A) &amp;=&amp; {\rm tr}\left[\left(\sum_j \lambda_j \ket{\lambda_j}\bra{\lambda_j}\right)\left(\sum_k\log \lambda_k \ket{\lambda_k}\bra{\lambda_k}\right)\right] ~=~  {\rm tr}\left[\sum_k \lambda_k \log\lambda_k \ket{\lambda_k}\bra{\lambda_k} \right] \\ \rule{0mm}{20mm}
 &amp;=&amp; {\rm tr} \begin{bmatrix} \lambda_1 \log \lambda_1&amp; &amp;  &amp; \\ &amp;\lambda_2 \log \lambda_2 &amp; &amp;  \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \log \lambda_n
 \end{bmatrix}
@@ -1688,8 +1702,8 @@ f(A) = {\rm tr}(A \log A) &amp;=&amp; {\rm tr}\left[\left(\sum_j \lambda_j \ket{
 <ul class="simple">
 <li><p>si multiplicamos dos matrices de Pauli <strong>diferentes</strong></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-22518a19-3205-4d24-b6eb-3575f0110481">
-<span class="eqno">(26)<a class="headerlink" href="#equation-22518a19-3205-4d24-b6eb-3575f0110481" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-bfc505da-2c5c-49c8-a494-a1367cdc2dfa">
+<span class="eqno">(26)<a class="headerlink" href="#equation-bfc505da-2c5c-49c8-a494-a1367cdc2dfa" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \sigma_1\sigma_2 &amp;=&amp;  - \sigma_2\sigma_1 = i \sigma_3   \\
 \sigma_2\sigma_3 &amp;=&amp;  -\sigma_3\sigma_2  = -i \sigma_1  \\
 \sigma_3\sigma_1 &amp;=&amp; -\sigma_2\sigma_3 = -i \sigma_2   \\
@@ -1755,8 +1769,8 @@ en el sentido del producto escalar definido sobre <span class="math notranslate 
 <p>Las matrices hermíticas de dimensión 2<span class="math notranslate nohighlight">\(\times\)</span>2 tienen cuatro grados de libertad reales.</p>
 <p>Si añadimos la matriz identidad <span class="math notranslate nohighlight">\(~I = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}~
 \)</span>  el conjunto <span class="math notranslate nohighlight">\(\{I,\sigma_x,\sigma_y,\sigma_z\}\)</span> forma una <em>base</em> para el espacio de <em>matrices hermíticas</em> <span class="math notranslate nohighlight">\(2\times 2\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-93ab2fae-ec36-4148-a57e-423f901624f5">
-<span class="eqno">(27)<a class="headerlink" href="#equation-93ab2fae-ec36-4148-a57e-423f901624f5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-8c676f5d-4404-43df-ac84-0f64c14bd8b2">
+<span class="eqno">(27)<a class="headerlink" href="#equation-8c676f5d-4404-43df-ac84-0f64c14bd8b2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 A &amp;=&amp; a_0 I + {\bf a} \cdot \boldsymbol{\sigma} \\  \rule{0mm}{10mm} &amp;=&amp;  a_0 I + a_1 \sigma_1 + a_2 \sigma_2 + a_3 \sigma_3 \\ \rule{0mm}{10mm}&amp;=&amp; 
 \begin{bmatrix}
 a_0 + a_3 &amp; a_1 - i a_2 \\ a_1 + i a_2 &amp; a_0 - a_3
