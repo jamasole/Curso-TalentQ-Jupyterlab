@@ -10,27 +10,40 @@ kernelspec:
   language: python
   name: python3
 license: CC-BY-4.0
-github: https://github.com/executablebooks/mystmd
+github: https://github.com/jamasole/Curso-TalentQ-Jupyterlab
 subject: Curso
 venue: Quantum Spain
+authors:
+  - name: Javier Mas
+    email: javier.mas@usc.es
+    corresponding: true
+    orcid: 0000-0001-7008-2126
+    affiliations:
+      - IGFAE-USC
+  - name: David Castaño
+    email: javier.mas@usc.es
+    corresponding: true
+    orcid: 0000-0001-7008-2126
+    affiliations:
+      - UMA
 math:   
-    '\i': '{\color{blue}{i}}'
+    '\i': '{i}'
     '\bes': '\begin{equation*}'
     '\ees': '\end{equation*}'
     '\O': '{\mathcal O}'
-    '\Lin': '\hbox{Lin}'
+    '\Lin': '\rm L'
     '\Hil': '{\mathcal H}'
-    '\bra[1]': '{\langle #1|}'
-    '\ket[1]': '{|#1\rangle}'
-    '\braket[2]': '{\langle #1|#2\rangle}'
+    '\bra': '{\langle #1|}'
+    '\ket': '{|#1\rangle}'
+    '\braket': '{\langle #1|#2\rangle}'
+    '\ketbra': '{| #1\rangle  \langle #2|}'
+    '\tr': '{\rm tr}'
     '\R': '{\mathbb R}' 
     '\C': '{\mathbb C}'
     '\V': '{V}'
-abbreviations:
-    MyST: Markedly Structured Text
-    TLA: Three Letter Acronym
 ---
 
+$ \newcommand{\V}{{\cal V}} $
 
 +++
 
@@ -41,13 +54,6 @@ abbreviations:
 +++
 
 # Vectores
-
-+++
-
-```{contents}
-:local:
-:depth: 2
-```
 
 ```{code-cell} ipython3
 ---
@@ -76,15 +82,20 @@ Comenzaremos definiendo los vectores de una forma operativa, y después haremos 
 
 +++ {"slideshow": {"slide_type": "skip"}}
 
-::::{prf:definition} *Vector*
+:::{card} 
+**Definición**: *Vector*
+
+^^^
+
 La forma operacional de definir  un *vector de dimensión* $N$ consiste en lista (columna) de $N$ números complejos 
-<br>
-<br>
+
+
 $$
 |u\rangle = \begin{pmatrix} {u_1}\\ {u_2}\\ \vdots \\ {u_N} 
 \end{pmatrix}
 $$
-::::
+
+:::
 
 +++ {"slideshow": {"slide_type": "skip"}}
 
@@ -96,8 +107,13 @@ $$
 
 +++ {"slideshow": {"slide_type": "skip"}}
 
-:::{prf:definition}(*Espacio Vectorial*)   
-    La colección de <i>todos los posibles vectores</i> de $N$ componentes,  con las  propiedades de suma y multiplicación forman un <b>espacio vectorial</b>, $\V$ de dimension compleja $N$
+:::{card} 
+
+**Definición**: *Espacio Vectorial*
+
+^^^
+  
+La colección de <i>todos los posibles vectores</i> de $N$ componentes,  con las  propiedades de suma y multiplicación forman un <b>espacio vectorial</b>, $\V$ de dimension compleja $N$
 :::
 
 +++ {"slideshow": {"slide_type": "skip"}}
@@ -145,7 +161,7 @@ display(array_to_latex(uket))
 
 +++ {"slideshow": {"slide_type": "skip"}}
 
-```{admonition} Notar
+```{admonition} Nota
 :class: note  
 
 La <b>dimensión</b> es igual al número de cantidades (<i>grados de libertad</i>) que debemos fijar para especificar un vector. 
@@ -217,7 +233,10 @@ Lo único que hemos hecho es representar el vector $\ket{u}$ en una base. Vamos 
 
 +++ {"slideshow": {"slide_type": "-"}}
 
-```{prf:definition} Base
+```{card}
+**Definición**: *Base*
+
+^^^
 
 En un espacio vectorial $V$ de dimensión $N$ una <b>base</b> es una colección $\{\ket{e_1},...,\ket{e_N}\}$ de $N$ vectores  <i>linealmente independientes</i>
 
@@ -323,7 +342,10 @@ Notar que de los subíndices de $C_{ij}$
 
 +++ {"slideshow": {"slide_type": "skip"}}
 
-<b>Ejemplo</b>: Sea la matriz de coeficientes es 
+:::{admonition} Ejemplo
+:class: tip
+
+Sea la matriz de coeficientes es 
 
 $$
 C_{ij} = \begin{pmatrix} 1 & 1 \\ i & -i \end{pmatrix} =  \begin{pmatrix} C_{11} & C_{12} \\ C_{21} & C_{22} \end{pmatrix}\, ,
@@ -342,6 +364,7 @@ El cambio de base, se puede escribir como una multiplicación de matrices coloca
 $$
 \big(\ket{\tilde e_1},\ket{\tilde e_2}\big) = \big(\ket{e_1},\ket{e_2}\big) \, \begin{pmatrix} 1 & 1 \\ i & -i \end{pmatrix} = \big(\ket{e_1} + i\ket{e_2}, \ket{e_1}-i\ket{e_2} \big)
 $$
+:::
 
 +++ {"slideshow": {"slide_type": "skip"}}
 
@@ -388,7 +411,7 @@ Esta expresión devuelve las componentes  $v_i$ de un vector $\ket{v}$ en la bas
 
 +++ {"slideshow": {"slide_type": "skip"}}
 
-```{admonition} Nota:
+```{admonition} Nota
 :class: note
     
 1. La forma en que están sumados los índices hace que, en notación matricial esta operación se represente como sigue
@@ -411,7 +434,8 @@ Un vector es un objeto abstracto, un elemento de un espacio vectorial. La defini
 
 +++
 
-```{prf:example} 
+```{admonition} Ejemplo
+:class: tip
 
 Vamos a hacer un test de consistencia con vectores que conocemos en ambas bases. 
 Escojamos por ejemplo $\ket{v} = \ket{\tilde e_1}$. Las componentes $\tilde v_i$ de este vector en la base $\{\ket{\tilde e_i}\}$ son claramente $\tilde v_i = \begin{pmatrix}1\\0\end{pmatrix}$. Entonces podemos obtener las componentes $v_i$ en la base $\{\ket{e_i}\}$ siguiendo la regla encontrada
@@ -438,10 +462,11 @@ $$
 
 +++ {"slideshow": {"slide_type": "skip"}}
 
-```{prf:example} continuación
-
+```{admonition} Ejemplo (continuación)
+:class: tip
 
 Continuando con el ejemplo anterior, invertir la matriz da
+
 $$
 C^{-1}_{ij} = \frac{1}{2}\begin{pmatrix} 1 &- i\\  1 & i \end{pmatrix}
 $$
@@ -462,7 +487,9 @@ $$
 
 +++ {"slideshow": {"slide_type": "skip"}}
 
-```{exercise}
+```{admonition} Ejercicio
+:class: tip
+
 Considera las bases ortonormales $\{\ket{e_i}\} = \{\ket{0},\ket{1}\}$ y $\{\ket{\tilde e_i}\} =\{\ket{+},\ket{-}\}$ donde $\ket{\pm} = \frac{1}{\sqrt{2}}(\ket{0} \pm \ket{1})$. 
 
 Las componentes del vector $\ket{u} \sim \begin{pmatrix}3\\1\end{pmatrix}$ están escritas en la primera base. 
@@ -569,7 +596,11 @@ display(array_to_latex(ubra))
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-```{prf:definition} Espacio de Hilbert
+```{card}
+**Definición**: *Espacio de Hilbert*
+
+^^^
+
 Un <i> espacio de Hilbert</i>,  ${\Hil}$, es un espacio vectorial
 dotado de una operación interna   denominada <i>producto escalar</i>.
 ```
@@ -580,7 +611,10 @@ dotado de una operación interna   denominada <i>producto escalar</i>.
 
 +++
 
-```{prf:definition} Producto escalar
+```{card}
+**Definición**: *Producto escalar*
+
+^^^
 
 El producto escalar de dos vectores $\ket{u}$ y $\ket{v}$ es un <i>número complejo</i> 
 $a\in{\mathbb C}$ que denotamos <i>braket</i>
@@ -620,6 +654,7 @@ que no es ni siguiera un número complejo.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(norm)=
 ### Norma
 
 Una **norma** es un una función real $\|\cdot\| : \Lin(\Hil) \to {\mathbb R}$ con las siguientes propiedades 
@@ -674,10 +709,7 @@ $$
 +++ {"slideshow": {"slide_type": "skip"}}
 
 En particular 
-
--  $d(\ket{v}, \ket{w}) = d(\ket{w}, \ket{v})$ 
-
-<br>
+- $d(\ket{v}, \ket{w}) = d(\ket{w}, \ket{v})$ 
 
 - $d(\ket{v}, \ket{v}) = 0$
 
@@ -693,7 +725,10 @@ En un espacio de Hilbert $\Hil$ tiene sentido calcular el producto escalar de do
 
 +++
 
-```{prf:definition} Base ortonormal
+```{card}
+**Definición**: *Base ortonormal*
+
+^^^
 
 Una base ortornormal se caracteriza por la siguiente lista de productos escalares
 
@@ -716,7 +751,10 @@ $$
 
 +++
 
-```{prf:theorem} Teorema de Gram-Schmidt
+```{card}
+**Teorema**: *de Gram-Schmidt*
+
+^^^
 
 Dada una base general $\{\braket{f_i}{f_j}\neq \delta_{ij}\}$ de vectores no ortonormales, existe una procedimiento iterativo (de <a href="https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process">Gram-Schmidt</a> ) para construir, a partir de ella, una nueva base ortonormal $\{\braket{e_i}{e_j}\}=\delta_{ij}$
 ```
@@ -733,10 +771,12 @@ $$
 
 +++
 
-````{exercise}
+````{admonition} Ejercicio
+:class: tip
+
 Verifica esta expresión
 
-```{dropdown} Desmostración
+```{dropdown} Solución
 \begin{eqnarray}
 \braket{e_k}{v} &=&  \bra{e_k}\left(\sum_{j=1}^N v_j\ket{e_j}\right) \nonumber\\
                 &=&  \sum_{j=1}^N  v_j\braket{e_k}{e_j}  \nonumber\\
@@ -772,8 +812,8 @@ a =
 
 ```{admonition} Nota
 :class: note 
-<br>
-la expresión de la izquierda  $a = \braket{u}{v}$ <b>no hace referencia a ninguna base</b>. Por tanto, el resultado $\sum_{i=1}^n{ u_i^* v_i} $ debe ser independiente de la base que utilizamos para representar estos vectores mediante sus componentes $u_i$ y $v_i$. 
+
+La expresión de la izquierda  $a = \braket{u}{v}$ <b>no hace referencia a ninguna base</b>. Por tanto, el resultado $\sum_{i=1}^n{ u_i^* v_i} $ debe ser independiente de la base que utilizamos para representar estos vectores mediante sus componentes $u_i$ y $v_i$. 
     
 Subrayamos la importancia de esto: $\braket{u}{v}$ puede ser calculado en la base más conveniente.
 
@@ -781,7 +821,9 @@ Subrayamos la importancia de esto: $\braket{u}{v}$ puede ser calculado en la bas
 
 +++
 
-```{exercise}
+```{admonition} Ejercicio
+:class: tip
+
 - Escribe una función <i>braket</i>$(u,v)$ que calcule y devuelva la el producto escalar $\braket{u}{v}$, y, con ella, una función $norm(u)$ que calcule la norma $\| \ket{u}\|$.
 Verifica que $\| \ket{u}\| = \sqrt{\braket{u}{u}}$ coincide con el resultado que da la función `np.linalg.norm`.
 
