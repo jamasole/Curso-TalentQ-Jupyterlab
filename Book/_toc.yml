@@ -4,7 +4,7 @@ root: docs/index
 #  numbered: True  # Number sections 
 parts:
 - caption: Las reglas del juego
-  numbered: True
+#  numbered: True
   chapters:
 
   - file: docs/00_Formalismo/01_formalismo_matematico.md
@@ -21,7 +21,7 @@ parts:
     - file: docs/00_Formalismo/02_Fundamentos_MC.ipynb
 
 - caption: Circuitos Cuánticos
-  numbered: True
+#  numbered: True
   chapters:
 
   - file: docs/01_Circuitos/110_Circuitos_1_qúbit.md
