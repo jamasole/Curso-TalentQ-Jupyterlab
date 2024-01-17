@@ -1,0 +1,13 @@
+Pruebas:
+    "<div class=\"alert alert-block alert-info\"><p style=\"text-align: left ;color: navy;\">  \n",
+ Definición    "</p></div>"
+    "<div class=\"alert alert-block alert-info\"><p style=\"text-align:left ;color: navy;\">  \n",
+ Lema     "</p></div>  \n",
+    "<div class=\"alert alert-block alert-info\"><p style=\"text-align: left ;color: navy;\">  \n",
+ Teorema    "</p></div>    "
+    "<div class=\"alert alert-block alert-danger\",text-align:center>\n",
+ Nota    "</div>"
+    "<div class=\"alert alert-block alert-danger\",text-align:center>\n",
+ Nota    "</div>"
+    "<div class=\"alert alert-block alert-danger\",text-align:center>\n",
+ Nota    "</div>"
