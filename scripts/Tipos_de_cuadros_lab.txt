@@ -1,0 +1,40 @@
+
+
+
+
+
+############## Definición/Lema/Teorema ##############
+
+
+::::{card}
+
+**Definición/Lema/Teorema**: *Nombre*
+
+^^^
+
+TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
+
+::::
+
+
+
+
+############## Definición/Lema/Teorema con Prueba/Demostración ##############
+
+::::{card}
+
+**Definición/Lema/Teorema**: *Nombre*
+
+^^^
+
+TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
+
+
+:::{dropdown} Prueba/Demostración
+
+TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
+
+:::
+::::
+
+

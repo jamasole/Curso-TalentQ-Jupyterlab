@@ -43,7 +43,7 @@ TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
 ############## Ejericio ################
 
 <div class="alert alert-block alert-success">
-<b>Ejercicio:</b>
+<b>Ejercicio</b>:
 TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
 </div>
 
@@ -51,7 +51,7 @@ TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
 ############## Ejericio con solución ################
 
 <div class="alert alert-block alert-success">
-<b>Ejercicio:</b>
+<b>Ejercicio</b>:
 TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
 
 <details><summary><p style="text-align:left"> >> <i>Solución:</i></p></summary>
