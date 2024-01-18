@@ -6,6 +6,15 @@ import unicodedata
 import sys
 import re
 
+def grep_file_index(grep_command):
+    
+    out_grep_command = bash(grep_command, shell=True).decode("utf-8")
+
+    index_Lines = []
+    for line in out_grep_command.splitlines():
+        index_Lines.append(int(line)-1)
+    
+    return index_Lines
 
 def remove_capital__accents(string):
     # Normalizar y eliminar acentos
@@ -17,11 +26,24 @@ def remove_capital__accents(string):
     return final_string
 
 def find_boxes(f_data, i_LINES_start):
+    i_line_end_list           = [] 
+    i_line_start_list         = []
+    i_line_start_p_list       = []
+    i_line_end_p_list         = []
+    i_line_start_details_list = []
+    i_line_end_details_list   = []
+    i_line_title_list         = []
+    title_details_list        = []
+    title_list                = []
+    title_lowercase_list      = []
+    subtitle_list             = []
+
+
     i_line_end_last_iteration = 0
     for i_line_start in i_LINES_start:
 
         assert i_line_end_last_iteration < i_line_start, f"{i_line_end_last_iteration} < {i_line_start} The previous box ends after the begining of the next one"
-        
+
         i_line_end           = i_line_start 
         i_line_start_p       = 0
         i_line_end_p         = 0
@@ -29,6 +51,12 @@ def find_boxes(f_data, i_LINES_start):
         i_line_end_details   = 0
         i_line_title         = 0
         
+        title_details   = "NONE"
+        subtitle        = "NONE"
+        title           = "NONE"
+        title_lowercase = "NONE"
+        subtitle        = "NONE"
+                
         found = False
         while not found:
 
@@ -65,6 +93,13 @@ def find_boxes(f_data, i_LINES_start):
         title = re.sub(r'<.*?>', '', title_no_clean.split(':')[0]).strip()   #  +'\\n",\n'
         title_lowercase = remove_capital__accents(title).strip()
         
+        ########################
+        ######## SUB-TITLE 
+
+        if "<i>" in f_data[i_line_title]:
+            subtitle_no_clean = re.search(r'<i>(.*?)</i>', f_data[i_line_title])
+            subtitle = subtitle_no_clean.group(1)             
+
         
         ########################
         ######## Prints y asserts
@@ -79,7 +114,7 @@ def find_boxes(f_data, i_LINES_start):
             if i_line_start < i_line_start_p:
                 print(i_line_start_p,   {f_data[i_line_start_p]})
         
-        print(i_line_title,             title, title_lowercase)
+        print(i_line_title,  title, title_lowercase, subtitle)
         
         if i_line_start_details > 0:
             
@@ -113,38 +148,128 @@ def find_boxes(f_data, i_LINES_start):
             f_out.write(f_data[i_line_start])
             f_out.write(title)
             f_out.write(f_data[i_line_end])
+        
+        if not title == "NONE":
+
+            i_line_end_list.append(i_line_end) 
+            i_line_start_list.append(i_line_start) 
+            i_line_start_p_list.append(i_line_start_p) 
+            i_line_end_p_list.append(i_line_end_p) 
+            i_line_start_details_list.append(i_line_start_details) 
+            i_line_end_details_list.append(i_line_end_details) 
+            i_line_title_list.append(i_line_title) 
+            title_details_list.append(title_details) 
+            title_list.append(title) 
+            title_lowercase_list.append(title_lowercase) 
+            subtitle_list.append(subtitle)
+    
+    index_list_list = [i_line_start_list, 
+                       i_line_end_list,
+                       i_line_start_p_list, 
+                       i_line_end_p_list, 
+                       i_line_start_details_list, 
+                       i_line_end_details_list, 
+                       i_line_title_list]
+
+    titles_list_list = [title_details_list, title_list, title_lowercase_list, subtitle_list]
+        
+    return index_list_list, titles_list_list
+
+
+
+
+
+
+def build_admonition_box(i, f_data, Class):
+
+    i_line_start         = index_list_list[0][i]  # 1
+    i_line_end           = index_list_list[1][i]  # 7
+    i_line_start_p       = index_list_list[2][i]  # 1,2
+    i_line_end_p         = index_list_list[3][i]
+    i_line_start_details = index_list_list[4][i]
+    i_line_end_details   = index_list_list[5][i]
+    i_line_title         = index_list_list[6][i]
+       
+    title_details   = titles_list_list[0][i]
+    title           = titles_list_list[1][i]
+    title_lowercase = titles_list_list[2][i]
+    subtitle        = titles_list_list[3][i]
+    
+
+    print("===================================================================")
+
+    print(f"{i_line_start},{i_line_start_p},{i_line_title},{i_line_start_details},{i_line_end_details},{i_line_end_p},{i_line_end}")
+    
+    print("")
+    for i in range(i_line_end-i_line_start+1):
+        print({f_data[i_line_start+i]})
+    print("")
+
+    ##############################
+    ######## </div> o </p></div>
+
+    print(i_line_end, {f_data[i_line_end]})    
+
+    # Encontrar la posición de la primera comilla doble
+    indice_primera_comilla = f_data[i_line_end].find('"')
+    
+    # Realizar la sustitución
+    new = f_data[i_line_start_p][:indice_primera_comilla + 1] +'Nuevo texto\\n",\n'  
+        #f_data[i_line_start_p][f_data[i_line_start_p].find('\n', indice_primera_comilla + 1):] 
+
+    print("----->", {new})
+
+    if i_line_end_p > 0:
+        ##############################
+        ######## </p>
+        if i_line_end > i_line_end_p:
+            print(i_line_end_p,   {f_data[i_line_end_p]})
+
+    if i_line_end_details > 0:
+        ##############################
+        ######## </details>
+        print(i_line_end_details,   {f_data[i_line_end_details]})
+
+    if i_line_start_details > 0:
+        ##############################
+        ######## <detail>
+        print("")
+        print(i_line_start_details, {f_data[i_line_start_details]} , title_details)
+
+    ##############################
+    ######## TITLE
+    
+    if subtitle == "NONE":
+        print(i_line_title,  title, title_lowercase)
+    else:
+        print(i_line_title,  title, title_lowercase, subtitle)
+
+    if i_line_start_p > 0:
+        ##############################
+        ######## <p style=...>
+
+        if i_line_start < i_line_start_p:
+            print(i_line_start_p,   {f_data[i_line_start_p]})
+
+    ##############################
+    ######## <div class...> o <div class...><p style...>
+    print(i_line_start,             {f_data[i_line_start]})
+
+
 
 file_name = sys.argv[1:][0]
 print("===========================")
 print("File = ", file_name)
 print("===========================")
 
-#command_line_start_alert_info   = '($(grep -n "<div class=" '+file_name+'| grep "alert alert-block alert-info" |  cut -d":" -f1))'
-command_i_LINES_start_alert_info   = 'grep -n "<div class=" '+file_name+'| grep "alert alert-block alert-info" |  cut -d":" -f1'
-command_i_LINES_start_alert_danger = 'grep -n "<div class=" '+file_name+'| grep "alert alert-block alert-danger" |  cut -d":" -f1'
 
-command_i_LINES_start_alert_success = 'grep -n "<div class=" '+file_name+'| grep "alert-block alert-success" |  cut -d":" -f1'
-
-#print(command_line_start_alert_info)
-#print(command_line_start_alert_danger)
-
-out_i_LINES_start_alert_info   = bash(command_i_LINES_start_alert_info  , shell=True).decode("utf-8")
-out_i_LINES_start_alert_danger = bash(command_i_LINES_start_alert_danger, shell=True).decode("utf-8")
-out_i_LINES_start_alert_success = bash(command_i_LINES_start_alert_success, shell=True).decode("utf-8")
-
-i_LINES_start_alert_info = []
-for line in out_i_LINES_start_alert_info.splitlines():
-    i_LINES_start_alert_info.append(int(line)-1)
+#command_i_LINES_start_alert_info   = 'grep -n "<div class=" '+file_name+'| grep "alert alert-block alert-info" |  cut -d":" -f1'
+#command_i_LINES_start_alert_danger = 'grep -n "<div class=" '+file_name+'| grep "alert alert-block alert-danger" |  cut -d":" -f1'
+#command_i_LINES_start_alert_success = 'grep -n "<div class=" '+file_name+'| grep "alert-block alert-success" |  cut -d":" -f1'
 
 
-i_LINES_start_alert_danger = []
-for line in out_i_LINES_start_alert_danger.splitlines():
-    i_LINES_start_alert_danger.append(int(line)-1)
-
-i_LINES_start_alert_success = []
-for line in out_i_LINES_start_alert_success.splitlines():
-    i_LINES_start_alert_success.append(int(line)-1)
-
+command_i_Lines_start_alert   = 'grep -n "<div class=" '+file_name+'| grep "alert alert-block alert" |  cut -d":" -f1'
+i_Lines_start_alert = grep_file_index(command_i_Lines_start_alert)
 
 with open(file_name, 'r') as f:
     #f_data = f.read()
@@ -158,9 +283,41 @@ with open(file_name, 'r') as f:
     with open("pruebas_write.txt", 'w') as f_out:
         f_out.write("Pruebas:\n")
     
-    find_boxes(f_data, i_LINES_start_alert_info)
-    find_boxes(f_data, i_LINES_start_alert_danger)
-    find_boxes(f_data, i_LINES_start_alert_success)
+    index_list_list, titles_list_list = find_boxes(f_data, i_Lines_start_alert)
 
+    print(index_list_list)
+    print(titles_list_list)
+
+    for i in reversed(range(len(index_list_list[0]))):
+
+        title = titles_list_list[1][i]
+        build_admonition_box(i, f_data, Class = "tip")
+        exit()
+        '''
+        if 'definicion' in title_lowercase:
+            build_card_box(i)
+        elif 'teorema' in title_lowercase:
+            build_card_box(i)
+        elif 'lema' in title_lowercase:
+            build_card_box(i)
+        elif 'nota' in title_lowercase:
+            build_admonition_box(Class = "note", i)
+        elif 'ejericicio' in title_lowercase:
+            build_admonition_box(Class = "tip", i)
+        elif 'ejemplo' in title_lowercase:
+            build_admonition_box(Class = "tip", i)
+        '''
+
+'''
+def build_card_box():
+'''
+
+
+
+        
+    
+        
+
+    
 
     
