@@ -1,40 +1,46 @@
 
-
-
-
-
-############## Definición/Lema/Teorema ##############
-
-
-::::{card}
-
-**Definición/Lema/Teorema**: *Nombre*
-
-^^^
-
-TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
-
-::::
-
-
-
-
 ############## Definición/Lema/Teorema con Prueba/Demostración ##############
 
-::::{card}
+Veamose el cuadro:
 
-**Definición/Lema/Teorema**: *Nombre*
+    ::::{card}
 
-^^^
+    **TITULO*: *SUBTITULO*
 
-TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
+    ^^^
 
-
-:::{dropdown} Prueba/Demostración
-
-TEXTO AQUÍ (puede incluir saltos de linea, equaciones,... )
-
-:::
-::::
+    TEXTO AQUÍ
 
 
+    :::{dropdown} Prueba/Demostración
+
+    TEXTO AQUÍ
+
+    :::
+    ::::
+
+
+
+    El :::{dropdown} es opcional
+
+######################## Nota / Ejemplo / Ejercicio #############################
+
+Veamose el cuadro:
+
+    ::::{admonition} TITULO (SUBTITULO)
+    :class: CLASE
+
+    TEXTO AQUI
+
+    :::{dropdown} Solución
+
+    TEXTO AQUÍ
+
+    :::
+    ::::
+
+Donde:
+    - Para notas:                  CLASE = note
+    - Para Ejercicios y Ejemplos:  CLASE = tip
+
+El :::{dropdown} es opcional
