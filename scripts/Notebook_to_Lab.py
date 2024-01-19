@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from pprint import pprint
+#from pprint import pprint
 from subprocess import check_output as bash
 import unicodedata
 
@@ -102,7 +102,7 @@ def find_boxes(f_data, i_LINES_start):
 
         
         ########################
-        ######## Prints y asserts
+        ######## #prints y asserts
 
         #assert i_line_start_p       <= i_line_end_p, f"Problems findins <p>, {i_line_start_p} and </p> {i_line_end_p}"
         #assert i_line_start_details <= i_line_end_details, f"Problems findins <details>, {i_line_start_p} and </details> {i_line_end_p}"
@@ -117,16 +117,15 @@ def find_boxes(f_data, i_LINES_start):
         print(i_line_title,  title, title_lowercase, subtitle)
         
         if i_line_start_details > 0:
-            
             assert i_line_start < i_line_start_details <= i_line_end, f"{i_line_start} < {i_line_start_details} <= {i_line_end}"
 
             ###### Title details:
             title_details = re.search(r'<i>(.*?)</i>', f_data[i_line_start_details]).group(1)
 
-            # print(i_line_start_details, {f_data[i_line_start_details]})
+            #print(i_line_start_details, {f_data[i_line_start_details]})
             print("")
             print(i_line_start_details, {f_data[i_line_start_details]} , title_details)
-        
+
         if i_line_end_details > 0:
             
             assert i_line_start < i_line_start_details < i_line_end_details <= i_line_end, f"{i_line_start} < {i_line_start_details} < {i_line_end_details} <= {i_line_end}"
@@ -143,11 +142,6 @@ def find_boxes(f_data, i_LINES_start):
         print("")
         print(i_line_end,               {f_data[i_line_end]})
         print("===============================================================")
-
-        with open("pruebas_write.txt", 'a') as f_out:
-            f_out.write(f_data[i_line_start])
-            f_out.write(title)
-            f_out.write(f_data[i_line_end])
         
         if not title == "NONE":
 
@@ -176,7 +170,16 @@ def find_boxes(f_data, i_LINES_start):
     return index_list_list, titles_list_list
 
 
+def my_replace(f_data, i_line, new_text):
 
+    #print("------> ", new_text)
+
+    # Encontrar la posición de la primera comilla doble
+    index_firts_quote = f_data[i_line].find('"')
+
+    # Realizar la sustitución
+    f_data[i_line]= f_data[i_line][:index_firts_quote + 1] +new_text 
+        #f_data[i_line_start_p][f_data[i_line_start_p].find('\n', indice_primera_comilla + 1):] 
 
 
 
@@ -192,69 +195,81 @@ def build_admonition_box(i, f_data, Class):
        
     title_details   = titles_list_list[0][i]
     title           = titles_list_list[1][i]
-    title_lowercase = titles_list_list[2][i]
+    #title_lowercase = titles_list_list[2][i]
     subtitle        = titles_list_list[3][i]
     
 
-    print("===================================================================")
+    #print("===================================================================")
 
-    print(f"{i_line_start},{i_line_start_p},{i_line_title},{i_line_start_details},{i_line_end_details},{i_line_end_p},{i_line_end}")
+    #print(f"{i_line_start},{i_line_start_p},{i_line_title},{i_line_start_details},{i_line_end_details},{i_line_end_p},{i_line_end}")
     
-    print("")
+    #print("")
     for i in range(i_line_end-i_line_start+1):
         print({f_data[i_line_start+i]})
     print("")
 
-    ##############################
+    ############################################################################
     ######## </div> o </p></div>
 
-    print(i_line_end, {f_data[i_line_end]})    
-
-    # Encontrar la posición de la primera comilla doble
-    indice_primera_comilla = f_data[i_line_end].find('"')
-    
-    # Realizar la sustitución
-    new = f_data[i_line_start_p][:indice_primera_comilla + 1] +'Nuevo texto\\n",\n'  
-        #f_data[i_line_start_p][f_data[i_line_start_p].find('\n', indice_primera_comilla + 1):] 
-
-    print("----->", {new})
+    ##print(i_line_end, {f_data[i_line_end]})    
+    my_replace(f_data, i_line_end, '::::'+'\\n"\n' )
+    #print(i_line_end, {f_data[i_line_end]})  
 
     if i_line_end_p > 0:
         ##############################
         ######## </p>
         if i_line_end > i_line_end_p:
-            print(i_line_end_p,   {f_data[i_line_end_p]})
+            #print(i_line_end_p,   {f_data[i_line_end_p]})
+            my_replace(f_data, i_line_end_p, ''+'\\n",\n' )
+            #print(i_line_end_p,   {f_data[i_line_end_p]})
+
 
     if i_line_end_details > 0:
         ##############################
         ######## </details>
-        print(i_line_end_details,   {f_data[i_line_end_details]})
+        if i_line_end > i_line_end_details:
+            #print(i_line_end_details,   {f_data[i_line_end_details]})
+            my_replace(f_data, i_line_end_details, ':::'+'\\n",\n')
+            #print(i_line_end_details,   {f_data[i_line_end_details]})
 
     if i_line_start_details > 0:
         ##############################
         ######## <detail>
-        print("")
-        print(i_line_start_details, {f_data[i_line_start_details]} , title_details)
+        #print("")
+        #print(i_line_start_details, {f_data[i_line_start_details]} , title_details)
+        my_replace(f_data, i_line_start_details, ':::{dropdown} '+ title_details+'\\n",\n')
+        #print(i_line_start_details, {f_data[i_line_start_details]})
 
-    ##############################
-    ######## TITLE
+
+    #print(i_line_title,  {f_data[i_line_title]})
+    my_replace(f_data, i_line_title, ':class:'+Class+'\\n",\n')
+    #print(i_line_title,  {f_data[i_line_title]})
     
-    if subtitle == "NONE":
-        print(i_line_title,  title, title_lowercase)
-    else:
-        print(i_line_title,  title, title_lowercase, subtitle)
-
     if i_line_start_p > 0:
         ##############################
         ######## <p style=...>
 
         if i_line_start < i_line_start_p:
-            print(i_line_start_p,   {f_data[i_line_start_p]})
+            #print(i_line_start_p,   {f_data[i_line_start_p]})
+            my_replace(f_data, i_line_start_p, ''+'\\n",\n')
+            #print(i_line_start_p,   {f_data[i_line_start_p]})
 
     ##############################
-    ######## <div class...> o <div class...><p style...>
-    print(i_line_start,             {f_data[i_line_start]})
+    ######## TITLE and <div class...> o <div class...><p style...>
+    
+    if subtitle == "NONE":
+        #print(i_line_start,             {f_data[i_line_start]})
+        my_replace(f_data, i_line_start, '::::{admonition} '+ title+'\\n",\n')
+        #print(i_line_start,             {f_data[i_line_start]})
+    else:
+        #print(i_line_start,             {f_data[i_line_start]})
+        my_replace(f_data, i_line_start, '::::{admonition} '+ title + '(' + subtitle + ')'+'\\n",\n')
+        #print(i_line_start,             {f_data[i_line_start]})
 
+    print("")
+    for i in range(i_line_end-i_line_start+1):
+        print({f_data[i_line_start+i]})
+    #print("")
 
 
 file_name = sys.argv[1:][0]
@@ -273,40 +288,71 @@ i_Lines_start_alert = grep_file_index(command_i_Lines_start_alert)
 
 with open(file_name, 'r') as f:
     #f_data = f.read()
-    #print(f_data[20])
+    ##print(f_data[20])
 
     f_data=[]
     for line in f:
-        #print(line)
+        ##print(line)
         f_data.append(line)
     
-    with open("pruebas_write.txt", 'w') as f_out:
-        f_out.write("Pruebas:\n")
+
     
     index_list_list, titles_list_list = find_boxes(f_data, i_Lines_start_alert)
 
-    print(index_list_list)
-    print(titles_list_list)
+    #print(index_list_list)
+    #print(titles_list_list)
 
     for i in reversed(range(len(index_list_list[0]))):
 
-        title = titles_list_list[1][i]
-        build_admonition_box(i, f_data, Class = "tip")
-        exit()
-        '''
-        if 'definicion' in title_lowercase:
-            build_card_box(i)
-        elif 'teorema' in title_lowercase:
-            build_card_box(i)
-        elif 'lema' in title_lowercase:
-            build_card_box(i)
-        elif 'nota' in title_lowercase:
-            build_admonition_box(Class = "note", i)
-        elif 'ejericicio' in title_lowercase:
-            build_admonition_box(Class = "tip", i)
+
+        title_lowercase = titles_list_list[2][i]        
+
+        #if 'definicion' in title_lowercase:
+        #    build_card_box(i)
+        #elif 'teorema' in title_lowercase:
+        #    build_card_box(i)
+        #elif 'lema' in title_lowercase:
+        #    build_card_box(i)
+            
+        if 'nota' in title_lowercase:
+            build_admonition_box(i, f_data, Class = "note")
+        elif 'ejercicio' in title_lowercase:
+            build_admonition_box(i, f_data, Class = "tip")
         elif 'ejemplo' in title_lowercase:
-            build_admonition_box(Class = "tip", i)
-        '''
+            build_admonition_box(i, f_data, Class = "tip")
+
+
+
+################################################################################
+###### Guardamos los cambios en un nuevo fichero
+
+out_file = file_name[:-5]+'_lab.ipynb'
+
+with open(out_file, 'w') as f_out:
+    for k in range(len(f_data)):
+        f_out.write(f_data[k])
+
+
+################################################################################
+###### Eliminamos los </br>
+
+clean_br_command = "sed -i 's/<br>//g' " + out_file
+bash(clean_br_command, shell=True).decode("utf-8")
+
+################################################################################
+##### Eliminamos la primera celda y añadimos las dos celdas de título
+
+number_line_head = str(int(bash('grep -n "^  }," Firts_cells.ipynb |  cut -d":" -f1 | head -n 2 | tail -n 1' , shell=True).decode("utf-8")))
+
+bash('head -n ' +number_line_head+' Firts_cells.ipynb ' +' > ' + out_file + '_clean' , shell=True).decode("utf-8")
+
+number = str(int(bash('grep -n "^  }," ' + out_file + ' |  cut -d":" -f1 | head -n 1', shell= True).decode("utf-8")) +1)
+
+bash('tail -n +' + number + ' ' + out_file  +' >> ' + out_file + '_clean', shell=True).decode("utf-8")
+bash('mv ' +  out_file + '_clean ' + out_file, shell=True).decode("utf-8")
+
+
+
 
 '''
 def build_card_box():
