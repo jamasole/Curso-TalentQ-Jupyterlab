@@ -1,6 +1,6 @@
 Esta es un guia de cuadros para Jupyter Notebook 7. Debe de usarse la sintaxis estricta de este documento, modificando solo las partes indicadas.
 
-Recordemos que antes y despues de una equación con DOBLE DOLAR deben haber lineas en blanco:
+Recordemos que antes y despues de una equación con DOBLE DOLAR deben haber lineas en blanco o <br>:
 
 Texto....
 
@@ -9,6 +9,10 @@ equación....
 $$
 
 Texto....
+<br>
+$$
+equación....
+$$
 
 ############## Definición/Lema/Teorema/Nota/Ejercicio/Ejemplo ##############
 
@@ -41,5 +45,18 @@ así que es importante que esté bien escrito y sea uno de los anteriores (mayus
 Ejemplos:
     <b>Teorema</b>: <i>de Gram-Schmidt</i>
     <b>Definición</b>: <i>Espacio Vectorial</i>
+
+
+
+
+
+
+############ Demostraciones sueltas, sin ser en un cuadro ##############
+
+<details><summary><p style="text-align:left"> >> <i>Demostración</i> </p></summary>
+
+TEXTO AQUÍ
+
+</details>
 
 
