@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -40,9 +40,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -113,10 +113,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -157,11 +156,16 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -176,6 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -211,6 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC.html">Elementos de Mecánica Cuántica</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../214_Grover_lab.html">Algoritmo de Grover</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuitos Cuánticos</span></p>
 <ul class="nav bd-sidenav">
@@ -449,6 +455,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -458,6 +465,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -519,7 +527,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="cubits">
 <h1>Cúbits<a class="headerlink" href="#cubits" title="Permalink to this heading">#</a></h1>
@@ -675,8 +683,8 @@ es relevante para especificar \)</span>\ket{u}$.</p>
 </details><p>En componentes en la base <span class="math notranslate nohighlight">\(Z\)</span> escribimos equivalentemente
 $$
 |u\rangle ~\sim ~~</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9656df2d-790e-433f-81da-6bfea733b9d0">
-<span class="eqno">()<a class="headerlink" href="#equation-9656df2d-790e-433f-81da-6bfea733b9d0" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} \cos\displaystyle\frac{\theta}{2} \\  e^{i\varphi} \sin \displaystyle\frac{\theta}{2} \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-dab4c8fe-7def-4b4a-b6f6-3ecff761040d">
+<span class="eqno">()<a class="headerlink" href="#equation-dab4c8fe-7def-4b4a-b6f6-3ecff761040d" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} \cos\displaystyle\frac{\theta}{2} \\  e^{i\varphi} \sin \displaystyle\frac{\theta}{2} \end{bmatrix}\]</div>
 <p>$$</p>
 <p>El rango de <span class="math notranslate nohighlight">\(\theta\in [0,\pi)\)</span> y <span class="math notranslate nohighlight">\(\varphi\in [0,2\pi)\)</span> permite interpretar estos números reales como <em>ángulos sobre la esfera unidad</em>. Dicho de otro modo, podemos representar  cada estado de un cúbit como un <em>punto</em> sobre una esfera de radio unidad: la <em>esfera de Bloch</em>.</p>
 <ul class="simple">
@@ -865,8 +873,8 @@ $<span class="math notranslate nohighlight">\(
     el sentido de la rotación que produce $R_{\hat{\bf n}}(\alpha)$ en torno al eje $\hat{\bf n}$, viene dado por la <i>regla de la mano derecha</i> o, también, <i>anti-horario</i>. 
 </div><p>Haciendo la suma explícitamente podemos escribir la matriz unitaria
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-7e6f919b-6b4c-49b4-bd0e-942c920e1395">
-<span class="eqno">()<a class="headerlink" href="#equation-7e6f919b-6b4c-49b4-bd0e-942c920e1395" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-756c46d0-4d5e-4656-a3c8-555913d72d07">
+<span class="eqno">()<a class="headerlink" href="#equation-756c46d0-4d5e-4656-a3c8-555913d72d07" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_{\hat{\bf n}}(\alpha)~  ~=~ 
  \begin{bmatrix} \cos \displaystyle\frac{\alpha}{2} - i n_z\sin\frac{\alpha}{2} &amp;\displaystyle (-in_x- n_y)\sin\frac{\alpha}{2} \\ \displaystyle
 (-in_x + n_y) \sin\frac{\alpha}{2} &amp; \displaystyle \cos \frac{\alpha}{2} + i n_z\sin\frac{\alpha}{2} \end{bmatrix}
@@ -939,8 +947,8 @@ Aplicada a un estado de cúbit genérico
 \)</span>$
 P(\alpha) \ket{u} =  \begin{bmatrix} 1 &amp; 0 \ 0 &amp; e^{i\alpha} \end{bmatrix}</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-8a64280d-9042-4628-be14-5b7a987ceb4c">
-<span class="eqno">()<a class="headerlink" href="#equation-8a64280d-9042-4628-be14-5b7a987ceb4c" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} \cos\theta \\ \sin\theta e^{i\phi} \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-01a861a9-565f-44d9-802c-809b15a88168">
+<span class="eqno">()<a class="headerlink" href="#equation-01a861a9-565f-44d9-802c-809b15a88168" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} \cos\theta \\ \sin\theta e^{i\phi} \end{bmatrix}\]</div>
 <p>\end{bmatrix}= \ket{v}
 $$
 <br></p>
@@ -949,10 +957,10 @@ $$
 <br>
 $$
 P(\alpha) = \begin{bmatrix} 1 &amp; 0 \ 0 &amp; e^{i\alpha} \end{bmatrix} =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c9c1f3eb-1792-4180-adb1-3325139e3b6f">
-<span class="eqno">()<a class="headerlink" href="#equation-c9c1f3eb-1792-4180-adb1-3325139e3b6f" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{i\alpha/2} &amp; 0 \\ 0 &amp; e^{i\alpha/2} \end{bmatrix}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-874e0055-a6ec-4554-9b27-8ff922fac171">
-<span class="eqno">()<a class="headerlink" href="#equation-874e0055-a6ec-4554-9b27-8ff922fac171" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-i\alpha/2} &amp; 0 \\ 0 &amp; e^{i\alpha/2} \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-587f777f-1e99-45f0-bfe5-f7a1d32b111f">
+<span class="eqno">()<a class="headerlink" href="#equation-587f777f-1e99-45f0-bfe5-f7a1d32b111f" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{i\alpha/2} &amp; 0 \\ 0 &amp; e^{i\alpha/2} \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a03f3836-eb1c-413d-a9e9-af0a0db270eb">
+<span class="eqno">()<a class="headerlink" href="#equation-a03f3836-eb1c-413d-a9e9-af0a0db270eb" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-i\alpha/2} &amp; 0 \\ 0 &amp; e^{i\alpha/2} \end{bmatrix}\]</div>
 <p>$<span class="math notranslate nohighlight">\(
 &lt;br&gt;
 &lt;br&gt;
@@ -994,8 +1002,8 @@ i R_{\hat{\bf z}}(\pi) &amp;=&amp;   \begin{bmatrix}1&amp;0\\0&amp;-1\end{bmatri
 <p>Así obtenemos
 <br>
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-2919605f-f3ac-46fd-9e55-d176b3b37029">
-<span class="eqno">()<a class="headerlink" href="#equation-2919605f-f3ac-46fd-9e55-d176b3b37029" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-e3bcf6c9-b10a-489f-96b1-f0fa83cd5788">
+<span class="eqno">()<a class="headerlink" href="#equation-e3bcf6c9-b10a-489f-96b1-f0fa83cd5788" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 S = Z^{1/2} &amp;=&amp;  \begin{bmatrix}1&amp;0\\0&amp;i\end{bmatrix}=\begin{bmatrix}1&amp;0\\0&amp;e^{i\pi/2}\end{bmatrix}  \\
 &amp;&amp; \\
 T  = Z^{1/4} &amp;=&amp;  \begin{bmatrix}1&amp;0\\0&amp;e^{i\pi/4}\end{bmatrix} 
@@ -1006,14 +1014,14 @@ T  = Z^{1/4} &amp;=&amp;  \begin{bmatrix}1&amp;0\\0&amp;e^{i\pi/4}\end{bmatrix}
 </ul>
 <p>La puerta de Hadamard, <span class="math notranslate nohighlight">\(H\)</span>, es la primera puerta <em>genuinamente cuántica</em> en el sentido de que lleva un estado de la base a una superposición coherente
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-c2247ea3-df18-4d8c-801b-f03027cb118c">
-<span class="eqno">()<a class="headerlink" href="#equation-c2247ea3-df18-4d8c-801b-f03027cb118c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-c5f832ba-5fef-4aa6-a46c-daab10e37951">
+<span class="eqno">()<a class="headerlink" href="#equation-c5f832ba-5fef-4aa6-a46c-daab10e37951" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 H \ket{0} &amp;=&amp; \frac{1}{\sqrt{2}}\left(\rule{0mm}{4mm}\ket{0} + \ket{1}\right) =\ket{+}   \\
 H \ket{1} &amp;=&amp; \frac{1}{\sqrt{2}}\left(\rule{0mm}{4mm}\ket{0} - \ket{1}\right) =\ket{-} 
 \end{eqnarray}\]</div>
 <p>Podemos escribir este operador en la base canónica <span class="math notranslate nohighlight">\(H = H_{ij}\ketbra{i}{j}\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-f6dc52de-69fd-4bfa-bcd6-6ce77f3aaa93">
-<span class="eqno">()<a class="headerlink" href="#equation-f6dc52de-69fd-4bfa-bcd6-6ce77f3aaa93" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-58aa98f1-352e-493e-8bf6-5fece6fed7ca">
+<span class="eqno">()<a class="headerlink" href="#equation-58aa98f1-352e-493e-8bf6-5fece6fed7ca" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 H &amp;=&amp;  \ket{+}\bra{0} +  \ket{-}\bra{1} \\
 &amp;=&amp; \frac{1}{\sqrt{2}}(\ketbra{0}{0} + \ketbra{1}{0} + \ketbra{0}{1} - \ketbra{1}{1})
 \end{eqnarray}\]</div>
@@ -1257,7 +1265,7 @@ lleva el vector <span class="math notranslate nohighlight">\(\ket{0}\)</span> so
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
 </div>
                 </footer>
@@ -1267,6 +1275,7 @@ lleva el vector <span class="math notranslate nohighlight">\(\ket{0}\)</span> so
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1316,6 +1325,7 @@ By Javier Mas Solé
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -1342,8 +1352,8 @@ By Javier Mas Solé
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
