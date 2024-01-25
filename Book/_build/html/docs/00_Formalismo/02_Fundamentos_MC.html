@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -40,9 +40,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -104,7 +104,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/00_Formalismo/02_Fundamentos_MC';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Circuitos multicúbits" href="../01_Circuitos/120_Circuitos_multiq%C3%BAbit.html" />
+    <link rel="next" title="Algoritmo de Grover" href="../pruebas/214_Grover_lab.html" />
     <link rel="prev" title="Fundamentos de Mecánica Cuántica" href="02_Fundamentos_MC_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -115,10 +115,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -159,11 +158,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -178,6 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -213,6 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Elementos de Mecánica Cuántica</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../pruebas/214_Grover_lab.html">Algoritmo de Grover</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuitos Cuánticos</span></p>
 <ul class="nav bd-sidenav">
@@ -468,6 +472,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -477,6 +482,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -534,7 +540,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <p><span class="math notranslate nohighlight">\(\newcommand{\V}{{\cal V}}\)</span>
 <span class="math notranslate nohighlight">\(\newcommand{\C}{{\mathbb C}}\)</span>
@@ -656,8 +662,8 @@ p(\lambda_k)~ = ~|\braket{\lambda_k}{\psi}|^2
 <ul class="simple">
 <li><p>Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span>, la fórmula para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> debe generalizarse:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-c3c994fd-3be4-474b-8627-15d7d8f1d1ba">
-<span class="eqno">(38)<a class="headerlink" href="#equation-c3c994fd-3be4-474b-8627-15d7d8f1d1ba" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-38e56520-a38d-4c92-bff4-f2a617767950">
+<span class="eqno">(38)<a class="headerlink" href="#equation-38e56520-a38d-4c92-bff4-f2a617767950" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \bra{\psi}\left(
  \sum_{a=1}^{d_k}\ketbra{\lambda^a_k}{\lambda^a_k}\right) \ket{\psi}\nonumber\\
 &amp;=&amp;  \bra{\psi}P_k\ket{\psi} \rule{0mm}{7mm}\\
@@ -740,8 +746,8 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <p>Rescribamos <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> en el caso de que sea <span class="math notranslate nohighlight">\(\lambda_k\)</span> sea un autovalor <span class="math notranslate nohighlight">\(d_k\)</span> veces degenerado</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7ced0ebe-0f8e-480e-98b8-b4932a68cfc1">
-<span class="eqno">(39)<a class="headerlink" href="#equation-7ced0ebe-0f8e-480e-98b8-b4932a68cfc1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-34db1c77-3d74-4f3d-812f-640e48e7b88d">
+<span class="eqno">(39)<a class="headerlink" href="#equation-34db1c77-3d74-4f3d-812f-640e48e7b88d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k) &amp;=&amp; \sum_{a=1}^{d_k} |\braket{\lambda^a_k}{\psi}|^2  = 
 \sum_{a=1}^{d_k} \braket{\psi}{\lambda^a_k}\braket{\lambda^a_k}{\psi} \nonumber\\
 &amp;=&amp;\bra{\psi} \left( \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}  \right) = \bra{\psi}P_k \ket{\psi} 
@@ -752,8 +758,8 @@ P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \)</span>$
 es el proyector sobre el subespacio propio.</p>
 <p>Ahora podemos introducir este resultado en la expresión para el valor esperado de <span class="math notranslate nohighlight">\(A\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-1113105c-6936-431a-a08d-2c83eb0eb43f">
-<span class="eqno">(40)<a class="headerlink" href="#equation-1113105c-6936-431a-a08d-2c83eb0eb43f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-d118c801-4f82-40a4-ba76-489c53f1aea4">
+<span class="eqno">(40)<a class="headerlink" href="#equation-d118c801-4f82-40a4-ba76-489c53f1aea4" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle A\rangle_\psi &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 
@@ -793,8 +799,8 @@ Demuestra que el valor esperado de un observable <span class="math notranslate n
 <p>La <em>varianza</em>  es la media de la desviación cuadrática de la variable aleatoria <span class="math notranslate nohighlight">\((\lambda,p(\lambda))\)</span> es decir
 <br>
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-bd28ca73-3715-4cbb-94d8-259a61a9adbc">
-<span class="eqno">(41)<a class="headerlink" href="#equation-bd28ca73-3715-4cbb-94d8-259a61a9adbc" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ae2a7812-49ec-4fea-a9bd-737db833126c">
+<span class="eqno">(41)<a class="headerlink" href="#equation-ae2a7812-49ec-4fea-a9bd-737db833126c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 ~~\sigma ^2 &amp;=&amp; \overline{(\lambda_i-\bar\lambda_i)^2} = \overline{ \lambda^2 - 2\lambda\bar\lambda +\bar\lambda^2}
 \\
 &amp;=&amp;  \overline{\lambda^2} - \overline{\lambda}^2 \rule{0mm}{8mm}
@@ -941,8 +947,8 @@ Demostración<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-6b004dbc-97b4-4c4f-9ecb-c84aaf0dc90f">
-<span class="eqno">(42)<a class="headerlink" href="#equation-6b004dbc-97b4-4c4f-9ecb-c84aaf0dc90f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-1bac5404-2a0e-48c3-906f-c0d99ed73110">
+<span class="eqno">(42)<a class="headerlink" href="#equation-1bac5404-2a0e-48c3-906f-c0d99ed73110" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}\|\ket{\psi}\|^2 = \frac{d}{dt}\braket{\psi(t)}{\psi(t)} &amp;=&amp; \left(\rule{0mm}{3mm}\frac{d}{dt}\bra{\psi(t)}\right)\ket{\psi(t)} + 
 \bra{\psi(t)}\left(\frac{d}{dt}\ket{\psi(t)} \right)\nonumber\\
 &amp;=&amp; \left(\bra{\psi(t)}\frac{i}{\hbar}H^\dagger\right)\ket{\psi(t)} + \bra{\psi(t)}\left(-\frac{i}{\hbar}H\ket{\psi(t)} \right) \nonumber\\
@@ -995,8 +1001,8 @@ Desmostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Tomando la derivada temporal de la ecuación <span class="math notranslate nohighlight">\(\ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}\)</span>, que define <span class="math notranslate nohighlight">\(U(t,t_0)\)</span>, tenemos para cada miembro</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1584807d-958a-411f-b467-20118f081f29">
-<span class="eqno">(43)<a class="headerlink" href="#equation-1584807d-958a-411f-b467-20118f081f29" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-8290b737-28cf-4207-8e9c-94e10c182dc7">
+<span class="eqno">(43)<a class="headerlink" href="#equation-8290b737-28cf-4207-8e9c-94e10c182dc7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}\ket{\psi(t)} &amp;~=~&amp; -\frac{i}{\hbar}  H(t)\ket{\psi(t)} = -\frac{i}{\hbar} H(t)U(t,t_0)\ket{\psi(t_0)}  \nonumber\\
 \frac{d}{dt}U(t,t_0)\ket{\psi(t_0)} &amp;~=~&amp; \left(\frac{d}{dt}U(t,t_0)\right)\ket{\psi(t_0)}
 \end{eqnarray}\]</div>
@@ -1025,8 +1031,8 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Basta con demostrar que se satisface la ecuación de evolución y la condición de contorno</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d0c04fb3-b8bb-4fea-9331-a1ff8e7fa5f0">
-<span class="eqno">(44)<a class="headerlink" href="#equation-d0c04fb3-b8bb-4fea-9331-a1ff8e7fa5f0" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-63c77ac9-c3bc-4cd0-9358-85c3da56d1a0">
+<span class="eqno">(44)<a class="headerlink" href="#equation-63c77ac9-c3bc-4cd0-9358-85c3da56d1a0" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}U(t,t_0) &amp;=&amp; \frac{d}{dt} \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
     \nonumber\\ \rule{0mm}{6mm}
    &amp;=&amp; \frac{d}{dt}\left( I +(t-t_0)\left(-\frac{i}{\hbar} H\right) + \frac{1}{2!} 
@@ -1233,7 +1239,7 @@ U(t,0)\ket{n} = e^{-\frac{i}{\hbar} t E_n} \ket{n}\, .
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="02_Fundamentos_MC_intro.html"
@@ -1245,11 +1251,11 @@ U(t,0)\ket{n} = e^{-\frac{i}{\hbar} t E_n} \ket{n}\, .
       </div>
     </a>
     <a class="right-next"
-       href="../01_Circuitos/120_Circuitos_multiq%C3%BAbit.html"
+       href="../pruebas/214_Grover_lab.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Circuitos multicúbits</p>
+        <p class="prev-next-title">Algoritmo de Grover</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1261,6 +1267,7 @@ U(t,0)\ket{n} = e^{-\frac{i}{\hbar} t E_n} \ket{n}\, .
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1306,6 +1313,7 @@ By Javier Mas Solé
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -1332,8 +1340,8 @@ By Javier Mas Solé
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
