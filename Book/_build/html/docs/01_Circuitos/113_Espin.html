@@ -216,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../00_Formalismo/02_Fundamentos_MC.html">Elementos de Mecánica Cuántica</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../214_Grover_lab.html">Algoritmo de Grover</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pruebas/214_Grover_lab.html">Algoritmo de Grover</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuitos Cuánticos</span></p>
 <ul class="nav bd-sidenav">
@@ -920,8 +920,8 @@ U_{\boldsymbol{\omega}}(t,0) = \exp\left( -\frac{i}{\hbar} t H\right) = \exp\lef
 <img src="images/precession_tilted2.png" width="300"/>
 </div>
 <p>El resultado general es el siguiente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9804ffe3-cfad-40a7-9e13-c109053b2aec">
-<span class="eqno">()<a class="headerlink" href="#equation-9804ffe3-cfad-40a7-9e13-c109053b2aec" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-b73a394a-e2f5-4575-9155-ccf53bbed295">
+<span class="eqno">()<a class="headerlink" href="#equation-b73a394a-e2f5-4575-9155-ccf53bbed295" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U_{\boldsymbol{\omega}}(t,0) ~&amp;=&amp;~ \cos\left(\frac{t\omega}{2}\right) I + i \sin\left(\frac{t\omega}{2}\right) \, \frac{\boldsymbol{\omega}}{\omega}\cdot \boldsymbol{\sigma} \\
 &amp;&amp;\\
 &amp;=&amp; 
@@ -942,8 +942,8 @@ será</p>
 \end{split}\]</div>
 <p>La probabilidad de medir el estado <span class="math notranslate nohighlight">\(\ket{0}\)</span> o el estado <span class="math notranslate nohighlight">\(\ket{1}\)</span> en ese instante será
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-62e16394-05f9-4b00-b934-af282a2106ee">
-<span class="eqno">()<a class="headerlink" href="#equation-62e16394-05f9-4b00-b934-af282a2106ee" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-90940e1a-e778-4be0-8499-15a45ac9c556">
+<span class="eqno">()<a class="headerlink" href="#equation-90940e1a-e778-4be0-8499-15a45ac9c556" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p_0(t) &amp;=&amp; |\braket{0}{\psi(t)}|^2 =  \cos^2 \frac{t\omega}{2} + \frac{\omega_z^2}{\omega^2} \sin^2 \frac{t\omega}{2} \\ \rule{0mm}{8mm}
 p_1(t) &amp;=&amp;|\braket{1}{\psi(t)}|^2 =  \frac{\omega_x^2 + \omega_y^2}{\omega^2} \sin^2\frac{t\omega}{2}
 \end{eqnarray}\]</div>
@@ -1004,8 +1004,8 @@ U_z(t,0) = \begin{bmatrix} e^{it \omega/2} &amp; 0 \\ 0 &amp;e^{-it \omega/2}  \
 $$
 U_x(t,0) =</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-cdd33898-c96a-4302-9a68-b64e13daae1e">
-<span class="eqno">()<a class="headerlink" href="#equation-cdd33898-c96a-4302-9a68-b64e13daae1e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-77aaaedc-234e-4c7c-ac47-ad10d17cb5ad">
+<span class="eqno">()<a class="headerlink" href="#equation-77aaaedc-234e-4c7c-ac47-ad10d17cb5ad" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
  \cos \displaystyle\frac{t\omega}{2}  &amp;  i \sin\displaystyle\frac{t\omega}{2}  \\
  \rule{0mm}{8mm}
  i \sin\displaystyle\frac{t\omega}{2}  &amp; \cos\displaystyle\frac{t\omega}{2} 
@@ -1016,8 +1016,8 @@ U_x(t,0) =</p></li>
 &lt;br&gt;
 \end{aligned}\end{align} \]</div>
 <p>U_y(t,0) =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2d0fd2e0-aa7c-4aa6-84da-04541df30de0">
-<span class="eqno">()<a class="headerlink" href="#equation-2d0fd2e0-aa7c-4aa6-84da-04541df30de0" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-66614c60-9000-4eb7-bd6d-67ceb644357e">
+<span class="eqno">()<a class="headerlink" href="#equation-66614c60-9000-4eb7-bd6d-67ceb644357e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
  \cos \displaystyle\frac{t\omega}{2}  &amp;   \sin\displaystyle\frac{t\omega}{2}  \\
  \rule{0mm}{8mm}
   -\sin\displaystyle\frac{t\omega}{2}  &amp; \cos\displaystyle\frac{t\omega}{2} 
@@ -1034,8 +1034,8 @@ U_x(t,0) =</p></li>
 <p>Con él somos capaces de generar las puertas <span class="math notranslate nohighlight">\(X,Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span>, así como la puerta de Hadamard.
 <br>
 <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-4892c414-9329-4a4f-942f-c0a4f064483b">
-<span class="eqno">()<a class="headerlink" href="#equation-4892c414-9329-4a4f-942f-c0a4f064483b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-11bde1aa-676f-4baa-b569-c7804b14821d">
+<span class="eqno">()<a class="headerlink" href="#equation-11bde1aa-676f-4baa-b569-c7804b14821d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 i \,U_{\hat{\bf z}}( \Delta t ,0) &amp;=&amp;  \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1  \end{bmatrix} =  Z  
 \nonumber\\ 
 &amp;&amp; \\

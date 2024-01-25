@@ -61,7 +61,6 @@ $\newcommand{\i}{{\color{blue} i}}$
 
 ```{figure} ../thumbnails/myThumbnail.png
 :align: center
-:width: 400px
 ```
 
 +++
@@ -74,7 +73,7 @@ $\newcommand{\i}{{\color{blue} i}}$
 slideshow:
   slide_type: slide
 ---
-%run ../macro_CURSO.py
+%run ../macro_tQ.py
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -105,6 +104,8 @@ TEXTO AQU√ç
     
 :::
 ::::
+
+Mas texto
 
 +++
 
@@ -304,6 +305,8 @@ es relevante para especificar $\ket{u}$.
 Prueba esta igualdad   
 ::::
 
+Mas texto
+
 +++
 
 ::::{admonition} Ejercicio
@@ -342,9 +345,10 @@ $$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-<figure>
-<img src=./figuras/Grover1.png align=center width='70%'/>
-</figure>
+::::{figure} ./figuras/Grover1.png
+:width: 500px
+:align: center
+::::
 
 +++
 
@@ -364,11 +368,12 @@ $$
 R_w\ket{s} ~=~ \left( I - 2\ket{w}\bra{w}\rule{0mm}{8mm}\right)\ket{s} ~ = ~ -\frac{1}{\sqrt{N}} \ket{w} + \sqrt{\frac{N-1}{N}} \ket{s^\prime}
 $$
 
-<figure>
-<a id='fig_ref_2'></a>
-<img src="./figuras/Grover1.png" align=center width='30%'/>
-    <center>Pie de foto de la figura</center>
-</figure>
+::::{figure} ./figuras/Grover1.png
+:name: fig_ref_2
+:width: 300px
+:align: center
+Pie de foto de la figura
+::::
 
 
 La estrategia se basa en iterar una serie de operaciones que amplifiquen la amplitud de obtener el estado $\ket{w}$.
@@ -723,9 +728,10 @@ De modo que, de momento, lo vamos a ignorar, pero mantenemos una nota de atenci√
 
 +++
 
-<figure>
-<img src="./figuras/Grover5.png" width='60%' align=center/>
-</figure>
+::::{figure} ./figuras/Grover5.png
+:width: 60%
+:align: center
+::::
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

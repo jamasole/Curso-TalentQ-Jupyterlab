@@ -183,7 +183,7 @@ def find_figures(f_data, i_Lines_start):
 
     path_fig_list    = []
     align_fig_list   = []
-    scale_fig_list   = []
+    width_fig_list   = []
     caption_fig_list = []
     label_fig_list   = []
     
@@ -201,7 +201,7 @@ def find_figures(f_data, i_Lines_start):
         
         path_fig    = None
         align_fig   = None
-        scale_fig   = None
+        width_fig   = None
         caption_fig = None
         label_fig   = None
                 
@@ -240,32 +240,19 @@ def find_figures(f_data, i_Lines_start):
             elif 'align='  in line_img_split[i]:
                 align_fig  = line_img_split[i].split('=')[1].replace('\\"','').replace("\\'",'').replace('/>','').replace('\\n",\n','').replace(',\n','')
             elif 'width='  in line_img_split[i]:
-                scale_fig  = line_img_split[i].split('=')[1].replace('\\"','').replace("\'",'').replace('/>','').replace('\\n",\n','').replace(',\n','')
+                width_fig  = line_img_split[i].split('=')[1].replace('\\"','').replace("\'",'').replace('/>','').replace('\\n",\n','').replace(',\n','')
         
       
         ########################
         ######## #prints y asserts
-                
-
-
-        print(i_line_start, {f_data[i_line_start]})
     
         if i_line_label_a > 0:
             assert i_line_start <= i_line_label_a < i_line_end, f"{i_line_start} <= {i_line_label_a} < {i_line_end}"
-            print(i_line_label_a,   {f_data[i_line_label_a]}, {label_fig})
-        
-        print(i_line_img,  {f_data[i_line_img]})
-        print({path_fig}, {align_fig}, {scale_fig})
-        
+
         if i_line_caption > 0:
             assert i_line_start < i_line_caption <= i_line_end, f"{i_line_start} < {i_line_caption} <= {i_line_end}"
 
-            print(i_line_caption, {f_data[i_line_caption]}, caption_fig)
-
-        print(i_line_end, {f_data[i_line_end]})
-        print("=================================")
-
-        if not path_fig == None and not align_fig == None and not scale_fig == None:
+        if not path_fig == None and not align_fig == None and not width_fig == None:
 
             i_line_end_list.append(i_line_end) 
             i_line_start_list.append(i_line_start) 
@@ -275,7 +262,7 @@ def find_figures(f_data, i_Lines_start):
 
             path_fig_list.append(path_fig)
             align_fig_list.append(align_fig)
-            scale_fig_list.append(scale_fig)
+            width_fig_list.append(width_fig)
             caption_fig_list.append(caption_fig)
             label_fig_list.append(label_fig)
     
@@ -285,7 +272,7 @@ def find_figures(f_data, i_Lines_start):
                        i_line_img_list, 
                        i_line_caption_list]
 
-    datos_list_list = [path_fig_list, align_fig_list, scale_fig_list, caption_fig_list, label_fig_list]
+    datos_list_list = [path_fig_list, align_fig_list, width_fig_list, caption_fig_list, label_fig_list]
         
     return index_list_list, datos_list_list
 
@@ -303,7 +290,7 @@ def my_replace(f_data, i_line, new_text):
 
 
 
-def build_admonition_box(i, f_data, Class):
+def build_admonition_box(i, f_data, index_list_list, titles_list_list, Class):
 
     i_line_start         = index_list_list[0][i]  
     i_line_end           = index_list_list[1][i]  
@@ -325,8 +312,11 @@ def build_admonition_box(i, f_data, Class):
     ############################################################################
     ###### Empezamos a sustituir por el final
 
-    ### </div> 
-    my_replace(f_data, i_line_end, '::::'+'\\n"\n' )
+    ### </div>    
+    if f_data[i_line_end + 1] == "   ]\n":
+        my_replace(f_data, i_line_end, '::::'+'\\n"\n' )
+    else:
+        my_replace(f_data, i_line_end, '::::'+'\\n",\n' )
 
     ### </p>
     if i_line_end_p > 0:
@@ -362,7 +352,7 @@ def build_admonition_box(i, f_data, Class):
     #print("")
 
 
-def build_card_box(i, f_data):
+def build_card_box(i, f_data, index_list_list, titles_list_list):
     i_line_start         = index_list_list[0][i]  
     i_line_end           = index_list_list[1][i]  
     i_line_start_p       = index_list_list[2][i]  
@@ -386,7 +376,12 @@ def build_card_box(i, f_data):
     ##################################
     ######## </div> o </p></div>
 
-    my_replace(f_data, i_line_end, '::::'+'\\n"\n' )
+    ### </div>    
+    if f_data[i_line_end + 1] == "   ]\n":
+        my_replace(f_data, i_line_end, '::::'+'\\n"\n' )
+    else:
+        my_replace(f_data, i_line_end, '::::'+'\\n",\n' )
+
 
     if i_line_end_p > 0:
         ##############################
@@ -428,15 +423,49 @@ def build_card_box(i, f_data):
     #    print({f_data[i_line_start+i]})
     #print("")
 
-#def build_figure(i, f_data):
+def build_figure(i, f_data, index_fig_list_list, datos_list_list):
+
+    i_line_start   = index_fig_list_list[0][i]
+    i_line_end     = index_fig_list_list[1][i]
+    i_line_label_a = index_fig_list_list[2][i]
+    i_line_img     = index_fig_list_list[3][i]
+    i_line_caption = index_fig_list_list[4][i]
+
+    path_fig    = datos_list_list[0][i]
+    align_fig   = datos_list_list[1][i]
+    width_fig   = datos_list_list[2][i]
+    caption_fig = datos_list_list[3][i]
+    label_fig   = datos_list_list[4][i]
+        
+    ############################################################################
+    ###### Empezamos a sustituir por el final
+
+
+    if f_data[i_line_end + 1] == "   ]\n":
+        my_replace(f_data, i_line_end, '::::'+'\\n"\n' )
+    else:
+        my_replace(f_data, i_line_end, '::::'+'\\n",\n' )
+    
+
+    if i_line_caption != 0 and caption_fig != None:
+        my_replace(f_data, i_line_caption, caption_fig +'\\n",\n')
+    
+    my_replace(f_data, i_line_img, 
+               ':width: ' + width_fig + '\\n",\n' + 
+               '    ":align: ' + align_fig + '\\n",\n')
+        
+    if i_line_label_a != 0 and label_fig != None:
+        my_replace(f_data, i_line_label_a, ':name: ' + label_fig +'\\n",\n')
+
+    my_replace(f_data, i_line_start, '::::{figure} '+ path_fig +'\\n",\n' )
 
 
 ################################################################################
 # Obtenemos el nombre del archivo del primer algumento de la llamada
 file_name = sys.argv[1:][0]
 print("===========================")
-print("File = ", file_name)
-print("===========================")
+print("Input File  = ", file_name)
+
 
 
 #command_i_LINES_start_alert_info   = 'grep -n "<div class=" '+file_name+'| grep "alert alert-block alert-info" |  cut -d":" -f1'
@@ -475,27 +504,32 @@ with open(file_name, 'r') as f:
         title_lowercase = titles_list_list[2][i]        
 
         if 'definicion' in title_lowercase:
-            build_card_box(i, f_data)
+            build_card_box(i, f_data, index_list_list, titles_list_list)
 
         elif 'teorema' in title_lowercase:
-            build_card_box(i, f_data)
+            build_card_box(i, f_data, index_list_list, titles_list_list)
 
         elif 'lema' in title_lowercase:
-            build_card_box(i, f_data)  
+            build_card_box(i, f_data, index_list_list, titles_list_list)
 
         elif 'nota' in title_lowercase:
-            build_admonition_box(i, f_data, Class = "note")
+            build_admonition_box(i, f_data, index_list_list, titles_list_list, Class = "note")
 
         elif 'ejercicio' in title_lowercase:
-            build_admonition_box(i, f_data, Class = "tip")
+            build_admonition_box(i, f_data, index_list_list, titles_list_list, Class = "tip")
 
         elif 'ejemplo' in title_lowercase:
-            build_admonition_box(i, f_data, Class = "tip")
+            build_admonition_box(i, f_data, index_list_list, titles_list_list, Class = "tip")
 
+
+    ############################################################################
+    # Usando el número de linea donde empiezan las figuras, sacamos todas las lineas importantes          
     index_fig_list_list, datos_list_list = find_figures(f_data, i_Lines_start_figure)
 
-    #for i in reversed(range(len(i_Lines_start_figure))):
-        #build_figure(i, f_data)
+    ############################################################################
+    # Comenzamos a sustituir las figuras (empezando por el final)
+    for i in reversed(range(len(index_fig_list_list[0]))):
+        build_figure(i, f_data, index_fig_list_list, datos_list_list)
 
 
 ################################################################################
@@ -568,13 +602,10 @@ bash('mv ' +  out_file + '_clean ' + out_file, shell=True).decode("utf-8")
 
 
 
-
-
-
-
-
 ################################################################################
 ### Atacamos los <deatail> sueltos (los que no estaban en un cuadro)
+# Tenemos que hacerlo despues de haber reemplazado los cuadros, por eso lo 
+# hacemos sobre el archivo de salida
 
 command_i_Lines_start_details   = 'grep -n "<details><summary>" '+out_file + ' |  cut -d":" -f1'
 command_i_Lines_end_details   = 'grep -n "</details>" '+ out_file + ' |  cut -d":" -f1'
@@ -614,3 +645,5 @@ with open(out_file, 'w') as f_out:
         f_out.write(f_data[k])
 
     
+print("Output file = ", out_file)
+print("===========================")
