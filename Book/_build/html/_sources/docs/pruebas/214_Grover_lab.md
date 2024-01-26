@@ -68,6 +68,37 @@ $\newcommand{\i}{{\color{blue} i}}$
 # Algoritmo de Grover
 
 
+`````{tab-set}
+````{tab-item} C++
+```{code-cell} ipython3
+from matplotlib import rcParams, cycler
+import matplotlib.pyplot as plt
+import numpy as np
+plt.ion()
+```
+````
+
+````{tab-item} Python
+```python
+def main():
+    return
+```
+````
+
+
+````{tab-item} Java
+```java
+class Main {
+    public static void main(String[] args) {
+    }
+}
+```
+````
+
+`````
+
+
+
 ```{code-cell} ipython3
 ---
 slideshow:

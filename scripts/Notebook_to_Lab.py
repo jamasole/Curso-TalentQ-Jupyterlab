@@ -215,7 +215,7 @@ def find_figures(f_data, i_Lines_start):
             elif "<img"        in f_data[i_line_end]:
                 i_line_img     = i_line_end
             
-            elif "<center>"    in f_data[i_line_end]:
+            elif "<center>"    in f_data[i_line_end] and  "</center>"    in f_data[i_line_end]:
                 i_line_caption = i_line_end
                 caption_fig = re.search(r'<center>(.*?)</center>', f_data[i_line_caption]).group(1)
             
