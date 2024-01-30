@@ -377,7 +377,7 @@ $$
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 ::::{figure} ./figuras/Grover1.png
-:width: 500px
+:width: 10%
 :align: center
 ::::
 

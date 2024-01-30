@@ -69,7 +69,7 @@ $\newcommand{\i}{{\color{blue} i}}$
 
 
 `````{tab-set}
-````{tab-item} C++
+````{tab-item} Python
 ```{code-cell} ipython3
 from matplotlib import rcParams, cycler
 import matplotlib.pyplot as plt
@@ -377,7 +377,7 @@ $$
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 ::::{figure} ./figuras/Grover1.png
-:width: 500px
+:width: 10%
 :align: center
 ::::
 
