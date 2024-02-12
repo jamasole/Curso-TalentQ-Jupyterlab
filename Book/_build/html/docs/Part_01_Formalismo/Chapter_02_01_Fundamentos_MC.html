@@ -1,0 +1,1257 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Fundamentos de Mecánica Cuántica &#8212; Curso de Introducción a la Computación Cuántica</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "jamasole/Curso-TalentQ-Book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Fundamentos de Mecánica Cuántica" href="Chapter_02_01_Fundamentos_MC_myst.html" />
+    <link rel="prev" title="Probabilidades" href="Chapter_01_02_Formalismo_matem%C3%A1tico/01_05_Probabilidades_myst.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-light" alt="Curso de Introducción a la Computación Cuántica - Home"/>
+    <script>document.write(`<img src="../../_static/TalentQ_LogoNegNegro.png" class="logo__image only-dark" alt="Curso de Introducción a la Computación Cuántica - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Las reglas del juego</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter_01_01_formalismo_matematico_myst.html">Formalismo Matemático</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_01_02_Formalismo_matem%C3%A1tico/01_01_Numeros_Complejos_myst.html">Números Complejos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_01_02_Formalismo_matem%C3%A1tico/01_02_Vectores_myst.html">Vectores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_01_02_Formalismo_matem%C3%A1tico/01_03_Operadores_myst.html">Operadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_01_02_Formalismo_matem%C3%A1tico/01_04_Tensores_myst.html">Tensores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter_01_02_Formalismo_matem%C3%A1tico/01_05_Probabilidades_myst.html">Probabilidades</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Fundamentos de Mecánica Cuántica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter_02_01_Fundamentos_MC_myst.html">Fundamentos de Mecánica Cuántica</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/davidcb98/JupyterBook_plantilla/master?urlpath=lab/tree/Book/docs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/edit/master/Book/docs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/issues/new?title=Issue%20on%20page%20%2Fdocs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/docs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fundamentos de Mecánica Cuántica</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas">Axiomas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-ii-evolucion-con-el-tiempo"><span class="math notranslate nohighlight">\(\bullet\)</span> Postulado  II :  <em>Evolución con el tiempo</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-y-valores-esperados">Medidas y valores esperados</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">Valores esperados</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desviacion-estandar">Desviación estándar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-temporal">Evolución temporal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-schrodinger">Ecuación de Schrödinger</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-probabilidad">Conservación de la probabilidad.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operador-de-evolucion">Operador de Evolución</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-h-independiente-del-tiempo">Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-base-autoestados-de-h">Evolución en la base autoestados de H</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <right>
+<img   src="../figuras/logos/Logo TalentQ Azul.png" align=right  width="12%"/>
+</right>
+<section class="tex2jax_ignore mathjax_ignore" id="fundamentos-de-mecanica-cuantica">
+<h1>Fundamentos de Mecánica Cuántica<a class="headerlink" href="#fundamentos-de-mecanica-cuantica" title="Permalink to this heading">#</a></h1>
+<p><span class="math notranslate nohighlight">\( \newcommand{\bra}[1]{\langle #1|} \)</span>
+<span class="math notranslate nohighlight">\( \newcommand{\ket}[1]{|#1\rangle} \)</span>
+<span class="math notranslate nohighlight">\( \newcommand{\braket}[2]{\langle #1|#2\rangle} \)</span>
+<span class="math notranslate nohighlight">\( \newcommand{\ketbra}[2]{| #1\rangle\! \langle #2|} \)</span>
+<span class="math notranslate nohighlight">\( \newcommand{\tr}{{\rm tr}} \)</span>
+<span class="math notranslate nohighlight">\( \newcommand{\i}{{\color{blue} i}} \)</span>
+<span class="math notranslate nohighlight">\( \newcommand{\Hil}{{\cal H}} \)</span>
+<span class="math notranslate nohighlight">\( \newcommand{\V}{{\cal V}} \)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">macro_tQ</span> <span class="k">as</span> <span class="nn">tQ</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span><span class="n">Markdown</span><span class="p">,</span><span class="n">Latex</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">array_to_latex</span>
+<span class="kn">import</span> <span class="nn">copy</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="axiomas">
+<h2>Axiomas<a class="headerlink" href="#axiomas" title="Permalink to this heading">#</a></h2>
+<p>La Mecánica Cuántica es una teoría fundamentada en unos pilares axiomáticos cuya selección admite cierta flexibilidad. La más aceptada constituye lo que se denomina la <i>interpretación de Copenhagen</i>.</p>
+<div class="alert alert-block alert-info">
+<p style="text-align: left ;color: navy;"> 
+<b>Postulado I</b> :  <i>Vector de estado</i>
+<a id='axiomas-I'></a>
+<br>
+<br>    
+En un instante, $t$, la máxima información accesible de un <i>sistema cuántico aislado</i> está asociada a un vector $\ket{\psi}$, de norma unidad, $\braket{\psi}{\psi}=1$,  
+perteneciente a un espacio de Hilbert $\Hil$, cuya dimensión compleja $N$ equivale al número de grados de libertad del sistema. 
+</p>
+</div><ul class="simple">
+<li><p>El vector de estado es el objecto matemático que contiene la máxima información accesible. La palabra <em>estado</em> es engañosa por cuanto parece indicar que el sistema <em>está</em> en alguna estado concreto.  El vector de estado recibe también el nombre de <em>función de onda</em>.
+<br></p></li>
+<li><p>La dimensión de <span class="math notranslate nohighlight">\(\Hil\)</span> está relacionada con el número de grados de libertad del sistema.
+<br></p></li>
+<li><p>La <em>fase global</em> del vector de estado no contiene información: dos vectores que difieran en una fase global representan al mismo estado ningún experimento permite distinguirlos
+<br>
+$<span class="math notranslate nohighlight">\(
+\ket{\psi} \sim \ket{\psi'} =  e^{i\varphi}\ket{\psi} \, ,
+\)</span>$</p></li>
+</ul>
+<section id="bullet-postulado-ii-evolucion-con-el-tiempo">
+<h3><span class="math notranslate nohighlight">\(\bullet\)</span> Postulado  II :  <em>Evolución con el tiempo</em><a class="headerlink" href="#bullet-postulado-ii-evolucion-con-el-tiempo" title="Permalink to this heading">#</a></h3>
+<p>Lo que caracteriza y distingue a un sistema cuántico de otro está contenido en un <em>operador hermítico</em> <span class="math notranslate nohighlight">\(H = H^\dagger\)</span> que se denomina <strong>operador Hamiltoniano</strong></p>
+<p>El operador Hamiltoniano  gobierna su evolución. Supongamos que el sistema se prepara a <span class="math notranslate nohighlight">\(t=0\)</span> en un cierto estado <span class="math notranslate nohighlight">\(\ket{\psi(0)}\)</span></p>
+<div class="alert alert-block alert-info",text-align:center>
+<p style="color: navy;">  
+<b>Postulado  II :</b> <i>Evolución con el tiempo</i>
+<br>
+<br>    
+El cambio continuo en el tiempo de  $\ket{\psi(t)}$ de un sistema cuya dinámica está gobernada por un Hamiltoniano $H(t)$,  es <i>determinista</i> y es solución de la <i>Ecuación de Schrödinger</i>
+<br> 
+<br>
+$$
+ \frac{\partial\ket{\psi(t)}}{\partial t} =-\frac{i}{\hbar} H(t) \ket{\psi(t)} \, \label{eqschr}
+$$
+</p>
+</div>
+<p>La ecuación de Schrödinger es una ecuación diferencial ordinaria (una sola variable) para un vector.</p>
+<div class="alert alert-block alert-info">
+<p style="text-align: left ;color: navy;"> 
+<b>Postulado III:</b> $~$ <i>Medidas de Von Neumann</i>  
+<a id='postul_III_medida'></a>
+<br>
+<br>    
+- A una magnitud física medible le está asociado   un operador hermítico  $ A= A^\dagger$ que denominamos <b>observable</b>.
+<br>
+<br>
+- Los resultados de una medición no pueden dar como resultado nada más que uno de los valores propios de $A \Rightarrow \lambda_n$.
+<br>    
+<br>    
+- <i> Regla de Born</i>: La probabilidad de obtener  el autovalor $\lambda_k$ como resultado de una cierta medición, viene dada por
+la expresión
+<br><br>
+$$
+p(\lambda_k)~ = ~|\braket{\lambda_k}{\psi}|^2
+$$ 
+donde $\ket{\lambda_k}$ es el autovector asociado. 
+</p>
+</div>
+<p>Las magnitudes medibles son números reales, de ahí la exigencia de que <span class="math notranslate nohighlight">\(A\)</span> deba ser un operador hermítico</p>
+<div class="alert alert-block alert-danger">
+<p style="text-align: left ;"> 
+<b>Nota</b> 
+<ul class="simple">
+<li><p>La información contenida en <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> es <b>intrínsecamente probabilística</b>: <span class="math notranslate nohighlight">\(\psi\)</span> codifica una distribución de probabilidad, <span class="math notranslate nohighlight">\(p(\lambda_m)\)</span>, para cada posible resultado <span class="math notranslate nohighlight">\(\lambda_m\)</span>.</p></li>
+<li><p><em>Muy importante</em>:  <span class="math notranslate nohighlight">\((\lambda_m,p(\lambda_m))\)</span> no es una <i>pseudo-probabilidad</i> sino, probablemente, la única verdadera variable aleatoria en el sentido puro de la palabra que existe en la naturaleza.</p></li>
+</ul>
+</div><p>La fórmula para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span>  es cierta cuando el autovalor en cuestion es <em>no degenerado</em>.</p>
+<p>Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span> debe generalizarse:
+<br>
+<br></p>
+<div class="amsmath math notranslate nohighlight" id="equation-ac96b1ad-9be4-47d2-90ed-6ff8983661e0">
+<span class="eqno">(31)<a class="headerlink" href="#equation-ac96b1ad-9be4-47d2-90ed-6ff8983661e0" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \bra{\psi}\left(
+ \sum_{a=1}^{d_k}\ketbra{\lambda^a_k}{\lambda^a_k}\right) \ket{\psi}\nonumber\\
+&amp;=&amp;  \bra{\psi}P_k\ket{\psi} \rule{0mm}{7mm}\\
+\end{eqnarray}\]</div>
+<p>La última expresión revela que <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> no es más que el <em>valor esperado del proyector</em> <span class="math notranslate nohighlight">\(P_k = P^2_k\)</span>.</p>
+<p>Esta es la razón por la que las medidas a las que se refiere este postulado se denominana <em>proyectivas</em></p>
+<p>Veremos en el <span class="xref myst">capítulo 5</span> que son un caso especial del tipo más general posible de medidas.</p>
+<div class="alert alert-block alert-info",text-align:center>
+<p style="color: navy;">   
+<b>Postulado IV:</b>  $~$ <i>Colapso de la función de  onda</i>
+<br>
+<br>    
+Si el resultado de una medida  ha sido  $\lambda_n$,
+el estado del sistema,inmediatamente después de la medida, 
+<br>
+viene dado por el vector propio  
+$\ket{\lambda_n} \in \Hil$, normalizado $|\braket{\lambda_n}{\lambda_n}|=1$
+<br><br>
+$$
+\ket{\psi}~\stackrel{\lambda_n}{\Longrightarrow}~ \ket{\lambda_n} 
+$$
+</p>    
+</div>
+</section>
+</section>
+<section id="medidas-y-valores-esperados">
+<h2>Medidas y valores esperados<a class="headerlink" href="#medidas-y-valores-esperados" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>En Mecánica Cuántica especificamos un estado en las componentes de la expansión de un estado en <em>una base</em> ortonormal.
+Existen infinitas bases posibles para expresar un vector. ¿Qué base es la mejor? La respuesta es que depende del proceso que estudiemos.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Por ejemplo, si el proceso es <em>la medida</em> de un cierto observable <span class="math notranslate nohighlight">\(A=A^\dagger\)</span>, el resultado de nuestra medición sólo puede ser uno de los <em>valores propios</em> <span class="math notranslate nohighlight">\(\lambda_i\)</span>
+<br>
+<br>
+$<span class="math notranslate nohighlight">\(
+A \ket{\lambda_k} = \lambda_k \ket{\lambda_k}\, 
+\)</span><span class="math notranslate nohighlight">\(
+&lt;br&gt;
+donde \)</span>\ket{\lambda_k}<span class="math notranslate nohighlight">\( son los autovectores \)</span>{k=1,2,…}$ que forman una base ortonormal.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Ésta es la base natural adaptada a procesos de medida de <span class="math notranslate nohighlight">\(A\)</span>. En particular para conocer <em>con qué probabilidad</em> se producirá cada resultado, expandiremos el estado<br />
+<br>
+$<span class="math notranslate nohighlight">\(
+\ket{\psi} = \sum_{i=1}^N a_i \ket{\lambda_i}\, .
+\)</span><span class="math notranslate nohighlight">\(
+&lt;br&gt;
+El axioma IV (regla de Born) afirma que &lt;i&gt;la probabilidad de aparición&lt;/i&gt; del resultado \)</span>\lambda_i<span class="math notranslate nohighlight">\( es precisamente 
+&lt;br&gt;
+&lt;br&gt;
+\)</span><span class="math notranslate nohighlight">\(
+p(\lambda_i)=|\braket{\lambda_i}{\psi}|^2  = |a_i|^2 \, .
+\)</span>$</p></li>
+</ul>
+<ul class="simple">
+<li><p>La forma de tener acceso experimental a los números <span class="math notranslate nohighlight">\(p(\lambda_i)\)</span>  es mediante la <strong>repetición estadística</strong>. Si efectuamos la medida un número <span class="math notranslate nohighlight">\(n\)</span> de veces con <span class="math notranslate nohighlight">\(n\to \infty\)</span>, y contamos la frecuencia de aparición de los distintos <span class="math notranslate nohighlight">\(\lambda_i\)</span>, esto es
+<br>
+<br>
+$<span class="math notranslate nohighlight">\(
+\frac{n(\lambda_i)}{n}\, .
+\)</span><span class="math notranslate nohighlight">\(
+&lt;br&gt;
+en el límite \)</span>n\to \infty<span class="math notranslate nohighlight">\( dicha frecuencia experimental convergerá a la probabilidad teórica
+&lt;br&gt;
+&lt;br&gt;
+\)</span><span class="math notranslate nohighlight">\(
+\lim_{n\to\infty} \frac{n(\lambda_i)}{n} =  p(\lambda_i)  = |a_i|^2   \, .
+\)</span>$
+<br></p></li>
+</ul>
+<p>Vemos que, mediante repetición estadística, solamente podemos recuperar el <em>módulo de las amplitudes</em>
+<br>
+<br></p>
+<div class="math notranslate nohighlight">
+\[
+|a_i| = \lim_{n\to\infty} \sqrt{\frac{n(\lambda_i)}{n} }
+\]</div>
+<br>
+<div class="alert alert-block alert-danger">
+<p style="text-align:left">  
+<b>Notar:</b>
+<ul class="simple">
+<li><p>En Computación Cuántica, almacenamos la información en las amplitudes <span class="math notranslate nohighlight">\(a_i\)</span> en una base dada (la base computacional). Vemos que sólamente su módulo <span class="math notranslate nohighlight">\(|a_i|\)</span> es recuperable a través de medidas.</p></li>
+<li><p>Cada vez que seleccionamos un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, y un observable <span class="math notranslate nohighlight">\(A\)</span>, se genera una variable aleatoria <span class="math notranslate nohighlight">\((\lambda,p(\lambda))\, \to \)</span> en cada medida de <span class="math notranslate nohighlight">\(A\)</span> sobre <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> obtenemos un autovalor <span class="math notranslate nohighlight">\(\lambda_i\)</span> con una probabilidad <span class="math notranslate nohighlight">\(p(\lambda_i)\)</span>.
+La repetición del experimento permite reconstruir estimadores estadísticos.</p></li>
+</ul>
+</p>
+</div><div class="alert alert-block alert-success">
+<b>Ejercicio:</b>
+generaliza las expresiones anteriores al caso en que los autovalores $\lambda_k$ puedan ser  $d_k$ veces degenerados.
+</div>
+<section id="valores-esperados">
+<h3>Valores esperados<a class="headerlink" href="#valores-esperados" title="Permalink to this heading">#</a></h3>
+<p><a id='valores_esperados'></a></p>
+<p>Rescribamos la probabilidad de encontrar <span class="math notranslate nohighlight">\(\lambda_k\)</span> en el caso de que sea <span class="math notranslate nohighlight">\(d_k\)</span> veces degenerado</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ff552c82-6ce0-4e0b-8559-3e65d405edd8">
+<span class="eqno">(32)<a class="headerlink" href="#equation-ff552c82-6ce0-4e0b-8559-3e65d405edd8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+p(\lambda_k) &amp;=&amp; \sum_{a=1}^{d_k} |\braket{\lambda^a_k}{\psi}|^2  = 
+\sum_{a=1}^{d_k} \braket{\psi}{\lambda^a_k}\braket{\lambda^a_k}{\psi} \nonumber\\
+&amp;=&amp;\bra{\psi} \left( \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}  \right) = \bra{\psi}P_k \ket{\psi} 
+\end{eqnarray}\]</div>
+<p>donde
+$<span class="math notranslate nohighlight">\(
+P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
+\)</span>$
+es el proyector sobre el subespacio propio</p>
+<p>Por el <em>valor esperado</em> <span class="math notranslate nohighlight">\(\langle A\rangle\)</span> del <em>observable</em> <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, entendemos el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\lambda_n\)</span> obtenida por el método descrito.
+<br></p>
+<div class="amsmath math notranslate nohighlight" id="equation-553b0f9c-8894-4f27-b325-06aa2907fa94">
+<span class="eqno">(33)<a class="headerlink" href="#equation-553b0f9c-8894-4f27-b325-06aa2907fa94" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+\langle A\rangle &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
+   =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
+&amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 
+\end{eqnarray}\]</div>
+<p>Reconocemos entre paréntesis la descomposición espectral de <span class="math notranslate nohighlight">\(A\)</span>. Llegamos así a la siguiente expresión para el valor esperado de un observable <span class="math notranslate nohighlight">\(A\)</span> en un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>
+<br></p>
+<div class="alert alert-block alert-info",text-align:center>
+<p style="color: navy;">  
+<b>Teorema</b>:
+$$\langle A \rangle=\bra{\psi}A \ket{\psi} $$
+</div><p>En particular, las probabilidades mismas se pueden expresar como <em>valores esperados del proyector asociado</em></p>
+<div class="math notranslate nohighlight">
+\[
+p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle 
+\]</div>
+<p>El espectro de un observable está formado por números reales que podemos ordenar <span class="math notranslate nohighlight">\(\lambda_{min}&lt;...&lt;\lambda_{max}\)</span>.</p>
+<p>El valor esperado de un observable en uno de sus autoestados coincide con el autovalor asociado
+<br>
+<br>
+$<span class="math notranslate nohighlight">\(
+\bra{\lambda_i}A \ket{\lambda_i} = \bra{\lambda_i}\lambda_i \ket{\lambda_i}  = \lambda_i \braket{\lambda_i}{\lambda_i} = \lambda_i
+\)</span>$</p>
+<div class="alert alert-block alert-info",text-align:center>
+<p style="color: navy;">  
+<b>Lema</b>:
+<br>
+el valor esperado de un observable $A$ está acotado entre sus valores propios mínimo y máximo
+<br>  
+<br>    
+$$
+\lambda_{min} \leq \bra{\psi}A\ket{\psi} \leq \lambda_{max}
+$$
+<br>
+y las desigualdades anteriores se saturan en los autoestados correspondientes
+</div>
+<section id="desviacion-estandar">
+<h4>Desviación estándar<a class="headerlink" href="#desviacion-estandar" title="Permalink to this heading">#</a></h4>
+<p><a id='desviacion_estandar'></a></p>
+<p>La <em>varianza</em>  es la media de la desviación cuadrática de la variable aleatoria <span class="math notranslate nohighlight">\((\lambda,p(\lambda))\)</span> es decir
+<br>
+<br>
+$<span class="math notranslate nohighlight">\(
+~~\sigma ^2 = \overline{(\lambda_i-\bar\lambda_i)^2}= \overline{\lambda^2} - \overline{\lambda}^2
+\)</span>$
+de aquí se sigue, para la desviación estándar</p>
+<div class="alert alert-block alert-info",text-align:center>
+<p style="color: navy;">  
+<b>Teorema</b>:
+$$ \sigma = \sqrt{\bra{\psi}A^2\ket{\psi} - \bra{\psi} A\ket{\psi}^2}
+$$
+</div>
+<p>Evaluada en un estado propio <span class="math notranslate nohighlight">\(\ket{\lambda_i}\)</span>, la varianza de un operador es cero</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma^2 = \bra{\lambda_i}A^2\ket{\lambda_i} - \bra{\lambda_i} A\ket{\lambda_i}^2 = \bra{\lambda_i}\lambda_i^2\ket{\lambda_i} - \bra{\lambda_i} \lambda_i\ket{\lambda_i}^2 = 0
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vev_sig</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ket</span><span class="p">):</span>
+
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ket</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">ket</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>  <span class="o">==</span> <span class="mf">1.</span> <span class="c1"># chequeamos que la norma es unidad</span>
+    <span class="n">bra</span> <span class="o">=</span> <span class="n">ket</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+    
+    <span class="s1">&#39;el valor esperado&#39;</span>
+    <span class="n">vev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">bra</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">ket</span><span class="p">))[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">real</span>
+   
+    <span class="s1">&#39;la varianza&#39;</span>
+    <span class="n">A2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">var</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">bra</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="n">ket</span><span class="p">))[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">vev</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">vev</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; definamos una matriz hermítica &#39;</span>
+<span class="c1">#np.random.seed(10) </span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">+=</span>  <span class="n">A</span><span class="o">.</span><span class="n">getH</span><span class="p">()</span>
+
+<span class="n">eigvals</span><span class="p">,</span> <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">eigvals</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-5.7208, -0.4985,  2.8763])
+</pre></div>
+</div>
+</div>
+</div>
+<p>A continuación evaluamos el valor esperado en un vector aleatorio, y en dos autovectores de <span class="math notranslate nohighlight">\(A\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;definamos un ket&#39;</span>
+<span class="n">vec1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># este es un autovector aleatorio</span>
+<span class="n">vec2</span> <span class="o">=</span> <span class="n">eigvecs</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># este es el autovector de autovalor mínimo</span>
+<span class="n">vec3</span> <span class="o">=</span> <span class="n">eigvecs</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>          <span class="c1"># éste es un autovector de autovalor máximo</span>
+
+<span class="n">ket</span> <span class="o">=</span> <span class="n">vec2</span>       <span class="c1"># elegimos uno </span>
+
+<span class="s1">&#39;normalizado&#39;</span>
+<span class="n">norma</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ket</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">ket</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">real</span> 
+<span class="n">uket</span> <span class="o">=</span> <span class="n">ket</span><span class="o">/</span><span class="n">norma</span>
+
+
+<span class="n">vev</span><span class="p">,</span> <span class="n">sig</span> <span class="o">=</span> <span class="n">vev_sig</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">uket</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;A&gt;= &#39;</span><span class="p">,</span><span class="n">vev</span><span class="p">,</span> <span class="s1">&#39; sigma = &#39;</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt;=  -5.7208  sigma =  8.43e-08
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="evolucion-temporal">
+<h2>Evolución temporal<a class="headerlink" href="#evolucion-temporal" title="Permalink to this heading">#</a></h2>
+<section id="ecuacion-de-schrodinger">
+<h3>Ecuación de Schrödinger<a class="headerlink" href="#ecuacion-de-schrodinger" title="Permalink to this heading">#</a></h3>
+<p>El estado de un sistema <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span> posee la máxima información instantánea accesible de un sistema, es decir, a un tiempo dado <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Dado <span class="math notranslate nohighlight">\(\ket{\psi(t_0)}\)</span> en un instante inicial <span class="math notranslate nohighlight">\(t_0\)</span>, la evolución posterior obedece a la  ecuación diferencial de Schrödinger
+<br>
+<br>
+$<span class="math notranslate nohighlight">\(
+ \displaystyle \frac{d}{d t}\ket{\psi(t)} =-\frac{i}{\hbar} H(t) \ket{\psi(t)} \, .
+\)</span>$
+<br></p>
+<p>Hemos enfatizado el hecho de que, en el caso más general, <span class="math notranslate nohighlight">\(H(t)\)</span> puede depender del tiempo.</p>
+<div class="alert alert-block alert-danger">
+<p style="text-align: left"> 
+<b>Notar:</b>
+<p>las cantidades que entran en la ecuación de Schrödinger <em>tienen unidades</em>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(H\)</span> tiene unidades de <em>energía</em>. En el SI (Sistema Iternacional) <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(\hbox{Julios = J}\)</span>
+<br></p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> tiene unidades de <em>tiempo</em>, en el SI <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(\hbox{segundos = s}\)</span>
+<br></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hbar\)</span> es la constante de Planck, y  tiene unidades de <em>acción</em>= energía <span class="math notranslate nohighlight">\(\times\)</span>  tiempo. En el SI  <span class="math notranslate nohighlight">\(\to \)</span> <span class="math notranslate nohighlight">\(\hbox{Julios}\cdot\hbox{segundo} =  \hbox{J}\cdot\hbox{s}\)</span>. <span class="math notranslate nohighlight">\(~\)</span> Se trata de una <em>cantidad universal</em>
+$<span class="math notranslate nohighlight">\(
+\fbox{\)</span>\hbar = 1.054\times 10^{-34}~~ \hbox{J}\cdot\hbox{s}<span class="math notranslate nohighlight">\(}
+\)</span>$</p></li>
+</ul>
+</p>
+</div>    <section id="conservacion-de-la-probabilidad">
+<h4>Conservación de la probabilidad.<a class="headerlink" href="#conservacion-de-la-probabilidad" title="Permalink to this heading">#</a></h4>
+<p>La <em>hermiticidad</em> de <span class="math notranslate nohighlight">\(H\)</span> se relaciona directamente con la interpretación probabilística de <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>.</p>
+<div class="alert alert-block alert-info",text-align:center>
+<p style="color: navy;">  
+<b>Teorema</b>: 
+en la evolución temporal se conserva la norma del vector de estado
+</div><details><summary><p style="text-align:left"> >><i>Prueba</i> </p></summary>
+\begin{eqnarray}
+\frac{d}{dt}\|\ket{\psi}\|^2 = \frac{d}{dt}\braket{\psi(t)}{\psi(t)} &=& \left(\rule{0mm}{3mm}\frac{d}{dt}\bra{\psi(t)}\right)\ket{\psi(t)} + 
+\bra{\psi(t)}\left(\frac{d}{dt}\ket{\psi(t)} \right)\nonumber\\
+&=& \left(\bra{\psi(t)}\frac{i}{\hbar}H^\dagger\right)\ket{\psi(t)} + \bra{\psi(t)}\left(-\frac{i}{\hbar}H\ket{\psi(t)} \right) \nonumber\\
+&=&\frac{i}{\hbar} \bra{\psi(t)}(H^\dagger - H)\ket{\psi(t)} = 0
+\end{eqnarray}
+<br>
+Es decir: $\|\ket{\psi}\|$ no cambia con el tiempo, y 
+esto implica que la norma de $\ket{\psi(t)}$ se conserva $\Rightarrow 1 = \|\ket{\psi(0)}\| =\|\ket{\psi(t)}\|$
+</details>   
+</section>
+</section>
+<section id="operador-de-evolucion">
+<h3>Operador de Evolución<a class="headerlink" href="#operador-de-evolucion" title="Permalink to this heading">#</a></h3>
+<p><a id='operador_evolucion'></a></p>
+<p>La conservación de la norma implica que la evolución <span class="math notranslate nohighlight">\(\|\ket{\psi(0)\|} =\|\ket{\psi(t)}\|\)</span> es un <em>proceso unitario</em>.
+En otras palabras, debe existir un operador unitario</p>
+<div class="math notranslate nohighlight">
+\[
+U(t,t_0)^{-1}= U(t,t_0)^\dagger 
+\]</div>
+<p>que lleve el estado inicial al actual a tiempo <span class="math notranslate nohighlight">\(t\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+ U(t,t_0): \ket{\psi(t_0)}~~ \to~~ \rule{0mm}{3.5mm} \ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}
+\]</div>
+<div class="alert alert-block alert-danger">
+<p style="text-align: left"> 
+<b>Notar:</b>
+<br>
+<p>El operador de evolución satisface las siguientes propiedades</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(U(t_0,t_0) = I\)</span> , .</p></li>
+<li><p>transitividad:  <span class="math notranslate nohighlight">\(U(t,t_1)U(t_1,t_0)= U(t,t_0)\)</span></p></li>
+<li><p>invertibilidad: <span class="math notranslate nohighlight">\(U(t,t_0)^{-1} = U(t_0,t)\)</span></p></li>
+</ul>
+</p>
+</div><p>Evidentemente, el operador de evolución debe estar relacionado con el Hamiltoniano, que es quien gobierna la dinámica. Veamos a ver que hay una ecuación de Schrödinger también para el operador de evolución</p>
+<div class="alert alert-block alert-info",text-align:center>
+<p style="color: navy;">  
+<b>Teorema</b>:
+<br>
+el operador de evolución satisface la siguiente ecuación de evolución
+<br>
+<br>
+$$
+ \frac{d}{dt}U(t,t_0) = -\frac{i}{\hbar} H(t)\, U(t,t_0)
+$$
+</p>
+<details><summary><p style="color:grey;text-align:right"> >> <i>Demostración</i> </p></summary>
+Tomando la derivada temporal de la ecuación $\ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}$, que define $U(t,t_0)$, tenemos para cada miembro
+<div class="amsmath math notranslate nohighlight" id="equation-0e61a7b7-22a9-429c-8efb-36a445704cf6">
+<span class="eqno">(34)<a class="headerlink" href="#equation-0e61a7b7-22a9-429c-8efb-36a445704cf6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+\frac{d}{dt}\ket{\psi(t)} &amp;~=~&amp; -\frac{i}{\hbar}  H(t)\ket{\psi(t)} = -\frac{i}{\hbar} H(t)U(t,t_0)\ket{\psi(t_0)}  \nonumber\\
+\frac{d}{dt}U(t,t_0)\ket{\psi(t_0)} &amp;~=~&amp; \left(\frac{d}{dt}U(t,t_0)\right)\ket{\psi(t_0)}
+\end{eqnarray}\]</div>
+<p>Igualando ambas expresiones, y teniendo en cuanto que <span class="math notranslate nohighlight">\(\ket{\psi_0}\)</span> es arbitrario, obtenemos la ecuación deseada.</p>
+</details>
+</div>
+<section id="caso-de-h-independiente-del-tiempo">
+<h4>Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo<a class="headerlink" href="#caso-de-h-independiente-del-tiempo" title="Permalink to this heading">#</a></h4>
+<p>Cuando <span class="math notranslate nohighlight">\(H\)</span> no depende del tiempo podemos dar una expresión analítica para el operador de evolución</p>
+<div class="alert alert-block alert-info",text-align:center>
+<p style="color: navy"> 
+<b>Teorema</b>:
+<br>    
+para un hamiltoniano $H$ independiente del tiempo, el operador de evolución $U(t,t_0)$ es
+<br>
+<br>
+$$
+U(t,t_0) = \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
+$$
+</p>
+    <details><summary><p style="color:grey;text-align:right"> >> <i>Demostración</i> </p></summary>
+Basta con demostrar que se satisface la ecuación de evolución y la condición de contorno
+<div class="amsmath math notranslate nohighlight" id="equation-64d0997b-3f45-486c-9709-3cfd6af9e51e">
+<span class="eqno">(35)<a class="headerlink" href="#equation-64d0997b-3f45-486c-9709-3cfd6af9e51e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+\frac{d}{dt}U(t,t_0) &amp;=&amp; \frac{d}{dt} \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
+    \nonumber\\ \rule{0mm}{6mm}
+   &amp;=&amp; \frac{d}{dt}\left( I +(t-t_0)\left(-\frac{i}{\hbar} H\right) + \frac{1}{2!} 
+    (t-t_0)^2\left(-\frac{i}{\hbar} H\right)^2  + ...\right) \nonumber\\ \rule{0mm}{6mm}
+    &amp;=&amp; 0 +  \left(-\frac{i}{\hbar} H\right) +  (t-t_0)\left(-\frac{i}{\hbar} H\right)^2  + ... \nonumber\\ \rule{0mm}{6mm}
+&amp;=&amp;  \left(-\frac{i}{\hbar} H\right)\left( I + (t-t_0) \left(-\frac{i}{\hbar} H\right) + ...\right)
+  \nonumber \\ \rule{0mm}{6mm} 
+&amp;=&amp; \left(-\frac{i}{\hbar} H\right) \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)    \nonumber\\ \rule{0mm}{6mm}
+&amp;=&amp; -\frac{i}{\hbar} H \,  U(t,t_0)
+\end{eqnarray}\]</div>
+<p>Además
+$<span class="math notranslate nohighlight">\(
+U(t_0,t_0) =  \exp\left({-\frac{i}{\hbar} (t_0-t_0)H}\right)=\exp(0) = I
+\)</span>$</p>
+</details>
+</div>
+<div class="alert alert-block alert-danger">
+<p style="text-align: left"> 
+<b>Notar:</b>
+<br>
+que la cantidad ${-\frac{i}{\hbar} (t-t_0) H }$ es adimensional
+$$
+\frac{1}{\hbox{J}\cdot \hbox{s}}\hbox{s}\cdot\hbox{J} = 1
+$$
+<br>    
+Es decir, es un número puro. Por eso podemos exponenciarla. El operador de evolución $U(t,t_0)$ es, por tanto, también, una magnitud adimensional.
+</div><div class="alert alert-block alert-success">
+<b>Ejercicio:</b>
+ Escribe una función <i>psi(t,psi0,H)</i> que reciba como argumentos el array <i>psi0</i> de componentes de $\ket{\psi(0)}$, una matriz hermítica <i>H</i>, y un valor de <i>t</i>, y devuelva un vector columna correspondiente a $\ket{\psi(t)}$. Considera $\hbar=1$.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">psi</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">psi0</span><span class="p">,</span><span class="n">H</span><span class="p">):</span>
+    <span class="n">lpsi</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">psi0</span><span class="p">)</span>
+    <span class="n">lH</span> <span class="o">=</span> <span class="n">H</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">lpsi</span> <span class="o">==</span> <span class="n">lH</span>
+    
+    <span class="n">psi0ket</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">psi0</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">lpsi</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">psitket</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">expm</span><span class="p">(</span><span class="o">-</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">H</span><span class="p">),</span><span class="n">psi0ket</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">psitket</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-block alert-success">
+<b>Ejercicio:</b>
+crea un Hamiltoniano aleatorio $2\times 2$ y considera que la base en la que está escrito es $\{\ket{0},\ket{1}\}$. Partiendo de cualquiera de ellos, grafica las probabilidades de permanencia $p(\ket{0}\to \ket{0})$ y de transición $p(\ket{0}\to \ket{1})$ como funciones del tiempo (considera que $\hbar = 1$ por simplicidad). Grafica también el valor esperado de $H$ en ambos estados como función del tiempo. Observa el resultado e intenta explicar por qué es así.    
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">expm</span>
+
+<span class="s1">&#39; definamos un Hamiltoniano &#39;</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">H</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">getH</span><span class="p">()</span>
+
+<span class="s1">&#39;estado inicial |psi(0)&gt;&#39;</span>
+<span class="n">psi0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">tend</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">tlist</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">tend</span><span class="p">,</span> <span class="n">steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="s1">&#39;estado a tiempo t |psi(t)&gt;&#39;</span>
+<span class="n">psitketlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">psi</span><span class="p">(</span><span class="n">tlist</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">psi0</span><span class="p">,</span><span class="n">H</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tlist</span><span class="p">))]</span>
+
+<span class="s1">&#39;probabilidades&#39;</span>
+<span class="n">p00list</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">psitketlist</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tlist</span><span class="p">))]</span>
+<span class="n">p01list</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">psitketlist</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tlist</span><span class="p">))]</span>
+
+<span class="s1">&#39;valores esperados &lt;H&gt;(t)&#39;</span>
+<span class="n">psitbralist</span><span class="o">=</span> <span class="p">[</span><span class="n">psitketlist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tlist</span><span class="p">))]</span>
+<span class="n">Hvevtlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">psitbralist</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">H</span><span class="p">,</span><span class="n">psitketlist</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="o">.</span><span class="n">real</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tlist</span><span class="p">))]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Graficamos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;tab:red&#39;</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;time (s)&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;p(0i)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;tab:red&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tlist</span><span class="p">,</span><span class="n">p00list</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;tab:red&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tlist</span><span class="p">,</span><span class="n">p01list</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;tab:orange&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="s1">&#39;tab:red&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>  <span class="c1"># instantiate a second axes that shares the same x-axis</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;tab:blue&#39;</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;&lt;H&gt;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">)</span>  <span class="c1"># we already handled the x-label with ax1</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tlist</span><span class="p">,</span><span class="n">Hvevtlist</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  <span class="c1"># otherwise the right y-label is slightly clipped</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/8abb5b6459dbb21361b6c623471b8292587e133ef5c00e660b717652ff86cddc.png" src="../../_images/8abb5b6459dbb21361b6c623471b8292587e133ef5c00e660b717652ff86cddc.png" />
+</div>
+</div>
+</section>
+<section id="evolucion-en-la-base-autoestados-de-h">
+<h4>Evolución en la base autoestados de H<a class="headerlink" href="#evolucion-en-la-base-autoestados-de-h" title="Permalink to this heading">#</a></h4>
+<p>Sea <span class="math notranslate nohighlight">\(\{\ket{n}\}\)</span> una base de autoestados de <span class="math notranslate nohighlight">\(H \, \Rightarrow \,H \ket{n} = E_n \ket{n}~~~~n=1,..,N.\)</span></p>
+<p>En esta base <span class="math notranslate nohighlight">\(H\)</span> es una matriz <span class="math notranslate nohighlight">\(H_{mn}\)</span> diagonal</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H_{mn} =  \begin{bmatrix} E_0 &amp;  &amp; &amp; \\  &amp; E_1 &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix} =E_m \delta_{mn} \, .
+\end{split}\]</div>
+<p>Entonces la matriz de evolución es también diagonal
+$$
+U_{mn} = \exp\left(-\frac{i}{\hbar}t H_{mn}\right) =</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a268d064-7926-4482-be00-e7bfbfa2b4b7">
+<span class="eqno">(36)<a class="headerlink" href="#equation-a268d064-7926-4482-be00-e7bfbfa2b4b7" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-\frac{i}{\hbar}t E_0} &amp;  &amp; &amp; \\  &amp; e^{-\frac{i}{\hbar} t E_1}  &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix}\]</div>
+<p>$$</p>
+<div class="alert alert-block alert-warning">
+<p style="color: #4B5320;">
+<b>En resumen</b> : 
+<br>
+- la evolución temporal de un autoestado de la energía es trivial (es una fase global)
+<br>
+<br>
+$$
+U(t,0)\ket{n} = e^{-\frac{i}{\hbar} t E_n} \ket{n}\, .
+$$
+<br>
+- Esta fase deja de ser trivial cuando afecta a una combinación lineal. La forma más eficaz de calcular la evolución de un estado arbitrario es expresarla en la base $\{\ket{n}\}$. 
+<br>
+Es decir, si a $t=0$
+<br>
+<br>
+$$
+\ket{\psi(t=0)} = \sum_n c_n \ket{n} \, 
+$$
+<br>
+entonces, a tiempo $t$ 
+$$
+\ket{\psi(t)} = \sum_n c_n e^{-\frac{i}{\hbar}E_n} \ket{n} \, .
+$$
+</p>
+</div>    </section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "davidcb98/JupyterBook_plantilla",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/Part_01_Formalismo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter_01_02_Formalismo_matem%C3%A1tico/01_05_Probabilidades_myst.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Probabilidades</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Chapter_02_01_Fundamentos_MC_myst.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Fundamentos de Mecánica Cuántica</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas">Axiomas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-ii-evolucion-con-el-tiempo"><span class="math notranslate nohighlight">\(\bullet\)</span> Postulado  II :  <em>Evolución con el tiempo</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-y-valores-esperados">Medidas y valores esperados</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">Valores esperados</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desviacion-estandar">Desviación estándar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-temporal">Evolución temporal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-schrodinger">Ecuación de Schrödinger</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conservacion-de-la-probabilidad">Conservación de la probabilidad.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operador-de-evolucion">Operador de Evolución</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-h-independiente-del-tiempo">Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-base-autoestados-de-h">Evolución en la base autoestados de H</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Javier Mas Solé
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
