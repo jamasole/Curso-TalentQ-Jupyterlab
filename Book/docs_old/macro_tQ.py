@@ -12,11 +12,11 @@ import copy
 # Definimos funciones auxiliares para printear
 
 def MatrixToLatex(A):
-    a="\\begin{bmatrix}"
+    a="\\begin{bmatrix} "
     for i in range(A.shape[0]):
         for j in range(A.shape[1]):
             if ((j+1)%A.shape[1])==0:           
-                a=a+"{0:.2f}".format(A[i,j])
+                a=a+"{0:.2f} ".format(A[i,j])
             else:
                 a=a+"%s&"%"{0:.2f}".format(A[i,j])
         if ((i+1)%A.shape[0])!=0:

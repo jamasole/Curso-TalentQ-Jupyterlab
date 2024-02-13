@@ -475,7 +475,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-cartesiana-y-polar">Formas cartesiana y polar</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-cartesiana">Forma Cartesiana</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-cartesiana">Forma Cartesiana</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-complejos-en-python">Numeros complejos en python:</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-polar">Forma Polar</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-entre-formas-cartesiana-y-polar">Conversión entre formas cartesiana y polar</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-compleja">Conjugacion compleja</a></li>
@@ -505,7 +508,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 12, 2024 | 4 min read</p>
+<div><p>Feb 13, 2024 | 4 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 15%;" /></a>
@@ -540,12 +543,14 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[a^2 &gt;0\]</div>
 <p>por ejemplo <span class="math notranslate nohighlight">\(~~2^2 =  4~~\)</span> pero también <span class="math notranslate nohighlight">\(~~(-2)^2 = 4~~\)</span>. Por eso, la raíz cuadrada de un número real <u><em>sólo</em> existe si dicho número es positivo</u>.</p>
-<p>Por ejemplo <span class="math notranslate nohighlight">\(\sqrt{4}=\pm 2\)</span>, mientras que $<span class="math notranslate nohighlight">\(\sqrt{-4}= \, ?\)</span>$</p>
+<p>Por ejemplo <span class="math notranslate nohighlight">\(\sqrt{4}=\pm 2\)</span>, mientras que</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{-4}= \, ?\]</div>
 <p><strong>Pregunta</strong>: <span class="math notranslate nohighlight">\(~~\)</span> ¿cómo podríamos definir la <u>raíz cuadrada de un número real negativo</u>?</p>
 <p><strong>Respuesta</strong>: para hacerlo, es necesario <u>ampliar el conjunto de los números reales</u>.</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
-<p class="sd-card-text"><b>Definición</b>: </i>(número <span class="math notranslate nohighlight">\(i\)</span>) </i></p>
+<p class="sd-card-text"><b>Definición</b>: </i>número <span class="math notranslate nohighlight">\(i\)</span></i></p>
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text">se postula la existencia de un <i>nuevo número</i>, <span class="math notranslate nohighlight">\(~i\)</span>, que es la solución única de la ecuación <span class="math notranslate nohighlight">\(~\)</span></p>
@@ -572,15 +577,18 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\frac{i}{i} = 1\]</div>
 <p>Observar que el <em>inverso multiplicativo</em>  <span class="math notranslate nohighlight">\(1/i\)</span> también es <span class="math notranslate nohighlight">\(-i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-0f815277-96e2-4a59-a395-f989f4d36ecf">
-<span class="eqno">(1)<a class="headerlink" href="#equation-0f815277-96e2-4a59-a395-f989f4d36ecf" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-5c146997-0f36-4970-bd88-40f4843b2af8">
+<span class="eqno">(1)<a class="headerlink" href="#equation-5c146997-0f36-4970-bd88-40f4843b2af8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{i}{i}  &amp;=&amp;   1 \nonumber\\
 i (-i) &amp;=&amp; - i^2  =  1
 \end{eqnarray}\]</div>
 <p>por tanto hay una identificación importante</p>
 <div class="math notranslate nohighlight">
 \[ -i = \frac{1}{i} \]</div>
-<p><b>Resumen</b>: la solución al problema planteado consiste en <i>extender</i> el cuerpo de los números reales <span class="math notranslate nohighlight">\({\mathbb R}\)</span> al de los complejos <span class="math notranslate nohighlight">\({\mathbb C}\)</span> que, ahora, incluyen el número <span class="math notranslate nohighlight">\(i\)</span></p>
+<div class="attention admonition">
+<p class="admonition-title">Resumen</p>
+<p>La solución al problema planteado consiste en <i>extender</i> el cuerpo de los números reales <span class="math notranslate nohighlight">\({\mathbb R}\)</span> al de los complejos <span class="math notranslate nohighlight">\({\mathbb C}\)</span> que, ahora, incluyen el número <span class="math notranslate nohighlight">\(i\)</span></p>
+</div>
 </section>
 <section id="formas-cartesiana-y-polar">
 <h2>Formas cartesiana y polar<a class="headerlink" href="#formas-cartesiana-y-polar" title="Permalink to this heading">#</a></h2>
@@ -597,8 +605,9 @@ y &amp; \hbox{es la } parte~imaginaria
 \right.
 \end{split}\]</div>
 <p>Un número complejo se representa  en el <strong>plano complejo</strong>: la parte real  en el <em>eje horizontal</em>, y la parte imaginaria  en el <em>eje vertical</em></p>
-<p><strong>Numeros complejos en python:</strong></p>
-<p>en <em>python</em>, el número  imaginario <span class="math notranslate nohighlight">\(\i\)</span> se representa con la letra j.</p>
+<section id="numeros-complejos-en-python">
+<h4>Numeros complejos en python:<a class="headerlink" href="#numeros-complejos-en-python" title="Permalink to this heading">#</a></h4>
+<p>En <em>python</em>, el número  imaginario <span class="math notranslate nohighlight">\(\i\)</span> se representa con la letra j.</p>
 <p>Añadiendo +0j convertimos un <i>float</i> en un <i>complex</i></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -638,11 +647,12 @@ y &amp; \hbox{es la } parte~imaginaria
 </div>
 </div>
 </section>
+</section>
 <section id="forma-polar">
 <h3>Forma Polar<a class="headerlink" href="#forma-polar" title="Permalink to this heading">#</a></h3>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
-<p class="sd-card-text"><b>Teorema</b>: </i>(Fórmula de Euler)</i></p>
+<p class="sd-card-text"><b>Teorema</b>: </i>Fórmula de Euler</i></p>
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text">Dado un ángulo <span class="math notranslate nohighlight">\(\theta \in (0,2\pi)\)</span> las dos expresiones siguientes son equivalentes</p>
@@ -660,11 +670,14 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">La demostración de la Fórmula de Euler viene de expandir ambos miembros en serie de Taylor en torno a <span class="math notranslate nohighlight">\(\theta = 0\)</span> y comprobar que ambas series son iguales</p>
-<p class="sd-card-text">\begin{array}{rcl}
-e^{i\theta} &amp;=&amp; 1 + \i\theta + \frac{1}{2}(\i\theta)^2 + \frac{1}{3!}(\i\theta)^3+, … \
-&amp;=&amp; 1 -\frac{1}{2}\theta^2 ~+~ … ~+~ \i \left(\theta - \frac{1}{3!} \theta^3+ , …\right) \
-&amp;=&amp; \cos \theta  + i \sin \theta
-\end{array}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
+e^{i\theta} &amp;=&amp; 1 + \i\theta + \frac{1}{2}(\i\theta)^2 + \frac{1}{3!}(\i\theta)^3+\, ... \\
+    &amp;=&amp; 1 -\frac{1}{2}\theta^2 ~+~ ... ~+~ \i \left(\theta - \frac{1}{3!} \theta^3+ \, ...\right) \\
+    &amp;=&amp; \cos \theta  + i \sin \theta 
+\end{array} 
+\end{split}\]</div>
 </div>
 </details><p>El número <span class="math notranslate nohighlight">\(z=x + \i y\)</span> se puede representar en <em>forma polar</em></p>
 <div class="math notranslate nohighlight">
@@ -719,8 +732,8 @@ z=r exp(i th)= (-1.873-0.702j)
 </div>
 </div>
 <p>Usar la forma polar es útil en situaciones en las que aparecen productos y potencias del número <span class="math notranslate nohighlight">\(i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-c196f591-f96c-46f5-9869-f82977aad919">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c196f591-f96c-46f5-9869-f82977aad919" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-0cd03d9c-1b4a-4724-842d-26c18d74061b">
+<span class="eqno">(2)<a class="headerlink" href="#equation-0cd03d9c-1b4a-4724-842d-26c18d74061b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 i &amp;=&amp; e^{i\pi/2} \\ \rule{0mm}{10mm}
 -1 &amp;=&amp; e^{i\pi} \\ \rule{0mm}{10mm}
 i &amp;=&amp; e^{3i\pi/2} =e^{-i\pi/2} \\  \rule{0mm}{10mm}
@@ -729,7 +742,7 @@ i^{2+i} &amp;=&amp; (e^{i\pi/2})^{(2+i)}= e^{i\pi/2(2+i)} = e^{i\pi} e^{-\pi/2} 
 \end{eqnarray}\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<p>haz una lista de 10 números (fases) <span class="math notranslate nohighlight">\(\theta_i, ~i=0,...,9\)</span>, equi-espaciadas entre 0 y 2<span class="math notranslate nohighlight">\(\pi\)</span> y pinta los números complejos <span class="math notranslate nohighlight">\(z_i = r \exp(i \theta_i)\)</span> y sus complejos conjugados, <span class="math notranslate nohighlight">\(z^*_i\)</span>.</p>
+<p>Haz una lista de 10 números (fases) <span class="math notranslate nohighlight">\(\theta_i, ~i=0,...,9\)</span>, equi-espaciadas entre 0 y 2<span class="math notranslate nohighlight">\(\pi\)</span> y pinta los números complejos <span class="math notranslate nohighlight">\(z_i = r \exp(i \theta_i)\)</span> y sus complejos conjugados, <span class="math notranslate nohighlight">\(z^*_i\)</span>.</p>
 </div>
 </section>
 <section id="conversion-entre-formas-cartesiana-y-polar">
@@ -782,7 +795,7 @@ z = x + i y  = r e^{i\theta} ~~~ \hbox{ con } ~~~ \left\{\begin{array}{l} r=\sqr
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<p>calcula  la forma polar del número complejo <span class="math notranslate nohighlight">\(z = 4 + 3 i\)</span> a mano y verificalo con la función que acabamos de definir</p>
+<p>Calcula  la forma polar del número complejo <span class="math notranslate nohighlight">\(z = 4 + 3 i\)</span> a mano y verificalo con la función que acabamos de definir</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -837,7 +850,7 @@ z = x+\i y ~~~~\leftrightarrow~~~~ z^* = x - \i y \hspace{2cm}
 <p>En representación <em>cartesiana</em> se <em>suman las partes real e imaginaria por separado</em></p>
 <div class="math notranslate nohighlight">
 \[
-(a + \i b) + (c + \i d) = (a+c) + \i (b+d)\hspace{6cm}
+(a + \i b) + (c + \i d) = (a+c) + \i (b+d)
 \]</div>
 <p>La resta es obvia, ya que <span class="math notranslate nohighlight">\(a,b,c,d\)</span> pueden ser números negativos.</p>
 <div class="cell docutils container">
@@ -973,9 +986,7 @@ z z^*  = (x + \i y) (x-\i y) = x^2 + y^2 &gt;0
 \]</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Verifica el valor absoluto de un producto de números complejos es el producto de sus valores absolutos
-</pre></div>
-</div>
+<p>Verifica el valor absoluto de un producto de números complejos es el producto de sus valores absolutos</p>
 </div>
 </section>
 <section id="division">
@@ -1263,7 +1274,10 @@ comprobación z1/z2= (1.08707+2.79612j)
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formas-cartesiana-y-polar">Formas cartesiana y polar</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-cartesiana">Forma Cartesiana</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-cartesiana">Forma Cartesiana</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-complejos-en-python">Numeros complejos en python:</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-polar">Forma Polar</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-entre-formas-cartesiana-y-polar">Conversión entre formas cartesiana y polar</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugacion-compleja">Conjugacion compleja</a></li>
