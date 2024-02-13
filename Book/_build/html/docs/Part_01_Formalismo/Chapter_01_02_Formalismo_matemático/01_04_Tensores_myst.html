@@ -258,55 +258,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://mybinder.org/v2/gh/davidcb98/JupyterBook_plantilla/master?urlpath=lab/tree/Book/docs/Part_01_Formalismo/Chapter_01_02_Formalismo_matemático/01_04_Tensores_myst.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="../../../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -315,7 +266,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla" target="_blank"
+      <li><a href="https://github.com/jamasole/Curso-TalentQ-Jupyterlab" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -332,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/edit/master/Book/docs/Part_01_Formalismo/Chapter_01_02_Formalismo_matemático/01_04_Tensores_myst.ipynb" target="_blank"
+      <li><a href="https://github.com/jamasole/Curso-TalentQ-Jupyterlab/edit/main/Book/docs/Part_01_Formalismo/Chapter_01_02_Formalismo_matemático/01_04_Tensores_myst.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -349,7 +300,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/issues/new?title=Issue%20on%20page%20%2Fdocs/Part_01_Formalismo/Chapter_01_02_Formalismo_matemático/01_04_Tensores_myst.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/jamasole/Curso-TalentQ-Jupyterlab/issues/new?title=Issue%20on%20page%20%2Fdocs/Part_01_Formalismo/Chapter_01_02_Formalismo_matemático/01_04_Tensores_myst.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -560,8 +511,8 @@ document.write(`
 </div>
 </div>
 <p>con la propiedad <em>bilineal</em>. Es decir, como el producto ordinario, satisface la propiedad distributiva.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-04a9e26c-79f8-47e7-a04c-317a4b002c39">
-<span class="eqno">(10)<a class="headerlink" href="#equation-04a9e26c-79f8-47e7-a04c-317a4b002c39" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-fcdbd556-f7c2-41f9-8185-2548c52466a7">
+<span class="eqno">(10)<a class="headerlink" href="#equation-fcdbd556-f7c2-41f9-8185-2548c52466a7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;\equiv &amp;~~
 \ket{u}\otimes\ket{y} ~+~ \ket{u}\otimes\ket{z} ~+~ \ket{v}\otimes\ket{y} ~+~~
  \ket{v}\otimes\ket{z} \\
@@ -1018,8 +969,8 @@ A:\ket{u} \to \ket{v} \equiv A\ket{u}
 <ul class="simple">
 <li><p>Con la matriz, el operador se reconstruye en la base canónica de productos externos</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-abf4b478-4147-424e-aac2-697aaf531666">
-<span class="eqno">(11)<a class="headerlink" href="#equation-abf4b478-4147-424e-aac2-697aaf531666" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-22de7721-40ee-4af2-9ccf-9557c363a1df">
+<span class="eqno">(11)<a class="headerlink" href="#equation-22de7721-40ee-4af2-9ccf-9557c363a1df" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
  A &amp;~~=~&amp; 
  \sum_{i_1,...,i_n,\, j_1,...,j_n=0}^{d-1} A_{i_1...i_n, \, j_1...j_n} \ket{i_1...i_n}\bra{j_1...j_n}
  ~~~~=~~~~
@@ -1156,7 +1107,7 @@ en un producto de Kronecker <span class="math notranslate nohighlight">\(A^{(1)}
     {
         requestKernel: true,
         binderOptions: {
-            repo: "davidcb98/JupyterBook_plantilla",
+            repo: "binder-examples/jupyter-stacks-datascience",
             ref: "master",
         },
         codeMirrorConfig: {

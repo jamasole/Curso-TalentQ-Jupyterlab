@@ -3,8 +3,7 @@ author: Javier Mas Solé
 logo: 'TalentQ_LogoNegNegro.png'
 
 # Short description about the book
-description: >-
-  A brief introduction to Python programming for scientific applications.
+description: Curso básico sobre Computación Cuántica
 
 
 only_build_toc_files          : true  # Only build files in _toc
@@ -42,14 +41,14 @@ notebook_interface            : "notebook"
 
 # Launch button settings
 repository:
-  url                         : https://github.com/davidcb98/JupyterBook_plantilla
+  url                         : https://github.com/jamasole/Curso-TalentQ-Jupyterlab
   path_to_book                : "Book"    # Optional path to your book, relative to the repository root
-  branch                      : master  # Which branch of the repository should be used when creating links (optional)
+  branch                      : main  # Which branch of the repository should be used when creating links (optional)
 
-launch_buttons:
-  notebook_interface     : "jupyterlab"  # or "classic"
-  binderhub_url          : "https://mybinder.org"
-  thebe                  : true    # para ejecución interactiva
+#launch_buttons:
+#  notebook_interface     : "jupyterlab"  # or "classic"
+#  binderhub_url          : "https://mybinder.org"
+#  thebe                  : true    # para ejecución interactiva
 
 
 
@@ -72,7 +71,7 @@ sphinx:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js  # Para usar Plotly
 
 latex:
-  latex_engine                : "xelatex"
+  latex_engine                : "pdflatex"
   latex_documents:
     targetname: book.tex
 

@@ -257,55 +257,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://mybinder.org/v2/gh/davidcb98/JupyterBook_plantilla/master?urlpath=lab/tree/Book/docs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC_myst.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -314,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla" target="_blank"
+      <li><a href="https://github.com/jamasole/Curso-TalentQ-Jupyterlab" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/edit/master/Book/docs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC_myst.ipynb" target="_blank"
+      <li><a href="https://github.com/jamasole/Curso-TalentQ-Jupyterlab/edit/main/Book/docs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC_myst.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +299,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/davidcb98/JupyterBook_plantilla/issues/new?title=Issue%20on%20page%20%2Fdocs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC_myst.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/jamasole/Curso-TalentQ-Jupyterlab/issues/new?title=Issue%20on%20page%20%2Fdocs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC_myst.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -602,8 +553,8 @@ p(\lambda_k)~ = ~|\braket{\lambda_k}{\psi}|^2
 </div>
 <p>La fórmula para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span>  es cierta cuando el autovalor en cuestion es <em>no degenerado</em>.</p>
 <p>Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span> debe generalizarse:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-36c063c9-3463-45d7-a0e7-f3e4e2cda401">
-<span class="eqno">(14)<a class="headerlink" href="#equation-36c063c9-3463-45d7-a0e7-f3e4e2cda401" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-dd454b5c-f43e-461c-bb13-9a7217a88754">
+<span class="eqno">(14)<a class="headerlink" href="#equation-dd454b5c-f43e-461c-bb13-9a7217a88754" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \bra{\psi}\left(
  \sum_{a=1}^{d_k}\ketbra{\lambda^a_k}{\lambda^a_k}\right) \ket{\psi}\nonumber\\
 &amp;=&amp;  \bra{\psi}P_k\ket{\psi} \rule{0mm}{7mm}\\
@@ -699,8 +650,8 @@ P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \]</div>
 <p>es el proyector sobre el subespacio propio</p>
 <p>Por el <em>valor esperado</em> <span class="math notranslate nohighlight">\(\langle A\rangle\)</span> del <em>observable</em> <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, entendemos el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\lambda_n\)</span> obtenida por el método descrito.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fba52384-8609-410b-b838-6d6cce677bfb">
-<span class="eqno">(15)<a class="headerlink" href="#equation-fba52384-8609-410b-b838-6d6cce677bfb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-6814e2ac-dfc8-40d8-acd4-80130eeab3c8">
+<span class="eqno">(15)<a class="headerlink" href="#equation-6814e2ac-dfc8-40d8-acd4-80130eeab3c8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle A\rangle &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 
@@ -928,8 +879,8 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Tomando la derivada temporal de la ecuación <span class="math notranslate nohighlight">\(\ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}\)</span>, que define <span class="math notranslate nohighlight">\(U(t,t_0)\)</span>, tenemos para cada miembro</p>
-<div class="amsmath math notranslate nohighlight" id="equation-57869f12-ec13-4c2d-8de2-114553f2133f">
-<span class="eqno">(16)<a class="headerlink" href="#equation-57869f12-ec13-4c2d-8de2-114553f2133f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-dc4e0f9b-34ea-4bc6-824e-b8c1b94dec69">
+<span class="eqno">(16)<a class="headerlink" href="#equation-dc4e0f9b-34ea-4bc6-824e-b8c1b94dec69" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}\ket{\psi(t)} &amp;~=~&amp; -\frac{i}{\hbar}  H(t)\ket{\psi(t)} = -\frac{i}{\hbar} H(t)U(t,t_0)\ket{\psi(t_0)}  \nonumber\\
 \frac{d}{dt}U(t,t_0)\ket{\psi(t_0)} &amp;~=~&amp; \left(\frac{d}{dt}U(t,t_0)\right)\ket{\psi(t_0)}
 \end{eqnarray}\]</div>
@@ -958,8 +909,8 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Basta con demostrar que se satisface la ecuación de evolución y la condición de contorno</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0dab065b-ed58-4491-9085-8a8d2a974e15">
-<span class="eqno">(17)<a class="headerlink" href="#equation-0dab065b-ed58-4491-9085-8a8d2a974e15" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-9d5d8bb5-f010-441c-a5e9-9254dd2cb06f">
+<span class="eqno">(17)<a class="headerlink" href="#equation-9d5d8bb5-f010-441c-a5e9-9254dd2cb06f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}U(t,t_0) &amp;=&amp; \frac{d}{dt} \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
     \nonumber\\ \rule{0mm}{6mm}
    &amp;=&amp; \frac{d}{dt}\left( I +(t-t_0)\left(-\frac{i}{\hbar} H\right) + \frac{1}{2!} 
@@ -1113,7 +1064,7 @@ Es decir, si a <span class="math notranslate nohighlight">\(t=0\)</span></p></li
     {
         requestKernel: true,
         binderOptions: {
-            repo: "davidcb98/JupyterBook_plantilla",
+            repo: "binder-examples/jupyter-stacks-datascience",
             ref: "master",
         },
         codeMirrorConfig: {
