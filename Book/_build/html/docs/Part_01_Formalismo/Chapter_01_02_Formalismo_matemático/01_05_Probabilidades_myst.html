@@ -490,7 +490,10 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-combinadas">Probabilidades combinadas</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-combinada">Probabilidad combinada</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-condicionada">Probabilidad condicionada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-condicionada">Probabilidad condicionada</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-bayes">Teorema de Bayes</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -549,24 +552,29 @@ document.write(`
 p(x) \in [0,1]~~~~~~~,~~~~~~~~\sum_{x\in X }p(x) = 1 
 \]</div>
 <p>Es decir, la suma de probabilidades de todos los sucesos posibles debe ser la unidad.</p>
-<ul class="simple">
-<li><p><strong>Media</strong>: la <em>media</em> de una variable aleatoria  viene dada por la expresión</p></li>
-</ul>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><b>Media</b>: la <i>media</i> de una variable aleatoria  viene dada por la expresión</p>
 <div class="math notranslate nohighlight">
 \[
 \overline X  = \sum_i x_i p(x_i)
 \]</div>
-<ul class="simple">
-<li><p><strong>Varianza</strong>: la <em>varianza</em>, <span class="math notranslate nohighlight">\(\sigma_X^2\)</span>, es la  <em>media de la desviación cuadrática</em> <span class="math notranslate nohighlight">\(\overline{(x_i - \overline{X} )^2}\)</span></p></li>
-</ul>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><b>Varianza</b>: la <i>varianza</i>, <span class="math notranslate nohighlight">\(\sigma_X^2\)</span>, es la <i>media de la desviación cuadrática</i> <span class="math notranslate nohighlight">\(\overline{(x_i - \overline{X} )^2}\)</span></p>
 <div class="math notranslate nohighlight">
 \[ 
 \sigma^2_X = \sum_j (x_j-\overline{X})^2 p(x_j) = \overline{X^2} - \overline{X}^2
 \]</div>
-<p>La cantidad <span class="math notranslate nohighlight">\(\sigma_X\)</span> se denomina  <i>desviación estándar</i>
-$<span class="math notranslate nohighlight">\(
+<p class="sd-card-text">La cantidad <span class="math notranslate nohighlight">\(\sigma_X\)</span> se denomina  <i>desviación estándar</i></p>
+<div class="math notranslate nohighlight">
+\[
 \sigma_X = \sqrt{\overline{X^2} - \overline{X}^2}
-\)</span>$</p>
+\]</div>
+</div>
+</div>
 </section>
 </section>
 <section id="la-conexion-estadistica">
@@ -621,11 +629,13 @@ f_N(x_i) = \frac{n(x_i)}{N}~~~\stackrel{N\to\infty}{\longrightarrow}~~~{p(x_i)}
 \]</div>
 <p>Experimentalmente sólo tenemos acceso a las frecuencias relativas <span class="math notranslate nohighlight">\(f_N(x_i)\)</span> para un <span class="math notranslate nohighlight">\(N\)</span> grande aunque finito.</p>
 <p>Igualmente, nuestro conocimiento de la  media <span class="math notranslate nohighlight">\(\overline X\)</span>  y la varianza <span class="math notranslate nohighlight">\(\sigma_X^2\)</span> siempre es aproximado, y se realiza a través de las medias y varianzas muestrales</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c19889ad-7151-4760-b8ec-9131c4695857">
-<span class="eqno">(15)<a class="headerlink" href="#equation-c19889ad-7151-4760-b8ec-9131c4695857" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{eqnarray*}
 \overline{A}_N = \sum_i x_i f_N(x_i)~~~&amp;\stackrel{N\to\infty}{\longrightarrow}&amp;~~~ \overline{X}\\
 \sigma_{A_N}^2 = \sum_{i} (x_i - \overline{A}_N)^2 f_N(x_i) ~~~&amp;\stackrel{N\to\infty}{\longrightarrow}&amp;~~~ \sigma_X^2
-\end{eqnarray}\]</div>
+\end{eqnarray*}
+\end{split}\]</div>
 </section>
 </section>
 <section id="distribuciones-frecuentes">
@@ -638,11 +648,13 @@ f_N(x_i) = \frac{n(x_i)}{N}~~~\stackrel{N\to\infty}{\longrightarrow}~~~{p(x_i)}
 <li><p><em>fracaso</em> <span class="math notranslate nohighlight">\(\to x=0\)</span> con probabilidad <span class="math notranslate nohighlight">\(p(0) = 1-p\)</span></p></li>
 </ul>
 <p>Podemos calcular fácilmente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aea6d477-0f0c-4372-8317-75cc280ba17e">
-<span class="eqno">(16)<a class="headerlink" href="#equation-aea6d477-0f0c-4372-8317-75cc280ba17e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{eqnarray}
 \overline X &amp;=&amp; \sum_i x_i p_i =1 \cdot p + 0\cdot (1-p) = p\\
 \sigma^2 &amp;=&amp; \sum_i (x-\overline X )^2p_i = (1-p)^2 p +(0-p)^2(1-p) = p(1-p)
-\end{eqnarray}\]</div>
+\end{eqnarray}
+\end{split}\]</div>
 </section>
 <section id="distribucion-binomial">
 <h3>Distribución binomial<a class="headerlink" href="#distribucion-binomial" title="Permalink to this heading">#</a></h3>
@@ -659,8 +671,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 \end{split}\]</div>
 <p>donde el primer factor tiene en cuenta las posibles ordenaciones en que aparecen <span class="math notranslate nohighlight">\(x\)</span> éxitos en <span class="math notranslate nohighlight">\(n\)</span> intentos.</p>
 <p>Un cálculo un poco más largo permite ver que, ahora</p>
-<div class="amsmath math notranslate nohighlight" id="equation-257a895a-b37d-489c-b9b3-bdb7d96babb5">
-<span class="eqno">(17)<a class="headerlink" href="#equation-257a895a-b37d-489c-b9b3-bdb7d96babb5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-d8c4e851-353c-4545-b012-0a0076bdcc60">
+<span class="eqno">(12)<a class="headerlink" href="#equation-d8c4e851-353c-4545-b012-0a0076bdcc60" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp;  np\\ \rule{0mm}{7mm}
 \sigma^2 &amp;=&amp; n p(1-p)
 \end{eqnarray}\]</div>
@@ -673,8 +685,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\right)
 \]</div>
 <p>Nos encontramos ante una variable aleatoria con un espacio muestral continuo <span class="math notranslate nohighlight">\(x\in (-\infty,+\infty)\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fa5aa7ff-bbee-4c62-a5c3-93567779663a">
-<span class="eqno">(18)<a class="headerlink" href="#equation-fa5aa7ff-bbee-4c62-a5c3-93567779663a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-9e8e3ff3-8529-43c1-b93d-d8d5b26a9990">
+<span class="eqno">(13)<a class="headerlink" href="#equation-9e8e3ff3-8529-43c1-b93d-d8d5b26a9990" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{X} &amp;=&amp; \int_{-\infty}^{+\infty} xp(x) dx = \mu \\
 \overline{(x-\overline X)^2} &amp;=&amp; \int_{-\infty}^{+\infty} (x-\mu)^2 p(x)dx =\sigma^2
 \end{eqnarray}\]</div>
@@ -747,8 +759,9 @@ p(x,y) = p(x) p(y)
 <section id="probabilidad-condicionada">
 <h3>Probabilidad condicionada<a class="headerlink" href="#probabilidad-condicionada" title="Permalink to this heading">#</a></h3>
 <p>La distribución de <strong>probabilidad condicionada</strong> <span class="math notranslate nohighlight">\(p(X|Y)\)</span> asigna un número <span class="math notranslate nohighlight">\(p(x|y)\)</span> a la probabilidad  de encontrar un suceso <span class="math notranslate nohighlight">\(X=x\)</span> una vez <em>sabemos</em> que <span class="math notranslate nohighlight">\(Y=y\)</span> ha sido el resultado de consultar <span class="math notranslate nohighlight">\(Y\)</span>.</p>
-<p>La manera de acceder experimentalmente a estas distribuciones, es efectuar un muestreo <span class="math notranslate nohighlight">\((a_i,b_i), i=1,...,N\)</span> de valores de <span class="math notranslate nohighlight">\((X,Y)\)</span> y <em>seleccionar</em> sólo aquellos sucesos donde <span class="math notranslate nohighlight">\(b_i = y\)</span> un valor concreto de <span class="math notranslate nohighlight">\(Y\)</span>.</p>
-<p>####  Teorema de Bayes</p>
+<p>La manera de acceder experimentalmente a estas distribuciones, es efectuar un muestreo <span class="math notranslate nohighlight">\((a_i,b_i)\)</span>, <span class="math notranslate nohighlight">\(i=1,...,N\)</span> de valores de <span class="math notranslate nohighlight">\((X,Y)\)</span> y <em>seleccionar</em> sólo aquellos sucesos donde <span class="math notranslate nohighlight">\(b_i = y\)</span> un valor concreto de <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+<section id="teorema-de-bayes">
+<h4>Teorema de Bayes<a class="headerlink" href="#teorema-de-bayes" title="Permalink to this heading">#</a></h4>
 <p>Las probabilidades <em>condicionales</em> y <em>combinadas</em> no son independientes. Se relacionan de la forma siguiente</p>
 <div class="math notranslate nohighlight">
 \[
@@ -766,6 +779,7 @@ p(x|y) = p(y|x) \frac{p(x)}{p(y)}
 \]</div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -851,7 +865,10 @@ p(x|y) = p(y|x) \frac{p(x)}{p(y)}
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-combinadas">Probabilidades combinadas</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-combinada">Probabilidad combinada</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-condicionada">Probabilidad condicionada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-condicionada">Probabilidad condicionada</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-bayes">Teorema de Bayes</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

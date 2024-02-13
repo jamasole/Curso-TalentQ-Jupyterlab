@@ -560,8 +560,8 @@ document.write(`
 </div>
 </div>
 <p>con la propiedad <em>bilineal</em>. Es decir, como el producto ordinario, satisface la propiedad distributiva.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ee6aa9a7-75d8-49db-884b-cde7db067e02">
-<span class="eqno">(10)<a class="headerlink" href="#equation-ee6aa9a7-75d8-49db-884b-cde7db067e02" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-04a9e26c-79f8-47e7-a04c-317a4b002c39">
+<span class="eqno">(10)<a class="headerlink" href="#equation-04a9e26c-79f8-47e7-a04c-317a4b002c39" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;\equiv &amp;~~
 \ket{u}\otimes\ket{y} ~+~ \ket{u}\otimes\ket{z} ~+~ \ket{v}\otimes\ket{y} ~+~~
  \ket{v}\otimes\ket{z} \\
@@ -605,7 +605,7 @@ i_1=1....d_1\)</span> y <span class="math notranslate nohighlight">\(i_2=1,...,d
 \]</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejemplo</p>
-<p>supongamos que <span class="math notranslate nohighlight">\(d_1 = 2\)</span> y <span class="math notranslate nohighlight">\(d_2=3\)</span>, entonces</p>
+<p>Supongamos que <span class="math notranslate nohighlight">\(d_1 = 2\)</span> y <span class="math notranslate nohighlight">\(d_2=3\)</span>, entonces</p>
 <div class="math notranslate nohighlight">
 \[
 \ket{w} = w_{11}\ket{11} + w_{12}\ket{12} + w_{13}\ket{13} + w_{21}\ket{21} + w_{22}\ket{22} + w_{23}\ket{23}
@@ -667,9 +667,7 @@ i_1 i_2 ~~\to ~~ a = d_2*(i_1-1) + i_2
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>escribe una función  &lt;i&gt;kronecker(u,v)&lt;/i&gt; que tome dos kets (como vectores columna)  y devuelva su producto de Kronecker. Verifica el resultado con la funcion $kron$ de numpy.  
-</pre></div>
-</div>
+<p>Escribe una función  <i>kronecker(u,v)</i> que tome dos kets (como vectores columna)  y devuelva su producto de Kronecker. Verifica el resultado con la funcion <span class="math notranslate nohighlight">\(kron\)</span> de numpy.</p>
 </div>
 </section>
 </section>
@@ -698,15 +696,20 @@ i_1 i_2 ~~\to ~~ a = d_2*(i_1-1) + i_2
 <p class="sd-card-text">El estado es <span class="math notranslate nohighlight">\(\ket{w}\)</span> es factorizable si y sólo si las componentes <span class="math notranslate nohighlight">\(w_{ij}\)</span> son factorizables en la forma <span class="math notranslate nohighlight">\(w_{ij} = u_i v_j~\)</span> con <span class="math notranslate nohighlight">\(i=1,...,d_1\)</span> y <span class="math notranslate nohighlight">\(j = 1,...,d_2\)</span>.</p>
 </div>
 </div>
-<details>
-<summary><p style="text-align:right;"> >> <i>Prueba</i> </p></summary>
-$$
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Prueba<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[
 \ket{w}= \sum_{i,j=1}^d w_{ij} \ket{e_{ij}}  = \sum_{i,j} u_{i}v_j \ket{e_i}\otimes \ket{e_j}= \sum_{i,j} u_{i} \ket{e_i}\otimes v_j\ket{e_j}  ~ =~ \sum_i u_i\ket{e_i} \otimes \sum_j v_j\ket{e_j} ~=~   \ket{u}\otimes \ket{v}
-$$
-identidad que se puede leer en ambos sentidos
-</p>
-:::
-<p>El carácter entrelazado de un vector es <i>genérico</i>, mientras que el carácter factorizable es <i>accidental</i>.</p>
+\]</div>
+<p class="sd-card-text">identidad que se puede leer en ambos sentidos</p>
+</div>
+</details><p>El carácter entrelazado de un vector es <i>genérico</i>, mientras que el carácter factorizable es <i>accidental</i>.</p>
 <p>Esto se sigue de un sencillo contaje:</p>
 <ul class="simple">
 <li><p>como función de <span class="math notranslate nohighlight">\(d\)</span>,  <span class="math notranslate nohighlight">\(\{w_{ij}\}\)</span> forma un conjunto de <span class="math notranslate nohighlight">\(d_1d_2\)</span> parámetros complejos (grados de libertad).</p></li>
@@ -777,15 +780,15 @@ s_1 &amp;\cdots  &amp;    &amp;  &amp; &amp; &amp;  0  \\  \vdots &amp; \ddots &
 <li><p>Los números <span class="math notranslate nohighlight">\(s_1,...,s_r &gt;0\)</span> son los autovalores de la matriz <span class="math notranslate nohighlight">\(w^\dagger w\)</span>  y se denominan <i>valores principales </i>  de la matriz <span class="math notranslate nohighlight">\(w_{ij}\)</span></p></li>
 </ul>
 <p>Esto quiere decir que podemos escribir</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d45b85f0-0cae-4ef2-8e1b-95004be0a2e5">
-<span class="eqno">(11)<a class="headerlink" href="#equation-d45b85f0-0cae-4ef2-8e1b-95004be0a2e5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 \ket{w} &amp;=&amp; \sum_{i=1}^{d_1}\sum_{a=1}^{d_2}\left( \sum_{j=1}^{d_1}\sum_{b=1}^{d_2} U_{ij}\Sigma_{jb}V_{ab}^* \right)\ket{e_{1,i}}\otimes \ket{e_{2,a}}
 \\  \rule{0mm}{10mm}
 &amp;=&amp; \sum_{j=1}^{d_1}\sum_{b=1}^{d_2}\Sigma_{jb}\left( \sum_{i=1}^{d_1} U_{ij}\ket{e_{1,i}} \right)\otimes  \left( \sum_{a=1}^{d_2} V_{ab}^* \ket{e_{2,a}}\right)
 \\   \rule{0mm}{10mm}
 &amp;=&amp; \sum_{j=1}^{d_1}\sum_{b=1}^{d_2}s_j\delta_{jb} \ket{f_{1,j}}\otimes \ket{f_{2,b}}\\   \rule{0mm}{10mm}
 &amp;=&amp; \sum_{j=1}^r s_j \ket{f_{1,j}}\otimes \ket{f_{2,j}}
-\end{eqnarray}\]</div>
+\end{eqnarray*}\]</div>
 <p>Por tanto, podemos saber si un <em>estado bipartito</em> es entrelazado calculando la descomposición en valores singulares de su matriz de coeficientes en cualquier base.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -867,19 +870,13 @@ The Schmidt number is p = 1
 </section>
 <section id="producto-tensorial-multiple">
 <h2>Producto Tensorial Múltiple<a class="headerlink" href="#producto-tensorial-multiple" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>El producto tensorial se puede generalizar a más de un factor.</p></li>
-</ul>
-<ul class="simple">
-<li><p>El espacio <span class="math notranslate nohighlight">\( \Hil_1\otimes \Hil_2 ... \otimes \Hil_n\)</span> formado por todas las <em>n-tuplas</em> ordenadas de vectores</p></li>
-</ul>
+<p>El producto tensorial se puede generalizar a más de un factor.</p>
+<p>El espacio <span class="math notranslate nohighlight">\( \Hil_1\otimes \Hil_2 ... \otimes \Hil_n\)</span> formado por todas las <em>n-tuplas</em> ordenadas de vectores</p>
 <div class="math notranslate nohighlight">
 \[\ket{u} = \ket{u_1u_2...u_n} \equiv\ket{u_1}\otimes\ket{u_2}\otimes ...\otimes \ket{u_n}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\ket{u_i}\in 
 \Hil_i\)</span> y sus combinaciones lineales <span class="math notranslate nohighlight">\(\{ a\ket{u}+ b\ket{v} + ...\}\)</span>.</p>
-<ul class="simple">
-<li><p>Salvo mención expresa, asumiremos que todos los <span class="math notranslate nohighlight">\(\Hil_j=\Hil\)</span> son iguales y de dimension <span class="math notranslate nohighlight">\(d\)</span>. En el contexto de la computación cuántica usual con cúbits <span class="math notranslate nohighlight">\(\Rightarrow \, d=2\)</span></p></li>
-</ul>
+<p>Salvo mención expresa, asumiremos que todos los <span class="math notranslate nohighlight">\(\Hil_j=\Hil\)</span> son iguales y de dimension <span class="math notranslate nohighlight">\(d\)</span>. En el contexto de la computación cuántica usual con cúbits <span class="math notranslate nohighlight">\(\Rightarrow \, d=2\)</span></p>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
 <p>Escribe una función  <i>kronecker(<span class="math notranslate nohighlight">\(u_1,u_2,...,u_n\)</span>)</i> que tome n kets (como vectores columna)  y devuelva su producto de Kronecker múltiple.</p>
@@ -891,16 +888,12 @@ The Schmidt number is p = 1
 \[\ket{i_1 i_2.... i_n} = 
 \ket{i_1}\ket{i_2}  ... \ket{i_n}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(i_1,..,i_n=0,...,d-1\)</span>.</p>
-<ul class="simple">
-<li><p>El número de posibles cadenas es <span class="math notranslate nohighlight">\(d^n\)</span> que  es la dimensión de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></p></li>
-</ul>
+<p>El número de posibles cadenas es <span class="math notranslate nohighlight">\(d^n\)</span> que  es la dimensión de <span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 {\rm dim}_{\mathbb C} \Hil^{\otimes n} = d^n
 \]</div>
-<ul class="simple">
-<li><p>Podemos cambiar de etiqueta</p></li>
-</ul>
+<p>Podemos cambiar de etiqueta</p>
 <div class="math notranslate nohighlight">
 \[\ket{i_1...i_n} \to \ket{a}\]</div>
 <p>con</p>
@@ -909,9 +902,7 @@ The Schmidt number is p = 1
 a = i_n + d i_{n-1} + d^2 i_{n-2} \, +...+ \,  d^{n-1} i_1
 \]</div>
 <p>Claramente <span class="math notranslate nohighlight">\(a ~\in ~(0,d^n-1)\)</span>.</p>
-<ul class="simple">
-<li><p>Si cada base <span class="math notranslate nohighlight">\(\{\ket{i}\}\)</span> es ortonormal, tendremos que la <em>base producto</em> también lo será</p></li>
-</ul>
+<p>Si cada base <span class="math notranslate nohighlight">\(\{\ket{i}\}\)</span> es ortonormal, tendremos que la <em>base producto</em> también lo será</p>
 <div class="math notranslate nohighlight">
 \[
 \braket{i_1 i_2... i_n}{j_1j_2...j_n} = \delta_{i_1j_1}\delta_{i_2j_2}...\delta_{i_nj_n} ~~~~\leftrightarrow ~~~~
@@ -920,10 +911,8 @@ a = i_n + d i_{n-1} + d^2 i_{n-2} \, +...+ \,  d^{n-1} i_1
 </section>
 <section id="estado-entrelazado-general">
 <h3>Estado entrelazado general<a class="headerlink" href="#estado-entrelazado-general" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Un <em>vector general</em> admitirá una expansión en esta base mediante <span class="math notranslate nohighlight">\(d^n\)</span> <em>componentes complejas</em>
-<span class="math notranslate nohighlight">\(u_{i_1 i_2...i_n}\)</span> en la forma</p></li>
-</ul>
+<p>Un <em>vector general</em> admitirá una expansión en esta base mediante <span class="math notranslate nohighlight">\(d^n\)</span> <em>componentes complejas</em>
+<span class="math notranslate nohighlight">\(u_{i_1 i_2...i_n}\)</span> en la forma</p>
 <div class="math notranslate nohighlight">
 \[
 \ket{u} ~~=~ \sum_{i_1,...,i_n=0}^{d-1} u_{i_1i_2...i_n} \ket{i_1i_2...i_n} ~~=~
@@ -945,9 +934,7 @@ u_{i_1i_2...i_n} = \braket{i_1 i_2... i_n}{u}~~~~~~\leftrightarrow~~~~~~~~u_a = 
 \[
 \ket{w} = \ket{v_1}\ket{v_2}\ldots\ket{v_n} \equiv \ket{v_1 v_2 \ldots v_n}
 \]</div>
-<ul class="simple">
-<li><p>Escribiendo <span class="math notranslate nohighlight">\(\ket{v_k} = \sum_{i_k=1}^d v_{i_k}\ket{i_k}\)</span> vemos que un <em>vector factorizable</em> admite una expansión general en la que los coeficientes son factorizables</p></li>
-</ul>
+<p>Escribiendo <span class="math notranslate nohighlight">\(\ket{v_k} = \sum_{i_k=1}^d v_{i_k}\ket{i_k}\)</span> vemos que un <em>vector factorizable</em> admite una expansión general en la que los coeficientes son factorizables</p>
 <div class="math notranslate nohighlight">
 \[
 v_{i_1i_2...i_n}  = v_{i_1} v_{i_2}.... v_{i_n}
@@ -971,19 +958,20 @@ v_{i_1 i_2 i_3... i_n} =\tr ( A^{(1)}_{i_1}\cdot A^{(2)}_{i_2}\cdot A^{(3)}_{i_3
 </div>
 </div>
 <ul class="simple">
-<li><p>Si <span class="math notranslate nohighlight">\(A^{(a)}_i\)</span> con <span class="math notranslate nohighlight">\(a=1,...,n\)</span> y <span class="math notranslate nohighlight">\(i=1,...,d\)</span> es un conjunto  de <span class="math notranslate nohighlight">\(nd\)</span> matrices de dimensión <span class="math notranslate nohighlight">\(D\times D\)</span>, con <span class="math notranslate nohighlight">\(D\)</span> la  <em>(dimensión local de enlace)</em>, el número de parámetros independientes es <span class="math notranslate nohighlight">\(ndD^2\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(A^{(a)}_i\)</span> con <span class="math notranslate nohighlight">\(a=1,...,n\)</span> y <span class="math notranslate nohighlight">\(i=1,...,d\)</span> es un conjunto  de <span class="math notranslate nohighlight">\(nd\)</span> matrices de dimensión <span class="math notranslate nohighlight">\(D\times D\)</span>, con <span class="math notranslate nohighlight">\(D\)</span> la  <em>(dimensión local de enlace)</em>, el número de parámetros independientes es <span class="math notranslate nohighlight">\(ndD^2\)</span>.
+Los MPS tienen entrelazamiento no nulo, que crece con <span class="math notranslate nohighlight">\(D\)</span>.</p></li>
 </ul>
-<p>Los MPS tienen entrelazamiento no nulo, que crece con <span class="math notranslate nohighlight">\(D\)</span>.</p>
 <ul class="simple">
 <li><p>Si <span class="math notranslate nohighlight">\(A^{(a)}_i = A_i\)</span> para todo <span class="math notranslate nohighlight">\(a=1,..,n\)</span> decimos que el MPS formado es <em>invariante traslacional</em></p></li>
 </ul>
-<p>Por ejemplo, con <span class="math notranslate nohighlight">\(n=4\)</span>, <span class="math notranslate nohighlight">\(\ket{v} =  v_{i_1i_2i_3i_4} \ket{e_{i_1i_2i_3i_4} }\)</span>
-$<span class="math notranslate nohighlight">\(
+<p>Por ejemplo, con <span class="math notranslate nohighlight">\(n=4\)</span>, <span class="math notranslate nohighlight">\(\ket{v} =  v_{i_1i_2i_3i_4} \ket{e_{i_1i_2i_3i_4} }\)</span></p>
+<div class="math notranslate nohighlight">
+\[
 v_{i_1i_2i_3i_4} =  \sum_{\alpha\beta\gamma\mu = 1}^DA_{i_1}^{\mu \alpha}A_{i_2}^{\alpha\beta}A_{i_3}^{\beta\gamma}A_{i_4}^{\gamma\mu}
-\)</span>$</p>
-<div>
-<img src="figuras/XTN4.png" width="50%" style='margin:auto'/>
-</div>
+\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/XTN4.png"><img alt="../../../_images/XTN4.png" src="../../../_images/XTN4.png" style="width: 500px;" /></a>
+</figure>
 </section>
 <section id="redes-de-tensores">
 <h3>Redes de tensores<a class="headerlink" href="#redes-de-tensores" title="Permalink to this heading">#</a></h3>
@@ -992,13 +980,13 @@ v_{i_1i_2i_3i_4} =  \sum_{\alpha\beta\gamma\mu = 1}^DA_{i_1}^{\mu \alpha}A_{i_2}
 \[
 v_{i_1i_2i_3i_4} = \sum_{\alpha\beta\gamma\mu\delta = 1}^D A_{i_1}^{\mu \alpha\delta}A_{i_2}^{\alpha\beta}A_{i_3}^{\beta\delta\gamma}A_{i_4}^{\gamma\mu}
 \]</div>
-<div>
-<img src="figuras/XTensNet.png" width="50%" style='margin:auto'/>
-</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/XTensNet.png"><img alt="../../../_images/XTensNet.png" src="../../../_images/XTensNet.png" style="width: 500px;" /></a>
+</figure>
 <p>Los estados MPS, y los estados TN  para una dimensión de enlace local <span class="math notranslate nohighlight">\(D\)</span> finita, no son suficientemente expresivos para capturar el máximo entrelazamiento posible en un estado.</p>
-<div>
-<img src="figuras/XTN_complete.png" width="50%" style='margin:auto'/>
-</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/XTN_complete.png"><img alt="../../../_images/XTN_complete.png" src="../../../_images/XTN_complete.png" style="width: 500px;" /></a>
+</figure>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
 <ul class="simple">
@@ -1030,8 +1018,8 @@ A:\ket{u} \to \ket{v} \equiv A\ket{u}
 <ul class="simple">
 <li><p>Con la matriz, el operador se reconstruye en la base canónica de productos externos</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-da3ce70f-c23c-46b0-be62-cede309cb562">
-<span class="eqno">(12)<a class="headerlink" href="#equation-da3ce70f-c23c-46b0-be62-cede309cb562" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-abf4b478-4147-424e-aac2-697aaf531666">
+<span class="eqno">(11)<a class="headerlink" href="#equation-abf4b478-4147-424e-aac2-697aaf531666" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
  A &amp;~~=~&amp; 
  \sum_{i_1,...,i_n,\, j_1,...,j_n=0}^{d-1} A_{i_1...i_n, \, j_1...j_n} \ket{i_1...i_n}\bra{j_1...j_n}
  ~~~~=~~~~
@@ -1085,12 +1073,12 @@ A^\dagger = A^{(1)\dagger} \otimes ... \otimes A^{(n)\dagger}
 <h3>Producto de Kronecker de matrices<a class="headerlink" href="#producto-de-kronecker-de-matrices" title="Permalink to this heading">#</a></h3>
 <p>¿Cómo será la matriz <span class="math notranslate nohighlight">\(A_{i_1...i_n, \, j_1...j_n}\)</span> de un operador factorizable, <span class="math notranslate nohighlight">\( A = A^{(1)}\otimes A^{(2)} \otimes ...A^{(n)}\)</span>, en términos de las matrices  <span class="math notranslate nohighlight">\( A^{(a)}_{ij}\)</span> de sus factores?</p>
 <p>Vamos a tomar  <span class="math notranslate nohighlight">\(n=2\)</span> por simplicidad</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c853f8e-6dfb-4b10-9d4f-17f45baf2f44">
-<span class="eqno">(13)<a class="headerlink" href="#equation-3c853f8e-6dfb-4b10-9d4f-17f45baf2f44" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 A = A^{(1)}\otimes  A^{(2)} &amp;=&amp;\left( \sum_{i_1i_2}A^{(1)}_{i_1 j_1} \ket{i_1}\bra{j_1}\right)\left( \sum_{i_2j_2}A^{(2)}_{i_2 j_2} \ket{i_2}\bra{j_2}\right)\\
 &amp;=&amp; \sum_{i_1 i_2 , j_1 j_2} A^{(1)}_{i_1 j_1}A^{(2)}_{i_2 j_2}\ket{i_1 i_2}\bra{j_1j_2} \\
 &amp;=&amp; \sum_{i_1 i_2 , j_1 j_2} A_{i_1i_2,\, j_1j_2}\ket{i_1 i_2}\bra{j_1j_2}
-\end{eqnarray}\]</div>
+\end{eqnarray*}\]</div>
 <p>Vemos que la matriz asociada a <span class="math notranslate nohighlight">\(A\)</span> se obtiene  a partir de las matrices de <span class="math notranslate nohighlight">\(A^{(a)}\)</span> mediante el  <em>producto exterior de las matrices</em>, o <em>producto de Kronecker</em>.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1109,21 +1097,21 @@ A = A^{(1)}\otimes  A^{(2)} &amp;=&amp;\left( \sum_{i_1i_2}A^{(1)}_{i_1 j_1} \ke
 <ul class="simple">
 <li><p>El producto de Kronecker verifica las siguientes propiedades para dos matrices <span class="math notranslate nohighlight">\(A\)</span>  y <span class="math notranslate nohighlight">\(B\)</span> de dimensiones <span class="math notranslate nohighlight">\(d_A\)</span> y <span class="math notranslate nohighlight">\(d_B\)</span>.</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-19ca3b6d-ceb8-446f-8d63-05b9f381de32">
-<span class="eqno">(14)<a class="headerlink" href="#equation-19ca3b6d-ceb8-446f-8d63-05b9f381de32" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 (A\otimes B)(C\otimes D) &amp;=&amp; (AC)\otimes (BD) \nonumber\\ \rule{0mm}{6mm}
 \tr(A\otimes B) &amp;=&amp; (\tr A)(\tr B) \nonumber\\ \rule{0mm}{6mm}
 A\otimes(B+D) &amp;=&amp; A\otimes B + A\otimes D \nonumber\\ \rule{0mm}{6mm}
 (A\otimes B)^\dagger &amp;=&amp; A^\dagger\otimes B^\dagger \nonumber\\ \rule{0mm}{6mm}
 (A\otimes B)^{-1} &amp;=&amp; A^{-1} \otimes B^{-1} \nonumber\\ \rule{0mm}{6mm}
 \det (A\otimes B) &amp;=&amp; (\det A)^{d_B}(\det B)^{d_A}
-\end{eqnarray}\]</div>
+\end{eqnarray*}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(AC\)</span> significa el producto de matrices <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(C\)</span></p>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
 <ol class="arabic simple">
-<li><p>demuestra estos resultados</p></li>
-<li><p>rescribe la función <span class="math notranslate nohighlight">\(kronecker\)</span>  para que acepte  dos matrices <span class="math notranslate nohighlight">\(A\)</span>  y <span class="math notranslate nohighlight">\(B\)</span> de dimensiones <span class="math notranslate nohighlight">\(d_A\)</span> y <span class="math notranslate nohighlight">\(d_B\)</span> y devuelva su producto de Kronecker <span class="math notranslate nohighlight">\(A\otimes B\)</span>. Verifica el resultado con la funcion kron de numpy.   Verifica las propiedades anteriores.</p></li>
+<li><p>Demuestra estos resultados.</p></li>
+<li><p>Rescribe la función <span class="math notranslate nohighlight">\(kronecker\)</span>  para que acepte  dos matrices <span class="math notranslate nohighlight">\(A\)</span>  y <span class="math notranslate nohighlight">\(B\)</span> de dimensiones <span class="math notranslate nohighlight">\(d_A\)</span> y <span class="math notranslate nohighlight">\(d_B\)</span> y devuelva su producto de Kronecker <span class="math notranslate nohighlight">\(A\otimes B\)</span>. Verifica el resultado con la funcion kron de numpy.   Verifica las propiedades anteriores.</p></li>
 </ol>
 </div>
 <p>La generalización a todo <span class="math notranslate nohighlight">\(n\)</span> es obvia. El producto de Kronecker de <span class="math notranslate nohighlight">\(n\)</span> matrices <span class="math notranslate nohighlight">\( A^{(a)}_{i_aj_a}\)</span> asociadas a operadores <span class="math notranslate nohighlight">\(A^{(a)}\)</span> es</p>

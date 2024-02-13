@@ -472,10 +472,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas">Axiomas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-ii-evolucion-con-el-tiempo"><span class="math notranslate nohighlight">\(\bullet\)</span> Postulado  II :  <em>Evolución con el tiempo</em></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas">Axiomas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-y-valores-esperados">Medidas y valores esperados</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">Valores esperados</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desviacion-estandar">Desviación estándar</a></li>
@@ -542,14 +539,13 @@ document.write(`
 <section id="axiomas">
 <h2>Axiomas<a class="headerlink" href="#axiomas" title="Permalink to this heading">#</a></h2>
 <p>La Mecánica Cuántica es una teoría fundamentada en unos pilares axiomáticos cuya selección admite cierta flexibilidad. La más aceptada constituye lo que se denomina la <i>interpretación de Copenhagen</i>.</p>
+<p><a id='axiomas-I'></a></p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Postulado I</b>: </i>Vector de estado</i></p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text"><a id='axiomas-I'></a></p>
-<p class="sd-card-text">En un instante, <span class="math notranslate nohighlight">\(t\)</span>, la máxima información accesible de un <i>sistema cuántico aislado</i> está asociada a un vector <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, de norma unidad, <span class="math notranslate nohighlight">\(\braket{\psi}{\psi}=1\)</span>,<br />
-perteneciente a un espacio de Hilbert <span class="math notranslate nohighlight">\(\Hil\)</span>, cuya dimensión compleja <span class="math notranslate nohighlight">\(N\)</span> equivale al número de grados de libertad del sistema.</p>
+<p class="sd-card-text">En un instante, <span class="math notranslate nohighlight">\(t\)</span>, la máxima información accesible de un <i>sistema cuántico aislado</i> está asociada a un vector <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, de norma unidad, <span class="math notranslate nohighlight">\(\braket{\psi}{\psi}=1\)</span>, perteneciente a un espacio de Hilbert <span class="math notranslate nohighlight">\(\Hil\)</span>, cuya dimensión compleja <span class="math notranslate nohighlight">\(N\)</span> equivale al número de grados de libertad del sistema.</p>
 </div>
 </div>
 <ul class="simple">
@@ -561,8 +557,7 @@ perteneciente a un espacio de Hilbert <span class="math notranslate nohighlight"
 \[
 \ket{\psi} \sim \ket{\psi'} =  e^{i\varphi}\ket{\psi} \, ,
 \]</div>
-<section id="bullet-postulado-ii-evolucion-con-el-tiempo">
-<h3><span class="math notranslate nohighlight">\(\bullet\)</span> Postulado  II :  <em>Evolución con el tiempo</em><a class="headerlink" href="#bullet-postulado-ii-evolucion-con-el-tiempo" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(\bullet\)</span> <strong>Postulado  II:  <em>Evolución con el tiempo</em></strong></p>
 <p>Lo que caracteriza y distingue a un sistema cuántico de otro está contenido en un <em>operador hermítico</em> <span class="math notranslate nohighlight">\(H = H^\dagger\)</span> que se denomina <strong>operador Hamiltoniano</strong></p>
 <p>El operador Hamiltoniano  gobierna su evolución. Supongamos que el sistema se prepara a <span class="math notranslate nohighlight">\(t=0\)</span> en un cierto estado <span class="math notranslate nohighlight">\(\ket{\psi(0)}\)</span></p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -607,8 +602,8 @@ p(\lambda_k)~ = ~|\braket{\lambda_k}{\psi}|^2
 </div>
 <p>La fórmula para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span>  es cierta cuando el autovalor en cuestion es <em>no degenerado</em>.</p>
 <p>Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span> debe generalizarse:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-288af40e-8e23-4d5b-84f7-4cd9631fe879">
-<span class="eqno">(19)<a class="headerlink" href="#equation-288af40e-8e23-4d5b-84f7-4cd9631fe879" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-36c063c9-3463-45d7-a0e7-f3e4e2cda401">
+<span class="eqno">(14)<a class="headerlink" href="#equation-36c063c9-3463-45d7-a0e7-f3e4e2cda401" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \bra{\psi}\left(
  \sum_{a=1}^{d_k}\ketbra{\lambda^a_k}{\lambda^a_k}\right) \ket{\psi}\nonumber\\
 &amp;=&amp;  \bra{\psi}P_k\ket{\psi} \rule{0mm}{7mm}\\
@@ -631,7 +626,6 @@ el estado del sistema,inmediatamente después de la medida,</p>
 \]</div>
 </div>
 </div>
-</section>
 </section>
 <section id="medidas-y-valores-esperados">
 <h2>Medidas y valores esperados<a class="headerlink" href="#medidas-y-valores-esperados" title="Permalink to this heading">#</a></h2>
@@ -686,26 +680,27 @@ La repetición del experimento permite reconstruir estimadores estadísticos.</p
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<p>generaliza las expresiones anteriores al caso en que los autovalores <span class="math notranslate nohighlight">\(\lambda_k\)</span> puedan ser  <span class="math notranslate nohighlight">\(d_k\)</span> veces degenerados.</p>
+<p>Generaliza las expresiones anteriores al caso en que los autovalores <span class="math notranslate nohighlight">\(\lambda_k\)</span> puedan ser  <span class="math notranslate nohighlight">\(d_k\)</span> veces degenerados.</p>
 </div>
 <section id="valores-esperados">
 <h3>Valores esperados<a class="headerlink" href="#valores-esperados" title="Permalink to this heading">#</a></h3>
 <p><a id='valores_esperados'></a></p>
 <p>Rescribamos la probabilidad de encontrar <span class="math notranslate nohighlight">\(\lambda_k\)</span> en el caso de que sea <span class="math notranslate nohighlight">\(d_k\)</span> veces degenerado</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8be3d728-bf53-451e-902e-8ce1671f1db1">
-<span class="eqno">(20)<a class="headerlink" href="#equation-8be3d728-bf53-451e-902e-8ce1671f1db1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 p(\lambda_k) &amp;=&amp; \sum_{a=1}^{d_k} |\braket{\lambda^a_k}{\psi}|^2  = 
 \sum_{a=1}^{d_k} \braket{\psi}{\lambda^a_k}\braket{\lambda^a_k}{\psi} \nonumber\\
 &amp;=&amp;\bra{\psi} \left( \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}  \right) = \bra{\psi}P_k \ket{\psi} 
-\end{eqnarray}\]</div>
-<p>donde
-$<span class="math notranslate nohighlight">\(
+\end{eqnarray*}\]</div>
+<p>donde</p>
+<div class="math notranslate nohighlight">
+\[
 P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
-\)</span>$
-es el proyector sobre el subespacio propio</p>
+\]</div>
+<p>es el proyector sobre el subespacio propio</p>
 <p>Por el <em>valor esperado</em> <span class="math notranslate nohighlight">\(\langle A\rangle\)</span> del <em>observable</em> <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, entendemos el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\lambda_n\)</span> obtenida por el método descrito.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-07a97e26-1493-467d-9553-2e69bf7db12f">
-<span class="eqno">(21)<a class="headerlink" href="#equation-07a97e26-1493-467d-9553-2e69bf7db12f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-fba52384-8609-410b-b838-6d6cce677bfb">
+<span class="eqno">(15)<a class="headerlink" href="#equation-fba52384-8609-410b-b838-6d6cce677bfb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle A\rangle &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 
@@ -736,7 +731,7 @@ p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle
 <p class="sd-card-text"><b>Lema</b>:</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">el valor esperado de un observable <span class="math notranslate nohighlight">\(A\)</span> está acotado entre sus valores propios mínimo y máximo</p>
+<p class="sd-card-text">El valor esperado de un observable <span class="math notranslate nohighlight">\(A\)</span> está acotado entre sus valores propios mínimo y máximo</p>
 <div class="math notranslate nohighlight">
 \[
 \lambda_{min} \leq \bra{\psi}A\ket{\psi} \leq \lambda_{max}
@@ -851,13 +846,13 @@ p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle
 <p>Hemos enfatizado el hecho de que, en el caso más general, <span class="math notranslate nohighlight">\(H(t)\)</span> puede depender del tiempo.</p>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
-<p>las cantidades que entran en la ecuación de Schrödinger <em>tienen unidades</em>:</p>
+<p>Las cantidades que entran en la ecuación de Schrödinger <em>tienen unidades</em>:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(H\)</span> tiene unidades de <em>energía</em>. En el SI (Sistema Iternacional) <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(\hbox{Julios = J}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(t\)</span> tiene unidades de <em>tiempo</em>, en el SI <span class="math notranslate nohighlight">\(\to\)</span> <span class="math notranslate nohighlight">\(\hbox{segundos = s}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\hbar\)</span> es la constante de Planck, y  tiene unidades de <em>acción</em>= energía <span class="math notranslate nohighlight">\(\times\)</span>  tiempo. En el SI  <span class="math notranslate nohighlight">\(\to \)</span> <span class="math notranslate nohighlight">\(\hbox{Julios}\cdot\hbox{segundo} =  \hbox{J}\cdot\hbox{s}\)</span>. <span class="math notranslate nohighlight">\(~\)</span> Se trata de una <em>cantidad universal</em>
 $<span class="math notranslate nohighlight">\(
-\fbox{\)</span>\hbar = 1.054\times 10^{-34}~~ \hbox{J}\cdot\hbox{s}<span class="math notranslate nohighlight">\(}
+\boxed{\hbar = 1.054\times 10^{-34}~~ \hbox{J}\cdot\hbox{s}}
 \)</span>$</p></li>
 </ul>
 </div>
@@ -869,7 +864,7 @@ $<span class="math notranslate nohighlight">\(
 <p class="sd-card-text"><b>Teorema</b>:</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">en la evolución temporal se conserva la norma del vector de estado</p>
+<p class="sd-card-text">En la evolución temporal se conserva la norma del vector de estado</p>
 </div>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -879,13 +874,13 @@ Prueba<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-911854d9-1f21-475e-bd45-c495c5cdbe9f">
-<span class="eqno">(22)<a class="headerlink" href="#equation-911854d9-1f21-475e-bd45-c495c5cdbe9f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 \frac{d}{dt}\|\ket{\psi}\|^2 = \frac{d}{dt}\braket{\psi(t)}{\psi(t)} &amp;=&amp; \left(\rule{0mm}{3mm}\frac{d}{dt}\bra{\psi(t)}\right)\ket{\psi(t)} + 
 \bra{\psi(t)}\left(\frac{d}{dt}\ket{\psi(t)} \right)\nonumber\\
 &amp;=&amp; \left(\bra{\psi(t)}\frac{i}{\hbar}H^\dagger\right)\ket{\psi(t)} + \bra{\psi(t)}\left(-\frac{i}{\hbar}H\ket{\psi(t)} \right) \nonumber\\
 &amp;=&amp;\frac{i}{\hbar} \bra{\psi(t)}(H^\dagger - H)\ket{\psi(t)} = 0
-\end{eqnarray}\]</div>
+\end{eqnarray*}\]</div>
 <p class="sd-card-text">Es decir: <span class="math notranslate nohighlight">\(\|\ket{\psi}\|\)</span> no cambia con el tiempo, y
 esto implica que la norma de <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span> se conserva <span class="math notranslate nohighlight">\(\Rightarrow 1 = \|\ket{\psi(0)}\| =\|\ket{\psi(t)}\|\)</span></p>
 </div>
@@ -920,7 +915,7 @@ U(t,t_0)^{-1}= U(t,t_0)^\dagger
 <p class="sd-card-text"><b>Teorema</b>:</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">el operador de evolución satisface la siguiente ecuación de evolución</p>
+<p class="sd-card-text">El operador de evolución satisface la siguiente ecuación de evolución</p>
 <div class="math notranslate nohighlight">
 \[
  \frac{d}{dt}U(t,t_0) = -\frac{i}{\hbar} H(t)\, U(t,t_0)
@@ -933,8 +928,8 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Tomando la derivada temporal de la ecuación <span class="math notranslate nohighlight">\(\ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}\)</span>, que define <span class="math notranslate nohighlight">\(U(t,t_0)\)</span>, tenemos para cada miembro</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4c370ff1-435d-4a82-8ccf-3db23c97f2ae">
-<span class="eqno">(23)<a class="headerlink" href="#equation-4c370ff1-435d-4a82-8ccf-3db23c97f2ae" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-57869f12-ec13-4c2d-8de2-114553f2133f">
+<span class="eqno">(16)<a class="headerlink" href="#equation-57869f12-ec13-4c2d-8de2-114553f2133f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}\ket{\psi(t)} &amp;~=~&amp; -\frac{i}{\hbar}  H(t)\ket{\psi(t)} = -\frac{i}{\hbar} H(t)U(t,t_0)\ket{\psi(t_0)}  \nonumber\\
 \frac{d}{dt}U(t,t_0)\ket{\psi(t_0)} &amp;~=~&amp; \left(\frac{d}{dt}U(t,t_0)\right)\ket{\psi(t_0)}
 \end{eqnarray}\]</div>
@@ -950,7 +945,7 @@ Demostración<div class="sd-summary-down docutils">
 <p class="sd-card-text"><b>Teorema</b>:</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">para un hamiltoniano <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo, el operador de evolución <span class="math notranslate nohighlight">\(U(t,t_0)\)</span> es</p>
+<p class="sd-card-text">Para un hamiltoniano <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo, el operador de evolución <span class="math notranslate nohighlight">\(U(t,t_0)\)</span> es</p>
 <div class="math notranslate nohighlight">
 \[
 U(t,t_0) = \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
@@ -963,8 +958,8 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Basta con demostrar que se satisface la ecuación de evolución y la condición de contorno</p>
-<div class="amsmath math notranslate nohighlight" id="equation-530f2c23-8b98-4b84-a724-c23b1fedbfb6">
-<span class="eqno">(24)<a class="headerlink" href="#equation-530f2c23-8b98-4b84-a724-c23b1fedbfb6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-0dab065b-ed58-4491-9085-8a8d2a974e15">
+<span class="eqno">(17)<a class="headerlink" href="#equation-0dab065b-ed58-4491-9085-8a8d2a974e15" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}U(t,t_0) &amp;=&amp; \frac{d}{dt} \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
     \nonumber\\ \rule{0mm}{6mm}
    &amp;=&amp; \frac{d}{dt}\left( I +(t-t_0)\left(-\frac{i}{\hbar} H\right) + \frac{1}{2!} 
@@ -984,7 +979,7 @@ U(t_0,t_0) =  \exp\left({-\frac{i}{\hbar} (t_0-t_0)H}\right)=\exp(0) = I
 </div>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
-<p>que la cantidad <span class="math notranslate nohighlight">\({-\frac{i}{\hbar} (t-t_0) H }\)</span> es adimensional
+<p>Que la cantidad <span class="math notranslate nohighlight">\({-\frac{i}{\hbar} (t-t_0) H }\)</span> es adimensional
 $<span class="math notranslate nohighlight">\(
 \frac{1}{\hbox{J}\cdot \hbox{s}}\hbox{s}\cdot\hbox{J} = 1
 \)</span>$</p>
@@ -1010,7 +1005,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<p>crea un Hamiltoniano aleatorio <span class="math notranslate nohighlight">\(2\times 2\)</span> y considera que la base en la que está escrito es <span class="math notranslate nohighlight">\(\{\ket{0},\ket{1}\}\)</span>. Partiendo de cualquiera de ellos, grafica las probabilidades de permanencia <span class="math notranslate nohighlight">\(p(\ket{0}\to \ket{0})\)</span> y de transición <span class="math notranslate nohighlight">\(p(\ket{0}\to \ket{1})\)</span> como funciones del tiempo (considera que <span class="math notranslate nohighlight">\(\hbar = 1\)</span> por simplicidad). Grafica también el valor esperado de <span class="math notranslate nohighlight">\(H\)</span> en ambos estados como función del tiempo. Observa el resultado e intenta explicar por qué es así.</p>
+<p>Crea un Hamiltoniano aleatorio <span class="math notranslate nohighlight">\(2\times 2\)</span> y considera que la base en la que está escrito es <span class="math notranslate nohighlight">\(\{\ket{0},\ket{1}\}\)</span>. Partiendo de cualquiera de ellos, grafica las probabilidades de permanencia <span class="math notranslate nohighlight">\(p(\ket{0}\to \ket{0})\)</span> y de transición <span class="math notranslate nohighlight">\(p(\ket{0}\to \ket{1})\)</span> como funciones del tiempo (considera que <span class="math notranslate nohighlight">\(\hbar = 1\)</span> por simplicidad). Grafica también el valor esperado de <span class="math notranslate nohighlight">\(H\)</span> en ambos estados como función del tiempo. Observa el resultado e intenta explicar por qué es así.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1080,33 +1075,34 @@ $<span class="math notranslate nohighlight">\(
 \[\begin{split}
 H_{mn} =  \begin{bmatrix} E_0 &amp;  &amp; &amp; \\  &amp; E_1 &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix} =E_m \delta_{mn} \, .
 \end{split}\]</div>
-<p>Entonces la matriz de evolución es también diagonal
-$$
-U_{mn} = \exp\left(-\frac{i}{\hbar}t H_{mn}\right) =</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e97936da-8d31-4769-9f09-d72bb58d65a8">
-<span class="eqno">(25)<a class="headerlink" href="#equation-e97936da-8d31-4769-9f09-d72bb58d65a8" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} e^{-\frac{i}{\hbar}t E_0} &amp;  &amp; &amp; \\  &amp; e^{-\frac{i}{\hbar} t E_1}  &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix}\]</div>
-<p>$$</p>
+<p>Entonces la matriz de evolución es también diagonal</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+U_{mn} = \exp\left(-\frac{i}{\hbar}t H_{mn}\right) = 
+ \begin{bmatrix} e^{-\frac{i}{\hbar}t E_0} &amp;  &amp; &amp; \\  &amp; e^{-\frac{i}{\hbar} t E_1}  &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix} = e^{-\frac{i}{\hbar} t  E_m }\delta_{mn} \, .
+\end{split}\]</div>
 <div class="attention admonition">
 <p class="admonition-title">En resumen</p>
 <ul class="simple">
-<li><p>la evolución temporal de un autoestado de la energía es trivial (es una fase global)</p></li>
+<li><p>La evolución temporal de un autoestado de la energía es trivial (es una fase global)</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
 U(t,0)\ket{n} = e^{-\frac{i}{\hbar} t E_n} \ket{n}\, .
 \]</div>
 <ul class="simple">
-<li><p>Esta fase deja de ser trivial cuando afecta a una combinación lineal. La forma más eficaz de calcular la evolución de un estado arbitrario es expresarla en la base <span class="math notranslate nohighlight">\(\{\ket{n}\}\)</span>.</p></li>
+<li><p>Esta fase deja de ser trivial cuando afecta a una combinación lineal. La forma más eficaz de calcular la evolución de un estado arbitrario es expresarla en la base <span class="math notranslate nohighlight">\(\{\ket{n}\}\)</span>.
+Es decir, si a <span class="math notranslate nohighlight">\(t=0\)</span></p></li>
 </ul>
-<p>Es decir, si a <span class="math notranslate nohighlight">\(t=0\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \ket{\psi(t=0)} = \sum_n c_n \ket{n} \, 
 \]</div>
-<p>entonces, a tiempo <span class="math notranslate nohighlight">\(t\)</span>
-$<span class="math notranslate nohighlight">\(
+<p>entonces, a tiempo <span class="math notranslate nohighlight">\(t\)</span></p>
+<div class="math notranslate nohighlight">
+\[
 \ket{\psi(t)} = \sum_n c_n e^{-\frac{i}{\hbar}E_n} \ket{n} \, .
-\)</span>$</p>
+\]</div>
 </div>
 </section>
 </section>
@@ -1168,10 +1164,7 @@ $<span class="math notranslate nohighlight">\(
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas">Axiomas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bullet-postulado-ii-evolucion-con-el-tiempo"><span class="math notranslate nohighlight">\(\bullet\)</span> Postulado  II :  <em>Evolución con el tiempo</em></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomas">Axiomas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-y-valores-esperados">Medidas y valores esperados</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">Valores esperados</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desviacion-estandar">Desviación estándar</a></li>
