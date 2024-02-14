@@ -12,3 +12,14 @@ parts:
     - file:  docs/Part_01_Formalismo/Chapter_01_02_Formalismo_matemático/01_05_Probabilidades_myst.ipynb
   - file:  docs/Part_01_Formalismo/Chapter_02_01_Fundamentos_MC_myst.ipynb
 
+- caption:  Circuitos Cuánticos
+  chapters:
+  - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_01_01_Circuitos_1_cubit_myst.md
+    sections:
+    - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_01_02_Circuitos_1_cubit/021_Cubits_myst.ipynb
+    - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_01_02_Circuitos_1_cubit/022_Puertas_Simples_myst.ipynb
+    - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_01_02_Circuitos_1_cubit/023_Espin_myst.ipynb
+    - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_01_02_Circuitos_1_cubit/024_El_Arte_de_Medir_I_myst.ipynb
+  - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_02_01_Circuitos_multicubit_myst.md
+  - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_03_01_Mas_sobre_circuitos_myst.md
+

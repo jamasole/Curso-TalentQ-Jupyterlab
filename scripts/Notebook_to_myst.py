@@ -376,8 +376,22 @@ with open(out_file, 'r') as f:
     
 
     for i in i_start_details_list:
-        title_details = re.search(r'<i>(.*?)</i>', f_data[i]).group(1)
-        my_replace(f_data, i, ':::{dropdown} '+title_details+'\\n",\n')
+        try:
+            title_details = re.search(r'<i>(.*?)</i>', f_data[i]).group(1)
+            my_replace(f_data, i, ':::{dropdown} '+title_details+'\\n",\n')
+
+        except Exception as error :
+            print(f"\033[91m======\033[0m") 
+            print(f"\033[91m Error encontrando un details {i}. No tiene título\033[0m")
+            print(f"\033[91m    ",{f_data[i]},"\033[0m")
+            print(f"\033[91m    ",{f_data[i+1]}," \033[0m")
+            print(f"\033[91m    ",{f_data[i+2]}," \033[0m")
+            print(f"\033[91m    ",{f_data[i+3]}," \033[0m")
+            print("")
+            print(f"\033[91m    ",error," \033[0m")
+            print(f"\033[91m======\033[0m") 
+
+
     
     
     

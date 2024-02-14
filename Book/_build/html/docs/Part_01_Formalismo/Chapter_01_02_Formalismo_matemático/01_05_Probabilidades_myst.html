@@ -213,6 +213,18 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Chapter_02_01_Fundamentos_MC_myst.html">Fundamentos de Mecánica Cuántica</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Circuitos Cuánticos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_01_01_Circuitos_1_cubit_myst.html">Circuitos de 1 cúbit</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_01_02_Circuitos_1_cubit/021_Cubits_myst.html">Cúbits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_01_02_Circuitos_1_cubit/022_Puertas_Simples_myst.html">Puertas Simples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_01_02_Circuitos_1_cubit/023_Espin_myst.html">El cúbit de espín</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_01_02_Circuitos_1_cubit/024_El_Arte_de_Medir_I_myst.html">El arte de medir I</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_03_01_Mas_sobre_circuitos_myst.html">Más cosas sobre circuitos</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -622,8 +634,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 \end{split}\]</div>
 <p>donde el primer factor tiene en cuenta las posibles ordenaciones en que aparecen <span class="math notranslate nohighlight">\(x\)</span> éxitos en <span class="math notranslate nohighlight">\(n\)</span> intentos.</p>
 <p>Un cálculo un poco más largo permite ver que, ahora</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5d2e07b1-a477-444c-9be3-d4238512b365">
-<span class="eqno">(12)<a class="headerlink" href="#equation-5d2e07b1-a477-444c-9be3-d4238512b365" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-b0d411c0-5c3b-4354-8250-62a5fa60537e">
+<span class="eqno">(12)<a class="headerlink" href="#equation-b0d411c0-5c3b-4354-8250-62a5fa60537e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp;  np\\ \rule{0mm}{7mm}
 \sigma^2 &amp;=&amp; n p(1-p)
 \end{eqnarray}\]</div>
@@ -636,8 +648,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\right)
 \]</div>
 <p>Nos encontramos ante una variable aleatoria con un espacio muestral continuo <span class="math notranslate nohighlight">\(x\in (-\infty,+\infty)\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ee45b656-7d7c-45a3-8e9b-2e8ca2ce8548">
-<span class="eqno">(13)<a class="headerlink" href="#equation-ee45b656-7d7c-45a3-8e9b-2e8ca2ce8548" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-19933783-731e-4120-8a6b-2db0281e232a">
+<span class="eqno">(13)<a class="headerlink" href="#equation-19933783-731e-4120-8a6b-2db0281e232a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{X} &amp;=&amp; \int_{-\infty}^{+\infty} xp(x) dx = \mu \\
 \overline{(x-\overline X)^2} &amp;=&amp; \int_{-\infty}^{+\infty} (x-\mu)^2 p(x)dx =\sigma^2
 \end{eqnarray}\]</div>

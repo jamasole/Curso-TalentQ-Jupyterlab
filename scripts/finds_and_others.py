@@ -112,10 +112,9 @@ def find_div_boxes(f_data, i_start_list):
             #                     lambda x: x.group(0).replace(' ', ''), line_title)
             
 
-            title_no_clean = re.search(r'"([^"]*)"', line_title).group(1)
-
-
+            #title_no_clean = re.search(r'"([^"]*)"', line_title).group(1)
             #title = re.sub(r'<.*?>', '', title_no_clean.split(':')[0]).strip()   #  +'\\n",\n'
+
             #print(f_data[i_title])
             #print(i_title)
             title = re.search(r'<b>(.*?)</b>', f_data[i_title]).group(1).replace(":","").rstrip().lstrip()
@@ -155,7 +154,19 @@ def find_div_boxes(f_data, i_start_list):
                 assert i_start < i_start_details <= i_end, f"{i_start} < {i_start_details} <= {i_end}: i_start < i_start_details <= i_end"
 
                 ###### Title details:
-                title_details = re.search(r'<i>(.*?)</i>', f_data[i_start_details]).group(1)
+                try:
+                    title_details = re.search(r'<i>(.*?)</i>', f_data[i_start_details]).group(1)
+
+                except Exception as error :
+                    print(f"\033[91m======\033[0m") 
+                    print(f"\033[91m Error encontrando un details {i_start_details}. No tiene título\033[0m")
+                    print(f"\033[91m    ",{f_data[i_start]},"\033[0m")
+                    print(f"\033[91m    ",{f_data[i_start+1]}," \033[0m")
+                    print(f"\033[91m    ",{f_data[i_start+2]}," \033[0m")
+                    print(f"\033[91m    ",{f_data[i_start+3]}," \033[0m")
+                    print("")
+                    print(f"\033[91m    ",error," \033[0m")
+                    print(f"\033[91m======\033[0m") 
 
                 #print(i_start_details, {f_data[i_start_details]})
                 #print("")
