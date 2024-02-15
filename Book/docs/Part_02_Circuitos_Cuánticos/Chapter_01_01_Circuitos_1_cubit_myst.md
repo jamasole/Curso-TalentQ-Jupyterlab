@@ -13,6 +13,11 @@ kernelspec:
 
 > {sub-ref}`today` | {sub-ref}`wordcount-words` words | {sub-ref}`wordcount-minutes` min read
 
+::::{figure} ../figuras/logos/Logo_TalentQ_Azul.png
+:width: 150px
+:align: right
+::::
+
 (sec_Circuitos_1_cubit)=
 # Circuitos de 1 cúbit
 

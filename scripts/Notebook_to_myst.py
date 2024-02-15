@@ -97,7 +97,7 @@ for i in reversed(range(len(index_list_list[0]))):
 
 ############################################################################
 # Usando el número de linea donde empiezan las figuras, sacamos todas las lineas importantes          
-index_fig_list_list, datos_list_list = find_figures(f_data, i_start_figure_list)
+index_fig_list_list, datos_list_list, number_ref_fig = find_figures(f_data, i_start_figure_list)
 
 ############################################################################
 # Comenzamos a sustituir las figuras (empezando por el final)
@@ -213,7 +213,7 @@ if len(i_pattern_code_list) > 0:
 ## Arreglamos las referencias a las figuras
 ##   [...](#fig_...)  --->  {ref}`sec_...` o {numref}`sec_...`
 
-bluid_references(f_data, 'fig_', file_name, '{ref}')
+bluid_references(f_data, 'fig_', file_name, number_ref_fig)
 
 
 ################################################################################
@@ -277,6 +277,7 @@ if len(i_pattern_ref_bib) > 0:
 
     f_data[i_start_content] = '    "```{bibliography} \\n",\n' + \
                 '    ":style: plain\\n",\n' + \
+                '    ":filter: docname in docnames\\n",\n' + \
                 '    "```",\n'
 
 ################################################################################

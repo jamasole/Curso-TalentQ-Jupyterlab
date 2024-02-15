@@ -30,14 +30,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -49,9 +49,10 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -90,7 +91,6 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -102,6 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/Part_01_Formalismo/Chapter_01_02_Formalismo_matemático/01_05_Probabilidades_myst';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Fundamentos de Mecánica Cuántica" href="../Chapter_02_01_Fundamentos_MC_myst.html" />
@@ -199,7 +200,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Las reglas del juego</span></p>
 <ul class="current nav bd-sidenav">
@@ -471,10 +483,10 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 14, 2024 | 3 min read</p>
+<div><p>Feb 15, 2024 | 3 min read</p>
 </div></blockquote>
 <figure class="align-right">
-<a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 15%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="probabilidades">
 <h1>Probabilidades<a class="headerlink" href="#probabilidades" title="Permalink to this heading">#</a></h1>
@@ -634,8 +646,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 \end{split}\]</div>
 <p>donde el primer factor tiene en cuenta las posibles ordenaciones en que aparecen <span class="math notranslate nohighlight">\(x\)</span> éxitos en <span class="math notranslate nohighlight">\(n\)</span> intentos.</p>
 <p>Un cálculo un poco más largo permite ver que, ahora</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b0d411c0-5c3b-4354-8250-62a5fa60537e">
-<span class="eqno">(12)<a class="headerlink" href="#equation-b0d411c0-5c3b-4354-8250-62a5fa60537e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ff7cef46-60a0-47b5-abf1-8028faec62b1">
+<span class="eqno">(12)<a class="headerlink" href="#equation-ff7cef46-60a0-47b5-abf1-8028faec62b1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp;  np\\ \rule{0mm}{7mm}
 \sigma^2 &amp;=&amp; n p(1-p)
 \end{eqnarray}\]</div>
@@ -648,8 +660,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\right)
 \]</div>
 <p>Nos encontramos ante una variable aleatoria con un espacio muestral continuo <span class="math notranslate nohighlight">\(x\in (-\infty,+\infty)\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-19933783-731e-4120-8a6b-2db0281e232a">
-<span class="eqno">(13)<a class="headerlink" href="#equation-19933783-731e-4120-8a6b-2db0281e232a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-cc7c08ad-d6e9-4315-8df5-0127a67c8c88">
+<span class="eqno">(13)<a class="headerlink" href="#equation-cc7c08ad-d6e9-4315-8df5-0127a67c8c88" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{X} &amp;=&amp; \int_{-\infty}^{+\infty} xp(x) dx = \mu \\
 \overline{(x-\overline X)^2} &amp;=&amp; \int_{-\infty}^{+\infty} (x-\mu)^2 p(x)dx =\sigma^2
 \end{eqnarray}\]</div>
@@ -685,7 +697,7 @@ p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\rig
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/9d1724653656dd60434f4221bc79d7e3ace12e9ab3d94492613934d63087ccf0.png" src="../../../_images/9d1724653656dd60434f4221bc79d7e3ace12e9ab3d94492613934d63087ccf0.png" />
+<img alt="../../../_images/8496cab84da2189a5c13c81398a33e36de3fde45c5a65890ead5adf72168da3d.png" src="../../../_images/8496cab84da2189a5c13c81398a33e36de3fde45c5a65890ead5adf72168da3d.png" />
 </div>
 </div>
 <p>En el límite de número de eventos <span class="math notranslate nohighlight">\(N\to \infty\)</span>, el histograma y la curva matemática confluyen.</p>
@@ -858,7 +870,7 @@ By Javier Mas Solé
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

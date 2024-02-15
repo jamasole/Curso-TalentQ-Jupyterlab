@@ -30,14 +30,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -49,9 +49,10 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -90,7 +91,6 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -102,6 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/Part_01_Formalismo/Chapter_01_02_Formalismo_matemático/01_03_Operadores_myst';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Tensores" href="01_04_Tensores_myst.html" />
@@ -199,7 +200,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Las reglas del juego</span></p>
 <ul class="current nav bd-sidenav">
@@ -531,10 +543,10 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 14, 2024 | 19 min read</p>
+<div><p>Feb 15, 2024 | 19 min read</p>
 </div></blockquote>
 <figure class="align-right">
-<a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 15%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="operadores">
 <h1>Operadores<a class="headerlink" href="#operadores" title="Permalink to this heading">#</a></h1>
@@ -586,7 +598,7 @@ A: \ket{u} ~~\to ~~ \ket{v}
 A: (\alpha\ket{u} + \beta\ket{w})~~\to ~~ \ket{v} =\alpha A\ket{u} + \beta A\ket{w}
 \]</div>
 <div class="note admonition">
-<p class="admonition-title">Nota (Sobre la notación) </p>
+<p class="admonition-title">Nota (Sobre la notación)</p>
 <p>Escribimos también <span class="math notranslate nohighlight">\(\ket{v} = A\ket{u} \equiv \ket{Au}\)</span> <span class="math notranslate nohighlight">\(~~\)</span>(donde <span class="math notranslate nohighlight">\(Au\)</span> debe entenderse como una etiqueta)</p>
 </div>
 <div class="tip admonition">
@@ -1398,8 +1410,8 @@ Entonces el operador <span class="math notranslate nohighlight">\(\Rightarrow  P
 <ul class="simple">
 <li><p>es perpendicular a <span class="math notranslate nohighlight">\(P\)</span></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-2c98554d-e7ba-4e16-baad-c6c16b995163">
-<span class="eqno">(4)<a class="headerlink" href="#equation-2c98554d-e7ba-4e16-baad-c6c16b995163" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-a431db40-c4ed-43c1-ad16-6f89463776d9">
+<span class="eqno">(4)<a class="headerlink" href="#equation-a431db40-c4ed-43c1-ad16-6f89463776d9" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 P_\perp P &amp;=&amp; (I - P) P = P - P^2 = P - P =  0 
 \end{eqnarray}\]</div>
 <p>Dado un vector <span class="math notranslate nohighlight">\(\ket{u}\)</span>, podemos descomponer cualquier  otro vector <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> en sus proyecciones paralela y perpendicular</p>
@@ -1432,23 +1444,23 @@ P_\perp P &amp;=&amp; (I - P) P = P - P^2 = P - P =  0
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
-0.471010764 - 0.3033902688 i  \\
- 0.239801871 + 0.4636412817 i  \\
- -0.429936505 + 0.478319591 i  \\
+0.1743347635 - 0.4914495324 i  \\
+ -0.4891269524 + 0.1801569599 i  \\
+ -0.6725688533 + 0.0635151882 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
-0.313896795 &amp; -0.0277149906 - 0.2911335884 i &amp; -0.347622231 - 0.0948551242 i  \\
- -0.0277149906 + 0.2911335884 i &amp; 0.2724681755 &amp; 0.1186691299 - 0.3140382451 i  \\
- -0.347622231 + 0.0948551242 i &amp; 0.1186691299 + 0.3140382451 i &amp; 0.4136350295  \\
+0.2719152527 &amp; -0.1738098853 + 0.2089735911 i &amp; -0.1484666415 + 0.3194607432 i  \\
+ -0.1738098853 - 0.2089735911 i &amp; 0.2717017058 &amp; 0.3404142567 - 0.0901009695 i  \\
+ -0.1484666415 - 0.3194607432 i &amp; 0.3404142567 + 0.0901009695 i &amp; 0.4563830415  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
-0.686103205 &amp; 0.0277149906 + 0.2911335884 i &amp; 0.347622231 + 0.0948551242 i  \\
- 0.0277149906 - 0.2911335884 i &amp; 0.7275318245 &amp; -0.1186691299 + 0.3140382451 i  \\
- 0.347622231 - 0.0948551242 i &amp; -0.1186691299 - 0.3140382451 i &amp; 0.5863649705  \\
+0.7280847473 &amp; 0.1738098853 - 0.2089735911 i &amp; 0.1484666415 - 0.3194607432 i  \\
+ 0.1738098853 + 0.2089735911 i &amp; 0.7282982942 &amp; -0.3404142567 + 0.0901009695 i  \\
+ 0.1484666415 + 0.3194607432 i &amp; -0.3404142567 - 0.0901009695 i &amp; 0.5436169585  \\
  \end{bmatrix}
 \end{split}\]</div>
 </div>
@@ -1482,13 +1494,13 @@ P_\perp P &amp;=&amp; (I - P) P = P - P^2 = P - P =  0
  0 &amp; 0 &amp; 0  \\
  \end{bmatrix}
 \end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0j
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-0+0j)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="tip admonition">
-<p class="admonition-title">Ejercicio (reflector) </p>
+<p class="admonition-title">Ejercicio (reflector)</p>
 <p>Dado un vector unitario <span class="math notranslate nohighlight">\(\ket{u}\)</span>, escribe</p>
 <ul class="simple">
 <li><p>el operador <span class="math notranslate nohighlight">\(R_u^{\perp}\)</span> que refleja la componente perpendicular a <span class="math notranslate nohighlight">\(\ket{u}\)</span> de cualquier  vector <span class="math notranslate nohighlight">\(\ket{\psi}\)</span></p></li>
@@ -1504,8 +1516,8 @@ P_\perp P &amp;=&amp; (I - P) P = P - P^2 = P - P =  0
 \{\ket{e_i}\},~ i=1,...,N_1 ~~~~~~~,~~~~~~~~\{\ket{e_{j+N_1}},~j=1,...,N_2   
 \]</div>
 <p>Cualquier vector admite una descomposición ortogonal</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4f4c535d-5d05-46cf-8cb0-1207227304d3">
-<span class="eqno">(5)<a class="headerlink" href="#equation-4f4c535d-5d05-46cf-8cb0-1207227304d3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-cb790117-7b00-4642-838c-b54cb970bdd6">
+<span class="eqno">(5)<a class="headerlink" href="#equation-cb790117-7b00-4642-838c-b54cb970bdd6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\psi} &amp;~=~&amp; \sum_{i=1}^N a_i \ket{e_i}   ~= ~ \sum_{i=1}^N a_i \ket{e_i} + \sum_{i=1}^{N_2} a_{i+N_1} \ket{e_{i+N_1}} ~\equiv ~ \ket{\psi_1} + \ket{\psi_2}\rule{0mm}{5mm}
 \end{eqnarray}\]</div>
 <p>con <span class="math notranslate nohighlight">\(\braket{\psi_1}{\psi_2} = 0\)</span>.</p>
@@ -1601,11 +1613,11 @@ A_{diag} = \begin{pmatrix} \lambda_1 &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; 
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
--0.7295770872 &amp; -0.2507132779 + 0.2382776812 i  \\
- -0.2507132779 - 0.2382776812 i &amp; 0.7295770872  \\
+-0.9070511069 &amp; -0.2139019971 - 1.3664523706 i  \\
+ -0.2139019971 + 1.3664523706 i &amp; 0.9070511069  \\
  \end{bmatrix}
 \end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>valprop = [0.04510097+0.3274616j  0.81932658+0.99592662j]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>valprop = [-0.49271431-0.23114766j  0.88044583+1.36071893j]
 </pre></div>
 </div>
 <div class="output text_latex math notranslate nohighlight">
@@ -1618,8 +1630,8 @@ A|\lambda_m \rangle -\lambda_m |\lambda_m\rangle =
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
-0.5087716298 &amp; -0.1688066649 + 0.1604337075 i  \\
- -0.1688066649 - 0.1604337075 i &amp; 1.4912283702  \\
+0.8174963409 &amp; -0.0430382554 - 0.2749377138 i  \\
+ -0.0430382554 + 0.2749377138 i &amp; 1.1825036591  \\
  \end{bmatrix}
 \end{split}\]</div>
 </div>
@@ -1650,12 +1662,6 @@ A|\lambda_m \rangle -\lambda_m |\lambda_m\rangle =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:17: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-&lt;&gt;:17: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-/tmp/ipykernel_19338/3458884779.py:17: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-  array_to_latex(np.dot(U.getH(),np.dot(A,U)),prefix=&#39;A_{diag} = U^{\dagger} A U = &#39;)
-</pre></div>
-</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
 0 &amp; 0  \\
@@ -1689,8 +1695,8 @@ A|\lambda_m \rangle -\lambda_m |\lambda_m\rangle =
 \[A\ket{\lambda_k^a} = \lambda_k \ket{\lambda_k^a}\]</div>
 <p>Dichos autovectores generan un <i>subespacio propio</i> <span class="math notranslate nohighlight">\(S(\lambda_k)\subset \Hil\)</span>.</p>
 <p>Por ejemplo,  sea <span class="math notranslate nohighlight">\(\ket{u} = \sum_{a=1}^{d_k} c_a\ket{\lambda^a_k} \)</span> una combinación de dichos vectores propios, entonces</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8c2d2db6-7099-41d6-b584-b7faf72a5bf9">
-<span class="eqno">(6)<a class="headerlink" href="#equation-8c2d2db6-7099-41d6-b584-b7faf72a5bf9" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ca86cd8c-366c-421a-9c00-6201ab856e51">
+<span class="eqno">(6)<a class="headerlink" href="#equation-ca86cd8c-366c-421a-9c00-6201ab856e51" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 A \ket{u} 
 =  \sum_{a=1}^{d_k} c_a A\ket{\lambda^a_k}  =  \sum_{a=1}^{d_k} c_a \lambda_k\ket{\lambda^a_k}  =   \lambda_k \sum_{a=1}^{d_k} c_a \ket{\lambda^a_k}  =\lambda_k\ket{u}
 \end{eqnarray}\]</div>
@@ -1713,8 +1719,8 @@ P_k = \sum_{a=1}^{d_k} \ketbra{\lambda_{k}^a}{\lambda_{k}^a}
 <li><p>Llamemos <span class="math notranslate nohighlight">\(R_z(\theta)\)</span> el operador que efectúa una rotación  en el plano  <span class="math notranslate nohighlight">\((x,y)\)</span> de ángulo <span class="math notranslate nohighlight">\(\theta\)</span>. Cuando <span class="math notranslate nohighlight">\(\theta = \pi\)</span> encontramos las siguiente acción sobre los tres elementos <span class="math notranslate nohighlight">\(\{\hat{\bf x},\hat{\bf y},\hat{\bf z}\}\)</span>
 de la base cartesiana</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-0d4d4051-12c2-4240-b461-9e24f47b6131">
-<span class="eqno">(7)<a class="headerlink" href="#equation-0d4d4051-12c2-4240-b461-9e24f47b6131" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-dd7317a9-5784-44c0-bcd5-2bb785d7b9c4">
+<span class="eqno">(7)<a class="headerlink" href="#equation-dd7317a9-5784-44c0-bcd5-2bb785d7b9c4" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_z(\pi)\hat{\bf x} &amp;=&amp;-\hat{\bf x}  \\ \rule{0mm}{6mm}
 R_z(\pi)\hat{\bf y} &amp;=&amp; -\hat{\bf y}  \\ \rule{0mm}{6mm}
 R_z(\pi)\hat{\bf z} &amp;=&amp; + \hat{\bf z}  
@@ -2153,19 +2159,13 @@ Comprueba en distintos casos que el espectro está formado por fases</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.047-0.j 0.753+0.j 0.217+0.j]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:17: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-&lt;&gt;:17: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-/tmp/ipykernel_19338/208356260.py:17: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-  display(Latex(&#39;$$U^{\dagger}U = %s$$&#39;%MatrixToLatex(np.dot(U.getH(),U))))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.389-0.j 0.158+0.j 1.216+0.j]
 </pre></div>
 </div>
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}U = \begin{bmatrix} 0.13-0.44j&amp;0.05+0.83j&amp;0.27+0.16j \\0.21+0.32j&amp;0.30-0.16j&amp;0.45+0.73j \\0.24+0.77j&amp;0.13+0.41j&amp;0.07-0.40j \end{bmatrix}\end{split}\]</div>
+\[\begin{split}U = \begin{bmatrix} 0.51+0.27j&amp;0.54+0.58j&amp;-0.21+0.05j \\-0.47+0.03j&amp;0.29+0.31j&amp;0.58+0.51j \\0.61+0.28j&amp;-0.41-0.18j&amp;0.38+0.46j \end{bmatrix}\end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}U^{\dagger}U = \begin{bmatrix} 1.00+0.00j&amp;-0.00-0.00j&amp;-0.00-0.00j \\-0.00+0.00j&amp;1.00+0.00j&amp;0.00+0.00j \\-0.00+0.00j&amp;0.00-0.00j&amp;1.00+0.00j \end{bmatrix}\end{split}\]</div>
+\[\begin{split}U^{\dagger}U = \begin{bmatrix} 1.00+0.00j&amp;-0.00+0.00j&amp;0.00-0.00j \\-0.00-0.00j&amp;1.00+0.00j&amp;0.00+0.00j \\0.00+0.00j&amp;0.00-0.00j&amp;1.00+0.00j \end{bmatrix}\end{split}\]</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.+0.j, 1.+0.j, 1.+0.j])
 </pre></div>
 </div>
@@ -2243,9 +2243,9 @@ U\Sigma V^\dagger &amp;=&amp;
 \[\begin{split}
 A=
 \begin{bmatrix}
--0.0244200116 + 0.1041895795 i &amp; 0.9349803126 + 0.3421874814 i  \\
- -1.5492338807 - 0.1724318703 i &amp; 1.2856329068 - 0.2683114857 i  \\
- 0.9646564048 - 0.0099417172 i &amp; -0.366942065 + 1.0589036124 i  \\
+-0.4947234695 + 0.4758127233 i &amp; -0.7259725452 - 1.6435207154 i  \\
+ -0.538546776 - 1.4944664842 i &amp; -1.4236590084 + 1.3047681376 i  \\
+ -0.2583692489 + 0.0850093575 i &amp; -1.3418453929 + 0.5940796107 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>the shape of A is : (3, 2)
@@ -2271,39 +2271,29 @@ the shape of u = (3, 3)  s = (2,)  v = (2, 2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:10: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-&lt;&gt;:11: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-&lt;&gt;:10: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-&lt;&gt;:11: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-/tmp/ipykernel_19338/582162267.py:10: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-  display(array_to_latex(np.dot(U.getH(),U),prefix=&#39;U^{\dagger}U =&#39;))
-/tmp/ipykernel_19338/582162267.py:11: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-  display(array_to_latex(np.dot(V.getH(),V),prefix=&#39;V^{\dagger}V =&#39;))
-</pre></div>
-</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 U=
 \begin{bmatrix}
--0.1773651733 - 0.2087808279 i &amp; -0.3952061246 - 0.6550921243 i &amp; -0.2332610853 + 0.5340485512 i  \\
- -0.7632131121 - 0.1906945229 i &amp; 0.3622448006 - 0.2161066755 i &amp; 0.4293049613 - 0.1375325561 i  \\
- 0.5160011558 - 0.1995903629 i &amp; -0.1266866838 - 0.4697802904 i &amp; 0.5980410426 - 0.3154526409 i  \\
+0.4906085012 + 0.1539832975 i &amp; 0.6424232292 - 0.224029592 i &amp; -0.2206659086 - 0.4732886391 i  \\
+ -0.1260326987 - 0.727790576 i &amp; 0.283932212 + 0.5500063772 i &amp; -0.230446343 - 0.1349318472 i  \\
+ 0.0635846726 - 0.4312610212 i &amp; 0.2142808008 - 0.3287283968 i &amp; 0.8099144755 - 0.0055536388 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 S=
 \begin{bmatrix}
-2.5414687533 &amp; 0  \\
- 0 &amp; 0.9407201426  \\
+3.1251063274 &amp; 0  \\
+ 0 &amp; 1.5534492104  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 V=
 \begin{bmatrix}
-0.6679617784 &amp; -0.7441955808  \\
- -0.6169703939 - 0.4161425184 i &amp; -0.5537692673 - 0.3735137695 i  \\
+0.2985483228 &amp; -0.9543945195  \\
+ -0.5506812916 + 0.7794992072 i &amp; -0.1722610227 + 0.2438385554 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
@@ -2360,8 +2350,8 @@ Prueba<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-4f9e863b-17d2-420f-bb3e-5695e9de91ea">
-<span class="eqno">(8)<a class="headerlink" href="#equation-4f9e863b-17d2-420f-bb3e-5695e9de91ea" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-14f00c60-a8db-4ff7-9457-06d86ba573bb">
+<span class="eqno">(8)<a class="headerlink" href="#equation-14f00c60-a8db-4ff7-9457-06d86ba573bb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 {\rm tr} A  &amp;=&amp;\sum_i A_{ii} =\sum_{i} \bra{i}A\ket{i} =\sum_{i} \bra{i}A\left( \sum_j\ketbra{\tilde j}{\tilde j}\right)\ket{i}
 \nonumber\\
 &amp;=&amp; \sum_{ij}\bra{i}A\ket{\tilde j} \braket{\tilde j}{i} = \sum_{ij}\braket{\tilde j}{i}\bra{i}A\ket{\tilde j}  \nonumber\\
@@ -2436,7 +2426,7 @@ A\ket{\lambda_j} = \lambda_i \ket{\lambda_i}
 <section id="lin-hil-como-un-espacio-normado">
 <h4><span class="math notranslate nohighlight">\(\Lin(\Hil)\)</span> como un espacio normado<a class="headerlink" href="#lin-hil-como-un-espacio-normado" title="Permalink to this heading">#</a></h4>
 <p>Una <strong>norma</strong> definida sobre <span class="math notranslate nohighlight">\(\Lin(\Hil)  \)</span>es un una función real <span class="math notranslate nohighlight">\( A\to  \| A\| \in {\mathbb R}\)</span> con las propiedades
-que se han definido en una <span class="xref myst">sección anterior</span></p>
+que se han definido en una <a class="reference internal" href="#../00_Formalismo/01_Vectores.ipynb#norm"><span class="xref myst">sección anterior</span></a></p>
 <p><a id='trace_norm'></a></p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
@@ -2601,8 +2591,8 @@ Prueba<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-e82b8d63-98c4-4759-a536-8426810b087c">
-<span class="eqno">(9)<a class="headerlink" href="#equation-e82b8d63-98c4-4759-a536-8426810b087c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-6e908f2e-aa76-462f-b853-f42833385bec">
+<span class="eqno">(9)<a class="headerlink" href="#equation-6e908f2e-aa76-462f-b853-f42833385bec" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U^\dagger &amp;=&amp; \left( e^{iH}\right)^\dagger = \left( 1+ iH + \frac{1}{2}(i H)^2 + ...\right)^\dagger \\
 &amp;=&amp; 1 - iH^\dagger  + \frac{1}{2}(-i)^2 (H^2)^\dagger + ... \\
 &amp;=&amp; 1 - iH +\frac{1}{2} H^2 - ... \\
@@ -2827,28 +2817,28 @@ A &amp;=&amp; {\bf a} \cdot \boldsymbol{\sigma}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 0.8196453748381084
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 1.1709786593645952
 </pre></div>
 </div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
-0.2089228489 &amp; 0.2741500062 &amp; 0.938718817  \\
+0.6870652921 &amp; 0.2810839854 &amp; 0.6700246842  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 exp(s1)=
 \begin{bmatrix}
-0.6824804471 + 0.6861131983 i &amp; 0.2003772952 + 0.1527025148 i  \\
- -0.2003772952 + 0.1527025148 i &amp; 0.6824804471 - 0.6861131983 i  \\
+0.3892503964 + 0.6171811656 i &amp; 0.2589154487 + 0.6328778145 i  \\
+ -0.2589154487 + 0.6328778145 i &amp; 0.3892503964 - 0.6171811656 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 exp(s1)=
 \begin{bmatrix}
-0.6824804471 + 0.6861131983 i &amp; 0.2003772952 + 0.1527025148 i  \\
- -0.2003772952 + 0.1527025148 i &amp; 0.6824804471 - 0.6861131983 i  \\
+0.3892503964 + 0.6171811656 i &amp; 0.2589154487 + 0.6328778145 i  \\
+ -0.2589154487 + 0.6328778145 i &amp; 0.3892503964 - 0.6171811656 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 </div>
@@ -3028,7 +3018,7 @@ By Javier Mas Solé
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

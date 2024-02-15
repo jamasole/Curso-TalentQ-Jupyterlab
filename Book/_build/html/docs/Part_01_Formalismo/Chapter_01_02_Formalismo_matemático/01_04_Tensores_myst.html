@@ -30,14 +30,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -49,9 +49,10 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -90,7 +91,6 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -102,6 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/Part_01_Formalismo/Chapter_01_02_Formalismo_matemático/01_04_Tensores_myst';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Probabilidades" href="01_05_Probabilidades_myst.html" />
@@ -199,7 +200,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Las reglas del juego</span></p>
 <ul class="current nav bd-sidenav">
@@ -474,10 +486,10 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 14, 2024 | 8 min read</p>
+<div><p>Feb 15, 2024 | 8 min read</p>
 </div></blockquote>
 <figure class="align-right">
-<a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 15%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="tensores">
 <h1>Tensores<a class="headerlink" href="#tensores" title="Permalink to this heading">#</a></h1>
@@ -523,8 +535,8 @@ document.write(`
 </div>
 </div>
 <p>con la propiedad <em>bilineal</em>. Es decir, como el producto ordinario, satisface la propiedad distributiva.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cd33103a-fcfc-4f91-9bfc-996ee9e71398">
-<span class="eqno">(10)<a class="headerlink" href="#equation-cd33103a-fcfc-4f91-9bfc-996ee9e71398" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-6ad88a6d-61c6-4f86-bf68-37b787fd219d">
+<span class="eqno">(10)<a class="headerlink" href="#equation-6ad88a6d-61c6-4f86-bf68-37b787fd219d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;\equiv &amp;~~
 \ket{u}\otimes\ket{y} ~+~ \ket{u}\otimes\ket{z} ~+~ \ket{v}\otimes\ket{y} ~+~~
  \ket{v}\otimes\ket{z} \\
@@ -777,13 +789,13 @@ s_1 &amp;\cdots  &amp;    &amp;  &amp; &amp; &amp;  0  \\  \vdots &amp; \ddots &
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
--0.6771133129 - 1.7592191532 i &amp; -0.169279762 + 0.9459507926 i &amp; 0.9021837268 + 0.1822725284 i  \\
- 0.1260322326 + 0.0055995793 i &amp; 0.6940500089 - 0.2605170943 i &amp; 2.4442163068 - 0.5115800371 i  \\
- 0.3871659959 + 0.3934163266 i &amp; -0.5397614987 - 2.1503665821 i &amp; 0.4082058626 + 0.9059317522 i  \\
- 0.0480247357 - 0.1089298156 i &amp; -0.4562253407 + 0.8137884951 i &amp; 0.7089854565 + 0.4507804966 i  \\
+-1.152679641 + 0.3843673874 i &amp; -0.4325726616 - 1.0361277366 i &amp; 0.3005162647 + 0.3929953306 i  \\
+ 2.2765941187 + 1.2750261107 i &amp; 1.5647370973 + 0.0424355433 i &amp; -0.648707882 + 0.0926529137 i  \\
+ -0.8601391515 + 0.4658826604 i &amp; 0.2791963061 + 0.1387952046 i &amp; 0.3432108255 + 0.775145358 i  \\
+ 1.5526050936 - 0.6005348335 i &amp; 0.1879227428 - 0.1780887008 i &amp; 1.0330045523 + 0.2466824917 i  \\
  \end{bmatrix}
 \end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>principal values s_i =  [3.274 2.697 1.388]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>principal values s_i =  [3.713 1.852 1.092]
 The Schmidt number is r = 3
 </pre></div>
 </div>
@@ -815,11 +827,11 @@ The Schmidt number is r = 3
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
-0.245547712 + 0.2501984358 i &amp; -0.2719892208 + 0.0244247214 i &amp; -0.1188884336 - 0.2626364848 i  \\
- -0.293928596 - 0.1611076509 i &amp; 0.2421947252 - 0.0975627948 i &amp; 0.1814381513 + 0.2075143255 i  \\
- -0.0446425495 - 0.0377016084 i &amp; 0.0447581119 - 0.00828499 i &amp; 0.0238162545 + 0.0417363197 i  \\
- -0.1655612383 + 0.1912009731 i &amp; -0.0334657752 - 0.1941590325 i &amp; 0.1819106228 - 0.1008476749 i  \\
- 0.3671469454 - 0.023954469 i &amp; -0.1668359102 + 0.2330500354 i &amp; -0.2903014488 - 0.0853003486 i  \\
+-0.1898807459 + 0.1779262826 i &amp; 0.261245613 - 0.0714336175 i &amp; 0.4170665813 - 0.0004146315 i  \\
+ 0.1134540813 - 0.0508377684 i &amp; -0.1291261262 - 0.0083702652 i &amp; -0.188468274 - 0.0646915694 i  \\
+ -0.1412198858 + 0.2165210323 i &amp; 0.2352262128 - 0.1306087744 i &amp; 0.4023540886 - 0.0988666522 i  \\
+ 0.0635607371 - 0.0649377428 i &amp; -0.090064277 + 0.0288616509 i &amp; -0.1454972767 + 0.0064352343 i  \\
+ 0.1582056828 - 0.1779742039 i &amp; -0.2321185118 + 0.0868766353 i &amp; -0.3800390534 + 0.0351470804 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>principal values s_i =  [1. 0. 0.]
@@ -981,8 +993,8 @@ A:\ket{u} \to \ket{v} \equiv A\ket{u}
 <ul class="simple">
 <li><p>Con la matriz, el operador se reconstruye en la base canónica de productos externos</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-0615df02-e9ec-426d-b865-15e51ba62f90">
-<span class="eqno">(11)<a class="headerlink" href="#equation-0615df02-e9ec-426d-b865-15e51ba62f90" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-ef095a64-1708-40e6-b76f-db7cb3f7be15">
+<span class="eqno">(11)<a class="headerlink" href="#equation-ef095a64-1708-40e6-b76f-db7cb3f7be15" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
  A &amp;~~=~&amp; 
  \sum_{i_1,...,i_n,\, j_1,...,j_n=0}^{d-1} A_{i_1...i_n, \, j_1...j_n} \ket{i_1...i_n}\bra{j_1...j_n}
  ~~~~=~~~~
@@ -1229,7 +1241,7 @@ By Javier Mas Solé
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

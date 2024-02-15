@@ -30,14 +30,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -49,9 +49,10 @@
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -90,7 +91,6 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -102,6 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/Part_02_Circuitos_Cuánticos/Chapter_01_02_Circuitos_1_cubit/024_El_Arte_de_Medir_I_myst';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Circuitos de multicúbit" href="../Chapter_02_01_Circuitos_multicubit_myst.html" />
@@ -199,7 +200,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Las reglas del juego</span></p>
 <ul class="nav bd-sidenav">
@@ -465,10 +477,10 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 14, 2024 | 6 min read</p>
+<div><p>Feb 15, 2024 | 7 min read</p>
 </div></blockquote>
 <figure class="align-right">
-<a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 15%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
 </figure>
 <section class="tex2jax_ignore mathjax_ignore" id="el-arte-de-medir-i">
 <h1>El arte de medir I<a class="headerlink" href="#el-arte-de-medir-i" title="Permalink to this heading">#</a></h1>
@@ -512,12 +524,12 @@ document.write(`
 <section id="medidas-en-la-base-computacional">
 <h3>Medidas en la base computacional<a class="headerlink" href="#medidas-en-la-base-computacional" title="Permalink to this heading">#</a></h3>
 <p>El <strong>aparato de medida estándar</strong> en computación cuántica asigna valores <span class="math notranslate nohighlight">\(\{0,1\}\)</span> a los kets <span class="math notranslate nohighlight">\(\ket{0}\)</span> y <span class="math notranslate nohighlight">\(\ket{1}\)</span> de la base computacional</p>
-<figure class="align-center" id="fig-ref">
+<figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/cubit_meter2.png"><img alt="../../../_images/cubit_meter2.png" src="../../../_images/cubit_meter2.png" style="width: 250px;" /></a>
 </figure>
 <p>donde <span class="math notranslate nohighlight">\(a = 0,1\)</span></p>
 <p>En general, el estado es destruido en la medida, por lo que se suele omitir el hilo cuántico a su salida</p>
-<figure class="align-center" id="id1">
+<figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/cubit_meter1.png"><img alt="../../../_images/cubit_meter1.png" src="../../../_images/cubit_meter1.png" style="width: 300px;" /></a>
 </figure>
 <p>Se trata de una <em>medida proyectiva</em> a la que asociamos el observable <span class="math notranslate nohighlight">\(Z = \sigma_z \)</span>.</p>
@@ -562,7 +574,7 @@ con  <span class="math notranslate nohighlight">\(a=\{0,1\}\)</span>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_env_0.45.2/lib/python3.12/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
   self._style, def_font_ratio = load_style(self._style)
 </pre></div>
 </div>
@@ -604,7 +616,7 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[(-0.1858094207 + 0.6311797498 i) |0\rangle+(-0.1103086104 - 0.744928851 i) |1\rangle\]</div>
+\[(0.5917825355 - 0.1084936157 i) |0\rangle+(-0.5934161843 - 0.5346772842 i) |1\rangle\]</div>
 </div>
 </div>
 <p>Las probabilidades de obtener ‘0’ y ‘1’ son los cuadrados de las amplitudes</p>
@@ -618,7 +630,7 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)= 0.43291 , p(1)= 0.56709
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)= 0.36198 , p(1)= 0.63802
 </pre></div>
 </div>
 </div>
@@ -640,15 +652,15 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_env_0.45.2/lib/python3.12/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
   self._style, def_font_ratio = load_style(self._style)
 </pre></div>
 </div>
-<img alt="../../../_images/78fb3e0ed4be494c1217a31493e25ffeca3f35bba13502335424b314f04e3a28.png" src="../../../_images/78fb3e0ed4be494c1217a31493e25ffeca3f35bba13502335424b314f04e3a28.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  {&#39;1&#39;: 567475, &#39;0&#39;: 432525}
+<img alt="../../../_images/e4c30dec6b72cf7fbf2dba46e6d92e3b665ee33faedab4c92fbecc9119816d39.png" src="../../../_images/e4c30dec6b72cf7fbf2dba46e6d92e3b665ee33faedab4c92fbecc9119816d39.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  {&#39;1&#39;: 637654, &#39;0&#39;: 362346}
 </pre></div>
 </div>
-<img alt="../../../_images/00d517b8411039a9d45ad780963fad62f0e163fb2d4dc3131df4c5f071da3e2d.png" src="../../../_images/00d517b8411039a9d45ad780963fad62f0e163fb2d4dc3131df4c5f071da3e2d.png" />
+<img alt="../../../_images/a6d83cdc481f3a1e6ef58597a6e3713cf3530334baab96255b101a62afcab964.png" src="../../../_images/a6d83cdc481f3a1e6ef58597a6e3713cf3530334baab96255b101a62afcab964.png" />
 </div>
 </div>
 <p>Ahora podemos  calcular las frecuencias relativas <span class="math notranslate nohighlight">\(n_i/N\)</span>  y compararlas con las probabilidades <span class="math notranslate nohighlight">\(p(i)\)</span></p>
@@ -662,7 +674,7 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)_exp = 0.432525   p(1)_exp =  0.567475
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)_exp = 0.362346   p(1)_exp =  0.637654
 </pre></div>
 </div>
 </div>
@@ -772,7 +784,7 @@ en <a class="reference external" href="https://quantum-computing.ibm.com/">https
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_env_0.45.2/lib/python3.12/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
   self._style, def_font_ratio = load_style(self._style)
 </pre></div>
 </div>
@@ -789,7 +801,7 @@ en <a class="reference external" href="https://quantum-computing.ibm.com/">https
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;0&#39;: 528, &#39;1&#39;: 496}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 506, &#39;0&#39;: 518}
 </pre></div>
 </div>
 </div>
@@ -801,7 +813,7 @@ en <a class="reference external" href="https://quantum-computing.ibm.com/">https
 <section id="medidas-en-una-base-general">
 <h2>Medidas en una base general<a class="headerlink" href="#medidas-en-una-base-general" title="Permalink to this heading">#</a></h2>
 <div class="note admonition">
-<p class="admonition-title">Nota (Recuerda) </p>
+<p class="admonition-title">Nota (Recuerda)</p>
 <center>
 No importa en qué dirección apunte el eje $\hat{\bf n} $ de un Stern-Gerlach 
 <div class="math notranslate nohighlight">
@@ -855,7 +867,7 @@ No importa en qué dirección apunte el eje $\hat{\bf n} $ de un Stern-Gerlach
 \hat\bn\cdot \bsig \,  \ket{a}_{\hat{\bf n}} = (-1)^a\ket{a}_{\hat{\bf n}}
 \]</div>
 <p>ambas situaciones está  relacionadas mediante una simple <em>rotación</em></p>
-<figure class="align-center" id="id2">
+<figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/BlochSphere_basis.png"><img alt="../../../_images/BlochSphere_basis.png" src="../../../_images/BlochSphere_basis.png" style="width: 300px;" /></a>
 </figure>
 <p>El operador que implementa esta rotación en el espacio <span class="math notranslate nohighlight">\(\Hil = {\mathbb C}^2\)</span> de un cúbit es</p>
@@ -870,11 +882,12 @@ U(\hat {\bf z}\to \hat \bn) = U(\theta,\phi,0)=\begin{bmatrix}   \cos \displayst
 \ket{0}_{\hat\boldn} = U \ket{0}_{\hat{\bf z}}~~~~~~,~~~~~~
 \ket{1}_{\hat\boldn} = U \ket{1}_{\hat{\bf z}}
 \]</div>
-<p>es decir
-$$ \begin{bmatrix} \cos\theta \ e^{i\phi}\sin\theta \end{bmatrix} = U\cdot \begin{bmatrix}1\0 \end{bmatrix} ~<s><s><s>,</s></s></s>~</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3f386dbd-b966-4804-b1c7-a6b2943bf921">
-<span class="eqno">(31)<a class="headerlink" href="#equation-3f386dbd-b966-4804-b1c7-a6b2943bf921" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} -\sin\theta \\ e^{i\phi}\cos\theta \end{bmatrix}\]</div>
-<p>$$</p>
+<p>es decir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+\begin{bmatrix} \cos\theta \\ e^{i\phi}\sin\theta \end{bmatrix} = U\cdot \begin{bmatrix}1\\0 \end{bmatrix} ~~~~~~~,~~~~~~~
+\begin{bmatrix} -\sin\theta \\ e^{i\phi}\cos\theta \end{bmatrix} = U\cdot \begin{bmatrix}0\\1 \end{bmatrix}  
+\end{split}\]</div>
 <p>Si las componentes de los vectores rotan en la forma <span class="math notranslate nohighlight">\(\ket{a}_{\hat{\bf n}} = U\ket{a}_{\hat{\bf z}}\)</span>
 los observables asociados a los  aparatos de <em>Stern Gerlach</em>: <em>original</em> <span class="math notranslate nohighlight">\(\to \hat {\bf z} \cdot \bsig~\)</span>, y <em>rotado</em><span class="math notranslate nohighlight">\(\to\hat {\bf n} \cdot \bsig~ \)</span>, se relacionan algebraicamente <em>como lo hace cualquier operador</em></p>
 <div class="math notranslate nohighlight">
@@ -888,8 +901,8 @@ Verificamos la consistencia<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-23a4049d-b018-4d10-9579-7ce4808274e4">
-<span class="eqno">(32)<a class="headerlink" href="#equation-23a4049d-b018-4d10-9579-7ce4808274e4" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-7078c0eb-a9f3-49d8-aecb-7a2afff6654b">
+<span class="eqno">(21)<a class="headerlink" href="#equation-7078c0eb-a9f3-49d8-aecb-7a2afff6654b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \hat {\bf n} \cdot \bsig\,  \ket{a}_{\hat{\bf n}} ~~&amp;=&amp;~~ 
 U~ \hat {\bf z} \cdot \bsig ~  U^\dagger ~ U  \ket{a}_{\hat{\bf z}}\\  \rule{0mm}{8mm}
 &amp;=&amp; U~ \hat {\bf z} \cdot \bsig ~   \ket{a}_{\hat{\bf z}}\\   \rule{0mm}{8mm}
@@ -904,11 +917,12 @@ U~ \hat {\bf z} \cdot \bsig ~  U^\dagger ~ U  \ket{a}_{\hat{\bf z}}\\  \rule{0mm
 </div>
 <p>El circuito siguiente  <em>simula</em> un aparato de medición en la base <span class="math notranslate nohighlight">\(\{\ket{a}_{\hat{\bf n}}\}\)</span>
 obtenido mediante la rotación del aparato de medida en la base <span class="math notranslate nohighlight">\(\{\ket{a}_{\hat{\bf n}}\}\)</span> de autoestados de <span class="math notranslate nohighlight">\(Z\)</span></p>
-<figure class="align-center" id="id3">
+<figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/nbasis_measure2.png"><img alt="../../../_images/nbasis_measure2.png" src="../../../_images/nbasis_measure2.png" style="width: 500px;" /></a>
 </figure>
 <div class="note admonition">
 <p class="admonition-title">Nota</p>
+<p>Recuerda que el orden de la composición de operadores se invierte al plasmarlos en un circuito</p>
 </div>
 <section id="ejemplo-bases-x-y-y-z">
 <h3>Ejemplo: bases <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span><a class="headerlink" href="#ejemplo-bases-x-y-y-z" title="Permalink to this heading">#</a></h3>
@@ -940,11 +954,11 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 \hat {\bf y} \cdot \bsig =  SH \, (\hat {\bf z} \cdot \bsig)\,  HS^\dagger
 \]</div>
 <p>los circuitos que implementan la rotación de estos operadores</p>
-<figure class="align-center" id="id4">
+<figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/meter_xybasis.png"><img alt="../../../_images/meter_xybasis.png" src="../../../_images/meter_xybasis.png" style="width: 700px;" /></a>
 </figure>
 <p>que nos permiten definir  <em>aparatos de medida rotados</em> en las direcciones <span class="math notranslate nohighlight">\(x\)</span> e <span class="math notranslate nohighlight">\(y\)</span></p>
-<figure class="align-center" id="id5">
+<figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/meter_xybasis2.png"><img alt="../../../_images/meter_xybasis2.png" src="../../../_images/meter_xybasis2.png" style="width: 700px;" /></a>
 </figure>
 <p>Cuando sólo nos interesa el resultado de la medida, y no el estado posterior al que ha colapsado no es necesario añadir los operadores posteriores al observable <span class="math notranslate nohighlight">\(Z\)</span>.</p>
@@ -981,7 +995,7 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 </div>
 <div class="cell_output docutils container">
 <img alt="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" src="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;110&#39;: 1}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;101&#39;: 1}
 </pre></div>
 </div>
 </div>
@@ -1035,11 +1049,9 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 </div>
 <div class="cell_output docutils container">
 <img alt="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" src="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cuentas(base Z)= {&#39;1&#39;: 4966, &#39;0&#39;: 5034}
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cuentas(base X)= {&#39;0&#39;: 10000}
-cuentas( base Y)= {&#39;0&#39;: 4976, &#39;1&#39;: 5024}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cuentas(base Z)= {&#39;0&#39;: 5017, &#39;1&#39;: 4983}
+cuentas(base X)= {&#39;0&#39;: 10000}
+cuentas( base Y)= {&#39;1&#39;: 4966, &#39;0&#39;: 5034}
 </pre></div>
 </div>
 </div>
@@ -1059,22 +1071,26 @@ A = a_0 I + a_1 X + a_2 Y  + a_3 Z \, .
 a_i = \frac{1}{2} \tr \, (A \sigma_i)
 \]</div>
 <p>donde <span class="math notranslate nohighlight">\( (\sigma_0,\sigma_1,\sigma_2,\sigma_3) = (I,X,Y,Z).\)</span></p>
-<details>    
-<summary><p  > >> Comprobación </p></summary>
-$$
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Comprobación<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[
 \frac{1}{2} \tr \, (A \sigma_i) = \frac{1}{2} \tr \, \left((\sum_{j=0}^3 a_j \sigma_j) \sigma_i\right)
 = \sum_{j=0}^3 a_j \, \frac{1}{2} \tr ( \sigma_j \sigma_i) = \sum_{j=0}^3 a_j \delta_{ji} = a_i
-$$
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
+\]</div>
 </div>
-<p>Entonces, podremos obtener el valor esperado de <span class="math notranslate nohighlight">\(A\)</span>  si somos capaces de medir los de <span class="math notranslate nohighlight">\(X,\)</span> <span class="math notranslate nohighlight">\(Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-78598bc8-5784-4b0b-b170-8a69de58218f">
-<span class="eqno">(33)<a class="headerlink" href="#equation-78598bc8-5784-4b0b-b170-8a69de58218f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+</details><p>Entonces, podremos obtener el valor esperado de <span class="math notranslate nohighlight">\(A\)</span>  si somos capaces de medir los de <span class="math notranslate nohighlight">\(X,\)</span> <span class="math notranslate nohighlight">\(Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span>.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 \langle A\rangle_\psi =\bra{\psi}A\ket{\psi} &amp;=&amp; 
 \bra{\psi} a_0 I + a_1 X + a_2 Y  + a_3 Z \ket{\psi} \\ \rule{0mm}{6mm}
 &amp;=&amp; a_0 + a_1 \langle X\rangle_\psi + a_2 \langle Y\rangle_\psi + a_3 \langle Z\rangle_\psi
-\end{eqnarray}\]</div>
+\end{eqnarray*}\]</div>
 <section id="calculo-del-langle-x-rangle-psi-langle-y-rangle-psi-y-langle-z-rangle-psi">
 <h3>Calculo del <span class="math notranslate nohighlight">\(\langle X\rangle_\psi\)</span>, <span class="math notranslate nohighlight">\(\langle Y\rangle_\psi\)</span> y <span class="math notranslate nohighlight">\(\langle Z\rangle_\psi\)</span><a class="headerlink" href="#calculo-del-langle-x-rangle-psi-langle-y-rangle-psi-y-langle-z-rangle-psi" title="Permalink to this heading">#</a></h3>
 <p>Comenzamos inicializando el circuito en un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span></p>
@@ -1090,8 +1106,8 @@ $$
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[(-0.1226122416 - 0.3671808179 i) |0\rangle+(-0.0309831486 + 0.9215120887 i) |1\rangle\]</div>
-<img alt="../../../_images/2545b9ecd49d9802b23964077632b1ef1780c6979b0ce8e8e53b602edb09a68e.png" src="../../../_images/2545b9ecd49d9802b23964077632b1ef1780c6979b0ce8e8e53b602edb09a68e.png" />
+\[(-0.3599558409 - 0.2319711619 i) |0\rangle+(0.4171643387 - 0.8016202887 i) |1\rangle\]</div>
+<img alt="../../../_images/422ca79bea60f3dcaea847e3d8bb1223fa42f9b716ec2adcf34657d77b1ea062.png" src="../../../_images/422ca79bea60f3dcaea847e3d8bb1223fa42f9b716ec2adcf34657d77b1ea062.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1106,17 +1122,17 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 <div class="math notranslate nohighlight">
 \[(+1)\to n^Z_0 ~~~~~~~~~~~~~~~~~~~~~~~~ (-1)\to n^Z_1\]</div>
 <p>Por definición, el valor medio de dicha variable es,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c3076ff-0699-4a74-aedf-54584877f3dc">
-<span class="eqno">(34)<a class="headerlink" href="#equation-2c3076ff-0699-4a74-aedf-54584877f3dc" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
 \langle Z \rangle_\psi = \bra{\psi} Z \ket{\psi} 
 &amp;=&amp; \left( c^Z_0\bra{0} + c^Z_1\bra{1}\right) Z\left( c^Z_0\ket{0} + c^Z_1\ket{1}\right)  \nonumber \\  \rule{0mm}{10mm}
 &amp;=&amp; (+1) |c^Z_0|^2 + (-1) |c^Z_1|^2    \nonumber \\  \rule{0mm}{10mm}
 &amp;=&amp; +\frac{n^Z_0}{N}- \frac{ n^Z_1}{N}
-\end{eqnarray}\]</div>
+\end{eqnarray*}\]</div>
 <p>Para medir autovalores de <span class="math notranslate nohighlight">\(\langle Z\rangle_\psi\)</span> el circuito es el más simple</p>
-<div>
-<img src="images/cubit_meter1.png" width="30%" style="margin:auto"/>
-</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/cubit_meter1.png"><img alt="../../../_images/cubit_meter1.png" src="../../../_images/cubit_meter1.png" style="width: 300px;" /></a>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;añadimos el medidor, trabajaremos con una copia del circuito&#39;</span>
@@ -1132,8 +1148,8 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/eac4f64a79747b13e981e88733a5309fce014810e51ec40be782c5c95f5168f5.png" src="../../../_images/eac4f64a79747b13e981e88733a5309fce014810e51ec40be782c5c95f5168f5.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;0&#39;: 1499, &#39;1&#39;: 8501}
+<img alt="../../../_images/3b0fbdc69283e2d40f98ad3e89c61b4b2fb8dd2c6308dda30e7837d662002dfc.png" src="../../../_images/3b0fbdc69283e2d40f98ad3e89c61b4b2fb8dd2c6308dda30e7837d662002dfc.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;0&#39;: 1800, &#39;1&#39;: 8200}
 </pre></div>
 </div>
 </div>
@@ -1151,7 +1167,7 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = -0.7002
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = -0.64
 </pre></div>
 </div>
 </div>
@@ -1169,9 +1185,9 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 \langle X \rangle_\psi ~= (+1)|c_0^X|^2 +(-1)|c_1^X|^2 ~=~ +\frac{n^X_0}{N}- \frac{ n^X_1}{N}
 \]</div>
 <p>Ya hemos visto cuál es el circuito necesario para  medir en la base <span class="math notranslate nohighlight">\(X\)</span></p>
-<div>
-<img src="images/cubit_meter_xbasis.png" width="38%" style="margin:auto"/>
-</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/cubit_meter_xbasis.png"><img alt="../../../_images/cubit_meter_xbasis.png" src="../../../_images/cubit_meter_xbasis.png" style="width: 400px;" /></a>
+</figure>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
 <p>En un estado arbitrario, <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, y calcula el valor esperado <span class="math notranslate nohighlight">\(\langle X\rangle_\psi = \bra{\psi}X\ket{\psi}\)</span></p>
@@ -1185,9 +1201,9 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 \langle Y \rangle_\psi = +\frac{n^Y_0}{N}- \frac{ n^Y_1}{N}\, .
 \]</div>
 <p>Circuito necesario para medir en la base <span class="math notranslate nohighlight">\( Y\)</span></p>
-<div>
-<img src="images/cubit_meter_ybasis.png" width="38%" style="margin:auto"/>
-</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/cubit_meter_ybasis.png"><img alt="../../../_images/cubit_meter_ybasis.png" src="../../../_images/cubit_meter_ybasis.png" style="width: 400px;" /></a>
+</figure>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
 <p>Calcula el valor esperado <span class="math notranslate nohighlight">\(\langle Y\rangle_\psi = \bra{\psi}Y\ket{\psi}\)</span></p>
@@ -1217,14 +1233,17 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <p class="sd-card-text">Circuito necesario para medir <span class="math notranslate nohighlight">\(\langle V\rangle_{\psi} \)</span> donde <span class="math notranslate nohighlight">\(\ket{\psi} = U\ket{0}\)</span> es un estado preparable</p>
-<div>
-<img src="images/vev_unitary_V.png" width="45%" style="margin:auto"/>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/vev_unitary_V.png"><img alt="../../../_images/vev_unitary_V.png" src="../../../_images/vev_unitary_V.png" style="width: 500px;" /></a>
+</figure>
 </div>
+</div>
+<div class="docutils">
 </div>
 <p>Si <span class="math notranslate nohighlight">\(V\)</span> además de ser <i>unitario</i>, fuese <i>hermítico</i>, entonces tendríamos acceso al valor esperado completo, al tratarse de una cantidad real.</p>
 <p>Operadores de 1 cúbit unitarios y hermíticos son, por ejemplo, los operadores
 <span class="math notranslate nohighlight">\(V = X,Y,Z,H\)</span>.</p>
-</div><p>Este argumento nos permite calcular de otra manera</p>
+<p>Este argumento nos permite calcular de otra manera</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left. 
@@ -1272,7 +1291,7 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 <div class="cell_output docutils container">
 <img alt="../../../_images/7ac3a3bd9405e2c8881dab823d39fc49f3fec72cb2974129e4823cc2201fcf52.png" src="../../../_images/7ac3a3bd9405e2c8881dab823d39fc49f3fec72cb2974129e4823cc2201fcf52.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt; = 0.54134
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt; = 0.53961
 </pre></div>
 </div>
 </div>
@@ -1386,7 +1405,7 @@ By Javier Mas Solé
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

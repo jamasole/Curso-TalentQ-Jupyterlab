@@ -268,6 +268,7 @@ def find_figures(f_data, i_start_list):
         width_fig   = None
         caption_fig = None
         label_fig   = None
+        number_ref  = False
                 
         found = False
         while not found:
@@ -305,8 +306,14 @@ def find_figures(f_data, i_start_list):
                 align_fig  = line_img_split[i].split('=')[1].replace('\\"','').replace("\\'",'').replace('/>','').replace('\\n",\n','').replace(',\n','')
             elif 'width='  in line_img_split[i]:
                 width_fig  = line_img_split[i].split('=')[1].replace('\\"','').replace("\'",'').replace('/>','').replace('\\n",\n','').replace(',\n','')
-        
-      
+            elif 'alt=' in line_img_split[i] and i_caption > 0:
+                number_ref = True
+                caption_fig = line_img_split[i].split('=')[1].replace('\\"','').replace("\'",'').replace('/>','').replace('\\n",\n','').replace(',\n','').replace("--"," ")
+
+        if i_caption > 0 and not 'alt=' in line_img:
+            number_ref=False
+            caption_fig = re.search(r'<center>(.*?)</center>', f_data[i_caption]).group(1)
+
         ########################
         ######## #prints y asserts
     
@@ -338,7 +345,7 @@ def find_figures(f_data, i_start_list):
 
     datos_list_list = [path_fig_list, align_fig_list, width_fig_list, caption_fig_list, label_fig_list]
         
-    return index_list_list, datos_list_list
+    return index_list_list, datos_list_list, number_ref
 
 
 def find_cell(f_data, i_pattern):
