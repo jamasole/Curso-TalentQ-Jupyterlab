@@ -26,4 +26,7 @@ parts:
     - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_02_02_Circuitos_multicubit/026_El_Arte_de_Medir_II_myst.ipynb
     - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_02_02_Circuitos_multicubit/027_Entrelazamiento_myst.ipynb
   - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_03_01_Mas_sobre_circuitos_myst.md
+    sections:
+    - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_03_02_Mas_sobre_Circuitos/031_Elementos_Basicos_myst.ipynb
+    - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_03_02_Mas_sobre_Circuitos/032_CompClasica_myst.ipynb
 
