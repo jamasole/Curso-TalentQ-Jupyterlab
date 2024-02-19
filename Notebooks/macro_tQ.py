@@ -216,7 +216,6 @@ def bg(color, cell=None):
 def get_probs(counts): # frecuencias_dict es un diccionario con la estadística de resultados
    
     prob_dict=counts.copy() # vamos a modificar el diccionario "cuentas" con las probabilidades 
-#    amp_dict=counts.copy()  # y las amplitudes
     keys = list(counts.keys())
     values = list(counts.values())
     
@@ -225,9 +224,8 @@ def get_probs(counts): # frecuencias_dict es un diccionario con la estadística 
  
     for i in range(len(keys)):
         prob_dict[keys[i]]= probabilidades[i]
-#        amp_dict[keys[i]] = np.sqrt(probabilidades[i]) #las amplitudes, sólo en valor absoluto, las fases no son accesibles
     
-    return  prob_dict #, amp_dict
+    return  prob_dict
 
 
 
