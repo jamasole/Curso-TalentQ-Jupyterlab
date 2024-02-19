@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/myfile.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -234,7 +235,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="024_El_Arte_de_Medir_I_myst.html">El arte de medir I</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_02_02_Circuitos_multicubit/025_Multicubits_myst.html">Multi-cúbits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_02_02_Circuitos_multicubit/026_El_Arte_de_Medir_II_myst.html">El arte de medir II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Chapter_02_02_Circuitos_multicubit/027_Entrelazamiento_myst.html">Entrelazamiento en acción</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Chapter_03_01_Mas_sobre_circuitos_myst.html">Más cosas sobre circuitos</a></li>
 </ul>
 
@@ -489,7 +495,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 15, 2024 | 6 min read</p>
+<div><p>Feb 19, 2024 | 6 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -834,11 +840,9 @@ de la esfera de Bloch</em>.</p></li>
 <p class="sd-card-text"><b>Teorema</b>:</p>
 </div>
 <div class="sd-card-body docutils">
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>El operador que efectúa una &lt;i&gt;rotación de ángulo&lt;/i&gt;  $\alpha\in [0,2\pi)$ en torno al &lt;i&gt;eje que marca un vector unitario&lt;/i&gt;  $\hat{\bf n} = (n_x, n_y,n_z)$ es el siguiente
-</pre></div>
-</div>
-<div class="amsmath math notranslate nohighlight" id="equation-c38be67b-8e27-40f1-8203-e3616aa100e6">
-<span class="eqno">(19)<a class="headerlink" href="#equation-c38be67b-8e27-40f1-8203-e3616aa100e6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<p class="sd-card-text">El operador que efectúa una <i>rotación de ángulo</i>  <span class="math notranslate nohighlight">\(\alpha\in [0,2\pi)\)</span> en torno al <i>eje que marca un vector unitario</i>  <span class="math notranslate nohighlight">\(\hat{\bf n} = (n_x, n_y,n_z)\)</span> es el siguiente</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6d1caf0e-73ea-46ae-8bd6-1122ef093753">
+<span class="eqno">(20)<a class="headerlink" href="#equation-6d1caf0e-73ea-46ae-8bd6-1122ef093753" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_{\hat{\bf n}}(\alpha)~ = ~\exp\left( -i\frac{\alpha}{2} \hat{\bf n}\cdot \boldsymbol{\sigma} \right) ~=~ 
 \cos \frac{\alpha}{2} I - i \sin\frac{\alpha}{2} \hat{\bf n}\cdot\boldsymbol{\sigma} 
 \end{eqnarray}\]</div>

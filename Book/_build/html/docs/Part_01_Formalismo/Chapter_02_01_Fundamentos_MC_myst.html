@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/myfile.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -234,7 +235,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_01_02_Circuitos_1_cubit/024_El_Arte_de_Medir_I_myst.html">El arte de medir I</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/025_Multicubits_myst.html">Multi-cúbits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/026_El_Arte_de_Medir_II_myst.html">El arte de medir II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/027_Entrelazamiento_myst.html">Entrelazamiento en acción</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_03_01_Mas_sobre_circuitos_myst.html">Más cosas sobre circuitos</a></li>
 </ul>
 
@@ -480,7 +486,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 15, 2024 | 7 min read</p>
+<div><p>Feb 19, 2024 | 7 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../_images/Logo_TalentQ_Azul.png"><img alt="../../_images/Logo_TalentQ_Azul.png" src="../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -495,7 +501,12 @@ document.write(`
 <span class="math notranslate nohighlight">\( \newcommand{\i}{{\color{blue} i}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\Hil}{{\cal H}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\V}{{\cal V}} \)</span></p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../macro_tQ.py
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -511,6 +522,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <section id="axiomas">
 <h2>Axiomas<a class="headerlink" href="#axiomas" title="Permalink to this heading">#</a></h2>
@@ -578,8 +590,8 @@ p(\lambda_k)~ = ~|\braket{\lambda_k}{\psi}|^2
 </div>
 <p>La fórmula para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span>  es cierta cuando el autovalor en cuestion es <em>no degenerado</em>.</p>
 <p>Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span> debe generalizarse:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6ed991a1-a106-4f0d-bd52-b38a15e164b0">
-<span class="eqno">(15)<a class="headerlink" href="#equation-6ed991a1-a106-4f0d-bd52-b38a15e164b0" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-5f27de87-9207-496d-a225-01880886242f">
+<span class="eqno">(16)<a class="headerlink" href="#equation-5f27de87-9207-496d-a225-01880886242f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \bra{\psi}\left(
  \sum_{a=1}^{d_k}\ketbra{\lambda^a_k}{\lambda^a_k}\right) \ket{\psi}\nonumber\\
 &amp;=&amp;  \bra{\psi}P_k\ket{\psi} \rule{0mm}{7mm}\\
@@ -675,8 +687,8 @@ P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \]</div>
 <p>es el proyector sobre el subespacio propio</p>
 <p>Por el <em>valor esperado</em> <span class="math notranslate nohighlight">\(\langle A\rangle\)</span> del <em>observable</em> <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, entendemos el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\lambda_n\)</span> obtenida por el método descrito.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ee2a5e6f-cf39-476b-abd5-bfd8ca43d806">
-<span class="eqno">(16)<a class="headerlink" href="#equation-ee2a5e6f-cf39-476b-abd5-bfd8ca43d806" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-927e0dab-6299-404a-8282-4f588e98980c">
+<span class="eqno">(17)<a class="headerlink" href="#equation-927e0dab-6299-404a-8282-4f588e98980c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle A\rangle &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 
@@ -774,7 +786,7 @@ p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-3.0834,  1.5347,  4.028 ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-4.4925, -1.8388,  4.4888])
 </pre></div>
 </div>
 </div>
@@ -801,7 +813,7 @@ p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt;=  -3.08344  sigma =  5.96e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt;=  -4.4925  sigma =  0.0
 </pre></div>
 </div>
 </div>
@@ -904,8 +916,8 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Tomando la derivada temporal de la ecuación <span class="math notranslate nohighlight">\(\ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}\)</span>, que define <span class="math notranslate nohighlight">\(U(t,t_0)\)</span>, tenemos para cada miembro</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21ea2996-6198-4a43-bf69-0ae7d10989ac">
-<span class="eqno">(17)<a class="headerlink" href="#equation-21ea2996-6198-4a43-bf69-0ae7d10989ac" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-2f23429e-e38b-49b2-9c8e-c4508a2a7a15">
+<span class="eqno">(18)<a class="headerlink" href="#equation-2f23429e-e38b-49b2-9c8e-c4508a2a7a15" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}\ket{\psi(t)} &amp;~=~&amp; -\frac{i}{\hbar}  H(t)\ket{\psi(t)} = -\frac{i}{\hbar} H(t)U(t,t_0)\ket{\psi(t_0)}  \nonumber\\
 \frac{d}{dt}U(t,t_0)\ket{\psi(t_0)} &amp;~=~&amp; \left(\frac{d}{dt}U(t,t_0)\right)\ket{\psi(t_0)}
 \end{eqnarray}\]</div>
@@ -934,8 +946,8 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Basta con demostrar que se satisface la ecuación de evolución y la condición de contorno</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6bfea2fe-d80d-4c15-ac71-7ae3ba2809b3">
-<span class="eqno">(18)<a class="headerlink" href="#equation-6bfea2fe-d80d-4c15-ac71-7ae3ba2809b3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-2359c043-0b7a-4cdd-bf52-0026d9ad1db1">
+<span class="eqno">(19)<a class="headerlink" href="#equation-2359c043-0b7a-4cdd-bf52-0026d9ad1db1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}U(t,t_0) &amp;=&amp; \frac{d}{dt} \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
     \nonumber\\ \rule{0mm}{6mm}
    &amp;=&amp; \frac{d}{dt}\left( I +(t-t_0)\left(-\frac{i}{\hbar} H\right) + \frac{1}{2!} 
@@ -1039,7 +1051,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1243e346ddc56c73c2cbb3bc2ec62ff3e4b0352cff2d2697affd00992176c29e.png" src="../../_images/1243e346ddc56c73c2cbb3bc2ec62ff3e4b0352cff2d2697affd00992176c29e.png" />
+<img alt="../../_images/4fdf272a961c04eedc57d0a44aed3addf4371d4ee5a7c483d6114f4bf872d236.png" src="../../_images/4fdf272a961c04eedc57d0a44aed3addf4371d4ee5a7c483d6114f4bf872d236.png" />
 </div>
 </div>
 </section>

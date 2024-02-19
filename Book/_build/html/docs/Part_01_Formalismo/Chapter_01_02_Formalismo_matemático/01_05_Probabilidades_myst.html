@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/myfile.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -234,7 +235,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_01_02_Circuitos_1_cubit/024_El_Arte_de_Medir_I_myst.html">El arte de medir I</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/025_Multicubits_myst.html">Multi-cúbits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/026_El_Arte_de_Medir_II_myst.html">El arte de medir II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/027_Entrelazamiento_myst.html">Entrelazamiento en acción</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_03_01_Mas_sobre_circuitos_myst.html">Más cosas sobre circuitos</a></li>
 </ul>
 
@@ -483,7 +489,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 15, 2024 | 3 min read</p>
+<div><p>Feb 19, 2024 | 3 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -495,7 +501,12 @@ document.write(`
 <span class="math notranslate nohighlight">\( \newcommand{\braket}[2]{\langle #1|#2\rangle} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\i}{{\color{blue} i}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\Hil}{{\mathbb H}} \)</span></p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../macro_tQ.py
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -511,6 +522,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <section id="variables-aleatorias">
 <h2>Variables aleatorias<a class="headerlink" href="#variables-aleatorias" title="Permalink to this heading">#</a></h2>
@@ -646,8 +658,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 \end{split}\]</div>
 <p>donde el primer factor tiene en cuenta las posibles ordenaciones en que aparecen <span class="math notranslate nohighlight">\(x\)</span> éxitos en <span class="math notranslate nohighlight">\(n\)</span> intentos.</p>
 <p>Un cálculo un poco más largo permite ver que, ahora</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3423a06e-7ba7-4381-8fca-dc2494d654b7">
-<span class="eqno">(13)<a class="headerlink" href="#equation-3423a06e-7ba7-4381-8fca-dc2494d654b7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-33febdb7-61ab-471a-9a37-b7b36241082c">
+<span class="eqno">(14)<a class="headerlink" href="#equation-33febdb7-61ab-471a-9a37-b7b36241082c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp;  np\\ \rule{0mm}{7mm}
 \sigma^2 &amp;=&amp; n p(1-p)
 \end{eqnarray}\]</div>
@@ -660,8 +672,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\right)
 \]</div>
 <p>Nos encontramos ante una variable aleatoria con un espacio muestral continuo <span class="math notranslate nohighlight">\(x\in (-\infty,+\infty)\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-01a02caa-bc96-4ed1-bd50-29cae5cc7569">
-<span class="eqno">(14)<a class="headerlink" href="#equation-01a02caa-bc96-4ed1-bd50-29cae5cc7569" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-206996fb-d8c4-45ac-b291-bff646678842">
+<span class="eqno">(15)<a class="headerlink" href="#equation-206996fb-d8c4-45ac-b291-bff646678842" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{X} &amp;=&amp; \int_{-\infty}^{+\infty} xp(x) dx = \mu \\
 \overline{(x-\overline X)^2} &amp;=&amp; \int_{-\infty}^{+\infty} (x-\mu)^2 p(x)dx =\sigma^2
 \end{eqnarray}\]</div>
@@ -697,7 +709,7 @@ p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\rig
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/8496cab84da2189a5c13c81398a33e36de3fde45c5a65890ead5adf72168da3d.png" src="../../../_images/8496cab84da2189a5c13c81398a33e36de3fde45c5a65890ead5adf72168da3d.png" />
+<img alt="../../../_images/4a2e2b0cce30c5dac1a9555a36b7a296379be443cabc3325f090206123124702.png" src="../../../_images/4a2e2b0cce30c5dac1a9555a36b7a296379be443cabc3325f090206123124702.png" />
 </div>
 </div>
 <p>En el límite de número de eventos <span class="math notranslate nohighlight">\(N\to \infty\)</span>, el histograma y la curva matemática confluyen.</p>

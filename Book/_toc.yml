@@ -21,5 +21,9 @@ parts:
     - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_01_02_Circuitos_1_cubit/023_Espin_myst.ipynb
     - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_01_02_Circuitos_1_cubit/024_El_Arte_de_Medir_I_myst.ipynb
   - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_02_01_Circuitos_multicubit_myst.md
+    sections:
+    - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_02_02_Circuitos_multicubit/025_Multicubits_myst.ipynb
+    - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_02_02_Circuitos_multicubit/026_El_Arte_de_Medir_II_myst.ipynb
+    - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_02_02_Circuitos_multicubit/027_Entrelazamiento_myst.ipynb
   - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_03_01_Mas_sobre_circuitos_myst.md
 

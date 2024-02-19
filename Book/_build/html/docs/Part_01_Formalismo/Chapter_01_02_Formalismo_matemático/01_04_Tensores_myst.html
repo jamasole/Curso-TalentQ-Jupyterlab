@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/myfile.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -234,7 +235,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_01_02_Circuitos_1_cubit/024_El_Arte_de_Medir_I_myst.html">El arte de medir I</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/025_Multicubits_myst.html">Multi-cúbits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/026_El_Arte_de_Medir_II_myst.html">El arte de medir II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/027_Entrelazamiento_myst.html">Entrelazamiento en acción</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_03_01_Mas_sobre_circuitos_myst.html">Más cosas sobre circuitos</a></li>
 </ul>
 
@@ -486,7 +492,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 15, 2024 | 8 min read</p>
+<div><p>Feb 19, 2024 | 8 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -502,7 +508,12 @@ document.write(`
 <span class="math notranslate nohighlight">\( \newcommand{\Hil}{{\cal H}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\V}{{\cal V}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\Lin}{\hbox{Lin}} \)</span></p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../macro_tQ.py
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -517,6 +528,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <section id="producto-tensorial">
 <h2>Producto Tensorial<a class="headerlink" href="#producto-tensorial" title="Permalink to this heading">#</a></h2>
@@ -535,8 +547,8 @@ document.write(`
 </div>
 </div>
 <p>con la propiedad <em>bilineal</em>. Es decir, como el producto ordinario, satisface la propiedad distributiva.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b93af00a-8228-498d-9bc4-5fcc7daa1ecf">
-<span class="eqno">(11)<a class="headerlink" href="#equation-b93af00a-8228-498d-9bc4-5fcc7daa1ecf" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-db3ed0aa-ac3d-4365-ba90-e21aab2e1e72">
+<span class="eqno">(12)<a class="headerlink" href="#equation-db3ed0aa-ac3d-4365-ba90-e21aab2e1e72" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;\equiv &amp;~~
 \ket{u}\otimes\ket{y} ~+~ \ket{u}\otimes\ket{z} ~+~ \ket{v}\otimes\ket{y} ~+~~
  \ket{v}\otimes\ket{z} \\
@@ -789,13 +801,13 @@ s_1 &amp;\cdots  &amp;    &amp;  &amp; &amp; &amp;  0  \\  \vdots &amp; \ddots &
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
--1.152679641 + 0.3843673874 i &amp; -0.4325726616 - 1.0361277366 i &amp; 0.3005162647 + 0.3929953306 i  \\
- 2.2765941187 + 1.2750261107 i &amp; 1.5647370973 + 0.0424355433 i &amp; -0.648707882 + 0.0926529137 i  \\
- -0.8601391515 + 0.4658826604 i &amp; 0.2791963061 + 0.1387952046 i &amp; 0.3432108255 + 0.775145358 i  \\
- 1.5526050936 - 0.6005348335 i &amp; 0.1879227428 - 0.1780887008 i &amp; 1.0330045523 + 0.2466824917 i  \\
+0.0388313248 + 1.3578999626 i &amp; 0.1272922943 - 0.8627893224 i &amp; 0.3746056758 + 1.3285599277 i  \\
+ 0.0279677276 + 0.2476444944 i &amp; -0.774616711 - 1.3833325804 i &amp; 0.2372340158 - 0.469407982 i  \\
+ -0.7959325582 - 0.202555162 i &amp; -0.0791797085 - 0.1665837779 i &amp; -1.6014820821 + 1.4597185552 i  \\
+ -0.0715863997 - 1.0575195182 i &amp; -1.3152756484 - 2.2135360842 i &amp; 0.0797349439 + 0.4733232102 i  \\
  \end{bmatrix}
 \end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>principal values s_i =  [3.713 1.852 1.092]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>principal values s_i =  [3.31  2.898 1.183]
 The Schmidt number is r = 3
 </pre></div>
 </div>
@@ -827,11 +839,11 @@ The Schmidt number is r = 3
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
--0.1898807459 + 0.1779262826 i &amp; 0.261245613 - 0.0714336175 i &amp; 0.4170665813 - 0.0004146315 i  \\
- 0.1134540813 - 0.0508377684 i &amp; -0.1291261262 - 0.0083702652 i &amp; -0.188468274 - 0.0646915694 i  \\
- -0.1412198858 + 0.2165210323 i &amp; 0.2352262128 - 0.1306087744 i &amp; 0.4023540886 - 0.0988666522 i  \\
- 0.0635607371 - 0.0649377428 i &amp; -0.090064277 + 0.0288616509 i &amp; -0.1454972767 + 0.0064352343 i  \\
- 0.1582056828 - 0.1779742039 i &amp; -0.2321185118 + 0.0868766353 i &amp; -0.3800390534 + 0.0351470804 i  \\
+0.3838420172 - 0.108846696 i &amp; -0.0034924596 + 0.0206916749 i &amp; 0.424610374 - 0.0861928607 i  \\
+ 0.0880197392 - 0.2253400673 i &amp; 0.0087184933 + 0.0092674745 i &amp; 0.1139003665 - 0.2367399105 i  \\
+ -0.1999367037 - 0.0477834754 i &amp; 0.0067826325 - 0.0084198085 i &amp; -0.2125523533 - 0.0682360532 i  \\
+ -0.0380347495 + 0.3869687002 i &amp; -0.0175250719 - 0.0105408507 i &amp; -0.0731106532 + 0.4158778565 i  \\
+ 0.2170771688 + 0.0014521801 i &amp; -0.0049684589 + 0.0102797975 i &amp; 0.2349347845 + 0.0194819309 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>principal values s_i =  [1. 0. 0.]
@@ -993,8 +1005,8 @@ A:\ket{u} \to \ket{v} \equiv A\ket{u}
 <ul class="simple">
 <li><p>Con la matriz, el operador se reconstruye en la base canónica de productos externos</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-8a251690-f281-4cc8-ae5b-8ca6512acea1">
-<span class="eqno">(12)<a class="headerlink" href="#equation-8a251690-f281-4cc8-ae5b-8ca6512acea1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-0d65b0da-4603-4c0d-be8c-a28a84723b1d">
+<span class="eqno">(13)<a class="headerlink" href="#equation-0d65b0da-4603-4c0d-be8c-a28a84723b1d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
  A &amp;~~=~&amp; 
  \sum_{i_1,...,i_n,\, j_1,...,j_n=0}^{d-1} A_{i_1...i_n, \, j_1...j_n} \ket{i_1...i_n}\bra{j_1...j_n}
  ~~~~=~~~~

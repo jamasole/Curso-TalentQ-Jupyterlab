@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/myfile.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -234,7 +235,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_01_02_Circuitos_1_cubit/024_El_Arte_de_Medir_I_myst.html">El arte de medir I</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_01_Circuitos_multicubit_myst.html">Circuitos de multicúbit</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/025_Multicubits_myst.html">Multi-cúbits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/026_El_Arte_de_Medir_II_myst.html">El arte de medir II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_02_02_Circuitos_multicubit/027_Entrelazamiento_myst.html">Entrelazamiento en acción</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../Part_02_Circuitos_Cu%C3%A1nticos/Chapter_03_01_Mas_sobre_circuitos_myst.html">Más cosas sobre circuitos</a></li>
 </ul>
 
@@ -483,7 +489,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 15, 2024 | 5 min read</p>
+<div><p>Feb 19, 2024 | 5 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -556,8 +562,8 @@ i^3  &amp;=&amp; i*i*i = i^2 * i = -i\\ \rule{0mm}{6mm}
 \end{array}
 \end{split}\]</div>
 <p>Observar que el <em>inverso multiplicativo</em>  <span class="math notranslate nohighlight">\(1/i\)</span> también es <span class="math notranslate nohighlight">\(-i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b8f0df52-9f71-42d2-8a28-a5232555b442">
-<span class="eqno">(1)<a class="headerlink" href="#equation-b8f0df52-9f71-42d2-8a28-a5232555b442" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-18ae0b77-aeb4-4064-ad1d-5ced015ec02b">
+<span class="eqno">(1)<a class="headerlink" href="#equation-18ae0b77-aeb4-4064-ad1d-5ced015ec02b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{i}{i}  &amp;=&amp;   1 \nonumber\\
 i (-i) &amp;=&amp; - i^2  =  1
 \end{eqnarray}\]</div>
@@ -703,8 +709,8 @@ z=r exp(i th)= (-1.873-0.702j)
 </div>
 </div>
 <p>Usar la forma polar es útil en situaciones en las que aparecen productos y potencias del número <span class="math notranslate nohighlight">\(i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b5e0de45-39ea-47d4-8e09-41f4c6de4efc">
-<span class="eqno">(2)<a class="headerlink" href="#equation-b5e0de45-39ea-47d4-8e09-41f4c6de4efc" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-d94640ac-e264-4d7e-a3ee-e4871d19366b">
+<span class="eqno">(2)<a class="headerlink" href="#equation-d94640ac-e264-4d7e-a3ee-e4871d19366b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 i &amp;=&amp; e^{i\pi/2} \\ \rule{0mm}{10mm}
 -1 &amp;=&amp; e^{i\pi} \\ \rule{0mm}{10mm}
 i &amp;=&amp; e^{3i\pi/2} =e^{-i\pi/2} \\  \rule{0mm}{10mm}
