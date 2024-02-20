@@ -487,7 +487,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 19, 2024 | 5 min read</p>
+<div><p>Feb 20, 2024 | 5 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -609,42 +609,37 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cuentas= {&#39;100&#39;: 6249, &#39;110&#39;: 24639, &#39;000&#39;: 6341, &#39;010&#39;: 25031, &#39;001&#39;: 25217, &#39;111&#39;: 6192, &#39;011&#39;: 6331}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cuentas= {&#39;001&#39;: 25222, &#39;100&#39;: 6260, &#39;010&#39;: 24833, &#39;000&#39;: 6287, &#39;110&#39;: 24800, &#39;111&#39;: 6239, &#39;011&#39;: 6359}
 </pre></div>
 </div>
-<img alt="../../../_images/a021aae069fe832dab9e7e415b0479e1fde5324f656348fb3bd2dc7c8dc80902.png" src="../../../_images/a021aae069fe832dab9e7e415b0479e1fde5324f656348fb3bd2dc7c8dc80902.png" />
+<img alt="../../../_images/1bce5c67e9407a05171eeb19262f87e3867927cb5441b6bd025bdf5fd851a49d.png" src="../../../_images/1bce5c67e9407a05171eeb19262f87e3867927cb5441b6bd025bdf5fd851a49d.png" />
 </div>
 </div>
 <p>Ahora podemos generar diccionarios con las probabilidades y la amplitudes de los distintos resultados, para obtener la tomografía del estado</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">probs_amps</span><span class="p">(</span><span class="n">cuentas</span><span class="p">):</span> <span class="c1"># frecuencias_dict es un diccionario con la estadística de resultados</span>
-    
-    <span class="n">prob_dict</span><span class="o">=</span><span class="n">cuentas</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># vamos a modificar el diccionario &quot;cuentas&quot; con las probabilidades </span>
-    <span class="n">amp_dict</span><span class="o">=</span><span class="n">cuentas</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  <span class="c1"># y las amplitudes</span>
-    <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cuentas</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-    <span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cuentas</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_probs</span><span class="p">(</span><span class="n">counts</span><span class="p">):</span> <span class="c1"># frecuencias_dict es un diccionario con la estadística de resultados</span>
+   
+    <span class="n">prob_dict</span><span class="o">=</span><span class="n">counts</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># vamos a modificar el diccionario &quot;cuentas&quot; con las probabilidades </span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
     
     <span class="n">N</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
     <span class="n">probabilidades</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="o">/</span><span class="n">N</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span> <span class="c1"># lista de frecuencias relativas</span>
  
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">)):</span>
         <span class="n">prob_dict</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span> <span class="n">probabilidades</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">amp_dict</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">probabilidades</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="c1">#las amplitudes, sólo en valor absoluto, las fases no son accesibles</span>
     
-    <span class="k">return</span>  <span class="n">prob_dict</span><span class="p">,</span> <span class="n">amp_dict</span>
+    <span class="k">return</span>  <span class="n">prob_dict</span>
 
-<span class="n">probs</span><span class="p">,</span> <span class="n">amps</span> <span class="o">=</span> <span class="n">probs_amps</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+<span class="n">probs</span>  <span class="o">=</span> <span class="n">get_probs</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Probabilidades =&quot;</span><span class="p">,</span><span class="n">probs</span> <span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Amplitudes =&quot;</span><span class="p">,</span> <span class="n">amps</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilidades = {&#39;100&#39;: 0.06249, &#39;110&#39;: 0.24639, &#39;000&#39;: 0.06341, &#39;010&#39;: 0.25031, &#39;001&#39;: 0.25217, &#39;111&#39;: 0.06192, &#39;011&#39;: 0.06331}
-Amplitudes = {&#39;100&#39;: 0.249979999199936, &#39;110&#39;: 0.49637687295038235, &#39;000&#39;: 0.251813422994089, &#39;010&#39;: 0.5003099039595359, &#39;001&#39;: 0.5021653114264266, &#39;111&#39;: 0.24883729623993264, &#39;011&#39;: 0.25161478493920025}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilidades = {&#39;001&#39;: 0.25222, &#39;100&#39;: 0.0626, &#39;010&#39;: 0.24833, &#39;000&#39;: 0.06287, &#39;110&#39;: 0.248, &#39;111&#39;: 0.06239, &#39;011&#39;: 0.06359}
 </pre></div>
 </div>
 </div>
@@ -850,7 +845,7 @@ a_{i_1\ldots i_n} =\frac{1}{2^n} \tr (A \,  \sigma_{i_1}\otimes \ldots  \otimes\
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a_{203} =  (-0.0833891341272671+0.0639348644022008j)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a_{203} =  (-0.06779196715051473-0.07785500867195314j)
 </pre></div>
 </div>
 </div>
@@ -938,7 +933,7 @@ Z\otimes Z\otimes Z \ket{i_2 i_1 i_0} = Z\ket{i_2}\otimes Z\ket{i_1}\otimes Z\ke
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;100&#39;: 6278, &#39;001&#39;: 24805, &#39;000&#39;: 6343, &#39;010&#39;: 25010, &#39;110&#39;: 24927, &#39;111&#39;: 6343, &#39;011&#39;: 6294}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;100&#39;: 6092, &#39;000&#39;: 6416, &#39;010&#39;: 25096, &#39;110&#39;: 24881, &#39;011&#39;: 6119, &#39;111&#39;: 6340, &#39;001&#39;: 25056}
 </pre></div>
 </div>
 </div>
@@ -964,7 +959,7 @@ Z\otimes Z\otimes Z \ket{i_2 i_1 i_0} = Z\ket{i_2}\otimes Z\ket{i_1}\otimes Z\ke
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZZZ&gt; = -0.24872
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZZZ&gt; = -0.25168
 </pre></div>
 </div>
 </div>
@@ -1000,7 +995,7 @@ Z\otimes Z\otimes Z \ket{i_2 i_1 i_0} = Z\ket{i_2}\otimes Z\ket{i_1}\otimes Z\ke
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sigma =  0.9685754289677185
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sigma =  0.9678105070725364
 </pre></div>
 </div>
 </div>
@@ -1043,8 +1038,8 @@ Z\otimes Z\otimes Z \ket{i_2 i_1 i_0} = Z\ket{i_2}\otimes Z\ket{i_1}\otimes Z\ke
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;110&#39;: 6146, &#39;001&#39;: 3185, &#39;101&#39;: 6275, &#39;100&#39;: 12353, &#39;011&#39;: 40926, &#39;111&#39;: 12414, &#39;010&#39;: 3069, &#39;000&#39;: 15632}
-&lt;ZXY&gt; = 0.37958
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;110&#39;: 6217, &#39;001&#39;: 3087, &#39;100&#39;: 12289, &#39;000&#39;: 15686, &#39;010&#39;: 3100, &#39;101&#39;: 6185, &#39;111&#39;: 12598, &#39;011&#39;: 40838}
+&lt;ZXY&gt; = 0.37852
 </pre></div>
 </div>
 </div>
@@ -1182,10 +1177,10 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 499143, &#39;0&#39;: 500857}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 499793, &#39;0&#39;: 500207}
 </pre></div>
 </div>
-<img alt="../../../_images/25c6307933c3d230c552705f3602561bc719f24fd9cb85f717ff138b946124b5.png" src="../../../_images/25c6307933c3d230c552705f3602561bc719f24fd9cb85f717ff138b946124b5.png" />
+<img alt="../../../_images/e26161ebc586a2956569ccd5569e7eb0a8f3e25b2babc3dda0000d534ee75515.png" src="../../../_images/e26161ebc586a2956569ccd5569e7eb0a8f3e25b2babc3dda0000d534ee75515.png" />
 </div>
 </div>
 <div class="cell docutils container">

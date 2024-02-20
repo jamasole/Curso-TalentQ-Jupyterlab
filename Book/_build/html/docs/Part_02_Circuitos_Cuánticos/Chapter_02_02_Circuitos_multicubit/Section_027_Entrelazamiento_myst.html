@@ -482,7 +482,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 19, 2024 | 11 min read</p>
+<div><p>Feb 20, 2024 | 11 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -775,7 +775,7 @@ R = |1 +  2 \cos\varphi  - \cos 2\varphi|\, .
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/6a287cef6602d488168c82c1026167b386d14b3fda34455bd0f195cab87ab633.png" src="../../../_images/6a287cef6602d488168c82c1026167b386d14b3fda34455bd0f195cab87ab633.png" />
+<img alt="../../../_images/8a44277b6770334db0f98026b1c8c239ffbba726e553f14f90a85876781bf3ca.png" src="../../../_images/8a44277b6770334db0f98026b1c8c239ffbba726e553f14f90a85876781bf3ca.png" />
 </div>
 </div>
 <p>Prueba con otros estados de la base de Bell. Realiza este experimento en un ordenador real.</p>
@@ -886,48 +886,25 @@ xxx  \ket{{\rm GHZ}} =   X \otimes X \otimes X \big(\frac{1}{\sqrt{2}}(\ket{000}
 <span class="n">multibasis</span> <span class="o">=</span> <span class="s1">&#39;XXX&#39;</span>
 
 <span class="n">qc_GHZ</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
-<span class="n">mc_add_measure_XYZ</span><span class="p">(</span><span class="n">qc_GHZ</span><span class="p">,</span> <span class="n">multibasis</span><span class="p">)</span>
+<span class="n">tQ</span><span class="o">.</span><span class="n">add_multimeasure_XYZ</span><span class="p">(</span><span class="n">qc_GHZ</span><span class="p">,</span> <span class="n">multibasis</span><span class="p">)</span>
 <span class="n">qc_GHZ</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">14</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">multibasis</span> <span class="o">=</span> <span class="s1">&#39;XXX&#39;</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">qc_GHZ</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
-<span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">mc_add_measure_XYZ</span><span class="p">(</span><span class="n">qc_GHZ</span><span class="p">,</span> <span class="n">multibasis</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">qc_GHZ</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;mc_add_measure_XYZ&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../../_images/e0ea98249a5ed3d13d8d31e5adab9b95d5b186a2e78f51220d2e46ac356e81a6.png" src="../../../_images/e0ea98249a5ed3d13d8d31e5adab9b95d5b186a2e78f51220d2e46ac356e81a6.png" />
 </div>
 </div>
 <p>Ejecuta el código anterior para las 4 posibles cadenas de Pauli</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cuentas_GHZ</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc_GHZ</span><span class="p">,</span><span class="n">M_backend</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">multibasis</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&gt; =&#39;</span><span class="p">,</span> <span class="n">mc_val_esp_sigma</span><span class="p">(</span><span class="n">cuentas_GHZ</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">multibasis</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&gt; =&#39;</span><span class="p">,</span> <span class="n">tQ</span><span class="o">.</span><span class="n">expval_Zn_from_counts</span><span class="p">(</span><span class="n">cuentas_GHZ</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">QiskitError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">cuentas_GHZ</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc_GHZ</span><span class="p">,</span><span class="n">M_backend</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">multibasis</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&gt; =&#39;</span><span class="p">,</span> <span class="n">mc_val_esp_sigma</span><span class="p">(</span><span class="n">cuentas_GHZ</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="nn">File ~/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/result/result.py:289,</span> in <span class="ni">Result.get_counts</span><span class="nt">(self, experiment)</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span>         <span class="n">dict_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">statevector</span><span class="o">.</span><span class="n">Statevector</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span><span class="o">.</span><span class="n">probabilities_dict</span><span class="p">(</span><span class="n">decimals</span><span class="o">=</span><span class="mi">15</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">288</span>     <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">289</span>         <span class="k">raise</span> <span class="n">QiskitError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;No counts for experiment &quot;</span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="c1"># Return first item of dict_list if size is 1</span>
-<span class="g g-Whitespace">    </span><span class="mi">292</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dict_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-
-<span class="ne">QiskitError</span>: &#39;No counts for experiment &quot;0&quot;&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;XXX&gt; = -1.0
 </pre></div>
 </div>
 </div>
@@ -1062,7 +1039,7 @@ xy ~=~ \left\{ \begin{array}{c} 00 \\ 01 \\ 10 \\ 11 \end{array} \right\}~~ \Lon
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/af075327b9b49c0e4af12e9beb256641ede09bf8a2526d8a813783bfc73f26ce.png" src="../../../_images/af075327b9b49c0e4af12e9beb256641ede09bf8a2526d8a813783bfc73f26ce.png" />
+<img alt="../../../_images/2f5c62bcb71b4b502d5f98132042202c78da1226c674cae82a376feff82255c5.png" src="../../../_images/2f5c62bcb71b4b502d5f98132042202c78da1226c674cae82a376feff82255c5.png" />
 </div>
 </div>
 <p>Observa al ejecutar repetidas veces que los resultados de las medidas intermedias son aleatorios, pero el estado teleportado es siempre el correcto</p>
