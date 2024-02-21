@@ -549,15 +549,10 @@ document.write(`
 \]</div>
 </div>
 </div>
-<p>con la propiedad <em>bilineal</em>: es decir, como el producto ordinario, satisface la propiedad distributiva.</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-40a58df0-2f2d-41d3-aa60-eb671e72ce94">
-<span class="eqno">(11)<a class="headerlink" href="#equation-40a58df0-2f2d-41d3-aa60-eb671e72ce94" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-14c71938-d6d7-4b3b-bfc5-17447bd5e3d5">
-<span class="eqno">(11)<a class="headerlink" href="#equation-14c71938-d6d7-4b3b-bfc5-17447bd5e3d5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
->>>>>>> be01d5fe5918657817ad312ac2d9e4e44dba027f
-\big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;\equiv &amp;~~
+<p>con la propiedad <em>bilineal</em>, es decir, <em>distributiva</em></p>
+<div class="amsmath math notranslate nohighlight" id="equation-02b9e1ab-71eb-4369-8de4-a480047c33e1">
+<span class="eqno">(10)<a class="headerlink" href="#equation-02b9e1ab-71eb-4369-8de4-a480047c33e1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+\big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;= &amp;~~
 \ket{u}\otimes\ket{y} ~+~ \ket{u}\otimes\ket{z} ~+~ \ket{v}\otimes\ket{y} ~+~~
  \ket{v}\otimes\ket{z} \\
  \rule{0mm}{8mm}
@@ -942,7 +937,7 @@ está parametrizado por <span class="math notranslate nohighlight">\(d +d + ...d
 </section>
 <section id="estados-producto-de-matrices-mps">
 <h3>Estados producto de matrices <em>(MPS)</em><a class="headerlink" href="#estados-producto-de-matrices-mps" title="Permalink to this heading">#</a></h3>
-<p>En medio de los dos casos extremos anteriores encontramos la posibilidad de que las componentes del tensor se puedan escribir como productos de matrices.</p>
+<p>En medio de los dos casos extremos anteriores encontramos la posibilidad de que las componentes del tensor se puedan escribir como productos de matrices</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Definición</b>:</p>
@@ -978,8 +973,8 @@ v_{i_1i_2i_3i_4} =  \sum_{\alpha\beta\gamma\mu = 1}^DA_{i_1}^{\mu \alpha}A_{i_2}
 \[
 v_{i_1i_2i_3i_4} = \sum_{\alpha\beta\gamma\mu\delta = 1}^D A_{i_1}^{\mu \alpha\delta}A_{i_2}^{\alpha\beta}A_{i_3}^{\beta\delta\gamma}A_{i_4}^{\gamma\mu}
 \]</div>
-<p>La contracción de índices de estos tensores se corresponde con un grafo que puede tener distinta conectividad en distintos nodos.</p>
-<p>Los estados MPS, y los estados TN  para una dimensión de enlace local <span class="math notranslate nohighlight">\(D\)</span> finita, no son suficientemente expresivos para capturar el máximo entrelazamiento posible en un estado.</p>
+<p>La contracción de índices de estos tensores se corresponde con un grafo que puede tener distinta conectividad en distintos nodos</p>
+<p>Los estados MPS, y los estados TN  para una dimensión de enlace local <span class="math notranslate nohighlight">\(D\)</span> finita, no son suficientemente expresivos para capturar el máximo entrelazamiento posible en los estados más geneales de <span class="math notranslate nohighlight">\(\Hil\)</span></p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/XTN_complete.png"><img alt="../../../_images/XTN_complete.png" src="../../../_images/XTN_complete.png" style="width: 500px;" /></a>
 </figure>
@@ -987,7 +982,7 @@ v_{i_1i_2i_3i_4} = \sum_{\alpha\beta\gamma\mu\delta = 1}^D A_{i_1}^{\mu \alpha\d
 <p class="admonition-title">Notar</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(nd \ll d^n\)</span>. El crecimiento exponencial del número de estados entrelazados es el ingrediente crucial para la computación cuántica. Observar que <span class="math notranslate nohighlight">\(d^n\)</span> es el <i>número de enteros</i> alcanzables por <span class="math notranslate nohighlight">\(n\)</span> bits. Pero en computación cuántica es el <i>número de dimensiones</i> en la que podemos poner <span class="math notranslate nohighlight">\(d^n\)</span> amplitudes complejas.</p></li>
-<li><p>No existe un criterio general para saber si un estado es, a priori, factorizable o entrelazado.</p></li>
+<li><p>No existe un criterio general para saber si un estado es, <em>a priori</em>, factorizable o entrelazado.</p></li>
 <li><p>Además, hay formas de caracterizar matemáticamente el nivel de entrelazamiento (<em>entanglement witnesses, entanglement monotones</em> etc.) desde nulo (estado factorizable) hasta maximal.</p></li>
 </ul>
 </div>
@@ -1000,7 +995,7 @@ v_{i_1i_2i_3i_4} = \sum_{\alpha\beta\gamma\mu\delta = 1}^D A_{i_1}^{\mu \alpha\d
 \[
 A:\ket{u} \to \ket{v} \equiv A\ket{u}
 \]</div>
-<p>El conjunto de todos los operadores lineales forman el espacio vectorial <span class="math notranslate nohighlight">\(\Lin(\Hil^{\otimes n})\)</span>.</p>
+<p>El conjunto de todos los operadores lineales forman el espacio vectorial <span class="math notranslate nohighlight">\(\Lin(\Hil^{\otimes n})\)</span></p>
 <section id="matrices">
 <h3>Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h3>
 <p>A cada operador, <span class="math notranslate nohighlight">\(A\)</span>, le podemos asociadar una <em>matriz</em>, una vez elijamos nuestra base  <span class="math notranslate nohighlight">\(\{ \ket{i_1 i_2... i_n}\}\)</span> donde, <span class="math notranslate nohighlight">\(i_k = 1,...,d\)</span>.
@@ -1010,13 +1005,8 @@ Los <em>elementos de matriz</em> ahora vendrán etiquetados por dos <em>multi-í
  A_{i_1...i_n, \, j_1...j_n} = \bra{i_1...i_n}A\ket{j_1...j_n}  ~~~~~\leftrightarrow ~~~~~~ A_{ab}= \bra{a}A\ket{b}
 \]</div>
 <p>Con la matriz, el operador se reconstruye en la base canónica de productos externos</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-1ec42a55-9375-4d05-a5d2-482cafddbb26">
-<span class="eqno">(12)<a class="headerlink" href="#equation-1ec42a55-9375-4d05-a5d2-482cafddbb26" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-e998bd9e-849d-4456-9026-b73fa8500773">
-<span class="eqno">(12)<a class="headerlink" href="#equation-e998bd9e-849d-4456-9026-b73fa8500773" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
->>>>>>> be01d5fe5918657817ad312ac2d9e4e44dba027f
+<div class="amsmath math notranslate nohighlight" id="equation-6fba4a32-b4dd-4302-9afd-e782a8a45ed8">
+<span class="eqno">(11)<a class="headerlink" href="#equation-6fba4a32-b4dd-4302-9afd-e782a8a45ed8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
  A &amp;~~=~&amp; 
  \sum_{i_1,...,i_n,\, j_1,...,j_n=0}^{d-1} A_{i_1...i_n, \, j_1...j_n} \ket{i_1...i_n}\bra{j_1...j_n}
  ~~~~=~~~~

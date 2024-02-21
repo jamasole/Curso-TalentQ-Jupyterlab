@@ -614,10 +614,11 @@ A: \ket{u} ~~\to ~~ \ket{v}
 <p class="sd-card-text">de forma <i>lineal</i>.</p>
 </div>
 </div>
-<p>La linealidad se refiere a la siguiente propiedad:
-$<span class="math notranslate nohighlight">\(
+<p>La linealidad se refiere a la siguiente propiedad:</p>
+<div class="math notranslate nohighlight">
+\[
 A: (\alpha\ket{u} + \beta\ket{w})~~\to ~~ \ket{v} =\alpha A\ket{u} + \beta A\ket{w}
-\)</span>$</p>
+\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejemplo</p>
 <p>Un <i>operador</i>  fácil de visualizar es el operador de <i>rotación en un plano</i>. Dado un ángulo <span class="math notranslate nohighlight">\(\theta \in (0,2\pi)\)</span> el operador <span class="math notranslate nohighlight">\(A = R(\theta)\)</span> gira cualquier vector un ángulo <span class="math notranslate nohighlight">\(\theta\)</span> en el sentido antihorario</p>
@@ -884,8 +885,7 @@ I =  \sum_{i}  \ketbra{e_i}{e_i} =  \sum_{j}  \ketbra{\tilde e_j}{ \tilde e_j}\,
 </section>
 <section id="cambios-de-base">
 <h3>Cambios de base<a class="headerlink" href="#cambios-de-base" title="Permalink to this heading">#</a></h3>
-<p>La relación de cierre, o completitud,  siempre <strong>se puede insertar</strong> en cualquier momento del cálculo. Se utiliza con frecuencia para efectuar cambios de base</p>
-<p>Efectivamente insertando la identidad delante de un elemento de la base</p>
+<p>La <em>relación de cierre</em> siempre se puede insertar en cualquier momento del cálculo. Se utiliza con frecuencia para efectuar cambios de base. Efectivamente insertando la identidad delante de un elemento de la base</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{array}{rcl}
@@ -907,35 +907,36 @@ U_{ij} = \braket{e_i}{\tilde e_j}~~~~,~~~~ U^{-1}_{ij} = \braket{\tilde e_i}{e_j
 U^{-1}_{ij} = \braket{\tilde e_i}{ e_j } = \braket{ e_j }{\tilde e_i}^* = (U_{ji})^* = U^\dagger_{ij}
 \]</div>
 <p>Esto ocurre si y sólo si las bases <span class="math notranslate nohighlight">\(\{\ket{e_i}\}\)</span> y <span class="math notranslate nohighlight">\(\{\ket{\tilde e_i}\}\)</span> son ambas ortonormales</p>
-<p>De la misma manera podemos relacionar las componentes de un vector en ambas bases
-$<span class="math notranslate nohighlight">\(
+<p>De la misma manera podemos relacionar las componentes de un vector en ambas bases</p>
+<div class="math notranslate nohighlight">
+\[
 \ket{u}  =  \sum_i u_i  \ket{e_i} =   \sum_i \tilde u_i  \ket{\tilde e_i}
-\)</span><span class="math notranslate nohighlight">\(
-Las componentes son, en cada base
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Las componentes son, en cada base</p>
+<div class="math notranslate nohighlight">
+\[
 u_i = \braket{e_i}{u} ~~~~~~~~~~ , ~~~~~~~~~ \tilde u_i = \braket{\tilde e_i}{u}
-\)</span><span class="math notranslate nohighlight">\(
-Insertando la identidad
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Insertando la identidad</p>
+<div class="math notranslate nohighlight">
+\[
 u_i = \bra{e_i}I\ket{u} = \bra{ e_i}\left( \sum_j \ket{\tilde e_j}\bra{\tilde e_j}\right) \ket{u} = 
 \sum_j \braket{e_i}{\tilde e_j}\braket{\tilde e_j}{u} = \sum_j U_{ij} \tilde u_j
-\)</span><span class="math notranslate nohighlight">\(
-Es decir
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Es decir</p>
+<div class="math notranslate nohighlight">
+\[
 \tilde u_i = \sum_j U_{ij} u_j 
-\)</span>$</p>
+\]</div>
 <p>Igualmente podemos hallar la regla de transformación de las matrices asociadas a un operador en dos bases distintas</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-e44dbe92-fcae-4756-a2d2-df9aa9f5b9fb">
-<span class="eqno">(4)<a class="headerlink" href="#equation-e44dbe92-fcae-4756-a2d2-df9aa9f5b9fb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-f08dd907-c84d-4828-a878-4fd7fb58bd2b">
-<span class="eqno">(4)<a class="headerlink" href="#equation-f08dd907-c84d-4828-a878-4fd7fb58bd2b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
->>>>>>> be01d5fe5918657817ad312ac2d9e4e44dba027f
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
 \tilde A_{ij} ~&amp;=&amp;~ \bra{\tilde e_i} A \ket{\tilde e_i} ~=~   \bra{\tilde e_i} I  A I  \ket{\tilde e_i}\\ \rule{0mm}{10mm}
 &amp;=&amp; \sum_{k,l=1}^N \braket{\tilde e_i}{e_k}\bra{e_k}A\ket{e_l} \braket{e_l}{\tilde e_j}\\ \rule{0mm}{8mm}
 &amp;=&amp; \sum_{k,l=1}^N U^\dagger_{ik} A_{kl} U_{lj}
-\end{eqnarray}\]</div>
+\end{array}
+\end{split}\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
 <p>La matriz <span class="math notranslate nohighlight">\(\begin{pmatrix} 0 &amp; -i \\ i &amp; 0\end{pmatrix}\)</span> representa un operador <span class="math notranslate nohighlight">\(\sigma_y\)</span> en la base <span class="math notranslate nohighlight">\(\{\ket{0},\ket{1}\}\)</span>. Escribe <span class="math notranslate nohighlight">\(\sigma_y\)</span> en la base <span class="math notranslate nohighlight">\(\{\ket{\!+\!i}= \frac{1}{\sqrt{2}}(\ket{0}+i \ket{1}),\ket{\!-\!i}= \frac{1}{\sqrt{2}}(\ket{0}-i \ket{1})\}\)</span></p>
@@ -1031,13 +1032,8 @@ Prueba<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-2eaf63ce-9769-4eb3-99ba-86ff2f905e9c">
-<span class="eqno">(5)<a class="headerlink" href="#equation-2eaf63ce-9769-4eb3-99ba-86ff2f905e9c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-52035b4d-837d-4f50-9444-41d23875ccde">
-<span class="eqno">(5)<a class="headerlink" href="#equation-52035b4d-837d-4f50-9444-41d23875ccde" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
->>>>>>> be01d5fe5918657817ad312ac2d9e4e44dba027f
+<div class="amsmath math notranslate nohighlight" id="equation-4530465a-ad5f-4773-b377-1d5dd2ee76f7">
+<span class="eqno">(4)<a class="headerlink" href="#equation-4530465a-ad5f-4773-b377-1d5dd2ee76f7" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 {\rm tr} A  &amp;=&amp;\sum_i A_{ii} =\sum_{i} \bra{i}A\ket{i} =\sum_{i} \bra{i}A\left( \sum_j\ketbra{\tilde j}{\tilde j}\right)\ket{i}
 \nonumber\\
 &amp;=&amp; \sum_{ij}\bra{i}A\ket{\tilde j} \braket{\tilde j}{i} = \sum_{ij}\braket{\tilde j}{i}\bra{i}A\ket{\tilde j}  \nonumber\\
@@ -1084,17 +1080,17 @@ Efectivamente</p>
 </section>
 <section id="lin-hil-como-un-espacio-de-hilbert">
 <h3><span class="math notranslate nohighlight">\(\Lin(\Hil)\)</span> como un espacio de Hilbert<a class="headerlink" href="#lin-hil-como-un-espacio-de-hilbert" title="Permalink to this heading">#</a></h3>
-<p>Para transformar <span class="math notranslate nohighlight">\(\Lin(\Hil)\)</span> en un espacio de Hilbert sólo es necesario definir un producto escalar hermítico</p>
+<p>Para transformar el espacio vectorial <span class="math notranslate nohighlight">\(\Lin(\Hil)\)</span> en un espacio de Hilbert sólo es necesario definir un producto escalar hermítico entre dos elementos</p>
 <p><a id='trace_norm'></a></p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Definición</b>: </i>producto escalar</i></p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">Dados dos operadores <span class="math notranslate nohighlight">\(A, B \in \Lin(\Hil)\)</span>  definimos su <i> producto escalar </i>  <span class="math notranslate nohighlight">\(( A, B)\in {\mathbb C}\)</span></p>
+<p class="sd-card-text">dados dos operadores <span class="math notranslate nohighlight">\(A, B \in \Lin(\Hil)\)</span>  definimos su <i> producto escalar </i>  <span class="math notranslate nohighlight">\(( A, B)\in {\mathbb C}\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-( A, B)= {\rm tr}\left( A^\dagger B \right) 
+( A, B)\equiv {\rm tr}\left( A^\dagger B \right) 
 \]</div>
 </div>
 </div>
@@ -1602,13 +1598,8 @@ P_\perp P = (I - P) P = P - P^2 = P - P =  0
 \{\ket{e_i}\},~ i=1,...,N_1 ~~~~~~~,~~~~~~~~\{\ket{e_{j+N_1}},~j=1,...,N_2   
 \]</div>
 <p>Cualquier vector admite una descomposición ortogonal</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-69905b96-96a7-41e8-a5ce-80979583179c">
-<span class="eqno">(6)<a class="headerlink" href="#equation-69905b96-96a7-41e8-a5ce-80979583179c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-9784ae30-4400-4c86-96f7-f8f28824500e">
-<span class="eqno">(6)<a class="headerlink" href="#equation-9784ae30-4400-4c86-96f7-f8f28824500e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
->>>>>>> be01d5fe5918657817ad312ac2d9e4e44dba027f
+<div class="amsmath math notranslate nohighlight" id="equation-90c9b278-af3b-488d-b216-af1cab4d505a">
+<span class="eqno">(5)<a class="headerlink" href="#equation-90c9b278-af3b-488d-b216-af1cab4d505a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\psi} &amp;~=~&amp; \sum_{i=1}^N a_i \ket{e_i}   ~= ~ \sum_{i=1}^N a_i \ket{e_i} + \sum_{i=1}^{N_2} a_{i+N_1} \ket{e_{i+N_1}} ~\equiv ~ \ket{\psi_1} + \ket{\psi_2}\rule{0mm}{5mm}
 \end{eqnarray}\]</div>
 <p>con <span class="math notranslate nohighlight">\(\braket{\psi_1}{\psi_2} = 0\)</span>.</p>
@@ -1798,13 +1789,8 @@ H|\lambda_m \rangle -\lambda_m |\lambda_m\rangle =
 \[A\ket{\lambda_k^a} = \lambda_k \ket{\lambda_k^a}\]</div>
 <p>Dichos autovectores generan un <u><i>subespacio propio</i></u> <span class="math notranslate nohighlight">\(S(\lambda_k)\subset \Hil\)</span>.
 En efecto,  sea <span class="math notranslate nohighlight">\(\ket{u} = \sum_{a=1}^{d_k} c_a\ket{\lambda^a_k} \)</span> una combinación de dichos vectores propios, entonces</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-4cc6eeae-f0e7-4c79-ae4c-e70cb0b74908">
-<span class="eqno">(7)<a class="headerlink" href="#equation-4cc6eeae-f0e7-4c79-ae4c-e70cb0b74908" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-7f856809-79e7-47fe-bc55-582ca87cc2f0">
-<span class="eqno">(7)<a class="headerlink" href="#equation-7f856809-79e7-47fe-bc55-582ca87cc2f0" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
->>>>>>> be01d5fe5918657817ad312ac2d9e4e44dba027f
+<div class="amsmath math notranslate nohighlight" id="equation-323d8f28-c0c9-43f1-ad34-5e2901a0ac35">
+<span class="eqno">(6)<a class="headerlink" href="#equation-323d8f28-c0c9-43f1-ad34-5e2901a0ac35" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 A \ket{u} 
 =  \sum_{a=1}^{d_k} c_a A\ket{\lambda^a_k}  =  \sum_{a=1}^{d_k} c_a \lambda_k\ket{\lambda^a_k}  =   \lambda_k \sum_{a=1}^{d_k} c_a \ket{\lambda^a_k}  =\lambda_k\ket{u}
 \end{eqnarray}\]</div>
@@ -1825,13 +1811,8 @@ P_k = \sum_{a=1}^{d_k} \ketbra{\lambda_{k}^a}{\lambda_{k}^a}
 <li><p>Llamemos <span class="math notranslate nohighlight">\(R_z(\theta)\)</span> el operador que efectúa una rotación  en el plano  <span class="math notranslate nohighlight">\((x,y)\)</span> de ángulo <span class="math notranslate nohighlight">\(\theta\)</span>. Cuando <span class="math notranslate nohighlight">\(\theta = \pi\)</span> encontramos las siguiente acción sobre los tres elementos <span class="math notranslate nohighlight">\(\{\hat{\bf x},\hat{\bf y},\hat{\bf z}\}\)</span>
 de la base cartesiana</p></li>
 </ul>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-1f5dd773-b2be-4cd5-8069-8a368ee78189">
-<span class="eqno">(8)<a class="headerlink" href="#equation-1f5dd773-b2be-4cd5-8069-8a368ee78189" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-0b6792fa-689e-4783-8fe7-11ab3af04b30">
-<span class="eqno">(8)<a class="headerlink" href="#equation-0b6792fa-689e-4783-8fe7-11ab3af04b30" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
->>>>>>> be01d5fe5918657817ad312ac2d9e4e44dba027f
+<div class="amsmath math notranslate nohighlight" id="equation-6f27faad-7bc5-4ba5-9948-359083f530ec">
+<span class="eqno">(7)<a class="headerlink" href="#equation-6f27faad-7bc5-4ba5-9948-359083f530ec" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_z(\pi)\hat{\bf x} &amp;=&amp;-\hat{\bf x}  \\ \rule{0mm}{6mm}
 R_z(\pi)\hat{\bf y} &amp;=&amp; -\hat{\bf y}  \\ \rule{0mm}{6mm}
 R_z(\pi)\hat{\bf z} &amp;=&amp; + \hat{\bf z}  
@@ -2419,13 +2400,8 @@ Prueba<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-c3c98d14-c5a4-42b6-8a62-d865ff51685f">
-<span class="eqno">(9)<a class="headerlink" href="#equation-c3c98d14-c5a4-42b6-8a62-d865ff51685f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-77ed545b-08bf-45f5-94c5-6a0793e44468">
-<span class="eqno">(9)<a class="headerlink" href="#equation-77ed545b-08bf-45f5-94c5-6a0793e44468" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
->>>>>>> be01d5fe5918657817ad312ac2d9e4e44dba027f
+<div class="amsmath math notranslate nohighlight" id="equation-c8c118ec-c576-4d12-903d-ee1dd75537fe">
+<span class="eqno">(8)<a class="headerlink" href="#equation-c8c118ec-c576-4d12-903d-ee1dd75537fe" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 {\rm tr} A  &amp;=&amp;\sum_i A_{ii} =\sum_{i} \bra{i}A\ket{i} =\sum_{i} \bra{i}A\left( \sum_j\ketbra{\tilde j}{\tilde j}\right)\ket{i}
 \nonumber\\
 &amp;=&amp; \sum_{ij}\bra{i}A\ket{\tilde j} \braket{\tilde j}{i} = \sum_{ij}\braket{\tilde j}{i}\bra{i}A\ket{\tilde j}  \nonumber\\
@@ -2713,13 +2689,8 @@ Prueba<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-4f823eac-3bdb-4498-9b1b-6e1886e789c3">
-<span class="eqno">(10)<a class="headerlink" href="#equation-4f823eac-3bdb-4498-9b1b-6e1886e789c3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-cfb360a6-c2e2-4d27-b80e-2252a0cb71b6">
-<span class="eqno">(10)<a class="headerlink" href="#equation-cfb360a6-c2e2-4d27-b80e-2252a0cb71b6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
->>>>>>> be01d5fe5918657817ad312ac2d9e4e44dba027f
+<div class="amsmath math notranslate nohighlight" id="equation-9a645ab5-f35a-4623-8fbb-f160e605af2e">
+<span class="eqno">(9)<a class="headerlink" href="#equation-9a645ab5-f35a-4623-8fbb-f160e605af2e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U^\dagger &amp;=&amp; \left( e^{iH}\right)^\dagger = \left( 1+ iH + \frac{1}{2}(i H)^2 + ...\right)^\dagger \\
 &amp;=&amp; 1 - iH^\dagger  + \frac{1}{2}(-i)^2 (H^2)^\dagger + ... \\
 &amp;=&amp; 1 - iH +\frac{1}{2} H^2 - ... \\
