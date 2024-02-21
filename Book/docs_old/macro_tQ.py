@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from qiskit.tools.visualization import array_to_latex
 import copy 
 
-
+from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
 
 
 ##############################################################################################################

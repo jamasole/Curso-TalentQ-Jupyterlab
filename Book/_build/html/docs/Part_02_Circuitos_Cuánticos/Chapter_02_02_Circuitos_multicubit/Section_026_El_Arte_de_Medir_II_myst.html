@@ -247,6 +247,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Algoritmos Cuánticos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_041_Alg_Oraculo_myst.html">Algoritmos de Oráculo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_042_QFT_myst.html">Transformada de Fourier Cuántica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_043_QPE_myst.html">Estimación Cuántica de Fase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_044_Grover_myst.html">Algoritmos de búsqueda</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -487,7 +494,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 20, 2024 | 5 min read</p>
+<div><p>Feb 21, 2024 | 5 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -609,10 +616,10 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cuentas= {&#39;001&#39;: 25222, &#39;100&#39;: 6260, &#39;010&#39;: 24833, &#39;000&#39;: 6287, &#39;110&#39;: 24800, &#39;111&#39;: 6239, &#39;011&#39;: 6359}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cuentas= {&#39;100&#39;: 6217, &#39;111&#39;: 6360, &#39;011&#39;: 6272, &#39;001&#39;: 24837, &#39;000&#39;: 6297, &#39;010&#39;: 24954, &#39;110&#39;: 25063}
 </pre></div>
 </div>
-<img alt="../../../_images/1bce5c67e9407a05171eeb19262f87e3867927cb5441b6bd025bdf5fd851a49d.png" src="../../../_images/1bce5c67e9407a05171eeb19262f87e3867927cb5441b6bd025bdf5fd851a49d.png" />
+<img alt="../../../_images/51ba7c0ede688ba1c4672f0b4157a3619bef67ef1bc6c1e4c603dc5902992fbd.png" src="../../../_images/51ba7c0ede688ba1c4672f0b4157a3619bef67ef1bc6c1e4c603dc5902992fbd.png" />
 </div>
 </div>
 <p>Ahora podemos generar diccionarios con las probabilidades y la amplitudes de los distintos resultados, para obtener la tomografía del estado</p>
@@ -639,7 +646,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilidades = {&#39;001&#39;: 0.25222, &#39;100&#39;: 0.0626, &#39;010&#39;: 0.24833, &#39;000&#39;: 0.06287, &#39;110&#39;: 0.248, &#39;111&#39;: 0.06239, &#39;011&#39;: 0.06359}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilidades = {&#39;100&#39;: 0.06217, &#39;111&#39;: 0.0636, &#39;011&#39;: 0.06272, &#39;001&#39;: 0.24837, &#39;000&#39;: 0.06297, &#39;010&#39;: 0.24954, &#39;110&#39;: 0.25063}
 </pre></div>
 </div>
 </div>
@@ -845,7 +852,7 @@ a_{i_1\ldots i_n} =\frac{1}{2^n} \tr (A \,  \sigma_{i_1}\otimes \ldots  \otimes\
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a_{203} =  (-0.06779196715051473-0.07785500867195314j)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a_{203} =  (0.020516537950937663-0.009769472440590732j)
 </pre></div>
 </div>
 </div>
@@ -933,7 +940,7 @@ Z\otimes Z\otimes Z \ket{i_2 i_1 i_0} = Z\ket{i_2}\otimes Z\ket{i_1}\otimes Z\ke
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;100&#39;: 6092, &#39;000&#39;: 6416, &#39;010&#39;: 25096, &#39;110&#39;: 24881, &#39;011&#39;: 6119, &#39;111&#39;: 6340, &#39;001&#39;: 25056}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;110&#39;: 25035, &#39;000&#39;: 6093, &#39;010&#39;: 25110, &#39;100&#39;: 6191, &#39;011&#39;: 6318, &#39;111&#39;: 6223, &#39;001&#39;: 25030}
 </pre></div>
 </div>
 </div>
@@ -959,7 +966,7 @@ Z\otimes Z\otimes Z \ket{i_2 i_1 i_0} = Z\ket{i_2}\otimes Z\ket{i_1}\otimes Z\ke
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZZZ&gt; = -0.25168
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZZZ&gt; = -0.25108
 </pre></div>
 </div>
 </div>
@@ -995,7 +1002,7 @@ Z\otimes Z\otimes Z \ket{i_2 i_1 i_0} = Z\ket{i_2}\otimes Z\ket{i_1}\otimes Z\ke
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sigma =  0.9678105070725364
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sigma =  0.9679663390841646
 </pre></div>
 </div>
 </div>
@@ -1038,8 +1045,8 @@ Z\otimes Z\otimes Z \ket{i_2 i_1 i_0} = Z\ket{i_2}\otimes Z\ket{i_1}\otimes Z\ke
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;110&#39;: 6217, &#39;001&#39;: 3087, &#39;100&#39;: 12289, &#39;000&#39;: 15686, &#39;010&#39;: 3100, &#39;101&#39;: 6185, &#39;111&#39;: 12598, &#39;011&#39;: 40838}
-&lt;ZXY&gt; = 0.37852
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;101&#39;: 6151, &#39;110&#39;: 6295, &#39;100&#39;: 12640, &#39;001&#39;: 3038, &#39;011&#39;: 40382, &#39;111&#39;: 12666, &#39;010&#39;: 3202, &#39;000&#39;: 15626}
+&lt;ZXY&gt; = 0.36908
 </pre></div>
 </div>
 </div>
@@ -1177,10 +1184,10 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 499793, &#39;0&#39;: 500207}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;0&#39;: 500370, &#39;1&#39;: 499630}
 </pre></div>
 </div>
-<img alt="../../../_images/e26161ebc586a2956569ccd5569e7eb0a8f3e25b2babc3dda0000d534ee75515.png" src="../../../_images/e26161ebc586a2956569ccd5569e7eb0a8f3e25b2babc3dda0000d534ee75515.png" />
+<img alt="../../../_images/4240b6007facabd1396b4e07d1738306d1b2c9b4d818e27b31af4bf315db0e8a.png" src="../../../_images/4240b6007facabd1396b4e07d1738306d1b2c9b4d818e27b31af4bf315db0e8a.png" />
 </div>
 </div>
 <div class="cell docutils container">

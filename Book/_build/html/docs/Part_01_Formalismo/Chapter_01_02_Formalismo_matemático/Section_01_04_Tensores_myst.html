@@ -247,6 +247,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Algoritmos Cuánticos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_041_Alg_Oraculo_myst.html">Algoritmos de Oráculo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_042_QFT_myst.html">Transformada de Fourier Cuántica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_043_QPE_myst.html">Estimación Cuántica de Fase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_044_Grover_myst.html">Algoritmos de búsqueda</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -495,7 +502,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 20, 2024 | 9 min read</p>
+<div><p>Feb 21, 2024 | 9 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -549,10 +556,10 @@ document.write(`
 \]</div>
 </div>
 </div>
-<p>con la propiedad <em>bilineal</em>: es decir, como el producto ordinario, satisface la propiedad distributiva.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dace65d5-28f2-433e-8e15-732b760da551">
-<span class="eqno">(11)<a class="headerlink" href="#equation-dace65d5-28f2-433e-8e15-732b760da551" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
-\big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;\equiv &amp;~~
+<p>con la propiedad <em>bilineal</em>, es decir, <em>distributiva</em></p>
+<div class="amsmath math notranslate nohighlight" id="equation-b93fe123-3c8b-4189-b1a8-00751477133f">
+<span class="eqno">(10)<a class="headerlink" href="#equation-b93fe123-3c8b-4189-b1a8-00751477133f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+\big(\ket{u}+\ket{v}\big)\otimes \big(\ket{y}+\ket{z}\big) ~&amp;= &amp;~~
 \ket{u}\otimes\ket{y} ~+~ \ket{u}\otimes\ket{z} ~+~ \ket{v}\otimes\ket{y} ~+~~
  \ket{v}\otimes\ket{z} \\
  \rule{0mm}{8mm}
@@ -805,13 +812,13 @@ s_1 &amp;\cdots  &amp;    &amp;  &amp; &amp; &amp;  0  \\  \vdots &amp; \ddots &
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
--0.4813257018 + 0.8641828308 i &amp; 0.080671729 - 0.3188941153 i &amp; 1.9899264518 + 0.1208603084 i  \\
- -0.1225108497 - 0.2225802449 i &amp; -0.17037653 - 0.8023947442 i &amp; -0.0547797849 + 0.5524259656 i  \\
- -2.0333120608 - 1.5695152901 i &amp; 0.084713773 + 2.9315527016 i &amp; 0.2078729275 + 1.2239483536 i  \\
- 0.4758596548 + 1.0878455648 i &amp; -0.7066776204 - 1.0312101544 i &amp; -0.1599269768 + 1.5718634531 i  \\
+-0.421018676 + 1.9884591812 i &amp; 0.4695203631 + 0.7737305033 i &amp; -0.5976472935 + 0.9633476624 i  \\
+ 1.1975667581 + 1.8222547875 i &amp; 0.0340994515 - 0.1545197835 i &amp; -1.9444165837 - 0.0936036899 i  \\
+ -0.0410588139 - 1.425938097 i &amp; 0.7171557496 + 0.1751953481 i &amp; -0.851922519 + 0.6630010753 i  \\
+ 1.4691961538 + 0.6211378445 i &amp; -0.2785699926 - 0.4989750888 i &amp; -0.3656961327 + 1.6089711492 i  \\
  \end{bmatrix}
 \end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>valores principales s_i =  [4.419 2.811 0.944]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>valores principales s_i =  [4.169 2.289 1.234]
 El número de Schmidt es r = 3
 </pre></div>
 </div>
@@ -843,11 +850,11 @@ El número de Schmidt es r = 3
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
-0.1316063952 - 0.1603525008 i &amp; 0.2171483393 - 0.002502495 i &amp; 0.0423792766 - 0.1087587212 i  \\
- -0.0524293533 - 0.3570909496 i &amp; 0.2509001894 - 0.2824940962 i &amp; -0.0904251908 - 0.1818377608 i  \\
- 0.1687790591 - 0.3496891093 i &amp; 0.3939337867 - 0.1002117733 i &amp; 0.029185451 - 0.2165229586 i  \\
- 0.0546176033 - 0.2308797701 i &amp; 0.2218299169 - 0.1117032115 i &amp; -0.0111204867 - 0.1330319561 i  \\
- -0.1569870369 + 0.0975212163 i &amp; -0.1838811116 - 0.0601518386 i &amp; -0.0669309717 + 0.0795860966 i  \\
+-0.0775459278 - 0.3657298049 i &amp; 0.1178320878 - 0.0968882026 i &amp; 0.0508268957 + 0.3189039685 i  \\
+ 0.0015768756 + 0.0146891137 i &amp; -0.0050218954 + 0.0033346498 i &amp; -0.0007149343 - 0.0127408517 i  \\
+ -0.1802347211 + 0.107199682 i &amp; -0.0727249288 - 0.0450894918 i &amp; 0.1601893481 - 0.0845573517 i  \\
+ -0.0547745307 + 0.3815983832 i &amp; -0.1484733118 + 0.0519637262 i &amp; 0.0640166024 - 0.326779578 i  \\
+ 0.4359566976 + 0.0144201247 i &amp; 0.0768024057 + 0.1605626362 i &amp; -0.3754447589 - 0.0315930542 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>principal values s_i =  [1. 0. 0.]
@@ -937,7 +944,7 @@ está parametrizado por <span class="math notranslate nohighlight">\(d +d + ...d
 </section>
 <section id="estados-producto-de-matrices-mps">
 <h3>Estados producto de matrices <em>(MPS)</em><a class="headerlink" href="#estados-producto-de-matrices-mps" title="Permalink to this heading">#</a></h3>
-<p>En medio de los dos casos extremos anteriores encontramos la posibilidad de que las componentes del tensor se puedan escribir como productos de matrices.</p>
+<p>En medio de los dos casos extremos anteriores encontramos la posibilidad de que las componentes del tensor se puedan escribir como productos de matrices</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Definición</b>:</p>
@@ -973,8 +980,8 @@ v_{i_1i_2i_3i_4} =  \sum_{\alpha\beta\gamma\mu = 1}^DA_{i_1}^{\mu \alpha}A_{i_2}
 \[
 v_{i_1i_2i_3i_4} = \sum_{\alpha\beta\gamma\mu\delta = 1}^D A_{i_1}^{\mu \alpha\delta}A_{i_2}^{\alpha\beta}A_{i_3}^{\beta\delta\gamma}A_{i_4}^{\gamma\mu}
 \]</div>
-<p>La contracción de índices de estos tensores se corresponde con un grafo que puede tener distinta conectividad en distintos nodos.</p>
-<p>Los estados MPS, y los estados TN  para una dimensión de enlace local <span class="math notranslate nohighlight">\(D\)</span> finita, no son suficientemente expresivos para capturar el máximo entrelazamiento posible en un estado.</p>
+<p>La contracción de índices de estos tensores se corresponde con un grafo que puede tener distinta conectividad en distintos nodos</p>
+<p>Los estados MPS, y los estados TN  para una dimensión de enlace local <span class="math notranslate nohighlight">\(D\)</span> finita, no son suficientemente expresivos para capturar el máximo entrelazamiento posible en los estados más geneales de <span class="math notranslate nohighlight">\(\Hil\)</span></p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/XTN_complete.png"><img alt="../../../_images/XTN_complete.png" src="../../../_images/XTN_complete.png" style="width: 500px;" /></a>
 </figure>
@@ -982,7 +989,7 @@ v_{i_1i_2i_3i_4} = \sum_{\alpha\beta\gamma\mu\delta = 1}^D A_{i_1}^{\mu \alpha\d
 <p class="admonition-title">Notar</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(nd \ll d^n\)</span>. El crecimiento exponencial del número de estados entrelazados es el ingrediente crucial para la computación cuántica. Observar que <span class="math notranslate nohighlight">\(d^n\)</span> es el <i>número de enteros</i> alcanzables por <span class="math notranslate nohighlight">\(n\)</span> bits. Pero en computación cuántica es el <i>número de dimensiones</i> en la que podemos poner <span class="math notranslate nohighlight">\(d^n\)</span> amplitudes complejas.</p></li>
-<li><p>No existe un criterio general para saber si un estado es, a priori, factorizable o entrelazado.</p></li>
+<li><p>No existe un criterio general para saber si un estado es, <em>a priori</em>, factorizable o entrelazado.</p></li>
 <li><p>Además, hay formas de caracterizar matemáticamente el nivel de entrelazamiento (<em>entanglement witnesses, entanglement monotones</em> etc.) desde nulo (estado factorizable) hasta maximal.</p></li>
 </ul>
 </div>
@@ -995,7 +1002,7 @@ v_{i_1i_2i_3i_4} = \sum_{\alpha\beta\gamma\mu\delta = 1}^D A_{i_1}^{\mu \alpha\d
 \[
 A:\ket{u} \to \ket{v} \equiv A\ket{u}
 \]</div>
-<p>El conjunto de todos los operadores lineales forman el espacio vectorial <span class="math notranslate nohighlight">\(\Lin(\Hil^{\otimes n})\)</span>.</p>
+<p>El conjunto de todos los operadores lineales forman el espacio vectorial <span class="math notranslate nohighlight">\(\Lin(\Hil^{\otimes n})\)</span></p>
 <section id="matrices">
 <h3>Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h3>
 <p>A cada operador, <span class="math notranslate nohighlight">\(A\)</span>, le podemos asociadar una <em>matriz</em>, una vez elijamos nuestra base  <span class="math notranslate nohighlight">\(\{ \ket{i_1 i_2... i_n}\}\)</span> donde, <span class="math notranslate nohighlight">\(i_k = 1,...,d\)</span>.
@@ -1005,8 +1012,8 @@ Los <em>elementos de matriz</em> ahora vendrán etiquetados por dos <em>multi-í
  A_{i_1...i_n, \, j_1...j_n} = \bra{i_1...i_n}A\ket{j_1...j_n}  ~~~~~\leftrightarrow ~~~~~~ A_{ab}= \bra{a}A\ket{b}
 \]</div>
 <p>Con la matriz, el operador se reconstruye en la base canónica de productos externos</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf128507-4213-47b6-b810-2929760f9791">
-<span class="eqno">(12)<a class="headerlink" href="#equation-bf128507-4213-47b6-b810-2929760f9791" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-2a12d923-adeb-4613-a411-a0c5d7c50eab">
+<span class="eqno">(11)<a class="headerlink" href="#equation-2a12d923-adeb-4613-a411-a0c5d7c50eab" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
  A &amp;~~=~&amp; 
  \sum_{i_1,...,i_n,\, j_1,...,j_n=0}^{d-1} A_{i_1...i_n, \, j_1...j_n} \ket{i_1...i_n}\bra{j_1...j_n}
  ~~~~=~~~~

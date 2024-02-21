@@ -247,6 +247,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Algoritmos Cuánticos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_041_Alg_Oraculo_myst.html">Algoritmos de Oráculo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_042_QFT_myst.html">Transformada de Fourier Cuántica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_043_QPE_myst.html">Estimación Cuántica de Fase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_044_Grover_myst.html">Algoritmos de búsqueda</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -493,7 +500,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 20, 2024 | 3 min read</p>
+<div><p>Feb 21, 2024 | 3 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -662,8 +669,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 \end{split}\]</div>
 <p>donde el primer factor tiene en cuenta las posibles ordenaciones en que aparecen <span class="math notranslate nohighlight">\(x\)</span> éxitos en <span class="math notranslate nohighlight">\(n\)</span> intentos.</p>
 <p>Un cálculo un poco más largo permite ver que, ahora</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c6b4c59-6acb-4e67-9c3a-7714cde0b0f5">
-<span class="eqno">(13)<a class="headerlink" href="#equation-2c6b4c59-6acb-4e67-9c3a-7714cde0b0f5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-627af709-8688-4070-90a9-2c2adadef76f">
+<span class="eqno">(12)<a class="headerlink" href="#equation-627af709-8688-4070-90a9-2c2adadef76f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp;  np\\ \rule{0mm}{7mm}
 \sigma^2 &amp;=&amp; n p(1-p)
 \end{eqnarray}\]</div>
@@ -676,8 +683,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\right)
 \]</div>
 <p>Nos encontramos ante una variable aleatoria con un espacio muestral continuo <span class="math notranslate nohighlight">\(x\in (-\infty,+\infty)\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b5307169-e1be-447c-9d83-9c2243ff778a">
-<span class="eqno">(14)<a class="headerlink" href="#equation-b5307169-e1be-447c-9d83-9c2243ff778a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-38c51c9e-4c7b-4b38-9008-6b9811ca4bf6">
+<span class="eqno">(13)<a class="headerlink" href="#equation-38c51c9e-4c7b-4b38-9008-6b9811ca4bf6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{X} &amp;=&amp; \int_{-\infty}^{+\infty} xp(x) dx = \mu \\
 \overline{(x-\overline X)^2} &amp;=&amp; \int_{-\infty}^{+\infty} (x-\mu)^2 p(x)dx =\sigma^2
 \end{eqnarray}\]</div>
@@ -713,7 +720,7 @@ p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\rig
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/32b5de711b151a212dd27411b2e56256abf525e644986e60e7362f2caddc182a.png" src="../../../_images/32b5de711b151a212dd27411b2e56256abf525e644986e60e7362f2caddc182a.png" />
+<img alt="../../../_images/ad4cecaefff677d7847a50cbc1189f96df5e1b1135406ceae5182531f94f9c03.png" src="../../../_images/ad4cecaefff677d7847a50cbc1189f96df5e1b1135406ceae5182531f94f9c03.png" />
 </div>
 </div>
 <p>En el límite de número de eventos <span class="math notranslate nohighlight">\(N\to \infty\)</span>, el histograma y la curva matemática confluyen.</p>
