@@ -493,7 +493,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 20, 2024 | 5 min read</p>
+<div><p>Feb 21, 2024 | 4 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -530,7 +530,7 @@ document.write(`
 </div>
 <section id="introduccion">
 <h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
-<p>La mecánica cuántica guarda una relación muy estrecha con los número complejos. Para introducirlos, empezaremos recordando que un número real, al cuadrado, <em>siempre</em> da un resultado positivo <span class="math notranslate nohighlight">\(a^2 &gt;0\)</span>.</p>
+<p>La mecánica cuántica guarda una relación muy estrecha con los número complejos. Para introducirlos, empezaremos recordando que el cuadrado de un número real <em>siempre</em> es positivo <span class="math notranslate nohighlight">\(a^2 &gt;0\)</span>.</p>
 <p>Por ejemplo <span class="math notranslate nohighlight">\(~~2^2 =  4~~\)</span> pero también <span class="math notranslate nohighlight">\(~~(-2)^2 = 4~~\)</span>. Por eso, la raíz cuadrada de un número real sólo existe si dicho número es positivo.<br />
 Es decir, <span class="math notranslate nohighlight">\(\sqrt{4}=\pm 2\)</span>, mientras que, no sabríamos dar sentido a</p>
 <div class="math notranslate nohighlight">
@@ -566,8 +566,8 @@ i^3  &amp;=&amp; i*i*i = i^2 * i = -i\\ \rule{0mm}{6mm}
 \end{array}
 \end{split}\]</div>
 <p>Observar que el <em>inverso multiplicativo</em>  <span class="math notranslate nohighlight">\(1/i\)</span> también es <span class="math notranslate nohighlight">\(-i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-d29c8e65-5502-4180-af1d-dd8e8a793d30">
-<span class="eqno">(1)<a class="headerlink" href="#equation-d29c8e65-5502-4180-af1d-dd8e8a793d30" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-b40b6751-27bb-4661-9890-ef3a83e701f9">
+<span class="eqno">(1)<a class="headerlink" href="#equation-b40b6751-27bb-4661-9890-ef3a83e701f9" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{i}{i}  &amp;=&amp;   1 \nonumber\\
 i (-i) &amp;=&amp; - i^2  =  1
 \end{eqnarray}\]</div>
@@ -643,47 +643,32 @@ True
 <p class="sd-card-text"><b>Teorema</b>: </i>Fórmula de Euler</i></p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">Dado un ángulo <span class="math notranslate nohighlight">\(\theta \in (0,2\pi)\)</span> las dos expresiones siguientes son equivalentes</p>
+<p class="sd-card-text">para todo ángulo <span class="math notranslate nohighlight">\(\theta \in \mathbb{R}\)</span> se cumple la siguiente identidad matemática</p>
 <div class="math notranslate nohighlight">
 \[
 \cos\theta + i \sin \theta = e^{i\theta} 
 \]</div>
 </div>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Demostración<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">La demostración de la Fórmula de Euler viene de expandir ambos miembros en serie de Taylor en torno a <span class="math notranslate nohighlight">\(\theta = 0\)</span> y comprobar que ambas series son iguales</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{array}{rcl}
-e^{i\theta} &amp;=&amp; 1 + \i\theta + \frac{1}{2}(\i\theta)^2 + \frac{1}{3!}(\i\theta)^3+\, ... \\
-    &amp;=&amp; 1 -\frac{1}{2}\theta^2 ~+~ ... ~+~ \i \left(\theta - \frac{1}{3!} \theta^3+ \, ...\right) \\
-    &amp;=&amp; \cos \theta  + i \sin \theta 
-\end{array} 
-\end{split}\]</div>
-</div>
-</details><p>El número <span class="math notranslate nohighlight">\(z=x + \i y\)</span> se puede representar en <em>forma polar</em></p>
+<p>La fórmula de Euler ahora nos permite representar cualquier número complejo <span class="math notranslate nohighlight">\(z=x + \i y\)</span>  en <em>forma polar</em></p>
 <div class="math notranslate nohighlight">
 \[
 z = \rho e^{i\theta} = \rho (\cos\theta + \i \sin\theta)  
 \]</div>
-<p>de donde obtenemos las componentes cartesianas</p>
+<p>Los números reales <span class="math notranslate nohighlight">\(\rho\)</span> y <span class="math notranslate nohighlight">\(\theta\)</span> se denominan <em>módulo</em> y <em>fase</em>.
+Las componentes cartesianas son</p>
 <div class="math notranslate nohighlight">
 \[x=\rho\cos\theta ~~,~~y=\rho\sin\theta\]</div>
-<p>y por tanto <span class="math notranslate nohighlight">\(\rho^2 = x^2 + y^2\)</span>. Los números reales <span class="math notranslate nohighlight">\(\rho\)</span> y <span class="math notranslate nohighlight">\(\theta\)</span> se denominan <em>módulo</em> y <em>fase</em>.</p>
-<p>De la periodicidad de las funciones trigonométricas
-$<span class="math notranslate nohighlight">\(
-\sin\theta  = \sin(\theta + 2\pi)~~~~~~~\cos\theta  = \cos(\theta +2\pi)
-\)</span>$</p>
-<p>se sigue que las fases <span class="math notranslate nohighlight">\(\theta\)</span> y <span class="math notranslate nohighlight">\(\theta+ 2\pi\)</span> <em>representan el mismo número complejo</em></p>
+<p>y por tanto <span class="math notranslate nohighlight">\(\rho^2 = x^2 + y^2\)</span>.
+De la periodicidad de las funciones trigonométricas</p>
 <div class="math notranslate nohighlight">
 \[
-z = \rho e^{i\theta} = \rho e^{i(\theta + 2\pi)} 
+\sin\theta  = \sin(\theta + 2\pi)~~~~~~~\cos\theta  = \cos(\theta +2\pi)
+\]</div>
+<p>se sigue que las fases <span class="math notranslate nohighlight">\(\theta\)</span> y <span class="math notranslate nohighlight">\(\theta+ 2\pi n\)</span> con <span class="math notranslate nohighlight">\(n=0,1,2,...\)</span> representan el mismo número complejo</p>
+<div class="math notranslate nohighlight">
+\[
+z = \rho e^{i\theta} = \rho e^{i(\theta + 2\pi n)} 
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -713,8 +698,8 @@ z=r exp(i th)= (-1.873-0.702j)
 </div>
 </div>
 <p>Usar la forma polar es útil en situaciones en las que aparecen productos y potencias del número <span class="math notranslate nohighlight">\(i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-5749354f-4801-46c0-bcf5-aeb445113d9d">
-<span class="eqno">(2)<a class="headerlink" href="#equation-5749354f-4801-46c0-bcf5-aeb445113d9d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-97b34d13-1913-405a-b0d2-85f4b5034edd">
+<span class="eqno">(2)<a class="headerlink" href="#equation-97b34d13-1913-405a-b0d2-85f4b5034edd" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 i &amp;=&amp; e^{i\pi/2} \\ \rule{0mm}{10mm}
 -1 &amp;=&amp; e^{i\pi} \\ \rule{0mm}{10mm}
 i &amp;=&amp; e^{3i\pi/2} =e^{-i\pi/2} \\  \rule{0mm}{10mm}
