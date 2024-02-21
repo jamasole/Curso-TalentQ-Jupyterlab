@@ -247,6 +247,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Algoritmos Cuánticos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_041_Alg_Oraculo_myst.html">Algoritmos de Oráculo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_042_QFT_myst.html">Transformada de Fourier Cuántica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_043_QPE_myst.html">Estimación Cuántica de Fase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_044_Grover_myst.html">Algoritmos de búsqueda</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -626,7 +633,7 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[(0.5485352921 - 0.192578124 i) |0\rangle+(-0.7066309407 + 0.4033551946 i) |1\rangle\]</div>
+\[(0.4689602866 + 0.5724535918 i) |0\rangle+(-0.5310129737 + 0.4127933581 i) |1\rangle\]</div>
 </div>
 </div>
 <p>Las probabilidades de obtener ‘0’ y ‘1’ son los cuadrados de las amplitudes</p>
@@ -640,7 +647,7 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)= 0.33798 , p(1)= 0.66202
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)= 0.54763 , p(1)= 0.45237
 </pre></div>
 </div>
 </div>
@@ -666,11 +673,11 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
   self._style, def_font_ratio = load_style(self._style)
 </pre></div>
 </div>
-<img alt="../../../_images/e262b9cb7e3b5afaa16a6fdba9a7e6e38aa2acefd2edd2e0117cdac2fd0adba6.png" src="../../../_images/e262b9cb7e3b5afaa16a6fdba9a7e6e38aa2acefd2edd2e0117cdac2fd0adba6.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  {&#39;1&#39;: 662290, &#39;0&#39;: 337710}
+<img alt="../../../_images/3574cd87df3e0dc8f435d71bcfc3517104e8d8fae893f0a907d2b73379a9607b.png" src="../../../_images/3574cd87df3e0dc8f435d71bcfc3517104e8d8fae893f0a907d2b73379a9607b.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  {&#39;1&#39;: 452147, &#39;0&#39;: 547853}
 </pre></div>
 </div>
-<img alt="../../../_images/5afbca00f2a5a9e00d3ff2e3059a717a69ebbbc5a46ecf54cd3d8aa59c34edb8.png" src="../../../_images/5afbca00f2a5a9e00d3ff2e3059a717a69ebbbc5a46ecf54cd3d8aa59c34edb8.png" />
+<img alt="../../../_images/5398de3cfe39ed548401093e4f6de5cc1ca397410f79c2f33730fd2eb5293748.png" src="../../../_images/5398de3cfe39ed548401093e4f6de5cc1ca397410f79c2f33730fd2eb5293748.png" />
 </div>
 </div>
 <p>Ahora podemos  calcular las frecuencias relativas <span class="math notranslate nohighlight">\(n_i/N\)</span>  y compararlas con las probabilidades <span class="math notranslate nohighlight">\(p(i)\)</span></p>
@@ -684,7 +691,7 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)_exp = 0.33771   p(1)_exp =  0.66229
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)_exp = 0.547853   p(1)_exp =  0.452147
 </pre></div>
 </div>
 </div>
@@ -811,7 +818,7 @@ en <a class="reference external" href="https://quantum-computing.ibm.com/">https
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 491, &#39;0&#39;: 533}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 526, &#39;0&#39;: 498}
 </pre></div>
 </div>
 </div>
@@ -1005,7 +1012,7 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 </div>
 <div class="cell_output docutils container">
 <img alt="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" src="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;101&#39;: 1}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;010&#39;: 1}
 </pre></div>
 </div>
 </div>
@@ -1059,9 +1066,9 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 </div>
 <div class="cell_output docutils container">
 <img alt="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" src="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cuentas(base Z)= {&#39;0&#39;: 5005, &#39;1&#39;: 4995}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cuentas(base Z)= {&#39;1&#39;: 5035, &#39;0&#39;: 4965}
 cuentas(base X)= {&#39;0&#39;: 10000}
-cuentas( base Y)= {&#39;1&#39;: 4987, &#39;0&#39;: 5013}
+cuentas( base Y)= {&#39;1&#39;: 4951, &#39;0&#39;: 5049}
 </pre></div>
 </div>
 </div>
@@ -1116,8 +1123,8 @@ Comprobación<div class="sd-summary-down docutils">
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[(-0.3798927063 - 0.4428591338 i) |0\rangle+(-0.053670473 + 0.8103559709 i) |1\rangle\]</div>
-<img alt="../../../_images/ba1cdf870ef5cf14e0b0f3e03549e22b10738ae1e7bfb106beb084a81abbd98c.png" src="../../../_images/ba1cdf870ef5cf14e0b0f3e03549e22b10738ae1e7bfb106beb084a81abbd98c.png" />
+\[(-0.2475234811 + 0.9335312195 i) |0\rangle+(0.0302734377 - 0.2575560279 i) |1\rangle\]</div>
+<img alt="../../../_images/06951e7a04d5b06a31b9869300a3d69c0b8c519177f64f17e1d7c80b20251272.png" src="../../../_images/06951e7a04d5b06a31b9869300a3d69c0b8c519177f64f17e1d7c80b20251272.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1158,8 +1165,8 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/f817f9ce4c7d1a9816adfe6586f9d3d6077111e2b28913851e6ede50ef5ddca8.png" src="../../../_images/f817f9ce4c7d1a9816adfe6586f9d3d6077111e2b28913851e6ede50ef5ddca8.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;0&#39;: 3389, &#39;1&#39;: 6611}
+<img alt="../../../_images/5a1aaa1f1be9da8f1fe19f67d6de3ce544cf31ce981a31c85f8f18096f636f89.png" src="../../../_images/5a1aaa1f1be9da8f1fe19f67d6de3ce544cf31ce981a31c85f8f18096f636f89.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 666, &#39;0&#39;: 9334}
 </pre></div>
 </div>
 </div>
@@ -1177,7 +1184,7 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = -0.3222
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = 0.8668
 </pre></div>
 </div>
 </div>
@@ -1248,8 +1255,6 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </figure>
 </div>
 </div>
-<div class="docutils">
-</div>
 <p>Si <span class="math notranslate nohighlight">\(V\)</span> además de ser <i>unitario</i>, fuese <i>hermítico</i>, entonces tendríamos acceso al valor esperado completo, al tratarse de una cantidad real.</p>
 <p>Operadores de 1 cúbit unitarios y hermíticos son, por ejemplo, los operadores
 <span class="math notranslate nohighlight">\(V = X,Y,Z,H\)</span>.</p>
@@ -1301,7 +1306,7 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 <div class="cell_output docutils container">
 <img alt="../../../_images/7ac3a3bd9405e2c8881dab823d39fc49f3fec72cb2974129e4823cc2201fcf52.png" src="../../../_images/7ac3a3bd9405e2c8881dab823d39fc49f3fec72cb2974129e4823cc2201fcf52.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt; = 0.53906
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt; = 0.53981
 </pre></div>
 </div>
 </div>

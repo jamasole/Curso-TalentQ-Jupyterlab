@@ -247,6 +247,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Algoritmos Cuánticos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_041_Alg_Oraculo_myst.html">Algoritmos de Oráculo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_042_QFT_myst.html">Transformada de Fourier Cuántica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_043_QPE_myst.html">Estimación Cuántica de Fase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_044_Grover_myst.html">Algoritmos de búsqueda</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -1576,7 +1583,7 @@ P_\perp P = (I - P) P = P - P^2 = P - P =  0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0j
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-0+0j)
 </pre></div>
 </div>
 </div>
@@ -1700,11 +1707,11 @@ A_{diag} = \begin{pmatrix} \lambda_1 &amp; &amp; \\ &amp; \ddots &amp; \\ &amp; 
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
--0.3020820085 &amp; 0.0613181625 - 0.2211204645 i  \\
- 0.0613181625 + 0.2211204645 i &amp; 0.3020820085  \\
+-0.5246259595 &amp; 0.0181355951 + 0.1830027799 i  \\
+ 0.0181355951 - 0.1830027799 i &amp; 0.5246259595  \\
  \end{bmatrix}
 \end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>valprop = [ 0.61296022+0.76409963j -0.14609382-0.04038567j]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>valprop = [0.14099917+0.71269589j 0.7337014 +1.15586706j]
 </pre></div>
 </div>
 <div class="output text_latex math notranslate nohighlight">
@@ -1717,8 +1724,8 @@ A|\lambda_m \rangle -\lambda_m |\lambda_m\rangle =
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
-0.7731169348 &amp; 0.0460538935 - 0.1660757256 i  \\
- 0.0460538935 + 0.1660757256 i &amp; 1.2268830652  \\
+0.4128819738 &amp; 0.0202958596 + 0.2048015905 i  \\
+ 0.0202958596 - 0.2048015905 i &amp; 1.5871180262  \\
  \end{bmatrix}
 \end{split}\]</div>
 </div>
@@ -1757,7 +1764,7 @@ A|\lambda_m \rangle -\lambda_m |\lambda_m\rangle =
  0 &amp; 0  \\
  \end{bmatrix}
 \end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>valprop = [ 0.64702933+0.j -0.18016293+0.j]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>valprop = [0.01986956+0.j 0.85483101+0.j]
 </pre></div>
 </div>
 <div class="output text_latex math notranslate nohighlight">
@@ -2202,13 +2209,13 @@ Comprueba en distintos casos que el espectro está formado por fases</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.363+0.j 0.554+0.j 0.17 -0.j]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.055+0.j 0.22 -0.j 0.542+0.j]
 </pre></div>
 </div>
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}U = \begin{bmatrix} 0.13+0.08j&amp;-0.31+0.66j&amp;0.58+0.32j \\0.18-0.22j&amp;0.61-0.11j&amp;0.04+0.73j \\0.50+0.80j&amp;0.12-0.26j&amp;0.15-0.03j \end{bmatrix}\end{split}\]</div>
+\[\begin{split}U = \begin{bmatrix} -0.33+0.12j&amp;0.62+0.28j&amp;0.63-0.17j \\0.53+0.37j&amp;0.53+0.21j&amp;-0.29+0.41j \\0.55+0.40j&amp;-0.45+0.13j&amp;0.55-0.17j \end{bmatrix}\end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}U^{\dagger}U = \begin{bmatrix} 1.00+0.00j&amp;-0.00-0.00j&amp;-0.00-0.00j \\-0.00+0.00j&amp;1.00+0.00j&amp;-0.00+0.00j \\-0.00+0.00j&amp;-0.00-0.00j&amp;1.00+0.00j \end{bmatrix}\end{split}\]</div>
+\[\begin{split}U^{\dagger}U = \begin{bmatrix} 1.00+0.00j&amp;0.00+0.00j&amp;0.00+0.00j \\0.00-0.00j&amp;1.00+0.00j&amp;0.00+0.00j \\0.00-0.00j&amp;0.00-0.00j&amp;1.00+0.00j \end{bmatrix}\end{split}\]</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.+0.j, 1.+0.j, 1.+0.j])
 </pre></div>
 </div>
@@ -2294,9 +2301,9 @@ U\Sigma V^\dagger &amp;=&amp;
 \[\begin{split}
 A=
 \begin{bmatrix}
--2.2409710002 - 0.0745237462 i &amp; -0.7769815111 - 0.2632318225 i  \\
- -1.1368261551 - 1.9466172396 i &amp; -0.8668903988 - 0.0463453229 i  \\
- 0.4592799407 + 0.0680780106 i &amp; 1.8124302866 + 1.7766204794 i  \\
+-1.7343657054 + 0.2986090957 i &amp; -2.90574923 + 1.1367547322 i  \\
+ 2.0934640242 - 0.8028124822 i &amp; 1.1674662107 + 0.3782114877 i  \\
+ 1.2796788764 + 1.4976130703 i &amp; -0.2357194524 + 1.1549969686 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>the shape of A is : (3, 2)
@@ -2326,25 +2333,25 @@ the shape of u = (3, 3)  s = (2,)  v = (2, 2)
 \[\begin{split}
 U=
 \begin{bmatrix}
--0.621482908 - 0.0728121605 i &amp; -0.3181669407 + 0.1042588598 i &amp; 0.4680987144 + 0.526536671 i  \\
- -0.3932478502 - 0.4573774661 i &amp; 0.0103221447 - 0.4580078739 i &amp; 0.2108432013 - 0.6179234314 i  \\
- 0.3645614841 + 0.3342368779 i &amp; -0.4571633737 - 0.6848531072 i &amp; 0.2562979835 + 0.1080270741 i  \\
+-0.6462656769 + 0.3332053099 i &amp; 0.2822288226 - 0.6211267778 i &amp; -0.0752173035 + 0.0143412388 i  \\
+ 0.5027106354 - 0.1114493548 i &amp; 0.3748574706 - 0.3535683007 i &amp; -0.3778132055 + 0.5714801602 i  \\
+ 0.203509126 + 0.4059063811 i &amp; 0.4968757959 + 0.1487756517 i &amp; 0.7114375361 + 0.1366050022 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 S=
 \begin{bmatrix}
-3.6195882121 &amp; 0  \\
- 0 &amp; 2.2563849485  \\
+4.6477768687 &amp; 0  \\
+ 0 &amp; 1.7418602864  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 V=
 \begin{bmatrix}
-0.8083059448 &amp; \frac{625 \cdot 2^{\frac{53}{165}} \cdot 3^{\frac{119}{165}} \cdot 5^{\frac{13}{33}} \cdot 7^{\frac{137}{165}}}{27783}  \\
- 0.5853432854 + 0.0633619593 i &amp; -0.8036114874 - 0.086988951 i  \\
+0.6950754842 &amp; 0.7189367645  \\
+ 0.6932894223 - 0.1903151287 i &amp; -0.6702793691 + 0.1839986307 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
@@ -2920,16 +2927,16 @@ Separemos <span class="math notranslate nohighlight">\({\bf a}\)</span> en su m�
 \[\begin{split}
 exp(s1)=
 \begin{bmatrix}
-0.6030454487 + 0.2810388006 i &amp; 0.7423878632 + 0.0788266449 i  \\
- -0.7423878632 + 0.0788266449 i &amp; 0.6030454487 - 0.2810388006 i  \\
+0.7965575935 + 0.0281734101 i &amp; 0.1080357838 + 0.5941637221 i  \\
+ -0.1080357838 + 0.5941637221 i &amp; 0.7965575935 - 0.0281734101 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
 exp(s1)=
 \begin{bmatrix}
-0.6030454487 + 0.2810388006 i &amp; 0.7423878632 + 0.0788266449 i  \\
- -0.7423878632 + 0.0788266449 i &amp; 0.6030454487 - 0.2810388006 i  \\
+0.7965575935 + 0.0281734101 i &amp; 0.1080357838 + 0.5941637221 i  \\
+ -0.1080357838 + 0.5941637221 i &amp; 0.7965575935 - 0.0281734101 i  \\
  \end{bmatrix}
 \end{split}\]</div>
 </div>

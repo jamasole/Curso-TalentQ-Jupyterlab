@@ -45,3 +45,10 @@ parts:
     - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_03_02_Mas_sobre_Circuitos/Section_032_CompClasica_myst.ipynb
     - file:  docs/Part_02_Circuitos_Cuánticos/Chapter_03_02_Mas_sobre_Circuitos/Section_032_CompClasica_myst.ipynb-e
 
+- caption:  Algoritmos Cuánticos
+  chapters:
+  - file:  docs/Part_03_Algoritmos/Chapter_041_Alg_Oraculo_myst.ipynb
+  - file:  docs/Part_03_Algoritmos/Chapter_042_QFT_myst.ipynb
+  - file:  docs/Part_03_Algoritmos/Chapter_043_QPE_myst.ipynb
+  - file:  docs/Part_03_Algoritmos/Chapter_044_Grover_myst.ipynb
+
