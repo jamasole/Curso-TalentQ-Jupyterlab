@@ -746,7 +746,7 @@ phi1= 0.375  -&gt;   2^t*phi1 = a1 + delta1 =  3.0  , a1 = 3 =&gt; 011
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2f40a6bcca704043206146c71bc1c97558475b9ed8970a962d0862890b2fe675.png" src="../../_images/2f40a6bcca704043206146c71bc1c97558475b9ed8970a962d0862890b2fe675.png" />
+<img alt="../../_images/13ab7b0be3bdd52c340bfce15d131db357bc990cf49e6f0a6c02e24039dbf46a.png" src="../../_images/13ab7b0be3bdd52c340bfce15d131db357bc990cf49e6f0a6c02e24039dbf46a.png" />
 </div>
 </div>
 <p>De aquí extraemos la aproximación que hemos obtenido.</p>
@@ -955,7 +955,7 @@ phi1= 0.3875  -&gt;   2^t*phi1 = a1 + delta1 =  3.1  , a1 = 1 =&gt; 011
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2dcc69611f55855ebe3ae194499798a69af1ed455a32bb6e61a8cd724e6af37f.png" src="../../_images/2dcc69611f55855ebe3ae194499798a69af1ed455a32bb6e61a8cd724e6af37f.png" />
+<img alt="../../_images/3a464eef9e02ed85cdb75c9bee23579c28b2facf76172b522049673ef4831a28.png" src="../../_images/3a464eef9e02ed85cdb75c9bee23579c28b2facf76172b522049673ef4831a28.png" />
 </div>
 </div>
 </section>
@@ -1054,8 +1054,8 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <p><strong>Prueba</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b90c21bc-7916-4d41-aaa7-d2e823d64ba1">
-<span class="eqno">(25)<a class="headerlink" href="#equation-b90c21bc-7916-4d41-aaa7-d2e823d64ba1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-99e2e863-8b82-4c7a-9fa2-3c21bcf0332c">
+<span class="eqno">(24)<a class="headerlink" href="#equation-99e2e863-8b82-4c7a-9fa2-3c21bcf0332c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U \ket{u_s} &amp;=&amp; \frac{1}{\sqrt{r}} \sum_{j=0}^{r-1} e^{-2\pi i s j/r} U^{j+1}\ket{1} 
 \nonumber\\
  &amp;=&amp; e^{2\pi i \frac{s}{r}}  \frac{1}{\sqrt{r}} \sum_{j=0}^{r-1} e^{-2\pi i  s (j+1)/r} U^{j+1}\ket{1} =
@@ -1066,8 +1066,8 @@ U \ket{u_s} &amp;=&amp; \frac{1}{\sqrt{r}} \sum_{j=0}^{r-1} e^{-2\pi i s j/r} U^
 <p>Podríamos sencillamente aplicar el algoritmo de estimación de fase para <em>extraer la serie</em> de valores de <span class="math notranslate nohighlight">\(\varphi_s = s/r\)</span> y de ahí recuperar el <em>orden modular</em> <span class="math notranslate nohighlight">\(r\)</span>.</p>
 <p>El problema es que, para generar <span class="math notranslate nohighlight">\(\{\ket{u_s}\}\)</span> necesitamos conocer <span class="math notranslate nohighlight">\(r\)</span>, que, <em>precisamente, es el dato  que buscamos</em></p>
 <p>Una <em>observación importante</em> nos permite soslayar esta dificultad: vamos a tomar una <em>combinación homogénea</em> de los autoestados <span class="math notranslate nohighlight">\(\ket{u_s}\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-866ae8e4-19d4-455d-8a03-6f0fc7b08557">
-<span class="eqno">(26)<a class="headerlink" href="#equation-866ae8e4-19d4-455d-8a03-6f0fc7b08557" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-984682f1-8e83-4403-97c3-e49ec6afa644">
+<span class="eqno">(25)<a class="headerlink" href="#equation-984682f1-8e83-4403-97c3-e49ec6afa644" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{1}{\sqrt{r}} \sum_{s=0}^{r-1}\ket{u_s}   &amp;=&amp; \frac{1}{\sqrt{r}} \sum_{s=0}^{r-1} \left(  \frac{1}{\sqrt{r}}   \sum_{j=0}^{r-1} e^{-2\pi i  sj/r} U^{j}\ket{1} \right) ~=~ \frac{1}{r}   \sum_{j=0}^{r-1} \left(  \sum_{s=0}^{r-1}e^{-2\pi i  sj/r} \right)U^{j}\ket{1} \nonumber\\ 
 \rule{0mm}{12mm}
 &amp;=&amp;   \frac{1}{r}   \sum_{j=0}^{r-1} \, (r \delta_{j,0}) \,  U^{j}\ket{1} = U^0\ket{1} \nonumber\\  \rule{0mm}{10mm}
@@ -1200,7 +1200,7 @@ U_{QPE} : \ket{0}_t \otimes \ket{1}_n  ~ \to ~ \frac{1}{\sqrt{r}}\sum_{s=0}^{r-1
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/487247576722c064316572da057cce74fe188284ace66d6651813e17d63af345.png" src="../../_images/487247576722c064316572da057cce74fe188284ace66d6651813e17d63af345.png" />
+<img alt="../../_images/9c03c5b0864a76cf08c79e98a9074b787040a49ef9e5c23a580e6be53a0e9137.png" src="../../_images/9c03c5b0864a76cf08c79e98a9074b787040a49ef9e5c23a580e6be53a0e9137.png" />
 </div>
 </div>
 <p>de aquí obtenemos la lista de valores enteros <span class="math notranslate nohighlight">\(2^t s/r\)</span></p>
