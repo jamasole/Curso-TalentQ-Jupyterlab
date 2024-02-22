@@ -537,7 +537,7 @@ document.write(`
 </div>
 <section id="axiomas">
 <h2>Axiomas<a class="headerlink" href="#axiomas" title="Permalink to this heading">#</a></h2>
-<p>La Mecánica Cuántica es una teoría fundamentada en unos pilares axiomáticos cuya selección admite cierta flexibilidad. La más aceptada constituye lo que se denomina la <i>interpretación de Copenhagen</i></p>
+<p>Los axiomas de la Mecánica Cuántica son unos pilares heurísticos, es decir,  basados en la experimentación. La axiomática más aceptada es   la denominada  <i>interpretación de Copenhagen</i></p>
 <p><a id='axiomas-I'></a></p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
@@ -547,7 +547,7 @@ document.write(`
 <p class="sd-card-text">En un instante, <span class="math notranslate nohighlight">\(t\)</span>, la <i>máxima información accesible</i> de un sistema cuántico <i>aislado</i> está asociada a un vector <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> de norma unidad, perteneciente a un espacio de Hilbert <span class="math notranslate nohighlight">\(\Hil\)</span></p>
 </div>
 </div>
-<p>Es importante recalcar que el significado del vector de estado es que contiene la <em>máxima información accesible</em>. Nada más y nada menos. La palabra <em>estado</em> es engañosa por cuanto parece indicar que el sistema <em>está</em> en alguna estado concreto definido por un valor concreto de sus propiedades, ¡esto no es así!  El vector de estado se conoce también con el nombrede  <em>función de onda</em></p>
+<p>La palabra <em>estado</em> es engañosa por cuanto parece indicar que el sistema <em>está</em> en alguna estado concreto definido por un valor concreto de sus propiedades, ¡esto no es así!  El vector de estado se conoce también con el nombrede  <em>función de onda</em></p>
 <p>Dos vectores que difieran en una <em>fase global</em> contienen idéntica informacuón y, por tanto,  representan al mismo estado: ningún experimento permite distinguirlos</p>
 <div class="math notranslate nohighlight">
 \[
@@ -560,7 +560,7 @@ document.write(`
 <p class="sd-card-text"><b>Postulado  II</b>: </i>Evolución con el tiempo</i></p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">El cambio continuo en el tiempo de  <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span> de un sistema cuya dinámica está gobernada por un Hamiltoniano <span class="math notranslate nohighlight">\(H(t)\)</span>,  es <i>determinista</i> y es solución de la <i>Ecuación de Schrödinger</i></p>
+<p class="sd-card-text">El cambio continuo en el tiempo de  <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span> de un sistema cuya dinámica obedece a un Hamiltoniano <span class="math notranslate nohighlight">\(H(t)\)</span>,  es <i>determinista</i> y es solución de la <i>Ecuación de Schrödinger</i></p>
 <div class="math notranslate nohighlight">
 \[
  \frac{\partial\ket{\psi(t)}}{\partial t} =-\frac{i}{\hbar} H(t) \ket{\psi(t)} \, \label{eqschr}
@@ -610,11 +610,10 @@ p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \br
 <div class="note admonition">
 <p class="admonition-title">Nota</p>
 <ul class="simple">
-<li><p>La información contenida en <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> es <b>intrínsecamente probabilística</b>: <span class="math notranslate nohighlight">\(\psi\)</span> codifica una distribución de probabilidad, <span class="math notranslate nohighlight">\(p(\lambda_m)\)</span>, para cada posible resultado <span class="math notranslate nohighlight">\(\lambda_m\)</span>.</p></li>
-<li><p><em>Muy importante</em>:  <span class="math notranslate nohighlight">\((\lambda_m,p(\lambda_m))\)</span> no es una <i>pseudo-probabilidad</i> sino, probablemente, la única  variable intrínsecamente aleatoria que existe en la naturaleza.</p></li>
+<li><p><em>Muy importante</em>:  <span class="math notranslate nohighlight">\(\{\lambda_k,p(\lambda_k)\}\)</span> no es una variable <i>pseudo-aleatoria</i> sino, probablemente, la única  variable intrínsecamente aleatoria que existe en la naturaleza.</p></li>
 </ul>
 </div>
-<p>El hecho de medir tiene consecuencias <em>irreversibles</em> sobre el sistema medido. Este hecho es, sin duda, el efecto más diferenciador de la Mecánica Cuántica sobre la clásica: no existe el concepto de <em>partícula de prueba</em>, aquella que obtiene información de un sistema sin perturbarlo.</p>
+<p>El hecho de medir tiene consecuencias <em>irreversibles</em> sobre el sistema medido. Este hecho es, sin duda, el efecto más diferenciador de la Mecánica Cuántica sobre la clásica: no existe el concepto de <em>partícula de prueba</em>, aquella que obtiene información de un sistema sin perturbarlo, como los planetas en el sistema solar</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Postulado IV</b>: </i>Colapso de la función de  onda</i></p>
@@ -686,8 +685,8 @@ P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \]</div>
 <p>es el proyector sobre el subespacio propio</p>
 <p>Por el <em>valor esperado</em> <span class="math notranslate nohighlight">\(\langle A\rangle\)</span> del <em>observable</em> <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, entendemos el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\lambda_n\)</span> obtenida por el método descrito.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-06aba676-9ce5-42a3-8f04-d045f800315f">
-<span class="eqno">(14)<a class="headerlink" href="#equation-06aba676-9ce5-42a3-8f04-d045f800315f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-67d90d4a-d97e-43b3-8c03-ccb731905863">
+<span class="eqno">(14)<a class="headerlink" href="#equation-67d90d4a-d97e-43b3-8c03-ccb731905863" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle A\rangle &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 

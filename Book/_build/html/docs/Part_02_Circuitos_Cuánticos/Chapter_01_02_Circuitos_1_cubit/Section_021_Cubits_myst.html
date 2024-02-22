@@ -466,11 +466,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-cubit">El cúbit</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion">Definición</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esfera-de-bloch">Esfera de Bloch</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores-en-la-esfera-de-bloch-visualizaciones">Vectores en la Esfera de Bloch: visualizaciones</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Bases</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
 </ul>
 </li>
 </ul>
@@ -546,9 +544,8 @@ document.write(`
 </div>
 <section id="el-cubit">
 <h2>El cúbit<a class="headerlink" href="#el-cubit" title="Permalink to this heading">#</a></h2>
-<p>Un <em>bit</em> es una variable  real <span class="math notranslate nohighlight">\(a\)</span> que puede tomar valores en <span class="math notranslate nohighlight">\( {\mathbb Z}_2= \{0, 1\}\)</span>.</p>
-<section id="definicion">
-<h3>Definición<a class="headerlink" href="#definicion" title="Permalink to this heading">#</a></h3>
+<p>El cúbit es el sistema cuántico no trivial más simple. Lo vamos a definir matemáticamente en este capítulo. En capítulos posteriores veremos dos implementaciones físicas: el espín de un electrón y la polarización de un fotón.</p>
+<p>La palabra cúbit ya incorpora la noción de bit cuántico. Un <em>bit</em> es una variable  real <span class="math notranslate nohighlight">\(a\)</span> que puede tomar valores en <span class="math notranslate nohighlight">\( {\mathbb Z}_2= \{0, 1\}\)</span>.</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Definición</b>:</p>
@@ -557,86 +554,20 @@ document.write(`
 <p class="sd-card-text">Un cúbit es un <i>espacio de Hilbert</i> complejo de dimensión dos, <span class="math notranslate nohighlight">\(~\ket{v}~\in~\Hil \sim {\mathbb C}^2\)</span></p>
 </div>
 </div>
-<ul class="simple">
-<li><p>Cualquier <em>sistema físico</em>  cuyo estado instantáneo se pueda describir mediante un vector <span class="math notranslate nohighlight">\(\ket{v}\in {\mathbb C}^2\)</span> puede albergar físicamente un <strong>cúbit</strong>.</p></li>
-<li><p>A efectos prácticos,  se trata de sistemas que pueden estar en dos niveles de energía bien definidos y conmutar entre  ellos de manera controlada.</p></li>
-</ul>
-<ul class="simple">
-<li><p>Un <strong>cútrit</strong> es un espacio de Hilbert de dimensión <span class="math notranslate nohighlight">\(3\)</span>, un <strong>cúdit</strong> de dimensión <span class="math notranslate nohighlight">\(d\)</span>.</p></li>
-</ul>
-</section>
-<section id="bases">
-<h3>Bases<a class="headerlink" href="#bases" title="Permalink to this heading">#</a></h3>
-<p><strong>Base computacional</strong></p>
-<p>Para representar vectores de estado  <span class="math notranslate nohighlight">\(\ket{u}\in \Hil\)</span> necesitamos una <em>base</em>  formada por dos vectores ortonormales.</p>
-<p>La base que usaremos   <span class="math notranslate nohighlight">\(B=\{\ket{0},\ket{1}\}\)</span> y se denomina <em>base computacional</em>.</p>
-<p>La base computacional es <em>ortonormal</em></p>
+<p>Cualquier <em>sistema físico</em>  cuyo estado instantáneo se pueda describir mediante un vector <span class="math notranslate nohighlight">\(\ket{v}\in {\mathbb C}^2\)</span> puede albergar físicamente un <strong>cúbit</strong>.
+Un <strong>cútrit</strong> es un espacio de Hilbert de dimensión <span class="math notranslate nohighlight">\(3\)</span>, un <strong>cúdit</strong> de dimensión <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p>Ya hemos visto que la forma de trabajar en espacios vectoriales pasa, primeramente, por escoger una base</p>
+<section id="esfera-de-bloch">
+<h3>Esfera de Bloch<a class="headerlink" href="#esfera-de-bloch" title="Permalink to this heading">#</a></h3>
+<p>Para representar vectores de estado  <span class="math notranslate nohighlight">\(\ket{u}\in \Hil\)</span> necesitamos una <em>base</em>  formada por dos vectores ortonormales.
+La base <em>ortonormal</em> que usaremos se denotará por  <span class="math notranslate nohighlight">\(B=\{\ket{0},\ket{1}\}\)</span> y se denomina <em>base computacional</em></p>
 <div class="math notranslate nohighlight">
 \[
 \braket{0}{0} = \braket{1}{1} = 1 ~~~~~~~~~~\braket{0}{1} = \braket{1}{0} = 0
 \]</div>
-<p>La base computacional también recibe el nombre de base Z.</p>
-<ul>
-<li><p>Base <span class="math notranslate nohighlight">\(Z\)</span> (base computacional)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    \begin{array}{rclcl}
-    \ket{0}_Z ~~\equiv ~~\ket{0} &amp;\sim&amp; \begin{bmatrix}  1\\ 0\end{bmatrix} \\
-    \ket{1}_Z ~~\equiv~~\ket{1} &amp;\sim&amp;  \begin{bmatrix}  0\\ 1\end{bmatrix}
-    \end{array}
-    \end{split}\]</div>
-<p>El nombre indica que esta base  la forman autoestados del operador</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}Z= \sigma_z = \begin{bmatrix} 1&amp; 0 \\ 0 &amp; -1 \end{bmatrix}\end{split}\]</div>
-<p>con autovalores <span class="math notranslate nohighlight">\(\pm 1\)</span>.</p>
-</li>
-</ul>
-<p>Hay infinitas bases ortonormales para <span class="math notranslate nohighlight">\({\mathbb C}^2\)</span>. Otras dos muy utilizadas son las bases <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span></p>
-<ul>
-<li><p>Base <span class="math notranslate nohighlight">\(X\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    \begin{array}{rclcl}
-    \ket{0}_X ~~\equiv ~~\ket{+} &amp;=&amp; \frac{1}{\sqrt{2}}(|0\rangle+|1\rangle) &amp;=  &amp; \frac{1}{\sqrt{2}}\begin{bmatrix}
-    1\\ 1\end{bmatrix} \\
-    \ket{1}_X ~~\equiv~~\ket{-} &amp;=&amp;  \frac{1}{\sqrt{2}}(|0\rangle-|1\rangle) &amp;=&amp; \frac{1}{\sqrt{2}}\begin{bmatrix}
-    1\\ -1\end{bmatrix}
-    \end{array}
-    \end{split}\]</div>
-</li>
-<li><p>Esta base la forman autovectores del operador <span class="math notranslate nohighlight">\(X= \sigma_x = \begin{bmatrix} 0&amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span> con autovalores <span class="math notranslate nohighlight">\(\pm 1\)</span>.</p></li>
-</ul>
-<ul class="simple">
-<li><p>Base <span class="math notranslate nohighlight">\(Y\)</span></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    \begin{array}{rclcl}
-    \ket{0}_Y ~~\equiv ~~\ket{+i} &amp;=&amp; \frac{1}{\sqrt{2}}(|0\rangle+i |1\rangle) &amp;=  &amp; \frac{1}{\sqrt{2}}\begin{bmatrix}
-   1\\ i \end{bmatrix} \\
-    \ket{1}_Y ~~\equiv~~\ket{-i} &amp;=&amp;  \frac{1}{\sqrt{2}}(|0\rangle-i |1\rangle) &amp;=&amp; \frac{1}{\sqrt{2}}\begin{bmatrix}
-     1 \\-i \end{bmatrix}
-    \end{array}
-\end{split}\]</div>
-<p>Esta base la forman autoestados del operador <span class="math notranslate nohighlight">\(Y=\sigma_y =  \begin{bmatrix} 0&amp; -i \\ i &amp; 0 \end{bmatrix}\)</span> con autovalores <span class="math notranslate nohighlight">\(\pm 1\)</span>.</p>
-<div class="tip admonition">
-<p class="admonition-title">Ejercicio</p>
-<p>Escribe las matrices <span class="math notranslate nohighlight">\(u_{ij}\)</span> de cambio de la base <span class="math notranslate nohighlight">\(Z\to X\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-\ket{j}_X = \sum_j u_{ij}\ket{i}_Z
-\]</div>
-<p>Haz lo mismo para  <span class="math notranslate nohighlight">\(Z\to Y\)</span> y <span class="math notranslate nohighlight">\(X\to Y\)</span>.</p>
-</div>
-</section>
-<section id="esfera-de-bloch">
-<h3>Esfera de Bloch<a class="headerlink" href="#esfera-de-bloch" title="Permalink to this heading">#</a></h3>
-<p>En un <em>bit clásico</em> sólo podemos almacenar un valor 0 ó 1.</p>
-<p>¿Cuánta información puede almacenar un <em>cúbit</em>?</p>
-<p>Un cúbit general será de la forma <span class="math notranslate nohighlight">\(\ket{u} = a\ket{0} + b\ket{1}\)</span> donde <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> son dos números complejos, es decir cuatro números reales.</p>
-<p>Sin embargo, están sometidos a la ligadura <span class="math notranslate nohighlight">\(|a|^2+|b|^2=1\)</span>, lo que nos deja  tres grados de libertad reales.</p>
-<p>Pero uno de ellos es una fase global que no tiene significado.</p>
-<p>Por tanto el <em>número de grados de libertad (reales) en un cúbit es 2.</em></p>
+<p>Si lo expresamos en la base computacional, un estado    <span class="math notranslate nohighlight">\(\ket{u} \in \Hil = \mathbb{C}^2\)</span> será <span class="math notranslate nohighlight">\(\ket{u} = a\ket{0} + b\ket{1}\)</span> donde <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> son dos números complejos, es decir cuatro números reales.</p>
+<p>Sin embargo, como cualquier estado cuántico, ha de ser un vector unitario <span class="math notranslate nohighlight">\( \braket{u}{u} = 1\)</span> Esto es una ecuación <span class="math notranslate nohighlight">\(a|^2+|b|^2=1\)</span>, lo que nos deja  tres grados de libertad reales.</p>
+<p>Pero uno de ellos es una fase global  <span class="math notranslate nohighlight">\(\ket{u} = e^{i\phi}\ket{u}\)</span> que no tiene significado por lo que, realmente, necesitamos sólo dos números reales para definir el estado de un cúbit.</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Lema</b>:</p>
@@ -676,7 +607,7 @@ Por su parte, de los números \)</span>b_1, b_2<span class="math notranslate noh
 \)</span><span class="math notranslate nohighlight">\(
 \varphi = b_1-b_2
 \)</span><span class="math notranslate nohighlight">\(
-es relevante para especificar \)</span>\ket{u}$.</p>
+es relevante para especificar \)</span>\ket{u}  ~~~\rule{3mm}{3mm}$</p>
 </div>
 </details><p>En componentes en la base <span class="math notranslate nohighlight">\(Z\)</span> escribimos equivalentemente</p>
 <div class="math notranslate nohighlight">
@@ -691,15 +622,15 @@ de la esfera de Bloch</em>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\phi\in [0,2\pi)\)</span> el ángulo <em>polar</em>  en torno al eje <span class="math notranslate nohighlight">\(Z\)</span>, medido a partir del plano <span class="math notranslate nohighlight">\(XZ\)</span></p></li>
 </ul>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/BlochSphere.png"><img alt="../../../_images/BlochSphere.png" src="../../../_images/BlochSphere.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/BlochSphere.png"><img alt="../../../_images/BlochSphere.png" src="../../../_images/BlochSphere.png" style="width: 350px;" /></a>
 </figure>
 <section id="vectores-en-la-esfera-de-bloch-visualizaciones">
 <h4>Vectores en la Esfera de Bloch: visualizaciones<a class="headerlink" href="#vectores-en-la-esfera-de-bloch-visualizaciones" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><a class="reference external" href="https://javafxpert.github.io/grok-bloch/?fbclid=IwAR1lWfCug1lfTXxXenaJxnsdJh2g3he6lBJmjnjL_Jus0gOHR9u3UuaT7qs">Visualizador java</a></p></li>
-<li><p>La clase <a href=https://qiskit.org/documentation/stubs/qiskit.quantum_info.Statevector.html>statevector</a> en <em>qiskit</em> cuenta con un <em>visualizador</em> de la esfera de Bloch. La clase  acepta una lista de dos números complejos como componentes de un vector.</p></li>
+<li><p>La clase <a href=https://qiskit.org/documentation/stubs/qiskit.quantum_info.Statevector.html>statevector</a> en <em>qiskit</em> cuenta con un <em>visualizador</em> de la esfera de Bloch. La clase  acepta una lista de dos números complejos como componentes de un vector.
+Lamentablemente no avisa si este vector está normalizado a la unidad o no.</p></li>
 </ul>
-<p>Lamentablemente no avisa si este vector está normalizado o no. Por eso, incluimos una función que genera el vector normalizado a partir de los ángulos <span class="math notranslate nohighlight">\(\theta\)</span> y <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
@@ -707,7 +638,6 @@ de la esfera de Bloch</em>.</p></li>
 
 <span class="c1"># Ejemplo de vector de estado |+&gt; </span>
 <span class="n">e_mas</span> <span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="n">j</span><span class="p">])</span>
-
 
 <span class="n">Statevector</span><span class="p">(</span><span class="n">e_mas</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">)</span>
 </pre></div>
@@ -777,8 +707,8 @@ de la esfera de Bloch</em>.</p></li>
 </div>
 </div>
 </section>
-<section id="id1">
-<h4>Bases<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<section id="bases">
+<h4>Bases<a class="headerlink" href="#bases" title="Permalink to this heading">#</a></h4>
 <p><strong>Base Z</strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\((\theta,\phi) = (0,0) \Rightarrow  \ket{0}_Z = \ket{0}\)</span></p></li>
@@ -825,7 +755,7 @@ de la esfera de Bloch</em>.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/TalentQ/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
   self._style, def_font_ratio = load_style(self._style)
 </pre></div>
 </div>
@@ -852,8 +782,8 @@ de la esfera de Bloch</em>.</p></li>
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text">El operador que efectúa una <i>rotación de ángulo</i>  <span class="math notranslate nohighlight">\(\alpha\in [0,2\pi)\)</span> en torno al <i>eje que marca un vector unitario</i>  <span class="math notranslate nohighlight">\(\hat{\bf n} = (n_x, n_y,n_z)\)</span> es el siguiente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e4e4ebb4-f646-45c2-8a02-9da3f3a3c673">
-<span class="eqno">(15)<a class="headerlink" href="#equation-e4e4ebb4-f646-45c2-8a02-9da3f3a3c673" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-8fb33e56-50b6-415f-b76b-36a1cfbd5c66">
+<span class="eqno">(15)<a class="headerlink" href="#equation-8fb33e56-50b6-415f-b76b-36a1cfbd5c66" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_{\hat{\bf n}}(\alpha)~ = ~\exp\left( -i\frac{\alpha}{2} \hat{\bf n}\cdot \boldsymbol{\sigma} \right) ~=~ 
 \cos \frac{\alpha}{2} I - i \sin\frac{\alpha}{2} \hat{\bf n}\cdot\boldsymbol{\sigma} 
 \end{eqnarray}\]</div>
@@ -1279,11 +1209,9 @@ lleva el vector <span class="math notranslate nohighlight">\(\ket{0}\)</span> so
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-cubit">El cúbit</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion">Definición</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esfera-de-bloch">Esfera de Bloch</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vectores-en-la-esfera-de-bloch-visualizaciones">Vectores en la Esfera de Bloch: visualizaciones</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Bases</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bases">Bases</a></li>
 </ul>
 </li>
 </ul>
