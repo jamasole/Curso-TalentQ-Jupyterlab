@@ -75,7 +75,7 @@
     }
    },
    "source": [
-    "La Mecánica Cuántica es una teoría fundamentada en unos pilares axiomáticos cuya selección admite cierta flexibilidad. La más aceptada constituye lo que se denomina la <i>interpretación de Copenhagen</i> \n",
+    "Los axiomas de la Mecánica Cuántica son unos pilares heurísticos, es decir,  basados en la experimentación. La axiomática más aceptada es   la denominada  <i>interpretación de Copenhagen</i> \n",
     "\n",
     "<a id='axiomas-I'></a>\n",
     "::::::{card} \n",
@@ -86,8 +86,7 @@
     "En un instante, $t$, la <i>máxima información accesible</i> de un sistema cuántico <i>aislado</i> está asociada a un vector $\\ket{\\psi}$ de norma unidad, perteneciente a un espacio de Hilbert $\\Hil$\n",
     "\n",
     "::::::\n",
-    "\n",
-    "Es importante recalcar que el significado del vector de estado es que contiene la *máxima información accesible*. Nada más y nada menos. La palabra *estado* es engañosa por cuanto parece indicar que el sistema *está* en alguna estado concreto definido por un valor concreto de sus propiedades, ¡esto no es así!  El vector de estado se conoce también con el nombrede  *función de onda*\n",
+    " La palabra *estado* es engañosa por cuanto parece indicar que el sistema *está* en alguna estado concreto definido por un valor concreto de sus propiedades, ¡esto no es así!  El vector de estado se conoce también con el nombrede  *función de onda*\n",
     "<br>\n",
     "\n",
     "Dos vectores que difieran en una *fase global* contienen idéntica informacuón y, por tanto,  representan al mismo estado: ningún experimento permite distinguirlos\n",
@@ -129,7 +128,7 @@
     "^^^\n",
     "<br>\n",
     "<br>    \n",
-    "El cambio continuo en el tiempo de  $\\ket{\\psi(t)}$ de un sistema cuya dinámica está gobernada por un Hamiltoniano $H(t)$,  es <i>determinista</i> y es solución de la <i>Ecuación de Schrödinger</i>\n",
+    "El cambio continuo en el tiempo de  $\\ket{\\psi(t)}$ de un sistema cuya dinámica obedece a un Hamiltoniano $H(t)$,  es <i>determinista</i> y es solución de la <i>Ecuación de Schrödinger</i>\n",
     "<br> \n",
     "<br>\n",
     "$$\n",
@@ -234,9 +233,7 @@
     "\n",
     "\n",
     "\n",
-    "- La información contenida en $\\ket{\\psi}$ es <b>intrínsecamente probabilística</b>: $\\psi$ codifica una distribución de probabilidad, $p(\\lambda_m)$, para cada posible resultado $\\lambda_m$.  \n",
-    "\n",
-    "- *Muy importante*:  $(\\lambda_m,p(\\lambda_m))$ no es una <i>pseudo-probabilidad</i> sino, probablemente, la única  variable intrínsecamente aleatoria que existe en la naturaleza.  \n",
+    "- *Muy importante*:  $\\{\\lambda_k,p(\\lambda_k)\\}$ no es una variable <i>pseudo-aleatoria</i> sino, probablemente, la única  variable intrínsecamente aleatoria que existe en la naturaleza.  \n",
     "    \n",
     "    \n",
     "::::::\n"
@@ -247,7 +244,7 @@
    "id": "f2012fa4",
    "metadata": {},
    "source": [
-    "El hecho de medir tiene consecuencias *irreversibles* sobre el sistema medido. Este hecho es, sin duda, el efecto más diferenciador de la Mecánica Cuántica sobre la clásica: no existe el concepto de *partícula de prueba*, aquella que obtiene información de un sistema sin perturbarlo."
+    "El hecho de medir tiene consecuencias *irreversibles* sobre el sistema medido. Este hecho es, sin duda, el efecto más diferenciador de la Mecánica Cuántica sobre la clásica: no existe el concepto de *partícula de prueba*, aquella que obtiene información de un sistema sin perturbarlo, como los planetas en el sistema solar"
    ]
   },
   {

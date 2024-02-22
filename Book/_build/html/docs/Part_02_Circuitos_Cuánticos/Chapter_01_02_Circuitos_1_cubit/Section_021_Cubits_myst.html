@@ -544,27 +544,26 @@ document.write(`
 </div>
 <section id="el-cubit">
 <h2>El cúbit<a class="headerlink" href="#el-cubit" title="Permalink to this heading">#</a></h2>
+<p>La propia palabra cúbit ya incorpora la noción de bit cuántico. Un <em>bit</em> es una variable  real <span class="math notranslate nohighlight">\(a\)</span> que puede tomar valores en <span class="math notranslate nohighlight">\( {\mathbb Z}_2= \{0, 1\}\)</span>.</p>
 <p>El cúbit es el sistema cuántico no trivial más simple. Lo vamos a definir matemáticamente en este capítulo. En capítulos posteriores veremos dos implementaciones físicas: el espín de un electrón y la polarización de un fotón.</p>
-<p>La palabra cúbit ya incorpora la noción de bit cuántico. Un <em>bit</em> es una variable  real <span class="math notranslate nohighlight">\(a\)</span> que puede tomar valores en <span class="math notranslate nohighlight">\( {\mathbb Z}_2= \{0, 1\}\)</span>.</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Definición</b>:</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">Un cúbit es un <i>espacio de Hilbert</i> complejo de dimensión dos, <span class="math notranslate nohighlight">\(~\ket{v}~\in~\Hil \sim {\mathbb C}^2\)</span></p>
+<p class="sd-card-text">Un cúbit es un <i>espacio de Hilbert</i> complejo de dimensión dos <span class="math notranslate nohighlight">\(~\ket{v}~\in~\Hil \sim {\mathbb C}^2\)</span></p>
 </div>
 </div>
 <p>Cualquier <em>sistema físico</em>  cuyo estado instantáneo se pueda describir mediante un vector <span class="math notranslate nohighlight">\(\ket{v}\in {\mathbb C}^2\)</span> puede albergar físicamente un <strong>cúbit</strong>.
 Un <strong>cútrit</strong> es un espacio de Hilbert de dimensión <span class="math notranslate nohighlight">\(3\)</span>, un <strong>cúdit</strong> de dimensión <span class="math notranslate nohighlight">\(d\)</span>.</p>
-<p>Ya hemos visto que la forma de trabajar en espacios vectoriales pasa, primeramente, por escoger una base</p>
-<section id="esfera-de-bloch">
-<h3>Esfera de Bloch<a class="headerlink" href="#esfera-de-bloch" title="Permalink to this heading">#</a></h3>
-<p>Para representar vectores de estado  <span class="math notranslate nohighlight">\(\ket{u}\in \Hil\)</span> necesitamos una <em>base</em>  formada por dos vectores ortonormales.
+<p>Ya hemos visto que la forma de trabajar en espacios vectoriales pasa, primeramente, por escoger una base.
 La base <em>ortonormal</em> que usaremos se denotará por  <span class="math notranslate nohighlight">\(B=\{\ket{0},\ket{1}\}\)</span> y se denomina <em>base computacional</em></p>
 <div class="math notranslate nohighlight">
 \[
 \braket{0}{0} = \braket{1}{1} = 1 ~~~~~~~~~~\braket{0}{1} = \braket{1}{0} = 0
 \]</div>
+<section id="esfera-de-bloch">
+<h3>Esfera de Bloch<a class="headerlink" href="#esfera-de-bloch" title="Permalink to this heading">#</a></h3>
 <p>Si lo expresamos en la base computacional, un estado    <span class="math notranslate nohighlight">\(\ket{u} \in \Hil = \mathbb{C}^2\)</span> será <span class="math notranslate nohighlight">\(\ket{u} = a\ket{0} + b\ket{1}\)</span> donde <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> son dos números complejos, es decir cuatro números reales.</p>
 <p>Sin embargo, como cualquier estado cuántico, ha de ser un vector unitario <span class="math notranslate nohighlight">\( \braket{u}{u} = 1\)</span> Esto es una ecuación <span class="math notranslate nohighlight">\(a|^2+|b|^2=1\)</span>, lo que nos deja  tres grados de libertad reales.</p>
 <p>Pero uno de ellos es una fase global  <span class="math notranslate nohighlight">\(\ket{u} = e^{i\phi}\ket{u}\)</span> que no tiene significado por lo que, realmente, necesitamos sólo dos números reales para definir el estado de un cúbit.</p>
@@ -709,23 +708,34 @@ Lamentablemente no avisa si este vector está normalizado a la unidad o no.</p><
 </section>
 <section id="bases">
 <h4>Bases<a class="headerlink" href="#bases" title="Permalink to this heading">#</a></h4>
+<p>Dos vectores diametralmente opuestos en la esfera de Bloch forman una base ortonormal del espacio de un cúbit.
+Los denotamos <span class="math notranslate nohighlight">\(\{\ket{0}_{\bf n},\ket{1}_{\bf n}\}\)</span>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/BlochSphere_basis.png"><img alt="../../../_images/BlochSphere_basis.png" src="../../../_images/BlochSphere_basis.png" style="width: 300px;" /></a>
+</figure>
 <p><strong>Base Z</strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\((\theta,\phi) = (0,0) \Rightarrow  \ket{0}_Z = \ket{0}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((\theta,\phi) = (\pi,\phi)  \Rightarrow  e^{i\phi}\ket{1}_Z = \ket{1}\)</span></p></li>
 </ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/Basis_Z.png"><img alt="../../../_images/Basis_Z.png" src="../../../_images/Basis_Z.png" style="width: 300px;" /></a>
+</figure>
 <p><strong>Base X</strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\((\theta,\phi) = (\pi/2,0)  ~\Rightarrow~  \frac{1}{\sqrt{2}}\big(|0\rangle+|1\rangle \big) =\ket{0}_X \equiv |+\rangle\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((\theta,\phi) = (\pi/2,\pi) ~\Rightarrow~  \frac{1}{\sqrt{2}}\big(|0\rangle-|1\rangle \big)=\ket{1}_X \equiv |-\rangle\)</span></p></li>
 </ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/Basis_X.png"><img alt="../../../_images/Basis_X.png" src="../../../_images/Basis_X.png" style="width: 300px;" /></a>
+</figure>
 <p><strong>Base Y</strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\((\theta,\phi) = (\pi/2,\pi/2) ~\Rightarrow ~|u\rangle =\frac{1}{\sqrt{2}}\big(|0\rangle+i|1\rangle\big) =\ket{0}_Y \equiv  |+i\rangle\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((\theta,\phi) = (\pi/2,3\pi/2) ~\Rightarrow ~|u\rangle = \frac{1}{\sqrt{2}}\big(|0\rangle-i|1\rangle\big) = \ket{1}_Y \equiv  |-i\rangle\)</span></p></li>
 </ul>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/BlochSphere.png"><img alt="../../../_images/BlochSphere.png" src="../../../_images/BlochSphere.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Basis_Y.png"><img alt="../../../_images/Basis_Y.png" src="../../../_images/Basis_Y.png" style="width: 300px;" /></a>
 </figure>
 </section>
 </section>
@@ -782,8 +792,8 @@ Lamentablemente no avisa si este vector está normalizado a la unidad o no.</p><
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text">El operador que efectúa una <i>rotación de ángulo</i>  <span class="math notranslate nohighlight">\(\alpha\in [0,2\pi)\)</span> en torno al <i>eje que marca un vector unitario</i>  <span class="math notranslate nohighlight">\(\hat{\bf n} = (n_x, n_y,n_z)\)</span> es el siguiente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8fb33e56-50b6-415f-b76b-36a1cfbd5c66">
-<span class="eqno">(15)<a class="headerlink" href="#equation-8fb33e56-50b6-415f-b76b-36a1cfbd5c66" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-2212ce71-f3af-4a11-96c7-e964742856c8">
+<span class="eqno">(15)<a class="headerlink" href="#equation-2212ce71-f3af-4a11-96c7-e964742856c8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_{\hat{\bf n}}(\alpha)~ = ~\exp\left( -i\frac{\alpha}{2} \hat{\bf n}\cdot \boldsymbol{\sigma} \right) ~=~ 
 \cos \frac{\alpha}{2} I - i \sin\frac{\alpha}{2} \hat{\bf n}\cdot\boldsymbol{\sigma} 
 \end{eqnarray}\]</div>
