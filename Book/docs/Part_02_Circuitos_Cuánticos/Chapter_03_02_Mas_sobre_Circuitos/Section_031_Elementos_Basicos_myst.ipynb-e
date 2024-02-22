@@ -83,11 +83,11 @@
     "Un caso importante ocurre cuando el operador $U$ actúa sobre uno de sus autoestados \n",
     "(recuerda que los autovalores de  un operador unitario son fases puras)\n",
     "\n",
-    "\n",
+    "<br>\n",
     "$$\n",
     "U\\ket{u} = e^{i\\lambda} \\ket{u}\n",
     "$$\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -100,13 +100,13 @@
    },
    "source": [
     " Supongamos que por el *cúbit controlador* circula una superposición $(a\\ket{0}+b\\ket{1})$ y un autoestado $\\ket{u}$ de $U$ por el cúbit controlado. La acción de $\\cg{U}$ es\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "\\cg{U}: (a\\ket{0} + b\\ket{1})\\otimes \\ket{u} ~\\to ~ a\\ket{0}\\ket{u} + b \\ket{1}e^{i\\lambda}\\ket{u}  = \\left( a\\ket{0}\\ket{u} + be^{i\\lambda} \\ket{1} \\rule{0mm}{4mm} \\right)\\otimes \\ket{u}\n",
     "$$\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -148,13 +148,13 @@
    "source": [
     "El siguiente circuito resume la acción de retroceso de fase\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/phase_kickback.png\n",
     ":width: 400px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -259,7 +259,7 @@
     "$$\n",
     "\\fbox{$V \\ket{\\lambda}= \\lambda\\ket{\\lambda}$} ~~\\Rightarrow ~~~V'\\ket{\\lambda}' = (UVU^\\dagger) U\\ket{\\lambda} = UV\\ket{\\lambda} =  U(\\lambda\\ket{\\lambda}) = \\lambda U\\ket{\\lambda} = \\lambda\\ket{\\lambda}' ~~\\Rightarrow ~~~ \\fbox{$ V' \\ket{\\lambda}' = \\lambda\\ket{\\lambda}'$}\n",
     "$$\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -273,13 +273,13 @@
    "source": [
     "Por ejemplo \n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/H_conjugation.png\n",
     ":width: 500px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "y,  equivalentemente, intercambiando $X \\leftrightarrow Z$. \n"
@@ -294,11 +294,11 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "\n",
     "- Este tipo de equivalencia se sigue de las identidades algebráicas\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\\begin{eqnarray*}\n",
     "HXH = Z ~~~~~&&~~ ~~~\n",
     "HZH = X \\nonumber\n",
@@ -317,11 +317,11 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "\n",
     "- Análogamente\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\\begin{eqnarray*}\n",
     "S X S^\\dagger  = Y~~~~~&&~~~ ~~~\n",
     "S Y S^\\dagger = -X  ~~~~~~~~ S Z S^\\dagger = Z\\nonumber\\\\\n",
@@ -396,11 +396,11 @@
    },
    "source": [
     "Para el caso $A = \\hat{\\bf n}\\cdot \\boldsymbol{\\sigma} $  la conjugación es\n",
-    "\n",
+    "<br><br>\n",
     "$$\n",
     "U A U^\\dagger ~\\to ~U (\\hat{\\bf n}\\cdot \\boldsymbol{\\sigma} ) U^\\dagger = (U\\hat{\\bf n})\\cdot  \\boldsymbol{\\sigma}\n",
     "$$\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -417,7 +417,7 @@
     "\n",
     "^^^\n",
     "  $~$ <i>la conjugación de una rotación en torno a un eje produce una rotación en torno al eje conjugado</i>\n",
-    "\n",
+    "<br><br>\n",
     "$$\n",
     "U R_{\\hat{\\bf n}}(\\theta) U^\\dagger = R_{U\\hat{\\bf n}}(\\theta)\n",
     "$$\n",
@@ -440,13 +440,13 @@
     "&=& R_x(\\theta)\n",
     "\\end{eqnarray*}\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/HRzHconjugation.png\n",
     ":width: 700px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -474,13 +474,13 @@
     "- La puerta  controlada $\\cg{Z} =  {\\rm diag}(1,1,1,-1)$   es simétrica ya que lo único que hace, es cambiar de signo al estado $\\ket{11}$. Es decir\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/Equiv_Z.png\n",
     ":width: 300px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n",
+    "<br>\n",
     "\n",
     "$\\rule{7mm}{0mm}$ En realidad, $\\cg{Z}$ es un caso particular de   $\\cg{P(\\phi)} = {\\rm diag} (1,1,1, e^{i\\phi})$, para la cual la equivalencia es la misma. \n"
    ]
@@ -496,13 +496,13 @@
    "source": [
     "- Otra equivalencia importante es\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/Equiv_HH.png\n",
     ":width: 400px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -531,13 +531,13 @@
     "- Otra  equivalencia nada intuitiva pero muy importante relaciona tres operaciones CNOT con la permutación U$_{\\rm SWAP}$\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/Equiv_CNOTs.png\n",
     ":width: 400px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "\n",
@@ -558,13 +558,13 @@
     "- La puerta de phase global controlada, $\\cg{K_\\phi} = {\\rm diag} (1,1,e^{i\\phi}, e^{i\\phi})$, secretamente, no es una puerta controlada\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/Equiv_Kphase.png\n",
     ":width: 330px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -679,7 +679,7 @@
     "::::::{admonition} Ejercicio\n",
     ":class: tip\n",
     "\n",
-    " \n",
+    "<br> \n",
     "Demuestra las equivalencia de circuitos anteriores de dos formas:\n",
     "\n",
     "- Sobre el papel,  multiplicando las matrices asociadas\n",
@@ -704,13 +704,13 @@
     "Comprueba la equivalencia de los dos circuitos siguientes, siempre que se verifique que $V^2 = U$\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/CCUdecomposition.png\n",
     ":width: 450px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n",
+    "<br>\n",
     "    \n",
     "    \n",
     "::::::\n"
@@ -850,13 +850,13 @@
    "source": [
     "Esta identidad se puede demostrar gráficamente \n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/clone_X.png\n",
     ":width: 800px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -901,11 +901,11 @@
     "<b>Teorema</b>: </i>Barenco et. al. 1995:</i> \n",
     "\n",
     "^^^\n",
-    "\n",
+    "<br>\n",
     "Cualquier operador unitario $U_n$ sobre $n$ cúbits puede expresarse como el producto de  \n",
-    "\n",
+    "<br><br>\n",
     "-  puertas continuas de <i>un cubit</i> \n",
-    "  \n",
+    "<br>  \n",
     "-  puertas CNOT.\n",
     "::::::\n"
    ]
@@ -920,13 +920,13 @@
    },
    "source": [
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/Equiv_Phase.png\n",
     ":width: 600px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -978,14 +978,14 @@
     "$\\rule{7mm}{0mm}$En general para $\\cg{^kU}$ necesitamos $k-1$ ancillas\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/CkUdecomposition.png\n",
     ":name: fig_ref\n",
     ":width: 400px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -1002,13 +1002,13 @@
     "3. Las puertas de Toffoli puede descomponerse como productos de $H$, $\\cg{X}$ y $\\cg{S}$\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/Toffolidecomposition.png\n",
     ":width: 450px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "$\\rule{7mm}{0mm}$Este no es más que el caso particular  de la descomposición general de $\\cg{^2U}$ usando $U = X = HZH=HSSH =  (HSH)(HSH)= V^2 ~~\\Rightarrow ~~V = HSH$."
@@ -1030,13 +1030,13 @@
     "ABC = I ~~~~~,~~~~ e^{i\\delta}  AXBXC = U\n",
     "$$\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/CUdecomposition.png\n",
     ":width: 600px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n",
+    "<br>\n",
     "\n",
     "$\\rule{7mm}{0mm}$En efecto, si el cúbit de control es $\\ket{0}$ la fase $P(\\delta)$ no le afecta y el operador efectivo en el segundo cúbit es $ABC= I$.\n",
     "\n",
@@ -1053,7 +1053,7 @@
     }
    },
    "source": [
-    ":::{dropdown} Detalles\n",
+    "<details><summary><p style=\"color:blue\" > >> <i>Detalles</i> </p></summary>\n",
     "\n",
     "Las dos condiciones  algebráicas admiten una solución única para un operador unitario genérico\n",
     "   \n",
@@ -1070,7 +1070,7 @@
     "<i> Nota: </i>: $U\\in U(2)$  es un operador unitario y  su determinante es una fase $\\det U = e^{i\\delta}$.     Por su parte $\\det(AXBXC) = 1$, y por tanto es un elemento de $SU(2)$.  Por esta razón es necesario añadir la fase $e^{i\\delta}$ para obtener un operador unitario general. \n",
     "    \n",
     "    \n",
-    ":::\n",
+    "</details>    \n",
     "\n"
    ]
   },
@@ -1157,8 +1157,8 @@
     "\\{ \\hbox{GPi},\\hbox{Virtual}Z, \\hbox{MS}\\} \n",
     "$$\n",
     "\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$\\rule{7mm}{0mm}$donde \n",
     "$$\n",
     "\\hbox{GPi} = \\begin{bmatrix} 0 & e^{-i\\phi} \\\\e^{i\\phi} & 0 \\end{bmatrix}~~~,~~~\n",
@@ -1190,15 +1190,15 @@
     "<b>Teorema</b>: </i>Solovay Kitaev et. al. 1995</i> \n",
     "\n",
     "^^^\n",
-    "    \n",
+    "<br>    \n",
     "Una puerta simple $U$ arbitraria puede ser aproximada con precisión $\\epsilon$ usando una secuencia de puertas discretas \n",
     "$R$ en el siguiente sentido de proximidad\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "\\hbox{max}_{\\ket{\\psi}} || (U - R)\\ket{\\psi} ||<\\epsilon\n",
     "$$\n",
-    "    \n",
+    "<br>    \n",
     "donde la secuencia aproximante $R$ involucra   $\\leq {\\cal O}(\\log^2(1/\\epsilon))$ puertas de un conjunto discreto universal, \n",
     "::::::\n",
     "\n",
@@ -1506,7 +1506,7 @@
    },
    "source": [
     "### Complejidad clásica:\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     " -  **P** ( *Polinómica*):  decimos que un problema pertenece a esta clase si puede ser resuelto en un tiempo ($t \\sim $número de pasos) polinómico en el tamaño $n$ del dato de entrada $t\\sim \\exists k \\Rightarrow  {\\cal O}(n^k)\\, $. \n"
@@ -1552,8 +1552,8 @@
    "source": [
     "\n",
     "-  **NPC** (*NP-Completa*): es un subconjunto de **NPC**$\\subset$**NP** que contiene a los problemas más difíciles en esta clase. \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     " Un problema es **NPC** si cualquier  problema en **NP** puede aplicarse al mismo  mediante un algoritmo de coste polinómico. \n",
     "\n",
     "\n"
@@ -1607,8 +1607,8 @@
    },
    "source": [
     "### Complejidad cuántica:\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "Decimos que un circuito es *eficiente* (*no-eficiente*) si su *coste* escala de forma *polinómica* (*exponencial*)  con la anchura del circuito. "
    ]

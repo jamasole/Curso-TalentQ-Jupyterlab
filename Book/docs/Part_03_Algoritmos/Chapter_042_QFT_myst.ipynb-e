@@ -75,8 +75,8 @@
     "\n",
     "\n",
     "Su acción transforma los elementos la *base computacional*  a una nueva  *base de Fourier*\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "U_{TFC}: \\ket{x} \\to {\\ket{\\tilde x}} = \\frac{1}{\\sqrt{N}}\\sum_{y}\\omega^{xy}\\ket{y} =   \\frac{1}{\\sqrt{N}}\\sum_{y} e^{2\\pi i  xy /N} \\ket{y} \n",
     "$$\n",
@@ -98,8 +98,8 @@
     "\n",
     "\n",
     "comparar esta expresión con la de la transformada de Walsh-Hadamard\n",
-    "\n",
-    "    \n",
+    "<br>\n",
+    "<br>    \n",
     "$$\n",
     "W: \\ket{x} \\to \\ket{\\tilde x} =  \\frac{1}{\\sqrt{N}}\\sum_{y}(-1)^{xy}\\ket{y} =   \\frac{1}{\\sqrt{N}}\\sum_{y} e^{i\\pi   xy} \\ket{y} \n",
     "$$\n",
@@ -117,13 +117,13 @@
     }
    },
    "source": [
-    "    \n",
+    "<br>    \n",
     "    \n",
     "El nuevo factor $\\omega = e^{2\\pi i/N}$ también sirve para producir interferencias destructivas y constructivas interesantes. \n",
     "\n",
     "Esto se debe esencialmente a la importante fórmula de [suma nula](../00_Formalismo/01_Numeros_Complejos.ipynb#ejempnc) que hemos estudiado en el tema de números complejos\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "\\fbox{$ \\displaystyle\n",
@@ -144,18 +144,18 @@
     "\n",
     "\n",
     "utiliza esta expresión para demostrar que, invirtiendo los signos de las fases obtenemos la TFC inversa. Es decir, demuestra que, si \n",
-    "\n",
-    "   \n",
+    "<br>\n",
+    "<br>   \n",
     "$$\n",
     "U^{-1}_{TFC}\\ket{x}  =  \\frac{1}{\\sqrt{N}}\\sum_{y} e^{-2\\pi i  xy /N} \\ket{y} \n",
     "$$\n",
     "se sigue que \n",
-    "\n",
-    "    \n",
+    "<br>\n",
+    "<br>    \n",
     "$$\n",
     "U_{TFC}^{-1}(U_{TFC} \\ket{x}) ) \\ket{x}\n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "    \n",
     "Esto confirma que es un operador unitario $U_{TFC}^{-1} = U_{TFC}^\\dagger$.     \n",
     "::::::\n"
@@ -176,8 +176,8 @@
     "por supuesto, la operación $U_{TFC}$ no está restringida a elementos de la base computacional. \n",
     "\n",
     "Actuando sobre un vector $\\ket{f} = \\sum_x f(x)\\ket{x}$ de componentes $f(x)$ en la base $\\ket{x}$ obtendremos otro vector\n",
-    "    \n",
-    "\n",
+    "<br>    \n",
+    "<br>\n",
     "\\begin{eqnarray*}\n",
     "\\ket{\\tilde f} &=& U_{TCF}\\ket{f} = \\sum_x f(x) U_{TCF}\\ket{x} \\nonumber\\\\\n",
     "&=& \\sum_x f(x) \\frac{1}{\\sqrt{N}}\\sum_y e^{2\\pi i xy} \\ket{y}\\\\\n",
@@ -190,11 +190,11 @@
     "$$\n",
     "\\boxed{\\tilde f(y) = \\frac{1}{\\sqrt{N}}\\sum_{x=0}^{N-1} e^{2\\pi i yx} f(x)}\n",
     "$$\n",
-    "    \n",
+    "<br>    \n",
     "\n",
     "Esta regla define lo que *clásicamente* se conoce como la *Transformada de Fourier Discreta* (TFD) del conjunto de datos \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "    \n",
     "$$\n",
     "\\{f(0),f(1),...,f(N-1)\\}~ \\stackrel{\\hbox{TFD}}{\\longrightarrow}~ \\{\\tilde f(0),\\tilde f(1),...,\\tilde f(N-1)\\}$$\n",
@@ -212,8 +212,8 @@
    },
    "source": [
     "$\\bullet$ En general, los elementos de matriz serán evidentemente, las fases\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "\\bra{x} U_{TFC} \\ket{y} =  \\frac{1}{\\sqrt{N}} e^{2\\pi i  x y/N} =\\frac{1}{\\sqrt{N}} \\omega^{xy}\n",
@@ -240,8 +240,8 @@
     "\n",
     " \n",
     "$\\bullet$ Para $n=1 \\to \\omega = e^{2\\pi i /2^1} = -1$ y   la TFC no es otra que la puerta de Hadamard\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "U_{TFC} = \\frac{1}{\\sqrt{2}}\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} = H\n",
     "$$\n",
@@ -251,7 +251,7 @@
     "$$\n",
     "U_{TFC}\\ket{0} = \\ket{+}~~~~~~~~~,~~~~~~~~~~  U_{TFC}\\ket{1} = \\ket{-}\n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "Observamos que los vectores imagen están situados en el plano ecuatorial de la esfera de Bloch\n",
     "\n",
     "$\\bullet$ Para $n=2 \\to  \\omega = e^{2\\pi i/2^2} = i$ y entonces\n",
@@ -261,7 +261,7 @@
     "\\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -i & -1 & i \\\\ 1 & - 1 & 1 & - 1 \\\\ 1 & i & -1 & -i  \\end{bmatrix}\n",
     "$$ \n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     "Observar que la suma de cualquier columna o fila que no sean las primeras da cero\n",
     "    \n",
@@ -280,7 +280,7 @@
     "<b>Teorema</b>:  \n",
     "\n",
     "^^^\n",
-    "   \n",
+    "<br>   \n",
     "Los vectores de la <i>base de Fourier</i> son estados <i>factorizables</i> en productos de estados de un cúbit que se sitúan <i>sobre el ecuador</i> de la esfera de Bloch\n",
     "::::::\n"
    ]
@@ -351,7 +351,7 @@
    "source": [
     "Ahora vamos a estudiar la acción de $U_{\\rm TFC}$ sobre un elemento $\\ket{x} = \\ket{x_{n-1}}\\ket{x_{n-2}}... \\ket{x_0}$\n",
     "de la base computacional \n",
-    "\n",
+    "<br>\n",
     "\n",
     "\\begin{eqnarray*}\n",
     " \\ket{\\tilde x}  ~\\equiv ~  U_{\\rm TFC}\\ket{x}  &=&  \\frac{1}{\\sqrt{N}} \\sum_{y=0}^{2^n-1} e^{2\\pi i  xy/2^n}\\ket{y} \\label{TFC}\n",
@@ -391,8 +391,8 @@
    },
    "source": [
     " Hemos usado que las partes enteras de $x$ no contribuyen a las fases\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "e^{2\\pi i x/2} = e^{2\\pi i (x_{n-1}...x_1 + 0. x_0)}= e^{2\\pi i (x_{n-1}...x_1)}e^{2\\pi i \\, 0. x_0} = e^{2\\pi i\\, 0.x_0}\n",
     "$$"
@@ -409,15 +409,15 @@
     "::::::{admonition} Nota\n",
     ":class: note\n",
     "\n",
-    "\n",
+    "<br>\n",
     "La última expresión es tan útil e importante que casi podríamos tomarla como definición de la Transformada de Fourier Cuántica. \n",
-    "\n",
+    "<br>\n",
     "    \n",
     "-  tal y como prometimos, el resultado es un estado factorizado   $\\ket{\\tilde x} = \\ket{\\tilde x_{n-1}}\\ket{\\tilde x_{n-2}}\\cdots \\ket{\\tilde x_{0}} $ \n",
-    "\n",
+    "<br>\n",
     "    \n",
     "-  los estados de un cúbit $\\ket{\\tilde x_k}$  viven en el ecuador de la esfera de Bloch\n",
-    " \n",
+    "<br> \n",
     "\n",
     "::::::\n"
    ]
@@ -443,12 +443,12 @@
    "source": [
     "Veamos el circuito\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} figuras/QFT2.png\n",
     ":width: 800px\n",
     ":align: center\n",
     "::::\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -464,7 +464,7 @@
     "- la puerta de Hadamard $H$ y\n",
     "\n",
     "- la puerta *puerta de fase discreta* $R_k \\equiv P(\\phi = \\pi/2^{k-1})$\n",
-    "\n",
+    "<br>\n",
     "$$\n",
     "R_{k} = \\begin{bmatrix} 1 & 0 \\\\ 0 & e^{ 2\\pi i\\frac{1 }{2^{k}}} \\end{bmatrix}  ~~~\\Leftrightarrow ~~~R_k\\ket{y} = e^{2\\pi i\\frac{y}{2^k}} \\ket{y}\n",
     "$$\n",
@@ -555,7 +555,7 @@
    },
    "source": [
     "Si repetimos el mismo procedimiento con los siguientes cúbits $\\ket{x_{n-2}}$ de forma sucesiva, obtendremos finalmente\n",
-    "\n",
+    "<br>\n",
     "\n",
     "$$\n",
     " \\ket{\\tilde x_{0}}\\ket{\\tilde x_{1}}  ... \\ket{\\tilde{x}_{n-2}} \\ket{\\tilde x_{n-1}}\n",
@@ -573,8 +573,8 @@
    },
    "source": [
     "La parte final del circuito introduce los operadores de SWAP que rectifican el orden de los cúbits \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "\\hbox{SWAP}^{\\otimes n} \\,  (\\ket{\\tilde x_{0}}  ...  \\ket{\\tilde x_{n-1}} ) ~=~ \n",
     "\\ket{\\tilde x_{n-1}} ... \\ket{\\tilde{x}_{0}} ~~ \\equiv ~~ \\ket{\\tilde x}\n",
@@ -864,7 +864,7 @@
     " Clásicamente, el algoritmo más eficiente para calcular\n",
     "la Transformada de Fourier Discreta (TFD) precisa de ${\\cal O}(n 2^n)$ por tanto la TFC transforma un problema de tipo  $NP$ en uno de tipo $P$.\n",
     "\n",
-    "\n",
+    "<br>\n",
     "    \n",
     "-  En realidad no hemos calculado la TFC, ya que del estado final no podemos deducir las fases  de los elementos de la base separadamente, lo cuál constituye la transformada de Fourier del qubit de entrada.\n",
     "\n",
@@ -918,15 +918,15 @@
     }
    },
    "source": [
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "-  Para realizar los cálculos exactos supondremos que $~P~$ divide  a $N=2^n$. Existe por tanto un $M$  tal que  $\\Rightarrow PM = N$.\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "-  El requisito de divisibilidad se puede relajar, es decir, basta con que  $N-M < P M \\leq N = 2^n $. Esto sólo lo estudiaremos numéricamente.\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -948,12 +948,12 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "\n",
     "::::::{admonition} Nota\n",
     ":class: note\n",
     "\n",
-    "\n",
+    "<br>\n",
     "Adviértase la diferencia con el problema de Simon, donde la periodicidad era $f(x+r) = f(x)$ para $x+r$ una suma <i>bit a bit</i> mod 2 \n",
     "::::::\n"
    ]
@@ -977,7 +977,7 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "\\begin{eqnarray*}\n",
     "\\ket{\\Psi} &=& U_f (W\\otimes I) \\ket{0}_n  \\ket{0}_m  \\nonumber\\\\ \\rule{0mm}{15mm}\n",
     "&=& \\rule{0mm}{8mm}U_f   \\frac{1}{\\sqrt{N}}\\sum_{x=0}^{N-1} \\ket{x}_n\\ket{0}_m \\nonumber\\\\ \\rule{0mm}{15mm}\n",
@@ -1007,14 +1007,14 @@
    "source": [
     "Rescribamos el entero $x\\in S_n$ en la forma siguiente: $~ x = lP +p~ = 0,\\ldots, MP-1$, donde $~p=0,\\ldots,P-1~$ y $~l=0,\\ldots,M-1~$.\n",
     "\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\\begin{eqnarray*}\n",
     "\\ket{\\Psi} &=& \\rule{0mm}{7mm} \\frac{1}{\\sqrt{N}}  \\sum_{p=0}^{P-1}\\sum_{l=0}^{M-1}\\ket{lP + p}\\ket{f(lP+p)}\\nonumber\\\\ \\rule{0mm}{15mm}\n",
     "&=& \\rule{0mm}{7mm}  \\frac{1}{\\sqrt{N}} \\sum_{p=0}^{P-1}\\left(\\sum_{l=0}^{M-1}\\ket{lP + p}\\right)\\ket{f(p)} \n",
     "\\end{eqnarray*}\n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     "donde la última igualdad se sigue aplicando la condición de periodicidad de $f$. \n"
    ]
@@ -1046,8 +1046,8 @@
    },
    "source": [
     "A continuación efectuamos sobre este estado una transformación de Fourier cuántica, usando que $N/P = M$\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "\\begin{eqnarray*}\n",
     "\\ket{\\Psi'} = U_{\\rm TFC} \\ket{\\Psi'} &=& \\frac{1}{\\sqrt{N M}} \\sum_{y=0}^{N-1}   \\sum_{l=0}^{M-1}e^{+2\\pi i (p_0 + lP)y/N}\\ket{y} \\nonumber\\\\ \\rule{0mm}{12mm}\n",
@@ -1081,9 +1081,9 @@
     "\n",
     "\n",
     "El **resultado** es una *superposición homogénea* de estados $~\\ket{y_s = sN/P}~$ con $s=0,1,...$ \n",
-    "\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "P(y) = \\left\\{ \\begin{array}{cl} 1/P & \\hbox{si} ~ y = s N/P \\in [ 0, N/P, 2N/P,..., (P-1)N/P ] \\\\ 0 & \\rule{0mm}{15mm}\\hbox{si} ~ y \\neq s N/P \\end{array} \\right.\n",
     "$$\n",
@@ -1098,14 +1098,14 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "\n",
     "::::{figure} ./figuras/Period_finding.png\n",
     ":width: 800px\n",
     ":align: center\n",
     "::::\n",
     "\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -1116,13 +1116,13 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "\n",
     "-  Una acción repetida del circuito nos dará la lista completa $\\{y_s\\} = \\{0, N/P, 2N/P,...\\}$. \n",
-    "\n",
+    "<br>\n",
     "\n",
     "-  Dividiendo por $N$ obtenemos otra lista $\\{\\varphi_s\\} = \\{0,1/P,2/P,...,\\}$\n",
-    "\n",
+    "<br>\n",
     "\n",
     "-  La extracción de $P$ a partir de elementos de esta lista se puede efectuar mediante la expresión en *fracciones continuas*\n"
    ]
@@ -1223,7 +1223,7 @@
    },
    "source": [
     "Ahora generamos el *Circuito de Búsqueda de Periodo* y correrlo en dos casos parecidos. \n",
-    "\n",
+    "<br>\n",
     "1. $ n=m=7~\\to~N=2^7 ~,~ P = 4 ~~~\\hbox{  es decir  } ~~~ N/P = 32 \\in {\\mathbb Z} $\n",
     "\n",
     "$\\rule{8mm}{0mm}$En este caso tenemos un número exacto de $32$ repeticiones de un período de $P=4$ elementos\n",
@@ -1548,7 +1548,7 @@
     "**Estrategia 2**:\n",
     "\n",
     "Representar un número racional $a \\in {\\mathbb Q}$ como un cociente de dos enteros $a = s/P$, es algo que se puede conseguir a partir de su expresión en  [fracciones continuas](https://es.wikipedia.org/wiki/Fracci%C3%B3n_continua#:~:text=C%C3%A1lculo%20de%20una%20fracci%C3%B3n%20continua,-Consideremos%20un%20n%C3%BAmero&text=Para%20calcular%20la%20representaci%C3%B3n%20en,la%20diferencia%20y%20se%20repite)\n",
-    "\n",
+    "<br>\n",
     "\n",
     "La clase [Fraction](https://docs.python.org/3/library/fractions.html) de python ya incorpora esta utilidad. "
    ]
@@ -1590,11 +1590,11 @@
     "El método puede producir respuestas erróneas por dos razones:\n",
     "\n",
     "-  que $s$ sea divisor de $P$\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "-  que $\\varphi_s \\sim s/P$. En ese caso, el método arroja dos enteros $s'/P'$ mayores que $s'>s$ y $P'>P$.\n",
-    "\n",
-    ""
+    "<br>\n",
+    "<br>"
    ]
   },
   {
@@ -1640,7 +1640,7 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "\n",
     "**En cualquier caso**:  *verificar* si un valor es *solución o no* es una tarea que clásicamente se puede realizar de forma eficiente. "
    ]
@@ -1658,12 +1658,12 @@
     "\n",
     "\n",
     " El algoritmo de búsqueda de un periodo permite una ventaja exponencial si no contamos la profundidad del oráculo. \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "    \n",
     " Sin embargo ya hemos visto en el ejemplo anterior que la forma de construir el oráculo asociado a la función $f(x+P)=f(x)$ pasa por implementar la <i> tabla de verdad </i> de $P$ valores distintos $f(0),....,f(P-1)$. Para un $P$ de ${\\cal O}(N)$ vemos que la <i>profundidad del oráculo</i> crece de forma exponencial.\n",
-    "   \n",
-    " \n",
+    "<br>   \n",
+    "<br> \n",
     "    \n",
     "Por tanto, la ventaja cuántica sólo existe en los casos de funciones  sea posible implementar mediante un oráculo de forma que su profundidad crezca polinómicamente con el tamaño del registro $n$.\n",
     "::::::\n"

@@ -109,7 +109,7 @@
     "<b>Definición</b>:  \n",
     "\n",
     "^^^\n",
-    "\n",
+    "<br>\n",
     "Un cúbit es un <i>espacio de Hilbert</i> complejo de dimensión dos, $~\\ket{v}~\\in~\\Hil \\sim {\\mathbb C}^2$ \n",
     "::::::\n"
    ]
@@ -124,8 +124,8 @@
    },
    "source": [
     "- Cualquier *sistema físico*  cuyo estado instantáneo se pueda describir mediante un vector $\\ket{v}\\in {\\mathbb C}^2$ puede albergar físicamente un **cúbit**. \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "- A efectos prácticos,  se trata de sistemas que pueden estar en dos niveles de energía bien definidos y conmutar entre  ellos de manera controlada.\n",
     "\n"
    ]
@@ -226,7 +226,7 @@
     "    1\\\\ -1\\end{bmatrix}\n",
     "    \\end{array}\n",
     "    $$\n",
-    "\n",
+    "<br>\n",
     "\n",
     "-  Esta base la forman autovectores del operador $X= \\sigma_x = \\begin{bmatrix} 0& 1 \\\\ 1 & 0 \\end{bmatrix}$ con autovalores $\\pm 1$."
    ]
@@ -250,7 +250,7 @@
     "     1 \\\\-i \\end{bmatrix}\n",
     "    \\end{array}\n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "Esta base la forman autoestados del operador $Y=\\sigma_y =  \\begin{bmatrix} 0& -i \\\\ i & 0 \\end{bmatrix}$ con autovalores $\\pm 1$."
    ]
   },
@@ -266,7 +266,7 @@
     "::::::{admonition} Ejercicio\n",
     ":class: tip\n",
     "\n",
-    "\n",
+    "<br>\n",
     "Escribe las matrices $u_{ij}$ de cambio de la base $Z\\to X$\n",
     "\n",
     "$$\n",
@@ -354,10 +354,10 @@
     "<b>Lema</b>:  \n",
     "\n",
     "^^^\n",
-    "    \n",
+    "<br>    \n",
     "El cúbit $\\ket{u}$  <i> más general</i> se puede representar, en la base computacional $\\{\\ket{0},\\ket{1}\\}$, usando dos números reales (ángulos) $\\theta\\in [0,\\pi)$ y $\\varphi\\in [0,2\\pi)$   \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "|u\\rangle = \\cos{\\frac{\\theta}{2}}\\, |0\\rangle + e^{i\\phi}\\sin{\\frac{\\theta}{2}}\\,|1\\rangle \n",
     "$$\n",
@@ -374,7 +374,7 @@
     }
    },
    "source": [
-    ":::{dropdown} Demostración\n",
+    "<details><summary><p style=\"text-align:left\"> >> <i>Demostración</i> </p></summary>\n",
     "\n",
     "Para demostrar el lema escribimos un vector de estado general usando la representación polar para las componentes complejas\n",
     "    \n",
@@ -399,7 +399,7 @@
     "\\varphi = b_1-b_2\n",
     "$$\n",
     "es relevante para especificar $\\ket{u}$.   \n",
-    ":::\n"
+    "</details>"
    ]
   },
   {
@@ -446,7 +446,7 @@
     "\n",
     "\n",
     "-  $\\phi\\in [0,2\\pi)$ el ángulo *polar*  en torno al eje $Z$, medido a partir del plano $XZ$\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "\n",
@@ -473,8 +473,8 @@
     "\n",
     "\n",
     "-  La clase <a href=https://qiskit.org/documentation/stubs/qiskit.quantum_info.Statevector.html>statevector</a> en *qiskit* cuenta con un *visualizador* de la esfera de Bloch. La clase  acepta una lista de dos números complejos como componentes de un vector. \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "Lamentablemente no avisa si este vector está normalizado o no. Por eso, incluimos una función que genera el vector normalizado a partir de los ángulos $\\theta$ y $\\phi$. \n",
     "\n"
    ]
@@ -659,7 +659,7 @@
    },
    "source": [
     "#### Bases\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -696,7 +696,7 @@
     "**Base X**\n",
     " \n",
     "-   $(\\theta,\\phi) = (\\pi/2,0)  ~\\Rightarrow~  \\frac{1}{\\sqrt{2}}\\big(|0\\rangle+|1\\rangle \\big) =\\ket{0}_X \\equiv |+\\rangle$\n",
-    "\n",
+    "<br>\n",
     "  \n",
     "-   $(\\theta,\\phi) = (\\pi/2,\\pi) ~\\Rightarrow~  \\frac{1}{\\sqrt{2}}\\big(|0\\rangle-|1\\rangle \\big)=\\ket{1}_X \\equiv |-\\rangle$\n",
     "\n"
@@ -714,7 +714,7 @@
     "**Base Y**\n",
     "\n",
     "-   $(\\theta,\\phi) = (\\pi/2,\\pi/2) ~\\Rightarrow ~|u\\rangle =\\frac{1}{\\sqrt{2}}\\big(|0\\rangle+i|1\\rangle\\big) =\\ket{0}_Y \\equiv  |+i\\rangle$\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "-   $(\\theta,\\phi) = (\\pi/2,3\\pi/2) ~\\Rightarrow ~|u\\rangle = \\frac{1}{\\sqrt{2}}\\big(|0\\rangle-i|1\\rangle\\big) = \\ket{1}_Y \\equiv  |-i\\rangle$\n",
@@ -749,7 +749,7 @@
    },
    "source": [
     "Un **registro cuántico** contiene la *evolución temporal* de un cúbit.  \n",
-    "\n",
+    "<br>\n",
     "\n",
     "::::{figure} images/q_register.png\n",
     ":width: 300px\n",
@@ -874,10 +874,10 @@
     "<b>Teorema</b>:  \n",
     "\n",
     "^^^\n",
-    "\n",
+    "<br>\n",
     "El operador que efectúa una <i>rotación de ángulo</i>  $\\alpha\\in [0,2\\pi)$ en torno al <i>eje que marca un vector unitario</i>  $\\hat{\\bf n} = (n_x, n_y,n_z)$ es el siguiente\n",
-    " \n",
-    "    \n",
+    "<br> \n",
+    "<br>    \n",
     "\\begin{eqnarray}\n",
     "R_{\\hat{\\bf n}}(\\alpha)~ = ~\\exp\\left( -i\\frac{\\alpha}{2} \\hat{\\bf n}\\cdot \\boldsymbol{\\sigma} \\right) ~=~ \n",
     "\\cos \\frac{\\alpha}{2} I - i \\sin\\frac{\\alpha}{2} \\hat{\\bf n}\\cdot\\boldsymbol{\\sigma} \n",
@@ -916,7 +916,7 @@
     "::::::{admonition} Nota\n",
     ":class: note\n",
     "\n",
-    "\n",
+    "<br>\n",
     "El sentido de la rotación que produce $R_{\\hat{\\bf n}}(\\alpha)$ en torno al eje $\\hat{\\bf n}$, viene dado por la <i>regla de la mano derecha</i> o, también, <i>anti-horario</i>. \n",
     "::::::\n"
    ]
@@ -931,7 +931,7 @@
    },
    "source": [
     "Haciendo la suma explícitamente podemos escribir la matriz unitaria \n",
-    "\n",
+    "<br>\n",
     "\n",
     "\\begin{eqnarray*}\n",
     "R_{\\hat{\\bf n}}(\\alpha)~  ~=~ \n",
@@ -954,7 +954,7 @@
     "- Asociado a rotaciones en torno a los ejes $X$, $Y$ y $Z$ de un ángulo $\\alpha$ encontramos las tres puertas siguientes\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "\\begin{array}{rcl}\n",
@@ -966,7 +966,7 @@
     "\\end{array}\n",
     "$$\n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n"
    ]
   },
@@ -1030,7 +1030,7 @@
     "\\rule{0mm}{4mm} e^{i\\phi} \\sin \\displaystyle\\frac{\\theta}{2} &e^{i(\\varphi+\\phi)} \\cos \\displaystyle\\frac{\\theta}{2} \\end{bmatrix}\n",
     "$$\n",
     "\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -1044,13 +1044,13 @@
    "source": [
     "Es evidente que la acción de este operador sobre la base  $\\{\\ket{0},\\ket{1}\\}$ \n",
     "una base alineada con el eje $(\\theta,\\phi)$\n",
-    "\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "U(\\theta,\\phi,\\varphi)\\begin{bmatrix} 1\\\\0\\end{bmatrix} = \\begin{bmatrix} \\cos\\displaystyle\\frac{\\theta}{2}\\\\ e^{i\\phi} \\sin \\displaystyle \\frac{\\theta}{2} \\end{bmatrix} ~~~~~~,~~~~~~~\n",
     "U(\\theta,\\phi,\\varphi)\\begin{bmatrix} 0\\\\1\\end{bmatrix} = \\begin{bmatrix} -e^{i\\varphi}\\sin\\displaystyle\\frac{\\theta}{2}\\\\ e^{i(\\varphi + \\phi)} \\cos \\displaystyle \\frac{\\theta}{2} \\end{bmatrix} \n",
     "$$\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -1089,24 +1089,24 @@
     "#### Puerta de fase \n",
     "\n",
     "- $P_\\alpha = P(\\alpha)$ con $\\alpha \\in [0,2\\pi)$\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "P(\\alpha)= \\begin{bmatrix}\n",
     "1 & 0 \\\\ 0 & e^{i\\alpha} \n",
     "\\end{bmatrix}  =  \\ketbra{0}{0} + e^{i\\alpha}\\ketbra{1}{1}\n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "es unitaria para todo $\\alpha$ como se comprueba fácilmente. \n",
     "Aplicada a un estado de cúbit genérico \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "P(\\alpha) \\ket{u} =  \\begin{bmatrix} 1 & 0 \\\\ 0 & e^{i\\alpha} \\end{bmatrix}\n",
     "\\begin{bmatrix} \\cos\\theta \\\\ \\sin\\theta e^{i\\phi} \\end{bmatrix} = \\begin{bmatrix} \\cos\\theta \\\\ \\sin\\theta e^{i(\\phi+\\alpha)} \n",
     "\\end{bmatrix}= \\ket{v}\n",
     "$$\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -1119,15 +1119,15 @@
    },
    "source": [
     "El efecto de este operador es rotar cualquier cúbit en torno al eje Z un ángulo $\\alpha$. Comprobamos que está relacionada con $R_z(\\alpha)$\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "P(\\alpha) = \\begin{bmatrix} 1 & 0 \\\\ 0 & e^{i\\alpha} \\end{bmatrix} = \n",
     "\\begin{bmatrix} e^{i\\alpha/2} & 0 \\\\ 0 & e^{i\\alpha/2} \\end{bmatrix} \n",
     "\\begin{bmatrix} e^{-i\\alpha/2} & 0 \\\\ 0 & e^{i\\alpha/2} \\end{bmatrix}   \\equiv e^{i\\alpha/2} R_z(\\alpha)\n",
     "$$\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "La fase global es trivial. Por tanto los dos operadores $P(\\alpha)$ y $R_Z(\\alpha)$ son equivalentes y producen el mismo efecto sobre la esfera de Bloch.\n",
     "\n"
    ]
@@ -1142,8 +1142,8 @@
    },
    "source": [
     "- $K_\\alpha = K(\\alpha)$\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "realmente es una fase trivial, pero a veces se utiliza\n",
     "\n",
     "$$\n",
@@ -1165,7 +1165,7 @@
     "#### Puertas Discretas\n",
     "\n",
     "Hay una serie de rotaciones discretas que forman un conjunto de puertas elementales de gran utilidad\n",
-    "\n",
+    "<br>\n",
     "\n",
     "- $X,Y,Z$\n",
     "\n",
@@ -1178,7 +1178,7 @@
     "i R_{\\hat{\\bf z}}(\\pi) &=&   \\begin{bmatrix}1&0\\\\0&-1\\end{bmatrix} ~= ~ Z \n",
     "\\end{eqnarray}\n",
     "$$\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -1195,15 +1195,15 @@
     "Cualquier potencia  de un operador unitario $U$ es otro operador unitario $U^\\alpha$ \n",
     "\n",
     "Así obtenemos\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "\\begin{eqnarray*}\n",
     "S = Z^{1/2} &=&  \\begin{bmatrix}1&0\\\\0&i\\end{bmatrix}=\\begin{bmatrix}1&0\\\\0&e^{i\\pi/2}\\end{bmatrix}  \\\\\n",
     "&& \\\\\n",
     "T  = Z^{1/4} &=&  \\begin{bmatrix}1&0\\\\0&e^{i\\pi/4}\\end{bmatrix} \n",
     "\\end{eqnarray*}\n",
-    "\n",
+    "<br>\n",
     "\n"
    ]
   },
@@ -1219,7 +1219,7 @@
     "- $H$   \n",
     "\n",
     "La puerta de Hadamard, $H$, es la primera puerta *genuinamente cuántica* en el sentido de que lleva un estado de la base a una superposición coherente\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\\begin{eqnarray*}\n",
     "H \\ket{0} &=& \\frac{1}{\\sqrt{2}}\\left(\\rule{0mm}{4mm}\\ket{0} + \\ket{1}\\right) =\\ket{+}   \\\\\n",
@@ -1260,7 +1260,7 @@
     "$$\n",
     "H  =  \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 1& 1 \\\\ 1 & -1 \\end{bmatrix}  \n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "\n"
    ]
   },
@@ -1276,7 +1276,7 @@
     "::::::{admonition} Ejercicio\n",
     ":class: tip\n",
     "\n",
-    "\n",
+    "<br>\n",
     "Comprueba que $H  = i R_{\\hat{\\bf n}}(\\pi)$ con\n",
     "$\\hat{\\bf n} = \\frac{1}{\\sqrt{2}} (\\hat{\\bf x} + \\hat{\\bf z})$ un eje diagonal en el plano $(x,z)$\n",
     "::::::\n"
@@ -1294,7 +1294,7 @@
     "::::::{admonition} Nota\n",
     ":class: note\n",
     "\n",
-    "\n",
+    "<br>\n",
     "En cálculos posteriores encontraremos muy útil la siguiente representación de la acción de $H$\n",
     "\n",
     "$$\n",
@@ -1390,7 +1390,7 @@
     "::::::{admonition} Ejercicio\n",
     ":class: tip\n",
     "\n",
-    "\n",
+    "<br>\n",
     "Encontrar los valores de los  ángulos $\\theta,\\phi,\\varphi$ que  verifican las siguientes idendidades\n",
     "    \n",
     "    \n",
@@ -1422,16 +1422,16 @@
    },
    "source": [
     "La aplicación de una *puerta* \n",
-    "\n",
+    "<br>\n",
     "$$\n",
     "\\ket{\\psi} \\to  U(\\theta,\\phi,\\varphi)\\ket{\\psi}\n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "se representa mediante un cuadrado que contiene los datos del operador asociado\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "::::{figure} images/puerta_simple.png\n",
     ":width: 250px\n",
@@ -1578,8 +1578,8 @@
     "#### Matriz de un circuito\n",
     "\n",
     "Todo circuito se corresponde con un operador unitario que se obtiene componiendo todos los operadores que figuran en el. Por ejemplo, el circuito anterior representa el operador unitario $U$ al que le corresponde la matriz obtenida por multiplicación\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "U = T H ~~~\\to ~~~ U_{ij} = \\begin{bmatrix}1&0\\\\0&e^{i\\pi/4}\\end{bmatrix} \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 1& 1 \\\\ 1 & -1 \\end{bmatrix}  = \n",
     "\\frac{1}{\\sqrt{2}} \\begin{bmatrix} 1& 1 \\\\ e^{i\\pi/4} & -e^{i\\pi/4} \\end{bmatrix} \n",
@@ -1653,13 +1653,13 @@
     "El resultado de la aplicación sobre el vector $\\ket{0}$ será\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "\\frac{1}{\\sqrt{2}} \\begin{bmatrix} 1& 1 \\\\ e^{i\\pi/4} & -e^{i\\pi/4} \\end{bmatrix} \\begin{bmatrix}1 \\\\ 0 \\end{bmatrix}\n",
     " = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 1  \\\\ e^{i\\pi/4}  \\end{bmatrix} \n",
     "$$\n",
-    ""
+    "<br>"
    ]
   },
   {

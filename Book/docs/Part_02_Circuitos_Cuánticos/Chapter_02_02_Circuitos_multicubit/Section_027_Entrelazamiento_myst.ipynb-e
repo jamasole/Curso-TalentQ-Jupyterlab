@@ -208,8 +208,8 @@
     "### Perfecta anticorrelación\n",
     "\n",
     "Central en esta discusión es la presencia de entrelazamiento. Vamos a seleccionar el denominado *singlete*  de la Base de Bell.\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "\\ket{B_{11}}=\\frac{1}{\\sqrt{2}}(\\ket{01}-\\ket{10})\n",
     "$$\n",
@@ -279,7 +279,7 @@
    },
    "source": [
     "Y el valor esperado satura  este autovalor \n",
-    "\n",
+    "<br>\n",
     "\n",
     "$$\n",
     " \\langle Z\\otimes Z\\rangle = \\bra{B_{11}}Z\\otimes Z\\,  \\ket{B_{11}}  = -\\braket{B_{11}}{B_{11}}= -1\\, \n",
@@ -298,7 +298,7 @@
     "::::::{admonition} Notar\n",
     ":class: note\n",
     "\n",
-    "\n",
+    "<br>\n",
     "La anti correlación que hemos hallado es la misma que en un experimento clásico preparado en una bolsa que contiene dos calcetines de dos colores: si Alice saca el blanco, el que saca Bob tiene que ser negro.     \n",
     "    \n",
     "::::::\n",
@@ -324,10 +324,10 @@
     "<b>Teorema</b>:  \n",
     "\n",
     "^^^\n",
-    "\n",
+    "<br>\n",
     "el valor medio del producto de las proyecciones de espín a lo largo de sendos ejes $~\\hat{\\bf m}~$ y $~\\hat{\\bf n}~$ viene dada por el coseno del ángulo $\\theta$  que forman los  ejes de los dos detectores \n",
-    "\n",
-    "    \n",
+    "<br>\n",
+    "<br>    \n",
     "$$\n",
     "\\bra{B_{11}}(\\hat{\\bf m}\\cdot \\boldsymbol{\\sigma}\\otimes \\hat{\\bf n}\\cdot \\boldsymbol{\\sigma})\\ket{B_{11}}\n",
     " = -\\cos \\theta = - \\hat{\\bf m}\\cdot \\hat{\\bf n}\n",
@@ -369,8 +369,8 @@
     "$$\n",
     "\n",
     "- cuando las direcciones de los detectores de Alice y Bob no coinciden sigue habiendo una medida cuántica $a,b = \\pm 1$ en ambos. \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "- Clásicamente, ¿qué esperarías medir?\n",
     "\n",
     "\n"
@@ -455,8 +455,8 @@
    },
    "source": [
     "5. Repiten todo el proceso anterior para las cuatro posibles orientaciones elegidas de forma aleatoria. Con las  $4N$ mediciones construyen la cantidad\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "R = | C(\\hat{\\bf n}_A, \\hat{\\bf n}_B) +  C(\\hat{\\bf n}_A, \\hat{\\bf n}'_B) +  C(\\hat{\\bf n}'_A, \\hat{\\bf n}_B)-  C(\\hat{\\bf n}'_A, \\hat{\\bf n}'_B)|\n",
     "$$\n",
@@ -479,20 +479,20 @@
     "\n",
     "^^^\n",
     "La desigualdad de CHSH afirma que \n",
-    "\n",
+    "<br>\n",
     "$$\n",
     "R \\leq 2\n",
     "$$\n",
     "::::::\n",
     "\n",
-    ":::{dropdown} Prueba\n",
+    "<details><summary><p style=\"text-align:right\"> >><i>Prueba</i> </p></summary>\n",
     "Es fácil ver que se cumple para cada colección $a_i,a'_i,b_i,b'_i \\in \\pm 1$ la desigualdad\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "a_i (b_i +  b'_i) + a'_i (b_i -  b'_i) = \\pm 2\n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "porque si $b_i +  b'_i=\\pm 2$ entonces $b_i - b'_i=0$ y viceversa. Ahora podemos demostrar la desigualdad \n",
     "\\begin{eqnarray*}\n",
     "R &=& \\lim_{N\\to \\infty}|\\frac{1}{N} \\sum_{i=1}^N \\left( a_i b_i + a_i b'_i + a'_i b_i - a'_i b'_i\\right) | \\nonumber\\\\\n",
@@ -501,7 +501,7 @@
     "&= &  \\lim_{N\\to \\infty} \\frac{1}{N} \\sum_{i=1}^N  2 \\ \\nonumber\\\\\n",
     "&=& 2\n",
     "\\end{eqnarray*}\n",
-    ":::\n"
+    "</details>   "
    ]
   },
   {
@@ -514,13 +514,13 @@
    },
    "source": [
     "La Mecánica Cuántica nos proporciona una respuesta teórica para $R$ que sólo depende de los ángulos relativos $\\cos\\theta_{AB} = \\cos(\\theta_A-\\theta_B)= \\hat{\\bf n}_A\\cdot \\hat{\\bf n}_B$.\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "R = | \\cos\\theta_{AB}  + \\cos \\theta_{A'B} + \\cos \\theta_{AB'}  - \\cos \\theta_{A'B'}|\\, .\n",
     "$$\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -547,13 +547,13 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "::::{figure} images/CHSH_basis.png\n",
     ":width: 280px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -798,8 +798,8 @@
    },
    "source": [
     "En 1997 Greenberger, Horne y Zeilinger estudiaron las propiedades de una serie de estados de 3-cúbits:\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "\\ket{\\rm GHZ} = \\frac{1}{\\sqrt{2}}( \\ket{000} - \\ket{111} )\\, . \n",
     "$$\n",
@@ -817,10 +817,10 @@
    },
    "source": [
     "Supongamos que:  \n",
-    "\n",
+    "<br>\n",
     "-  un sistema está  compuesto de  tres subsistemas, $A, B$ y $C$. \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "-  en cada uno de ellos hay dos *magnitudes* observables, $X$ e $Y$, que al ser medidas adquieren valores binarios $x, y = \\pm 1$. "
    ]
   },
@@ -931,8 +931,8 @@
    "source": [
     "\n",
     "Supongamos que  $x$ e $y$ son los resultados de medir $X = \\sigma_x~$ y $~Y = \\sigma_y$\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "X \\ket{0} = \\ket{1}\\, , ~ X \\ket{1} = \\ket{0}\\, ~~ , ~~ Y \\ket{0} = i \\ket{1}\\, , ~ Y \\ket{1} = -i \\ket{0}\\, . ~ \n",
@@ -949,8 +949,8 @@
    },
    "source": [
     " Por un lado, \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$xyy\\ket{{\\rm GHZ}}  = X \\otimes Y\\otimes Y \\big(\\frac{1}{\\sqrt{2}}(\\ket{000}-\\ket{111}\\big) = \\frac{1}{\\sqrt{2}} \\big(i^2 \\ket{111}- (-i)^2\n",
     "\\ket{000}\\big) = +  \\ket{{\\rm GHZ}}\\, ,$$\n",
     "\n",
@@ -999,13 +999,13 @@
    },
    "source": [
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} ./images/GHZ.png\n",
     ":width: 300px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -1183,13 +1183,13 @@
    },
    "source": [
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/teleportacion.png\n",
     ":width: 500px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -1206,8 +1206,8 @@
     "\\ket{\\phi} \\ket{B_{00}} &=&  \\ket{\\phi}\\otimes \\frac{1}{\\sqrt{2}}\\left(\\ket{0}\\otimes \\ket{0} + \\ket{1}\\otimes\\ket{1}\\rule{0mm}{4mm}\\right)\\, \\\\\n",
     "&=& \\frac{1}{\\sqrt{2}} (a \\ket{000} + b\\ket{100} + a\\ket{011} + b\\ket{111})\n",
     "\\end{eqnarray*}\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "$\\rule{7mm}{0mm}$Alice tiene acceso a los dos primeros qubits y Bob al tercero. "
    ]
@@ -1221,11 +1221,11 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "\n",
     "- Alice realiza una  <i>medida de Bell</i> a sus dos qubits, intercalando un operador $U_{\\rm desent}= (H \\otimes I)\\cdot U_{\\rm CNOT}~$ que rota a la base de Bell\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\\begin{eqnarray*}\n",
     " (H \\otimes I\\otimes I)(U_{\\rm CNOT}\\otimes I)\\, \\ket{\\phi}\\ket{B_{00}} & =&  \\frac{1}{2}\n",
     "\\left[\\rule{0mm}{3mm} \\ket{00}(a\\ket{0} + b\\ket{1}) + \\ket{01}(a\\ket{1}+ b\\ket{0}) \\right. \\nonumber\\\\\n",
@@ -1245,7 +1245,7 @@
    "source": [
     "\n",
     "- Alice mide el estado que obra en su poder, y obtiene un 2-bit  clásico, $xy$ de manera equiprobable para las 4 posibilidades.\n",
-    "\n",
+    "<br>\n",
     "De forma correlacionada, el cúbit\n",
     " de Bob colapsa a uno de entre 4 estados $\\ket{\\phi_{xy}},~$ pero no sabe a cuál.\n"
    ]
@@ -1272,15 +1272,15 @@
    },
    "source": [
     "-  Bob efectúa sobre su cúbit una operación controlada por este 2-bit, $U_{xy} =  X^y Z^x $. \n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "$$\n",
     "xy ~=~ \\left\\{ \\begin{array}{c} 00 \\\\ 01 \\\\ 10 \\\\ 11 \\end{array} \\right\\}~~ \\Longrightarrow  \n",
     "~~~ X^y Z^x \\ket{\\phi_{xy}} ~=~ \\left\\{  \\begin{array}{rl}    I :& (a\\ket{0} + b\\ket{1})  \\\\    X: & (a\\ket{1} + b\\ket{0})  \\\\  Z:& (a\\ket{0} - b\\ket{1})  \n",
     "\\\\  XZ = -iY:&   (a\\ket{1} - b\\ket{0}) \\\\\n",
     "       \\end{array} \\right. ~~ \\longrightarrow  ~~ a \\ket{0} + b\\ket{1}\\,  = \\, \\ket{\\phi}\n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "\n",
     "$\\rule{7mm}{0mm}$Como resultado de esta operación, el cúbit de Bob es finalmente $\\ket{\\phi}$.\n"
    ]
@@ -1536,13 +1536,13 @@
     "::::::{admonition} Nota\n",
     ":class: note\n",
     "\n",
-    "\n",
+    "<br>\n",
     "El protocolo de teleportación parece poner en riesgo conceptos fundamentales. \n",
-    "\n",
+    "<br>\n",
     "\n",
     "- <b> No clonación: </b>\n",
     "el protocolo tiene como ingrediente esencial la medida y, por tanto, la <i>destrucción</i> del estado de Alice. Como consecuencia, el estado ha sido teleportado pero no clonado. Es decir,   <i>no se viola el Teorema de No Clonación </i>. \n",
-    "\n",
+    "<br>\n",
     "    \n",
     "- <b> Causalidad: </b>\n",
     "el protocolo de teleportación <i> no viola causalidad </i>. \n",
@@ -1594,13 +1594,13 @@
    },
    "source": [
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/superdense_coding.png\n",
     ":width: 550px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -1613,12 +1613,12 @@
    },
    "source": [
     "- Alice comienza efectuando una operación en su laboratorio sobre el cúbit que maneja, que depende del 2-bit $xy$ que quiere enviar\n",
-    "\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "U_{xy} =Z^x X^y ~~:~ ~\\ket{B_{00}} ~\\Rightarrow  ~\\ket{B_{xy}} = \\left\\{ \\begin{array}{c}  \\frac{1}{\\sqrt{2}}(\\ket{00} + \\ket{11})  = \\ket{B_{00}} \\\\  \\frac{1}{\\sqrt{2}}(\\ket{10} + \\ket{01}) =\\ket{B_{01}}  \\\\   \\frac{1}{\\sqrt{2}}(\\ket{00} - \\ket{11})= \\ket{B_{10}}  \\\\  \\frac{1}{\\sqrt{2}}(\\ket{10} - \\ket{01}) =\\ket{B_{11}} \\end{array} \\right. \n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "$\\rule{7mm}{0mm}$Una vez efectuada esa operación, el estado que comparten es  $\\ket{B_{xy}}$."
    ]
   },
@@ -1632,7 +1632,7 @@
    },
    "source": [
     "- Alice envía a Bob su parte del estado entrelazado a través de un canal cuántico. \n",
-    "\n",
+    "<br>\n",
     "\n",
     "- Ahora Bob está en posesión del estado $\\ket{B_{xy}}$ y sólo necesita hacer una *medida de Bell* sobre el estado que posee para recuperar la etiqueta $xy$"
    ]
@@ -1674,13 +1674,13 @@
     "Consideremos el siguiente circuito\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/entanglement_swap.png\n",
     ":width: 400px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -1693,7 +1693,7 @@
    },
    "source": [
     "- Alice (A) entrelaza un cúbit con Charles (C) y otro con Bob (B). \n",
-    "\n",
+    "<br>\n",
     "\n"
    ]
   },
@@ -1707,7 +1707,7 @@
    },
    "source": [
     "- Después, Alice hace una medida de Bell, y comunica el resultado $xy$ a Charles y a Bob respectivamente, \n",
-    "\n",
+    "<br>\n",
     "\n"
    ]
   },
@@ -1774,10 +1774,10 @@
     "Bajo la denominacióm de Operaciones Locales y Comunicación Clásica se denomina un método en Teoría Cuántica de la Información, mediante el cual,\n",
     "\n",
     "- una *operación local* es efectuada en una parte del sistema. \n",
-    "\n",
+    "<br>\n",
     "\n",
     "- el resultado es comunicado clásicamente a otra del sistema\n",
-    "\n",
+    "<br>\n",
     "\n",
     "- en esa otra parte se fectúa también una operación local, condicionada al resultado comunicado clásicamente."
    ]
@@ -1794,7 +1794,7 @@
     "Al algoritmo de teleportación es un ejemplo de LOCC en el cuál \n",
     "\n",
     "- Alice realiza una medida de Bell\n",
-    "\n",
+    "<br>\n",
     "\n",
     "- Bob actúa localmente con $X$ o $Z$ dependiendo del resultado comunicado clásicamente. "
    ]

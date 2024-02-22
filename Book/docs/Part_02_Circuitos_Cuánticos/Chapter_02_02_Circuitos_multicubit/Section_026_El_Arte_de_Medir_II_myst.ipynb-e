@@ -77,7 +77,7 @@
     "Un aparato de medida en la base  asociada al operador hermítico $\\sigma_z^{\\otimes n} = Z\\otimes \\ldots \\otimes Z$ hace colapsar el estado  que mide a un elemento $\\ket{x}$ de la *base computacional*, que identificamos mediante una cadena de bits $a_{n-1}...a_0$ con $a_i=0,1$,  donde $x= a_{n-1}2^{n-1}+...+2^0 a_0$.\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     "::::{figure} images/Multimeter_zbasis.png\n",
     ":width: 400px\n",
@@ -95,7 +95,7 @@
    },
    "source": [
     "### Circuitos con múltiples cúbits y medidas en Qiskit\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -356,7 +356,7 @@
     "Entonces es evidente que sólo tenemos que añadir el operador $U^\\dagger$ antes de usar el medidor estándar. \n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "::::{figure} images/Multimeter_basis.png\n",
@@ -365,7 +365,7 @@
     "\n",
     "::::\n",
     "\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -411,7 +411,7 @@
    "source": [
     "Por ejemplo el siguiente circuito mide en la base $Z_0X_1Y_2$\n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     "::::{figure} images/XYZ_multimeter.png\n",
     ":width: 300px\n",
@@ -419,7 +419,7 @@
     "\n",
     "::::\n",
     "\n",
-    ""
+    "<br>"
    ]
   },
   {
@@ -531,11 +531,11 @@
     "\n",
     "::::\n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     " genera la <i>base de Bell</i> $\\ket{B_{xy}} = \\ket{xy}_B $ a partir de la <i>base computacional</i> $\\{\\ket{xy}\\}$ \n",
-    " \n",
-    "\n",
+    " <br>\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "\\begin{array}{rcl}\n",
@@ -567,7 +567,7 @@
     "\n",
     "antes del medidor \n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "::::{figure} images/Bell_meter.png\n",
@@ -576,7 +576,7 @@
     "\n",
     "::::\n",
     "\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -1222,7 +1222,7 @@
     "::::::{admonition} Ejercicio\n",
     ":class: tip\n",
     "\n",
-    "\n",
+    "<br>\n",
     "Escribe una función $expval\\_pauli(P,u)$ que reciba como dato, un estado $\\ket{u}\\in \\Hil^{\\otimes n}$ y una cadena $P = 'IXYZZ...'$ que represente un operador de Pauli múltiple,  y  devuelva el valor esperado $\\bra{u}P\\ket{u}$.\n",
     "    \n",
     "::::::\n"
@@ -1294,13 +1294,13 @@
    },
    "source": [
     "Consideremos el siguiente circuito\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/Hadamard_measure.png\n",
     ":width: 280px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -1357,12 +1357,12 @@
     "<b>Teorema</b>:  \n",
     "\n",
     "^^^\n",
-    "\n",
+    "<br>\n",
     "$$\n",
     "\\langle X\\rangle_{ancilla} = {\\rm Re} \\langle U\\rangle_{\\psi} ~~~,~~~ \\langle Y\\rangle_{ancilla} = {\\rm Im} \\langle U\\rangle_{\\psi}\\, \n",
     "$$\n",
     "::::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -1374,7 +1374,7 @@
    },
    "source": [
     "**Demostración**: para el caso $x$, el circuito anterior será\n",
-    "\n",
+    "<br>\n",
     "\n",
     "::::{figure} images/Hadamard_measurea.png\n",
     ":width: 280px\n",
@@ -1382,11 +1382,11 @@
     "\n",
     "::::\n",
     "\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "Un cálculo explícito nos da el estado que llega al aparato de medida\n",
-    "\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "\\ket{0}\\ket{\\psi} ~\\to ~ \\ket{\\Psi} = \\frac{1}{2} \\left[\\rule{0mm}{3mm} |0\\rangle \\otimes (1 + U) |\\psi\\rangle +  |1\\rangle \\otimes (1 - U) |\\psi\\rangle \\right] \\label{hadam}\n",
@@ -1445,13 +1445,13 @@
     }
    },
    "source": [
-    "\n",
+    "<br>\n",
     "::::{figure} images/Hadamard_measureb.png\n",
     ":width: 400px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n"
+    "<br>\n"
    ]
   },
   {
@@ -1682,23 +1682,23 @@
     "\n",
     "\n",
     "\n",
-    "\n",
+    "<br>\n",
     "::::{figure} images/HadamardProjection.png\n",
     ":width: 280px\n",
     ":align: center\n",
     "\n",
     "::::\n",
-    "\n",
+    "<br>\n",
     "\n",
     "\n",
     "La imagen bajo este circuito de un estado de entrada $\\ket{0}\\ket{\\psi}$ ahora será\n",
-    "\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "$$\n",
     "\\ket{0}\\ket{\\psi} = \\ket{0}\\otimes (\\alpha\\ket{0}_U + \\beta\\ket{1}_U) ~~\\longrightarrow ~~  \\alpha\\ket{0}\\ket{0}_U +  \\beta\\ket{1}\\ket{1}_U\\, .\n",
     "$$\n",
-    "\n",
+    "<br>\n",
     "\n",
     "Al igual que con los estados de Bell, cada resultado de  medida en la ancilla está correlacionado con un autoestado del operador $U$. \n",
     "\n",

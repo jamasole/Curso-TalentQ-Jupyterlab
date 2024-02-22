@@ -479,7 +479,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operador-de-evolucion">Operador de Evolución</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-h-independiente-del-tiempo">Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#h-independiente-del-tiempo"><span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-base-autoestados-de-h">Evolución en la base autoestados de H</a></li>
 </ul>
 </li>
@@ -544,11 +544,11 @@ document.write(`
 <p class="sd-card-text"><b>Postulado I</b>: </i>Vector de estado</i></p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">En un instante, <span class="math notranslate nohighlight">\(t\)</span>, la máxima información accesible de un <i>sistema cuántico aislado</i> está asociada a un vector <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, de norma unidad, <span class="math notranslate nohighlight">\(\braket{\psi}{\psi}=1\)</span>, perteneciente a un espacio de Hilbert <span class="math notranslate nohighlight">\(\Hil\)</span>, cuya dimensión compleja <span class="math notranslate nohighlight">\(N\)</span> equivale al número de grados de libertad del sistema.</p>
+<p class="sd-card-text">En un instante, <span class="math notranslate nohighlight">\(t\)</span>, la <i>máxima información accesible</i> de un sistema cuántico <i>aislado</i> está asociada a un vector <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> de norma unidad, perteneciente a un espacio de Hilbert <span class="math notranslate nohighlight">\(\Hil\)</span></p>
 </div>
 </div>
-<p>El vector de estado es el objecto matemático que contiene la máxima información accesible. La palabra <em>estado</em> es engañosa por cuanto parece indicar que el sistema <em>está</em> en alguna estado concreto definido por un valor concreto de sus propiedades, ¡esto no es así!</p>
-<p>La <em>fase global</em> del vector de estado no contiene información: dos vectores que difieran en una fase global representan al mismo estado ningún experimento permite distinguirlos</p>
+<p>Es importante recalcar que el significado del vector de estado es que contiene la <em>máxima información accesible</em>. Nada más y nada menos. La palabra <em>estado</em> es engañosa por cuanto parece indicar que el sistema <em>está</em> en alguna estado concreto definido por un valor concreto de sus propiedades, ¡esto no es así!  El vector de estado se conoce también con el nombrede  <em>función de onda</em></p>
+<p>Dos vectores que difieran en una <em>fase global</em> contienen idéntica informacuón y, por tanto,  representan al mismo estado: ningún experimento permite distinguirlos</p>
 <div class="math notranslate nohighlight">
 \[
 \ket{\psi} \sim \ket{\psi'} =  e^{i\varphi}\ket{\psi} \, ,
@@ -588,15 +588,24 @@ p(\lambda_k)~ = ~|\braket{\lambda_k}{\psi}|^2
 <p class="sd-card-text">donde <span class="math notranslate nohighlight">\(\ket{\lambda_k}\)</span> es el autovector asociado.</p>
 </div>
 </div>
-<p>Las magnitudes medibles son números reales, de ahí la exigencia de que <span class="math notranslate nohighlight">\(A\)</span> deba ser un operador hermítico</p>
+<ul class="simple">
+<li><p>la intepretación probabilística de las componentes del <em>vector de estado</em> las que fuerzan a que sea unitario. Efectivamente
+como la suma de todas las probabilidades debe ser igual a la unidad
+$<span class="math notranslate nohighlight">\(
+1 = \sum_k \lambda_k = \sum_k \braket{\psi}{\lambda_k}\braket{\lambda_k}{\psi} = \bra{\psi}\left(\sum_k\ketbra{\lambda_k}{\lambda_k}\right) \ket{\psi} = \braket{\psi}{\psi}
+\)</span>$</p></li>
+<li><p>que las magnitudes medibles son números reales, exige que el operador <span class="math notranslate nohighlight">\(A\)</span> asociado a un observable deba ser hermítico</p></li>
+</ul>
 <p>La fórmula dada para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span>  es cierta cuando el autovalor en cuestion es <em>no degenerado</em>.
 Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span> debe generalizarse:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5cfd9ab2-b763-4376-a131-7f0a516a76a3">
-<span class="eqno">(14)<a class="headerlink" href="#equation-5cfd9ab2-b763-4376-a131-7f0a516a76a3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
 p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \bra{\psi}\left(
  \sum_{a=1}^{d_k}\ketbra{\lambda^a_k}{\lambda^a_k}\right) \ket{\psi}\nonumber\\
 &amp;=&amp;  \bra{\psi}P_k\ket{\psi} \rule{0mm}{7mm}\\
-\end{eqnarray}\]</div>
+\end{array}
+\end{split}\]</div>
 <p>La última expresión revela que <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> no es más que el <em>valor esperado del proyector</em> <span class="math notranslate nohighlight">\(P_k = P^2_k\)</span> en el estado del sistema anterior a la medida.</p>
 <div class="note admonition">
 <p class="admonition-title">Nota</p>
@@ -605,58 +614,38 @@ p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \br
 <li><p><em>Muy importante</em>:  <span class="math notranslate nohighlight">\((\lambda_m,p(\lambda_m))\)</span> no es una <i>pseudo-probabilidad</i> sino, probablemente, la única  variable intrínsecamente aleatoria que existe en la naturaleza.</p></li>
 </ul>
 </div>
-<p>El hecho de medir tiene consecuencias irreversibles sobre el sistema medido. Este hecho es, sin duda, el efecto más diferenciador de la Mecánica Cuántica sobre la clásica.</p>
+<p>El hecho de medir tiene consecuencias <em>irreversibles</em> sobre el sistema medido. Este hecho es, sin duda, el efecto más diferenciador de la Mecánica Cuántica sobre la clásica: no existe el concepto de <em>partícula de prueba</em>, aquella que obtiene información de un sistema sin perturbarlo.</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Postulado IV</b>: </i>Colapso de la función de  onda</i></p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">Si el resultado de una medida  ha sido  <span class="math notranslate nohighlight">\(\lambda_n\)</span>,
-el estado del sistema,inmediatamente después de la medida,</p>
-<p class="sd-card-text">viene dado por el vector propio<br />
+<p class="sd-card-text">Si el resultado de una medida efectuada sobre un sistema en un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>  ha sido  <span class="math notranslate nohighlight">\(\lambda_n\)</span>,  inmediatamente después de la medida, el estado del sistema viene dado por el vector propio asociado<br />
 <span class="math notranslate nohighlight">\(\ket{\lambda_n} \in \Hil\)</span>, normalizado <span class="math notranslate nohighlight">\(|\braket{\lambda_n}{\lambda_n}|=1\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-\ket{\psi}~\stackrel{\lambda_n}{\Longrightarrow}~ \ket{\lambda_n} 
-\]</div>
 </div>
 </div>
-<p>¿Por qué el medidor no es un objeto cuántico? ¿cuál es el límite que marca la distinción entre un objeto cuántico y un medidor clásico? El axioma del <em>colapso de la función de onda</em> es heurístico y ha suscitado intensos debates desde su formulación. El más famoso es el de la paradoja del Gato de Schrödinger.</p>
+<p>El sistema del medidor y el sistema medido, son a su vez un sistema aisado ¿por qué no parecen obedecer a las reglas de un sistema cuántico? ¿cuál es el límite que marca la distinción entre un objeto cuántico y uno clásico capaz de hacer colapsar el estado de otro? El axioma del <em>colapso de la función de onda</em> es heurístico y ha suscitado intensos debates desde su formulación. El más famoso es el de la paradoja del Gato de Schrödinger.</p>
 </section>
 <section id="medidas-y-valores-esperados">
 <h2>Medidas y valores esperados<a class="headerlink" href="#medidas-y-valores-esperados" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>En Mecánica Cuántica especificamos un estado en las componentes de la expansión de un estado en <em>una base</em> ortonormal.
-Existen infinitas bases posibles para expresar un vector. ¿Qué base es la mejor? La respuesta es que depende del proceso que estudiemos.</p></li>
-</ul>
-<ul class="simple">
-<li><p>Por ejemplo, si el proceso es <em>la medida</em> de un cierto observable <span class="math notranslate nohighlight">\(A=A^\dagger\)</span>, el resultado de nuestra medición sólo puede ser uno de los <em>valores propios</em> <span class="math notranslate nohighlight">\(\lambda_i\)</span></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
+<p>En Mecánica Cuántica especificamos un estado en las componentes de la expansión de un estado en <em>una base</em> ortonormal.
+Existen infinitas bases posibles para expresar un vector. ¿Qué base es la mejor? La respuesta es que depende del proceso que estudiemos.</p>
+<p>Por ejemplo, si el proceso es <em>la medida</em> de un cierto observable <span class="math notranslate nohighlight">\(A=A^\dagger\)</span>, el resultado de nuestra medición sólo puede ser uno de los <em>valores propios</em> <span class="math notranslate nohighlight">\(\lambda_i\)</span>
+$<span class="math notranslate nohighlight">\(
 A \ket{\lambda_k} = \lambda_k \ket{\lambda_k}\, 
-\]</div>
-<p>donde <span class="math notranslate nohighlight">\(\ket{\lambda_k}\)</span> son los autovectores <span class="math notranslate nohighlight">\({k=1,2,...}\)</span> que forman una base ortonormal.</p>
-<ul class="simple">
-<li><p>Ésta es la base natural adaptada a procesos de medida de <span class="math notranslate nohighlight">\(A\)</span>. En particular para conocer <em>con qué probabilidad</em> se producirá cada resultado, expandiremos el estado</p></li>
-</ul>
+\)</span><span class="math notranslate nohighlight">\(
+donde \)</span>\ket{\lambda_k}<span class="math notranslate nohighlight">\( son los autovectores \)</span>{k=1,2,…}<span class="math notranslate nohighlight">\( que forman una base ortonormal. Ésta es la base natural adaptada a procesos de medida de \)</span>A$. En particular para conocer <em>con qué probabilidad</em> se producirá cada resultado, expandiremos el estado en dicha base de autoestados</p>
 <div class="math notranslate nohighlight">
 \[
-\ket{\psi} = \sum_{i=1}^N a_i \ket{\lambda_i}\, .
+\ket{\psi} = \sum_{i=1}^N a_i \ket{\lambda_i}\, 
 \]</div>
 <p>El axioma IV (regla de Born) afirma que <i>la probabilidad de aparición</i> del resultado <span class="math notranslate nohighlight">\(\lambda_i\)</span> es precisamente</p>
 <div class="math notranslate nohighlight">
 \[
-p(\lambda_i)=|\braket{\lambda_i}{\psi}|^2  = |a_i|^2 \, .
+p(\lambda_i)=|\braket{\lambda_i}{\psi}|^2  = |a_i|^2 \, 
 \]</div>
-<ul class="simple">
-<li><p>La forma de tener acceso experimental a los números <span class="math notranslate nohighlight">\(p(\lambda_i)\)</span>  es mediante la <strong>repetición estadística</strong>. Si efectuamos la medida un número <span class="math notranslate nohighlight">\(n\)</span> de veces con <span class="math notranslate nohighlight">\(n\to \infty\)</span>, y contamos la frecuencia de aparición de los distintos <span class="math notranslate nohighlight">\(\lambda_i\)</span>, esto es</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\frac{n(\lambda_i)}{n}\, .
-\]</div>
-<p>en el límite <span class="math notranslate nohighlight">\(n\to \infty\)</span> dicha frecuencia experimental convergerá a la probabilidad teórica</p>
+<p>La forma de tener acceso experimental a los números <span class="math notranslate nohighlight">\(p(\lambda_i)\)</span>  es mediante la <strong>repetición estadística</strong>. Si efectuamos la medida un número <span class="math notranslate nohighlight">\(n\)</span> de veces con <span class="math notranslate nohighlight">\(n\to \infty\)</span>, y contamos la frecuencia de aparición de los distintos <span class="math notranslate nohighlight">\(\lambda_i\)</span>
+en el límite <span class="math notranslate nohighlight">\(n\to \infty\)</span> dicha frecuencia experimental convergerá a la probabilidad teórica</p>
 <div class="math notranslate nohighlight">
 \[
 \lim_{n\to\infty} \frac{n(\lambda_i)}{n} =  p(\lambda_i)  = |a_i|^2   \, .
@@ -682,12 +671,14 @@ La repetición del experimento permite reconstruir estimadores estadísticos.</p
 <h3>Valores esperados<a class="headerlink" href="#valores-esperados" title="Permalink to this heading">#</a></h3>
 <p><a id='valores_esperados'></a></p>
 <p>Rescribamos la probabilidad de encontrar <span class="math notranslate nohighlight">\(\lambda_k\)</span> en el caso de que sea <span class="math notranslate nohighlight">\(d_k\)</span> veces degenerado</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{eqnarray*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
 p(\lambda_k) &amp;=&amp; \sum_{a=1}^{d_k} |\braket{\lambda^a_k}{\psi}|^2  = 
-\sum_{a=1}^{d_k} \braket{\psi}{\lambda^a_k}\braket{\lambda^a_k}{\psi} \nonumber\\
+\sum_{a=1}^{d_k} \braket{\psi}{\lambda^a_k}\braket{\lambda^a_k}{\psi} \nonumber\\ \rule{0mm}{8mm}
 &amp;=&amp;\bra{\psi} \left( \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}  \right) = \bra{\psi}P_k \ket{\psi} 
-\end{eqnarray*}\]</div>
+\end{array}
+\end{split}\]</div>
 <p>donde</p>
 <div class="math notranslate nohighlight">
 \[
@@ -695,8 +686,8 @@ P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \]</div>
 <p>es el proyector sobre el subespacio propio</p>
 <p>Por el <em>valor esperado</em> <span class="math notranslate nohighlight">\(\langle A\rangle\)</span> del <em>observable</em> <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, entendemos el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\lambda_n\)</span> obtenida por el método descrito.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2de8ae1c-f2cd-4b22-9053-f3e2decff15a">
-<span class="eqno">(15)<a class="headerlink" href="#equation-2de8ae1c-f2cd-4b22-9053-f3e2decff15a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-06aba676-9ce5-42a3-8f04-d045f800315f">
+<span class="eqno">(14)<a class="headerlink" href="#equation-06aba676-9ce5-42a3-8f04-d045f800315f" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle A\rangle &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 
@@ -716,25 +707,18 @@ P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \[
 p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle 
 \]</div>
-<p>El espectro de un observable está formado por números reales que podemos ordenar <span class="math notranslate nohighlight">\(\lambda_{min}&lt;...&lt;\lambda_{max}\)</span>.</p>
-<p>El valor esperado de un observable en uno de sus autoestados coincide con el autovalor asociado</p>
+<p>El espectro de un observable está formado por números reales que podemos ordenar <span class="math notranslate nohighlight">\(\lambda_{min}&lt;...&lt;\lambda_{max}\)</span>.
+El valor esperado de un observable en uno de sus autoestados coincide con el autovalor asociado</p>
 <div class="math notranslate nohighlight">
 \[
 \bra{\lambda_i}A \ket{\lambda_i} = \bra{\lambda_i}\lambda_i \ket{\lambda_i}  = \lambda_i \braket{\lambda_i}{\lambda_i} = \lambda_i
 \]</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-header docutils">
-<p class="sd-card-text"><b>Lema</b>:</p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">El valor esperado de un observable <span class="math notranslate nohighlight">\(A\)</span> está acotado entre sus valores propios mínimo y máximo</p>
+<p>El valor esperado de un observable <span class="math notranslate nohighlight">\(A\)</span> está acotado entre sus valores propios mínimo y máximo</p>
 <div class="math notranslate nohighlight">
 \[
 \lambda_{min} \leq \bra{\psi}A\ket{\psi} \leq \lambda_{max}
 \]</div>
-<p class="sd-card-text">y las desigualdades anteriores se saturan en los autoestados correspondientes</p>
-</div>
-</div>
+<p>y las desigualdades anteriores se saturan en los autoestados correspondientes <span class="math notranslate nohighlight">\(\ket{\psi} = \ket{\lambda_{max/min}}\)</span></p>
 <section id="desviacion-estandar">
 <h4>Desviación estándar<a class="headerlink" href="#desviacion-estandar" title="Permalink to this heading">#</a></h4>
 <p><a id='desviacion_estandar'></a></p>
@@ -761,7 +745,8 @@ p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vev_sig</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ket</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; funcion que toma una matriz y un vector normalizado  y devuelve el valor esperado y la desviación &#39;</span>
+<span class="k">def</span> <span class="nf">vev_sig</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ket</span><span class="p">):</span>
 
     <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ket</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">ket</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">real</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>  <span class="o">==</span> <span class="mf">1.</span> <span class="c1"># chequeamos que la norma es unidad</span>
     <span class="n">bra</span> <span class="o">=</span> <span class="n">ket</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
@@ -783,18 +768,16 @@ p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; definamos una matriz hermítica &#39;</span>
 <span class="c1">#np.random.seed(10) </span>
-
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">+=</span>  <span class="n">A</span><span class="o">.</span><span class="n">getH</span><span class="p">()</span>
-
 <span class="n">eigvals</span><span class="p">,</span> <span class="n">eigvecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-
+<span class="s1">&#39; mostramos los autovalores &#39;</span>
 <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">eigvals</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-3.0619, -1.8706,  1.9812])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-4.3656, -1.0261,  1.7354])
 </pre></div>
 </div>
 </div>
@@ -821,7 +804,7 @@ p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt;=  -3.0619  sigma =  4.21e-08
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt;=  -4.36565  sigma =  8.43e-08
 </pre></div>
 </div>
 </div>
@@ -833,8 +816,8 @@ p(\lambda_k ) =  \bra{\psi}P_k\ket{\psi} = \langle P_k\rangle
 <h2>Evolución temporal<a class="headerlink" href="#evolucion-temporal" title="Permalink to this heading">#</a></h2>
 <section id="ecuacion-de-schrodinger">
 <h3>Ecuación de Schrödinger<a class="headerlink" href="#ecuacion-de-schrodinger" title="Permalink to this heading">#</a></h3>
-<p>El estado de un sistema <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span> posee la máxima información instantánea accesible de un sistema, es decir, a un tiempo dado <span class="math notranslate nohighlight">\(t\)</span>.</p>
-<p>Dado <span class="math notranslate nohighlight">\(\ket{\psi(t_0)}\)</span> en un instante inicial <span class="math notranslate nohighlight">\(t_0\)</span>, la evolución posterior obedece a la  ecuación diferencial de Schrödinger</p>
+<p>El estado de un sistema <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span> posee la máxima información instantánea accesible de un sistema, es decir, a un tiempo dado <span class="math notranslate nohighlight">\(t\)</span>.
+Dado <span class="math notranslate nohighlight">\(\ket{\psi(t_0)}\)</span> en un instante inicial <span class="math notranslate nohighlight">\(t_0\)</span>, la evolución posterior obedece a la  ecuación diferencial de Schrödinger</p>
 <div class="math notranslate nohighlight">
 \[
  \displaystyle \frac{d}{d t}\ket{\psi(t)} =-\frac{i}{\hbar} H(t) \ket{\psi(t)} \, .
@@ -916,6 +899,8 @@ U(t,t_0)^{-1}= U(t,t_0)^\dagger
 \[
  \frac{d}{dt}U(t,t_0) = -\frac{i}{\hbar} H(t)\, U(t,t_0)
 \]</div>
+</div>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Demostración<div class="sd-summary-down docutils">
@@ -924,17 +909,17 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Tomando la derivada temporal de la ecuación <span class="math notranslate nohighlight">\(\ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}\)</span>, que define <span class="math notranslate nohighlight">\(U(t,t_0)\)</span>, tenemos para cada miembro</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71fe28cb-df47-4200-b323-cc57c20de6d5">
-<span class="eqno">(16)<a class="headerlink" href="#equation-71fe28cb-df47-4200-b323-cc57c20de6d5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
 \frac{d}{dt}\ket{\psi(t)} &amp;~=~&amp; -\frac{i}{\hbar}  H(t)\ket{\psi(t)} = -\frac{i}{\hbar} H(t)U(t,t_0)\ket{\psi(t_0)}  \nonumber\\
 \frac{d}{dt}U(t,t_0)\ket{\psi(t_0)} &amp;~=~&amp; \left(\frac{d}{dt}U(t,t_0)\right)\ket{\psi(t_0)}
-\end{eqnarray}\]</div>
+\end{array}
+\end{split}\]</div>
 <p class="sd-card-text">Igualando ambas expresiones, y teniendo en cuanto que <span class="math notranslate nohighlight">\(\ket{\psi_0}\)</span> es arbitrario, obtenemos la ecuación deseada.</p>
 </div>
-</details></div>
-</div>
-<section id="caso-de-h-independiente-del-tiempo">
-<h4>Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo<a class="headerlink" href="#caso-de-h-independiente-del-tiempo" title="Permalink to this heading">#</a></h4>
+</details><section id="h-independiente-del-tiempo">
+<h4><span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo<a class="headerlink" href="#h-independiente-del-tiempo" title="Permalink to this heading">#</a></h4>
 <p>Cuando <span class="math notranslate nohighlight">\(H\)</span> no depende del tiempo podemos dar una expresión analítica para el operador de evolución</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
@@ -946,6 +931,8 @@ Demostración<div class="sd-summary-down docutils">
 \[
 U(t,t_0) = \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
 \]</div>
+</div>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Demostración<div class="sd-summary-down docutils">
@@ -954,8 +941,9 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Basta con demostrar que se satisface la ecuación de evolución y la condición de contorno</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ea89b3c0-2d6b-4ade-92e3-881fb75ebfd6">
-<span class="eqno">(17)<a class="headerlink" href="#equation-ea89b3c0-2d6b-4ade-92e3-881fb75ebfd6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
 \frac{d}{dt}U(t,t_0) &amp;=&amp; \frac{d}{dt} \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
     \nonumber\\ \rule{0mm}{6mm}
    &amp;=&amp; \frac{d}{dt}\left( I +(t-t_0)\left(-\frac{i}{\hbar} H\right) + \frac{1}{2!} 
@@ -965,20 +953,21 @@ Demostración<div class="sd-summary-down docutils">
   \nonumber \\ \rule{0mm}{6mm} 
 &amp;=&amp; \left(-\frac{i}{\hbar} H\right) \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)    \nonumber\\ \rule{0mm}{6mm}
 &amp;=&amp; -\frac{i}{\hbar} H \,  U(t,t_0)
-\end{eqnarray}\]</div>
-<p class="sd-card-text">Además
-$<span class="math notranslate nohighlight">\(
+\end{array}
+\end{split}\]</div>
+<p class="sd-card-text">Además</p>
+<div class="math notranslate nohighlight">
+\[
 U(t_0,t_0) =  \exp\left({-\frac{i}{\hbar} (t_0-t_0)H}\right)=\exp(0) = I
-\)</span>$</p>
+\]</div>
 </div>
-</details></div>
-</div>
-<div class="note admonition">
+</details><div class="note admonition">
 <p class="admonition-title">Notar</p>
-<p>Que la cantidad <span class="math notranslate nohighlight">\({-\frac{i}{\hbar} (t-t_0) H }\)</span> es adimensional
-$<span class="math notranslate nohighlight">\(
+<p>que la cantidad <span class="math notranslate nohighlight">\({-\frac{i}{\hbar} (t-t_0) H }\)</span> es adimensional</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{1}{\hbox{J}\cdot \hbox{s}}\hbox{s}\cdot\hbox{J} = 1
-\)</span>$</p>
+\]</div>
 <p>Es decir, es un número puro. Por eso podemos exponenciarla. El operador de evolución <span class="math notranslate nohighlight">\(U(t,t_0)\)</span> es, por tanto, también, una magnitud adimensional.</p>
 </div>
 <div class="tip admonition">
@@ -1059,14 +1048,14 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/fec026aaac22ac0a24fb967d80f347eccfec58b617810ea1f19c43bd8a548cd3.png" src="../../_images/fec026aaac22ac0a24fb967d80f347eccfec58b617810ea1f19c43bd8a548cd3.png" />
+<img alt="../../_images/5e17b59b4f59b33aa478732b8c05f43d25dbb86c1e5ae6982aef069b73e4274c.png" src="../../_images/5e17b59b4f59b33aa478732b8c05f43d25dbb86c1e5ae6982aef069b73e4274c.png" />
 </div>
 </div>
 </section>
 <section id="evolucion-en-la-base-autoestados-de-h">
 <h4>Evolución en la base autoestados de H<a class="headerlink" href="#evolucion-en-la-base-autoestados-de-h" title="Permalink to this heading">#</a></h4>
-<p>Sea <span class="math notranslate nohighlight">\(\{\ket{n}\}\)</span> una base de autoestados de <span class="math notranslate nohighlight">\(H \, \Rightarrow \,H \ket{n} = E_n \ket{n}~~~~n=1,..,N.\)</span></p>
-<p>En esta base <span class="math notranslate nohighlight">\(H\)</span> es una matriz <span class="math notranslate nohighlight">\(H_{mn}\)</span> diagonal</p>
+<p>La forma más eficaz de calcular la evolución de un estado arbitrario es expresarla en la base <span class="math notranslate nohighlight">\(\{\ket{n}\}\)</span> de autoestados de <span class="math notranslate nohighlight">\(H \, \Rightarrow \,H \ket{n} = E_n \ket{n}~~~~n=1,..,N.\)</span> <span class="math notranslate nohighlight">\(~\)</span>
+En esta base, <span class="math notranslate nohighlight">\(H\)</span> es una matriz <span class="math notranslate nohighlight">\(H_{mn}\)</span> diagonal</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 H_{mn} =  \begin{bmatrix} E_0 &amp;  &amp; &amp; \\  &amp; E_1 &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix} =E_m \delta_{mn} \, .
@@ -1077,29 +1066,21 @@ H_{mn} =  \begin{bmatrix} E_0 &amp;  &amp; &amp; \\  &amp; E_1 &amp;  &amp; \\ &
 U_{mn} = \exp\left(-\frac{i}{\hbar}t H_{mn}\right) = 
  \begin{bmatrix} e^{-\frac{i}{\hbar}t E_0} &amp;  &amp; &amp; \\  &amp; e^{-\frac{i}{\hbar} t E_1}  &amp;  &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \end{bmatrix} = e^{-\frac{i}{\hbar} t  E_m }\delta_{mn} \, .
 \end{split}\]</div>
-<div class="attention admonition">
-<p class="admonition-title">En resumen</p>
-<ul class="simple">
-<li><p>La evolución temporal de un autoestado de la energía es trivial (es una fase global)</p></li>
-</ul>
+<p>La evolución temporal de un autoestado de la energía es trivial (es una fase global)</p>
 <div class="math notranslate nohighlight">
 \[
 U(t,0)\ket{n} = e^{-\frac{i}{\hbar} t E_n} \ket{n}\, .
 \]</div>
-<ul class="simple">
-<li><p>Esta fase deja de ser trivial cuando afecta a una combinación lineal. La forma más eficaz de calcular la evolución de un estado arbitrario es expresarla en la base <span class="math notranslate nohighlight">\(\{\ket{n}\}\)</span>.
-Es decir, si a <span class="math notranslate nohighlight">\(t=0\)</span></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\ket{\psi(t=0)} = \sum_n c_n \ket{n} \, 
-\]</div>
-<p>entonces, a tiempo <span class="math notranslate nohighlight">\(t\)</span></p>
+<p>Esta fase deja de ser trivial cuando afecta a una combinación lineal. .
+Es decir, si a <span class="math notranslate nohighlight">\(t=0\)</span>
+<span class="math notranslate nohighlight">\(
+\ket{\psi(t=0)} = \sum_n c_n \ket{n} \, ,
+\)</span>
+entonces, a tiempo <span class="math notranslate nohighlight">\(t\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \ket{\psi(t)} = \sum_n c_n e^{-\frac{i}{\hbar}E_n} \ket{n} \, .
 \]</div>
-</div>
 </section>
 </section>
 </section>
@@ -1183,7 +1164,7 @@ Es decir, si a <span class="math notranslate nohighlight">\(t=0\)</span></p></li
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operador-de-evolucion">Operador de Evolución</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-h-independiente-del-tiempo">Caso de <span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#h-independiente-del-tiempo"><span class="math notranslate nohighlight">\(H\)</span> independiente del tiempo</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-base-autoestados-de-h">Evolución en la base autoestados de H</a></li>
 </ul>
 </li>
