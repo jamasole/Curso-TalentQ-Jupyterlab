@@ -497,7 +497,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 21, 2024 | 7 min read</p>
+<div><p>Feb 22, 2024 | 8 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../_images/Logo_TalentQ_Azul.png"><img alt="../../_images/Logo_TalentQ_Azul.png" src="../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -537,7 +537,7 @@ document.write(`
 </div>
 <section id="axiomas">
 <h2>Axiomas<a class="headerlink" href="#axiomas" title="Permalink to this heading">#</a></h2>
-<p>La Mecánica Cuántica es una teoría fundamentada en unos pilares axiomáticos cuya selección admite cierta flexibilidad. La más aceptada constituye lo que se denomina la <i>interpretación de Copenhagen</i>.</p>
+<p>La Mecánica Cuántica es una teoría fundamentada en unos pilares axiomáticos cuya selección admite cierta flexibilidad. La más aceptada constituye lo que se denomina la <i>interpretación de Copenhagen</i></p>
 <p><a id='axiomas-I'></a></p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
@@ -547,18 +547,14 @@ document.write(`
 <p class="sd-card-text">En un instante, <span class="math notranslate nohighlight">\(t\)</span>, la máxima información accesible de un <i>sistema cuántico aislado</i> está asociada a un vector <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, de norma unidad, <span class="math notranslate nohighlight">\(\braket{\psi}{\psi}=1\)</span>, perteneciente a un espacio de Hilbert <span class="math notranslate nohighlight">\(\Hil\)</span>, cuya dimensión compleja <span class="math notranslate nohighlight">\(N\)</span> equivale al número de grados de libertad del sistema.</p>
 </div>
 </div>
-<ul class="simple">
-<li><p>El vector de estado es el objecto matemático que contiene la máxima información accesible. La palabra <em>estado</em> es engañosa por cuanto parece indicar que el sistema <em>está</em> en alguna estado concreto.  El vector de estado recibe también el nombre de <em>función de onda</em>.</p></li>
-<li><p>La dimensión de <span class="math notranslate nohighlight">\(\Hil\)</span> está relacionada con el número de grados de libertad del sistema.</p></li>
-<li><p>La <em>fase global</em> del vector de estado no contiene información: dos vectores que difieran en una fase global representan al mismo estado ningún experimento permite distinguirlos</p></li>
-</ul>
+<p>El vector de estado es el objecto matemático que contiene la máxima información accesible. La palabra <em>estado</em> es engañosa por cuanto parece indicar que el sistema <em>está</em> en alguna estado concreto definido por un valor concreto de sus propiedades, ¡esto no es así!</p>
+<p>La <em>fase global</em> del vector de estado no contiene información: dos vectores que difieran en una fase global representan al mismo estado ningún experimento permite distinguirlos</p>
 <div class="math notranslate nohighlight">
 \[
 \ket{\psi} \sim \ket{\psi'} =  e^{i\varphi}\ket{\psi} \, ,
 \]</div>
-<p><span class="math notranslate nohighlight">\(\bullet\)</span> <strong>Postulado  II:  <em>Evolución con el tiempo</em></strong></p>
-<p>Lo que caracteriza y distingue a un sistema cuántico de otro está contenido en un <em>operador hermítico</em> <span class="math notranslate nohighlight">\(H = H^\dagger\)</span> que se denomina <strong>operador Hamiltoniano</strong></p>
-<p>El operador Hamiltoniano  gobierna su evolución. Supongamos que el sistema se prepara a <span class="math notranslate nohighlight">\(t=0\)</span> en un cierto estado <span class="math notranslate nohighlight">\(\ket{\psi(0)}\)</span></p>
+<p>La dinámica de un sistema cuántico  está contenido en un <em>operador hermítico</em> <span class="math notranslate nohighlight">\(H = H^\dagger\)</span> que se denomina <strong>operador Hamiltoniano</strong></p>
+<p>El operador Hamiltoniano  <em>gobierna su evolución</em>. Supongamos que el sistema se prepara a <span class="math notranslate nohighlight">\(t=0\)</span> en un cierto estado <span class="math notranslate nohighlight">\(\ket{\psi(0)}\)</span></p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Postulado  II</b>: </i>Evolución con el tiempo</i></p>
@@ -571,10 +567,11 @@ document.write(`
 \]</div>
 </div>
 </div>
-<p>La ecuación de Schrödinger es una ecuación diferencial ordinaria (una sola variable) para un vector.</p>
+<p>La ecuación de Schrödinger es una ecuación diferencial ordinaria (una sola variable) para un vector. Dada una contición inicial <span class="math notranslate nohighlight">\(\ket{\psi(t=0)} = \ket{\psi_0}\)</span>, la solución <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span> para todo <span class="math notranslate nohighlight">\(t\)</span> es única.</p>
+<p>Por tanto, la evolución del estado es <em>determinista</em>. Es en la medida sobre el sistema donde la Mecánica Cuántica muestra su carácter probabilístico. Vamos a mencionar en este capítulo la medida proyectiva, que es el caso más simple. Estudiaremos  en el <a class="reference internal" href="#../05_Fun_Info_Cuant/Fun_Info_Cuant.ipynb"><span class="xref myst">capítulo 5</span></a> que son un caso particular del tipo más general de medidas posible</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
-<p class="sd-card-text"><b>Postulado III</b>: </i>Medidas de Von Neumann</i></p>
+<p class="sd-card-text"><b>Postulado III</b>: </i>Medidas proyectivas, o de Von Neumann</i></p>
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text"><a id='postul_III_medida'></a></p>
@@ -592,24 +589,23 @@ p(\lambda_k)~ = ~|\braket{\lambda_k}{\psi}|^2
 </div>
 </div>
 <p>Las magnitudes medibles son números reales, de ahí la exigencia de que <span class="math notranslate nohighlight">\(A\)</span> deba ser un operador hermítico</p>
-<div class="note admonition">
-<p class="admonition-title">Nota</p>
-<ul class="simple">
-<li><p>La información contenida en <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> es <b>intrínsecamente probabilística</b>: <span class="math notranslate nohighlight">\(\psi\)</span> codifica una distribución de probabilidad, <span class="math notranslate nohighlight">\(p(\lambda_m)\)</span>, para cada posible resultado <span class="math notranslate nohighlight">\(\lambda_m\)</span>.</p></li>
-<li><p><em>Muy importante</em>:  <span class="math notranslate nohighlight">\((\lambda_m,p(\lambda_m))\)</span> no es una <i>pseudo-probabilidad</i> sino, probablemente, la única verdadera variable aleatoria en el sentido puro de la palabra que existe en la naturaleza.</p></li>
-</ul>
-</div>
-<p>La fórmula para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span>  es cierta cuando el autovalor en cuestion es <em>no degenerado</em>.</p>
-<p>Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span> debe generalizarse:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a3af4085-8876-46c1-9318-6ca22b81aa0c">
-<span class="eqno">(14)<a class="headerlink" href="#equation-a3af4085-8876-46c1-9318-6ca22b81aa0c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<p>La fórmula dada para <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span>  es cierta cuando el autovalor en cuestion es <em>no degenerado</em>.
+Cuando <span class="math notranslate nohighlight">\(\lambda_k\)</span> tiene degeneración <span class="math notranslate nohighlight">\(d_k\)</span> debe generalizarse:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5cfd9ab2-b763-4376-a131-7f0a516a76a3">
+<span class="eqno">(14)<a class="headerlink" href="#equation-5cfd9ab2-b763-4376-a131-7f0a516a76a3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(\lambda_k)~ &amp;=&amp; ~ \sum_{a=1}^{d_k}|\braket{\lambda^a_k}{\psi}|^2 = \bra{\psi}\left(
  \sum_{a=1}^{d_k}\ketbra{\lambda^a_k}{\lambda^a_k}\right) \ket{\psi}\nonumber\\
 &amp;=&amp;  \bra{\psi}P_k\ket{\psi} \rule{0mm}{7mm}\\
 \end{eqnarray}\]</div>
-<p>La última expresión revela que <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> no es más que el <em>valor esperado del proyector</em> <span class="math notranslate nohighlight">\(P_k = P^2_k\)</span>.</p>
-<p>Esta es la razón por la que las medidas a las que se refiere este postulado se denominana <em>proyectivas</em></p>
-<p>Veremos en el <a class="reference internal" href="#../05_Fun_Info_Cuant/Fun_Info_Cuant.ipynb"><span class="xref myst">capítulo 5</span></a> que son un caso especial del tipo más general posible de medidas.</p>
+<p>La última expresión revela que <span class="math notranslate nohighlight">\(p(\lambda_k)\)</span> no es más que el <em>valor esperado del proyector</em> <span class="math notranslate nohighlight">\(P_k = P^2_k\)</span> en el estado del sistema anterior a la medida.</p>
+<div class="note admonition">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>La información contenida en <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> es <b>intrínsecamente probabilística</b>: <span class="math notranslate nohighlight">\(\psi\)</span> codifica una distribución de probabilidad, <span class="math notranslate nohighlight">\(p(\lambda_m)\)</span>, para cada posible resultado <span class="math notranslate nohighlight">\(\lambda_m\)</span>.</p></li>
+<li><p><em>Muy importante</em>:  <span class="math notranslate nohighlight">\((\lambda_m,p(\lambda_m))\)</span> no es una <i>pseudo-probabilidad</i> sino, probablemente, la única  variable intrínsecamente aleatoria que existe en la naturaleza.</p></li>
+</ul>
+</div>
+<p>El hecho de medir tiene consecuencias irreversibles sobre el sistema medido. Este hecho es, sin duda, el efecto más diferenciador de la Mecánica Cuántica sobre la clásica.</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><b>Postulado IV</b>: </i>Colapso de la función de  onda</i></p>
@@ -625,6 +621,7 @@ el estado del sistema,inmediatamente después de la medida,</p>
 \]</div>
 </div>
 </div>
+<p>¿Por qué el medidor no es un objeto cuántico? ¿cuál es el límite que marca la distinción entre un objeto cuántico y un medidor clásico? El axioma del <em>colapso de la función de onda</em> es heurístico y ha suscitado intensos debates desde su formulación. El más famoso es el de la paradoja del Gato de Schrödinger.</p>
 </section>
 <section id="medidas-y-valores-esperados">
 <h2>Medidas y valores esperados<a class="headerlink" href="#medidas-y-valores-esperados" title="Permalink to this heading">#</a></h2>
@@ -698,8 +695,8 @@ P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \]</div>
 <p>es el proyector sobre el subespacio propio</p>
 <p>Por el <em>valor esperado</em> <span class="math notranslate nohighlight">\(\langle A\rangle\)</span> del <em>observable</em> <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, entendemos el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\lambda_n\)</span> obtenida por el método descrito.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bc1dd969-71b2-409d-99ca-24629c7149bf">
-<span class="eqno">(15)<a class="headerlink" href="#equation-bc1dd969-71b2-409d-99ca-24629c7149bf" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-2de8ae1c-f2cd-4b22-9053-f3e2decff15a">
+<span class="eqno">(15)<a class="headerlink" href="#equation-2de8ae1c-f2cd-4b22-9053-f3e2decff15a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle A\rangle &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 
@@ -927,8 +924,8 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Tomando la derivada temporal de la ecuación <span class="math notranslate nohighlight">\(\ket{\psi(t)} = U(t,t_0)\ket{\psi(t_0)}\)</span>, que define <span class="math notranslate nohighlight">\(U(t,t_0)\)</span>, tenemos para cada miembro</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7d455999-730e-4606-8be6-9dbc96586594">
-<span class="eqno">(16)<a class="headerlink" href="#equation-7d455999-730e-4606-8be6-9dbc96586594" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-71fe28cb-df47-4200-b323-cc57c20de6d5">
+<span class="eqno">(16)<a class="headerlink" href="#equation-71fe28cb-df47-4200-b323-cc57c20de6d5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}\ket{\psi(t)} &amp;~=~&amp; -\frac{i}{\hbar}  H(t)\ket{\psi(t)} = -\frac{i}{\hbar} H(t)U(t,t_0)\ket{\psi(t_0)}  \nonumber\\
 \frac{d}{dt}U(t,t_0)\ket{\psi(t_0)} &amp;~=~&amp; \left(\frac{d}{dt}U(t,t_0)\right)\ket{\psi(t_0)}
 \end{eqnarray}\]</div>
@@ -957,8 +954,8 @@ Demostración<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Basta con demostrar que se satisface la ecuación de evolución y la condición de contorno</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c50f301e-e60b-4d18-afd1-b42794570a01">
-<span class="eqno">(17)<a class="headerlink" href="#equation-c50f301e-e60b-4d18-afd1-b42794570a01" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ea89b3c0-2d6b-4ade-92e3-881fb75ebfd6">
+<span class="eqno">(17)<a class="headerlink" href="#equation-ea89b3c0-2d6b-4ade-92e3-881fb75ebfd6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{d}{dt}U(t,t_0) &amp;=&amp; \frac{d}{dt} \exp\left({-\frac{i}{\hbar} (t-t_0)H}\right)
     \nonumber\\ \rule{0mm}{6mm}
    &amp;=&amp; \frac{d}{dt}\left( I +(t-t_0)\left(-\frac{i}{\hbar} H\right) + \frac{1}{2!} 
