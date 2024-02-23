@@ -40,4 +40,5 @@ parts:
 - caption:  Informacion Cuántica
   chapters:
   - file:  docs/Part_04_Quantum_Info/Chapter_051_Operador_densidad_myst.ipynb
+  - file:  docs/Part_04_Quantum_Info/Chapter_052_Fun_Info_Cuant_myst.ipynb
 
