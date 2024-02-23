@@ -12,8 +12,3 @@ jupyter nbclassic-extension install --py jupyter_contrib_nbextensions --sys-pref
 jupyter nbclassic-serverextension enable --py jupyter_nbextensions_configurator --sys-prefix
 jupyter nbclassic-extension install --py jupyter_nbextensions_configurator --sys-prefix
 jupyter nbclassic-extension enable jupyter_nbextensions_configurator --py --sys-prefix
-
-
-Compilacion con guardado en log
-
-./Notebook_to_myst.sh 2>&1 | tee archivo_salida
