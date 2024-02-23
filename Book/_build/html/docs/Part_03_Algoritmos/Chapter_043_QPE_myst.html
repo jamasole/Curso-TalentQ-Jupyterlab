@@ -258,6 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Part_04_Quantum_Info/Chapter_051_Operador_densidad_myst.html">Mezcla de Estados</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Part_04_Quantum_Info/Chapter_052_Fun_Info_Cuant_myst.html">Medidas generalizadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Part_04_Quantum_Info/Chapter_053_Entrop_Cuant_myst.html">Elementos de Información Cuántica</a></li>
 </ul>
 
     </div>
@@ -1059,8 +1060,8 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <p><strong>Prueba</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-74d72e3a-77f4-4dbe-b97f-ee3763e4531b">
-<span class="eqno">(21)<a class="headerlink" href="#equation-74d72e3a-77f4-4dbe-b97f-ee3763e4531b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-8ff0231f-63a0-451b-ab19-4c01ff2d9886">
+<span class="eqno">(21)<a class="headerlink" href="#equation-8ff0231f-63a0-451b-ab19-4c01ff2d9886" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U \ket{u_s} &amp;=&amp; \frac{1}{\sqrt{r}} \sum_{j=0}^{r-1} e^{-2\pi i s j/r} U^{j+1}\ket{1} 
 \nonumber\\
  &amp;=&amp; e^{2\pi i \frac{s}{r}}  \frac{1}{\sqrt{r}} \sum_{j=0}^{r-1} e^{-2\pi i  s (j+1)/r} U^{j+1}\ket{1} =
@@ -1071,8 +1072,8 @@ U \ket{u_s} &amp;=&amp; \frac{1}{\sqrt{r}} \sum_{j=0}^{r-1} e^{-2\pi i s j/r} U^
 <p>Podríamos sencillamente aplicar el algoritmo de estimación de fase para <em>extraer la serie</em> de valores de <span class="math notranslate nohighlight">\(\varphi_s = s/r\)</span> y de ahí recuperar el <em>orden modular</em> <span class="math notranslate nohighlight">\(r\)</span>.</p>
 <p>El problema es que, para generar <span class="math notranslate nohighlight">\(\{\ket{u_s}\}\)</span> necesitamos conocer <span class="math notranslate nohighlight">\(r\)</span>, que, <em>precisamente, es el dato  que buscamos</em></p>
 <p>Una <em>observación importante</em> nos permite soslayar esta dificultad: vamos a tomar una <em>combinación homogénea</em> de los autoestados <span class="math notranslate nohighlight">\(\ket{u_s}\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-21d3c04f-32bd-4539-b49b-26e2002ecfce">
-<span class="eqno">(22)<a class="headerlink" href="#equation-21d3c04f-32bd-4539-b49b-26e2002ecfce" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-083fb752-936c-406c-9a7e-c7ce56525755">
+<span class="eqno">(22)<a class="headerlink" href="#equation-083fb752-936c-406c-9a7e-c7ce56525755" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{1}{\sqrt{r}} \sum_{s=0}^{r-1}\ket{u_s}   &amp;=&amp; \frac{1}{\sqrt{r}} \sum_{s=0}^{r-1} \left(  \frac{1}{\sqrt{r}}   \sum_{j=0}^{r-1} e^{-2\pi i  sj/r} U^{j}\ket{1} \right) ~=~ \frac{1}{r}   \sum_{j=0}^{r-1} \left(  \sum_{s=0}^{r-1}e^{-2\pi i  sj/r} \right)U^{j}\ket{1} \nonumber\\ 
 \rule{0mm}{12mm}
 &amp;=&amp;   \frac{1}{r}   \sum_{j=0}^{r-1} \, (r \delta_{j,0}) \,  U^{j}\ket{1} = U^0\ket{1} \nonumber\\  \rule{0mm}{10mm}
