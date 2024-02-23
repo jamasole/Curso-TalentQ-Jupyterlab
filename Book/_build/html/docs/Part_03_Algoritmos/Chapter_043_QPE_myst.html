@@ -254,6 +254,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Estimación Cuántica de Fase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter_044_Grover_myst.html">Algoritmos de búsqueda</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Informacion Cuántica</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Part_04_Quantum_Info/Chapter_051_Operador_densidad_myst.html">Mezcla de Estados</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -487,7 +491,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 22, 2024 | 6 min read</p>
+<div><p>Feb 23, 2024 | 6 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../_images/Logo_TalentQ_Azul.png"><img alt="../../_images/Logo_TalentQ_Azul.png" src="../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -1054,8 +1058,8 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 <p><strong>Prueba</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b6eca7c0-6857-411c-8626-1a575a56e15d">
-<span class="eqno">(21)<a class="headerlink" href="#equation-b6eca7c0-6857-411c-8626-1a575a56e15d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-c75ef999-b0c8-4463-8498-6991569fb16a">
+<span class="eqno">(21)<a class="headerlink" href="#equation-c75ef999-b0c8-4463-8498-6991569fb16a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 U \ket{u_s} &amp;=&amp; \frac{1}{\sqrt{r}} \sum_{j=0}^{r-1} e^{-2\pi i s j/r} U^{j+1}\ket{1} 
 \nonumber\\
  &amp;=&amp; e^{2\pi i \frac{s}{r}}  \frac{1}{\sqrt{r}} \sum_{j=0}^{r-1} e^{-2\pi i  s (j+1)/r} U^{j+1}\ket{1} =
@@ -1066,8 +1070,8 @@ U \ket{u_s} &amp;=&amp; \frac{1}{\sqrt{r}} \sum_{j=0}^{r-1} e^{-2\pi i s j/r} U^
 <p>Podríamos sencillamente aplicar el algoritmo de estimación de fase para <em>extraer la serie</em> de valores de <span class="math notranslate nohighlight">\(\varphi_s = s/r\)</span> y de ahí recuperar el <em>orden modular</em> <span class="math notranslate nohighlight">\(r\)</span>.</p>
 <p>El problema es que, para generar <span class="math notranslate nohighlight">\(\{\ket{u_s}\}\)</span> necesitamos conocer <span class="math notranslate nohighlight">\(r\)</span>, que, <em>precisamente, es el dato  que buscamos</em></p>
 <p>Una <em>observación importante</em> nos permite soslayar esta dificultad: vamos a tomar una <em>combinación homogénea</em> de los autoestados <span class="math notranslate nohighlight">\(\ket{u_s}\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-84d7cdf9-493c-4225-acc6-45f148396025">
-<span class="eqno">(22)<a class="headerlink" href="#equation-84d7cdf9-493c-4225-acc6-45f148396025" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-348a478d-edb3-4fb6-96fb-12a45bcf375a">
+<span class="eqno">(22)<a class="headerlink" href="#equation-348a478d-edb3-4fb6-96fb-12a45bcf375a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{1}{\sqrt{r}} \sum_{s=0}^{r-1}\ket{u_s}   &amp;=&amp; \frac{1}{\sqrt{r}} \sum_{s=0}^{r-1} \left(  \frac{1}{\sqrt{r}}   \sum_{j=0}^{r-1} e^{-2\pi i  sj/r} U^{j}\ket{1} \right) ~=~ \frac{1}{r}   \sum_{j=0}^{r-1} \left(  \sum_{s=0}^{r-1}e^{-2\pi i  sj/r} \right)U^{j}\ket{1} \nonumber\\ 
 \rule{0mm}{12mm}
 &amp;=&amp;   \frac{1}{r}   \sum_{j=0}^{r-1} \, (r \delta_{j,0}) \,  U^{j}\ket{1} = U^0\ket{1} \nonumber\\  \rule{0mm}{10mm}

@@ -254,6 +254,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Part_03_Algoritmos/Chapter_043_QPE_myst.html">Estimación Cuántica de Fase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Part_03_Algoritmos/Chapter_044_Grover_myst.html">Algoritmos de búsqueda</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Informacion Cuántica</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Part_04_Quantum_Info/Chapter_051_Operador_densidad_myst.html">Mezcla de Estados</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -497,7 +501,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 22, 2024 | 8 min read</p>
+<div><p>Feb 23, 2024 | 8 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../_images/Logo_TalentQ_Azul.png"><img alt="../../_images/Logo_TalentQ_Azul.png" src="../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -685,8 +689,8 @@ P_k = \sum_{a=1}^{d_k} \ket{\lambda^a_k}\bra{\lambda^a_k}
 \]</div>
 <p>es el proyector sobre el subespacio propio</p>
 <p>Por el <em>valor esperado</em> <span class="math notranslate nohighlight">\(\langle A\rangle\)</span> del <em>observable</em> <span class="math notranslate nohighlight">\(A\)</span> en el estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>, entendemos el <em>valor medio</em> de la variable aleatoria <span class="math notranslate nohighlight">\(\lambda_n\)</span> obtenida por el método descrito.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fca665c2-47af-4ce6-a9da-fd6fc7e08540">
-<span class="eqno">(14)<a class="headerlink" href="#equation-fca665c2-47af-4ce6-a9da-fd6fc7e08540" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-488fdbaf-e04e-4730-b012-87d1127d9e34">
+<span class="eqno">(14)<a class="headerlink" href="#equation-488fdbaf-e04e-4730-b012-87d1127d9e34" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \langle A\rangle &amp;= &amp;  \sum_k \lambda_k p(\lambda_k)
    =  \sum_k \lambda_k \bra{\psi}P_k\ket{\psi}  
 &amp;=&amp; \bra{\psi}\left(\sum_k \lambda_k P_k  \right) \ket{\psi} 

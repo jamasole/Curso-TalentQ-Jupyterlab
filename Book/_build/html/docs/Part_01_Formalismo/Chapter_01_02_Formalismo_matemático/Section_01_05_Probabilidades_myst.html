@@ -254,6 +254,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_043_QPE_myst.html">Estimación Cuántica de Fase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Part_03_Algoritmos/Chapter_044_Grover_myst.html">Algoritmos de búsqueda</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Informacion Cuántica</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Part_04_Quantum_Info/Chapter_051_Operador_densidad_myst.html">Mezcla de Estados</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -500,7 +504,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 22, 2024 | 3 min read</p>
+<div><p>Feb 23, 2024 | 3 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -669,8 +673,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 \end{split}\]</div>
 <p>donde el primer factor tiene en cuenta las posibles ordenaciones en que aparecen <span class="math notranslate nohighlight">\(x\)</span> éxitos en <span class="math notranslate nohighlight">\(n\)</span> intentos.</p>
 <p>Un cálculo un poco más largo permite ver que, ahora</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d1c5f6a0-6312-497e-ae64-b8666f47b66c">
-<span class="eqno">(12)<a class="headerlink" href="#equation-d1c5f6a0-6312-497e-ae64-b8666f47b66c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-42a31715-4254-4cfb-8986-03f8de5ee2ee">
+<span class="eqno">(12)<a class="headerlink" href="#equation-42a31715-4254-4cfb-8986-03f8de5ee2ee" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline X &amp;=&amp;  np\\ \rule{0mm}{7mm}
 \sigma^2 &amp;=&amp; n p(1-p)
 \end{eqnarray}\]</div>
@@ -683,8 +687,8 @@ p(x) = \begin{pmatrix}n\\ x\end{pmatrix} p^x (1-p)^{n-x}
 p(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp \left({-\frac{(x-\mu)^2}{2\sigma^2}}\right)
 \]</div>
 <p>Nos encontramos ante una variable aleatoria con un espacio muestral continuo <span class="math notranslate nohighlight">\(x\in (-\infty,+\infty)\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-690ed0d1-1577-4a4c-abe9-4d02111f9891">
-<span class="eqno">(13)<a class="headerlink" href="#equation-690ed0d1-1577-4a4c-abe9-4d02111f9891" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-c0abdb8d-bcb9-4150-a5a4-6f61735314ec">
+<span class="eqno">(13)<a class="headerlink" href="#equation-c0abdb8d-bcb9-4150-a5a4-6f61735314ec" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \overline{X} &amp;=&amp; \int_{-\infty}^{+\infty} xp(x) dx = \mu \\
 \overline{(x-\overline X)^2} &amp;=&amp; \int_{-\infty}^{+\infty} (x-\mu)^2 p(x)dx =\sigma^2
 \end{eqnarray}\]</div>
