@@ -518,7 +518,19 @@ document.write(`
 <span class="math notranslate nohighlight">\( \newcommand{\i}{{\color{blue} i}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\Hil}{{\cal H}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\V}{{\cal V}} \)</span></p>
-<div class="cell docutils container">
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#rotaciones-en-la-esfera-de-bloch" id="id2">Rotaciones en la esfera de Bloch</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id3">Puertas Simples</a></p></li>
+<li><p><a class="reference internal" href="#circuitos-cuanticos" id="id4">Circuitos Cuánticos</a></p></li>
+</ul>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../macro_tQ.py
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -529,10 +541,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <p><a id='rotesf'></a></p>
 <section id="rotaciones-en-la-esfera-de-bloch">
-<h2>Rotaciones en la esfera de Bloch<a class="headerlink" href="#rotaciones-en-la-esfera-de-bloch" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id2">Rotaciones en la esfera de Bloch</a><a class="headerlink" href="#rotaciones-en-la-esfera-de-bloch" title="Permalink to this heading">#</a></h2>
 <p>Un operador unitario conserva la norma y, por tanto, lleva un vector a otro de la misma esfera de Bloch</p>
 <p>Esta operación  se puede <em>visualizar</em> como una <strong>rotación de un cierto ángulo en torno a algún eje</strong>.</p>
 <figure class="align-center">
@@ -544,8 +557,8 @@ document.write(`
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text">El operador que efectúa una <i>rotación de ángulo</i>  <span class="math notranslate nohighlight">\(\alpha\in [0,2\pi)\)</span> en torno al <i>eje que marca un vector unitario</i>  <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span> es el siguiente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba20f255-9c32-406c-964d-3d8f333fff52">
-<span class="eqno">(15)<a class="headerlink" href="#equation-ba20f255-9c32-406c-964d-3d8f333fff52" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-dea36739-52a1-4543-a1d1-a05790e0cbad">
+<span class="eqno">(15)<a class="headerlink" href="#equation-dea36739-52a1-4543-a1d1-a05790e0cbad" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_{\hat{\bf n}}(\alpha)~ = ~\exp\left( -i\frac{\alpha}{2} \hat{\bf n}\cdot \boldsymbol{\sigma} \right) ~=~ 
 \cos \frac{\alpha}{2} I - i \sin\frac{\alpha}{2} \hat{\bf n}\cdot\boldsymbol{\sigma} 
 \end{eqnarray}\]</div>
@@ -618,7 +631,7 @@ U(\theta,\phi,\varphi)\begin{bmatrix} 0\\1\end{bmatrix} = \begin{bmatrix} -e^{i\
 </section>
 </section>
 <section id="id1">
-<h2>Puertas Simples<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id3">Puertas Simples</a><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Por puertas simples entendemos un conjunto de <em>operadores unitarios</em> que se utilizan con frecuencia en la computación cuántica. Vamos a ver las puertas simples sobre 1 cúbit</p>
 <section id="puerta-de-fase">
 <h3>Puerta de fase<a class="headerlink" href="#puerta-de-fase" title="Permalink to this heading">#</a></h3>
@@ -731,11 +744,12 @@ y el eje <span class="math notranslate nohighlight">\(y\)</span>. Esta rotación
 \[
 H^2 = I
 \]</div>
+<p><a id='circcuant'></a></p>
 </section>
 </section>
 </section>
 <section id="circuitos-cuanticos">
-<span id="sec-022-circuitos-cuanticos"></span><h2>Circuitos Cuánticos<a class="headerlink" href="#circuitos-cuanticos" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id4">Circuitos Cuánticos</a><a class="headerlink" href="#circuitos-cuanticos" title="Permalink to this heading">#</a></h2>
 <p>Un circuito cuántico representa la acción de un operador sobre un estado inicial <span class="math notranslate nohighlight">\(\ket{0}\)</span>.  Es decir</p>
 <div class="math notranslate nohighlight">
 \[

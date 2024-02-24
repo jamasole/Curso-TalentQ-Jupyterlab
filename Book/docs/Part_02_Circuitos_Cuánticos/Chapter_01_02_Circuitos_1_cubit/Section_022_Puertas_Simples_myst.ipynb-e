@@ -30,13 +30,32 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "id": "009778a4-272f-4f4e-99ed-dc0373153c3e",
+   "metadata": {},
+   "source": [
+    ":::{contents}\n",
+    ":local:\n",
+    ":depth: 1\n",
+    ":::\n",
+    "",
+    "",
+    "",
+    ""
+   ]
+  },
+  {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 11,
    "id": "83bb8763",
    "metadata": {
+    "editable": true,
     "slideshow": {
      "slide_type": "slide"
-    }
+    },
+    "tags": [
+     "hide-input"
+    ]
    },
    "outputs": [],
    "source": [
@@ -523,7 +542,7 @@
     }
    },
    "source": [
-    "(sec_022_Circuitos_Cuanticos)= \n",
+    "<a id='circcuant'></a>\n",
     "## Circuitos Cuánticos"
    ]
   },
