@@ -487,8 +487,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuitos-cuanticos">Circuitos Cuánticos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulador-de-estado">Simulador de estado</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-un-circuito">Matriz de un circuito</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulador-de-estado">Simulador de estado</a></li>
 </ul>
 </li>
 </ul>
@@ -503,7 +503,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 23, 2024 | 3 min read</p>
+<div><p>Feb 24, 2024 | 3 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -518,13 +518,6 @@ document.write(`
 <span class="math notranslate nohighlight">\( \newcommand{\i}{{\color{blue} i}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\Hil}{{\cal H}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\V}{{\cal V}} \)</span></p>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><p><a class="reference internal" href="#rotaciones-en-la-esfera-de-bloch" id="id2">Rotaciones en la esfera de Bloch</a></p></li>
-<li><p><a class="reference internal" href="#id1" id="id3">Puertas Simples</a></p></li>
-<li><p><a class="reference internal" href="#circuitos-cuanticos" id="id4">Circuitos Cuánticos</a></p></li>
-</ul>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../macro_tQ.py
@@ -539,7 +532,7 @@ document.write(`
 </div>
 <p><a id='rotesf'></a></p>
 <section id="rotaciones-en-la-esfera-de-bloch">
-<h2><a class="toc-backref" href="#id2">Rotaciones en la esfera de Bloch</a><a class="headerlink" href="#rotaciones-en-la-esfera-de-bloch" title="Permalink to this heading">#</a></h2>
+<h2>Rotaciones en la esfera de Bloch<a class="headerlink" href="#rotaciones-en-la-esfera-de-bloch" title="Permalink to this heading">#</a></h2>
 <p>Un operador unitario conserva la norma y, por tanto, lleva un vector a otro de la misma esfera de Bloch</p>
 <p>Esta operación  se puede <em>visualizar</em> como una <strong>rotación de un cierto ángulo en torno a algún eje</strong>.</p>
 <figure class="align-center">
@@ -551,8 +544,8 @@ document.write(`
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text">El operador que efectúa una <i>rotación de ángulo</i>  <span class="math notranslate nohighlight">\(\alpha\in [0,2\pi)\)</span> en torno al <i>eje que marca un vector unitario</i>  <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span> es el siguiente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-110fef27-1a5f-490c-822d-aa0c732e3a71">
-<span class="eqno">(15)<a class="headerlink" href="#equation-110fef27-1a5f-490c-822d-aa0c732e3a71" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ba20f255-9c32-406c-964d-3d8f333fff52">
+<span class="eqno">(15)<a class="headerlink" href="#equation-ba20f255-9c32-406c-964d-3d8f333fff52" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 R_{\hat{\bf n}}(\alpha)~ = ~\exp\left( -i\frac{\alpha}{2} \hat{\bf n}\cdot \boldsymbol{\sigma} \right) ~=~ 
 \cos \frac{\alpha}{2} I - i \sin\frac{\alpha}{2} \hat{\bf n}\cdot\boldsymbol{\sigma} 
 \end{eqnarray}\]</div>
@@ -625,7 +618,7 @@ U(\theta,\phi,\varphi)\begin{bmatrix} 0\\1\end{bmatrix} = \begin{bmatrix} -e^{i\
 </section>
 </section>
 <section id="id1">
-<h2><a class="toc-backref" href="#id3">Puertas Simples</a><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Puertas Simples<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Por puertas simples entendemos un conjunto de <em>operadores unitarios</em> que se utilizan con frecuencia en la computación cuántica. Vamos a ver las puertas simples sobre 1 cúbit</p>
 <section id="puerta-de-fase">
 <h3>Puerta de fase<a class="headerlink" href="#puerta-de-fase" title="Permalink to this heading">#</a></h3>
@@ -668,8 +661,10 @@ K(\alpha)= e^{i\alpha} \begin{bmatrix}
 <h4>Puertas Discretas<a class="headerlink" href="#puertas-discretas" title="Permalink to this heading">#</a></h4>
 <p>Hay una serie de rotaciones discretas que forman un conjunto de puertas elementales de gran utilidad</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(X,Y,Z\)</span>
-$<span class="math notranslate nohighlight">\(
+<li><p><span class="math notranslate nohighlight">\(X,Y,Z\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{rcl}
 i R_{\hat{\bf x}}(\pi) &amp;=&amp;   \begin{bmatrix}0&amp;1\\1&amp;0\end{bmatrix}   ~= ~ X  \\
 \\
@@ -677,8 +672,7 @@ i R_{\hat{\bf y}}(\pi) &amp;=&amp;  \begin{bmatrix}0&amp;-i\\i&amp;0\end{bmatrix
 \\
 i R_{\hat{\bf z}}(\pi) &amp;=&amp;   \begin{bmatrix}1&amp;0\\0&amp;-1\end{bmatrix} ~= ~ Z 
 \end{array}
-\)</span>$</p></li>
-</ul>
+\end{split}\]</div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(S,T\)</span></p></li>
 </ul>
@@ -741,24 +735,20 @@ H^2 = I
 </section>
 </section>
 <section id="circuitos-cuanticos">
-<span id="sec-022-circuitos-cuanticos"></span><h2><a class="toc-backref" href="#id4">Circuitos Cuánticos</a><a class="headerlink" href="#circuitos-cuanticos" title="Permalink to this heading">#</a></h2>
-<p>La aplicación de una <em>puerta</em> se representa mediante un cuadrado que contiene los datos del operador asociado.
-Por ejemplo, la aplicación del operador</p>
+<span id="sec-022-circuitos-cuanticos"></span><h2>Circuitos Cuánticos<a class="headerlink" href="#circuitos-cuanticos" title="Permalink to this heading">#</a></h2>
+<p>Un circuito cuántico representa la acción de un operador sobre un estado inicial <span class="math notranslate nohighlight">\(\ket{0}\)</span>.  Es decir</p>
 <div class="math notranslate nohighlight">
 \[
-\ket{\psi} \to  U(\theta,\phi,\varphi)\ket{\psi}
+U:\ket{0} \to  \ket{\psi} = U\ket{0}
 \]</div>
-<p>se representa mediante el circuito elemental siguiente</p>
+<p>se representa graficamente en la forma</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/puerta_simple.png"><img alt="../../../_images/puerta_simple.png" src="../../../_images/puerta_simple.png" style="width: 250px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/circuito_basico.png"><img alt="../../../_images/circuito_basico.png" src="../../../_images/circuito_basico.png" style="width: 250px;" /></a>
 </figure>
-<div class="note admonition">
-<p class="admonition-title">Nota</p>
-<ul class="simple">
-<li><p>La concatenación de puertas se corresponde con la <i>composición de operadores</i>, es decir, con la <i>multiplicación de las matrices</i> asociadas.</p></li>
-<li><p>El orden en que aparecen en el canal cuántico es, por tanto, el inverso.</p></li>
-</ul>
-</div>
+<p>Cuando el operador <span class="math notranslate nohighlight">\(U\)</span> es una <i>composición de puertas</i>, por ejemplo que <span class="math notranslate nohighlight">\(U = TH\)</span>, el orden en el que aparecen en el circuito es el inverso</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/circuito_basico_2.png"><img alt="../../../_images/circuito_basico_2.png" src="../../../_images/circuito_basico_2.png" style="width: 300px;" /></a>
+</figure>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -767,21 +757,12 @@ Qibo</label><div class="sd-tab-content docutils">
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">qibo</span> <span class="kn">import</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">gates</span>
 
-<span class="c1"># Construct the circuit</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="c1"># Add some gates</span>
-<span class="c1">#c.add(gates.Y(0))</span>
+
 <span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gates</span><span class="o">.</span><span class="n">H</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-<span class="c1">#c.add(gates.Z(0))</span>
-<span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gates</span><span class="o">.</span><span class="n">S</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-<span class="c1">#c.add(gates.T(0))</span>
+<span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gates</span><span class="o">.</span><span class="n">T</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 
-<span class="n">theta</span> <span class="o">=</span> <span class="mf">1.2</span>  <span class="c1">#rad</span>
-<span class="n">phi</span>   <span class="o">=</span> <span class="mf">1.5</span>
-<span class="n">lam</span> <span class="o">=</span> <span class="mf">0.3</span>
-<span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gates</span><span class="o">.</span><span class="n">U3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="n">lam</span><span class="p">))</span>
 <span class="c1">#print(c.draw())</span>
-
 
 <span class="n">tQ</span><span class="o">.</span><span class="n">draw_qibo_circuit_mpl</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
@@ -799,16 +780,9 @@ Qiskit</label><div class="sd-tab-content docutils">
 <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">qr</span><span class="p">)</span> <span class="c1">#crea un circuito</span>
 
 <span class="s1">&#39;añade puertas&#39;</span> 
-<span class="c1">#qc.y(0)</span>
 <span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="c1">#qc.z(0)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="c1">#qc.t(0)</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">theta</span> <span class="o">=</span> <span class="mf">1.2</span>  <span class="c1">#rad</span>
-<span class="n">phi</span>   <span class="o">=</span> <span class="mf">1.5</span>
-<span class="n">lam</span> <span class="o">=</span> <span class="mf">0.3</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">u</span><span class="p">(</span><span class="n">theta</span> <span class="p">,</span><span class="n">phi</span>  <span class="p">,</span><span class="n">lam</span> <span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
 
 <span class="c1"># qc.u(theta,phi,lambda,quantum register)  https://qiskit.org/documentation/stubs/qiskit.circuit.library.UGate.html</span>
 <span class="c1">#qc.u(np.pi/4,np.pi/2,0,0)</span>
@@ -827,188 +801,80 @@ Qiskit</label><div class="sd-tab-content docutils">
 <span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&#39;&#39;&#39;Qibo_code_cell&#39;&#39;&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">qibo</span> <span class="kn">import</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">gates</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Construct the circuit</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">c</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gates</span><span class="o">.</span><span class="n">H</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 
-<span class="ne">ImportError</span>: cannot import name &#39;Circuit&#39; from &#39;qibo&#39; (/Users/javier/opt/anaconda3/envs/TalentQ/lib/python3.11/site-packages/qibo/__init__.py)
-</pre></div>
-</div>
-</div>
-</div>
-<section id="simulador-de-estado">
-<h3>Simulador de estado<a class="headerlink" href="#simulador-de-estado" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;statevector_simulator&#39;</span><span class="p">)</span>
-<span class="n">stateresult</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">S_simulator</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>  
-
-<span class="n">state_vector</span> <span class="o">=</span> <span class="n">stateresult</span><span class="o">.</span><span class="n">get_statevector</span><span class="p">(</span><span class="n">decimals</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-
-<span class="c1"># plot the state vector on the Bloch sphere</span>
-<span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">plot_bloch_multivector</span>
-<span class="n">plot_bloch_multivector</span><span class="p">(</span><span class="n">state_vector</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">S_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;statevector_simulator&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">stateresult</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">S_simulator</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>  
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">state_vector</span> <span class="o">=</span> <span class="n">stateresult</span><span class="o">.</span><span class="n">get_statevector</span><span class="p">(</span><span class="n">decimals</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;Aer&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print the state vector</span>
-<span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
-<span class="n">Statevector</span><span class="p">(</span><span class="n">state_vector</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># print the state vector</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">Statevector</span><span class="p">(</span><span class="n">state_vector</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;state_vector&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># alternative wat to plot the state vector on the Bloch sphere</span>
-<span class="n">Statevector</span><span class="p">(</span><span class="n">state_vector</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;Bloch&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># alternative wat to plot the state vector on the Bloch sphere</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">Statevector</span><span class="p">(</span><span class="n">state_vector</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;Bloch&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;state_vector&#39; is not defined
+<span class="ne">ImportError</span>: cannot import name &#39;Circuit&#39; from &#39;qibo&#39; (/opt/anaconda3/envs/TalentQ/lib/python3.11/site-packages/qibo/__init__.py)
 </pre></div>
 </div>
 </div>
 </div>
 <p>La concatenación de puertas se corresponde con la <em>composición de operadores</em>, es decir, con la <em>multiplicación de las matrices</em> asociadas.</p>
-<div class="note admonition">
-<p class="admonition-title">Nota</p>
-<p>El <i>orden</i> en el que aparecen los operadores en la composición es el opuesto al que se aprecia en el circuito. Así por ejemplo a la composición de operadores</p>
-<div class="math notranslate nohighlight">
-\[
-\ket{\psi} \to  TH \ket{\psi} 
-\]</div>
-<p>le corresponde un circuito en el que  <span class="math notranslate nohighlight">\(H\)</span> está a la izquierda de <span class="math notranslate nohighlight">\(T\)</span></p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qc</span><span class="o">=</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="sd">&#39;&#39;&#39;aplicamos el operador TH &#39;&#39;&#39;</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/javier/opt/anaconda3/envs/TalentQ/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
-  self._style, def_font_ratio = load_style(self._style)
-</pre></div>
-</div>
-<img alt="../../../_images/b610db49e3c567313352b01d43190a933978da06db58341d9582091818157b7f.png" src="../../../_images/b610db49e3c567313352b01d43190a933978da06db58341d9582091818157b7f.png" />
-</div>
-</div>
-</section>
 <section id="matriz-de-un-circuito">
 <h3>Matriz de un circuito<a class="headerlink" href="#matriz-de-un-circuito" title="Permalink to this heading">#</a></h3>
-<p>Todo circuito se corresponde con un operador unitario que se obtiene componiendo todos los operadores que figuran en el. Por ejemplo, el circuito anterior representa el operador unitario <span class="math notranslate nohighlight">\(U\)</span> al que le corresponde la matriz obtenida por multiplicación</p>
+<p>Εl circuito anterior representa el operador unitario <span class="math notranslate nohighlight">\(U\)</span> al que le corresponde la matriz obtenida por multiplicación</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 U = T H ~~~\to ~~~ U_{ij} = \begin{bmatrix}1&amp;0\\0&amp;e^{i\pi/4}\end{bmatrix} \frac{1}{\sqrt{2}} \begin{bmatrix} 1&amp; 1 \\ 1 &amp; -1 \end{bmatrix}  = 
 \frac{1}{\sqrt{2}} \begin{bmatrix} 1&amp; 1 \\ e^{i\pi/4} &amp; -e^{i\pi/4} \end{bmatrix} 
 \end{split}\]</div>
+<p>Podemos extraer el operador asociado a un circuito.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Circuit matrix representation</span>
-<span class="n">U_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;unitary_simulator&#39;</span><span class="p">)</span>
-<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">U_simulator</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Operator</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">Operator</span><span class="p">(</span><span class="n">qc</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
 
-<span class="n">U_matrix</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_unitary</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">U_matrix</span><span class="p">)</span>
-
-<span class="s1">&#39;this looks very ugly, let us use latex&#39;</span>
-<span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">array_to_latex</span>
-<span class="n">array_to_latex</span><span class="p">(</span><span class="n">U_matrix</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">text{Unitary matrix = }</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">array_to_latex</span>
+<span class="n">array_to_latex</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;U = &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">### Circuit matrix representation</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">U_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;unitary_simulator&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">U_simulator</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">U_matrix</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_unitary</span><span class="p">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Operator</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Operator</span><span class="p">(</span><span class="n">qc</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">array_to_latex</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">array_to_latex</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;U = &#39;</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name &#39;Aer&#39; is not defined
+<span class="ne">NameError</span>: name &#39;qc&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
-<p>El resultado de la aplicación sobre el vector <span class="math notranslate nohighlight">\(\ket{0}\)</span> será</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\frac{1}{\sqrt{2}} \begin{bmatrix} 1&amp; 1 \\ e^{i\pi/4} &amp; -e^{i\pi/4} \end{bmatrix} \begin{bmatrix}1 \\ 0 \end{bmatrix}
- = \frac{1}{\sqrt{2}} \begin{bmatrix} 1  \\ e^{i\pi/4}  \end{bmatrix} 
-\end{split}\]</div>
-<p>Podemos anticipar el resultado:</p>
+</section>
+<section id="simulador-de-estado">
+<h3>Simulador de estado<a class="headerlink" href="#simulador-de-estado" title="Permalink to this heading">#</a></h3>
+<p>La descomposición en puertas nos permite visualizar la acción del operador sobre el estado de referencia <span class="math notranslate nohighlight">\(\ket{0}\)</span></p>
 <ul class="simple">
-<li><p>el operador <span class="math notranslate nohighlight">\(H\)</span>
-lleva el vector <span class="math notranslate nohighlight">\(\ket{0}\)</span> sobre el eje <span class="math notranslate nohighlight">\(z\)</span> al vector <span class="math notranslate nohighlight">\(\ket{+}\)</span> que se halla sobre el eje <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
-<li><p>posterioremente, <span class="math notranslate nohighlight">\(T\)</span> es una rotación de ángulo <span class="math notranslate nohighlight">\(\pi/4\)</span> en torno al eje <span class="math notranslate nohighlight">\(z\)</span> que moverá el vector <span class="math notranslate nohighlight">\(\ket{+}\)</span> sobre el plano ecuatorial. Veamos el resultado</p></li>
+<li><p>el operador <span class="math notranslate nohighlight">\(H\)</span> lleva el vector <span class="math notranslate nohighlight">\(\ket{0}\)</span> al vector <span class="math notranslate nohighlight">\(\ket{+}\)</span> sobre el eje <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>posterioremente, <span class="math notranslate nohighlight">\(T\)</span> es una rotación de ángulo <span class="math notranslate nohighlight">\(\pi/4\)</span> en torno al eje <span class="math notranslate nohighlight">\(z\)</span>.</p></li>
 </ul>
+<p>El resultado será un vector en el plano ecuatorial en la diagonal entre los ejes <span class="math notranslate nohighlight">\(x\)</span> e <span class="math notranslate nohighlight">\(y\)</span>.
+Podemos visualizar esto usando un simulador de vector de estado.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statejob</span><span class="o">=</span><span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">S_simulator</span><span class="p">)</span> 
-<span class="n">stateresult</span><span class="o">=</span><span class="n">statejob</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
+<span class="n">statevector</span> <span class="o">=</span> <span class="n">Statevector</span><span class="p">(</span><span class="n">qc</span><span class="p">)</span>
 
-<span class="c1"># print the state vector</span>
-<span class="n">state_vector</span> <span class="o">=</span> <span class="n">stateresult</span><span class="o">.</span><span class="n">get_statevector</span><span class="p">(</span><span class="n">decimals</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">state_vector</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">statevector</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">,</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;\ket{\psi} = &#39;</span><span class="p">))</span>
 
-<span class="c1"># plot the state vector on the Bloch sphere</span>
-<span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">plot_bloch_multivector</span>
-
-<span class="n">plot_bloch_multivector</span><span class="p">(</span><span class="n">state_vector</span><span class="p">)</span>
+<span class="c1"># alternative wat to plot the state vector on the Bloch sphere</span>
+<span class="n">statevector</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;Bloch&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">statejob</span><span class="o">=</span><span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">S_simulator</span><span class="p">)</span> 
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">stateresult</span><span class="o">=</span><span class="n">statejob</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>  
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># print the state vector</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">statevector</span> <span class="o">=</span> <span class="n">Statevector</span><span class="p">(</span><span class="n">qc</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">display</span><span class="p">(</span><span class="n">statevector</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">,</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;\ket{\psi} = &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># alternative wat to plot the state vector on the Bloch sphere</span>
 
-<span class="ne">NameError</span>: name &#39;execute&#39; is not defined
+<span class="ne">NameError</span>: name &#39;qc&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1097,8 +963,8 @@ lleva el vector <span class="math notranslate nohighlight">\(\ket{0}\)</span> so
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuitos-cuanticos">Circuitos Cuánticos</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulador-de-estado">Simulador de estado</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-un-circuito">Matriz de un circuito</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulador-de-estado">Simulador de estado</a></li>
 </ul>
 </li>
 </ul>
