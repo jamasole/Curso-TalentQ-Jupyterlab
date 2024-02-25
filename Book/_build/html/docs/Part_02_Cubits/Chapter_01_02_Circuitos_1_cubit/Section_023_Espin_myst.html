@@ -521,20 +521,19 @@ document.write(`
 <p>Tanto es así que, el espín es un paradigma de <em>grado de libertad cuántizado</em>, y permite obtener intuición sobre los procesos de medida generales.</p>
 <section id="momentos-magnetico-y-angular">
 <span id="sec-023-momento"></span><h2><a class="toc-backref" href="#id1">Momentos magnético y angular</a><a class="headerlink" href="#momentos-magnetico-y-angular" title="Permalink to this heading">#</a></h2>
-<p>Clásicamente una distribución de carga que rota posee un <em>momento angular</em> de rotación <span class="math notranslate nohighlight">\({\bf J}\)</span> y un <em>momento magnético</em> <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> que son proporcionales</p>
-<p>Por ejemplo, un átomo formado por un electrón de carga <span class="math notranslate nohighlight">\(q\)</span> rotando en torno al núcleo tendrá</p>
+<p>El <em>momento magnético</em> <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> es una magnitud vectorial clásica que posee  cualquier distribución con carga eléctrica que rota con un <em>momento angular</em> <span class="math notranslate nohighlight">\({\bf J}\)</span>.  Ambos son proporcionales. Por ejemplo, un átomo formado por un único electrón de carga <span class="math notranslate nohighlight">\(q\)</span> rotando en torno al núcleo tendrá</p>
 <div class="math notranslate nohighlight">
 \[
-\boldsymbol{\mu} = \frac{q}{2m} {\bf J} = \gamma {\bf J}
+\boldsymbol{\mu} = \frac{q}{2m} {\bf J} 
 \]</div>
-<p>La constante de proporcionalidad,  <span class="math notranslate nohighlight">\(\gamma\)</span>, se denomina <em>razón giromagnética</em></p>
+<p>En cada caso, la constante de proporcionalidad tal que <span class="math notranslate nohighlight">\(\boldsymbol{\mu} = \gamma {\bf J}\)</span> , se denomina <em>razón giromagnética</em> <span class="math notranslate nohighlight">\(\gamma \)</span>. Para dos electrones iguales será <span class="math notranslate nohighlight">\(2q/2m\)</span>, etc.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/Momento_Magnetico.png"><img alt="../../../_images/Momento_Magnetico.png" src="../../../_images/Momento_Magnetico.png" style="width: 500px;" /></a>
 </figure>
-<p>En este sentido, conocer el valor de <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> es equivalente a  <em>medir</em> <span class="math notranslate nohighlight">\({\bf J}\)</span></p>
-<p>La manera de poner de manifiesto el momento magnético es sumergir el átomo en un campo magnético <span class="math notranslate nohighlight">\({\bf B}\)</span>. Se observan dos efectos</p>
+<p>En este sentido, conocer el valor de <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> es equivalente a  <em>medir</em> <span class="math notranslate nohighlight">\({\bf J}\)</span>.
+La manera de poner de <em>medir</em> <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> es sumergir el átomo en un campo magnético <span class="math notranslate nohighlight">\({\bf B}\)</span>. Se observan dos efectos diferentes:</p>
 <ul class="simple">
-<li><p>En un campo magnético constante, el átomo adquiere una energía de interacción</p></li>
+<li><p>el átomo adquiere una energía de interacción</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -542,7 +541,7 @@ U = -\boldsymbol{\mu}\cdot {\bf B} = - \mu B \cos \theta
 \]</div>
 <p>y modificará  su estado  rotación para tratar de alinear <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> paralelamente a <span class="math notranslate nohighlight">\( {\bf B}\)</span>, de forma que <span class="math notranslate nohighlight">\(U\)</span> se minimice.</p>
 <ul class="simple">
-<li><p>Si el campo magnético no es constante, <span class="math notranslate nohighlight">\({\bf B} = {\bf B}(x,y,z)\)</span>, el átomo  actúa una fuerza proporcional al gradiente del campo magnético</p></li>
+<li><p>si, además, el campo magnético no es constante, <span class="math notranslate nohighlight">\({\bf B} = {\bf B}(x,y,z)\)</span>, sobre el centro de gravedad del átomo  actúa una fuerza en la dirección del <em>gradiente</em> de dicho campo</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[
@@ -551,33 +550,30 @@ U = -\boldsymbol{\mu}\cdot {\bf B} = - \mu B \cos \theta
 </section>
 <section id="el-experimento-de-stern-y-gerlach">
 <span id="sec-023-sterngerlach"></span><h2><a class="toc-backref" href="#id2">El experimento de Stern y Gerlach</a><a class="headerlink" href="#el-experimento-de-stern-y-gerlach" title="Permalink to this heading">#</a></h2>
-<p>En 1921 Stern, e independientemente en 1922 Gerlach, dispararon una nube de átomos de plata en el seno de un campo magnético no constante <span class="math notranslate nohighlight">\({\bf B}(z) = (0,0,B_z(z))\)</span></p>
-<p>El <em>momento magnético</em> <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> en dichos átomos está asociado al <em>momento angular del  último</em> electrón de valencia.</p>
-<p>En este caso, la fuerza esperable que desvíe un átomos de momento angular <span class="math notranslate nohighlight">\({\bf J}\)</span></p>
-<div class="math notranslate nohighlight">
-\[
+<p>En 1921 Stern, e independientemente en 1922 Gerlach, dispararon una nube de átomos de plata de forma que atravesara un  magnético no constante en la dirección vertical <span class="math notranslate nohighlight">\({\bf B}(z) = (0,0,B_z(z))\)</span></p>
+<p>El <em>momento magnético</em> <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> en dichos átomos está asociado al <em>momento angular</em> del electrón en  último orbital más externo.</p>
+<p>En este caso, la fuerza que sufre un átomo de momento angular <span class="math notranslate nohighlight">\({\bf J}\)</span> será
+$<span class="math notranslate nohighlight">\(
 {\bf F}= -\boldsymbol{\nabla} U = \boldsymbol{\nabla}(\boldsymbol{\mu}\cdot{\bf B}(z))= \left( \hat{\bf x}\frac{\partial}{\partial x}+ 
 \hat{\bf y}\frac{\partial}{\partial y}+ \hat{\bf z}\frac{\partial}{\partial z}\right)(\mu_z B_z(z)) =  \gamma J_z\frac{\partial B_z(z)}{\partial z} \, \hat{\bf z}
-\]</div>
+\)</span>$</p>
 <p>Vemos que</p>
 <ul class="simple">
 <li><p>es una fuerza vertical. Esta es la dirección en la que esperamos una desviación de un electrón que lo atravies</p></li>
-<li><p>la magnitud de dicha desviación es proporcional a la proyección vertical del momento angular <span class="math notranslate nohighlight">\(J_z = \boldsymbol{J}\cdot\hat{\bf z} \)</span></p></li>
+<li><p>la <i>magnitud</i> de dicha desviación es proporcional a la <em>proyección vertical</em> del momento angular <span class="math notranslate nohighlight">\(J_z = \boldsymbol{J}\cdot\hat{\bf z} \)</span>, que puede ser positiva, negativa o nula.</p></li>
 </ul>
 <p><a title="Theresa Knott from en.wikipedia, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Stern-Gerlach_experiment.PNG"><a class="reference internal" href="https://upload.wikimedia.org/wikipedia/commons/2/29/Stern-Gerlach_experiment.PNG"><img alt="https://upload.wikimedia.org/wikipedia/commons/2/29/Stern-Gerlach_experiment.PNG" class="align-center" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Stern-Gerlach_experiment.PNG" style="width: 1000px;" /></a></a></p>
-<p>La nube de electrones que atraviesa el campo magnético está inicialmente despolarizada. Eso quiere decir que, en promedio, el momento angular es cero.</p>
-<p>Cada componente, y en particular <span class="math notranslate nohighlight">\(\mu_z\)</span>, será una distribución constante <span class="math notranslate nohighlight">\(\mu_z\in [-\mu,+\mu]\)</span> de media cero. Por tanto, a la salida del polarizador esperamos una nube verticalmente alargada centrada en la posición central.</p>
-<p>El resultado del experimento de Stern (1921) y Gerlach (1922) fue que, en lugar de eso, sólo se encuentran dos puntos de acumulación, situados simétricamente en la dirección del eje del polarizador.</p>
-<p>Esto quiere decir que la variable <span class="math notranslate nohighlight">\(J_z\)</span> sólo adquiere dos valores opuestos</p>
-<div class="math notranslate nohighlight">
-\[J_z = \pm\frac{\hbar}{2}\]</div>
+<p>La nube de electrones que atraviesa el campo magnético está inicialmente despolarizada. Eso quiere decir que habrá, con la misma probabilidad, átomos con el momento angular apuntando en cualquier dirección.</p>
+<p>Cada componente, y en particular <span class="math notranslate nohighlight">\(\mu_z\)</span>, será una distribución constante <span class="math notranslate nohighlight">\(\mu_z\in [-\mu,+\mu]\)</span> de media cero. Por tanto, a la salida del polarizador esperamos un centelleo verticalmente alargado en torno a la posición central</p>
+<p>El resultado del experimento de Stern (1921) y Gerlach (1922) fue que, en lugar de eso, sólo se encuentran dos puntos de acumulación, situados simétricamente en la dirección del eje del polarizador. Esto quiere decir que la variable <span class="math notranslate nohighlight">\(J_z\)</span> sólo adquiere dos valores opuestos
+$<span class="math notranslate nohighlight">\(J_z = \pm\frac{\hbar}{2}\)</span>$</p>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
-<p>La dirección <span class="math notranslate nohighlight">\(z\)</span> no tiene nada de particular. Si el eje del polarizador apunta en la dirección <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span>, los puntos de acumulación se situaciónan a lo largo de dicho eje, y para cáda átomo estaríamos midiendo el valor de la proyección <span class="math notranslate nohighlight">\(J_{\hat{\bf n}}={\bf J}\cdot\hat{\bf n} = \pm \hbar/2\)</span>.</p>
+<p>La dirección <span class="math notranslate nohighlight">\(z\)</span> no tiene nada de particular. Si  giramos el eje del polarizador (el campo magnético) a una dirección <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span>, los puntos de acumulación se situan a lo largo de dicho eje. Para cáda átomo estaríamos midiendo el valor de <b>la proyección</b> <span class="math notranslate nohighlight">\(J_{\hat{\bf n}}={\bf J}\cdot\hat{\bf n} = \pm \hbar/2\)</span>.</p>
 </div>
 <section id="mediciones-sucesivas">
 <h3>Mediciones sucesivas<a class="headerlink" href="#mediciones-sucesivas" title="Permalink to this heading">#</a></h3>
-<p>El nombre de <em>polarizador</em> cobra sentido cuando hacemos dos experimentos sucesivamente de forma que, la salida de uno, sea la entrada del siguiente.</p>
+<p>El nombre de <em>polarizador</em> cobra sentido cuando hacemos dos experimentos sucesivamente de forma que la salida de uno sea la entrada del siguiente.</p>
 <p>Supongamos que seleccionamos sólo los electrones que se desvían hacia arriba <span class="math notranslate nohighlight">\(+\hbar/2\)</span> en el primer polarizador.</p>
 <p>A continuación  los hacemos pasar por un segundo polarizador de Stern Gerlach cuyo eje se desvía de la vertical en el plano perpendiclar <span class="math notranslate nohighlight">\((y,z)\)</span> un ángulo <span class="math notranslate nohighlight">\(\theta\)</span> relativo al eje <span class="math notranslate nohighlight">\(z\)</span>.</p>
 <p><em>Resultado</em>:  las incidencias sobre la segunda placa  aparecen en una u otra posición a lo largo del <em>segundo eje</em> de <em>forma aleatoria</em>.</p>
@@ -604,7 +600,7 @@ p(+\hbar/2) = \cos^2\theta/2 ~~~~~,~~~~~  p(-\hbar/2) = \sin^2\theta/2 ~\,
 <section id="espin">
 <h3>Espín<a class="headerlink" href="#espin" title="Permalink to this heading">#</a></h3>
 <p>La desviación del átomo de plata en el experimento de Stern y Gerlach se debe al último electrón. Pero no puede provenir de su movimiento ya que el <em>momento angular orbital</em> del último electrón es nulo al hallarse en el orbotal <span class="math notranslate nohighlight">\(5s\)</span>, es decir, tendríamos <span class="math notranslate nohighlight">\(~{\bf J} = {\bf L} = 0\)</span>.</p>
-<p>En conclusión: tiene que haber una contribución  de  <em>carácter interno</em></p>
+<p>En conclusión: <u>¡tiene que haber una contribución  de  <em>carácter interno</em>! </u></p>
 <div class="math notranslate nohighlight">
 \[
 {\bf J} = {\bf L} + {\bf S}  ~~\Rightarrow~~
@@ -614,19 +610,24 @@ p(+\hbar/2) = \cos^2\theta/2 ~~~~~,~~~~~  p(-\hbar/2) = \sin^2\theta/2 ~\,
 \[
 \boldsymbol{\mu}_S =\gamma_e {\bf S} =   g_s\frac{ q}{2 m_e} {\bf S} 
 \]</div>
-<p>y <span class="math notranslate nohighlight">\(g_s = 2,0023...\)</span> el <em>factor giromagnético</em> del electrón.</p>
-<p>Es como si el electrón mismo tuviese momento angular interno, pero tratándose de una partícula puntual esto sólo puede entenderse como un símil, no como una nube de carga real en rotación</p>
-<p>La variable <span class="math notranslate nohighlight">\({\bf S}\)</span> se denomina <em>espín</em> y  <span class="math notranslate nohighlight">\(S_z = \pm \hbar/2\)</span> es su <em>proyección</em> en la dirección dirección <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span>.</p>
-<p>Muchas veces se omite el factor <span class="math notranslate nohighlight">\(\hbar\)</span> y se dice que el electrón tiene espín <span class="math notranslate nohighlight">\(1/2\)</span>.</p>
-<p>En otras palabras, <em>el observable</em> asociado a la medición de la proyección del espín en la dirección <span class="math notranslate nohighlight">\(z\)</span> es</p>
+<p>y <span class="math notranslate nohighlight">\(g_s = 2,0023...\)</span> el <em>factor giromagnético</em> del electrón. Es como si el electrón mismo tuviese momento angular interno, pero tratándose de una partícula puntual esto sólo puede entenderse como un símil, no como una nube de carga real en rotación</p>
+<p>Se trata de un nuevo grado de libertad interno que se denomina <em>espín</em>  <span class="math notranslate nohighlight">\({\bf S}\)</span>. Lo que el experimento de SG desvela es que <u>su <em>proyección</em> en la dirección dirección <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span> que marca el campo magnético está cuantizada</u>   <span class="math notranslate nohighlight">\(S_{\hat{\bf n}} = \pm \hbar/2\)</span> es .  Muchas veces se omite el factor <span class="math notranslate nohighlight">\(\hbar\)</span> y se dice que el electrón tiene espín <span class="math notranslate nohighlight">\(1/2\)</span>.</p>
+<p>Para formular cuánticamente este problema debemos encontrar un operador observable que tenga por autovalores los resultados de la medida. Para ello comenzamos por definir el <u><em>operador de espín</em></u> que es una colección vectorial de tres operadores de Pauli
+$<span class="math notranslate nohighlight">\(
+{\bf S } = \frac{\hbar}{2} \boldsymbol{\sigma} ~~~\Rightarrow ~~~ (S_x,S_y,S_z) = \frac{\hbar}{2} (\sigma_x, \sigma_y,\sigma_z)
+\)</span>$</p>
+<p><em>El observable</em> asociado a un experimento de Stern Gerlach en la dirección <span class="math notranslate nohighlight">\(\hat{\bf{n}} = (n_x, n_y, n_z) \)</span> es la proyección del operador de espin en esa dirección</p>
 <div class="math notranslate nohighlight">
 \[
-S = \frac{\hbar}{2}\sigma_z ~~~~~~ \Rightarrow ~~~~~~~S \ket{\pm} = \pm\frac{\hbar}{2} \ket{\pm}
+S_{\bf n} = \frac{\hbar}{2} \hat\bn\cdot \boldsymbol{\sigma} 
 \]</div>
+<div class="tip admonition">
+<p class="admonition-title">Ejercicio</p>
+<p>Escribe para un vector unitario arbitrario <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span>  la matriz  <span class="math notranslate nohighlight">\(\hat\bn\cdot \boldsymbol{\sigma} \)</span> y comprueba que tiene <b>siempre</b>  autovalores <span class="math notranslate nohighlight">\(\pm 1\)</span>. En consecuencia, <span class="math notranslate nohighlight">\(S_{\bf n}\)</span>  tiene siempre autovalores <span class="math notranslate nohighlight">\(\pm \hbar/2\)</span></p>
+</div>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
-<p>Con frecuencia se usan unidades en las que <span class="math notranslate nohighlight">\(\hbar = 1\)</span>, por lo que la proyección del espín del electrón será siempre <span class="math notranslate nohighlight">\(\pm 1/2\)</span>.</p>
-<p>Todas las partículas elementales tienen espín:</p>
+<p>Con frecuencia se usan unidades en las que <span class="math notranslate nohighlight">\(\hbar = 1\)</span>, por lo que la proyección del espín del electrón será siempre <span class="math notranslate nohighlight">\(\pm 1/2\)</span>. Todas las partículas elementales tienen espín:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(S=1/2\)</span> los fermiones (quarks, electrón, muón, neutrino,…)</p></li>
 <li><p><span class="math notranslate nohighlight">\(S = 0\)</span> el bosón de Higgs</p></li>
@@ -642,30 +643,18 @@ S = \frac{\hbar}{2}\sigma_z ~~~~~~ \Rightarrow ~~~~~~~S \ket{\pm} = \pm\frac{\h
 </section>
 <section id="preparacion-de-un-cubit-de-espin">
 <span id="sec-023-prepacubit"></span><h2><a class="toc-backref" href="#id3">Preparación de un cúbit de espín</a><a class="headerlink" href="#preparacion-de-un-cubit-de-espin" title="Permalink to this heading">#</a></h2>
-<p>Un <em>Stern-Gerlach</em> con el campo magnético <span class="math notranslate nohighlight">\({\bf B}\)</span> alineado con el eje <span class="math notranslate nohighlight">\(~\hat\bn = (0,0,1)\)</span>
-prepara el estado entrante en uno de los dos estados <span class="math notranslate nohighlight">\(\{\ket{+},\ket{-}\}\)</span>, autoestados del operador <span class="math notranslate nohighlight">\(\sigma_z\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[
-\sigma_z \, \ket{\pm} = \pm \ket{\pm}
-\]</div>
-<p>donde cada resultado es observado <u>en función de la deflexión observada a su salida</u></p>
-<p>Sin embargo, <u><em>no hay nada de especial</em></u> en la elección del eje <span class="math notranslate nohighlight">\(z\)</span> para orientar el campo magnético.</p>
-<p>Experimentalmente obtenemos el mismo efecto cuando orientamos el eje del <em>Stern-Gerlach</em>  con su campo magnético <span class="math notranslate nohighlight">\({\bf B}\)</span> en la dirección de un vector unitario, <span class="math notranslate nohighlight">\(|\hat\bn|=1\)</span>, con</p>
-<div class="math notranslate nohighlight">
-\[
+<p>El postulado de <em>colapso de la función de onda</em> afirma que, después de una medida asociada a un observable, el estado <em>colapsa</em> a un autoestado de dicho operado.
+Vamos a dar una expresión concreta para estos autoestados. Para ello, es conveniente parametrizar la dirección de nuestro campo magnético usando dos ángulos
+<span class="math notranslate nohighlight">\(\theta \in [0,\pi)\)</span> y <span class="math notranslate nohighlight">\(\phi\in [0,2\pi)\)</span>
+$<span class="math notranslate nohighlight">\(
 \hat\bn(\theta,\phi) = \sin\theta\cos\phi \, \hat {\bf x} + \sin\theta\sin\phi \, \hat {\bf y} + \cos\theta \, \hat {\bf z}
-\]</div>
-<p>Al hacer pasar una electrón a través de dicho Stern Gerlach y observar su deflexión obtenemos igualmente dos resultados posible.</p>
-<p>Si, a la salida, observamos que se deflectó en el mismo sentido de <span class="math notranslate nohighlight">\(\vec B\)</span> (sentido opuesto a <span class="math notranslate nohighlight">\(\vec B\)</span>) diremos que, como resultado de la medición:</p>
-<p>el espín del electrón, <span class="math notranslate nohighlight">\(S\)</span>, <b>adquirió</b> una proyección  <span class="math notranslate nohighlight">\(+\hbar/2\)</span> <span class="math notranslate nohighlight">\((-\hbar/2)\)</span>
-<u>a lo largo del eje que marca el <i>Stern-Gerlach</i></u>, <span class="math notranslate nohighlight">\(~\hat\bn(\theta,\phi)~\)</span>.</p>
-<p>Los dos estados asociados los denominaremos <span class="math notranslate nohighlight">\(\ket{\pm}_{\hat\bn} = \ket{\pm,\hat\bn}\)</span>.</p>
-<p>Deben ser autoestados de una ecuación que generalice y se reduzca a la anterior cuando <span class="math notranslate nohighlight">\(\hat\bn = \hat{\bf z}\)</span></p>
+\)</span>$</p>
+<p>Los dos estados asociados los denominaremos <span class="math notranslate nohighlight">\(\ket{\pm}_{\hat\bn} = \ket{\pm,\hat\bn}\)</span> y deben verifica la condición de autoestado</p>
 <div class="math notranslate nohighlight">
 \[
 (\hat\bn\cdot \boldsymbol{\sigma} )\,\ket{\pm,\hat\bn} = \pm \ket{\pm,\hat\bn}
 \]</div>
-<p>Es inmediato comprobar que, los autoestados son los vectores de la esfera de Bloch que usan <em>los mismos ángulos</em>
+<p>Es inmediato comprobar que, los autoestados son precisamente los vectores de la esfera de Bloch que usan <em>los mismos ángulos</em>
 <span class="math notranslate nohighlight">\((\theta, \phi)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -675,7 +664,7 @@ prepara el estado entrante en uno de los dos estados <span class="math notransla
 \end{split}\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<p>Comprueba, que los estados <span class="math notranslate nohighlight">\(\ket{\pm,\hat\bn}\)</span> son ortogonales, y son autoestados del operador <span class="math notranslate nohighlight">\(~ \hat{\bf n} \cdot \boldsymbol{\sigma} ~\)</span>, con autovalores <span class="math notranslate nohighlight">\(~\pm 1\)</span></p>
+<p>comprueba, que los estados <span class="math notranslate nohighlight">\(\ket{\pm,\hat\bn}\)</span> son ortogonales, verifica que son autoestados de <span class="math notranslate nohighlight">\(~ \hat{\bf n} \cdot \boldsymbol{\sigma} ~\)</span>, con autovalores <span class="math notranslate nohighlight">\(~\pm 1\)</span></p>
 </div>
 <p>En cada caso, a la salida, escribiremos para la función de onda total</p>
 <div class="math notranslate nohighlight">
@@ -692,7 +681,7 @@ el operador</p></li>
 {\bf S} = \frac{\hbar}{2}\, \hat\bn\cdot  \boldsymbol{\sigma} 
 \]</div>
 <ul class="simple">
-<li><p>Si se registra <span class="math notranslate nohighlight">\(+\)</span>,  estado de espín emergente <span class="math notranslate nohighlight">\(\ket{+,\hat\bn}\)</span> es el <i>cúbit</i> que tiene, en la esfera de Bloch,   los mismos ángulos <span class="math notranslate nohighlight">\((\theta, \phi)\)</span>  que definen la orientación del <i>Stern-Gerlach</i> en el laboratorio</p></li>
+<li><p>Si se registra <span class="math notranslate nohighlight">\(+\)</span> o <span class="math notranslate nohighlight">\(-\)</span>,  estado de espín emergente <span class="math notranslate nohighlight">\(\ket{+,\hat\bn}\)</span> es el <i>cúbit</i> que tiene, en la esfera de Bloch</p></li>
 </ul>
 </div>
 <p>En particular cuando <span class="math notranslate nohighlight">\(\theta = \phi =  0 ~\Rightarrow \hat{\bf n} = (0,0,1) = \hat{\bf z}\)</span>, recuperamos la base <span class="math notranslate nohighlight">\(Z\)</span></p>
@@ -704,7 +693,7 @@ el operador</p></li>
 \end{split}\]</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<p>Supongamos que estamos en posesión de un cúbit en uno de los dos estados <span class="math notranslate nohighlight">\(\ket{\pm,\hat{\bf n}}\)</span>. Demuestra que podemos hallar la orientación del <i>Stern-Gerlach</i> que lo preparó  hallando valores medios de los operadores de Pauli</p>
+<p>supongamos que estamos en posesión de un cúbit en uno de los dos estados <span class="math notranslate nohighlight">\(\ket{\pm,\hat{\bf n}}\)</span>. Demuestra que podemos hallar la orientación del <i>Stern-Gerlach</i> que lo preparó  hallando valores medios de los operadores de Pauli</p>
 <div class="math notranslate nohighlight">
 \[
 \bra{\pm,\hat{\bf n}} \, \boldsymbol{\sigma}\,  \ket{\pm,\hat{\bf n}} = \pm \hat{\bf n}
@@ -761,8 +750,8 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-cbad3e7c-41df-42a7-b0f8-2618b0e90fdb">
-<span class="eqno">(16)<a class="headerlink" href="#equation-cbad3e7c-41df-42a7-b0f8-2618b0e90fdb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-66d09c43-7811-4bc7-a67e-42588af77e48">
+<span class="eqno">(16)<a class="headerlink" href="#equation-66d09c43-7811-4bc7-a67e-42588af77e48" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 H &amp;=&amp; \begin{bmatrix} E_1 &amp; H_{12} \\ H^*_{12} &amp; E_2 \end{bmatrix} \nonumber\\
 &amp;=&amp; \rule{0mm}{8mm}\frac{H_{11} + H_{22}}{2} I + \frac{E_1 - E_2}{2}\sigma_z + {\rm Re}(H_{12})\sigma_x - {\rm Im}(H_{12})\sigma_y
 \nonumber\\
