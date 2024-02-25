@@ -4,9 +4,11 @@
    "cell_type": "markdown",
    "id": "da0f67e0",
    "metadata": {
+    "editable": true,
     "slideshow": {
      "slide_type": "slide"
-    }
+    },
+    "tags": []
    },
    "source": [
     "> {sub-ref}`today` | {sub-ref}`wordcount-minutes` min read\n",
@@ -35,6 +37,7 @@
    "execution_count": 2,
    "id": "cdee0489",
    "metadata": {
+    "editable": true,
     "slideshow": {
      "slide_type": "-"
     },
@@ -71,9 +74,11 @@
    "cell_type": "markdown",
    "id": "0f51488c",
    "metadata": {
+    "editable": true,
     "slideshow": {
      "slide_type": "skip"
-    }
+    },
+    "tags": []
    },
    "source": [
     "### Definición\n",
