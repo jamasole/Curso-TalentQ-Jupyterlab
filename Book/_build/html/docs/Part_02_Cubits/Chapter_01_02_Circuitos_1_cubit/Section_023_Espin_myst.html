@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>El cúbit de espín &#8212; Curso de Introducción a la Computación Cuántica</title>
+    <title>El espín &#8212; Curso de Introducción a la Computación Cuántica</title>
   
   
   
@@ -231,7 +231,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter_01_01_Circuitos_1_cubit_myst.html">Circuitos de 1 cúbit</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Section_021_Cubits_myst.html">El cúbit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Section_022_Puertas_Simples_myst.html">Puertas Simples</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">El cúbit de espín</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">El espín</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Section_024_El_Arte_de_Medir_I_myst.html">El arte de medir I</a></li>
 </ul>
 </li>
@@ -461,7 +461,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>El cúbit de espín</h1>
+    <h1>El espín</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -471,17 +471,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentos-magnetico-y-angular">Momentos magnético y angular</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-experimento-de-stern-y-gerlach">El experimento de Stern y Gerlach</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentos-magnetico-y-angular">Momentos magnético y angular</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-experimento-de-stern-y-gerlach">El experimento de Stern y Gerlach</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mediciones-sucesivas">Mediciones sucesivas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#espin">Espín</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-un-cubit-de-espin">Preparación de un cúbit de espín</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulando-un-cubit">Manipulando un cúbit</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-de-un-espin-en-un-campo-magnetico">Evolución de un espín en un campo magnético.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-cuantico">Control cuántico</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pulsos-y-puertas-elementales">Pulsos y puertas elementales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espin">Espín</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-un-estado-de-espin">Preparación de un estado de espín</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-cuantico">Control cuántico</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analogo-magnetico">Análogo magnético</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precesion-de-larmor">Precesión de Larmor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puertas-cuanticas-primer-intento">Puertas cuánticas: primer intento</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oscilaciones-de-rabi">Oscilaciones de Rabi</a></li>
 </ul>
 </li>
 </ul>
@@ -496,25 +499,25 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 25, 2024 | 10 min read</p>
+<div><p>Feb 25, 2024 | 12 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
 </figure>
-<section class="tex2jax_ignore mathjax_ignore" id="el-cubit-de-espin">
-<h1>El cúbit de espín<a class="headerlink" href="#el-cubit-de-espin" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="el-espin">
+<h1>El espín<a class="headerlink" href="#el-espin" title="Permalink to this heading">#</a></h1>
 <p><span class="math notranslate nohighlight">\( \newcommand{\bra}[1]{\langle #1|} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\ket}[1]{|#1\rangle} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\braket}[2]{\langle #1|#2\rangle} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\i}{{\color{blue} i}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\Hil}{{\mathcal H}} \)</span>
+<span class="math notranslate nohighlight">\( \newcommand{\Lin}{\hbox{Lin}} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\bn}{{\bf n}} \)</span></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#momentos-magnetico-y-angular" id="id1">Momentos magnético y angular</a></p></li>
-<li><p><a class="reference internal" href="#el-experimento-de-stern-y-gerlach" id="id2">El experimento de Stern y Gerlach</a></p></li>
-<li><p><a class="reference internal" href="#preparacion-de-un-cubit-de-espin" id="id3">Preparación de un cúbit de espín</a></p></li>
-<li><p><a class="reference internal" href="#manipulando-un-cubit" id="id4">Manipulando un cúbit</a></p></li>
+<li><p><a class="reference internal" href="#espin" id="id2">Espín</a></p></li>
+<li><p><a class="reference internal" href="#control-cuantico" id="id3">Control cuántico</a></p></li>
 </ul>
 </div>
 <p>El descubrimiento del espín fue una de los primeros fenómenos cuya descripción encontró acomodo en la nueva Mecánica Cuántica.</p>
@@ -528,7 +531,7 @@ document.write(`
 \]</div>
 <p>En cada caso, la constante de proporcionalidad tal que <span class="math notranslate nohighlight">\(\boldsymbol{\mu} = \gamma {\bf J}\)</span> , se denomina <em>razón giromagnética</em> <span class="math notranslate nohighlight">\(\gamma \)</span>. Para dos electrones iguales será <span class="math notranslate nohighlight">\(2q/2m\)</span>, etc.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/Momento_Magnetico.png"><img alt="../../../_images/Momento_Magnetico.png" src="../../../_images/Momento_Magnetico.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Momento_Magnetico.png"><img alt="../../../_images/Momento_Magnetico.png" src="../../../_images/Momento_Magnetico.png" style="width: 400px;" /></a>
 </figure>
 <p>En este sentido, conocer el valor de <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> es equivalente a  <em>medir</em> <span class="math notranslate nohighlight">\({\bf J}\)</span>.
 La manera de poner de <em>medir</em> <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> es sumergir el átomo en un campo magnético <span class="math notranslate nohighlight">\({\bf B}\)</span>. Se observan dos efectos diferentes:</p>
@@ -547,9 +550,8 @@ U = -\boldsymbol{\mu}\cdot {\bf B} = - \mu B \cos \theta
 \[
 {\bf F} = - \boldsymbol{\nabla} U(x,y,z) = \boldsymbol{\nabla} ( \boldsymbol{\mu}\cdot {\bf B}(x,y,z) )
 \]</div>
-</section>
 <section id="el-experimento-de-stern-y-gerlach">
-<span id="sec-023-sterngerlach"></span><h2><a class="toc-backref" href="#id2">El experimento de Stern y Gerlach</a><a class="headerlink" href="#el-experimento-de-stern-y-gerlach" title="Permalink to this heading">#</a></h2>
+<span id="sec-023-sterngerlach"></span><h3>El experimento de Stern y Gerlach<a class="headerlink" href="#el-experimento-de-stern-y-gerlach" title="Permalink to this heading">#</a></h3>
 <p>En 1921 Stern, e independientemente en 1922 Gerlach, dispararon una nube de átomos de plata de forma que atravesara un  magnético no constante en la dirección vertical <span class="math notranslate nohighlight">\({\bf B}(z) = (0,0,B_z(z))\)</span></p>
 <p>El <em>momento magnético</em> <span class="math notranslate nohighlight">\(\boldsymbol{\mu}\)</span> en dichos átomos está asociado al <em>momento angular</em> del electrón en  último orbital más externo.</p>
 <p>En este caso, la fuerza que sufre un átomo de momento angular <span class="math notranslate nohighlight">\({\bf J}\)</span> será
@@ -571,36 +573,28 @@ $<span class="math notranslate nohighlight">\(J_z = \pm\frac{\hbar}{2}\)</span>$
 <p class="admonition-title">Notar</p>
 <p>La dirección <span class="math notranslate nohighlight">\(z\)</span> no tiene nada de particular. Si  giramos el eje del polarizador (el campo magnético) a una dirección <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span>, los puntos de acumulación se situan a lo largo de dicho eje. Para cáda átomo estaríamos midiendo el valor de <b>la proyección</b> <span class="math notranslate nohighlight">\(J_{\hat{\bf n}}={\bf J}\cdot\hat{\bf n} = \pm \hbar/2\)</span>.</p>
 </div>
+</section>
 <section id="mediciones-sucesivas">
 <h3>Mediciones sucesivas<a class="headerlink" href="#mediciones-sucesivas" title="Permalink to this heading">#</a></h3>
-<p>El nombre de <em>polarizador</em> cobra sentido cuando hacemos dos experimentos sucesivamente de forma que la salida de uno sea la entrada del siguiente.</p>
-<p>Supongamos que seleccionamos sólo los electrones que se desvían hacia arriba <span class="math notranslate nohighlight">\(+\hbar/2\)</span> en el primer polarizador.</p>
-<p>A continuación  los hacemos pasar por un segundo polarizador de Stern Gerlach cuyo eje se desvía de la vertical en el plano perpendiclar <span class="math notranslate nohighlight">\((y,z)\)</span> un ángulo <span class="math notranslate nohighlight">\(\theta\)</span> relativo al eje <span class="math notranslate nohighlight">\(z\)</span>.</p>
-<p><em>Resultado</em>:  las incidencias sobre la segunda placa  aparecen en una u otra posición a lo largo del <em>segundo eje</em> de <em>forma aleatoria</em>.</p>
-<p>Repitiendo el experimento obtenemos la frecuencia relativa de incidencia en una posición u otra y, de ahí, la probabilidad de ocurrencia de cada resultado</p>
+<p>El nombre de <em>polarizador</em> cobra sentido cuando hacemos  experimentos encadenados de forma que la salida de uno sea la entrada del siguiente.<br />
+Supongamos que,  en el primer polarizador, seleccionamos solamente los electrones que se desvían hacia arriba <span class="math notranslate nohighlight">\(+\hbar/2\)</span>.</p>
+<p>A continuación  los hacemos pasar por un segundo polarizador de Stern Gerlach cuyo eje se aparta de la vertical un ángulo azimutal <span class="math notranslate nohighlight">\(\theta\)</span> relativamente al eje <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<p>El resultado experimental es que, a la salida de este segundo polarizador,  las incidencias sobre la segunda placa  aparecen en una u otra posición <u>a lo largo del <em>segundo eje</em> de <em>forma aleatoria</em></u>. Después de muchas repeticiones, la frecuencia relativa de cada resultado tiende a ser la probabilidad de ocurrencia del mismo.  Experimental se obtiene que</p>
 <div class="math notranslate nohighlight">
 \[
 p(+\hbar/2) = \cos^2\theta/2 ~~~~~,~~~~~  p(-\hbar/2) = \sin^2\theta/2 ~\, 
 \]</div>
 <p>donde <span class="math notranslate nohighlight">\(\theta\)</span> es el ángulo entre los ejes de los dos polarizadores sucesivos.</p>
+<p>Aun hay más sorpresas. Supongamos que concatenamos tres polarizadores orientados a lo largo de direcciones mutuamente perpendiculares <span class="math notranslate nohighlight">\(\hat{\bf z} \to \hat{\bf x} \to \hat{\bf z}\)</span>, como indica la figura. En el primero hemos seleccionado solo los resultados que emergen con resultado positivo <span class="math notranslate nohighlight">\(+\hbar/2\)</span> de medida. Esta debería ser la componente <span class="math notranslate nohighlight">\(z\)</span> del espín de los electrones que continuan. En segundo polarizador hemos seleccionado también sólo los resultados con valor positivo  <span class="math notranslate nohighlight">\(+\hbar/2\)</span>. El tercer polarizador vuelve a estar en la dirección <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span>. Lo natural sería esperar recuperar la medida del primer polarizador.</p>
+<p>El resultado <em>sorprendente</em> es que en el tercer polarizador volvemos a encontrar los dos resultados <span class="math notranslate nohighlight">\(\pm \hbar/2\)</span> posibles, con una proporción del 50%.</p>
 <p><img alt="picture" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Stern-Gerlach_Analyzer_Sequential_Series_E3.png" /></p>
 <p>En esta figura se aprecia que la polarización del resultado en una dirección (selección de un resultado, por ejemplo <span class="math notranslate nohighlight">\(+\hbar/2\)</span>), arroja una distribución equilibrada de resultados en el polarizador siguiente, rotado <span class="math notranslate nohighlight">\(90^\circ\)</span></p>
-<p>La interpretación de este experimento indica que cada polarizador <em>prepara</em> a su salida, un estado que es base de un operador relacionado con su orientación.</p>
-<ul class="simple">
-<li><p>a la salida del primer polarizador, uno de los dos posibles autoestados de <span class="math notranslate nohighlight">\(\sigma_z\)</span>, <span class="math notranslate nohighlight">\(\ket{\pm}_z\)</span></p></li>
-<li><p>a la salida del segundo polarizador, uno de los posibles autestados de <span class="math notranslate nohighlight">\(\sigma_x\)</span>, <span class="math notranslate nohighlight">\(\ket{\pm}_x\)</span></p></li>
-</ul>
-<p>Dado que <span class="math notranslate nohighlight">\([\sigma_z,\sigma_x]\neq 0\)</span> no conmutan, es imposible encontrar una base común de autoestados de ambos operadores.</p>
-<p>Esto hace que siempre que actúa un Stern Gerlach, las medidas en el siguiente aparezcan máximamente despolarizadas.  En última instancia esto es una manifestación del principio de incertidumbre obligado por la relación</p>
-<div class="math notranslate nohighlight">
-\[
-[\sigma_z, \sigma_x] = i \sigma_y
-\]</div>
+</section>
 </section>
 <section id="espin">
-<h3>Espín<a class="headerlink" href="#espin" title="Permalink to this heading">#</a></h3>
-<p>La desviación del átomo de plata en el experimento de Stern y Gerlach se debe al último electrón. Pero no puede provenir de su movimiento ya que el <em>momento angular orbital</em> del último electrón es nulo al hallarse en el orbotal <span class="math notranslate nohighlight">\(5s\)</span>, es decir, tendríamos <span class="math notranslate nohighlight">\(~{\bf J} = {\bf L} = 0\)</span>.</p>
-<p>En conclusión: <u>¡tiene que haber una contribución  de  <em>carácter interno</em>! </u></p>
+<h2><a class="toc-backref" href="#id2">Espín</a><a class="headerlink" href="#espin" title="Permalink to this heading">#</a></h2>
+<p>La desviación del átomo de plata en el experimento de Stern y Gerlach denota la presencia de un momento magnético neto en los átomos de plata que es atribuible al último electrón de valencial. Pero no puede provenir de su movimiento ya que el <em>momento angular orbital</em> del último electrón es nulo al hallarse en el orbital <span class="math notranslate nohighlight">\(5s\)</span>, es decir, tendríamos <span class="math notranslate nohighlight">\(~{\bf J} = {\bf L} = 0\)</span>.</p>
+<p>En conclusión: <u>¡tiene que haber una contribución  extra de  <em>carácter interno</em>! </u></p>
 <div class="math notranslate nohighlight">
 \[
 {\bf J} = {\bf L} + {\bf S}  ~~\Rightarrow~~
@@ -610,20 +604,24 @@ p(+\hbar/2) = \cos^2\theta/2 ~~~~~,~~~~~  p(-\hbar/2) = \sin^2\theta/2 ~\,
 \[
 \boldsymbol{\mu}_S =\gamma_e {\bf S} =   g_s\frac{ q}{2 m_e} {\bf S} 
 \]</div>
-<p>y <span class="math notranslate nohighlight">\(g_s = 2,0023...\)</span> el <em>factor giromagnético</em> del electrón. Es como si el electrón mismo tuviese momento angular interno, pero tratándose de una partícula puntual esto sólo puede entenderse como un símil, no como una nube de carga real en rotación</p>
-<p>Se trata de un nuevo grado de libertad interno que se denomina <em>espín</em>  <span class="math notranslate nohighlight">\({\bf S}\)</span>. Lo que el experimento de SG desvela es que <u>su <em>proyección</em> en la dirección dirección <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span> que marca el campo magnético está cuantizada</u>   <span class="math notranslate nohighlight">\(S_{\hat{\bf n}} = \pm \hbar/2\)</span> es .  Muchas veces se omite el factor <span class="math notranslate nohighlight">\(\hbar\)</span> y se dice que el electrón tiene espín <span class="math notranslate nohighlight">\(1/2\)</span>.</p>
-<p>Para formular cuánticamente este problema debemos encontrar un operador observable que tenga por autovalores los resultados de la medida. Para ello comenzamos por definir el <u><em>operador de espín</em></u> que es una colección vectorial de tres operadores de Pauli
-$<span class="math notranslate nohighlight">\(
-{\bf S } = \frac{\hbar}{2} \boldsymbol{\sigma} ~~~\Rightarrow ~~~ (S_x,S_y,S_z) = \frac{\hbar}{2} (\sigma_x, \sigma_y,\sigma_z)
-\)</span>$</p>
-<p><em>El observable</em> asociado a un experimento de Stern Gerlach en la dirección <span class="math notranslate nohighlight">\(\hat{\bf{n}} = (n_x, n_y, n_z) \)</span> es la proyección del operador de espin en esa dirección</p>
+<p>y <span class="math notranslate nohighlight">\(g_s = 2,0023...\)</span> el <em>factor giromagnético</em> del electrón. Es como si el electrón mismo tuviese momento angular interno. Pero  cuidado con las analogías. Tratándose de una partícula puntual, esto sólo puede entenderse como un símil, no como una nube de carga real en rotación</p>
+<p>Se trata sin duda de un nuevo grado de libertad interno que se denomina <em>espín</em>  <span class="math notranslate nohighlight">\(S\)</span>.  En la sección anterior hemos visto los resultados experimentales. El objetivo es dar una formulación coherente dentro del marco de la Mecánica Cuántica cuyas predicciones coincidan con dichos resultados.</p>
+<p>Para cada orientación del aparato de Stern y Gerlach siempre aparece uno de los dos resultados de medida posibles, <span class="math notranslate nohighlight">\( + \hbar/2\)</span> y <span class="math notranslate nohighlight">\(- \hbar/2\)</span>. Eso indica que el observable asociado posee sólo dos autovalores. Por tanto opera sobre un espacio de Hilbert de dimensión 2. Tratándose de un operador hermítico, lo más natural es expandirlo en la base de matrices de Pauli.</p>
+<p>Definamos el <u><em>operador de espín</em></u> como una colección vectorial de tres operadores proporcionales a las matrices de Pauli</p>
 <div class="math notranslate nohighlight">
 \[
-S_{\bf n} = \frac{\hbar}{2} \hat\bn\cdot \boldsymbol{\sigma} 
+{\bf S } = \frac{\hbar}{2} \boldsymbol{\sigma} ~~~\Rightarrow ~~~ (S_x,S_y,S_z) = \frac{\hbar}{2} (\sigma_x, \sigma_y,\sigma_z)
 \]</div>
+<p>Dada una dirección <span class="math notranslate nohighlight">\(\hat{\bf{n}} = (n_x, n_y, n_z) \)</span>  del campo magnético del Stern Gerlach, podemos formar la proyección
+del operador de espín en esa dirección</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{\bf n}\cdot {\bf S} = \frac{\hbar}{2} \hat\bn\cdot \boldsymbol{\sigma} 
+\]</div>
+<p>Este operador cumple el cometido a la perfección.</p>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<p>Escribe para un vector unitario arbitrario <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span>  la matriz  <span class="math notranslate nohighlight">\(\hat\bn\cdot \boldsymbol{\sigma} \)</span> y comprueba que tiene <b>siempre</b>  autovalores <span class="math notranslate nohighlight">\(\pm 1\)</span>. En consecuencia, <span class="math notranslate nohighlight">\(S_{\bf n}\)</span>  tiene siempre autovalores <span class="math notranslate nohighlight">\(\pm \hbar/2\)</span></p>
+<p>Escribe para un vector unitario arbitrario <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span>  la matriz  <span class="math notranslate nohighlight">\(\hat\bn\cdot \boldsymbol{\sigma} \)</span> y comprueba que tiene  autovalores <span class="math notranslate nohighlight">\(\pm 1\)</span>. En consecuencia, <span class="math notranslate nohighlight">\(\hat {\bf n}\cdot {\bf S}\)</span>  tiene siempre autovalores <span class="math notranslate nohighlight">\(\pm \hbar/2\)</span></p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
@@ -639,16 +637,15 @@ S_{\bf n} = \frac{\hbar}{2} \hat\bn\cdot \boldsymbol{\sigma}
 <li><p>núcleos tienen <span class="math notranslate nohighlight">\(S=1/2\)</span> ó <span class="math notranslate nohighlight">\(0\)</span>  si tienen un número impar o par de nucleones</p></li>
 </ul>
 </div>
-</section>
-</section>
-<section id="preparacion-de-un-cubit-de-espin">
-<span id="sec-023-prepacubit"></span><h2><a class="toc-backref" href="#id3">Preparación de un cúbit de espín</a><a class="headerlink" href="#preparacion-de-un-cubit-de-espin" title="Permalink to this heading">#</a></h2>
+<section id="preparacion-de-un-estado-de-espin">
+<span id="sec-023-prepacubit"></span><h3>Preparación de un estado de espín<a class="headerlink" href="#preparacion-de-un-estado-de-espin" title="Permalink to this heading">#</a></h3>
 <p>El postulado de <em>colapso de la función de onda</em> afirma que, después de una medida asociada a un observable, el estado <em>colapsa</em> a un autoestado de dicho operado.
 Vamos a dar una expresión concreta para estos autoestados. Para ello, es conveniente parametrizar la dirección de nuestro campo magnético usando dos ángulos
-<span class="math notranslate nohighlight">\(\theta \in [0,\pi)\)</span> y <span class="math notranslate nohighlight">\(\phi\in [0,2\pi)\)</span>
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(\theta \in [0,\pi)\)</span> y <span class="math notranslate nohighlight">\(\phi\in [0,2\pi)\)</span></p>
+<div class="math notranslate nohighlight">
+\[
 \hat\bn(\theta,\phi) = \sin\theta\cos\phi \, \hat {\bf x} + \sin\theta\sin\phi \, \hat {\bf y} + \cos\theta \, \hat {\bf z}
-\)</span>$</p>
+\]</div>
 <p>Los dos estados asociados los denominaremos <span class="math notranslate nohighlight">\(\ket{\pm}_{\hat\bn} = \ket{\pm,\hat\bn}\)</span> y deben verifica la condición de autoestado</p>
 <div class="math notranslate nohighlight">
 \[
@@ -669,7 +666,7 @@ $<span class="math notranslate nohighlight">\(
 <p>En cada caso, a la salida, escribiremos para la función de onda total</p>
 <div class="math notranslate nohighlight">
 \[~\ket{\psi} = \psi(\vec r)\otimes \ket{\pm,\hat\bn }~\]</div>
-<p>cuya interpretación es la <em>amplitud de probabilidad</em> de encontrar al alectrón en el punto <span class="math notranslate nohighlight">\(\vec r\)</span> con la proyección de su espín en la dirección <span class="math notranslate nohighlight">\(\hat\bn\)</span> igual a <span class="math notranslate nohighlight">\(\pm 1\)</span></p>
+<p>cuya interpretación es la <em>amplitud de probabilidad</em> de encontrar al electrón en el punto <span class="math notranslate nohighlight">\(\vec r\)</span> con la proyección de su espín en la dirección <span class="math notranslate nohighlight">\(\hat\bn\)</span> igual a <span class="math notranslate nohighlight">\(\pm 1\)</span></p>
 <div class="attention admonition">
 <p class="admonition-title">En resumen</p>
 <ul class="simple">
@@ -681,7 +678,7 @@ el operador</p></li>
 {\bf S} = \frac{\hbar}{2}\, \hat\bn\cdot  \boldsymbol{\sigma} 
 \]</div>
 <ul class="simple">
-<li><p>Si se registra <span class="math notranslate nohighlight">\(+\)</span> o <span class="math notranslate nohighlight">\(-\)</span>,  estado de espín emergente <span class="math notranslate nohighlight">\(\ket{+,\hat\bn}\)</span> es el <i>cúbit</i> que tiene, en la esfera de Bloch</p></li>
+<li><p>Si se registra <span class="math notranslate nohighlight">\(+\hbar/2\)</span> ó <span class="math notranslate nohighlight">\(-\hbar/2\)</span>,  estado de espín habrá quedado preparado en un autoestado <span class="math notranslate nohighlight">\(\ket{+,\hat\bn}\)</span> ó <span class="math notranslate nohighlight">\(\ket{-,\hat\bn}\)</span></p></li>
 </ul>
 </div>
 <p>En particular cuando <span class="math notranslate nohighlight">\(\theta = \phi =  0 ~\Rightarrow \hat{\bf n} = (0,0,1) = \hat{\bf z}\)</span>, recuperamos la base <span class="math notranslate nohighlight">\(Z\)</span></p>
@@ -691,50 +688,69 @@ el operador</p></li>
 ~~~~~
 \ket{-,\hat{\bf z}} =  \begin{bmatrix} 0 \\  1\end{bmatrix} 
 \end{split}\]</div>
-<div class="tip admonition">
-<p class="admonition-title">Ejercicio</p>
-<p>supongamos que estamos en posesión de un cúbit en uno de los dos estados <span class="math notranslate nohighlight">\(\ket{\pm,\hat{\bf n}}\)</span>. Demuestra que podemos hallar la orientación del <i>Stern-Gerlach</i> que lo preparó  hallando valores medios de los operadores de Pauli</p>
+<p>Ahora podemos verificar que la mecánica cuántica predice correctamente los resultados de la medida sucesiva con dos polarizadores orientados en direcciones diferentes</p>
+<p>Efectivamente si después de medir con un polarizador orientado a lo largo del eje <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span> encontramos <span class="math notranslate nohighlight">\(+\hbar/2\)</span>   el estado preparado es <span class="math notranslate nohighlight">\(\ket{+,\hat{\bf z}}\)</span>.
+Medidas sucesivas con el polarizador en la misma orientación daran idéntico resultado. Clásicamente diríamos que hemos <em>fijado</em> una propiedad (la proyección del momento angular) a un valor. Cuánticamente no podemos afirmar tal cosa.</p>
+<p>Si a continuación medimos con un polarizador orientado en una dirección <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span> entonces las probabilidades de medida son las obtenidas experimentalmente</p>
 <div class="math notranslate nohighlight">
 \[
-\bra{\pm,\hat{\bf n}} \, \boldsymbol{\sigma}\,  \ket{\pm,\hat{\bf n}} = \pm \hat{\bf n}
+p(+\hbar/2) = |\braket{+,\hat{\bf n}}{+,\hat{\bf z}}|^2 = \cos^2\theta/2 ~~~~~~~,~~~~~~~ 
+p(-\hbar/2) = |\braket{-,\hat{\bf n}}{+,\hat{\bf z}}|^2 = \sin^2\theta/2
 \]</div>
-</div>
+<p>También podemos entender el resultado de la medida sucesiva en las direcciones  <span class="math notranslate nohighlight">\(\hat{\bf z} \to \hat{\bf x} \to \hat{\bf z}\)</span>.
+Efectivamente, particularizando para  <span class="math notranslate nohighlight">\(\hat{\bf n} = \hat{\bf x}\)</span> en el segundo polarizador esperamos resultados equiprobables
+$<span class="math notranslate nohighlight">\(
+p(+\hbar/2) = |\braket{+,\hat{\bf x}}{+,\hat{\bf z}}|^2 = \frac{1}{2} ~~~~~~~,~~~~~~~ 
+p(-\hbar/2) = |\braket{-,\hat{\bf x}}{+,\hat{\bf z}}|^2 = \frac{1}{2}
+\)</span>$</p>
+<p>A la salida, los estados serán <span class="math notranslate nohighlight">\(\ket{+,\hat{\bf x}}\)</span> o <span class="math notranslate nohighlight">\(\ket{-,\hat{\bf x}}\)</span> respectivamente.
+Para cualquiera de ellos,  una medida posterior, de nuevo en la dirección original <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span>, dará también de forma equiprobable <span class="math notranslate nohighlight">\(p(\pm\hbar/2) =1/2\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+p(+\hbar/2) = |\braket{+,\hat{\bf z}}{\pm,\hat{\bf x}}|^2 = \frac{1}{2} ~~~~~~~,~~~~~~~ 
+p(-\hbar/2) = |\braket{-,\hat{\bf z}}{\pm,\hat{\bf x}}|^2 = \frac{1}{2}
+\]</div>
+<p>Vemos que el resultado inicial <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span> ha quedado <em>totalmente borrado</em> por la segunda medida <span class="math notranslate nohighlight">\(\hat{\bf x}\)</span>, y esto se pone de manifiesto en la repetición de la medida <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span>.</p>
+<p>Estamos ante un caso particular del Principio de Incertidumbre: dado que <span class="math notranslate nohighlight">\([\sigma_z,\sigma_x] = i \sigma_y\)</span> no conmutan, es imposible encontrar una base común de autoestados de ambos operadores</p>
 </section>
-<section id="manipulando-un-cubit">
-<span id="sec-023-manipcubit"></span><h2><a class="toc-backref" href="#id4">Manipulando un cúbit</a><a class="headerlink" href="#manipulando-un-cubit" title="Permalink to this heading">#</a></h2>
-<p>Ahora podemos preguntarnos qué le ocurre a dicho electrón si lo sumergimos en un campo magnético <span class="math notranslate nohighlight">\({\bf B}\)</span>.</p>
-<p>El Hamiltoniano de una partícula con espín en un campo magnético es</p>
+</section>
+<section id="control-cuantico">
+<span id="sec-023-manipcubit"></span><h2><a class="toc-backref" href="#id3">Control cuántico</a><a class="headerlink" href="#control-cuantico" title="Permalink to this heading">#</a></h2>
+<p>Ya hemos visto cómo preparar estados de espín en una partícula de espín <span class="math notranslate nohighlight">\(1/2\)</span>, por ejemplo, un electrón. Adelantandono a temas que se estudiarán posteriormente en este curso, nos gustaría entender cómo manipular dichos estados. Para ello deberíamos ser capaces de controlar el cúbit de forma precisa y llevarlo de un punto a otro de la esfera de Bloch.</p>
+<p>Si sumergimos el electrón que hemos preparado en un campo magnético <span class="math notranslate nohighlight">\({\bf B}\)</span> constante no sufrirá ninguna fuerza. Sin embargo el espín va a empezar a rotar.
+El Hamiltoniano de una partícula con espín en un campo magnético es</p>
 <div class="math notranslate nohighlight">
 \[
 H = -\hat{\boldsymbol{\mu}}\cdot {\bf B} = -\gamma \hat{\bf S}\cdot {\bf B} =  -\gamma \frac{\hbar}{2} \boldsymbol{\sigma}\cdot {\bf B}
 \]</div>
-<p>El <em>factor giromagnético</em> <span class="math notranslate nohighlight">\(\gamma\)</span> depende de qué tipo de partícula  estamos estudiando (electrón, protón, núcleo…)</p>
-<p>Definiremos el  <em>vector de Larmor</em></p>
+<p>El <em>factor giromagnético</em> <span class="math notranslate nohighlight">\(\gamma\)</span> depende de qué tipo de partícula  estamos estudiando (electrón, protón, núcleo…).</p>
+<p>Para simplificar la notación, vamos a definir el   <em>vector de Larmor</em></p>
 <div class="math notranslate nohighlight">
 \[
 \boldsymbol{\omega} = \gamma \bf B
 \]</div>
-<p>cuyo módulo será la <em>frecuencia de Larmor</em>
-$<span class="math notranslate nohighlight">\(
-\omega = \gamma B ~~
-~[\hbox{Hz}]
-\)</span>$</p>
-<p>Notar que <span class="math notranslate nohighlight">\(B\)</span> es positivo. De modo que <span class="math notranslate nohighlight">\(\omega\)</span> tendrá el signo de <span class="math notranslate nohighlight">\(\gamma\)</span> y por tanto el de <span class="math notranslate nohighlight">\(q\)</span></p>
-<p>con esta definición, el Hamiltoniano  se escribe en la forma</p>
+<p>cuyo módulo será la <em>frecuencia de Larmor</em> <span class="math notranslate nohighlight">\(\omega = \gamma B\)</span>. Con esta definición, el Hamiltoniano  se escribe en la forma</p>
 <div class="math notranslate nohighlight">
 \[
 H =  \frac{\hbar}{2}(-\gamma {\bf B})\cdot \boldsymbol{\sigma}= -\frac{\hbar}{2} \boldsymbol{\omega}\cdot \boldsymbol{\sigma}
 \]</div>
-<p>Si uno mira las unidades de la ecuación anterior verá que</p>
+<p>Si uno mira las unidades de la ecuación anterior verá que el nombre de <em>frecuencia</em> de Larmor está bien escogido</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\([H]\)</span> el hamiltoniano tiene unidades de energía, por ejemplo, julio, J.</p></li>
 <li><p><span class="math notranslate nohighlight">\([\hbar]\)</span> la constante de Planck, tiene unidades de energía <span class="math notranslate nohighlight">\(\times\)</span> tiempo, es decir, J s.</p></li>
-</ul>
-<p>Consistentemente</p>
-<ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\boldsymbol{\omega} = \gamma {\bf B}\)</span> es un vector que tiene unidades de inversa de tiempo, de hecho rad s<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p></li>
 </ul>
-<p>De hecho <strong>cualquier Hamiltoniano</strong> 2<span class="math notranslate nohighlight">\(\times\)</span>2 se puede escribir de esta forma, que admite la interpretación de un espín en un campo magnético identificando <span class="math notranslate nohighlight">\(\boldsymbol{\omega} = \gamma \bf B\)</span>.</p>
+<section id="analogo-magnetico">
+<h3>Análogo magnético<a class="headerlink" href="#analogo-magnetico" title="Permalink to this heading">#</a></h3>
+<p>Curiosamente el espín de un electrón en un campo magnético proporciona un modelo universal para tratar cualquier  sistema físico de dos niveles.</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><b>Lema</b>:</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">cualquier Hamiltoniano de un sistema de dos niveles puede escribirse en la forma <span class="math notranslate nohighlight">\(H=\displaystyle -\frac{\hbar}{2} \boldsymbol{\omega}\cdot \boldsymbol{\sigma}\)</span>. <span class="math notranslate nohighlight">\(~\)</span>Por tanto, siempre admite una analogía con un espín en un cierto campo magnético identificando <span class="math notranslate nohighlight">\(\boldsymbol{\omega} = \gamma \bf B\)</span>.</p>
+</div>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
 <p>Dado un Hamiltoniano</p>
@@ -750,48 +766,46 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-66d09c43-7811-4bc7-a67e-42588af77e48">
-<span class="eqno">(16)<a class="headerlink" href="#equation-66d09c43-7811-4bc7-a67e-42588af77e48" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
 H &amp;=&amp; \begin{bmatrix} E_1 &amp; H_{12} \\ H^*_{12} &amp; E_2 \end{bmatrix} \nonumber\\
-&amp;=&amp; \rule{0mm}{8mm}\frac{H_{11} + H_{22}}{2} I + \frac{E_1 - E_2}{2}\sigma_z + {\rm Re}(H_{12})\sigma_x - {\rm Im}(H_{12})\sigma_y
-\nonumber\\
-&amp;=&amp;  \rule{0mm}{8mm}\frac{E_1 + E_2}{2} I  - \frac{\hbar}{2} \boldsymbol{\omega} \cdot \boldsymbol{\sigma} \label{cambioB}
-\end{eqnarray}\]</div>
-<p class="sd-card-text">donde definimos el vector de Larmor efectivo
+&amp;=&amp; \displaystyle\rule{0mm}{8mm}\frac{H_{11} + H_{22}}{2} I + \frac{E_1 - E_2}{2}\sigma_z + {\rm Re}(H_{12})\sigma_x - {\rm Im}(H_{12})\sigma_y
+\nonumber\\ \rule{0mm}{8mm}
+&amp;=&amp;\displaystyle  \frac{E_1 + E_2}{2} I  - \frac{\hbar}{2} \boldsymbol{\omega} \cdot \boldsymbol{\sigma} 
+\end{array}
+\end{split}\]</div>
+<p class="sd-card-text">donde definimos el vector de Larmor efectivo.
 $<span class="math notranslate nohighlight">\(
 \omega_x = -\frac{2}{\hbar } {\rm Re} (H_{12})~~ ,~~~~   \omega_y =  \frac{2}{\hbar } {\rm Im} (H_{12}) ~~,~~~~\omega_z =  \frac{ E_{2}-E_{1}}{\hbar } 
 \)</span>$</p>
 </div>
 </details></div>
-<p>De la sección anterior, ya sabemos cuáles son los autoestados de <span class="math notranslate nohighlight">\(H\)</span></p>
-<p>Por ejemplo, tomando <span class="math notranslate nohighlight">\({\bf B} = B\, \hat{\bf z}\)</span> a lo largo del eje <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span> vemos que <span class="math notranslate nohighlight">\(\boldsymbol{\omega} = (0,0,\omega)\)</span> y</p>
+<p>De la sección anterior, ya sabemos cuáles son los autoestados de <span class="math notranslate nohighlight">\(H\)</span>.
+Por ejemplo, tomando <span class="math notranslate nohighlight">\({\bf B} = B\, \hat{\bf z}\)</span> a lo largo del eje <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span> vemos que <span class="math notranslate nohighlight">\(\boldsymbol{\omega} = (0,0,\omega)\)</span> y</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 H = -\frac{\hbar}{2}\omega \sigma_z = \begin{bmatrix} -\hbar\omega/2 &amp; 0 \\ 0 &amp; \hbar\omega/2 \end{bmatrix}
 \end{split}\]</div>
 <ul class="simple">
 <li><p>El estado <em>fundamental</em> es <span class="math notranslate nohighlight">\(\begin{bmatrix} 1\\ 0\end{bmatrix} =\ket{+,\hat{\bf z}}=\ket{1}\)</span> con energía <span class="math notranslate nohighlight">\(\varepsilon_0=-\hbar \omega/2\)</span>.</p></li>
-</ul>
-<ul class="simple">
 <li><p>El estado <em>excitado</em>
 es <span class="math notranslate nohighlight">\(\begin{bmatrix} 1\\ 0\end{bmatrix} =\ket{-,\hat{\bf z}}= \ket{0}\)</span> con energía <span class="math notranslate nohighlight">\(\varepsilon_1=\, \hbar \omega/2\)</span>.</p></li>
 </ul>
-<p>Al igual que clásicamente, con carga positiva <span class="math notranslate nohighlight">\(\gamma&gt; 0\)</span>  el estado que minimiza la energía es el que, en la esfera de Bloch, es paralelo a la dirección del campo magnético en el espacio</p>
+<p>En la anlogía magnética el estado que minimiza la energía es el que, en la esfera de Bloch, es paralelo a la dirección del campo magnético en el espacio (siempre que <span class="math notranslate nohighlight">\(\gamma &gt;0\)</span>).</p>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
-<ul>
-<li><p>Observamos como <em>la presencia del campo magnético</em> induce una <em>separación de niveles</em> o <em>gap</em> de energía</p>
+<p>Observamos como <em>la presencia del campo magnético</em> induce una <em>separación de niveles</em> o <em>gap</em> de energía (<em>efecto Zeeman</em>)</p>
 <div class="math notranslate nohighlight">
 \[\Delta \varepsilon = \varepsilon_1-\varepsilon_0 = \hbar \omega\]</div>
-</li>
-<li><p>Este efecto se denomina <em>efecto Zeeman</em></p></li>
-<li><p>Con frecuencia se habla la <em>frecuencia del gap</em>  <span class="math notranslate nohighlight">\(\omega = \Delta \varepsilon/\hbar = \)</span> y sus unidades son  [rad s<span class="math notranslate nohighlight">\(^{-1}\)</span>]</p></li>
-<li><p>El eje <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span> no tiene nada de especial. Y la observación anterior se generaliza a cualquier campo magnético <span class="math notranslate nohighlight">\({\bf B}= B\, \hat{\bf u}\)</span>. El Hamiltoniano asociado tendrá ahora dos autoestados <span class="math notranslate nohighlight">\(\{\ket{-,\hat{\bf u}},\ket{+,\hat{\bf u}}\}\)</span> con idénticas energías <span class="math notranslate nohighlight">\(\varepsilon_{0}\)</span> y <span class="math notranslate nohighlight">\(\varepsilon_1\)</span>.</p></li>
-</ul>
+<p>Con frecuencia el <em>gap</em> de energía de un sistema se da en [rad s<span class="math notranslate nohighlight">\(^{-1}\)</span>]. Esto es precisamente el módulo del vector de Larmor <span class="math notranslate nohighlight">\(\omega = \Delta \varepsilon/\hbar\)</span>.</p>
+<p>El eje <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span> no tiene nada de especial. Y la observación anterior se generaliza a cualquier campo magnético <span class="math notranslate nohighlight">\({\bf B}= B\, \hat{\bf n}\)</span>. El Hamiltoniano asociado tendrá ahora dos autoestados <span class="math notranslate nohighlight">\(\{\ket{-,\hat{\bf n}},\ket{+,\hat{\bf n}}\}\)</span> con idénticas energías <span class="math notranslate nohighlight">\(\varepsilon_{0}\)</span> y <span class="math notranslate nohighlight">\(\varepsilon_1\)</span>.</p>
 </div>
-<section id="evolucion-de-un-espin-en-un-campo-magnetico">
-<h3>Evolución de un espín en un campo magnético.<a class="headerlink" href="#evolucion-de-un-espin-en-un-campo-magnetico" title="Permalink to this heading">#</a></h3>
-<p>Situemos un espín <span class="math notranslate nohighlight">\(\ket{\psi} = \ket{s,\hat\bn}\)</span> en un campo magnético vertical <span class="math notranslate nohighlight">\({\bf B}= B \, \hat{\bf z}\)</span>, .
+</section>
+<section id="precesion-de-larmor">
+<h3>Precesión de Larmor<a class="headerlink" href="#precesion-de-larmor" title="Permalink to this heading">#</a></h3>
+<p>Ahora que conocemos el Hamiltoniano del sistema, podemos invocar el Axioma III para obtener la evolución en el tiempo.
+Situemos un espín <span class="math notranslate nohighlight">\(\ket{\psi} = \ket{s,\hat\bn}\)</span> en un campo magnético vertical <span class="math notranslate nohighlight">\({\bf B}= B \, \hat{\bf z}\)</span>, .
 La evolución en el tiempo, <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span>,  viene gobernada por la ecuación de Schrödinger</p>
 <div class="math notranslate nohighlight">
 \[
@@ -830,33 +844,27 @@ U(t,0) = \begin{bmatrix}1 &amp; 0 \\ 0 &amp;e^{-it \omega}\end{bmatrix}
 \ket{\psi(t)} = U(t,0) \ket{\psi(0)} = \begin{bmatrix}1 &amp; 0 \\ 0 &amp;e^{it \omega}\end{bmatrix}\begin{bmatrix} \cos\theta \\ e^{i\phi} \sin\theta \end{bmatrix} = 
 \begin{bmatrix} \cos\theta \\ e^{i(\phi- t\omega)} \sin\theta \end{bmatrix}
 \end{split}\]</div>
-<p>El resultado es fácil de visualizar:  en la esfera de Bloch, el estado instantáneo <span class="math notranslate nohighlight">\(\ket{\psi(t)} = \begin{bmatrix} \cos\theta \\ e^{i(\phi- t\omega)} \sin\theta \end{bmatrix}\)</span>,  experimenta</p>
+<p>El resultado es fácil de visualizar:  en la esfera de Bloch, el estado instantáneo <span class="math notranslate nohighlight">\(\ket{\psi(t)}\)</span> experimenta</p>
 <ul class="simple">
-<li><p>una <em>precesión de Larmor</em> en torno que marca el campo magnético, preservando el  ángulo <span class="math notranslate nohighlight">\(\theta\)</span> inicial fijo,</p></li>
+<li><p>una <em>precesión de Larmor</em> en torno al ejej que marca el campo magnético (real o análogo) preservando el  ángulo <span class="math notranslate nohighlight">\(\theta\)</span> inicial fijo,</p></li>
 <li><p>con una velocidad angular dada por la <em>frecuencia de Larmor</em>, <span class="math notranslate nohighlight">\(\omega = \gamma B~\)</span> [rad s<span class="math notranslate nohighlight">\(^{-1}\)</span>] en sentido horario <span class="math notranslate nohighlight">\(\omega &gt;0\)</span> (antihorario <span class="math notranslate nohighlight">\(\omega &lt;0\)</span>) para una partícula de carga positiva (negativa)</p></li>
 </ul>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/precession.png"><img alt="../../../_images/precession.png" src="../../../_images/precession.png" style="width: 350px;" /></a>
 </figure>
-<ul class="simple">
-<li><p>la probabilidad de <em>decaer</em> al estado fundamental <span class="math notranslate nohighlight">\(\ket{+,\hat{\bf z}}=\begin{bmatrix}1 \\ 0\end{bmatrix}\)</span> es <span class="math notranslate nohighlight">\(\cos^2 \theta\)</span>, y es invariante bajo evolución temporal</p></li>
-</ul>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
-<ul class="simple">
-<li><p>Observamos como <em>la presencia del campo magnético</em> induce una <em>separación de niveles</em> o <em>gap</em> de energía</p></li>
-<li><p>los dos autoestados del hamiltoniano <span class="math notranslate nohighlight">\(\ket{\pm,\hat{\bf z}}\)</span>  de energías <span class="math notranslate nohighlight">\(\pm \hbar\omega/2\)</span>   son <em>estables</em> bajo evolución temporal.</p></li>
-<li><p>esto los hace útiles para computación cuántica <span class="math notranslate nohighlight">\(\Rightarrow\)</span> un hamiltoniano <em>congela</em> ciertos estados, sus autoestados, siempre que <i> no sean degenerados </i></p></li>
-</ul>
+<p>Los dos autoestados del hamiltoniano <span class="math notranslate nohighlight">\(\ket{\pm,\hat{\bf z}}\)</span>  de energías <span class="math notranslate nohighlight">\(\pm \hbar\omega/2\)</span>   son invariantes bajo evolución temporal
+salvo por una fase global.</p>
+<p>Esto los hace útiles para computación cuántica <span class="math notranslate nohighlight">\(\Rightarrow\)</span> un hamiltoniano <u><em>congela</em></u> ciertos estados, sus autoestados, siempre que <i> no sean degenerados </i></p>
 </div>
 </section>
-<section id="control-cuantico">
-<h3>Control cuántico<a class="headerlink" href="#control-cuantico" title="Permalink to this heading">#</a></h3>
-<p>La elección del eje <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span> para alinear el campo magnético es <em>totalmente arbitraria</em> y se ha elegido para simplificar los cálculos, al ser el Hamiltoniano diagonal. Si escogiésemos otra dirección arbitraria:</p>
+<section id="puertas-cuanticas-primer-intento">
+<h3>Puertas cuánticas: primer intento<a class="headerlink" href="#puertas-cuanticas-primer-intento" title="Permalink to this heading">#</a></h3>
+<p>Desearíamos encontrar un método físico para implementar una puerta como <span class="math notranslate nohighlight">\(X\ket{0} = \ket{1}\)</span>. La precesión de Larmor <em>casi</em> hace el trabajo.</p>
+<p>Efectivamente, la elección del eje <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span> para el campo magnético (real o análogo) es <em>totalmente arbitraria</em> y se ha elegido para simplificar los cálculos. Si escogiésemos otra dirección</p>
 <ul class="simple">
 <li><p>el resultado físico <strong>tiene que ser el mismo</strong>: una <em>precesión de Larmor</em> del vector de Bloch en torno al eje que marca el campo magnético <span class="math notranslate nohighlight">\({\bf B}\)</span> con <em>frecuencia angular de Larmor</em> <span class="math notranslate nohighlight">\(\omega = \gamma B\)</span>.</p></li>
-</ul>
-<ul class="simple">
 <li><p>el álgebra será más complicada porque tendremos que exponenciar una matriz  <span class="math notranslate nohighlight">\(H = -\frac{\hbar}{2}\boldsymbol{\omega}\cdot\boldsymbol{\sigma} \)</span> que ya no es diagonal</p></li>
 </ul>
 <div class="math notranslate nohighlight">
@@ -870,7 +878,7 @@ U_{\boldsymbol{\omega}}(t,0) = \exp\left( -\frac{i}{\hbar} t H\right) = \exp\lef
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/precession_tilted2.png"><img alt="../../../_images/precession_tilted2.png" src="../../../_images/precession_tilted2.png" style="width: 350px;" /></a>
 </figure>
-<p>El resultado general es el siguiente</p>
+<p>El resultado de la exponencial es conocido</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{eqnarray*}
 U_{\boldsymbol{\omega}}(t,0) ~&amp;=&amp;~ \cos\left(\frac{t\omega}{2}\right) I + i \sin\left(\frac{t\omega}{2}\right) \, \frac{\boldsymbol{\omega}}{\omega}\cdot \boldsymbol{\sigma} \\
@@ -939,69 +947,16 @@ p_1(t) &amp;=&amp;|\braket{1}{\psi(t)}|^2 =  \frac{\omega_x^2 + \omega_y^2}{\ome
 <img alt="../../../_images/46ad30b9db2ab78a86a8127b22f341bd3354238854f692c6c40a28e60a5b0687.png" src="../../../_images/46ad30b9db2ab78a86a8127b22f341bd3354238854f692c6c40a28e60a5b0687.png" />
 </div>
 </div>
-<p>Observamos que es imposible conseguir una probabilidad de transición <span class="math notranslate nohighlight">\(p_1(t) = 1\)</span> a menos que hagamos <span class="math notranslate nohighlight">\(\omega_z = 0\)</span>.</p>
-<p>Podemos generar ahora la rotación más general de un cúbit en torno a un eje arbitrario</p>
-<p>Podemos comprobar que se recuperan las precesiones en torno a los ejes <span class="math notranslate nohighlight">\(\hat{\bf x}\)</span>, <span class="math notranslate nohighlight">\(\hat{\bf y}\)</span> y <span class="math notranslate nohighlight">\(\hat{\bf z}\)</span>.</p>
+<p>Para poder <em>fabricar</em> la puerta <span class="math notranslate nohighlight">\(X\)</span> que rota <span class="math notranslate nohighlight">\(\ket{0}\)</span> en <span class="math notranslate nohighlight">\(\ket{1}\)</span>, sería necesario ajustar dos parámetros</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\boldsymbol{\omega} = (0,0, \gamma B_z)\)</span>.</p></li>
+<li><p>El vector de Larmor debe tener componentes <span class="math notranslate nohighlight">\(\boldsymbol{\omega} = (0,\omega,0)\)</span>, es decir, estar sobre el eje <span class="math notranslate nohighlight">\(y\)</span>. En otras palabras, <span class="math notranslate nohighlight">\(\omega_z = 0\)</span>.</p></li>
+<li><p>El tiempo de precesión debería ajustarse a valer <span class="math notranslate nohighlight">\(t_p = \pi/\omega\)</span>  para que <span class="math notranslate nohighlight">\(p_0(t_p)=0\)</span> y <span class="math notranslate nohighlight">\(p_1(t_p)=1\)</span>.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-U_z(t,0) = \begin{bmatrix} e^{it \omega/2} &amp; 0 \\ 0 &amp;e^{-it \omega/2}  \end{bmatrix} = R_{z}(-t\omega)
-\end{split}\]</div>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\boldsymbol{\omega} = (\gamma B_x,0,0)\)</span>.</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-U_x(t,0) = 
-\begin{bmatrix}
- \cos \displaystyle\frac{t\omega}{2}  &amp;  i \sin\displaystyle\frac{t\omega}{2}  \\
- \rule{0mm}{8mm}
- i \sin\displaystyle\frac{t\omega}{2}  &amp; \cos\displaystyle\frac{t\omega}{2} 
-\end{bmatrix} = R_{x}(-t\omega)
-\end{split}\]</div>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\boldsymbol{\omega} = (0,\gamma B_y,0)\)</span>.</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-U_y(t,0) = 
-\begin{bmatrix}
- \cos \displaystyle\frac{t\omega}{2}  &amp;   \sin\displaystyle\frac{t\omega}{2}  \\
- \rule{0mm}{8mm}
-  -\sin\displaystyle\frac{t\omega}{2}  &amp; \cos\displaystyle\frac{t\omega}{2} 
-\end{bmatrix}= R_{y}(-t\omega)
-\end{split}\]</div>
-<p>Recuperamos los operadores de rotación de cúbits en torno a los tres ejes, con un ángulo dinámico <span class="math notranslate nohighlight">\(\alpha = -t\omega\)</span>.</p>
+<p>Ambos requisitos chocan frontalmente con el hecho de que  <span class="math notranslate nohighlight">\(\omega_z = \Delta/\hbar = (\varepsilon_1 - \varepsilon_0)/\hbar\)</span> está relacionada con el <em>gap</em> de energía. Este gap <u>no puede ser nulo</u>. Si lo fuera, <span class="math notranslate nohighlight">\(\varepsilon_0 = \varepsilon_1\)</span>, entonces <span class="math notranslate nohighlight">\(\ket{0}\)</span> y <span class="math notranslate nohighlight">\(\ket{1}\)</span> estarían degenerados y  no tendríamos una noción de estado fundamental. Es decir, perderíamos el control del estado inicial en el que está nuestro cúbit esperando a que lo manipulemos.</p>
+<p>La ingeniosa solución a este problema se le ocurrió a Isaac Rabi y le valió el premio Nobel en 1944.</p>
 </section>
-<section id="pulsos-y-puertas-elementales">
-<h3>Pulsos y puertas elementales<a class="headerlink" href="#pulsos-y-puertas-elementales" title="Permalink to this heading">#</a></h3>
-<p>Si tenemos un conocimiento muy exacto de la frecuencia de Larmor, podemos utilizar el procedimiento anterior para construir cualquier puerta simples de 1 cúbit, encendiendo el campo magnético un tiempo muy preciso, o <em>pulso</em></p>
-<p>Por ejemplo, cuando  <span class="math notranslate nohighlight">\(t =\Delta t =  \pi/\omega\)</span> hablamos de un <em>pulso elemental</em> en el que <span class="math notranslate nohighlight">\( ~\Rightarrow~\cos \frac{t\omega}{2} = 0~\)</span> , <span class="math notranslate nohighlight">\(~\sin \frac{t\omega}{2} = 1\)</span></p>
-<p>Con él somos capaces de generar las puertas <span class="math notranslate nohighlight">\(X,Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span>, así como la puerta de Hadamard.</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{eqnarray*}
-i \,U_{\hat{\bf z}}( \Delta t ,0) &amp;=&amp;  \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1  \end{bmatrix} =  Z  
-\nonumber\\ 
-&amp;&amp; \\
-i \,U_{\hat{\bf y}}( \Delta t ,0) &amp;=&amp;     \begin{bmatrix} 0  &amp; -i \\   i&amp; 0 \end{bmatrix}  =  Y 
-\nonumber\\ 
-&amp;&amp; \\
-i \,U_{\hat{\bf x}}( \Delta t ,0)  &amp;=&amp;  \begin{bmatrix} 0  &amp; 1 \\   1&amp; 0 \end{bmatrix} = X  \, 
-\nonumber\\ 
-&amp;&amp; \\
-i \,U_{\frac{1}{\sqrt{2}}(\hat{\bf x}+\hat{\bf z})}( \pi/\omega,0)  &amp;=&amp; \frac{1}{\sqrt{2}} \begin{bmatrix} 1  &amp; 1 \\   1&amp; -1 \end{bmatrix} = H  \, 
-\end{eqnarray*}\]</div>
-<p>Con pulsos de menor tiempo podemos construir puertas <span class="math notranslate nohighlight">\(S\)</span> y <span class="math notranslate nohighlight">\(T\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-e^{i\pi/4} \,U_{\hat{\bf z}}( \Delta t ,0) = S
-\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[e^{i\pi/8}\,U_{\hat{\bf z}}( \Delta t ,0) = T
-\]</div>
+<section id="oscilaciones-de-rabi">
+<h3>Oscilaciones de Rabi<a class="headerlink" href="#oscilaciones-de-rabi" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -1070,17 +1025,20 @@ e^{i\pi/4} \,U_{\hat{\bf z}}( \Delta t ,0) = S
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentos-magnetico-y-angular">Momentos magnético y angular</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-experimento-de-stern-y-gerlach">El experimento de Stern y Gerlach</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentos-magnetico-y-angular">Momentos magnético y angular</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-experimento-de-stern-y-gerlach">El experimento de Stern y Gerlach</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mediciones-sucesivas">Mediciones sucesivas</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#espin">Espín</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-un-cubit-de-espin">Preparación de un cúbit de espín</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulando-un-cubit">Manipulando un cúbit</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-de-un-espin-en-un-campo-magnetico">Evolución de un espín en un campo magnético.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-cuantico">Control cuántico</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pulsos-y-puertas-elementales">Pulsos y puertas elementales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#espin">Espín</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-un-estado-de-espin">Preparación de un estado de espín</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-cuantico">Control cuántico</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analogo-magnetico">Análogo magnético</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#precesion-de-larmor">Precesión de Larmor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puertas-cuanticas-primer-intento">Puertas cuánticas: primer intento</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oscilaciones-de-rabi">Oscilaciones de Rabi</a></li>
 </ul>
 </li>
 </ul>
