@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Números Complejos &#8212; Curso de Introducción a la Computación Cuántica</title>
+    <title>Los Números Complejos &#8212; Curso de Introducción a la Computación Cuántica</title>
   
   
   
@@ -106,7 +106,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Vectores" href="Section_01_02_Vectores_myst.html" />
+    <link rel="next" title="Los Vectores" href="Section_01_02_Vectores_myst.html" />
     <link rel="prev" title="Formalismo Matemático" href="../Chapter_01_01_formalismo_matematico_myst.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -217,8 +217,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Las reglas del juego</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../Chapter_01_01_formalismo_matematico_myst.html">Formalismo Matemático</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Números Complejos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Section_01_02_Vectores_myst.html">Vectores</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Los Números Complejos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Section_01_02_Vectores_myst.html">Los Vectores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Section_01_03_Operadores_myst.html">Operadores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Section_01_04_Tensores_myst.html">Tensores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Section_01_05_Probabilidades_myst.html">Probabilidades</a></li>
@@ -461,7 +461,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Números Complejos</h1>
+    <h1>Los Números Complejos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -506,13 +506,14 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 25, 2024 | 4 min read</p>
+<div><p>Feb 28, 2024 | 4 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
 </figure>
-<section class="tex2jax_ignore mathjax_ignore" id="numeros-complejos">
-<h1>Números Complejos<a class="headerlink" href="#numeros-complejos" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="los-numeros-complejos">
+<h1>Los Números Complejos<a class="headerlink" href="#los-numeros-complejos" title="Permalink to this heading">#</a></h1>
+<p><strong>no te quedan tan lejos</strong></p>
 <p><span class="math notranslate nohighlight">\( \newcommand{\bra}[1]{\langle #1|} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\ket}[1]{|#1\rangle} \)</span>
 <span class="math notranslate nohighlight">\( \newcommand{\braket}[2]{\langle #1|#2\rangle} \)</span>
@@ -543,7 +544,7 @@ document.write(`
 </div>
 <section id="introduccion">
 <h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
-<p>La mecánica cuántica guarda una relación muy estrecha con los número complejos. Para introducirlos, empezaremos recordando que el cuadrado de un número real <em>siempre</em> es positivo <span class="math notranslate nohighlight">\(a^2 &gt;0\)</span>.</p>
+<p>La mecánica cuántica no puede entenderse sin los números complejos. Para introducirlos, empezaremos recordando que el cuadrado de un número real <em>siempre</em> es positivo <span class="math notranslate nohighlight">\(a^2 &gt;0\)</span>.</p>
 <p>Por ejemplo <span class="math notranslate nohighlight">\(~~2^2 =  4~~\)</span> pero también <span class="math notranslate nohighlight">\(~~(-2)^2 = 4~~\)</span>. Por eso, la raíz cuadrada de un número real sólo existe si dicho número es positivo.<br />
 Es decir, <span class="math notranslate nohighlight">\(\sqrt{4}=\pm 2\)</span>, mientras que, no sabríamos dar sentido a</p>
 <div class="math notranslate nohighlight">
@@ -579,8 +580,8 @@ i^3  &amp;=&amp; i*i*i = i^2 * i = -i\\ \rule{0mm}{6mm}
 \end{array}
 \end{split}\]</div>
 <p>Observar que el <em>inverso multiplicativo</em>  <span class="math notranslate nohighlight">\(1/i\)</span> también es <span class="math notranslate nohighlight">\(-i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-913d75d0-e85c-49a2-b36b-57dcfad45d67">
-<span class="eqno">(1)<a class="headerlink" href="#equation-913d75d0-e85c-49a2-b36b-57dcfad45d67" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-f43703c6-34eb-4916-ba86-6a560de159b2">
+<span class="eqno">(1)<a class="headerlink" href="#equation-f43703c6-34eb-4916-ba86-6a560de159b2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \frac{i}{i}  &amp;=&amp;   1 \nonumber\\
 i (-i) &amp;=&amp; - i^2  =  1
 \end{eqnarray}\]</div>
@@ -711,8 +712,8 @@ z=r exp(i th)= (-1.873-0.702j)
 </div>
 </div>
 <p>Usar la forma polar es útil en situaciones en las que aparecen productos y potencias del número <span class="math notranslate nohighlight">\(i\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-af5c4b1b-9d8f-416d-beba-ff508dc90431">
-<span class="eqno">(2)<a class="headerlink" href="#equation-af5c4b1b-9d8f-416d-beba-ff508dc90431" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-c0a2dc6c-935c-4539-9c32-182de0ea4851">
+<span class="eqno">(2)<a class="headerlink" href="#equation-c0a2dc6c-935c-4539-9c32-182de0ea4851" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 i &amp;=&amp; e^{i\pi/2} \\ \rule{0mm}{10mm}
 -1 &amp;=&amp; e^{i\pi} \\ \rule{0mm}{10mm}
 i &amp;=&amp; e^{3i\pi/2} =e^{-i\pi/2} \\  \rule{0mm}{10mm}
@@ -1088,6 +1089,9 @@ comprobación z1/z2= (1.08707+2.79612j)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-0+0j)
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <img alt="../../../_images/01deb8d6290f05212f629cabd30c9e11fefcf7a62a4b2457d0056f78565c935f.png" src="../../../_images/01deb8d6290f05212f629cabd30c9e11fefcf7a62a4b2457d0056f78565c935f.png" />
 </div>
 </div>
@@ -1234,7 +1238,7 @@ comprobación z1/z2= (1.08707+2.79612j)
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Vectores</p>
+        <p class="prev-next-title">Los Vectores</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
