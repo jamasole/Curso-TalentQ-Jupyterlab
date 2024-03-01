@@ -2,7 +2,7 @@ import numpy as np
 import scipy.linalg as la
 from IPython.display import display,Markdown,Latex
 import matplotlib.pyplot as plt
-from qiskit.tools.visualization import array_to_latex
+from qiskit.visualization import array_to_latex
 import copy 
 
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
@@ -337,6 +337,10 @@ def binary_function(f_outputs):
 
     return qc
 
+# funcion que saca un a imagen del circuito usando qiskit
+def draw_qibo_circuit_mpl(qcircuit):
+    from qiskit import QuantumCircuit
+    return QuantumCircuit.from_qasm_str(qcircuit.to_qasm()).draw('mpl')
            
 
 # funcion genera una transformada de Fourier Cuántica
