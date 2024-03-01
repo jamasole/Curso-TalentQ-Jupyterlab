@@ -22,7 +22,7 @@ from build_functions import number_cells
 from build_functions import delete_cell
 from build_functions import bluid_references
 
-
+from build_functions import build_code_block
 
 # Obtenemos el nombre del archivo del primer algumento de la llamada
 file_name = sys.argv[1:][0]
@@ -48,11 +48,6 @@ if num_start_div != num_end_div:
 # Sacamalos el numero de linea del inicio de todos los cuadros con "<div class=.... alert alert-block alert...>"
 command_i_start_alert_list   = 'grep -n "<div class=" '+file_name+' | grep "alert alert-block alert" |  cut -d":" -f1'
 i_start_alert_list = grep_file_index(command_i_start_alert_list)
-
-
-# Sacamalos el numero de linea del inicio de las <figure>
-command_i_start_figure_list = 'grep -n "<figure>" ' + file_name + ' |  cut -d":" -f1'
-i_start_figure_list = grep_file_index(command_i_start_figure_list)
 
 
 # Leemos el archivo linea a linea y modificamos los cuadros
@@ -116,50 +111,62 @@ for i in reversed(range(len(index_list_list[0]))):
         
 
 ############################################################################
+# Sacamalos el numero de linea del inicio de las <figure>
+command_i_start_figure_list = 'grep -n "<figure>" ' + file_name + ' |  cut -d":" -f1'
+i_start_figure_list = grep_file_index(command_i_start_figure_list)
+
 # Usando el número de linea donde empiezan las figuras, sacamos todas las lineas importantes          
-index_fig_list_list, datos_list_list, number_ref_fig = find_figures(f_data, i_start_figure_list)
+if len(i_start_figure_list) > 0:
+    index_fig_list_list, datos_list_list, number_ref_fig = find_figures(f_data, i_start_figure_list)
 
-############################################################################
-# Comenzamos a sustituir las figuras (empezando por el final)
-for i in reversed(range(len(index_fig_list_list[0]))):
-    build_figure(i, f_data, index_fig_list_list, datos_list_list)
-
-
-# Añadimos el tiempo de lectura y la fecha en la primera linea. 
-# Para ello, primero cogemos la fecha del texto, eliminando la línea
-command_i_date = 'grep -n "Notebook_Date" ' + file_name + ' |  cut -d":" -f1 | head -n 1'
-i_date = grep_file_index(command_i_date)
-
-command_i_first_line = 'grep -n "\\"source\\": \\[" ' + file_name + ' |  cut -d":" -f1 | head -n 1'
-i_first_line = grep_file_index(command_i_first_line)
+    ############################################################################
+    # Comenzamos a sustituir las figuras (empezando por el final)
+    for i in reversed(range(len(index_fig_list_list[0]))):
+        build_figure(i, f_data, index_fig_list_list, datos_list_list)
 
 
-from datetime import datetime
 
-if len(i_date) > 0 :
-    i_date = i_date[0]
-    try: 
-        Notebook_Date = f_data[i_date].split(':')[-1].split('\\n')[0].replace(" ","")
-        Date_raw = datetime.strptime(Notebook_Date, "%Y/%m/%d")
-        Date_formated = Date_raw.strftime("%b %d, %Y")
+    # Añadimos el tiempo de lectura y la fecha en la primera linea. 
+    # Para ello, primero cogemos la fecha del texto, eliminando la línea
+    command_i_date = 'grep -n "Notebook_Date" ' + file_name + ' |  cut -d":" -f1 | head -n 1'
+    i_date = grep_file_index(command_i_date)
 
-        f_data[i_date] = '    "\\n",\n'
+    command_i_first_line = 'grep -n "\\"source\\": \\[" ' + file_name + ' |  cut -d":" -f1 | head -n 1'
+    i_first_line = grep_file_index(command_i_first_line)
 
+
+    from datetime import datetime
+
+    if len(i_date) > 0 :
+        i_date = i_date[0]
+        try: 
+            Notebook_Date = f_data[i_date].split(':')[-1].split('\\n')[0].replace(" ","")
+            Date_raw = datetime.strptime(Notebook_Date, "%Y/%m/%d")
+            Date_formated = Date_raw.strftime("%b %d, %Y")
+
+            f_data[i_date] = '    "\\n",\n'
+
+            my_replace(f_data, i_first_line[0], 'source": [\n'+
+                                            #'    "> {sub-ref}`today` | {sub-ref}`wordcount-words` words | {sub-ref}`wordcount-minutes` min read\\n",\n'
+                                            '    "> ' + Date_formated + ' | {sub-ref}`wordcount-minutes` min read\\n",\n'
+                                            '    "\\n",\n'    )
+        except:
+
+            print(f"\033[91m======\033[0m") 
+            print(f"\033[91mFormato erroneo en la fecha. Debe de ser:\033[0m")
+            print(f"\033[91m<a id='Notebook_Date'></a> Created: yyyy/mm/dd\033[0m")
+            print(f"\033[91m======\033[0m") 
+    else:
         my_replace(f_data, i_first_line[0], 'source": [\n'+
-                                         #'    "> {sub-ref}`today` | {sub-ref}`wordcount-words` words | {sub-ref}`wordcount-minutes` min read\\n",\n'
-                                         '    "> ' + Date_formated + ' | {sub-ref}`wordcount-minutes` min read\\n",\n'
-                                         '    "\\n",\n'    )
-    except:
+                                            #'    "> {sub-ref}`today` | {sub-ref}`wordcount-words` words | {sub-ref}`wordcount-minutes` min read\\n",\n'
+                                            '    "> {sub-ref}`today` | {sub-ref}`wordcount-minutes` min read\\n",\n'
+                                            '    "\\n",\n'    )
 
-        print(f"\033[91m======\033[0m") 
-        print(f"\033[91mFormato erroneo en la fecha. Debe de ser:\033[0m")
-        print(f"\033[91m<a id='Notebook_Date'></a> Created: yyyy/mm/dd\033[0m")
-        print(f"\033[91m======\033[0m") 
-else:
-    my_replace(f_data, i_first_line[0], 'source": [\n'+
-                                         #'    "> {sub-ref}`today` | {sub-ref}`wordcount-words` words | {sub-ref}`wordcount-minutes` min read\\n",\n'
-                                         '    "> {sub-ref}`today` | {sub-ref}`wordcount-minutes` min read\\n",\n'
-                                         '    "\\n",\n'    )
+    ################################################################################
+    ## Arreglamos las referencias a las figuras
+    ##   [...](#fig_...)  --->  {ref}`sec_...` o {numref}`sec_...`
+
+    bluid_references(f_data, 'fig_', file_name, number_ref_fig)
 
 ################################################################################
 ## Inicio de todas las celdas
@@ -187,7 +194,7 @@ if len(i_pattern_code_list) > 0:
     for mask in masks_list:
         i_start_cell_list    = []
         i_start_content_list = []
-        i_end_content_list      = []
+        i_end_content_list   = []
         
         name_code_list  = []
         content_list    = []
@@ -203,12 +210,14 @@ if len(i_pattern_code_list) > 0:
                 if content[i] == f_data[i_pattern_code]:
                     content[i] ='    "",\n'
 
+            # La primera celda de cada bloque conserva la salida. Lo que hacemos es esconder la entrada con "remove_input"
             if k == 0:
                 f_data[i_start_content-2] = f_data[i_start_content-2] + '   "metadata": {\n    "tags": [\n     "remove_input"\n    ]\n   },\n'
                 
                 # Si una de las celdas del bloque es la última, hay que quitar una coma
                 if np.array(i_pattern_code_list)[mask][-1] > i_start_all_cells[-1]:  
                     f_data[i_end_content+2] = '  }\n'
+            
             else:
                 delete_cell(f_data, i_start_cell, i_end_content)
                 #for i in range(i_start_cell,i_end_content+3):
@@ -227,13 +236,28 @@ if len(i_pattern_code_list) > 0:
 
 
 
-
-
 ################################################################################
-## Arreglamos las referencias a las figuras
-##   [...](#fig_...)  --->  {ref}`sec_...` o {numref}`sec_...`
+## Celdas de código no ejecutables: "skip_execution"
 
-bluid_references(f_data, 'fig_', file_name, number_ref_fig)
+pattern_skip_exe = 'skip_execution'
+command_i_pattern_skip_exe = 'grep -n "'+pattern_skip_exe+'" '+ file_name + ' |  cut -d":" -f1 '
+i_pattern_skip_exe_list = grep_file_index(command_i_pattern_skip_exe)
+
+
+if len(i_pattern_skip_exe_list) > 0: 
+    
+    num_cells_pattern_skip_exe = number_cells(i_pattern_skip_exe_list, i_start_all_cells)
+
+
+    for k in range(len(i_pattern_skip_exe_list)):
+        i_start_cell, i_start_content, i_end_content, content, full_cell = find_cell(f_data, i_pattern_skip_exe_list[k])
+
+
+        delete_cell(f_data, i_start_cell, i_end_content)
+
+        build_code_block(f_data, i_start_cell, i_start_all_cells, content, "python")
+
+
 
 
 ################################################################################
