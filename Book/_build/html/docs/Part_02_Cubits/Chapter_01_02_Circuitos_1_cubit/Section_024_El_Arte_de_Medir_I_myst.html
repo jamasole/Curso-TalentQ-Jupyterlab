@@ -473,7 +473,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-1-cubit">Medidas de 1 cúbit</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-la-base-computacional">Medidas en la base computacional</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-un-simulador">Medidas en un simulador</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tomografia-cuantica">Tomografía Cuántica</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-un-ordenador-cuantico-real">Medidas en un ordenador cuántico real</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-la-moneda-cuantica">Ejemplo: la moneda cuántica</a></li>
@@ -500,7 +499,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Feb 28, 2024 | 7 min read</p>
+<div><p>Mar 03, 2024 | 6 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -527,17 +526,7 @@ document.write(`
 <span class="kn">import</span> <span class="nn">scipy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span><span class="n">Markdown</span><span class="p">,</span><span class="n">Latex</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">array_to_latex</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
-<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">Aer</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">transpile</span> 
-<span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">plot_histogram</span>
-<span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
+<span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">array_to_latex</span>
 </pre></div>
 </div>
 </div>
@@ -546,79 +535,21 @@ document.write(`
 <h2>Medidas de 1 cúbit<a class="headerlink" href="#medidas-de-1-cubit" title="Permalink to this heading">#</a></h2>
 <section id="medidas-en-la-base-computacional">
 <h3>Medidas en la base computacional<a class="headerlink" href="#medidas-en-la-base-computacional" title="Permalink to this heading">#</a></h3>
-<p>El <strong>aparato de medida estándar</strong> en computación cuántica asigna valores <span class="math notranslate nohighlight">\(\{0,1\}\)</span> a los kets <span class="math notranslate nohighlight">\(\ket{0}\)</span> y <span class="math notranslate nohighlight">\(\ket{1}\)</span> de la base computacional</p>
+<p>El <strong>aparato de medida estándar</strong> en computación cuántica asigna valores <span class="math notranslate nohighlight">\(a = 0,1\)</span> a los kets <span class="math notranslate nohighlight">\(\ket{0}\)</span> y <span class="math notranslate nohighlight">\(\ket{1}\)</span> de la base computacional</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/cubit_meter2.png"><img alt="../../../_images/cubit_meter2.png" src="../../../_images/cubit_meter2.png" style="width: 250px;" /></a>
 </figure>
-<p>donde <span class="math notranslate nohighlight">\(a = 0,1\)</span></p>
-<p>En general, el estado es destruido en la medida, por lo que se suele omitir el hilo cuántico a su salida</p>
+<p>En general, el estado emergente es  ignorado (o destruido) en la medida. Es esos casos se omite el hilo cuántico a la salida</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/cubit_meter1.png"><img alt="../../../_images/cubit_meter1.png" src="../../../_images/cubit_meter1.png" style="width: 300px;" /></a>
 </figure>
-<p>Se trata de una <em>medida proyectiva</em> a la que asociamos el observable <span class="math notranslate nohighlight">\(Z = \sigma_z \)</span>.</p>
+<p>La medida estándar es una <em>medida proyectiva</em> a la que asociamos el observable <span class="math notranslate nohighlight">\(Z = \sigma_z \)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
 Z\ket{0} = +\ket{0}~~~~,~~~~~ Z\ket{1} = -\ket{1}
 \]</div>
-<p>Podemos unificar ambos resultados como: <span class="math notranslate nohighlight">\(~Z\ket{a} = (-1)^a\ket{a}\)</span>,
-con  <span class="math notranslate nohighlight">\(a=\{0,1\}\)</span>.</p>
-</section>
-<section id="medidas-en-un-simulador">
-<h3>Medidas en un simulador<a class="headerlink" href="#medidas-en-un-simulador" title="Permalink to this heading">#</a></h3>
-<p>Se trata de un programa clásico que <strong>simula</strong> un circuito cuántico utilizando las leyes de la Mecánica Cuántica</p>
-<p>El resultado de un circuito calculado con <span class="math notranslate nohighlight">\(qasm\_simulator\)</span> sólo se puede obtener mediante un aparato de medida que, usado repetidas veces nos permitirá reconstruir el estado de manera estadística.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; hay que elegir un método de ejecución del circuito(backend), puede ser real, o simulado&#39;</span>
-<span class="n">M_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">)</span>
-
-<span class="n">qc</span><span class="o">=</span><span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="c1">#qc.x(0)</span>
-<span class="c1">#qc.h(0)</span>
-<span class="c1">#qc.u(np.pi/3,np.pi/5,0,0)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
-
-<span class="c1"># opción 1</span>
-<span class="n">job</span><span class="o">=</span><span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">backend</span><span class="o">=</span><span class="n">M_simulator</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span> 
-<span class="n">result</span><span class="o">=</span><span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
-<span class="n">counts</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
-
-<span class="c1"># opción 2</span>
-<span class="c1">#qcobj = transpile(qc, M_simulator )      # Crea un objeto compilado a partir del circuito  </span>
-<span class="c1">#job = M_simulator.run(qcobj, shots=2048) # Hacemos la simulación 2048 veces </span>
-<span class="c1">#resultado=job.result()</span>
-<span class="c1">#counts=resultado.get_counts()</span>
-
-<span class="s1">&#39;escribimos las cuentas&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
-  self._style, def_font_ratio = load_style(self._style)
-</pre></div>
-</div>
-<img alt="../../../_images/b20c1ffa833814f970dd10e7c7f7ec244210223337ae1619f3d07dc5810cc0b0.png" src="../../../_images/b20c1ffa833814f970dd10e7c7f7ec244210223337ae1619f3d07dc5810cc0b0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;0&#39;: 1000}
-</pre></div>
-</div>
-</div>
-</div>
-<p>Visualizamos el resultado mediante un histograma</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">plot_histogram</span>
-<span class="n">plot_histogram</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span> <span class="c1"># Mostramos un histograma de resultados</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/40c481f768fd4ce4eb040a88aec4a5bf55085fe2bd8fe8d897685d2e923e4ba6.png" src="../../../_images/40c481f768fd4ce4eb040a88aec4a5bf55085fe2bd8fe8d897685d2e923e4ba6.png" />
-</div>
-</div>
+<p>o, de forma conjunta, con <span class="math notranslate nohighlight">\(~a=0,1\)</span></p>
+<p>$<span class="math notranslate nohighlight">\(~Z\ket{a} = (-1)^a\ket{a}\)</span>$,</p>
 </section>
 <section id="tomografia-cuantica">
 <h3>Tomografía Cuántica<a class="headerlink" href="#tomografia-cuantica" title="Permalink to this heading">#</a></h3>
@@ -631,15 +562,19 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 <p>Definamos un vector aleatorio</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psi_state</span><span class="o">=</span> <span class="n">tQ</span><span class="o">.</span><span class="n">random_ket</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
+<span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">plot_bloch_multivector</span><span class="p">,</span> <span class="n">array_to_latex</span>  
+
+<span class="n">psi_state</span><span class="o">=</span> <span class="n">tQ</span><span class="o">.</span><span class="n">random_ket</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Statevector</span><span class="p">(</span><span class="n">psi_state</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">))</span>
-<span class="c1">#display(Statevector(psi_state).draw(&#39;Bloch&#39;))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Statevector</span><span class="p">(</span><span class="n">psi_state</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;Bloch&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[(0.4689602866 + 0.5724535918 i) |0\rangle+(-0.5310129737 + 0.4127933581 i) |1\rangle\]</div>
+\[(-0.6782423649 + 0.0593411001 i) |0\rangle+(-0.3242127325 + 0.6567739583 i) |1\rangle\]</div>
+<img alt="../../../_images/d79f7075a21548818d6f9f65fd618239f9177429c9a32fdcd5f3ce7d800d276c.png" src="../../../_images/d79f7075a21548818d6f9f65fd618239f9177429c9a32fdcd5f3ce7d800d276c.png" />
 </div>
 </div>
 <p>Las probabilidades de obtener ‘0’ y ‘1’ son los cuadrados de las amplitudes</p>
@@ -653,7 +588,7 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)= 0.54763 , p(1)= 0.45237
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)= 0.46353 , p(1)= 0.53647
 </pre></div>
 </div>
 </div>
@@ -661,29 +596,46 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 <p>Vamos a recuperarlas <em>experimentalmente</em> corriendo un circuito. Primero obtenemos el diccionario de cuentas</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qc_psi</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
+<span class="kn">from</span> <span class="nn">qiskit_aer</span> <span class="kn">import</span> <span class="n">AerSimulator</span>
+
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">AerSimulator</span><span class="p">()</span>
+
+<span class="s1">&#39;generamos un circuito en el que inicializamos el estado psi&#39;</span>
+<span class="n">qc_psi</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">qc_psi</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">psi_state</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">qc_psi</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">qc_psi</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
 
-<span class="n">nshots</span> <span class="o">=</span> <span class="mi">1000000</span>
-<span class="n">counts_psi</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc_psi</span><span class="p">,</span><span class="n">M_simulator</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">nshots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;counts_psi = &#39;</span><span class="p">,</span><span class="n">counts_psi</span><span class="p">)</span>
+<span class="s1">&#39;ejecutamos un número de veces&#39;</span>
+<span class="n">nshots</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">counts_psi</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc_psi</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">nshots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
 
+<span class="s1">&#39;visualizamos los reultados como un diccionario y  mediante un histograma&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;counts_psi = &#39;</span><span class="p">,</span><span class="n">counts_psi</span><span class="p">)</span>
 <span class="n">plot_histogram</span><span class="p">(</span><span class="n">counts_psi</span><span class="p">)</span> <span class="c1"># Mostramos un histograma de resultados</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/TalentQ/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
   self._style, def_font_ratio = load_style(self._style)
 </pre></div>
 </div>
-<img alt="../../../_images/3574cd87df3e0dc8f435d71bcfc3517104e8d8fae893f0a907d2b73379a9607b.png" src="../../../_images/3574cd87df3e0dc8f435d71bcfc3517104e8d8fae893f0a907d2b73379a9607b.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  {&#39;1&#39;: 452147, &#39;0&#39;: 547853}
+<img alt="../../../_images/a2713e5e115e4b445de2ff504592d20a2dc9fad553d728150248063dc9cdf371.png" src="../../../_images/a2713e5e115e4b445de2ff504592d20a2dc9fad553d728150248063dc9cdf371.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  {&#39;0&#39;: 4726, &#39;1&#39;: 5274}
 </pre></div>
 </div>
-<img alt="../../../_images/5398de3cfe39ed548401093e4f6de5cc1ca397410f79c2f33730fd2eb5293748.png" src="../../../_images/5398de3cfe39ed548401093e4f6de5cc1ca397410f79c2f33730fd2eb5293748.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="s1">&#39;visualizamos los reultados como un diccionario y  mediante un histograma&#39;</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;counts_psi = &#39;</span><span class="p">,</span><span class="n">counts_psi</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">plot_histogram</span><span class="p">(</span><span class="n">counts_psi</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;plot_histogram&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>Ahora podemos  calcular las frecuencias relativas <span class="math notranslate nohighlight">\(n_i/N\)</span>  y compararlas con las probabilidades <span class="math notranslate nohighlight">\(p(i)\)</span></p>
@@ -697,7 +649,7 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)_exp = 0.547853   p(1)_exp =  0.452147
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)_exp = 0.4726   p(1)_exp =  0.5274
 </pre></div>
 </div>
 </div>
@@ -807,10 +759,6 @@ en <a class="reference external" href="https://quantum-computing.ibm.com/">https
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
-  self._style, def_font_ratio = load_style(self._style)
-</pre></div>
-</div>
 <img alt="../../../_images/e26cf56639d841fd0581e101ed20eebc435d49d5a7b9e80ae7c737153b8df62a.png" src="../../../_images/e26cf56639d841fd0581e101ed20eebc435d49d5a7b9e80ae7c737153b8df62a.png" />
 </div>
 </div>
@@ -824,7 +772,13 @@ en <a class="reference external" href="https://quantum-computing.ibm.com/">https
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 526, &#39;0&#39;: 498}
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">M_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">M_simulator</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;Aer&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -924,8 +878,8 @@ Verificamos la consistencia<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-5bc71e7b-37fd-44fe-a7ba-c9a9724b6b0c">
-<span class="eqno">(16)<a class="headerlink" href="#equation-5bc71e7b-37fd-44fe-a7ba-c9a9724b6b0c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-3f477a66-d78c-459c-9d3f-4bf28daf5204">
+<span class="eqno">(16)<a class="headerlink" href="#equation-3f477a66-d78c-459c-9d3f-4bf28daf5204" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \hat {\bf n} \cdot \bsig\,  \ket{a}_{\hat{\bf n}} ~~&amp;=&amp;~~ 
 U~ \hat {\bf z} \cdot \bsig ~  U^\dagger ~ U  \ket{a}_{\hat{\bf z}}\\  \rule{0mm}{8mm}
 &amp;=&amp; U~ \hat {\bf z} \cdot \bsig ~   \ket{a}_{\hat{\bf z}}\\   \rule{0mm}{8mm}
@@ -1018,7 +972,14 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 </div>
 <div class="cell_output docutils container">
 <img alt="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" src="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;010&#39;: 1}
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">qc</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">display</span><span class="p">(</span><span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">M_simulator</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;execute&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1072,9 +1033,22 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 </div>
 <div class="cell_output docutils container">
 <img alt="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" src="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cuentas(base Z)= {&#39;1&#39;: 5035, &#39;0&#39;: 4965}
-cuentas(base X)= {&#39;0&#39;: 10000}
-cuentas( base Y)= {&#39;1&#39;: 4951, &#39;0&#39;: 5049}
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">display</span><span class="p">(</span><span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">cuentasz</span> <span class="o">=</span> <span class="n">measure_XYZ</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cuentas(base Z)=&quot;</span><span class="p">,</span><span class="n">cuentasz</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">cuentasx</span> <span class="o">=</span> <span class="n">measure_XYZ</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span>
+
+<span class="nn">Cell In[16], line 18,</span> in <span class="ni">measure_XYZ</span><span class="nt">(qc, axis, shots)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">qc0</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">qc0</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">counts</span><span class="o">=</span><span class="n">execute</span><span class="p">(</span><span class="n">qc0</span><span class="p">,</span><span class="n">backend</span><span class="o">=</span><span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="k">return</span> <span class="n">counts</span>
+
+<span class="ne">NameError</span>: name &#39;execute&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1129,8 +1103,8 @@ Comprobación<div class="sd-summary-down docutils">
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[(-0.2475234811 + 0.9335312195 i) |0\rangle+(0.0302734377 - 0.2575560279 i) |1\rangle\]</div>
-<img alt="../../../_images/06951e7a04d5b06a31b9869300a3d69c0b8c519177f64f17e1d7c80b20251272.png" src="../../../_images/06951e7a04d5b06a31b9869300a3d69c0b8c519177f64f17e1d7c80b20251272.png" />
+\[(0.4607749355 + 0.3739575715 i) |0\rangle+(-0.1196432046 + 0.7959445314 i) |1\rangle\]</div>
+<img alt="../../../_images/5eb952fab0dcd302daa9dfbc033d24818c27f19a8c0b8b85a14065f9f3195b31.png" src="../../../_images/5eb952fab0dcd302daa9dfbc033d24818c27f19a8c0b8b85a14065f9f3195b31.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1171,8 +1145,16 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/5a1aaa1f1be9da8f1fe19f67d6de3ce544cf31ce981a31c85f8f18096f636f89.png" src="../../../_images/5a1aaa1f1be9da8f1fe19f67d6de3ce544cf31ce981a31c85f8f18096f636f89.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 666, &#39;0&#39;: 9334}
+<img alt="../../../_images/5491e27d228b06c09aec38d40940b63201b8746d7ed8b8bb7b80b3f871da046f.png" src="../../../_images/5491e27d228b06c09aec38d40940b63201b8746d7ed8b8bb7b80b3f871da046f.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">display</span><span class="p">(</span><span class="n">qc_psi_copy</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">shots</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">counts_psi</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc_psi_copy</span><span class="p">,</span><span class="n">M_simulator</span><span class="p">,</span><span class="n">shots</span> <span class="o">=</span> <span class="n">shots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">display</span><span class="p">(</span><span class="n">counts_psi</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;execute&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1190,7 +1172,7 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = 0.8668
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = -0.0548
 </pre></div>
 </div>
 </div>
@@ -1311,8 +1293,15 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/7ac3a3bd9405e2c8881dab823d39fc49f3fec72cb2974129e4823cc2201fcf52.png" src="../../../_images/7ac3a3bd9405e2c8881dab823d39fc49f3fec72cb2974129e4823cc2201fcf52.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;A&gt; = 0.53981
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#from qiskit.circuit.library.standard_gates import U3Gate</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">M_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="s1">&#39;definimos un estado arbitrario en la esfera de Bloch&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">theta</span> <span class="o">=</span> <span class="mf">1.</span>  <span class="c1">#rad</span>
+
+<span class="ne">NameError</span>: name &#39;Aer&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1387,7 +1376,6 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-1-cubit">Medidas de 1 cúbit</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-la-base-computacional">Medidas en la base computacional</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-un-simulador">Medidas en un simulador</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tomografia-cuantica">Tomografía Cuántica</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-un-ordenador-cuantico-real">Medidas en un ordenador cuántico real</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-la-moneda-cuantica">Ejemplo: la moneda cuántica</a></li>
