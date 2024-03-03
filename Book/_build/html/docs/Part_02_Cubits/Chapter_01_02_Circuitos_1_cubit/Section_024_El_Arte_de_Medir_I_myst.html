@@ -547,7 +547,10 @@ document.write(`
 Z\ket{0} = +\ket{0}~~~~,~~~~~ Z\ket{1} = -\ket{1}
 \]</div>
 <p>o, de forma conjunta, con <span class="math notranslate nohighlight">\(~a=0,1\)</span></p>
-<p>$<span class="math notranslate nohighlight">\(~Z\ket{a} = (-1)^a\ket{a}\)</span>$,</p>
+<div class="math notranslate nohighlight">
+\[
+Z\ket{a} = (-1)^a\ket{a}
+\]</div>
 </section>
 <section id="probabilidades-de-medida">
 <h3>Probabilidades de medida<a class="headerlink" href="#probabilidades-de-medida" title="Permalink to this heading">#</a></h3>
@@ -596,25 +599,29 @@ p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \
 </div>
 </div>
 </div>
-<p>Vamos a recuperarlas <em>experimentalmente</em> corriendo un circuito. Primero obtenemos el diccionario de cuentas</p>
+<p>Vamos a recuperarlas <em>experimentalmente</em> corriendo un circuito. Primero obtenemos el diccionario de cuentas obtenidas después de ejecutar el circuito un número de veces</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nshots</span> <span class="o">=</span> <span class="mi">10000</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 Qibo</label><div class="sd-tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">from</span> <span class="nn">qibo.models.circuit</span> <span class="kn">import</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">gates</span>
-<span class="n">nqubits</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">qc</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="n">nqubits</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qibo.models.circuit</span> <span class="kn">import</span> <span class="n">Circuit</span><span class="p">,</span> <span class="n">gates</span>
 
+<span class="s1">&#39;generamos un circuito en el que inicializamos el estado psi&#39;</span>
+<span class="n">qc</span> <span class="o">=</span> <span class="n">Circuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">qc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gates</span><span class="o">.</span><span class="n">U3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">trainable</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
-
 <span class="n">qc</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">gates</span><span class="o">.</span><span class="n">M</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 
-<span class="c1">#tQ.draw_qibo_circuit_mpl(c)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">qc</span><span class="p">(</span><span class="n">nshots</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
-<span class="n">counts_psi</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">frequencies</span><span class="p">()</span>
+<span class="s1">&#39;ejecutamos un número de veces&#39;</span>
+<span class="n">counts_psi</span> <span class="o">=</span> <span class="n">qc</span><span class="p">(</span><span class="n">nshots</span><span class="o">=</span><span class="n">nshots</span><span class="p">)</span><span class="o">.</span><span class="n">frequencies</span><span class="p">()</span>
 
-
+<span class="s1">&#39;visualizamos los resultados como un diccionario y  mediante un histograma&#39;</span>
 <span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">plot_histogram</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;counts_psi = &#39;</span><span class="p">,</span><span class="n">counts_psi</span><span class="p">)</span>
 <span class="n">plot_histogram</span><span class="p">(</span><span class="n">counts_psi</span><span class="p">)</span> <span class="c1"># Mostramos un histograma de resultados</span>
@@ -624,11 +631,8 @@ Qibo</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 Qiskit</label><div class="sd-tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
 <span class="kn">from</span> <span class="nn">qiskit_aer</span> <span class="kn">import</span> <span class="n">AerSimulator</span>
-
-<span class="n">simulator</span> <span class="o">=</span> <span class="n">AerSimulator</span><span class="p">()</span>
 
 <span class="s1">&#39;generamos un circuito en el que inicializamos el estado psi&#39;</span>
 <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -637,10 +641,9 @@ Qiskit</label><div class="sd-tab-content docutils">
 <span class="n">display</span><span class="p">(</span><span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
 
 <span class="s1">&#39;ejecutamos un número de veces&#39;</span>
-<span class="n">nshots</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="n">counts_psi</span> <span class="o">=</span> <span class="n">simulator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">nshots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+<span class="n">counts_psi</span> <span class="o">=</span> <span class="n">AerSimulator</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">nshots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
 
-<span class="s1">&#39;visualizamos los reultados como un diccionario y  mediante un histograma&#39;</span>
+<span class="s1">&#39;visualizamos los resultados como un diccionario y  mediante un histograma&#39;</span>
 <span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">plot_histogram</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;counts_psi = &#39;</span><span class="p">,</span><span class="n">counts_psi</span><span class="p">)</span>
 <span class="n">plot_histogram</span><span class="p">(</span><span class="n">counts_psi</span><span class="p">)</span> <span class="c1"># Mostramos un histograma de resultados</span>
@@ -650,34 +653,27 @@ Qiskit</label><div class="sd-tab-content docutils">
 </div>
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Qibo 0.1.12.dev0|INFO|2024-03-03 20:46:13]: Using tensorflow backend on /device:CPU:0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Qibo 0.1.12.dev0|INFO|2024-03-03 21:02:46]: Using tensorflow backend on /device:CPU:0
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  Counter({&#39;1&#39;: &lt;tf.Tensor: shape=(), dtype=int64, numpy=6612&gt;, &#39;0&#39;: &lt;tf.Tensor: shape=(), dtype=int64, numpy=3388&gt;})
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  Counter({&#39;1&#39;: &lt;tf.Tensor: shape=(), dtype=int64, numpy=6640&gt;, &#39;0&#39;: &lt;tf.Tensor: shape=(), dtype=int64, numpy=3360&gt;})
 </pre></div>
 </div>
-<img alt="../../../_images/cb513dd3f6ee70f7d452f6b60d8b70fc44945e6eb3bb8bc30de60ad3c0940461.png" src="../../../_images/cb513dd3f6ee70f7d452f6b60d8b70fc44945e6eb3bb8bc30de60ad3c0940461.png" />
+<img alt="../../../_images/db11f7f188f99579289f39e455d72b8764728d746085d0eea83d0d51f9bb9e08.png" src="../../../_images/db11f7f188f99579289f39e455d72b8764728d746085d0eea83d0d51f9bb9e08.png" />
 </div>
 </div>
 <p>Ahora podemos  calcular las frecuencias relativas <span class="math notranslate nohighlight">\(n_i/N\)</span>  y compararlas con las probabilidades <span class="math notranslate nohighlight">\(p(i)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p0_exp</span> <span class="o">=</span> <span class="n">counts_psi</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">nshots</span>
-<span class="n">p1_exp</span> <span class="o">=</span> <span class="n">counts_psi</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">nshots</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p0_experiment</span> <span class="o">=</span> <span class="n">counts_psi</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">nshots</span>
+<span class="n">p1_experiment</span> <span class="o">=</span> <span class="n">counts_psi</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">nshots</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p(0)_exp =&#39;</span><span class="p">,</span> <span class="n">p0_exp</span><span class="p">,</span><span class="s1">&#39;  p(1)_exp = &#39;</span><span class="p">,</span><span class="n">p1_exp</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p(0)_experiment =&#39;</span><span class="p">,</span> <span class="n">p0_experiment</span><span class="p">,</span><span class="s1">&#39;  p(1)_experiment = &#39;</span><span class="p">,</span><span class="n">p1_experiment</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">p0_exp</span> <span class="o">=</span> <span class="n">counts_psi</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">nshots</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">p1_exp</span> <span class="o">=</span> <span class="n">counts_psi</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">nshots</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p(0)_exp =&#39;</span><span class="p">,</span> <span class="n">p0_exp</span><span class="p">,</span><span class="s1">&#39;  p(1)_exp = &#39;</span><span class="p">,</span><span class="n">p1_exp</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;nshots&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)_experiment = tf.Tensor(0.336, shape=(), dtype=float64)   p(1)_experiment =  tf.Tensor(0.664, shape=(), dtype=float64)
 </pre></div>
 </div>
 </div>
@@ -806,7 +802,7 @@ en <a class="reference external" href="https://quantum-computing.ibm.com/">https
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">M_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">M_simulator</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
 
@@ -910,8 +906,8 @@ Verificamos la consistencia<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-2f2b8585-ea4d-49c8-bf76-67141836fa68">
-<span class="eqno">(16)<a class="headerlink" href="#equation-2f2b8585-ea4d-49c8-bf76-67141836fa68" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-ad18a508-720c-4466-ba35-24fdf26f1f29">
+<span class="eqno">(16)<a class="headerlink" href="#equation-ad18a508-720c-4466-ba35-24fdf26f1f29" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \hat {\bf n} \cdot \bsig\,  \ket{a}_{\hat{\bf n}} ~~&amp;=&amp;~~ 
 U~ \hat {\bf z} \cdot \bsig ~  U^\dagger ~ U  \ket{a}_{\hat{\bf z}}\\  \rule{0mm}{8mm}
 &amp;=&amp; U~ \hat {\bf z} \cdot \bsig ~   \ket{a}_{\hat{\bf z}}\\   \rule{0mm}{8mm}
@@ -1006,7 +1002,7 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 <img alt="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" src="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" />
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
 <span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">qc</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">display</span><span class="p">(</span><span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
 <span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">M_simulator</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
@@ -1067,14 +1063,14 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 <img alt="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" src="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" />
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">display</span><span class="p">(</span><span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
 <span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">cuentasz</span> <span class="o">=</span> <span class="n">measure_XYZ</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cuentas(base Z)=&quot;</span><span class="p">,</span><span class="n">cuentasz</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">cuentasx</span> <span class="o">=</span> <span class="n">measure_XYZ</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span>
 
-<span class="nn">Cell In[16], line 18,</span> in <span class="ni">measure_XYZ</span><span class="nt">(qc, axis, shots)</span>
+<span class="nn">Cell In[17], line 18,</span> in <span class="ni">measure_XYZ</span><span class="nt">(qc, axis, shots)</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">qc0</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">qc0</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">counts</span><span class="o">=</span><span class="n">execute</span><span class="p">(</span><span class="n">qc0</span><span class="p">,</span><span class="n">backend</span><span class="o">=</span><span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
@@ -1135,8 +1131,8 @@ Comprobación<div class="sd-summary-down docutils">
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[(-0.4637609952 + 0.872279813 i) |0\rangle+(0.0047030795 - 0.1550211222 i) |1\rangle\]</div>
-<img alt="../../../_images/a191e903a6a79ca17e1da5b339adebcc08be7267434823cbeee346fed9f2dcb2.png" src="../../../_images/a191e903a6a79ca17e1da5b339adebcc08be7267434823cbeee346fed9f2dcb2.png" />
+\[(-0.3973114029 + 0.8113535271 i) |0\rangle+(-0.258725049 + 0.3419217047 i) |1\rangle\]</div>
+<img alt="../../../_images/852ba71036905e0cc6dd3ac65a74894c49e52c840b99343c563b82672a825bd9.png" src="../../../_images/852ba71036905e0cc6dd3ac65a74894c49e52c840b99343c563b82672a825bd9.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1177,10 +1173,10 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/b5dcf9b10222e50c8e134662707debfaa93e6d20a6a463ab394ae9cedc28b19f.png" src="../../../_images/b5dcf9b10222e50c8e134662707debfaa93e6d20a6a463ab394ae9cedc28b19f.png" />
+<img alt="../../../_images/74d7b2f7146f8c4c2e5441494a5a56c1fe107e25eedfa3dced50313deb377711.png" src="../../../_images/74d7b2f7146f8c4c2e5441494a5a56c1fe107e25eedfa3dced50313deb377711.png" />
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">display</span><span class="p">(</span><span class="n">qc_psi_copy</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">shots</span> <span class="o">=</span> <span class="mi">10000</span>
 <span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">counts_psi</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc_psi_copy</span><span class="p">,</span><span class="n">M_simulator</span><span class="p">,</span><span class="n">shots</span> <span class="o">=</span> <span class="n">shots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
@@ -1204,7 +1200,7 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = -0.3224
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = -0.328
 </pre></div>
 </div>
 </div>
@@ -1327,7 +1323,7 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#from qiskit.circuit.library.standard_gates import U3Gate</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">M_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="s1">&#39;definimos un estado arbitrario en la esfera de Bloch&#39;</span>
