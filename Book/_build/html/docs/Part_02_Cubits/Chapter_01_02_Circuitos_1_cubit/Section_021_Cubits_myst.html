@@ -517,9 +517,7 @@ document.write(`
 <span class="kn">import</span> <span class="nn">macro_tQ</span> <span class="k">as</span> <span class="nn">tQ</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">scipy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span><span class="n">Markdown</span><span class="p">,</span><span class="n">Latex</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">array_to_latex</span>
 </pre></div>
 </div>
@@ -608,56 +606,27 @@ de la esfera de Bloch</em>.</p></li>
 <h3>Vectores en la Esfera de Bloch: visualizaciones<a class="headerlink" href="#vectores-en-la-esfera-de-bloch-visualizaciones" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://javafxpert.github.io/grok-bloch/?fbclid=IwAR1lWfCug1lfTXxXenaJxnsdJh2g3he6lBJmjnjL_Jus0gOHR9u3UuaT7qs">Visualizador java</a></p></li>
-<li><p>La clase <a href=https://qiskit.org/documentation/stubs/qiskit.quantum_info.Statevector.html>statevector</a> en <em>qiskit</em> cuenta con un <em>visualizador</em> de la esfera de Bloch. La clase  acepta una lista de dos números complejos como componentes de un vector.
-Lamentablemente no avisa si este vector está normalizado a la unidad o no.</p></li>
+<li><p>La clase <a href=https://qiskit.org/documentation/stubs/qiskit.quantum_info.Statevector.html>statevector</a> en <em>qiskit</em> cuenta con varios <em>visualizadores</em>.</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
-<span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">plot_bloch_multivector</span><span class="p">,</span> <span class="n">array_to_latex</span>  
-
-<span class="c1"># Ejemplo de vector de estado |+&gt; </span>
-<span class="n">e_mas</span> <span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="n">j</span><span class="p">])</span>
-
-<span class="n">Statevector</span><span class="p">(</span><span class="n">e_mas</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\frac{\sqrt{2}}{2} |0\rangle+\frac{\sqrt{2} i}{2} |1\rangle\]</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Statevector</span><span class="p">(</span><span class="n">e_mas</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;Bloch&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/b701bdb788d2e9f875179a162c66ef378a2fb612380671e582f7e49afc5940f0.png" src="../../../_images/b701bdb788d2e9f875179a162c66ef378a2fb612380671e582f7e49afc5940f0.png" />
-</div>
-</div>
 <p>Esta rutina introduce dos ángulos <span class="math notranslate nohighlight">\(\theta\in(0,\pi)\)</span> y <span class="math notranslate nohighlight">\(\phi\in(0,2\pi)\)</span> y devuelve el vector de Bloch</p>
 <div class="math notranslate nohighlight">
 \[
-|u\rangle = \cos{\frac{\theta}{2}}\, |0\rangle + e^{i\phi}\sin{\frac{\theta}{2}}\,|1\rangle 
+|\psi\rangle = \cos{\frac{\theta}{2}}\, |0\rangle + e^{i\phi}\sin{\frac{\theta}{2}}\,|1\rangle 
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theta</span> <span class="o">=</span> <span class="mf">1.9</span>
 <span class="n">phi</span>   <span class="o">=</span> <span class="mf">0.8</span>
 
-<span class="n">uket</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">),(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">phi</span><span class="p">))</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">)])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">array_to_latex</span><span class="p">(</span><span class="n">uket</span><span class="p">,</span><span class="n">prefix</span><span class="o">=</span> <span class="s1">&#39;\ket</span><span class="si">{u}</span><span class="s1"> = &#39;</span><span class="p">)</span>
+<span class="n">psi_ket</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">),(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">phi</span><span class="p">))</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="o">/</span><span class="mi">2</span><span class="p">)])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">array_to_latex</span><span class="p">(</span><span class="n">psi_ket</span><span class="p">,</span><span class="n">prefix</span><span class="o">=</span> <span class="s1">&#39;\ket{\psi} = &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}
-\ket{u} = 
+\ket{\psi} = 
 \begin{bmatrix}
 0.5816830895  \\
  0.5667120397 + 0.5835085668 i  \\
@@ -667,22 +636,17 @@ Lamentablemente no avisa si este vector está normalizado a la unidad o no.</p><
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Statevector</span><span class="p">(</span><span class="n">uket</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.quantum_info</span> <span class="kn">import</span> <span class="n">Statevector</span>
+<span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">plot_bloch_multivector</span><span class="p">,</span> <span class="n">array_to_latex</span>  
+
+<span class="n">display</span><span class="p">(</span><span class="n">Statevector</span><span class="p">(</span><span class="n">psi_ket</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">,</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;\ket{\psi} = &#39;</span><span class="p">))</span>
+<span class="n">Statevector</span><span class="p">(</span><span class="n">psi_ket</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;Bloch&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[0.5816830895 |0\rangle+(0.5667120397 + 0.5835085668 i) |1\rangle\]</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Statevector</span><span class="p">(</span><span class="n">uket</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;Bloch&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
+\[\ket{\psi} = 0.5816830895 |0\rangle+(0.5667120397 + 0.5835085668 i) |1\rangle\]</div>
 <img alt="../../../_images/d096e987c44d86829b0563acd61647061ece30f7c2082a7a8cb5033d5b2fe6ba.png" src="../../../_images/d096e987c44d86829b0563acd61647061ece30f7c2082a7a8cb5033d5b2fe6ba.png" />
 </div>
 </div>
