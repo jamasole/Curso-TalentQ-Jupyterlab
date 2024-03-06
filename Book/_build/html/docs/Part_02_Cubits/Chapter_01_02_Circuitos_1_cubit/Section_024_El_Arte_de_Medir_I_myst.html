@@ -474,11 +474,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-1-cubit">Medidas de 1 cúbit</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-la-base-computacional">Medidas en la base computacional</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-de-medida">Probabilidades de medida</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-un-ordenador-cuantico-real">Medidas en un ordenador cuántico real</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interferencias-la-moneda-cuantica">Interferencias: la moneda cuántica</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-una-base-general">Medidas en una base general</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formalismo-general">Formalismo general</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-bases-x-y-y-z">Ejemplo: bases <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span></a></li>
 </ul>
 </li>
@@ -499,7 +499,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Mar 04, 2024 | 7 min read</p>
+<div><p>Mar 07, 2024 | 6 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -653,13 +653,13 @@ Qiskit</label><div class="sd-tab-content docutils">
 </div>
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Qibo 0.2.4|INFO|2024-03-04 12:33:43]: Using tensorflow backend on /device:CPU:0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Qibo 0.1.12.dev0|INFO|2024-03-07 00:33:10]: Using tensorflow backend on /device:CPU:0
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  Counter({&#39;1&#39;: &lt;tf.Tensor: shape=(), dtype=int64, numpy=6560&gt;, &#39;0&#39;: &lt;tf.Tensor: shape=(), dtype=int64, numpy=3440&gt;})
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counts_psi =  Counter({&#39;1&#39;: &lt;tf.Tensor: shape=(), dtype=int64, numpy=6598&gt;, &#39;0&#39;: &lt;tf.Tensor: shape=(), dtype=int64, numpy=3402&gt;})
 </pre></div>
 </div>
-<img alt="../../../_images/d181d67288c1d30af4bb2a5b5db75a7ad1550958f26feb1e9dd2f6eea7995911.png" src="../../../_images/d181d67288c1d30af4bb2a5b5db75a7ad1550958f26feb1e9dd2f6eea7995911.png" />
+<img alt="../../../_images/45b626e38a5ae9dd70766f544c3fb1b6546289be7c754ad841ba9af57ad60bf1.png" src="../../../_images/45b626e38a5ae9dd70766f544c3fb1b6546289be7c754ad841ba9af57ad60bf1.png" />
 </div>
 </div>
 <p>Ahora podemos  calcular las frecuencias relativas <span class="math notranslate nohighlight">\(n_i/N\)</span>  y compararlas con las probabilidades <span class="math notranslate nohighlight">\(p(i)\)</span></p>
@@ -673,90 +673,7 @@ Qiskit</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)_experiment = tf.Tensor(0.344, shape=(), dtype=float64)   p(1)_experiment =  tf.Tensor(0.656, shape=(), dtype=float64)
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="medidas-en-un-ordenador-cuantico-real">
-<h3>Medidas en un ordenador cuántico real<a class="headerlink" href="#medidas-en-un-ordenador-cuantico-real" title="Permalink to this heading">#</a></h3>
-<p>Una vez que hemos verificado que el programa
-corre bien en nuestro simulador, podemos lanzarlo a un ordenador cuántico real sin más que cambiar el <em>backend</em>.</p>
-<p>Por el momento usaremos los ordenadores gratuitos de IBM. Para ello es necesario hacer una cuenta de usuario
-en <a class="reference external" href="https://quantum-computing.ibm.com/">https://quantum-computing.ibm.com/</a></p>
-<p>Go to <a class="reference external" href="https://quantum-computing.ibm.com/account">https://quantum-computing.ibm.com/account</a> and get API-token in the MyAccount section. Copy token and paste in the following cell in between the brackets (after uncommenting the line)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#uncomment and paste your token</span>
-<span class="c1">#IBMQ.save_account(&#39;&#39;)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>After that, your token is saved in this computer. In order to load the account just type</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">IBMQ</span>
-<span class="c1"># IBMQ.load_account()</span>
-<span class="c1"># provider = IBMQ.get_provider(hub=&#39;ibm-q&#39;)</span>
-<span class="c1"># provider.backends()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">IBMQ</span>
-
-<span class="ne">ImportError</span>: cannot import name &#39;IBMQ&#39; from &#39;qiskit&#39; (/Users/javier/opt/anaconda3/envs/TalentQ2/lib/python3.11/site-packages/qiskit/__init__.py)
-</pre></div>
-</div>
-</div>
-</div>
-<p>antes de enviar un trabajo es conveniente consultar qué máquina de las adecuadas a nuestras necesidades es la que está más libre</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from qiskit.providers.ibmq import least_busy</span>
-<span class="c1"># IBMQ_best_backend = least_busy(provider.backends(filters=lambda x: x.configuration().n_qubits &gt;= 1 </span>
-<span class="c1">#                                       and not x.configuration().simulator </span>
-<span class="c1">#                                       and x.status().operational==True))</span>
-<span class="c1"># print(&quot;least busy backend: &quot;, IBMQ_best_backend)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Ahora compilamos y enviamos el trabajo</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># qobj = transpile(qc_psi, IBMQ_best_backend)           # Compila el código para el backend</span>
-<span class="c1"># job = IBMQ_best_backend.run(qobj, shots=1024) # Hacemos la simulación 1024 veces </span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>podemos monitorizar la ejecución</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from qiskit.tools.monitor import job_monitor</span>
-<span class="c1"># job_monitor(job)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>extraemos el resultado</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># counts = job.result().get_counts()</span>
-<span class="c1"># print(&quot;Cuentas=&quot;,counts)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot_histogram(counts)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(0)_experiment = tf.Tensor(0.3402, shape=(), dtype=float64)   p(1)_experiment =  tf.Tensor(0.6598, shape=(), dtype=float64)
 </pre></div>
 </div>
 </div>
@@ -791,9 +708,7 @@ En efecto el proceso de hacer dos tiradas sucesivas (sin medir entre ellas) gene
  &amp;=&amp;  \frac{1}{2}(\ket{0} + \ket{0}) + \frac{1}{2}(\ket{1} - \ket{1})  \rule{0mm}{8mm}\\ \rule{0mm}{8mm}&amp; =&amp; \ket{0} 
 \end{array}
 \end{split}\]</div>
-<p>El resultado final es <em>cierto</em> y arrojará <span class="math notranslate nohighlight">\(0\)</span> con 100% de probabilidad.
-Vemos que hay dos <em>caminos</em> posible para alcanzar cualquier resultado
-final, <span class="math notranslate nohighlight">\(\ket{0}\)</span> ó <span class="math notranslate nohighlight">\(\ket{1}\)</span>. Los que intervienen para conseguir <span class="math notranslate nohighlight">\(\ket{0} \to \ket{0}\)</span> contribuyen de manera <em>constructiva</em>, mientras que los dos caminos que acaban en <span class="math notranslate nohighlight">\(\ket{0} \to \ket{1}\)</span> interfieren de forma <em>destructiva</em>. El signo menos en el segundo estado <span class="math notranslate nohighlight">\(\ket{1}\)</span> es una amplitud de probabilidad negativa, algo imposible clásicamente</p>
+<p>El resultado final es <em>cierto</em> y arrojará <span class="math notranslate nohighlight">\(0\)</span> con 100% de probabilidad. Vemos que hay dos <em>caminos</em> posible para alcanzar cualquier resultado final, <span class="math notranslate nohighlight">\(\ket{0}\)</span> ó <span class="math notranslate nohighlight">\(\ket{1}\)</span>. Los que intervienen para conseguir <span class="math notranslate nohighlight">\(\ket{0} \to \ket{0}\)</span> contribuyen de manera <em>constructiva</em>, mientras que los dos caminos  <span class="math notranslate nohighlight">\(\ket{0}\to \ket{1}\)</span> interfieren de forma <em>destructiva</em>. El signo menos en el segundo estado <span class="math notranslate nohighlight">\(\ket{1}\)</span> es una amplitud de probabilidad negativa, algo imposible clásicamente.</p>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
 <p>repite el razonamiento anterior</p>
@@ -802,137 +717,119 @@ final, <span class="math notranslate nohighlight">\(\ket{0}\)</span> ó <span cl
 <li><p>intercalando una medida entre ambas tiradas</p></li>
 </ul>
 </div>
-<p>Ejecutemos el circuito con y sin medición intermedia</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
-Qiskit</label><div class="sd-tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
-<span class="kn">from</span> <span class="nn">qiskit_aer</span> <span class="kn">import</span> <span class="n">AerSimulator</span>
-
-<span class="s1">&#39;generamos un circuito en el que inicializamos el estado psi&#39;</span>
-<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="c1">#qc.measure(0,0) #anula o no esta medición intermedia para ver la diferencia</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="s1">&#39;ejecutamos un número de veces&#39;</span>
-<span class="n">counts_psi</span> <span class="o">=</span> <span class="n">AerSimulator</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">nshots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
-
-<span class="s1">&#39;visualizamos los resultados como un diccionario y  mediante un histograma&#39;</span>
-<span class="kn">from</span> <span class="nn">qiskit.visualization</span> <span class="kn">import</span> <span class="n">plot_histogram</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;counts_psi = &#39;</span><span class="p">,</span><span class="n">counts_psi</span><span class="p">)</span>
-<span class="n">plot_histogram</span><span class="p">(</span><span class="n">counts_psi</span><span class="p">)</span> <span class="c1"># Mostramos un histograma de resultados</span>
-
-</pre></div>
+<div class="tip admonition">
+<p class="admonition-title">Ejercicio</p>
+<p>construye un circuito y verifica los resultados que predice la mecánica cuántica. Estudia la introducción de más <i>tiradas</i> cuántica, <span class="math notranslate nohighlight">\(H^n\)</span>. Intercala una medida en distintas partes del circuito y mira qué resultado obtienes.</p>
 </div>
-</div>
-</div>
-<div class="cell tag_remove_input docutils container">
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&#39;&#39;&#39;Qiskit_code_cell&#39;&#39;&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">qiskit_aer</span> <span class="kn">import</span> <span class="n">AerSimulator</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="s1">&#39;generamos un circuito en el que inicializamos el estado psi&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;qiskit_aer&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>La medición intermedia destruye la superposición y hace colapsar el estado a <span class="math notranslate nohighlight">\(\ket{0}\)</span>  ó <span class="math notranslate nohighlight">\(\ket{1}\)</span>.
-Sin dicha medición, las amplitudes de probabilidad para obtener <span class="math notranslate nohighlight">\(\ket{1}\)</span> a partir de <span class="math notranslate nohighlight">\(\ket{0}\)</span> interfieren destructivamente</p>
 </section>
 </section>
 <section id="medidas-en-una-base-general">
 <h2>Medidas en una base general<a class="headerlink" href="#medidas-en-una-base-general" title="Permalink to this heading">#</a></h2>
-<div class="note admonition">
-<p class="admonition-title">Nota (Recuerda)</p>
-<center>
-No importa en qué dirección apunte el eje $\hat{\bf n} $ de un Stern-Gerlach 
-<div class="math notranslate nohighlight">
-\[~ \Downarrow ~\]</div>
-<p>a la salida <b>siempre</b> mediremos <span class="math notranslate nohighlight">\(\pm 1\)</span> (deflexión positiva o negativa)</p>
-<div class="math notranslate nohighlight">
-\[~ \Downarrow ~\]</div>
-<p>si no se destruye, el estado posterior será <span class="math notranslate nohighlight">\(\ket{\pm,\hat{\bf n}}\)</span> en cada caso</p>
-</center>
-</div>
-<p>Supongamos que un estado <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> entra en el detector con un campo <span class="math notranslate nohighlight">\({\bf B}\)</span> orientado en la dirección</p>
+<p>El aparato de medida estándar que ponemos en un circuito cuántico está asociado al observable <span class="math notranslate nohighlight">\(Z\)</span>. Esto implica que cualquier estado medido arrojará resultados <span class="math notranslate nohighlight">\(a = 0,1\)</span> con cierta probabilidad que proviene de expandir el estado en la base de autoestados</p>
 <div class="math notranslate nohighlight">
 \[
+\ket{\psi} = z_0 \ket{0} + z_1\ket{1}
+\]</div>
+<p>Entonces <span class="math notranslate nohighlight">\(p_0 = |a_0|^2\)</span> y  <span class="math notranslate nohighlight">\(p_1 = |a_1|^2\)</span> son las probabilidades que recuperaremos realizando multiples medidas sobre <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>.</p>
+<p>Encontraremos la necesidad de medir en la base  <span class="math notranslate nohighlight">\(\{ \ket{+},\ket{-}\}\)</span> de autoestados de <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\ket{\psi} = x_0\ket{+} + x_1 \ket{-}
+\]</div>
+<p>o, también, en la base <span class="math notranslate nohighlight">\(\{ \ket{+i},\ket{-i}\}\)</span> de autoestados de <span class="math notranslate nohighlight">\(Y\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\ket{\psi} = y_0\ket{+i} + y_1 \ket{-i}
+\]</div>
+<p>Este problema se soluciona observando las siguientes identidades algebraicas</p>
+<div class="math notranslate nohighlight">
+\[
+\ket{+} = H \ket{0} ~~~,~~~ \ket{-} = H\ket{1} ~~~~~,~~~~~X = H Z H
+\]</div>
+<p>así como</p>
+<div class="math notranslate nohighlight">
+\[
+\ket{+i} = SH \ket{0} ~~~,~~~ \ket{-i} = SH\ket{1} ~~~~~,~~~~~Y = SHZ HS^\dagger
+\]</div>
+<p>Esto nos permite escribir los circuitos que miden los autovalores <span class="math notranslate nohighlight">\(a = 0,1\)</span> en las bases de <span class="math notranslate nohighlight">\(X\)</span> y de <span class="math notranslate nohighlight">\(Y\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/meter_xybasis.png"><img alt="../../../_images/meter_xybasis.png" src="../../../_images/meter_xybasis.png" style="width: 700px;" /></a>
+</figure>
+<p>lo cual  nos permite definir  <u>aparatos de medida efectivos</u> en las direcciones <span class="math notranslate nohighlight">\(x\)</span> e <span class="math notranslate nohighlight">\(y\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/meter_xybasis2.png"><img alt="../../../_images/meter_xybasis2.png" src="../../../_images/meter_xybasis2.png" style="width: 700px;" /></a>
+</figure>
+<section id="formalismo-general">
+<h3>Formalismo general<a class="headerlink" href="#formalismo-general" title="Permalink to this heading">#</a></h3>
+<p>Vamos a ver los dos casos anteriors como caso particulares de un medidor en una dirección arbitraria.
+Dado un vector unitario <span class="math notranslate nohighlight">\(~\hat\boldn~\)</span>
+$<span class="math notranslate nohighlight">\(
 \hat\bn(\theta,\phi) = \sin\theta\cos\phi \, \hat {\bf x} + \sin\theta\sin\phi \, \hat {\bf y} + \cos\theta \, \hat {\bf z}
+\)</span><span class="math notranslate nohighlight">\(
+el observable asociado será  \)</span> \hat{\boldn}\cdot \boldsymbol{\sigma}<span class="math notranslate nohighlight">\(  cuyos autoestados forman una  base \)</span>{\ket{0}<em>{\hat{\bf n}}, \ket{1}</em>{\hat{\bf n}}}<span class="math notranslate nohighlight">\( con autovalores \)</span>\pm 1$</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{\boldn}\cdot \boldsymbol{\sigma}\,\ket{0}_{\hat{\bf n}} = + \ket{0}_{\hat{\bf n}}~~~~,~~~~~
+\hat{\boldn}\cdot \boldsymbol{\sigma}\,\ket{1}_{\hat{\bf n}} = - \ket{1}_{\hat{\bf n}}
 \]</div>
-<p>A la salida, el resultado <span class="math notranslate nohighlight">\(+1\)</span> indicará que el <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> ha colapsado al estado</p>
+<p>dados por</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\ket{\psi} \stackrel{+}{\longrightarrow} \ket{+,\hat\bn} = ~\begin{bmatrix} \cos\displaystyle\frac{\theta}{2} \\  ~e^{i\phi}\sin\displaystyle\frac{\theta}{2} \end{bmatrix} ~~~~~~~~,~~~~~
-~~~~~\hbox{con probabilidad} ~~~~~ p_{\hat\bn}(+) = |\braket{+,\hat\bn}{\psi}|^2
+ \ket{0}_{\hat{\bf n}} = ~\begin{bmatrix} \cos\displaystyle\frac{\theta}{2} \\  ~e^{i\phi}\sin\displaystyle\frac{\theta}{2} \end{bmatrix} ~~~~~~~~~~~,~~~~~~~~~~~
+ \ket{1}_{\hat{\bf n}} =  \begin{bmatrix} -e^{-i\phi}\sin\displaystyle\frac{\theta}{2} \\  \cos\displaystyle\frac{\theta}{2} \end{bmatrix} 
 \end{split}\]</div>
-<p>A la salida, el resultado <span class="math notranslate nohighlight">\(-1\)</span> indicará que el <span class="math notranslate nohighlight">\(\ket{\psi}\)</span> ha colapsado al estado</p>
+<p>Los casos particulares de la sección anterior se recuperan haciendo</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\ket{\psi} \stackrel{-}{\longrightarrow} \ket{-,\hat\bn} =  \begin{bmatrix} -e^{-i\phi}\sin\displaystyle\frac{\theta}{2} \\  \cos\displaystyle\frac{\theta}{2} \end{bmatrix} ~~~~~~~~,~~~~~
-~~~~~\hbox{con probabilidad} ~~~~~ p_{\hat\bn}(-) = |\braket{-,\hat\bn}{\psi}|^2
+\begin{array}{ccl}
+Z = \hat{\bf z} \cdot \boldsymbol{\sigma} ~~&amp;\rightarrow&amp; ~~\{\ket{0},\ket{1} \} = \{\ket{0}_{\hat{\bf z}},\ket{1}_{\hat{\bf z}}\}\\ \rule{0mm}{8mm}
+X = \hat{\bf x} \cdot \boldsymbol{\sigma} ~~&amp;\rightarrow&amp;  \{\ket{+},\ket{-}\}  = \{\ket{0}_{\hat{\bf x}},\ket{1}_{\hat{\bf x}}\} \\ \rule{0mm}{8mm}
+Y = \hat{\bf y} \cdot \boldsymbol{\sigma} ~~&amp;\rightarrow&amp;  \{\ket{+i},\ket{-i}\}  = \{\ket{0}_{\hat{\bf y}},\ket{1}_{\hat{\bf y}}\}
+\end{array}
 \end{split}\]</div>
-<p>Para adaptar la discusión al <em>contexto computacional</em>, <span class="math notranslate nohighlight">\(\ket{+}\to \ket{0}, \ket{-}\to \ket{1}\)</span>  vamos a unificar la notación</p>
-<div class="math notranslate nohighlight">
-\[
-\ket{+, \hat{\bf n}} \to \ket{0}_{\hat{\bf n}} ~~~~~,~~~~~\ket{-, \hat{\bf n}}\to  \ket{1}_{\hat{\bf n}} 
-\]</div>
-<p>Con esta notación, la ecuación de autovalores</p>
-<div class="math notranslate nohighlight">
-\[
-\hat {\bf n} \cdot \boldsymbol{\sigma}\,  \ket{\pm, \hat{\bf n}} =  \pm \, \ket{\pm, \hat{\bf n}} 
-\]</div>
-<p>se escribe</p>
-<div class="math notranslate nohighlight">
-\[
-\hat {\bf n} \cdot \bsig\,  \ket{a}_{\hat{\bf n}}~ =~   (-1)^a \ket{a}_{\hat{\bf n}}~~~~~~a = 0,1
-\]</div>
-<p>Sea <span class="math notranslate nohighlight">\(~\hat{\bf z}\cdot \bsig ~\)</span> el <u><em>aparato de medida estandar</em></u> orientado a lo largo del eje <span class="math notranslate nohighlight">\(~\hat{\bf z}\)</span></p>
+<p>Usando operadores de rotación podemos convertir el medidor estándar asociado a <span class="math notranslate nohighlight">\(Z\)</span> con un medidor efectivo asociado al observable general <span class="math notranslate nohighlight">\(\hat {\bf n} \cdot \bsig\)</span>. Veamos cómo:</p>
+<ul class="simple">
+<li><p>sea <span class="math notranslate nohighlight">\(~\hat{\bf z}\cdot \bsig ~\)</span> el <u><em>aparato de medida estandar</em></u> orientado a lo largo del eje <span class="math notranslate nohighlight">\(~\hat{\bf z}\)</span></p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[
  \hat{\bf z}\cdot \bsig \,  \ket{a}_{\hat{\bf z}} = (-1)^a\ket{a}_{\hat{\bf z}} = Z \ket{a} 
 \]</div>
-<p>y  <span class="math notranslate nohighlight">\(~\hat\bn\cdot \bsig~\)</span> el <u>aparato de medida orientado</u> a lo largo del eje <span class="math notranslate nohighlight">\(\hat\bn\)</span></p>
+<ul class="simple">
+<li><p>y  <span class="math notranslate nohighlight">\(~\hat\bn\cdot \bsig~\)</span> el <u>aparato de medida orientado</u> a lo largo del eje <span class="math notranslate nohighlight">\(\hat\bn\)</span></p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[
 \hat\bn\cdot \bsig \,  \ket{a}_{\hat{\bf n}} = (-1)^a\ket{a}_{\hat{\bf n}}
 \]</div>
-<p>ambas situaciones está  relacionadas mediante una simple <em>rotación</em></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/BlochSphere_basis.png"><img alt="../../../_images/BlochSphere_basis.png" src="../../../_images/BlochSphere_basis.png" style="width: 300px;" /></a>
-</figure>
-<p>El operador que implementa esta rotación en el espacio <span class="math notranslate nohighlight">\(\Hil = {\mathbb C}^2\)</span> de un cúbit es</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-U(\hat {\bf z}\to \hat \bn) = U(\theta,\phi,0)=\begin{bmatrix}   \cos \displaystyle\frac{\theta}{2}  &amp; -  \sin\displaystyle\frac{\theta}{2}  \\ 
-\rule{0mm}{4mm} e^{i\phi} \sin \displaystyle\frac{\theta}{2} &amp;e^{i\phi} \cos \displaystyle\frac{\theta}{2} \end{bmatrix}
-\end{split}\]</div>
-<p>que implementa el  <em>cambio de base</em> <span class="math notranslate nohighlight">\(\{\ket{a}_{\hat{\bf z}}\}\)</span> a la base <span class="math notranslate nohighlight">\(\{\ket{a}_{\hat{\bf n}}\}, ~a = 0,1\)</span></p>
+<p>las bases de autovectores asociadas <span class="math notranslate nohighlight">\(\{\ket{a}_{\hat{\bf z}}\}\)</span> y  <span class="math notranslate nohighlight">\(\{\ket{a}_{\hat{\bf n}}\}\)</span> ser  relacionan mediante una simple <em>rotación</em> unitaria</p>
 <div class="math notranslate nohighlight">
 \[
 \ket{0}_{\hat\boldn} = U \ket{0}_{\hat{\bf z}}~~~~~~,~~~~~~
 \ket{1}_{\hat\boldn} = U \ket{1}_{\hat{\bf z}}
 \]</div>
-<p>es decir</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} 
-\begin{bmatrix} \cos\theta \\ e^{i\phi}\sin\theta \end{bmatrix} = U\cdot \begin{bmatrix}1\\0 \end{bmatrix} ~~~~~~~,~~~~~~~
-\begin{bmatrix} -\sin\theta \\ e^{i\phi}\cos\theta \end{bmatrix} = U\cdot \begin{bmatrix}0\\1 \end{bmatrix}  
-\end{split}\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/BlochSphere_basis.png"><img alt="../../../_images/BlochSphere_basis.png" src="../../../_images/BlochSphere_basis.png" style="width: 300px;" /></a>
+</figure>
+<p>El operador en cuestión es
+$<span class="math notranslate nohighlight">\(
+U(\hat {\bf z}\to \hat \bn) = U(\theta,\phi,0)=\begin{bmatrix}   \cos \displaystyle\frac{\theta}{2}  &amp; -  \sin\displaystyle\frac{\theta}{2}  \\ 
+\rule{0mm}{4mm} e^{i\phi} \sin \displaystyle\frac{\theta}{2} &amp;e^{i\phi} \cos \displaystyle\frac{\theta}{2} \end{bmatrix}
+\)</span>$</p>
+<p>como es fácil de comprobar
+$$</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3a14d74c-5c6e-4f8d-aaa2-a8ec196c6639">
+<span class="eqno">(16)<a class="headerlink" href="#equation-3a14d74c-5c6e-4f8d-aaa2-a8ec196c6639" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} \cos\theta \\ e^{i\phi}\sin\theta \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-278614a3-3f33-4610-94e5-4a728875dc2d">
+<span class="eqno">(17)<a class="headerlink" href="#equation-278614a3-3f33-4610-94e5-4a728875dc2d" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} -\sin\theta \\ e^{i\phi}\cos\theta \end{bmatrix}\]</div>
+<p>$$</p>
 <p>Si las componentes de los vectores rotan en la forma <span class="math notranslate nohighlight">\(\ket{a}_{\hat{\bf n}} = U\ket{a}_{\hat{\bf z}}\)</span>
-los observables asociados a los  aparatos de <em>Stern Gerlach</em>: <em>original</em> <span class="math notranslate nohighlight">\(\to \hat {\bf z} \cdot \bsig~\)</span>, y <em>rotado</em><span class="math notranslate nohighlight">\(\to\hat {\bf n} \cdot \bsig~ \)</span>, se relacionan algebraicamente <em>como lo hace cualquier operador</em></p>
-<div class="math notranslate nohighlight">
-\[
-\hat {\bf n} \cdot \bsig =  U \, (\hat {\bf z} \cdot \bsig)\,  U^\dagger
-\]</div>
+los observables asociados  se relacionan algebraicamente <em>como lo hace cualquier operador</em></p>
+<p><a id='eqnsigma'></a></p>
+<div class="math notranslate nohighlight" id="equation-eqnsigma">
+<span class="eqno">(18)<a class="headerlink" href="#equation-eqnsigma" title="Permalink to this equation">#</a></span>\[\begin{equation} 
+\hat {\bf n} \cdot \bsig =  U \, (\hat {\bf z} \cdot \bsig)\,  U^\dagger 
+\end{equation} \]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Verificamos la consistencia<div class="sd-summary-down docutils">
@@ -940,8 +837,8 @@ Verificamos la consistencia<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-b2f95173-286b-4efd-af3d-4082056d33d9">
-<span class="eqno">(16)<a class="headerlink" href="#equation-b2f95173-286b-4efd-af3d-4082056d33d9" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-00a4667c-2e0a-4852-abff-88df1d8bff47">
+<span class="eqno">(19)<a class="headerlink" href="#equation-00a4667c-2e0a-4852-abff-88df1d8bff47" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \hat {\bf n} \cdot \bsig\,  \ket{a}_{\hat{\bf n}} ~~&amp;=&amp;~~ 
 U~ \hat {\bf z} \cdot \bsig ~  U^\dagger ~ U  \ket{a}_{\hat{\bf z}}\\  \rule{0mm}{8mm}
 &amp;=&amp; U~ \hat {\bf z} \cdot \bsig ~   \ket{a}_{\hat{\bf z}}\\   \rule{0mm}{8mm}
@@ -952,7 +849,7 @@ U~ \hat {\bf z} \cdot \bsig ~  U^\dagger ~ U  \ket{a}_{\hat{\bf z}}\\  \rule{0mm
 </div>
 </details><div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
-<p>verifica esta ecuación operando</p>
+<p>verifica operando la ecuación anterior</p>
 </div>
 <p>El circuito siguiente  <em>simula</em> un aparato de medición en la base <span class="math notranslate nohighlight">\(\{\ket{a}_{\hat{\bf n}}\}\)</span>
 obtenido mediante la rotación del aparato de medida en la base <span class="math notranslate nohighlight">\(\{\ket{a}_{\hat{\bf n}}\}\)</span> de autoestados de <span class="math notranslate nohighlight">\(Z\)</span></p>
@@ -963,18 +860,10 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 <p class="admonition-title">Nota</p>
 <p>Recuerda que el orden de la composición de operadores se invierte al plasmarlos en un circuito</p>
 </div>
+</section>
 <section id="ejemplo-bases-x-y-y-z">
 <h3>Ejemplo: bases <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span><a class="headerlink" href="#ejemplo-bases-x-y-y-z" title="Permalink to this heading">#</a></h3>
-<p>La base computacional es la base de autoestados de <span class="math notranslate nohighlight">\(Z\)</span></p>
-<div class="math notranslate nohighlight">
-\[\{\ket{0},\ket{1} \} = \{\ket{0}_{\hat{\bf z}},\ket{1}_{\hat{\bf z}}\}\]</div>
-<p>Muy frecuentes son otras bases ortonormales como la base de autoestados de <span class="math notranslate nohighlight">\(X\)</span></p>
-<div class="math notranslate nohighlight">
-\[ \{\ket{+},\ket{-}\}  = \{\ket{0}_{\hat{\bf x}},\ket{1}_{\hat{\bf x}}\} \]</div>
-<p>o la base de autoestados de <span class="math notranslate nohighlight">\(Y\)</span></p>
-<div class="math notranslate nohighlight">
-\[ \{\ket{+i},\ket{-i}\}  = \{\ket{0}_{\hat{\bf y}},\ket{1}_{\hat{\bf y}}\} \]</div>
-<p>Para construir un medidor asociado a las bases <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> sólo es necesario <em>rotar</em> el aparato de medida estándar asociado a la base <span class="math notranslate nohighlight">\(Z\)</span></p>
+<p>Para construir un medidor asociado a las bases <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> sólo son necesarios operadores que rotan el eje <span class="math notranslate nohighlight">\(Z\)</span> a los ejes <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span></p>
 <div class="math notranslate nohighlight">
 \[ \ket{\pm} =  \ket{a}_{\hat{\bf x}} =  H \ket{a}_{\hat{\bf z}} ~~~~ \]</div>
 <div class="math notranslate nohighlight">
@@ -983,23 +872,15 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 <p class="admonition-title">Ejercicio</p>
 <p>Comprueba  que estas ecuaciones de cambio de base son correctas</p>
 </div>
-<p>Con estas relaciones podemos realizar medidas asociadas a dichas bases</p>
+<p>Los observables asociados ahora son</p>
 <div class="math notranslate nohighlight">
 \[
-\hat {\bf x} \cdot \bsig =  H \, (\hat {\bf z} \cdot \bsig)\,  H
+ \hat {\bf x} \cdot \bsig =  H \, (\hat {\bf z} \cdot \bsig)\,  H 
 \]</div>
 <div class="math notranslate nohighlight">
 \[
 \hat {\bf y} \cdot \bsig =  SH \, (\hat {\bf z} \cdot \bsig)\,  HS^\dagger
 \]</div>
-<p>los circuitos que implementan la rotación de estos operadores</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/meter_xybasis.png"><img alt="../../../_images/meter_xybasis.png" src="../../../_images/meter_xybasis.png" style="width: 700px;" /></a>
-</figure>
-<p>que nos permiten definir  <em>aparatos de medida rotados</em> en las direcciones <span class="math notranslate nohighlight">\(x\)</span> e <span class="math notranslate nohighlight">\(y\)</span></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/meter_xybasis2.png"><img alt="../../../_images/meter_xybasis2.png" src="../../../_images/meter_xybasis2.png" style="width: 700px;" /></a>
-</figure>
 <p>Cuando sólo nos interesa el resultado de la medida, y no el estado posterior al que ha colapsado no es necesario añadir los operadores posteriores al observable <span class="math notranslate nohighlight">\(Z\)</span>.</p>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
@@ -1033,10 +914,14 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/e55e22219985c347d79450dca22bc081b04b74c0dfb1e8b704237ecde0047dc1.png" src="../../../_images/e55e22219985c347d79450dca22bc081b04b74c0dfb1e8b704237ecde0047dc1.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/TalentQ/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
+  self._style, def_font_ratio = load_style(self._style)
+</pre></div>
+</div>
+<img alt="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" src="../../../_images/33dffc00bce20b866e5e00ce9e0504bee2ae7a74863606501423bab24b6eb566.png" />
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
 <span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">qc</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">display</span><span class="p">(</span><span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
 <span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">M_simulator</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
@@ -1094,17 +979,17 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/30c24fc24a13eebc45083eedd044a300dea1cfa0e976363a8c2a86befa0044d1.png" src="../../../_images/30c24fc24a13eebc45083eedd044a300dea1cfa0e976363a8c2a86befa0044d1.png" />
+<img alt="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" src="../../../_images/703ce00ca6f1c39fae278e7ece68b856a9ebbf380f2677088c0551d3788ac592.png" />
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">display</span><span class="p">(</span><span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
 <span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">cuentasz</span> <span class="o">=</span> <span class="n">measure_XYZ</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cuentas(base Z)=&quot;</span><span class="p">,</span><span class="n">cuentasz</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">cuentasx</span> <span class="o">=</span> <span class="n">measure_XYZ</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span>
 
-<span class="nn">Cell In[16], line 18,</span> in <span class="ni">measure_XYZ</span><span class="nt">(qc, axis, shots)</span>
+<span class="nn">Cell In[8], line 18,</span> in <span class="ni">measure_XYZ</span><span class="nt">(qc, axis, shots)</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">qc0</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">qc0</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">counts</span><span class="o">=</span><span class="n">execute</span><span class="p">(</span><span class="n">qc0</span><span class="p">,</span><span class="n">backend</span><span class="o">=</span><span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
@@ -1165,8 +1050,8 @@ Comprobación<div class="sd-summary-down docutils">
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[(0.3608416851 + 0.4451586765 i) |0\rangle+(0.1742046366 + 0.8007994603 i) |1\rangle\]</div>
-<img alt="../../../_images/777dc55704550c173462fb84286b39457b80072f2438ed626da0246cb3755f46.png" src="../../../_images/777dc55704550c173462fb84286b39457b80072f2438ed626da0246cb3755f46.png" />
+\[(0.6048413413 - 0.6698050462 i) |0\rangle+(0.4188408488 + 0.1005012207 i) |1\rangle\]</div>
+<img alt="../../../_images/98169a86ee5106f61c53ccca43a556b79f7b07b0d5c82ef7c380787f07c20f30.png" src="../../../_images/98169a86ee5106f61c53ccca43a556b79f7b07b0d5c82ef7c380787f07c20f30.png" />
 </div>
 </div>
 <ul class="simple">
@@ -1207,10 +1092,10 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/393c592d9a64a97873863e4ce11b0142d1615ed5101830d70a9ca1726e192d22.png" src="../../../_images/393c592d9a64a97873863e4ce11b0142d1615ed5101830d70a9ca1726e192d22.png" />
+<img alt="../../../_images/f39dea58054c4241fcc90725053a683c548f53e434f8dfbfebd20bec9c3b55f4.png" src="../../../_images/f39dea58054c4241fcc90725053a683c548f53e434f8dfbfebd20bec9c3b55f4.png" />
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">display</span><span class="p">(</span><span class="n">qc_psi_copy</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="s1">&#39;mpl&#39;</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">shots</span> <span class="o">=</span> <span class="mi">10000</span>
 <span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">counts_psi</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc_psi_copy</span><span class="p">,</span><span class="n">M_simulator</span><span class="p">,</span><span class="n">shots</span> <span class="o">=</span> <span class="n">shots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
@@ -1234,7 +1119,7 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = -0.312
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Z&gt; = -0.3196
 </pre></div>
 </div>
 </div>
@@ -1357,7 +1242,7 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#from qiskit.circuit.library.standard_gates import U3Gate</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">M_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="s1">&#39;definimos un estado arbitrario en la esfera de Bloch&#39;</span>
@@ -1439,11 +1324,11 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-de-1-cubit">Medidas de 1 cúbit</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-la-base-computacional">Medidas en la base computacional</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidades-de-medida">Probabilidades de medida</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-un-ordenador-cuantico-real">Medidas en un ordenador cuántico real</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interferencias-la-moneda-cuantica">Interferencias: la moneda cuántica</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-una-base-general">Medidas en una base general</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formalismo-general">Formalismo general</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-bases-x-y-y-z">Ejemplo: bases <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span></a></li>
 </ul>
 </li>
