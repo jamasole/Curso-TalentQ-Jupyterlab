@@ -477,9 +477,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interferencias-la-moneda-cuantica">Interferencias: la moneda cuántica</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-una-base-general">Medidas en una base general</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-bases-generales">Medidas en bases generales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bases-x-e-y">Bases  X e Y</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formalismo-general">Formalismo general</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-bases-x-y-y-z">Ejemplo: bases <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">Valores esperados</a><ul class="nav section-nav flex-column">
@@ -499,7 +499,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Mar 07, 2024 | 6 min read</p>
+<div><p>Mar 07, 2024 | 7 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -533,20 +533,16 @@ document.write(`
 <h2>Medidas de 1 cúbit<a class="headerlink" href="#medidas-de-1-cubit" title="Permalink to this heading">#</a></h2>
 <section id="medidas-en-la-base-computacional">
 <h3>Medidas en la base computacional<a class="headerlink" href="#medidas-en-la-base-computacional" title="Permalink to this heading">#</a></h3>
-<p>El <strong>aparato de medida estándar</strong> en computación cuántica asigna valores <span class="math notranslate nohighlight">\(a = 0,1\)</span> a los kets <span class="math notranslate nohighlight">\(\ket{0}\)</span> y <span class="math notranslate nohighlight">\(\ket{1}\)</span> de la base computacional</p>
+<p>El <strong>circuito de medida estándar</strong> se representa en la forma siguiente</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/cubit_meter2.png"><img alt="../../../_images/cubit_meter2.png" src="../../../_images/cubit_meter2.png" style="width: 250px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/cubit_meter_zbasis.png"><img alt="../../../_images/cubit_meter_zbasis.png" src="../../../_images/cubit_meter_zbasis.png" style="width: 400px;" /></a>
 </figure>
-<p>En general, el estado emergente es  ignorado (o destruido) en la medida. Es esos casos se omite el hilo cuántico a la salida</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/cubit_meter1.png"><img alt="../../../_images/cubit_meter1.png" src="../../../_images/cubit_meter1.png" style="width: 300px;" /></a>
-</figure>
-<p>La medida estándar es una <em>medida proyectiva</em> a la que asociamos el observable <span class="math notranslate nohighlight">\(Z = \sigma_z \)</span>.</p>
+<p>Por defecto, se trata de una <em>medida proyectiva</em> asociada al operador observable <span class="math notranslate nohighlight">\(Z\)</span>. Es decir, proyecta a la base <span class="math notranslate nohighlight">\(\ket{a} = \ket{0},\ket{1}\)</span>  de autoestados de <span class="math notranslate nohighlight">\(Z\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 Z\ket{0} = +\ket{0}~~~~,~~~~~ Z\ket{1} = -\ket{1}
 \]</div>
-<p>o, de forma conjunta, con <span class="math notranslate nohighlight">\(~a=0,1\)</span></p>
+<p>Podemos abreviar de forma  conjunta, con <span class="math notranslate nohighlight">\(~a=0,1\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 Z\ket{a} = (-1)^a\ket{a}
@@ -554,10 +550,10 @@ Z\ket{a} = (-1)^a\ket{a}
 </section>
 <section id="probabilidades-de-medida">
 <h3>Probabilidades de medida<a class="headerlink" href="#probabilidades-de-medida" title="Permalink to this heading">#</a></h3>
-<p>Una repetición de medidas de un estado <span class="math notranslate nohighlight">\(\ket{\psi} = c_0\ket{0} + c_1\ket{1}\)</span> permite tener acceso estadístico a las amplitudes de probabilidad</p>
+<p>Una repetición de medidas del estado <span class="math notranslate nohighlight">\(\ket{\psi} = z_0\ket{0} + z_1\ket{1}\)</span> da acceso estadístico a las <em>amplitudes de probabilidad</em></p>
 <div class="math notranslate nohighlight">
 \[
-p(0) = \frac{n_{0}}{N} = |c_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \frac{n_{1}}{N}=|c_1|^2 =  |\braket{1}{\psi}|^2 \, .
+p(0) = \frac{n_{0}}{N} = |z_0|^2 = |\braket{0}{\psi}|^2~~~~~~~~~~~~~~~~ p(1) = \frac{n_{1}}{N}=|z_1|^2 =  |\braket{1}{\psi}|^2 \, .
 \]</div>
 <p>Este procedimiento de reconstrucción es la base de la <strong>tomografía cuántica</strong>.</p>
 <p>Definamos un vector aleatorio</p>
@@ -723,46 +719,46 @@ En efecto el proceso de hacer dos tiradas sucesivas (sin medir entre ellas) gene
 </div>
 </section>
 </section>
-<section id="medidas-en-una-base-general">
-<h2>Medidas en una base general<a class="headerlink" href="#medidas-en-una-base-general" title="Permalink to this heading">#</a></h2>
-<p>El aparato de medida estándar que ponemos en un circuito cuántico está asociado al observable <span class="math notranslate nohighlight">\(Z\)</span>. Esto implica que cualquier estado medido arrojará resultados <span class="math notranslate nohighlight">\(a = 0,1\)</span> con cierta probabilidad que proviene de expandir el estado en la base de autoestados</p>
+<section id="medidas-en-bases-generales">
+<h2>Medidas en bases generales<a class="headerlink" href="#medidas-en-bases-generales" title="Permalink to this heading">#</a></h2>
+<p>La elección del observable <span class="math notranslate nohighlight">\(Z\)</span> para el medidor en la base computacional es arbitrario. Deberíamos ser capaces de modificar la base de medida a voluntad. Vamos a estudiar primero cómo usar las bases <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> y después analizaremos el caso arbitrario.</p>
+<section id="bases-x-e-y">
+<h3>Bases  X e Y<a class="headerlink" href="#bases-x-e-y" title="Permalink to this heading">#</a></h3>
+<p>Los autovectores del operador <span class="math notranslate nohighlight">\(X\)</span> se denominan convencionalmente <span class="math notranslate nohighlight">\(\ket{+}, \ket{-}\)</span>.
+Desearíamos disponer de un circuito asociado a este observable, de forma que, a la detección de un autovector <span class="math notranslate nohighlight">\(\ket{+} \)</span> registrase un  <span class="math notranslate nohighlight">\(0\)</span> y de <span class="math notranslate nohighlight">\(\ket{-} \)</span> un <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>Es fácil construir un circuito así, como se ve en la figura a continuación. Efectivamente la acción de <span class="math notranslate nohighlight">\(H\ket{+} = \ket{0}\)</span>
+y <span class="math notranslate nohighlight">\(H\ket{-} = \ket{1}\)</span> manda cada autoestado de <span class="math notranslate nohighlight">\(X\)</span> a un autoestado de <span class="math notranslate nohighlight">\(Z\)</span>. A continuación un medidor estándar registrará el valor de <span class="math notranslate nohighlight">\(a =0,1\)</span> según sea el estado medido. Una aplicación posterior de <span class="math notranslate nohighlight">\(H\)</span> nos devolverá el estado original <span class="math notranslate nohighlight">\(H\ket{0} = H^2 \ket{+} = \ket{+}\)</span> e igualmente <span class="math notranslate nohighlight">\(H\ket{1} = H^2 \ket{-} = \ket{-}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/meter_xybasis.png"><img alt="../../../_images/meter_xybasis.png" src="../../../_images/meter_xybasis.png" style="width: 700px;" /></a>
+</figure>
+<p>Igualmente denominemos <span class="math notranslate nohighlight">\(\ket{+ i}\)</span> y   <span class="math notranslate nohighlight">\(\ket{- i}\)</span> los autoestados del operador <span class="math notranslate nohighlight">\(Y\)</span>.
+Podemos construir un circuito que registra <span class="math notranslate nohighlight">\(a = 0,1\)</span> cuando el estado incidente colapsa a  <span class="math notranslate nohighlight">\(\ket{+ i}\)</span> y   <span class="math notranslate nohighlight">\(\ket{- i}\)</span> respectivamente.  Basta observar que <span class="math notranslate nohighlight">\(\ket{\pm i} = SH\ket{a}\)</span>. Inversamente <span class="math notranslate nohighlight">\(\ket{a} = HS^\dagger \ket{\pm i}\)</span> y proceder igual que antes.</p>
+<p>En resumen: podemos <em>construir</em> aparatos de medida <em>efectivos</em> que actúan sobre las bases <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> igual que el medidor estándar lo hace sobre <span class="math notranslate nohighlight">\(Z\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/meter_xybasis2.png"><img alt="../../../_images/meter_xybasis2.png" src="../../../_images/meter_xybasis2.png" style="width: 700px;" /></a>
+</figure>
+<p>Detrás de estas equivalencias de circuitos, ahora con medidores, se esconde la conjugación de puertas siguiente</p>
 <div class="math notranslate nohighlight">
 \[
-\ket{\psi} = z_0 \ket{0} + z_1\ket{1}
-\]</div>
-<p>Entonces <span class="math notranslate nohighlight">\(p_0 = |a_0|^2\)</span> y  <span class="math notranslate nohighlight">\(p_1 = |a_1|^2\)</span> son las probabilidades que recuperaremos realizando multiples medidas sobre <span class="math notranslate nohighlight">\(\ket{\psi}\)</span>.</p>
-<p>Encontraremos la necesidad de medir en la base  <span class="math notranslate nohighlight">\(\{ \ket{+},\ket{-}\}\)</span> de autoestados de <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[
-\ket{\psi} = x_0\ket{+} + x_1 \ket{-}
-\]</div>
-<p>o, también, en la base <span class="math notranslate nohighlight">\(\{ \ket{+i},\ket{-i}\}\)</span> de autoestados de <span class="math notranslate nohighlight">\(Y\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-\ket{\psi} = y_0\ket{+i} + y_1 \ket{-i}
-\]</div>
-<p>Este problema se soluciona observando las siguientes identidades algebraicas</p>
-<div class="math notranslate nohighlight">
-\[
-\ket{+} = H \ket{0} ~~~,~~~ \ket{-} = H\ket{1} ~~~~~,~~~~~X = H Z H
+X = H Z H
 \]</div>
 <p>así como</p>
 <div class="math notranslate nohighlight">
 \[
-\ket{+i} = SH \ket{0} ~~~,~~~ \ket{-i} = SH\ket{1} ~~~~~,~~~~~Y = SHZ HS^\dagger
+Y = SHZ HS^\dagger
 \]</div>
-<p>Esto nos permite escribir los circuitos que miden los autovalores <span class="math notranslate nohighlight">\(a = 0,1\)</span> en las bases de <span class="math notranslate nohighlight">\(X\)</span> y de <span class="math notranslate nohighlight">\(Y\)</span></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/meter_xybasis.png"><img alt="../../../_images/meter_xybasis.png" src="../../../_images/meter_xybasis.png" style="width: 700px;" /></a>
-</figure>
-<p>lo cual  nos permite definir  <u>aparatos de medida efectivos</u> en las direcciones <span class="math notranslate nohighlight">\(x\)</span> e <span class="math notranslate nohighlight">\(y\)</span></p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/meter_xybasis2.png"><img alt="../../../_images/meter_xybasis2.png" src="../../../_images/meter_xybasis2.png" style="width: 700px;" /></a>
-</figure>
+<div class="note admonition">
+<p class="admonition-title">Nota</p>
+<p>recuerda que el orden de la composición de operadores se invierte al plasmarlos en un circuito</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Ejercicio</p>
+<p>Comprueba  que estas ecuaciones de conjugación son correctas</p>
+</div>
+</section>
 <section id="formalismo-general">
 <h3>Formalismo general<a class="headerlink" href="#formalismo-general" title="Permalink to this heading">#</a></h3>
-<p>Vamos a ver los dos casos anteriors como caso particulares de un medidor en una dirección arbitraria.
-Dado un vector unitario <span class="math notranslate nohighlight">\(~\hat\boldn~\)</span>
+<p>Vamos a ver los dos casos anteriores como caso particulares de un aparato de medida asociado a una dirección arbitraria en la esfera de Bloch. Dado un vector unitario <span class="math notranslate nohighlight">\(~\hat\boldn~\)</span>
 $<span class="math notranslate nohighlight">\(
 \hat\bn(\theta,\phi) = \sin\theta\cos\phi \, \hat {\bf x} + \sin\theta\sin\phi \, \hat {\bf y} + \cos\theta \, \hat {\bf z}
 \)</span><span class="math notranslate nohighlight">\(
@@ -818,10 +814,10 @@ U(\hat {\bf z}\to \hat \bn) = U(\theta,\phi,0)=\begin{bmatrix}   \cos \displayst
 \)</span>$</p>
 <p>como es fácil de comprobar
 $$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a14d74c-5c6e-4f8d-aaa2-a8ec196c6639">
-<span class="eqno">(16)<a class="headerlink" href="#equation-3a14d74c-5c6e-4f8d-aaa2-a8ec196c6639" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} \cos\theta \\ e^{i\phi}\sin\theta \end{bmatrix}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-278614a3-3f33-4610-94e5-4a728875dc2d">
-<span class="eqno">(17)<a class="headerlink" href="#equation-278614a3-3f33-4610-94e5-4a728875dc2d" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} -\sin\theta \\ e^{i\phi}\cos\theta \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3a5b7e49-1f1e-45ad-a913-b4eba9c4db2c">
+<span class="eqno">(16)<a class="headerlink" href="#equation-3a5b7e49-1f1e-45ad-a913-b4eba9c4db2c" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} \cos\theta \\ e^{i\phi}\sin\theta \end{bmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ef84417a-d304-4f85-9253-9ad3c57f121e">
+<span class="eqno">(17)<a class="headerlink" href="#equation-ef84417a-d304-4f85-9253-9ad3c57f121e" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} -\sin\theta \\ e^{i\phi}\cos\theta \end{bmatrix}\]</div>
 <p>$$</p>
 <p>Si las componentes de los vectores rotan en la forma <span class="math notranslate nohighlight">\(\ket{a}_{\hat{\bf n}} = U\ket{a}_{\hat{\bf z}}\)</span>
 los observables asociados  se relacionan algebraicamente <em>como lo hace cualquier operador</em></p>
@@ -837,8 +833,8 @@ Verificamos la consistencia<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight" id="equation-00a4667c-2e0a-4852-abff-88df1d8bff47">
-<span class="eqno">(19)<a class="headerlink" href="#equation-00a4667c-2e0a-4852-abff-88df1d8bff47" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-da9c91ba-d824-4351-803a-c2f02cf1602d">
+<span class="eqno">(19)<a class="headerlink" href="#equation-da9c91ba-d824-4351-803a-c2f02cf1602d" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \hat {\bf n} \cdot \bsig\,  \ket{a}_{\hat{\bf n}} ~~&amp;=&amp;~~ 
 U~ \hat {\bf z} \cdot \bsig ~  U^\dagger ~ U  \ket{a}_{\hat{\bf z}}\\  \rule{0mm}{8mm}
 &amp;=&amp; U~ \hat {\bf z} \cdot \bsig ~   \ket{a}_{\hat{\bf z}}\\   \rule{0mm}{8mm}
@@ -856,22 +852,7 @@ obtenido mediante la rotación del aparato de medida en la base <span class="mat
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/nbasis_measure2.png"><img alt="../../../_images/nbasis_measure2.png" src="../../../_images/nbasis_measure2.png" style="width: 500px;" /></a>
 </figure>
-<div class="note admonition">
-<p class="admonition-title">Nota</p>
-<p>Recuerda que el orden de la composición de operadores se invierte al plasmarlos en un circuito</p>
-</div>
-</section>
-<section id="ejemplo-bases-x-y-y-z">
-<h3>Ejemplo: bases <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span><a class="headerlink" href="#ejemplo-bases-x-y-y-z" title="Permalink to this heading">#</a></h3>
-<p>Para construir un medidor asociado a las bases <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> sólo son necesarios operadores que rotan el eje <span class="math notranslate nohighlight">\(Z\)</span> a los ejes <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span></p>
-<div class="math notranslate nohighlight">
-\[ \ket{\pm} =  \ket{a}_{\hat{\bf x}} =  H \ket{a}_{\hat{\bf z}} ~~~~ \]</div>
-<div class="math notranslate nohighlight">
-\[ \ket{\pm i} = \ket{a}_{\hat{\bf y}} =  SH \ket{a}_{\hat{\bf z}} \]</div>
-<div class="tip admonition">
-<p class="admonition-title">Ejercicio</p>
-<p>Comprueba  que estas ecuaciones de cambio de base son correctas</p>
-</div>
+<p>El caso anterior de las bases <span class="math notranslate nohighlight">\(X\)</span> e <span class="math notranslate nohighlight">\(Y\)</span> se recupera con <span class="math notranslate nohighlight">\(U = H\)</span> en el primer caso y <span class="math notranslate nohighlight">\(U = SH\)</span> en el segundo.</p>
 <p>Los observables asociados ahora son</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1327,9 +1308,9 @@ Z \ket{0} =+ \ket{0}   ~~~~~~~~~~~~~~~~~~~~~ Z \ket{1} =-\ket{1}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interferencias-la-moneda-cuantica">Interferencias: la moneda cuántica</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-una-base-general">Medidas en una base general</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#medidas-en-bases-generales">Medidas en bases generales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bases-x-e-y">Bases  X e Y</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formalismo-general">Formalismo general</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-bases-x-y-y-z">Ejemplo: bases <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> y <span class="math notranslate nohighlight">\(Z\)</span></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-esperados">Valores esperados</a><ul class="nav section-nav flex-column">
