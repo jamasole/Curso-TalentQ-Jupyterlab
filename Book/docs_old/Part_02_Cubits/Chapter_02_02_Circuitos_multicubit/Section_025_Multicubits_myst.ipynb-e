@@ -60,30 +60,10 @@
    "id": "d20314a4",
    "metadata": {},
    "source": [
-    "## Estados multi-cúbit"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "ad433163",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "### Bases multi-cúbit"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "bc5bb97b",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "## Estados multi-cúbit\n",
+    "\n",
+    "### Bases multi-cúbit\n",
+    "\n",
     " Sea $\\{ \\ket{i}\\}_{i=0,1}$ la base computacional del espacio de Hilbert de un cúbit $\\Hil = {\\mathbb C}^2$.\n",
     " \n",
     "::::::{card} \n",
@@ -91,7 +71,7 @@
     "\n",
     "^^^\n",
     "<br>\n",
-    "La base computacional de $ \\Hil^{\\otimes n}$ está formada por todas las cadenas de elementos posibles\n",
+    "La base computacional de $ \\Hil^{\\otimes n}$ está formada por todas las cadenas  posibles formadas con elementos de la base de $\\Hil$\n",
     "<br>\n",
     "<br>\n",
     "$$\n",
@@ -102,18 +82,7 @@
     " i_{n-1},...,i_0=0,1$\n",
     "::::::\n",
     "\n",
-    "<br>\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "b08c671f",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "\n",
     "\n",
     "La *dimensión*  dim($\\Hil^{\\otimes n}$) = $2^n$ coincide con el número combinaciones distintas posibles: $2\\times 2...\\times 2 = 2^n$.\n"
    ]
@@ -128,14 +97,14 @@
    },
    "source": [
     "\n",
-    "- Cuando pasamos a vectores columnas para representar un ket, el producto tensorial se traduce en el producto de Kronecker. Por ejemplo, para un sistema de 2-cúbits,   $n=2$ y tendríamos $2^n=2^2 = 4$ y entonces\n",
+    "- Cuando representa un un ket mediante una columna de componentes, el producto tensorial se traduce en el producto de Kronecker. Por ejemplo, para un sistema de 2-cúbits,   $n=2$ y tendríamos $2^n=2^2 = 4$ y entonces\n",
     "\n",
     "<br>\n",
     "\n",
     "$$\n",
     "\\ket{00}~=~ \\ket{0}\\otimes \\ket{0}~=~\n",
     "\\begin{bmatrix}1\\\\ 0\\end{bmatrix} \\otimes \\begin{bmatrix}1\\\\ 0\\end{bmatrix} = \\begin{bmatrix}1\\\\0\\\\0 \\\\ 0\\end{bmatrix}\n",
-    "~~~~~~,~~~~~\n",
+    "~~~~~~~~,~~~~~~~\n",
     "\\ket{01}~=~ \\ket{0}\\otimes \\ket{1}~=~\n",
     "\\begin{bmatrix}1\\\\ 0\\end{bmatrix} \\otimes \\begin{bmatrix}0\\\\ 1\\end{bmatrix} = \\begin{bmatrix}0\\\\1\\\\0 \\\\ 0\\end{bmatrix}\n",
     "$$\n",
@@ -146,7 +115,7 @@
     "$$\n",
     "\\ket{10}~=~ \\ket{1}\\otimes \\ket{0}~=~\n",
     " \\begin{bmatrix}0\\\\ 1\\end{bmatrix} \\otimes \\begin{bmatrix}1\\\\ 0\\end{bmatrix} = \\begin{bmatrix}0\\\\0\\\\1 \\\\ 0\\end{bmatrix}\n",
-    " ~~~~~,~~~~\n",
+    " ~~~~~~~,~~~~~~\n",
     "\\ket{11}~=~ \\ket{1}\\otimes \\ket{1}~=~\n",
     "\\begin{bmatrix}0\\\\ 1\\end{bmatrix} \\otimes \\begin{bmatrix}0\\\\ 1\\end{bmatrix} = \\begin{bmatrix}0\\\\0\\\\0 \\\\ 1\\end{bmatrix}\n",
     "$$\n",
@@ -154,73 +123,40 @@
     "<br>\n",
     "\n",
     "\n",
-    "Las etiquetas de los vectores y, por tanto, de las componentes de las matrices, bi-índices $ij=11,12,21,22$ que adopta el mismo número, $N^2$, de cofiguraciones distintas. \n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "ce715e40",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "Las etiquetas de los vectores y, por tanto, de las componentes de las matrices, bi-índices $ij=11,12,21,22$  adoptan el mismo número, $N^2$, de configuraciones distintas. \n",
+    "\n",
+    "\n",
     "::::::{admonition} Notar\n",
     ":class: note\n",
     "\n",
     "    \n",
-    "El <i>multi-ínidice</i> $i_{n-1}i_{n-2}....i_0$ puede interpretarse como un número entero, $p$, escrito en base *binaria*\n",
+    "- El <i>multi-ínidice</i> $i_{n-1}i_{n-2}....i_0$ puede interpretarse como un número entero, $p$, escrito en base *binaria*, que podemos traducir a base decimal\n",
     "<br>\n",
     "\n",
     "$$\n",
-    "~~ i_{n-1} i_{n-2}...i_0 ~~\\longleftrightarrow ~~~p = \\sum_{k=0}^{n-1} 2^k i_k \n",
+    "~~ i_{n-1} i_{n-2}...i_0 ~~~\\longleftrightarrow~~~\n",
+    "  p ~=~ 2^{n-1}i_{n-1} + 2^{n-2}i_{n-2} + ...+ 2^1 i_1 + 2^0 i_0  ~=~ \\sum_{k=0}^{n-1} 2^k i_k \n",
     "$$\n",
     "<br>\n",
     "que tomará  $2^n$ valores $p = 0,1, \\, ...\\, ,2^{n}-1$. \n",
     "<br>\n",
-    "<br>    \n",
-    "El cambio de notación *multi-índice* $\\leftrightarrow$ *entero en notación decimal* será frecuente y se aplicará a cualquier elemento. \n",
     "    \n",
-    "Por ejemplo $\\ket{000} = \\ket{0}, \\ket{111} = \\ket{7}$ etc.\n",
-    "::::::\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "fff45dc9",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "::::::{card} \n",
-    "\n",
-    "\n",
-    "El vector de estado más general  $\\ket{u}\\in \\Hil^{\\otimes n}$ será una combinación lineal de elementos de la base computacional $\\ket{i_n i_{n-1}...i_1}$ en términos de unas componentes $u_{i_ni_{n-1}...i_1}$\n",
+    "- Usamos el convenio de que el número binario menos significativo está a la derecha\n",
     "<br>    \n",
+    "::::::\n",
+    "\n",
+    " El cambio de notación *multi-índice* $\\leftrightarrow$ *entero en notación decimal* será frecuente. \n",
+    "Por ejemplo $\\ket{000} = \\ket{0}, \\ket{111} = \\ket{7}$ etc.\n",
+    "\n",
+    "El vector de estado más general  $\\ket{u}\\in \\Hil^{\\otimes n}$ será una combinación lineal de elementos de la base computacional $\\ket{i_n i_{n-1}...i_1}$ en términos de unas componentes $u_{i_ni_{n-1}...i_1}$   \n",
     "<br>\n",
     "$$\n",
     "\\ket{u} = \\sum_{i_{n-1},...,i_0=0,1} u_{i_{n-1} ... i_0} \\ket{i_{n-1}  ... i_0}  = \\sum_{p=0}^{2^n-1} u_p \\ket{p}, .\n",
     "$$\n",
     "<br>\n",
     "donde hemos usado alternativamente la notación binaria y la decimal. \n",
-    "::::::\n",
     "\n",
     "\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "cf702083",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
     "::::::{admonition} Ejemplo\n",
     ":class: tip\n",
     "\n",
@@ -246,8 +182,19 @@
     "$$\n",
     "No debería haber confusión entre ambas notaciones puesto que, en cuanto aparezca un número superior a 1 quiere decir que estamos tratando con la base decimal. \n",
     "::::::\n",
+    "\n",
     "\n"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cf702083",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "source": []
   },
   {
    "cell_type": "markdown",
@@ -275,61 +222,32 @@
     }
    },
    "source": [
-    "### Circuitos multi-cúbit"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "15d7954d",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "-"
-    }
-   },
-   "source": [
-    "Sea $\\ket{q_{n-1}q_{n-2}...q_0}$ un estado multicúbit de la base computacional $q_{a} = 0,1$. \n",
+    "### Circuitos multi-cúbit\n",
+    "\n",
+    "Sea  un estado multicúbit de la base computacional $q_{a} = 0,1$\n",
+    "\n",
+    "$$\n",
+    "\\ket{q_{n-1}q_{n-2}...q_0} ~=~ \\ket{q_{n-1}}\\otimes \\ket{q_{n-2}}\\otimes ... \\otimes \\ket{q_0}\n",
+    "$$\n",
     "\n",
     "Este estado \n",
-    "se propaga a lo largo de un circuito de forma que <i>cada línea representa un espacio de Hilbert</i>. "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "a86732e1",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
-    "La asignación que se hace en *qiskit* coloca el cúbit *menos relevante* $q_0$  en la  línea superior. Esto es\n",
+    "se propaga a lo largo de un circuito de forma que <i>cada línea representa un espacio de Hilbert</i>.\n",
+    "\n",
+    "La asignación que se hace en *Qibo* y en *Qiskit* coloca el cúbit de índice binario *menos relevante* $q_0$  en la  línea superior. Esto es\n",
     "\n",
     "- Qiskit:  \n",
     "\n",
     "\n",
     "::::{figure} images/multicubit_circ.png\n",
-    ":width: 250px\n",
+    ":width: 200px\n",
     ":align: center\n",
     "::::\n",
-    "\n",
-    "$\\rule{0.7cm}{0mm}$ Esta ordenación en un circuito es la inversa de la que tradicional"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "f51a0dec",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
     "\n",
     "\n",
     "- Todos los demás\n",
     "\n",
     "::::{figure} images/Multicubit_circ_NC.png\n",
-    ":width: 250px\n",
+    ":width: 200px\n",
     ":align: center\n",
     "::::\n"
    ]
@@ -343,55 +261,34 @@
     }
    },
    "source": [
-    "### Entrelazamiento"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "9daa3769",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "-"
-    }
-   },
-   "source": [
-    "De forma  general, los estados $\\ket{u}\\in \\Hil^{\\otimes n}$ pertenecen a dos conjuntos disjuntos\n",
+    "### Entrelazamiento\n",
+    "\n",
+    "De forma  general, los estados $\\ket{u}\\in \\Hil^{\\otimes n}$ pueden ser de dos clases:\n",
     "    <br>\n",
     "    \n",
-    "   - estado factorizables, cuando $\\ket{u} = \\ket{a}\\otimes \\ket{b}\\otimes...\\otimes \\ket{c}$\n",
+    "   - *estado factorizables*, cuando $\\ket{u} = \\ket{a}\\otimes \\ket{b}\\otimes...\\otimes \\ket{c}$\n",
     "<br>\n",
     "\n",
-    "   - estados entrelazados, cuando $\\ket{u} \\neq \\ket{a}\\otimes \\ket{b}\\otimes...\\otimes \\ket{c}$ no es factorizable\n",
+    "   - *estados entrelazados*, cuando $\\ket{u} \\neq \\ket{a}\\otimes \\ket{b}\\otimes...\\otimes \\ket{c}$ no es factorizable\n",
     "    \n",
-    "  "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "4a0dcc1a",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
-    "Ahora podemos usar también bases cuyo elementos sean vectores factorizados o entrelazados. \n",
+    "    \n",
+    "Ahora podemos usar también *bases* cuyo elementos sean vectores factorizados o entrelazados. \n",
     "\n",
-    "- **base computacional** (factorizada): $\\{ \\ket{00},\\ket{01},\\ket{10},\\ket{11}\\}$\n",
+    "- *base computacional* (factorizada): $\\{ \\ket{00},\\ket{01},\\ket{10},\\ket{11}\\}$\n",
     "<br>\n",
     "\n",
-    "- **base de Bell** (entrelazada): \n",
+    "- *base de Bell* (entrelazada): \n",
     "\n",
     "$$\n",
     "\\begin{array}{rcl}\n",
-    "\\ket{B_{00}} &=& \\frac{1}{\\sqrt{2}} \\big( \\ket{00} + \\ket{11} \\big) \\\\\n",
-    "\\ket{B_{01}} &=& \\frac{1}{\\sqrt{2}} \\big( \\ket{00} - \\ket{11} \\big) \\\\\n",
-    "\\ket{B_{10}} &=& \\frac{1}{\\sqrt{2}} \\big( \\ket{01} + \\ket{10} \\big) \\\\\n",
-    "\\ket{B_{11}} &=& \\frac{1}{\\sqrt{2}} \\big( \\ket{01} - \\ket{10} \\big) \\\\\n",
+    "\\ket{00}_B &=& \\frac{1}{\\sqrt{2}} \\big( \\ket{00} + \\ket{11} \\big) \\\\\n",
+    "\\ket{01}_B &=& \\frac{1}{\\sqrt{2}} \\big( \\ket{00} - \\ket{11} \\big) \\\\\n",
+    "\\ket{10}_B &=& \\frac{1}{\\sqrt{2}} \\big( \\ket{01} + \\ket{10} \\big) \\\\\n",
+    "\\ket{11}_B &=& \\frac{1}{\\sqrt{2}} \\big( \\ket{01} - \\ket{10} \\big) \\\\\n",
     "\\end{array}\n",
     "$$\n",
     "\n",
-    "<br>"
+    "  "
    ]
   },
   {
@@ -406,59 +303,25 @@
     "### Medidas parciales\n",
     "\n",
     "Una medida parcial afecta sólamente a un subconjunto de cúbits de un multi-cúbit. \n",
-    "\n",
-    "Aquí encontramos una diferencia crucial entre estados factorizables y entrelazados. "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "b6d2692d",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "-"
-    }
-   },
-   "source": [
+    "Aquí encontramos una diferencia crucial entre estados factorizables y entrelazados. \n",
     "Consideremos el estado bi-cúbit *factorizable* visto antes\n",
     "\n",
     "$$\n",
     "\\ket{u} = \\ket{a}\\otimes \\ket{b} = \\frac{1}{\\sqrt{2}}\\big( \\ket{0} + \\ket{1}\\big)\\otimes \\frac{1}{\\sqrt{2}}\\big( \\ket{0} + \\ket{1}\\big)\\, .\n",
     "$$\n",
     "\n",
-    "donde vamos a suponer que el cúbit $\\ket{a}$ está en el laboratorio de Alice, y el $\\ket{b}$ en el de Bob."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "f14519c6",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
+    "donde vamos a suponer que el cúbit $\\ket{a}$ está en el laboratorio de Alice, y el $\\ket{b}$ en el de Bob.\n",
     "Una medida de Alice sobre el primer cúbit solo podrá resultar, con probabilidad $1/2$, en uno de los dos posibles estados siguientes  \n",
-    "<br>\n",
+    "\n",
     "$$\n",
-    "\\ket{u} ~\\rightarrow ~ \\left\\{ \\begin{matrix}\\ket{0} \\otimes \\frac{1}{\\sqrt{2}}\\big( \\ket{0} + \\ket{1}\\big)\\\\ \\ket{1} \\otimes \\frac{1}{\\sqrt{2}}\\big( \\ket{0} + \\ket{1}\\big) \\end{matrix} \\right.\n",
+    "\\ket{u} ~\\rightarrow ~ \\left\\{ \\begin{matrix}\\ket{0} \\otimes \\displaystyle\\frac{1}{\\sqrt{2}}\\big( \\ket{0} + \\ket{1}\\big)\\\\ \\ket{1} \\otimes  \\displaystyle\\frac{1}{\\sqrt{2}}\\big( \\ket{0} + \\ket{1}\\big) \\end{matrix} \\right.\n",
     "$$\n",
     "<br>\n",
     "\n",
     "Vemos que, después de esta medición, el segundo cúbit permanece intacto. Si Bob mide, podrá obtener $\\ket{0}$ ó $\\ket{1}$ con probabilidad $1/2$.\n",
     "<br>\n",
-    "En este caso, las medidas de Alice y Bob *no están correlacionadas* \n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "44a406aa",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
-    " Sin embargo, si el estado es *entrelazado*, por ejemplo, \n",
+    "En este caso, las medidas de Alice y Bob *no están correlacionadas* \n",
+    "Sin embargo, si el estado es *entrelazado*, por ejemplo, \n",
     "<br>\n",
     "\n",
     "$$\n",
@@ -473,18 +336,7 @@
     "$$\n",
     "<br>\n",
     "también con probabilidad 1/2 cada caso.\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "b3153abb",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
+    "\n",
     "Vemos que ahora: el segundo cúbit ha sufrido modificación  *correlacionada* con el resultado obtenido de la medida del primero\n",
     "\n",
     "- Si Alice midió $\\ket{0}$, Bob sólo puede obtener $\\ket{0}$\n",
@@ -494,34 +346,10 @@
     "<br>\n",
     "\n",
     "\n",
-    "en este caso, las medidas de Alice y Bob sí están 100\\% *correlacionadas*"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "49aecc6f",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
+    "en este caso, las medidas de Alice y Bob sí están 100\\% *correlacionadas*. \n",
+    "Esta correlación es independiente de la distancia que separe a Alice y a Bob, algo que parece violar causalidad. \n",
+    "Einstein Podolski y Rosen en 1935 pensaron que este hecho indicaba que la Mecánica Cuántica era incompleta.  Esto se conoce como la [*paradoja EPR*](https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox)\n",
     "\n",
-    "Esta correlación es independiente de la distancia que separe a Alice y a Bob. Eso parece violar causalidad. \n",
-    "\n",
-    "\n",
-    "Einstein Podolski y Rosen en 1935 pensaron que este hecho demostraba que la Mecánica Cuántica era incompleta.  Esto se conoce como la [*paradoja EPR*](https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "5a6917d7",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "fragment"
-    }
-   },
-   "source": [
     "::::::{admonition} Notar\n",
     ":class: note\n",
     "\n",
@@ -530,10 +358,10 @@
     "-  En ambos casos, factorizable o entrelazado,  las probabilidades de Bob, de obtener $\\ket{0}$ ó $\\ket{1}$ en el segundo cúbit, son iguales a $1/2$. \n",
     "<br>\n",
     "    \n",
-    "- Eso implica que las correlaciones cuánticas no permiten transmitir información   <i>(No-signalling theorem)</i>.\n",
+    "- Eso implica que las correlaciones cuánticas debidas al entrelazamiento <i>no permiten transmitir información</i>\n",
     "<br>\n",
     "    \n",
-    "- Sin embargo, sus efectos sí que existen. Para ponerlos de manifiesto es necesario diseñar experimentos más sutiles. El primero que se inventó fue debido a John Bell en 1964\n",
+    "- Sin embargo, sus efectos sí que existen. Para ponerlos de manifiesto fue necesario diseñar experimentos más sutiles. El primero que de ellos fue debido a John Bell en 1964\n",
     "\n",
     "::::::\n"
    ]
@@ -547,100 +375,79 @@
     }
    },
    "source": [
-    "## Puertas multi-cúbit"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "e728fbfc",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
-    "### La puerta de Walsh-Hadamard"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "9fab2033",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "-"
-    }
-   },
-   "source": [
-    "El operador de Waslh-Hadamard es un *producto tensorial de operadores*\n",
-    "<br>\n",
-    "<br>\n",
+    "## Puertas multi-cúbit\n",
+    "\n",
+    "Ya hemos visto en la lección de operadores que, al igual que con los vectores, los operadores pueden dividirse en dos clases esenciales: operadores factorizados y no-factorizados. Los primeros son de la forma\n",
+    "\n",
+    "$$\n",
+    "O = O_0 \\otimes O_1 ~...~\\otimes O_{n-1}\n",
+    "$$\n",
+    "\n",
+    "donde cada operador actúa de forma independiente en un sólo factor del espacio de Hilbert $\\Hil^n$.\n",
+    "\n",
+    "\n",
+    "### La puerta de Walsh-Hadamard\n",
+    "\n",
+    "El operador de Waslh-Hadamard es un ejemplo de este tipo \n",
+    "\n",
     "$$\n",
     "W =  H^{\\otimes n} = H\\otimes H \\ldots \\otimes H \n",
-    "$$\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "6a7290fc",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "fragment"
-    }
-   },
-   "source": [
-    "\n",
+    "$$\n",
     "\n",
     "La  acción  de $W$ sobre el estado de referencia $\\ket{00...0}$ produce una superposición uniforme de todos los estados de la base.\n",
     "<br>\n",
-    "<br>\n",
+    "\n",
     "\n",
     "\\begin{eqnarray*}\n",
     "W \\ket{00...0} &~=~& H\\ket{0}\\otimes H\\ket{0} \\otimes ... \\otimes H\\ket{0} \\\\  \\rule{0mm}{12mm}\n",
     "&=& \\frac{1}{\\sqrt{2}}\\big(\\ket{0}+\\ket{1}\\big)\\otimes \\frac{1}{\\sqrt{2}}\\big(\\ket{0}+\\ket{1}\\big)\\otimes ...\\otimes \\frac{1}{\\sqrt{2}}\\big(\\ket{0}+\\ket{1}\\big)\\\\ \\rule{0mm}{10mm}\n",
     "&=& \\frac{1}{2^{n/2}}\\big(\\ket{00...00} + \\ket{00...01}+....+\\ket{11...11} \\big)\n",
     "\\end{eqnarray*}\n",
-    " "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "70c11db3",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "La acción de $W$ sobre un estado multicúbit  es necesario recordar la acción de $H$ \n",
+    " \n",
+    " \n",
+    "::::::{admonition} Nota\n",
+    ":class: note\n",
     "\n",
+    "Vamos a rescribir la acción de $W$ de forma que no se haga inmanejable cuando $n$ crezca.\n",
+    "Para ello recordemos que  la acción de $H$ sobre un solo cúbit $\\ket{x} = \\ket{0}$ ó $\\ket{1}$\n",
+    "    \n",
     "$$\n",
-    "H\\ket{x} = \\sum_{y=0,1}(-1)^{xy}\\ket{y}\n",
+    "H\\ket{x} = \\frac{1}{\\sqrt{2}}\\sum_{y=0,1}(-1)^{xy}\\ket{y}\n",
     "$$\n",
     "\n",
-    "Entonces, operando\n",
+    "Entonces,  usando la distributividad del producto de sumas podemos manipular\n",
+    "<br>\n",
     "\n",
-    "\\begin{eqnarray*}\n",
-    "W \\ket{x} &=& H\\ket{x_{n-1}}\\otimes H\\ket{x_{n-2}}\\otimes \\ldots \\otimes H\\ket{x_0} \\\\  \\rule{0mm}{12mm}\n",
-    "\\rule{0mm}{10mm}\n",
-    "&=& \\sum_{y_{n-1}= \\, 0,1} (-1)^{y_{n-1}x_{n-1}}\\ket{y_{n-1}}\\otimes \\sum_{y_{n-2}=0,1} (-1)^{y_{n-2}x_{n-2}}\\ket{y_{n-2}} \\otimes \\ldots \\otimes  \\sum_{y_{0}\\, =\\, 0,1} (-1)^{y_{0}x_{0}}\\ket{y_{0}} \n",
-    "\\end{eqnarray*}"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "ea5ccadf",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "\\begin{eqnarray*}\n",
-    "&=& \\sum_{y_{n-1} y_{n-2}\\ldots y_{0}=\\, 0,1} (-1)^{x_{n-1} y_{n-1}+ \\ldots + x_0 y_0} \\ket{y_{n-1}\\ldots y_0} \\hspace{5.2cm}\\\\\n",
-    "&=& \\sum_{y \\, =\\, 0}^{2^n-1}(-1)^{x\\cdot y} \\ket{y} \\rule{0mm}{10mm}\n",
-    "\\end{eqnarray*}\n",
+    "    \n",
+    "$$\n",
+    "\\begin{array}{rcl}\n",
+    "W \\ket{x} &=& H\\ket{x_{n-1}}\\otimes H\\ket{x_{n-2}}\\otimes \\ldots \\otimes H\\ket{x_0} \\\\  \\rule{0mm}{8mm}\n",
+    "&=&\\frac{1}{\\sqrt{2}} \\sum_{y_{n-1}= \\, 0,1} (-1)^{y_{n-1}x_{n-1}}\\ket{y_{n-1}}\\otimes\\frac{1}{\\sqrt{2}} \\sum_{y_{n-2}=0,1} (-1)^{y_{n-2}x_{n-2}}\\ket{y_{n-2}} \\otimes \\ldots \\otimes \\frac{1}{\\sqrt{2}} \\sum_{y_{0}\\, =\\, 0,1} (-1)^{y_{0}x_{0}}\\ket{y_{0}} \\\\ \\rule{0mm}{8mm}\n",
+    "&=& \\frac{1}{2^{n/2}}\\sum_{y_{n-1} y_{n-2}\\ldots y_{0}=\\, 0,1} (-1)^{x_{n-1} y_{n-1}+ \\ldots + x_0 y_0} \\ket{y_{n-1}\\ldots y_0} \\hspace{5.2cm}\\\\\n",
+    "&=& \\frac{1}{2^{n/2}} \\sum_{y \\, =\\, 0}^{2^n-1}(-1)^{x\\cdot y} \\ket{y} \\rule{0mm}{8mm}\n",
+    "\\end{array}\n",
+    "$$\n",
+    "    \n",
+    "donde \n",
     "\n",
-    "donde $$ x\\cdot y = x_{n-1} y_{n-1} + x_{n-1} y_{n-1} + \\ldots + x_0 y_0$$"
+    "    \n",
+    "$$ x\\cdot y = x_{n-1} y_{n-1} + x_{n-1} y_{n-1} + \\ldots + x_0 y_0$$\n",
+    "    \n",
+    "Esta expresión será de gran utilidad cuando estudiemos algoritmos sencillos\n",
+    "::::::\n",
+    "\n",
+    "::::::{admonition} Ejercicio\n",
+    ":class: tip\n",
+    "\n",
+    "escribe el producto de Kronecker de dos matrices $H\\otimes H$ y verifica que sus componentes verifican\n",
+    "\n",
+    "$$\n",
+    "W_{xy} =  \\frac{1}{2^{n/2}} \\sum_{y \\, =\\, 0}^{2^n-1}(-1)^{x\\cdot y}\n",
+    "$$\n",
+    "    \n",
+    "donde $n=2 $ y $x,y = 0,1$.\n",
+    "::::::\n",
+    "    \n"
    ]
   },
   {
@@ -652,74 +459,39 @@
     }
    },
    "source": [
-    "### La puerta SWAP"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "887b2a8c",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "Las puertas factorizable son un conjunto muy pequeño dentro del conjunto de operadores generales sobre $\\Hil^n$. Vamos ahora a ver puertas no factorizables, primero actuando sobre $\\Hil^2$, es decir, binarias\n",
+    "\n",
+    "\n",
+    "### La puerta SWAP\n",
+    "\n",
     " La puerta SWAP es una puerta binaria fundamental, cuya acción consiste en permutar los estados existentes en los registros individuales sobre los que actúa. En particular, sobre los elementos de la base\n",
     "\n",
     "\n",
     "$$\n",
     "U_{\\rm SWAP }: \\ket{00}\\to\\ket{00}~~,~~\\ket{01}\\to\\ket{10}~~,~~\\ket{10}\\to\\ket{01}~~,~~\n",
     "\\ket{11}\\to\\ket{11}\\, .\n",
-    "$$\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "567cd154",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "$$\n",
+    "\n",
     "Esto nos permite escribir el operador en la notación de producto exterior\n",
     "\n",
     "$$\n",
     "U_{\\rm SWAP } = \\ket{00}\\bra{00} + \\ket{01}\\bra{10} + \\ket{10}\\bra{01} +\\ket{11}\\bra{11} \n",
-    "$$\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "4e66a5a3",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "con matriz asociada \n",
+    "$$\n",
+    "\n",
+    "de donde se leen las componentes de la  matriz asociada \n",
     "\n",
     "$$\n",
     "U_{\\rm SWAP} =  \\begin{bmatrix} \n",
     "1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1\n",
     "\\end{bmatrix}\n",
-    "$$"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "fe90012d",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "$$\n",
+    "\n",
     "y su inserción en un circuito se representa en la forma siguiente\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "::::{figure} images/SWAP_gate.png\n",
-    ":width: 250px\n",
+    ":width: 200px\n",
     ":align: center\n",
     "\n",
     "::::\n"
@@ -734,85 +506,37 @@
     }
    },
    "source": [
-    "### Puertas controladas $\\cg{U}$"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "c7c6a2b5",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "Las puertas controladas son eficientes para generar entrelazamiento"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "7840c173",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "En la puerta controlada un operador se aplica sobre un cúbit dependiendo del estado en el que se encuentra otro. \n",
+    "### Puertas controladas $\\cg{U}$\n",
     "\n",
-    "Este segundo cúbit se denomina *controlador*, mientras que el primero es el *controlado*\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "0f4d594f",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "La puerta controlada se representa como sigue\n",
+    "Las puertas controladas son eficientes para generar entrelazamiento\n",
+    "En la puerta controlada un operador se aplica sobre un cúbit dependiendo del estado en el que se encuentra otro. La *representación gráfica* del circuito asociado es la siguiente\n",
     "<br>\n",
+    "<br>\n",
+    "\n",
+    "::::{figure} images/cU_gate.png\n",
+    ":width: 200px\n",
+    ":align: center\n",
+    "::::\n",
+    "\n",
+    "\n",
+    "El cúbit con el punto  se denomina *controlador*, mientras que el otro es el *controlado*\n",
+    "La acción de la puerta controlada se resume en la forma de Dirac siguiente\n",
     "<br>\n",
     "\n",
     "$$\n",
     "\\cg{U} = \\ket{0}\\bra{0}\\otimes I + \\ket{1}\\bra{1}\\otimes U\n",
     "$$\n",
-    "<br>\n",
     "\n",
-    "donde $U$ es un operador unitario de 1-cúbit general. \n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "181b5ffb",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "Si en el primer cúbit (controlador)\n",
+    "\n",
+    "donde $U$ es un operador unitario de 1-cúbit general. En esta forma la acción es transparente y se puede resumir en: si en el primer cúbit (controlador)\n",
     "<br>\n",
     "    \n",
     "- entra $\\ket{0}$, sale $\\ket{0}$ y en el segundo cúbit (controlado) no se hace nada (se aplica $I$).\n",
     "<br>\n",
     "    \n",
     "- entra $\\ket{1}$, sale $\\ket{1}$ y en el segundo cúbit (controlado) se aplica el operador $U$.\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "63c88043",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "\n",
+    "\n",
     "La *representación matricial* de $\\cg{U}$ es fácil de obtener como suma de  *productos de Kronecker* \n",
     "\n",
     "\n",
@@ -824,79 +548,29 @@
     "\\begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & U_{11} & U_{12} \\\\\n",
     "0 & 0 & U_{21} & U_{22}\\end{bmatrix}\n",
     "\\end{eqnarray*}\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "38fcd980",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "\n",
+    " con $x,y = 0,1$.\n",
+    "\n",
     "::::::{admonition} Nota\n",
     ":class: note\n",
     "\n",
-    "    \n",
-    "- Escrito de esta manera es evidente que, si $U$ es una matriz unitaria, $\\cg{U}$ también lo es $~\n",
-    "\\Rightarrow (\\cg{U})^\\dagger \\cg{U} = I$\n",
     "\n",
-    "\n",
-    "- Esto no es algo trivial por cuanto la combinación lineal de operadores unitarios, en general, no es  unitaria.\n",
-    "::::::\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "6769a1a2",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
     "- La *acción* de $\\cg{U}$ sobre elementos de la base $\\{\\ket{x}\\}$ donde $x=0,1$ admite una forma compacta \n",
-    "<br>\n",
-    "<br>\n",
+    "\n",
     "$$\n",
     "\\cg{U}:\\ket{x}\\otimes\\ket{y} = \\ket{x} \\otimes U^x\\ket{y}\n",
-    "$$"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "2b6c0ccd",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "- La *representación gráfica* del circuito asociado al operador controlado $\\cg{U}$ es la siguiente\n",
+    "$$\n",
     "\n",
-    "<br>\n",
+    "- Escrito de esta manera es evidente que, si $U$ es una matriz unitaria, $\\cg{U}$ también lo es $~\n",
+    "\\Rightarrow (\\cg{U})^\\dagger \\cg{U} = I$.\n",
+    "No es algo trivial por cuanto la combinación lineal de operadores unitarios, en general, no es  unitaria.\n",
     "\n",
     "\n",
-    "::::{figure} images/cU_gate.png\n",
-    ":width: 200px\n",
-    ":align: center\n",
-    "::::\n",
     "\n",
     "\n",
-    "$\\rule{7mm}{0mm}$ con $x,y = 0,1$.\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "fb3ec2aa",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "::::::\n",
+    "\n",
+    "\n",
     "::::::{admonition} Ejercicio\n",
     ":class: tip\n",
     "\n",
@@ -904,37 +578,15 @@
     "Escribe un operador controlado y las matrices asociadas cuando  \n",
     "\n",
     "-  el cúbit de control es el segundo sobre el primero. \n",
-    "<br>\n",
-    "-  el operador $U$ se aplica sobre el segundo cúbit, si el estado del primero es $\\ket{0}$. \n",
+    "    \n",
+    "-  el operador $U$ se aplica sobre el segundo cúbit, si el estado del controlador es $\\ket{0}$. \n",
     "\n",
     "::::::\n",
-    "    \n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "07797cea",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "    \n",
     "Operadores como éste existen en circuitos clásicos. La fascinante novedad es que, ahora, por el primer cúbit podría circular una *superposición* $a\\ket{0} + b\\ket{1}$.\n",
     "\n",
-    "En ese caso, el resultado de una acción controlada también conduce a una superposición, de forma tal que **se genera entrelazamiento**\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "214716e7",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "    \n",
+    "En ese caso, el resultado de una acción controlada también conduce a una superposición, de forma tal que **se genera entrelazamiento**\n",
+    "\n",
     "Para verlo, hagamos actuar $\\cg{U}$ sobre un estado de la forma  $\\ket{\\phi} = (a\\ket{0} + b\\ket{1})\\otimes \\ket{U}$, que es *factorizable*\n",
     "  \n",
     "<br>\n",
@@ -944,19 +596,12 @@
     "    \\left(\\ket{0}\\bra{0}\\otimes I + \\ket{1}\\bra{1}\\otimes U\\rule{0mm}{4mm}\\right)(a\\ket{0} +b \\ket{1})\\otimes \\ket{v}  \n",
     "  \\\\ \\rule{0mm}{14mm}\n",
     "    &=& a\\ket{0}\\otimes \\ket{v} + b\\ket{1}\\otimes U\\ket{v} \\nonumber\n",
-    "\\end{eqnarray*}\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "9daf27f7",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "Vemos que, efectivamente, el resultado es un estado *entrelazado*. \n",
+    "\\end{eqnarray*}\n",
+    "\n",
+    "\n",
+    "Vemos que, efectivamente, el resultado es un estado *entrelazado*\n",
+    "<br>\n",
+    "<br>\n",
     "\n",
     "::::{figure} images/entangling_CU_circuit.png\n",
     ":width: 400px\n",
@@ -973,79 +618,39 @@
     }
    },
    "source": [
-    "### La puerta CNOT"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "8f6c01ef",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "-"
-    }
-   },
-   "source": [
+    "### La puerta CNOT\n",
+    "\n",
     "La  puerta *binaria* CNOT = $\\cg{X}$ es el caso más sencillo de *operador no factorizable* \n",
+    "gráficamente\n",
     "<br>\n",
-    "<br>\n",
+    "\n",
+    "::::{figure} images/cX_gate.png\n",
+    ":width: 200px\n",
+    ":align: center\n",
+    "::::\n",
+    "\n",
     "\n",
     "$$\n",
     "\\hbox{CNOT} = \\cg{X} ~=~ \\ket{0}\\bra{0}\\otimes I + \\ket{1}\\bra{1}\\otimes X ~=~ \\begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\\n",
     "0 & 0 & 1 & 0\\end{bmatrix}\n",
-    "$$"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "89d6ccaf",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "- Sobre elementos de la base computacional $\\ket{xy}=\\ket{x}\\otimes\\ket{y}$ donde $\\, x,y= 0,1$, su acción  se puede representar de manera compacta usando la suma módulo dos \n",
+    "$$\n",
+    "\n",
+    "Sobre elementos de la base computacional $\\ket{xy}=\\ket{x}\\otimes\\ket{y}$ donde $\\, x,y= 0,1$, su acción  se puede representar de manera compacta usando la suma módulo dos \n",
     "\n",
     "$$\n",
     "\\cg{X}:\\ket{x}\\otimes\\ket{y}=  \\ket{x} \\otimes X^x\\ket{y} = \\ket{x} \\otimes \\ket{y\\oplus x}\n",
     "$$\n",
     "\n",
-    "$\\rule{0.7cm}{0mm}$ gráficamente"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "3baa7742",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "-"
-    }
-   },
-   "source": [
-    "\n",
-    "\n",
-    "::::{figure} images/cX_gate.png\n",
-    ":width: 200px\n",
-    ":align: center\n",
-    "::::\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "fafff3d9",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
     "<br>\n",
+    "\n",
     "::::::{admonition} Ejercicio 1.2.1.4\n",
     ":class: tip\n",
     "\n",
     "    \n",
     "el estado factorizable más general de dos cúbits es ($a$ es la normalización)\n",
-    "\n",
+    "<br>\n",
+    "<br>\n",
+    "    \n",
     "$$\n",
     "\\ket{\\psi} = a \\left(\\ket{0} + b_1 e^{i\\phi_1}\\ket{1}) (\\ket{0} + b_0 e^{i\\phi_0} \\ket{1} \\right) \n",
     "$$\n",
@@ -1057,104 +662,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a6af65b8",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "La puerta CNOT en qiskit aparece invertida con respecto a la que dibujamos más arriba. Ello se debe a que qiskit ordena los qubits en $\\ket{q_1 \\, q_0}$ poniendo el asociado al bit más relevante, $q_1$, abajo. \n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "id": "dc497dce",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "outputs": [
-    {
-     "data": {
-      "image/png": "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",
-      "text/plain": [
-       "<Figure size 203.683x200.667 with 1 Axes>"
-      ]
-     },
-     "execution_count": 5,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "from qiskit import Aer, QuantumCircuit, execute\n",
-    "qc = QuantumCircuit(2)\n",
-    "qc.cx(1,0)\n",
-    "qc.draw(output='mpl')"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "bd9a1411",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "ahora podemos pedir el operador unitario que reproduce el circuito anterior\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "id": "b57ccd28",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/latex": [
-       "$$\n",
-       "\\text{CNOT = }\n",
-       "\n",
-       "\\begin{bmatrix}\n",
-       "1 & 0 & 0 & 0  \\\\\n",
-       " 0 & 1 & 0 & 0  \\\\\n",
-       " 0 & 0 & 0 & 1  \\\\\n",
-       " 0 & 0 & 1 & 0  \\\\\n",
-       " \\end{bmatrix}\n",
-       "$$"
-      ],
-      "text/plain": [
-       "<IPython.core.display.Latex object>"
-      ]
-     },
-     "execution_count": 5,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "from qiskit import Aer, execute\n",
-    "U_simulator = Aer.get_backend('unitary_simulator')\n",
-    "\n",
-    "job = execute(qc, backend = U_simulator)\n",
-    "CNOT_matrix = job.result().get_unitary()\n",
-    "\n",
-    "#print(U_matrix)\n",
-    "from qiskit.tools.visualization import array_to_latex\n",
-    "array_to_latex(CNOT_matrix, prefix=\"\\\\text{CNOT = }\\n\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
    "id": "35480c46",
    "metadata": {
     "slideshow": {
@@ -1162,31 +669,29 @@
     }
    },
    "source": [
-    "### La puerta CSWAP o de Fredkin"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "2768045c",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "Si el cúbit  de control está en  el estado $\\ket{1}$ los dos controlados se intercambian\n",
+    "### La puerta CSWAP o de Fredkin\n",
+    "\n",
     "<br>\n",
+    "\n",
+    "\n",
+    "::::{figure} images/CSWAP_gate.png\n",
+    ":width: 130px\n",
+    ":align: center\n",
+    "::::\n",
+    "\n",
     "<br>\n",
+    "\n",
+    "Si el cúbit  de control está en  el estado $\\ket{1}$ los dos cúbits controlados se intercambian\n",
+    "\n",
+    "<br>\n",
+    "\n",
+    "\n",
     "$$\n",
     "U_{\\rm CSWAP} =\\ket{0}\\bra{0} \\otimes I_4 + \\ket{1}\\bra{1} \\otimes U_{\\rm SWAP} \\, .\n",
     "$$\n",
     "\n",
     "<br>\n",
-    "\n",
-    "::::{figure} images/CSWAP_gate.png\n",
-    ":width: 150px\n",
-    ":align: center\n",
-    "::::\n"
+    "\n"
    ]
   },
   {
@@ -1198,18 +703,8 @@
     }
    },
    "source": [
-    "### La puerta CCNOT o de Toffoli"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "720b39ed",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "### La puerta CCNOT o de Toffoli\n",
+    "\n",
     "La puerta CCNOT, también llamada puerta de Toffoli,  es un operador sobre $\\Hil^{\\otimes 3}$, en el que dos cúbits controlan la acción de $X$ sobre un tercero\n",
     "\n",
     "$\\Rightarrow$\n",
@@ -1220,44 +715,25 @@
     "::::{figure} images/ccX_gate.png\n",
     ":width: 200px\n",
     ":align: center\n",
-    "::::\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "a47a3d82",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "::::\n",
+    "\n",
     "De nuevo, su representación es muy sencilla\n",
     "\n",
     "$$\n",
     "{\\rm CCNOT} = \\big(\\ket{00}\\bra{00}+\\ket{01}\\bra{01}+\\ket{10}\\bra{10}\\big)\\otimes I + \\ket{11}\\bra{11}\\otimes X\n",
     "$$\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "c0d086d9",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "\n",
+    "\n",
     "::::::{admonition} Ejercicios 1.2.1.5\n",
     ":class: tip\n",
     "\n",
     "<br>    \n",
     "<br>    \n",
-    "1. obtener la matriz que representa la puerta de Toffoli en la base computacional. Reproducirla usando <i>qiskit</i>.\n",
+    "1. obtener la matriz que representa la puerta de Toffoli en la base computacional. \n",
     "    <br><br> \n",
     "2. obtener la matriz de un circuito de 3 cúbits con una puerta CNOT en la que el tercer cúbit controla el primero. Reproducirla usando qiskit.\n",
-    "::::::\n"
+    "::::::\n",
+    "\n"
    ]
   },
   {
@@ -1269,50 +745,21 @@
     }
    },
    "source": [
-    "### Puertas multiplemente controladas"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "c2a9a7b5",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "### Puertas multiplemente controladas\n",
+    "\n",
     "En la puerta CNOT o CX multi-controlada el operador X se activa si y sólo si los cúbits de control se encuentran en una configuración deseada. \n",
     " \n",
-    " Los botones blancos denotan controladores que se activan si el cúbit es $\\ket{0}$. Esencialmente son iguales a un controlador negro con una puerta $X$ antes y otra después.\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "07cc9600",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    " Los botones blancos denotan controladores que se activan si el cúbit es $\\ket{0}$. Esencialmente son iguales a un controlador negro con una puerta $X$ antes y otra después.\n",
+    "\n",
     "Por ejemplo, en este caso, la puerta $X$ se activará si los cúbits de control se encuentran en el estado $\\ket{1100}$\n",
     "\n",
+    "<br>\n",
     "\n",
     "::::{figure} images/MCX_gate.png\n",
     ":width: 80px\n",
     ":align: center\n",
-    "::::\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "de8c7bc7",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
+    "::::\n",
+    "\n",
     "El operador asociado a esta puerta será\n",
     "\n",
     "$$\n",
@@ -1408,22 +855,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "abf3973b",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "skip"
-    }
-   },
-   "source": [
-    "::::::{admonition} Ejercicio\n",
-    ":class: tip\n",
-    "\n",
-    "Inserta la puerta MCX de forma que se genere exactamente el circuito dibujado en la figura.\n",
-    "::::::\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
    "id": "edf11506",
    "metadata": {
     "slideshow": {
@@ -1431,24 +862,15 @@
     }
    },
    "source": [
-    "### Circuito entrelazador para la Base de Bell\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "52b6623c",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "-"
-    }
-   },
-   "source": [
+    "### Circuito entrelazador para la Base de Bell\n",
+    "\n",
+    "\n",
     "El circuito que *prepara* la <i>base de Bell</i> $~\\{\\ket{B_{xy}} \\equiv \\ket{xy}_B \\}~$ a partir de la <i>base computacional</i>  $\\{\\ket{xy}\\}$ \n",
     "\n",
     "<br>\n",
     "\n",
     "::::{figure} images/Bell_basis.png\n",
-    ":width: 250px\n",
+    ":width: 200px\n",
     ":align: center\n",
     "\n",
     "::::\n"
@@ -1568,32 +990,12 @@
     }
    },
    "source": [
-    "## Teorema de no-clonación"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "61b359f9",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
+    "## Teorema de no-clonación\n",
+    "\n",
     "El *Teorema de No Clonación* es uno de los resultados más sencillos y a la vez más importantes del formalismo de la Mecánica Cuántica. \n",
     "\n",
-    "De hecho su formalización completa es bastante reciente, 1982, debida a [Wootters, Zurek](https://en.wikipedia.org/wiki/No-cloning_theorem#cite_note-wootterszurek-2) and [Dieks](https://en.wikipedia.org/wiki/No-cloning_theorem#cite_note-dieks-3). "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "132c3f79",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
+    "De hecho su formalización completa es bastante reciente, 1982, debida a [Wootters, Zurek](https://en.wikipedia.org/wiki/No-cloning_theorem#cite_note-wootterszurek-2) and [Dieks](https://en.wikipedia.org/wiki/No-cloning_theorem#cite_note-dieks-3). \n",
+    "\n",
     "::::::{card} \n",
     "<b>Teorema</b>: </i>de  no-clonación</i> \n",
     "\n",
@@ -1607,18 +1009,7 @@
     "U ( \\ket{\\psi}\\otimes \\ket{0}) = \\ket{\\psi}\\otimes \\ket{\\psi}\n",
     "$$\n",
     "\n",
-    "::::::\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "df0fc37c",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
+    "::::::\n",
     "\n",
     "*Demostración:*\n",
     "\n",
@@ -1631,18 +1022,7 @@
     "U (\\alpha\\ket{\\psi}+\\beta\\ket{\\phi})\\otimes \\ket{0} = \n",
     "(\\alpha\\ket{\\psi}+\\beta\\ket{\\phi})\\otimes (\\alpha\\ket{\\psi}+\\beta\\ket{\\phi})\n",
     "$$\n",
-    "<br>"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "22accdbf",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "fragment"
-    }
-   },
-   "source": [
+    "<br>\n",
     "\n",
     "Sin embargo, la linealidad de $U$ nos permite seguir otro camino\n",
     "<br>\n",
@@ -1654,18 +1034,8 @@
     "\\end{eqnarray*}\n",
     "<br>\n",
     "\n",
-    "Los dos resultados son diferentes y el teorema queda demostrado por reducción al absurdo."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "d19e7239",
-   "metadata": {
-    "slideshow": {
-     "slide_type": "slide"
-    }
-   },
-   "source": [
+    "Los dos resultados son diferentes y el teorema queda demostrado.\n",
+    "\n",
     "<br>\n",
     "::::::{admonition} Notar\n",
     ":class: note\n",
@@ -1705,7 +1075,17 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.11.7"
+   "version": "3.9.18"
+  },
+  "nbTranslate": {
+   "displayLangs": [
+    "*"
+   ],
+   "hotkey": "alt-t",
+   "langInMainMenu": true,
+   "sourceLang": "en",
+   "targetLang": "fr",
+   "useGoogleTranslate": true
   },
   "toc": {
    "base_numbering": 1,
@@ -1723,7 +1103,7 @@
     "width": "414.053px"
    },
    "toc_section_display": true,
-   "toc_window_display": true
+   "toc_window_display": false
   },
   "varInspector": {
    "cols": {

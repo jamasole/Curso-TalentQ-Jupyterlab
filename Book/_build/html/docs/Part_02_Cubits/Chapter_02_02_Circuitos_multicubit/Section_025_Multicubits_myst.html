@@ -502,7 +502,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Mar 09, 2024 | 8 min read</p>
+<div><p>Mar 10, 2024 | 8 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -547,7 +547,7 @@ document.write(`
 <p class="sd-card-text"><b>Definición</b>:</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">La base computacional de <span class="math notranslate nohighlight">\( \Hil^{\otimes n}\)</span> está formada por todas las cadenas de elementos posibles</p>
+<p class="sd-card-text">La base computacional de <span class="math notranslate nohighlight">\( \Hil^{\otimes n}\)</span> está formada por todas las cadenas  posibles formadas con elementos de la base de <span class="math notranslate nohighlight">\(\Hil\)</span></p>
 <div class="math notranslate nohighlight">
 \[
  \ket{i_{n-1}}\otimes \ket{i_{n-2}}\otimes ... \otimes \ket{i_0} ~\equiv ~\ket{i_{n-1} i_{n-2}...i_0}~\]</div>
@@ -557,13 +557,13 @@ document.write(`
 </div>
 <p>La <em>dimensión</em>  dim(<span class="math notranslate nohighlight">\(\Hil^{\otimes n}\)</span>) = <span class="math notranslate nohighlight">\(2^n\)</span> coincide con el número combinaciones distintas posibles: <span class="math notranslate nohighlight">\(2\times 2...\times 2 = 2^n\)</span>.</p>
 <ul class="simple">
-<li><p>Cuando pasamos a vectores columnas para representar un ket, el producto tensorial se traduce en el producto de Kronecker. Por ejemplo, para un sistema de 2-cúbits,   <span class="math notranslate nohighlight">\(n=2\)</span> y tendríamos <span class="math notranslate nohighlight">\(2^n=2^2 = 4\)</span> y entonces</p></li>
+<li><p>Cuando representa un un ket mediante una columna de componentes, el producto tensorial se traduce en el producto de Kronecker. Por ejemplo, para un sistema de 2-cúbits,   <span class="math notranslate nohighlight">\(n=2\)</span> y tendríamos <span class="math notranslate nohighlight">\(2^n=2^2 = 4\)</span> y entonces</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \ket{00}~=~ \ket{0}\otimes \ket{0}~=~
 \begin{bmatrix}1\\ 0\end{bmatrix} \otimes \begin{bmatrix}1\\ 0\end{bmatrix} = \begin{bmatrix}1\\0\\0 \\ 0\end{bmatrix}
-~~~~~~,~~~~~
+~~~~~~~~,~~~~~~~
 \ket{01}~=~ \ket{0}\otimes \ket{1}~=~
 \begin{bmatrix}1\\ 0\end{bmatrix} \otimes \begin{bmatrix}0\\ 1\end{bmatrix} = \begin{bmatrix}0\\1\\0 \\ 0\end{bmatrix}
 \end{split}\]</div>
@@ -571,32 +571,34 @@ document.write(`
 \[\begin{split}
 \ket{10}~=~ \ket{1}\otimes \ket{0}~=~
  \begin{bmatrix}0\\ 1\end{bmatrix} \otimes \begin{bmatrix}1\\ 0\end{bmatrix} = \begin{bmatrix}0\\0\\1 \\ 0\end{bmatrix}
- ~~~~~,~~~~
+ ~~~~~~~,~~~~~~
 \ket{11}~=~ \ket{1}\otimes \ket{1}~=~
 \begin{bmatrix}0\\ 1\end{bmatrix} \otimes \begin{bmatrix}0\\ 1\end{bmatrix} = \begin{bmatrix}0\\0\\0 \\ 1\end{bmatrix}
 \end{split}\]</div>
-<p>Las etiquetas de los vectores y, por tanto, de las componentes de las matrices, bi-índices <span class="math notranslate nohighlight">\(ij=11,12,21,22\)</span> que adopta el mismo número, <span class="math notranslate nohighlight">\(N^2\)</span>, de cofiguraciones distintas.</p>
+<p>Las etiquetas de los vectores y, por tanto, de las componentes de las matrices, bi-índices <span class="math notranslate nohighlight">\(ij=11,12,21,22\)</span>  adoptan el mismo número, <span class="math notranslate nohighlight">\(N^2\)</span>, de configuraciones distintas.</p>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
-<p>El <i>multi-ínidice</i> <span class="math notranslate nohighlight">\(i_{n-1}i_{n-2}....i_0\)</span> puede interpretarse como un número entero, <span class="math notranslate nohighlight">\(p\)</span>, escrito en base <em>binaria</em></p>
+<ul class="simple">
+<li><p>El <i>multi-ínidice</i> <span class="math notranslate nohighlight">\(i_{n-1}i_{n-2}....i_0\)</span> puede interpretarse como un número entero, <span class="math notranslate nohighlight">\(p\)</span>, escrito en base <em>binaria</em>, que podemos traducir a base decimal</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[
-~~ i_{n-1} i_{n-2}...i_0 ~~\longleftrightarrow ~~~p = \sum_{k=0}^{n-1} 2^k i_k 
+~~ i_{n-1} i_{n-2}...i_0 ~~~\longleftrightarrow~~~
+  p ~=~ 2^{n-1}i_{n-1} + 2^{n-2}i_{n-2} + ...+ 2^1 i_1 + 2^0 i_0  ~=~ \sum_{k=0}^{n-1} 2^k i_k 
 \]</div>
 <p>que tomará  <span class="math notranslate nohighlight">\(2^n\)</span> valores <span class="math notranslate nohighlight">\(p = 0,1, \, ...\, ,2^{n}-1\)</span>.</p>
-<p>El cambio de notación <em>multi-índice</em> <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> <em>entero en notación decimal</em> será frecuente y se aplicará a cualquier elemento.</p>
-<p>Por ejemplo <span class="math notranslate nohighlight">\(\ket{000} = \ket{0}, \ket{111} = \ket{7}\)</span> etc.</p>
+<ul class="simple">
+<li><p>Usamos el convenio de que el número binario menos significativo está a la derecha</p></li>
+</ul>
 </div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<p class="sd-card-text">El vector de estado más general  <span class="math notranslate nohighlight">\(\ket{u}\in \Hil^{\otimes n}\)</span> será una combinación lineal de elementos de la base computacional <span class="math notranslate nohighlight">\(\ket{i_n i_{n-1}...i_1}\)</span> en términos de unas componentes <span class="math notranslate nohighlight">\(u_{i_ni_{n-1}...i_1}\)</span></p>
+<p>El cambio de notación <em>multi-índice</em> <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> <em>entero en notación decimal</em> será frecuente.
+Por ejemplo <span class="math notranslate nohighlight">\(\ket{000} = \ket{0}, \ket{111} = \ket{7}\)</span> etc.</p>
+<p>El vector de estado más general  <span class="math notranslate nohighlight">\(\ket{u}\in \Hil^{\otimes n}\)</span> será una combinación lineal de elementos de la base computacional <span class="math notranslate nohighlight">\(\ket{i_n i_{n-1}...i_1}\)</span> en términos de unas componentes <span class="math notranslate nohighlight">\(u_{i_ni_{n-1}...i_1}\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \ket{u} = \sum_{i_{n-1},...,i_0=0,1} u_{i_{n-1} ... i_0} \ket{i_{n-1}  ... i_0}  = \sum_{p=0}^{2^n-1} u_p \ket{p}, .
 \]</div>
-<p class="sd-card-text">donde hemos usado alternativamente la notación binaria y la decimal.</p>
-</div>
-</div>
+<p>donde hemos usado alternativamente la notación binaria y la decimal.</p>
 <div class="tip admonition">
 <p class="admonition-title">Ejemplo</p>
 <p>Para <span class="math notranslate nohighlight">\(n=2\)</span> tendremos, en notación binaria</p>
@@ -626,64 +628,67 @@ document.write(`
 </section>
 <section id="circuitos-multi-cubit">
 <h3>Circuitos multi-cúbit<a class="headerlink" href="#circuitos-multi-cubit" title="Permalink to this heading">#</a></h3>
-<p>Sea <span class="math notranslate nohighlight">\(\ket{q_{n-1}q_{n-2}...q_0}\)</span> un estado multicúbit de la base computacional <span class="math notranslate nohighlight">\(q_{a} = 0,1\)</span>.</p>
+<p>Sea  un estado multicúbit de la base computacional <span class="math notranslate nohighlight">\(q_{a} = 0,1\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\ket{q_{n-1}q_{n-2}...q_0} ~=~ \ket{q_{n-1}}\otimes \ket{q_{n-2}}\otimes ... \otimes \ket{q_0}
+\]</div>
 <p>Este estado
 se propaga a lo largo de un circuito de forma que <i>cada línea representa un espacio de Hilbert</i>.</p>
-<p>La asignación que se hace en <em>qiskit</em> coloca el cúbit <em>menos relevante</em> <span class="math notranslate nohighlight">\(q_0\)</span>  en la  línea superior. Esto es</p>
+<p>La asignación que se hace en <em>Qibo</em> y en <em>Qiskit</em> coloca el cúbit de índice binario <em>menos relevante</em> <span class="math notranslate nohighlight">\(q_0\)</span>  en la  línea superior. Esto es</p>
 <ul class="simple">
 <li><p>Qiskit:</p></li>
 </ul>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/multicubit_circ.png"><img alt="../../../_images/multicubit_circ.png" src="../../../_images/multicubit_circ.png" style="width: 250px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/multicubit_circ.png"><img alt="../../../_images/multicubit_circ.png" src="../../../_images/multicubit_circ.png" style="width: 200px;" /></a>
 </figure>
-<p><span class="math notranslate nohighlight">\(\rule{0.7cm}{0mm}\)</span> Esta ordenación en un circuito es la inversa de la que tradicional</p>
 <ul class="simple">
 <li><p>Todos los demás</p></li>
 </ul>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/Multicubit_circ_NC.png"><img alt="../../../_images/Multicubit_circ_NC.png" src="../../../_images/Multicubit_circ_NC.png" style="width: 250px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Multicubit_circ_NC.png"><img alt="../../../_images/Multicubit_circ_NC.png" src="../../../_images/Multicubit_circ_NC.png" style="width: 200px;" /></a>
 </figure>
 </section>
 <section id="entrelazamiento">
 <h3>Entrelazamiento<a class="headerlink" href="#entrelazamiento" title="Permalink to this heading">#</a></h3>
-<p>De forma  general, los estados <span class="math notranslate nohighlight">\(\ket{u}\in \Hil^{\otimes n}\)</span> pertenecen a dos conjuntos disjuntos</p>
+<p>De forma  general, los estados <span class="math notranslate nohighlight">\(\ket{u}\in \Hil^{\otimes n}\)</span> pueden ser de dos clases:</p>
 <ul class="simple">
-<li><p>estado factorizables, cuando <span class="math notranslate nohighlight">\(\ket{u} = \ket{a}\otimes \ket{b}\otimes...\otimes \ket{c}\)</span></p></li>
-<li><p>estados entrelazados, cuando <span class="math notranslate nohighlight">\(\ket{u} \neq \ket{a}\otimes \ket{b}\otimes...\otimes \ket{c}\)</span> no es factorizable</p></li>
+<li><p><em>estado factorizables</em>, cuando <span class="math notranslate nohighlight">\(\ket{u} = \ket{a}\otimes \ket{b}\otimes...\otimes \ket{c}\)</span></p></li>
+<li><p><em>estados entrelazados</em>, cuando <span class="math notranslate nohighlight">\(\ket{u} \neq \ket{a}\otimes \ket{b}\otimes...\otimes \ket{c}\)</span> no es factorizable</p></li>
 </ul>
-<p>Ahora podemos usar también bases cuyo elementos sean vectores factorizados o entrelazados.</p>
+<p>Ahora podemos usar también <em>bases</em> cuyo elementos sean vectores factorizados o entrelazados.</p>
 <ul class="simple">
-<li><p><strong>base computacional</strong> (factorizada): <span class="math notranslate nohighlight">\(\{ \ket{00},\ket{01},\ket{10},\ket{11}\}\)</span></p></li>
-<li><p><strong>base de Bell</strong> (entrelazada):</p></li>
+<li><p><em>base computacional</em> (factorizada): <span class="math notranslate nohighlight">\(\{ \ket{00},\ket{01},\ket{10},\ket{11}\}\)</span></p></li>
+<li><p><em>base de Bell</em> (entrelazada):</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{array}{rcl}
-\ket{B_{00}} &amp;=&amp; \frac{1}{\sqrt{2}} \big( \ket{00} + \ket{11} \big) \\
-\ket{B_{01}} &amp;=&amp; \frac{1}{\sqrt{2}} \big( \ket{00} - \ket{11} \big) \\
-\ket{B_{10}} &amp;=&amp; \frac{1}{\sqrt{2}} \big( \ket{01} + \ket{10} \big) \\
-\ket{B_{11}} &amp;=&amp; \frac{1}{\sqrt{2}} \big( \ket{01} - \ket{10} \big) \\
+\ket{00}_B &amp;=&amp; \frac{1}{\sqrt{2}} \big( \ket{00} + \ket{11} \big) \\
+\ket{01}_B &amp;=&amp; \frac{1}{\sqrt{2}} \big( \ket{00} - \ket{11} \big) \\
+\ket{10}_B &amp;=&amp; \frac{1}{\sqrt{2}} \big( \ket{01} + \ket{10} \big) \\
+\ket{11}_B &amp;=&amp; \frac{1}{\sqrt{2}} \big( \ket{01} - \ket{10} \big) \\
 \end{array}
 \end{split}\]</div>
 </section>
 <section id="medidas-parciales">
 <h3>Medidas parciales<a class="headerlink" href="#medidas-parciales" title="Permalink to this heading">#</a></h3>
-<p>Una medida parcial afecta sólamente a un subconjunto de cúbits de un multi-cúbit.</p>
-<p>Aquí encontramos una diferencia crucial entre estados factorizables y entrelazados.</p>
-<p>Consideremos el estado bi-cúbit <em>factorizable</em> visto antes</p>
+<p>Una medida parcial afecta sólamente a un subconjunto de cúbits de un multi-cúbit.
+Aquí encontramos una diferencia crucial entre estados factorizables y entrelazados.
+Consideremos el estado bi-cúbit <em>factorizable</em> visto antes</p>
 <div class="math notranslate nohighlight">
 \[
 \ket{u} = \ket{a}\otimes \ket{b} = \frac{1}{\sqrt{2}}\big( \ket{0} + \ket{1}\big)\otimes \frac{1}{\sqrt{2}}\big( \ket{0} + \ket{1}\big)\, .
 \]</div>
-<p>donde vamos a suponer que el cúbit <span class="math notranslate nohighlight">\(\ket{a}\)</span> está en el laboratorio de Alice, y el <span class="math notranslate nohighlight">\(\ket{b}\)</span> en el de Bob.</p>
-<p>Una medida de Alice sobre el primer cúbit solo podrá resultar, con probabilidad <span class="math notranslate nohighlight">\(1/2\)</span>, en uno de los dos posibles estados siguientes</p>
+<p>donde vamos a suponer que el cúbit <span class="math notranslate nohighlight">\(\ket{a}\)</span> está en el laboratorio de Alice, y el <span class="math notranslate nohighlight">\(\ket{b}\)</span> en el de Bob.
+Una medida de Alice sobre el primer cúbit solo podrá resultar, con probabilidad <span class="math notranslate nohighlight">\(1/2\)</span>, en uno de los dos posibles estados siguientes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\ket{u} ~\rightarrow ~ \left\{ \begin{matrix}\ket{0} \otimes \frac{1}{\sqrt{2}}\big( \ket{0} + \ket{1}\big)\\ \ket{1} \otimes \frac{1}{\sqrt{2}}\big( \ket{0} + \ket{1}\big) \end{matrix} \right.
+\ket{u} ~\rightarrow ~ \left\{ \begin{matrix}\ket{0} \otimes \displaystyle\frac{1}{\sqrt{2}}\big( \ket{0} + \ket{1}\big)\\ \ket{1} \otimes  \displaystyle\frac{1}{\sqrt{2}}\big( \ket{0} + \ket{1}\big) \end{matrix} \right.
 \end{split}\]</div>
 <p>Vemos que, después de esta medición, el segundo cúbit permanece intacto. Si Bob mide, podrá obtener <span class="math notranslate nohighlight">\(\ket{0}\)</span> ó <span class="math notranslate nohighlight">\(\ket{1}\)</span> con probabilidad <span class="math notranslate nohighlight">\(1/2\)</span>.</p>
-<p>En este caso, las medidas de Alice y Bob <em>no están correlacionadas</em></p>
-<p>Sin embargo, si el estado es <em>entrelazado</em>, por ejemplo,</p>
+<p>En este caso, las medidas de Alice y Bob <em>no están correlacionadas</em>
+Sin embargo, si el estado es <em>entrelazado</em>, por ejemplo,</p>
 <div class="math notranslate nohighlight">
 \[
   \ket{u} = \frac{1}{\sqrt{2}}\big( \ket{00} + \ket{11} \big)\, ,
@@ -699,24 +704,30 @@ se propaga a lo largo de un circuito de forma que <i>cada línea representa un e
 <li><p>Si Alice midió <span class="math notranslate nohighlight">\(\ket{0}\)</span>, Bob sólo puede obtener <span class="math notranslate nohighlight">\(\ket{0}\)</span></p></li>
 <li><p>Si Alice midió <span class="math notranslate nohighlight">\(\ket{1}\)</span>, Bob sólo puede obtener <span class="math notranslate nohighlight">\(\ket{1}\)</span></p></li>
 </ul>
-<p>en este caso, las medidas de Alice y Bob sí están 100% <em>correlacionadas</em></p>
-<p>Esta correlación es independiente de la distancia que separe a Alice y a Bob. Eso parece violar causalidad.</p>
-<p>Einstein Podolski y Rosen en 1935 pensaron que este hecho demostraba que la Mecánica Cuántica era incompleta.  Esto se conoce como la <a class="reference external" href="https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox"><em>paradoja EPR</em></a></p>
+<p>en este caso, las medidas de Alice y Bob sí están 100% <em>correlacionadas</em>.
+Esta correlación es independiente de la distancia que separe a Alice y a Bob, algo que parece violar causalidad.
+Einstein Podolski y Rosen en 1935 pensaron que este hecho indicaba que la Mecánica Cuántica era incompleta.  Esto se conoce como la <a class="reference external" href="https://en.wikipedia.org/wiki/Einstein%E2%80%93Podolsky%E2%80%93Rosen_paradox"><em>paradoja EPR</em></a></p>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
 <ul class="simple">
 <li><p>En ambos casos, factorizable o entrelazado,  las probabilidades de Bob, de obtener <span class="math notranslate nohighlight">\(\ket{0}\)</span> ó <span class="math notranslate nohighlight">\(\ket{1}\)</span> en el segundo cúbit, son iguales a <span class="math notranslate nohighlight">\(1/2\)</span>.</p></li>
-<li><p>Eso implica que las correlaciones cuánticas no permiten transmitir información   <i>(No-signalling theorem)</i>.</p></li>
-<li><p>Sin embargo, sus efectos sí que existen. Para ponerlos de manifiesto es necesario diseñar experimentos más sutiles. El primero que se inventó fue debido a John Bell en 1964</p></li>
+<li><p>Eso implica que las correlaciones cuánticas debidas al entrelazamiento <i>no permiten transmitir información</i></p></li>
+<li><p>Sin embargo, sus efectos sí que existen. Para ponerlos de manifiesto fue necesario diseñar experimentos más sutiles. El primero que de ellos fue debido a John Bell en 1964</p></li>
 </ul>
 </div>
 </section>
 </section>
 <section id="puertas-multi-cubit">
 <h2>Puertas multi-cúbit<a class="headerlink" href="#puertas-multi-cubit" title="Permalink to this heading">#</a></h2>
+<p>Ya hemos visto en la lección de operadores que, al igual que con los vectores, los operadores pueden dividirse en dos clases esenciales: operadores factorizados y no-factorizados. Los primeros son de la forma</p>
+<div class="math notranslate nohighlight">
+\[
+O = O_0 \otimes O_1 ~...~\otimes O_{n-1}
+\]</div>
+<p>donde cada operador actúa de forma independiente en un sólo factor del espacio de Hilbert <span class="math notranslate nohighlight">\(\Hil^n\)</span>.</p>
 <section id="la-puerta-de-walsh-hadamard">
 <h3>La puerta de Walsh-Hadamard<a class="headerlink" href="#la-puerta-de-walsh-hadamard" title="Permalink to this heading">#</a></h3>
-<p>El operador de Waslh-Hadamard es un <em>producto tensorial de operadores</em></p>
+<p>El operador de Waslh-Hadamard es un ejemplo de este tipo</p>
 <div class="math notranslate nohighlight">
 \[
 W =  H^{\otimes n} = H\otimes H \ldots \otimes H 
@@ -728,24 +739,39 @@ W \ket{00...0} &amp;~=~&amp; H\ket{0}\otimes H\ket{0} \otimes ... \otimes H\ket{
 &amp;=&amp; \frac{1}{\sqrt{2}}\big(\ket{0}+\ket{1}\big)\otimes \frac{1}{\sqrt{2}}\big(\ket{0}+\ket{1}\big)\otimes ...\otimes \frac{1}{\sqrt{2}}\big(\ket{0}+\ket{1}\big)\\ \rule{0mm}{10mm}
 &amp;=&amp; \frac{1}{2^{n/2}}\big(\ket{00...00} + \ket{00...01}+....+\ket{11...11} \big)
 \end{eqnarray*}\]</div>
-<p>La acción de <span class="math notranslate nohighlight">\(W\)</span> sobre un estado multicúbit  es necesario recordar la acción de <span class="math notranslate nohighlight">\(H\)</span></p>
+<div class="note admonition">
+<p class="admonition-title">Nota</p>
+<p>Vamos a rescribir la acción de <span class="math notranslate nohighlight">\(W\)</span> de forma que no se haga inmanejable cuando <span class="math notranslate nohighlight">\(n\)</span> crezca.
+Para ello recordemos que  la acción de <span class="math notranslate nohighlight">\(H\)</span> sobre un solo cúbit <span class="math notranslate nohighlight">\(\ket{x} = \ket{0}\)</span> ó <span class="math notranslate nohighlight">\(\ket{1}\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-H\ket{x} = \sum_{y=0,1}(-1)^{xy}\ket{y}
+H\ket{x} = \frac{1}{\sqrt{2}}\sum_{y=0,1}(-1)^{xy}\ket{y}
 \]</div>
-<p>Entonces, operando</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{eqnarray*}
-W \ket{x} &amp;=&amp; H\ket{x_{n-1}}\otimes H\ket{x_{n-2}}\otimes \ldots \otimes H\ket{x_0} \\  \rule{0mm}{12mm}
-\rule{0mm}{10mm}
-&amp;=&amp; \sum_{y_{n-1}= \, 0,1} (-1)^{y_{n-1}x_{n-1}}\ket{y_{n-1}}\otimes \sum_{y_{n-2}=0,1} (-1)^{y_{n-2}x_{n-2}}\ket{y_{n-2}} \otimes \ldots \otimes  \sum_{y_{0}\, =\, 0,1} (-1)^{y_{0}x_{0}}\ket{y_{0}} 
-\end{eqnarray*}\]</div>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{eqnarray*}
-&amp;=&amp; \sum_{y_{n-1} y_{n-2}\ldots y_{0}=\, 0,1} (-1)^{x_{n-1} y_{n-1}+ \ldots + x_0 y_0} \ket{y_{n-1}\ldots y_0} \hspace{5.2cm}\\
-&amp;=&amp; \sum_{y \, =\, 0}^{2^n-1}(-1)^{x\cdot y} \ket{y} \rule{0mm}{10mm}
-\end{eqnarray*}\]</div>
-<p>donde $<span class="math notranslate nohighlight">\( x\cdot y = x_{n-1} y_{n-1} + x_{n-1} y_{n-1} + \ldots + x_0 y_0\)</span>$</p>
+<p>Entonces,  usando la distributividad del producto de sumas podemos manipular</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rcl}
+W \ket{x} &amp;=&amp; H\ket{x_{n-1}}\otimes H\ket{x_{n-2}}\otimes \ldots \otimes H\ket{x_0} \\  \rule{0mm}{8mm}
+&amp;=&amp;\frac{1}{\sqrt{2}} \sum_{y_{n-1}= \, 0,1} (-1)^{y_{n-1}x_{n-1}}\ket{y_{n-1}}\otimes\frac{1}{\sqrt{2}} \sum_{y_{n-2}=0,1} (-1)^{y_{n-2}x_{n-2}}\ket{y_{n-2}} \otimes \ldots \otimes \frac{1}{\sqrt{2}} \sum_{y_{0}\, =\, 0,1} (-1)^{y_{0}x_{0}}\ket{y_{0}} \\ \rule{0mm}{8mm}
+&amp;=&amp; \frac{1}{2^{n/2}}\sum_{y_{n-1} y_{n-2}\ldots y_{0}=\, 0,1} (-1)^{x_{n-1} y_{n-1}+ \ldots + x_0 y_0} \ket{y_{n-1}\ldots y_0} \hspace{5.2cm}\\
+&amp;=&amp; \frac{1}{2^{n/2}} \sum_{y \, =\, 0}^{2^n-1}(-1)^{x\cdot y} \ket{y} \rule{0mm}{8mm}
+\end{array}
+\end{split}\]</div>
+<p>donde</p>
+<div class="math notranslate nohighlight">
+\[ x\cdot y = x_{n-1} y_{n-1} + x_{n-1} y_{n-1} + \ldots + x_0 y_0\]</div>
+<p>Esta expresión será de gran utilidad cuando estudiemos algoritmos sencillos</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Ejercicio</p>
+<p>escribe el producto de Kronecker de dos matrices <span class="math notranslate nohighlight">\(H\otimes H\)</span> y verifica que sus componentes verifican</p>
+<div class="math notranslate nohighlight">
+\[
+W_{xy} =  \frac{1}{2^{n/2}} \sum_{y \, =\, 0}^{2^n-1}(-1)^{x\cdot y}
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(n=2 \)</span> y <span class="math notranslate nohighlight">\(x,y = 0,1\)</span>.</p>
+</div>
+<p>Las puertas factorizable son un conjunto muy pequeño dentro del conjunto de operadores generales sobre <span class="math notranslate nohighlight">\(\Hil^n\)</span>. Vamos ahora a ver puertas no factorizables, primero actuando sobre <span class="math notranslate nohighlight">\(\Hil^2\)</span>, es decir, binarias</p>
 </section>
 <section id="la-puerta-swap">
 <h3>La puerta SWAP<a class="headerlink" href="#la-puerta-swap" title="Permalink to this heading">#</a></h3>
@@ -760,7 +786,7 @@ U_{\rm SWAP }: \ket{00}\to\ket{00}~~,~~\ket{01}\to\ket{10}~~,~~\ket{10}\to\ket{0
 \[
 U_{\rm SWAP } = \ket{00}\bra{00} + \ket{01}\bra{10} + \ket{10}\bra{01} +\ket{11}\bra{11} 
 \]</div>
-<p>con matriz asociada</p>
+<p>de donde se leen las componentes de la  matriz asociada</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 U_{\rm SWAP} =  \begin{bmatrix} 
@@ -769,21 +795,23 @@ U_{\rm SWAP} =  \begin{bmatrix}
 \end{split}\]</div>
 <p>y su inserción en un circuito se representa en la forma siguiente</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/SWAP_gate.png"><img alt="../../../_images/SWAP_gate.png" src="../../../_images/SWAP_gate.png" style="width: 250px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/SWAP_gate.png"><img alt="../../../_images/SWAP_gate.png" src="../../../_images/SWAP_gate.png" style="width: 200px;" /></a>
 </figure>
 </section>
 <section id="puertas-controladas-cg-u">
 <h3>Puertas controladas <span class="math notranslate nohighlight">\(\cg{U}\)</span><a class="headerlink" href="#puertas-controladas-cg-u" title="Permalink to this heading">#</a></h3>
-<p>Las puertas controladas son eficientes para generar entrelazamiento</p>
-<p>En la puerta controlada un operador se aplica sobre un cúbit dependiendo del estado en el que se encuentra otro.</p>
-<p>Este segundo cúbit se denomina <em>controlador</em>, mientras que el primero es el <em>controlado</em></p>
-<p>La puerta controlada se representa como sigue</p>
+<p>Las puertas controladas son eficientes para generar entrelazamiento
+En la puerta controlada un operador se aplica sobre un cúbit dependiendo del estado en el que se encuentra otro. La <em>representación gráfica</em> del circuito asociado es la siguiente</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/cU_gate.png"><img alt="../../../_images/cU_gate.png" src="../../../_images/cU_gate.png" style="width: 200px;" /></a>
+</figure>
+<p>El cúbit con el punto  se denomina <em>controlador</em>, mientras que el otro es el <em>controlado</em>
+La acción de la puerta controlada se resume en la forma de Dirac siguiente</p>
 <div class="math notranslate nohighlight">
 \[
 \cg{U} = \ket{0}\bra{0}\otimes I + \ket{1}\bra{1}\otimes U
 \]</div>
-<p>donde <span class="math notranslate nohighlight">\(U\)</span> es un operador unitario de 1-cúbit general.</p>
-<p>Si en el primer cúbit (controlador)</p>
+<p>donde <span class="math notranslate nohighlight">\(U\)</span> es un operador unitario de 1-cúbit general. En esta forma la acción es transparente y se puede resumir en: si en el primer cúbit (controlador)</p>
 <ul class="simple">
 <li><p>entra <span class="math notranslate nohighlight">\(\ket{0}\)</span>, sale <span class="math notranslate nohighlight">\(\ket{0}\)</span> y en el segundo cúbit (controlado) no se hace nada (se aplica <span class="math notranslate nohighlight">\(I\)</span>).</p></li>
 <li><p>entra <span class="math notranslate nohighlight">\(\ket{1}\)</span>, sale <span class="math notranslate nohighlight">\(\ket{1}\)</span> y en el segundo cúbit (controlado) se aplica el operador <span class="math notranslate nohighlight">\(U\)</span>.</p></li>
@@ -798,14 +826,9 @@ U_{\rm SWAP} =  \begin{bmatrix}
 \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; U_{11} &amp; U_{12} \\
 0 &amp; 0 &amp; U_{21} &amp; U_{22}\end{bmatrix}
 \end{eqnarray*}\]</div>
+<p>con <span class="math notranslate nohighlight">\(x,y = 0,1\)</span>.</p>
 <div class="note admonition">
 <p class="admonition-title">Nota</p>
-<ul class="simple">
-<li><p>Escrito de esta manera es evidente que, si <span class="math notranslate nohighlight">\(U\)</span> es una matriz unitaria, <span class="math notranslate nohighlight">\(\cg{U}\)</span> también lo es <span class="math notranslate nohighlight">\(~
-\Rightarrow (\cg{U})^\dagger \cg{U} = I\)</span></p></li>
-<li><p>Esto no es algo trivial por cuanto la combinación lineal de operadores unitarios, en general, no es  unitaria.</p></li>
-</ul>
-</div>
 <ul class="simple">
 <li><p>La <em>acción</em> de <span class="math notranslate nohighlight">\(\cg{U}\)</span> sobre elementos de la base <span class="math notranslate nohighlight">\(\{\ket{x}\}\)</span> donde <span class="math notranslate nohighlight">\(x=0,1\)</span> admite una forma compacta</p></li>
 </ul>
@@ -814,18 +837,17 @@ U_{\rm SWAP} =  \begin{bmatrix}
 \cg{U}:\ket{x}\otimes\ket{y} = \ket{x} \otimes U^x\ket{y}
 \]</div>
 <ul class="simple">
-<li><p>La <em>representación gráfica</em> del circuito asociado al operador controlado <span class="math notranslate nohighlight">\(\cg{U}\)</span> es la siguiente</p></li>
+<li><p>Escrito de esta manera es evidente que, si <span class="math notranslate nohighlight">\(U\)</span> es una matriz unitaria, <span class="math notranslate nohighlight">\(\cg{U}\)</span> también lo es <span class="math notranslate nohighlight">\(~
+\Rightarrow (\cg{U})^\dagger \cg{U} = I\)</span>.
+No es algo trivial por cuanto la combinación lineal de operadores unitarios, en general, no es  unitaria.</p></li>
 </ul>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/cU_gate.png"><img alt="../../../_images/cU_gate.png" src="../../../_images/cU_gate.png" style="width: 200px;" /></a>
-</figure>
-<p><span class="math notranslate nohighlight">\(\rule{7mm}{0mm}\)</span> con <span class="math notranslate nohighlight">\(x,y = 0,1\)</span>.</p>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio</p>
 <p>Escribe un operador controlado y las matrices asociadas cuando</p>
 <ul class="simple">
 <li><p>el cúbit de control es el segundo sobre el primero.</p></li>
-<li><p>el operador <span class="math notranslate nohighlight">\(U\)</span> se aplica sobre el segundo cúbit, si el estado del primero es <span class="math notranslate nohighlight">\(\ket{0}\)</span>.</p></li>
+<li><p>el operador <span class="math notranslate nohighlight">\(U\)</span> se aplica sobre el segundo cúbit, si el estado del controlador es <span class="math notranslate nohighlight">\(\ket{0}\)</span>.</p></li>
 </ul>
 </div>
 <p>Operadores como éste existen en circuitos clásicos. La fascinante novedad es que, ahora, por el primer cúbit podría circular una <em>superposición</em> <span class="math notranslate nohighlight">\(a\ket{0} + b\ket{1}\)</span>.</p>
@@ -838,30 +860,28 @@ U_{\rm SWAP} =  \begin{bmatrix}
   \\ \rule{0mm}{14mm}
     &amp;=&amp; a\ket{0}\otimes \ket{v} + b\ket{1}\otimes U\ket{v} \nonumber
 \end{eqnarray*}\]</div>
-<p>Vemos que, efectivamente, el resultado es un estado <em>entrelazado</em>.</p>
+<p>Vemos que, efectivamente, el resultado es un estado <em>entrelazado</em></p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/entangling_CU_circuit.png"><img alt="../../../_images/entangling_CU_circuit.png" src="../../../_images/entangling_CU_circuit.png" style="width: 400px;" /></a>
 </figure>
 </section>
 <section id="la-puerta-cnot">
 <h3>La puerta CNOT<a class="headerlink" href="#la-puerta-cnot" title="Permalink to this heading">#</a></h3>
-<p>La  puerta <em>binaria</em> CNOT = <span class="math notranslate nohighlight">\(\cg{X}\)</span> es el caso más sencillo de <em>operador no factorizable</em></p>
+<p>La  puerta <em>binaria</em> CNOT = <span class="math notranslate nohighlight">\(\cg{X}\)</span> es el caso más sencillo de <em>operador no factorizable</em>
+gráficamente</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/cX_gate.png"><img alt="../../../_images/cX_gate.png" src="../../../_images/cX_gate.png" style="width: 200px;" /></a>
+</figure>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \hbox{CNOT} = \cg{X} ~=~ \ket{0}\bra{0}\otimes I + \ket{1}\bra{1}\otimes X ~=~ \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\
 0 &amp; 0 &amp; 1 &amp; 0\end{bmatrix}
 \end{split}\]</div>
-<ul class="simple">
-<li><p>Sobre elementos de la base computacional <span class="math notranslate nohighlight">\(\ket{xy}=\ket{x}\otimes\ket{y}\)</span> donde <span class="math notranslate nohighlight">\(\, x,y= 0,1\)</span>, su acción  se puede representar de manera compacta usando la suma módulo dos</p></li>
-</ul>
+<p>Sobre elementos de la base computacional <span class="math notranslate nohighlight">\(\ket{xy}=\ket{x}\otimes\ket{y}\)</span> donde <span class="math notranslate nohighlight">\(\, x,y= 0,1\)</span>, su acción  se puede representar de manera compacta usando la suma módulo dos</p>
 <div class="math notranslate nohighlight">
 \[
 \cg{X}:\ket{x}\otimes\ket{y}=  \ket{x} \otimes X^x\ket{y} = \ket{x} \otimes \ket{y\oplus x}
 \]</div>
-<p><span class="math notranslate nohighlight">\(\rule{0.7cm}{0mm}\)</span> gráficamente</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/cX_gate.png"><img alt="../../../_images/cX_gate.png" src="../../../_images/cX_gate.png" style="width: 200px;" /></a>
-</figure>
 <div class="tip admonition">
 <p class="admonition-title">Ejercicio 1.2.1.4</p>
 <p>el estado factorizable más general de dos cúbits es (<span class="math notranslate nohighlight">\(a\)</span> es la normalización)</p>
@@ -871,62 +891,17 @@ U_{\rm SWAP} =  \begin{bmatrix}
 \]</div>
 <p>Escribe la condición más general que deben satisfacer  <span class="math notranslate nohighlight">\(b_0,b_1,\phi_0\)</span> y <span class="math notranslate nohighlight">\(\phi_1\)</span> para que CNOT<span class="math notranslate nohighlight">\(\ket{\psi}\)</span> sea un vector entrelazado.</p>
 </div>
-<p>La puerta CNOT en qiskit aparece invertida con respecto a la que dibujamos más arriba. Ello se debe a que qiskit ordena los qubits en <span class="math notranslate nohighlight">\(\ket{q_1 \, q_0}\)</span> poniendo el asociado al bit más relevante, <span class="math notranslate nohighlight">\(q_1\)</span>, abajo.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">Aer</span><span class="p">,</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">execute</span>
-<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
-  self._style, def_font_ratio = load_style(self._style)
-</pre></div>
-</div>
-<img alt="../../../_images/3525eed278ae38cc8b6182f4860dc71ac2493dec61db37901e926d3591d735cb.png" src="../../../_images/3525eed278ae38cc8b6182f4860dc71ac2493dec61db37901e926d3591d735cb.png" />
-</div>
-</div>
-<p>ahora podemos pedir el operador unitario que reproduce el circuito anterior</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">Aer</span><span class="p">,</span> <span class="n">execute</span>
-<span class="n">U_simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;unitary_simulator&#39;</span><span class="p">)</span>
-
-<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">U_simulator</span><span class="p">)</span>
-<span class="n">CNOT_matrix</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_unitary</span><span class="p">()</span>
-
-<span class="c1">#print(U_matrix)</span>
-<span class="kn">from</span> <span class="nn">qiskit.tools.visualization</span> <span class="kn">import</span> <span class="n">array_to_latex</span>
-<span class="n">array_to_latex</span><span class="p">(</span><span class="n">CNOT_matrix</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">text{CNOT = }</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-\text{CNOT = }\\\begin{split}\begin{bmatrix}
-1 &amp; 0 &amp; 0 &amp; 0  \\
- 0 &amp; 1 &amp; 0 &amp; 0  \\
- 0 &amp; 0 &amp; 0 &amp; 1  \\
- 0 &amp; 0 &amp; 1 &amp; 0  \\
- \end{bmatrix}
-\end{split}\end{aligned}\end{align} \]</div>
-</div>
-</div>
 </section>
 <section id="la-puerta-cswap-o-de-fredkin">
 <h3>La puerta CSWAP o de Fredkin<a class="headerlink" href="#la-puerta-cswap-o-de-fredkin" title="Permalink to this heading">#</a></h3>
-<p>Si el cúbit  de control está en  el estado <span class="math notranslate nohighlight">\(\ket{1}\)</span> los dos controlados se intercambian</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/CSWAP_gate.png"><img alt="../../../_images/CSWAP_gate.png" src="../../../_images/CSWAP_gate.png" style="width: 130px;" /></a>
+</figure>
+<p>Si el cúbit  de control está en  el estado <span class="math notranslate nohighlight">\(\ket{1}\)</span> los dos cúbits controlados se intercambian</p>
 <div class="math notranslate nohighlight">
 \[
 U_{\rm CSWAP} =\ket{0}\bra{0} \otimes I_4 + \ket{1}\bra{1} \otimes U_{\rm SWAP} \, .
 \]</div>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/CSWAP_gate.png"><img alt="../../../_images/CSWAP_gate.png" src="../../../_images/CSWAP_gate.png" style="width: 150px;" /></a>
-</figure>
 </section>
 <section id="la-puerta-ccnot-o-de-toffoli">
 <h3>La puerta CCNOT o de Toffoli<a class="headerlink" href="#la-puerta-ccnot-o-de-toffoli" title="Permalink to this heading">#</a></h3>
@@ -944,7 +919,7 @@ U_{\rm CSWAP} =\ket{0}\bra{0} \otimes I_4 + \ket{1}\bra{1} \otimes U_{\rm SWAP} 
 <div class="tip admonition">
 <p class="admonition-title">Ejercicios 1.2.1.5</p>
 <ol class="arabic simple">
-<li><p>obtener la matriz que representa la puerta de Toffoli en la base computacional. Reproducirla usando <i>qiskit</i>.</p></li>
+<li><p>obtener la matriz que representa la puerta de Toffoli en la base computacional.</p></li>
 <li><p>obtener la matriz de un circuito de 3 cúbits con una puerta CNOT en la que el tercer cúbit controla el primero. Reproducirla usando qiskit.</p></li>
 </ol>
 </div>
@@ -995,11 +970,11 @@ MCX = \ket{1100}  \bra{1100}\otimes X + (I-\ket{1100}\bra{1100}) \otimes I
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/dcb/Programs/miniconda/miniconda3/envs/qiskit_qibo_penny/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/envs/TalentQ/lib/python3.11/site-packages/qiskit/visualization/circuit/matplotlib.py:266: FutureWarning: The default matplotlib drawer scheme will be changed to &quot;iqp&quot; in a following release. To silence this warning, specify the current default explicitly as style=&quot;clifford&quot;, or the new default as style=&quot;iqp&quot;.
   self._style, def_font_ratio = load_style(self._style)
 </pre></div>
 </div>
-<img alt="../../../_images/ace755a49b0576e7840bdfb9a7e2831af899f1ad488bf4e8b51ebbd407bedb2a.png" src="../../../_images/ace755a49b0576e7840bdfb9a7e2831af899f1ad488bf4e8b51ebbd407bedb2a.png" />
+<img alt="../../../_images/63d2cf10eef7a2674778c55ca4138c9ca4b9a6c92dd67c9b29afe795ebb25be7.png" src="../../../_images/63d2cf10eef7a2674778c55ca4138c9ca4b9a6c92dd67c9b29afe795ebb25be7.png" />
 </div>
 </div>
 <p>En el convenio de qiskit, efectivamente, este operador es el que se corresponde con</p>
@@ -1007,16 +982,12 @@ MCX = \ket{1100}  \bra{1100}\otimes X + (I-\ket{1100}\bra{1100}) \otimes I
 \[
 MCX = X\otimes \ket{0011}  \bra{0011} + X\otimes (I-\ket{0011}\bra{0011})
 \]</div>
-<div class="tip admonition">
-<p class="admonition-title">Ejercicio</p>
-<p>Inserta la puerta MCX de forma que se genere exactamente el circuito dibujado en la figura.</p>
-</div>
 </section>
 <section id="circuito-entrelazador-para-la-base-de-bell">
 <h3>Circuito entrelazador para la Base de Bell<a class="headerlink" href="#circuito-entrelazador-para-la-base-de-bell" title="Permalink to this heading">#</a></h3>
 <p>El circuito que <em>prepara</em> la <i>base de Bell</i> <span class="math notranslate nohighlight">\(~\{\ket{B_{xy}} \equiv \ket{xy}_B \}~\)</span> a partir de la <i>base computacional</i>  <span class="math notranslate nohighlight">\(\{\ket{xy}\}\)</span></p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../../_images/Bell_basis.png"><img alt="../../../_images/Bell_basis.png" src="../../../_images/Bell_basis.png" style="width: 250px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Bell_basis.png"><img alt="../../../_images/Bell_basis.png" src="../../../_images/Bell_basis.png" style="width: 200px;" /></a>
 </figure>
 <p>Concretamente</p>
 <div class="math notranslate nohighlight">
@@ -1100,7 +1071,7 @@ U (\alpha\ket{\psi}+\beta\ket{\phi})\otimes \ket{0} =
 U(\alpha|\psi\rangle+\beta|\phi\rangle) \otimes|0\rangle &amp;=&amp; \alpha U|\psi\rangle \otimes|0\rangle+\beta U|\phi\rangle \otimes|0\rangle  \\ \rule{0mm}{12mm}
 &amp;=&amp;\alpha|\psi\rangle \otimes|\psi\rangle+\beta|\phi\rangle \otimes|\phi\rangle . \rule{0mm}{6mm}
 \end{eqnarray*}\]</div>
-<p>Los dos resultados son diferentes y el teorema queda demostrado por reducción al absurdo.</p>
+<p>Los dos resultados son diferentes y el teorema queda demostrado.</p>
 <div class="note admonition">
 <p class="admonition-title">Notar</p>
 <ul class="simple">

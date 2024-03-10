@@ -542,9 +542,11 @@
     "### Formalismo general\n",
     "\n",
     "Vamos a ver los dos casos anteriores como caso particulares de un aparato de medida asociado a una dirección arbitraria en la esfera de Bloch. Dado un vector unitario $~\\hat\\boldn~$\n",
+    "\n",
     "$$\n",
     "\\hat\\bn(\\theta,\\phi) = \\sin\\theta\\cos\\phi \\, \\hat {\\bf x} + \\sin\\theta\\sin\\phi \\, \\hat {\\bf y} + \\cos\\theta \\, \\hat {\\bf z}\n",
     "$$\n",
+    "\n",
     "el observable asociado será  $ \\hat{\\boldn}\\cdot \\boldsymbol{\\sigma}$  cuyos autoestados forman una  base $\\{\\ket{0}_{\\hat{\\bf n}}, \\ket{1}_{\\hat{\\bf n}}\\}$ con autovalores $\\pm 1$\n",
     "\n",
     "$$\n",
@@ -612,12 +614,14 @@
     "::::\n",
     "\n",
     "El operador en cuestión es \n",
+    "\n",
     "$$\n",
     "U(\\hat {\\bf z}\\to \\hat \\bn) = U(\\theta,\\phi,0)=\\begin{bmatrix}   \\cos \\displaystyle\\frac{\\theta}{2}  & -  \\sin\\displaystyle\\frac{\\theta}{2}  \\\\ \n",
     "\\rule{0mm}{4mm} e^{i\\phi} \\sin \\displaystyle\\frac{\\theta}{2} &e^{i\\phi} \\cos \\displaystyle\\frac{\\theta}{2} \\end{bmatrix}\n",
     "$$\n",
     "\n",
     "como es fácil de comprobar\n",
+    "\n",
     "$$ \n",
     "\\begin{bmatrix} \\cos\\theta \\\\ e^{i\\phi}\\sin\\theta \\end{bmatrix} = U\\cdot \\begin{bmatrix}1\\\\0 \\end{bmatrix} ~~~~~~~,~~~~~~~\n",
     "\\begin{bmatrix} -\\sin\\theta \\\\ e^{i\\phi}\\cos\\theta \\end{bmatrix} = U\\cdot \\begin{bmatrix}0\\\\1 \\end{bmatrix}  \n",
@@ -771,52 +775,6 @@
     "\\bra{\\psi} a_0 I + a_1 X + a_2 Y  + a_3 Z \\ket{\\psi} \\\\ \\rule{0mm}{8mm}\n",
     "&=& ~a_0 + a_1 \\langle X\\rangle_\\psi + a_2 \\langle Y\\rangle_\\psi + a_3 \\langle Z\\rangle_\\psi\n",
     "\\end{eqnarray*}\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "**Cálculo del $\\langle X\\rangle_\\psi ~\\langle Y\\rangle_\\psi$ y $\\langle Z\\rangle_\\psi$**\n",
-    "\n",
-    "Comenzamos inicializando el circuito en un estado $\\ket{\\psi}$"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 36,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/latex": [
-       "$$0.5816830895 |0\\rangle+(0.5667120397 + 0.5835085668 i) |1\\rangle$$"
-      ],
-      "text/plain": [
-       "<IPython.core.display.Latex object>"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    },
-    {
-     "data": {
-      "image/png": "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",
-      "text/plain": [
-       "<Figure size 352.675x200.667 with 1 Axes>"
-      ]
-     },
-     "execution_count": 36,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "#psi_ket= tQ.random_ket(2).reshape(2)\n",
-    "display(Statevector(psi_ket).draw('latex'))\n",
-    "qc_psi = QuantumCircuit(1,1)\n",
-    "qc_psi.initialize(psi_state,0)\n",
-    "qc_psi.draw('mpl')"
    ]
   },
   {
@@ -1128,7 +1086,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "**Forma semi-directa**\n",
+    "**$\\langle A \\rangle$ con un sólo circuito**\n",
     "\n",
     "Podemos escribir la descomposición de $A$ de la siguiente manera\n",
     "\n",
@@ -1137,13 +1095,13 @@
     "$$\n",
     "\n",
     "donde ${\\bf a} = (a_1,a_2,a_3)~$ y $~\\hat \\bn = {\\bf a}/ |{\\bf a}|$.\n",
-    "De modo que \n",
+    "De modo que, ahora \n",
     "\n",
     "$$\n",
-    "  = a_0 + |\\bf a| \\,  \\langle \\bn \\cdot \\bsig  \\rangle_\\psi\n",
+    "\\langle A \\rangle_\\psi  = a_0 + |\\bf a| \\,  \\langle \\bn \\cdot \\bsig  \\rangle_\\psi\n",
     "$$\n",
     "\n",
-    "Vemos que, para calcular $\\langle A \\rangle_\\psi$ es suficiente con conocer los valores $a_i = (a_0,{\\bf a})$ y un sólo circuito para obtener el valor esperado $\\langle \\bn \\cdot \\bsig  \\rangle_\\psi$. \n",
+    "Vemos que para calcular $\\langle A \\rangle_\\psi$ es suficiente con conocer los valores $a_i = (a_0,{\\bf a})$ y **un sólo circuito** que nos proporcione el valor esperado $\\langle \\bn \\cdot \\bsig  \\rangle_\\psi$. \n",
     "\n",
     "La clave de este último punto está en usar el *medidor efectivo* en la dirección $\\hat \\bn$ \n",
     "\n",
