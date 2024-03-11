@@ -514,7 +514,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Mar 10, 2024 | 14 min read</p>
+<div><p>Mar 11, 2024 | 14 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../_images/Logo_TalentQ_Azul.png"><img alt="../../_images/Logo_TalentQ_Azul.png" src="../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -634,8 +634,8 @@ A = \sum_m \lambda_m P_m
 <p>En la pantalla posterior al imán, la <em>función de onda orbital</em><span class="math notranslate nohighlight">\(~~\Rightarrow ~~
 \psi(z) = \braket{z}{\psi}\)</span> nos da la amplitud de probabilidad de hallar el electrón en la posición <span class="math notranslate nohighlight">\(z\)</span></p>
 <p>Si sólo estamos interesados en predecir si impactará en <span class="math notranslate nohighlight">\(~z&gt;0~\)</span> ó  en <span class="math notranslate nohighlight">\(~z&lt;0~\)</span> podemos <b>reducir el problema a un espacio de Hilbert de dimensión 2</b></p>
-<div class="amsmath math notranslate nohighlight" id="equation-9c0d767d-3484-4534-8ce8-e3b31338f765">
-<span class="eqno">(25)<a class="headerlink" href="#equation-9c0d767d-3484-4534-8ce8-e3b31338f765" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-f7b12381-d599-4868-9288-a79a7b567d21">
+<span class="eqno">(25)<a class="headerlink" href="#equation-f7b12381-d599-4868-9288-a79a7b567d21" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\psi} ~ &amp;=&amp; \int_{-\infty}^{+\infty} dz \ket{z}\braket{z}{\psi} ~= ~  \int_{-\infty}^0 dz \ket{z}\braket{z}{\psi} + \int_0^{+\infty}dz \ket{z}\braket{z}{\psi} \\
 &amp;=&amp;  \int_0^{+\infty}dz\, \psi(z) \ket{z} ~+ ~\int_{-\infty}^0 dz\, \psi(z)\ket{z}
 \\ \rule{0mm}{10mm} &amp;=&amp; 
@@ -662,8 +662,8 @@ a^2 = \int_0^{+\infty} dz |\psi(z)|^2  ~~~~~~~~~.~~~~~~~~b^2 = \int_{-\infty}^0 
 <li><p>A la entrada del detector, no hay <u>ninguna correlación</u> entre ambos grados de libertad.</p></li>
 </ul>
 <p>El sistema se halla en un cierto estado de espín y centrado simétricamente</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ccd8cbc8-957c-4eb8-901b-aa5f41e769df">
-<span class="eqno">(26)<a class="headerlink" href="#equation-ccd8cbc8-957c-4eb8-901b-aa5f41e769df" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-804a46a5-734f-4205-8d2c-4c96ccf2aaeb">
+<span class="eqno">(26)<a class="headerlink" href="#equation-804a46a5-734f-4205-8d2c-4c96ccf2aaeb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{\chi} &amp;=&amp; \ket{s}\otimes \ket{\psi}  ~= ~ (c_\uparrow\ketup + c_\downarrow \ketdo)\otimes  \frac{1}{\sqrt{2}}(\ket{+} + \ket{-})
 \end{eqnarray}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(|c_\uparrow|^2 + |c_\downarrow|^2 = 1\)</span>.</p>
@@ -723,22 +723,22 @@ Z = (+1)\, \ketbra{\!\uparrow}{\uparrow\!}~ +~ (-1)\, \ketbra{\!\downarrow}{\dow
 \]</div>
 <p>Nuevamente una medida consiste en una señal que procede del detector de posición superior <span class="math notranslate nohighlight">\(\ket{+}\)</span> o del inferior  <span class="math notranslate nohighlight">\(\ket{-}\)</span></p>
 <p>La probabilidad de detección de <span class="math notranslate nohighlight">\(\ket{+}\)</span> ó <span class="math notranslate nohighlight">\(\ket{-}\)</span> viene dada por el módulo del vector que lo multiplica</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26627021-996c-4bd7-b92d-dc30f9eed478">
-<span class="eqno">(27)<a class="headerlink" href="#equation-26627021-996c-4bd7-b92d-dc30f9eed478" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-d3bfdc66-de9a-4834-ae96-24a6f62432e2">
+<span class="eqno">(27)<a class="headerlink" href="#equation-d3bfdc66-de9a-4834-ae96-24a6f62432e2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
 p(+1) &amp;=&amp; (1-p_0)|c_\uparrow|^2 + p_1 |c_\downarrow|^2  \\
 \rule{0mm}{9mm}
 p(-1) &amp;=&amp; p_0 |c_\uparrow|^2 + (1-p_1) |c_\downarrow|^2
 \end{eqnarray}\]</div>
 <p><strong>Medida no-proyectiva del espín</strong></p>
 <p>A continuación vamos a describir el experimento como <u>un proceso de medida directa del espín</u> que afecta al espín</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fab6c7d8-41a0-4f83-af22-57a5de5fe7b0">
-<span class="eqno">(28)<a class="headerlink" href="#equation-fab6c7d8-41a0-4f83-af22-57a5de5fe7b0" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-9925d677-2887-4e6d-9d17-8c00a0e75d0e">
+<span class="eqno">(28)<a class="headerlink" href="#equation-9925d677-2887-4e6d-9d17-8c00a0e75d0e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \ket{s}  ~= ~ (c_\uparrow\ketup + c_\downarrow \ketdo) ~~\stackrel{\rm Stern Gerlach}{\longrightarrow} ~~
 \ket{s'}
 \end{eqnarray}\]</div>
 <p>Introduzcamos los operadores</p>
-<div class="amsmath math notranslate nohighlight" id="equation-469dc2d7-dcc2-4dcc-bcff-67321311d98b">
-<span class="eqno">(29)<a class="headerlink" href="#equation-469dc2d7-dcc2-4dcc-bcff-67321311d98b" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-36f8483c-c6b6-403d-9d0e-83affd40a0fd">
+<span class="eqno">(29)<a class="headerlink" href="#equation-36f8483c-c6b6-403d-9d0e-83affd40a0fd" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 M_+ &amp;=&amp; \sqrt{1-p_0} \, \ketup\braup ~+~ \sqrt{p_1} \, \ketdo\brado \\
 \rule{0mm}{8mm}
 M_- &amp;=&amp; \sqrt{p_0} \, \ketup\braup ~+~ \sqrt{1-p_1} \, \ketdo\brado \\
@@ -752,15 +752,15 @@ M_- &amp;=&amp; \sqrt{p_0} \, \ketup\braup ~+~ \sqrt{1-p_1} \, \ketdo\brado \\
  \]</div>
 </div>
 <p>Veamos que dichas probabilidades ¡<u>son expresables en términos de </u> <span class="math notranslate nohighlight">\(M_\pm\)</span>!</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b9c5bf22-2617-4001-b2f0-ce8cf9f083cb">
-<span class="eqno">(30)<a class="headerlink" href="#equation-b9c5bf22-2617-4001-b2f0-ce8cf9f083cb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
+<div class="amsmath math notranslate nohighlight" id="equation-5f3e1703-d18c-4fcd-821f-349b984b0316">
+<span class="eqno">(30)<a class="headerlink" href="#equation-5f3e1703-d18c-4fcd-821f-349b984b0316" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} 
 p(+1) &amp;=&amp; (1-p_0)|c_\uparrow|^2 + p_1 |c_\downarrow|^2 = \bra{s}M_+^\dagger M_+\ket{s} \\
 \rule{0mm}{18mm}
 p(-1) &amp;=&amp; p_0 |c_\uparrow|^2 + (1-p_1) |c_\downarrow|^2=  \bra{s}M_-^\dagger M_-\ket{s} 
 \end{eqnarray}\]</div>
 <p>Con respecto a los estados finales, el registro en cada detector hace  colapsar el estado inicial a un estado normalizado</p>
-<div class="amsmath math notranslate nohighlight" id="equation-41e21e9f-3035-4904-ab2c-8dc39b5cb8dc">
-<span class="eqno">(31)<a class="headerlink" href="#equation-41e21e9f-3035-4904-ab2c-8dc39b5cb8dc" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-f04718da-13f0-4824-8724-364123a2af50">
+<span class="eqno">(31)<a class="headerlink" href="#equation-f04718da-13f0-4824-8724-364123a2af50" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 (+1)~:~ \ket{s} ~&amp;\stackrel{\rm Stern Gerlach}{\longrightarrow}&amp; ~\ket{s_+} = \frac{\sqrt{1-p_0}\, c_\uparrow\ket{\uparrow} + \sqrt{p_1}\, c_\downarrow\ket{\downarrow}) }{\hbox{Norma}} ~ = ~ \frac{M_+\ket{s}}{\bra{s}M_+^\dagger M_+\ket{s}}\\
 \rule{0mm}{20mm}
 (-1)~:~ \ket{s}~&amp;\stackrel{\rm Stern Gerlach}{\longrightarrow} &amp; ~\ket{s_-} = \frac{\sqrt{p_0}\, c_\uparrow\ket{\uparrow} + \sqrt{1-p_1}\, c_\downarrow\ket{\downarrow}) }{\hbox{Norma}} ~= ~\frac{M_-\ket{s}}{\bra{s}M_-^\dagger M_-\ket{s}}  \\
@@ -855,8 +855,8 @@ p(m) = \tr\left(M_m^\dagger M_m \rho\right)
 p(m|i) = \bra{\psi_i}M^\dagger_m M_m \ket{\psi_i}
 \]</div>
 <p>Ahora podemos calcular la probabilidad total de obtención del valor <span class="math notranslate nohighlight">\(m\)</span> al medir sobre el colectivo</p>
-<div class="amsmath math notranslate nohighlight" id="equation-de8cdc62-b9e0-463f-80eb-0bb691ee11c4">
-<span class="eqno">(32)<a class="headerlink" href="#equation-de8cdc62-b9e0-463f-80eb-0bb691ee11c4" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-f362c0e5-3dbb-4b50-96c5-849615bde8fc">
+<span class="eqno">(32)<a class="headerlink" href="#equation-f362c0e5-3dbb-4b50-96c5-849615bde8fc" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p_m &amp;=&amp; \sum_i p(m|i) p_i = \sum_{i=1}^r \bra{\psi_i}M^\dagger_m M_m \ket{\psi_i} p_i \\
 &amp;=&amp; \tr \left( M_m^\dagger M \sum_{i=1}^r p_i \ketbra{\psi_i}{\psi_i} \right) \\  \rule{0mm}{7mm}
 &amp;=&amp; \tr \left( M_m^\dagger M_m \rho \right) \\   \rule{0mm}{8mm}
@@ -885,8 +885,8 @@ p(m|i)p_i  = p(m,i) = p(i,m) = p(i|m) p_m
 \]</div>
 <p><em>En resumen</em>:
 tras una medida selectiva en la que <em>observamos</em> el resultado <span class="math notranslate nohighlight">\(m\)</span>, la descripción del sistema vendrá dada por un nuevo operador densidad</p>
-<div class="amsmath math notranslate nohighlight" id="equation-09c81927-5368-4fbd-83a2-7af63b43aa47">
-<span class="eqno">(33)<a class="headerlink" href="#equation-09c81927-5368-4fbd-83a2-7af63b43aa47" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-8878e59a-bb82-4f0b-91c9-fde590b7c3d2">
+<span class="eqno">(33)<a class="headerlink" href="#equation-8878e59a-bb82-4f0b-91c9-fde590b7c3d2" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
  \rho_m &amp;=&amp; \sum_i p(i|m) \,\ketbra{\psi_i^m}{\psi_i^m} \\
 &amp;=&amp;\sum_i p(i|m) \frac{M_m\ketbra{\psi_i}{\psi_i}M_m^\dagger}{p(m|i)}  \\
 &amp;=&amp;  \sum_i \frac{p_i}{p_m} M_m\ketbra{\psi_i}{\psi_i}M_m^\dagger  = \frac{1}{p_m}M_m\left(\sum_i p_i \ketbra{\psi_i}{\psi_i} \right) M_m^\dagger\\
@@ -898,8 +898,8 @@ tras una medida selectiva en la que <em>observamos</em> el resultado <span class
 <p>Supongamos que después de muchas medidas selectivas <span class="math notranslate nohighlight">\(m_1,m_2,....\)</span> de un estado <span class="math notranslate nohighlight">\(\rho\)</span> obtenemos las probabilidades <span class="math notranslate nohighlight">\(\{p(m_i)\sim m_i/\sum_i m_i\}\)</span>  asociada a los resultados de las medidas</p>
 <p>Ahora preparamos de nuevo <span class="math notranslate nohighlight">\(\rho\)</span> y realizamos una medida en la que  <b>no registramos</b> el resultado. Es decir, sólo sabemos que el sistema ha sido medido.</p>
 <p>Entonces la <em>mejor descripción del sistema</em> es un nuevo estado <span class="math notranslate nohighlight">\(\rho'\)</span> que es <i> separable</i></p>
-<div class="amsmath math notranslate nohighlight" id="equation-d1943ebf-d45d-4f3d-bc21-451cc344eb95">
-<span class="eqno">(34)<a class="headerlink" href="#equation-d1943ebf-d45d-4f3d-bc21-451cc344eb95" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-17783c5c-0f86-45b7-bfe3-692c10c0fff4">
+<span class="eqno">(34)<a class="headerlink" href="#equation-17783c5c-0f86-45b7-bfe3-692c10c0fff4" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \rho' &amp;=&amp; \sum_m p_m \rho_m = \sum_m p_m \frac{M_m  \rho M_m^\dagger}{p_m}  \\
 &amp;=&amp; \sum_m M_m  \rho M_m^\dagger
 \end{eqnarray}\]</div>
@@ -981,23 +981,23 @@ $<span class="math notranslate nohighlight">\(
 \)</span>$</p>
 <p><strong>POVM en el experimento de Stern Gerlach real</strong></p>
 <p>Recordemos que, en este caso no-ideal, el detector efectúa las medidas generalizadas</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a1fbdfba-b5c7-4046-bbdc-4a6d003814f1">
-<span class="eqno">(35)<a class="headerlink" href="#equation-a1fbdfba-b5c7-4046-bbdc-4a6d003814f1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-a86bda99-41e1-405a-b7cb-19f01546a713">
+<span class="eqno">(35)<a class="headerlink" href="#equation-a86bda99-41e1-405a-b7cb-19f01546a713" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 M_+ &amp;=&amp; \sqrt{1-p_0} \, \ketup\braup ~+~ \sqrt{p_1} \, \ketdo\brado \\
 \rule{0mm}{14mm}
 M_- &amp;=&amp; \sqrt{p_0} \, \ketup\braup ~+~ \sqrt{1-p_1} \, \ketdo\brado \\
 \end{eqnarray}\]</div>
 <p>asociadas a las medidas <span class="math notranslate nohighlight">\(+1\)</span> y <span class="math notranslate nohighlight">\(-1\)</span> en el detector de posición</p>
 <p>Los POVMS asociados a estas medidas son</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3094f361-c54f-48cb-a657-dc24324ccedb">
-<span class="eqno">(36)<a class="headerlink" href="#equation-3094f361-c54f-48cb-a657-dc24324ccedb" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-1307060b-05e9-4643-8eef-2b3f6b5f1dc5">
+<span class="eqno">(36)<a class="headerlink" href="#equation-1307060b-05e9-4643-8eef-2b3f6b5f1dc5" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 E_+ = M_+^\dagger M_+&amp;=&amp; (1-p_0)\ketbra{\uparrow}{\uparrow} + p_1 \ketbra{\downarrow}{\downarrow} \\
 \rule{0mm}{10mm}
 E_- = M_-^\dagger M_-&amp;=&amp; p_0\ketbra{\uparrow}{\uparrow} + (1- p_1) \ketbra{\downarrow}{\downarrow}    
 \end{eqnarray}\]</div>
 <p>que sólo sirven para reconstruir las probabilidades</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6e9fbd68-9ae1-49db-a51a-9b65584e84bd">
-<span class="eqno">(37)<a class="headerlink" href="#equation-6e9fbd68-9ae1-49db-a51a-9b65584e84bd" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-34da3f74-1682-4187-9622-e0252a7526de">
+<span class="eqno">(37)<a class="headerlink" href="#equation-34da3f74-1682-4187-9622-e0252a7526de" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p(+1) &amp;=&amp; \bra{s}E_+ \ket{s} \\ \rule{0mm}{10mm}
 p(-1) &amp;=&amp; \bra{s} E_- \ket{s}
 \end{eqnarray}\]</div>
@@ -1099,8 +1099,8 @@ tenga una proyección no nula en su dirección.</p>
 <div class="math notranslate nohighlight">
 \[ p_\chi(m_0) = \bra{\chi}E_{m_0}\ket{\chi} = 0\]</div>
 <p>Podemos ahora hacer uso de una propiedad de los POVMs que se demostrará aparte: para cualesquiera estados <span class="math notranslate nohighlight">\(\ket{\psi}, \ket{\chi}\)</span> se cumplen las implicaciones</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4e122ea7-1107-41f9-8f97-364c1f9049a3">
-<span class="eqno">(38)<a class="headerlink" href="#equation-4e122ea7-1107-41f9-8f97-364c1f9049a3" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-e4838641-97ba-4e8b-b24c-264fc27b1358">
+<span class="eqno">(38)<a class="headerlink" href="#equation-e4838641-97ba-4e8b-b24c-264fc27b1358" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \bra{\psi}E_{m}\ket{\psi} = 1 ~~~~&amp;\Longleftrightarrow &amp;~~~~E_{m} \ket{\psi} =  \ket{\psi} \\ \rule{0mm}{6mm}
 \bra{\chi}E_{m}\ket{\chi} = 0 ~~~~&amp;\Longleftrightarrow &amp;~~~~E_{m} \ket{\chi} = 0 \\
 \end{eqnarray}\]</div>
@@ -1138,8 +1138,8 @@ de estados pre-establecidos.</p>
 <li><p>En este caso existe un conjunto de medidas proyectivas que permiten discriminar un elemento <span class="math notranslate nohighlight">\(\ket{\psi_i}\)</span> de los demás mediante una sola medida.</p></li>
 </ul>
 <p>Con los <span class="math notranslate nohighlight">\(p\)</span> vectores ortonormales definimos proyectores</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6613affc-ee01-4d28-96c9-a78137501efe">
-<span class="eqno">(39)<a class="headerlink" href="#equation-6613affc-ee01-4d28-96c9-a78137501efe" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-1ca5e92d-253e-4ebc-9265-523d3a418b41">
+<span class="eqno">(39)<a class="headerlink" href="#equation-1ca5e92d-253e-4ebc-9265-523d3a418b41" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 P_i &amp;=&amp; \ketbra{\psi_i}{\psi_i} ~~~~~~~~~~~~~i=1,2,..,p \\
 \rule{0mm}{10mm} 
 P_0 &amp;=&amp;I-\sum_{i=1}^p \ketbra{\psi_i}{\psi_i}
@@ -1188,8 +1188,8 @@ p(i) = \bra{\psi_j}P_i \ket{\psi_j} = \delta_{ij}
 <li><p>Si se detecta <span class="math notranslate nohighlight">\(E_3\)</span> no se puede afirmar nada</p></li>
 </ul>
 <p>Podemos dar una forma más explícita de estos operadores</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a3132596-2818-4d57-af94-fd2ee36b2791">
-<span class="eqno">(40)<a class="headerlink" href="#equation-a3132596-2818-4d57-af94-fd2ee36b2791" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} \rule{0mm}{10mm}
+<div class="amsmath math notranslate nohighlight" id="equation-c08b9f06-e51c-4f1a-8bca-f1852c7cae39">
+<span class="eqno">(40)<a class="headerlink" href="#equation-c08b9f06-e51c-4f1a-8bca-f1852c7cae39" title="Permalink to this equation">#</a></span>\[\begin{eqnarray} \rule{0mm}{10mm}
 E_1 &amp;=&amp; a_1 \left( \rule{0mm}{4mm}I- \ket{2}\bra{2} \right) \\
 \rule{0mm}{10mm}
 E_2 &amp;=&amp; a_2 \left( \rule{0mm}{4mm} I-\ket{1}\bra{1} \right)  \\
@@ -1197,8 +1197,8 @@ E_2 &amp;=&amp; a_2 \left( \rule{0mm}{4mm} I-\ket{1}\bra{1} \right)  \\
 E_3 &amp;=&amp; I - E_1 - E_2
 \end{eqnarray}\]</div>
 <p>Las constantes <span class="math notranslate nohighlight">\(a_1\)</span> y <span class="math notranslate nohighlight">\(a_2\)</span> pueden optimizarse para que la probabilidad de las opciones <span class="math notranslate nohighlight">\(E_1\)</span> y <span class="math notranslate nohighlight">\(E_2\)</span> que permiten extraer una conclusión se maximice</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d2e5f21-3d4f-4873-a5d7-d7d7dd544377">
-<span class="eqno">(41)<a class="headerlink" href="#equation-3d2e5f21-3d4f-4873-a5d7-d7d7dd544377" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-4d2eba9b-230a-45bd-8964-38cf7ada9c73">
+<span class="eqno">(41)<a class="headerlink" href="#equation-4d2eba9b-230a-45bd-8964-38cf7ada9c73" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 p &amp;=&amp; \tr((E_1 + E_2)\rho)   \nonumber \\  \rule{0mm}{8mm}
 &amp;=&amp; \tr\left[(E_1+E_2) \left(\frac{1}{2}\ket{1}\bra{1} + \frac{1}{2}\ket{2}\bra{2}\right) \right] \nonumber\\
 &amp;=&amp; \frac{1}{2}\left(\bra{1}E_1\ket{1} + \bra{2}E_1\ket{2} + \bra{1}E_2\ket{1}  + \bra{2}E_2\ket{2}\right)  \nonumber\\ \rule{0mm}{8mm}

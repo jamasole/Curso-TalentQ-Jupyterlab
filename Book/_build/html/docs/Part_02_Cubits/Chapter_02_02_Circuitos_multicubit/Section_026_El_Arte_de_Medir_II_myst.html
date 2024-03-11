@@ -500,7 +500,7 @@ document.write(`
                 <article class="bd-article">
                   
   <blockquote>
-<div><p>Mar 10, 2024 | 4 min read</p>
+<div><p>Mar 11, 2024 | 4 min read</p>
 </div></blockquote>
 <figure class="align-right">
 <a class="reference internal image-reference" href="../../../_images/Logo_TalentQ_Azul.png"><img alt="../../../_images/Logo_TalentQ_Azul.png" src="../../../_images/Logo_TalentQ_Azul.png" style="width: 150px;" /></a>
@@ -538,16 +538,17 @@ document.write(`
 </div>
 <section id="medidas-de-estados-multicubit">
 <h2>Medidas de estados multicúbit<a class="headerlink" href="#medidas-de-estados-multicubit" title="Permalink to this heading">#</a></h2>
-<p>Un aparato de medida en la base  asociada al operador hermítico <span class="math notranslate nohighlight">\(\sigma_z^{\otimes n} = Z\otimes \ldots \otimes Z\)</span> hace colapsar el estado  que mide a un elemento <span class="math notranslate nohighlight">\(\ket{x}\)</span> de la <em>base computacional</em>, que identificamos mediante una cadena de bits <span class="math notranslate nohighlight">\(a_{n-1}...a_0\)</span> con <span class="math notranslate nohighlight">\(a_i=0,1\)</span>,  donde <span class="math notranslate nohighlight">\(x= a_{n-1}2^{n-1}+...+2^0 a_0\)</span>.</p>
+<p>Un aparato de medida estándar  hace colapsar el estado a un elemento <span class="math notranslate nohighlight">\(\ket{x}\)</span> de la <em>base computacional</em>, que identificamos mediante una cadena de bits <span class="math notranslate nohighlight">\(a_{n-1}...a_0\)</span> con <span class="math notranslate nohighlight">\(a_i=0,1\)</span>,  donde <span class="math notranslate nohighlight">\(x= 2^{n-1}i_{n-1}+...+2^0 a_0\)</span>.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../../_images/Multimeter_zbasis.png"><img alt="../../../_images/Multimeter_zbasis.png" src="../../../_images/Multimeter_zbasis.png" style="width: 400px;" /></a>
 </figure>
+<p>Este medidor está asociado al operador hermítico <span class="math notranslate nohighlight">\(\sigma_z^{\otimes n} = Z\otimes \ldots \otimes Z\)</span></p>
 <section id="circuitos-con-multiples-cubits-y-medidas-en-qiskit">
 <h3>Circuitos con múltiples cúbits y medidas en Qiskit<a class="headerlink" href="#circuitos-con-multiples-cubits-y-medidas-en-qiskit" title="Permalink to this heading">#</a></h3>
-<p>Inicialicemos un estado de 3 cúbits</p>
+<p>Un estado general en un circuito de <span class="math notranslate nohighlight">\(n\)</span> cúbits se expresará en la base computacional</p>
 <div class="math notranslate nohighlight">
 \[
-\ket{\psi} = \sum_{i,j,k = 0,1} c_{ijk} \ket{ijk} = \sum_a c_a \ket{a}
+\ket{\psi} = \sum_{i_{n-1},...,i_0= 0,1} c_{i_{n-1}...i_0} \ket{i_{n-1}...i_0} = \sum_a c_a \ket{a}
 \]</div>
 <p>Las medida es esencialmente un mapa entre n-cúbits cuánticos y n-bits clásicos.</p>
 <div class="math notranslate nohighlight">
@@ -606,11 +607,11 @@ document.write(`
 </pre></div>
 </div>
 <img alt="../../../_images/f777b889f3fbfa0767dd2e7338ac2dc98e3b84a84bd2e12a36498842467befb5.png" src="../../../_images/f777b889f3fbfa0767dd2e7338ac2dc98e3b84a84bd2e12a36498842467befb5.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cuentas= {&#39;011&#39;: 6330, &#39;111&#39;: 6205, &#39;100&#39;: 6187, &#39;110&#39;: 24875, &#39;001&#39;: 25022, &#39;000&#39;: 6221, &#39;010&#39;: 25160}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cuentas= {&#39;011&#39;: 6180, &#39;111&#39;: 6070, &#39;110&#39;: 25236, &#39;100&#39;: 6352, &#39;001&#39;: 24997, &#39;010&#39;: 25003, &#39;000&#39;: 6162}
 </pre></div>
 </div>
-<img alt="../../../_images/acf57e7cb6adfff42d13f30c52db386ba30e4d9a8def0af1eea500d228ed82f3.png" src="../../../_images/acf57e7cb6adfff42d13f30c52db386ba30e4d9a8def0af1eea500d228ed82f3.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilidades= {&#39;011&#39;: 0.0633, &#39;111&#39;: 0.06205, &#39;100&#39;: 0.06187, &#39;110&#39;: 0.24875, &#39;001&#39;: 0.25022, &#39;000&#39;: 0.06221, &#39;010&#39;: 0.2516}
+<img alt="../../../_images/084d76e458ec3c967389add29e4ad035bc386bf5ff51ca54f0748f7aebcf07f8.png" src="../../../_images/084d76e458ec3c967389add29e4ad035bc386bf5ff51ca54f0748f7aebcf07f8.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilidades= {&#39;011&#39;: 0.0618, &#39;111&#39;: 0.0607, &#39;110&#39;: 0.25236, &#39;100&#39;: 0.06352, &#39;001&#39;: 0.24997, &#39;010&#39;: 0.25003, &#39;000&#39;: 0.06162}
 </pre></div>
 </div>
 </div>
@@ -811,7 +812,7 @@ YIZ =
  0 &amp; 0 &amp; 0 &amp; - i &amp; 0 &amp; 0 &amp; 0 &amp; 0  \\
  \end{bmatrix}
 \end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a_203 =  (0.04860666087768152-0.10566882109907273j)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a_203 =  (-0.014428679620298882+0.0500845900523401j)
 </pre></div>
 </div>
 </div>
@@ -868,9 +869,9 @@ YIZ =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZZZ&gt;_shots = -0.25148
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ZZZ&gt;_shots = -0.24844
 &lt;ZZZ&gt;_analitico = -0.25
-sigma =  0.9678624951923698
+sigma =  0.9686472868903314
 </pre></div>
 </div>
 </div>
@@ -908,8 +909,8 @@ sigma =  0.9678624951923698
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;110&#39;: 3128, &#39;001&#39;: 3195, &#39;100&#39;: 15553, &#39;111&#39;: 3087, &#39;011&#39;: 28437, &#39;101&#39;: 15547, &#39;000&#39;: 3169, &#39;010&#39;: 27884}
-&lt;ZXY&gt; = 0.00562
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;011&#39;: 28018, &#39;111&#39;: 3070, &#39;110&#39;: 3149, &#39;001&#39;: 3162, &#39;100&#39;: 15825, &#39;101&#39;: 15679, &#39;000&#39;: 3161, &#39;010&#39;: 27936}
+&lt;ZXY&gt; = 0.00014
 &lt;ZXY&gt;_analitico = 0j
 </pre></div>
 </div>
@@ -1037,23 +1038,6 @@ p_{0}-p_{1} = \frac{n_{0}}{N} - \frac{n_{1}}{N} = \langle X\rangle_{ancilla}
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">cuentas_Had</span><span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc_Had</span><span class="p">,</span><span class="n">M_backend</span><span class="p">,</span><span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
 
 <span class="ne">NameError</span>: name &#39;Aer&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">val_esp_sigma</span><span class="p">(</span><span class="n">cuentas_Had</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">val_esp_sigma</span><span class="p">(</span><span class="n">cuentas_Had</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;val_esp_sigma&#39; is not defined
 </pre></div>
 </div>
 </div>
